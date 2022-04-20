@@ -1,0 +1,14 @@
+{
+  "assetAdministrationShells": [
+    {
+      "administration": {
+        "revision": ""
+      },
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

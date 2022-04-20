@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "idShort": "some_id_short_5a3e7c0f",
+          "max": "19:32:52Z",
+          "min": "19:32:52Z",
+          "modelType": "Range",
+          "valueType": "xs:time"
+        }
+      ]
+    }
+  ]
+}

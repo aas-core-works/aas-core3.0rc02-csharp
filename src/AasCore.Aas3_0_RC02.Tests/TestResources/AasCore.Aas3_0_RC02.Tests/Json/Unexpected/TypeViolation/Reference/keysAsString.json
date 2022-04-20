@@ -1,0 +1,24 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "derivedFrom": {
+        "keys": "Expected an array, but we put a string here",
+        "referredSemanticId": {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_03aeb662"
+            }
+          ],
+          "type": "GlobalReference"
+        },
+        "type": "GlobalReference"
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance",
+        "specificAssetId": {
+          "name": "something_random_862e4a5d",
+          "value": "something_random_a48fd9e8"
+        }
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

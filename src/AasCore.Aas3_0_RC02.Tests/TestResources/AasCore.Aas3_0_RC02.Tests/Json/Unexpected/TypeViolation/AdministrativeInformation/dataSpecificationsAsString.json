@@ -1,0 +1,16 @@
+{
+  "assetAdministrationShells": [
+    {
+      "administration": {
+        "dataSpecifications": "Expected an array, but we put a string here",
+        "revision": "something_random_457e045d",
+        "version": "something_random_7f87d7db"
+      },
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

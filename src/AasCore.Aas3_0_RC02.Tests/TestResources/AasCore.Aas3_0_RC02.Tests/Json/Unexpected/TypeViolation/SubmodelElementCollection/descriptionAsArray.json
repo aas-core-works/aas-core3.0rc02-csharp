@@ -1,0 +1,76 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "category": "something_random_c96fad72",
+          "checksum": "something_random_1067153b",
+          "dataSpecifications": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_5d6b22be"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "description": [
+            "Unexpected array here"
+          ],
+          "displayName": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_5a38b8ff"
+              }
+            ]
+          },
+          "extensions": [
+            {
+              "name": "something_random_63e05494"
+            }
+          ],
+          "idShort": "Z0",
+          "kind": "Instance",
+          "modelType": "SubmodelElementCollection",
+          "qualifiers": [
+            {
+              "type": "something_random_67f4cf31",
+              "valueType": "xs:gMonth"
+            }
+          ],
+          "semanticId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_5eae6ead"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "supplementalSemanticIds": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_872c5593"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "value": [
+            {
+              "idShort": "some_id_short_3e6d2884",
+              "modelType": "Operation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

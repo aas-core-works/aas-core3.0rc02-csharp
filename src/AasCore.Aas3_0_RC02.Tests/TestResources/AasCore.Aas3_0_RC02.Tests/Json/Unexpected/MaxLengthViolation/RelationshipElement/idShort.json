@@ -1,0 +1,32 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "first": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_27262b15"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "idShort": "x84c56e6f012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",
+          "modelType": "RelationshipElement",
+          "second": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_0ead3a88"
+              }
+            ],
+            "type": "GlobalReference"
+          }
+        }
+      ]
+    }
+  ]
+}

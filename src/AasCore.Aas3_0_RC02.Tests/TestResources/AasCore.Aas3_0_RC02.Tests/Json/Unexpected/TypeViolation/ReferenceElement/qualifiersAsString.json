@@ -1,0 +1,79 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "category": "CONSTANT",
+          "checksum": "something_random_1067153b",
+          "dataSpecifications": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_5d6b22be"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "description": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_364abd7d"
+              }
+            ]
+          },
+          "displayName": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_5a38b8ff"
+              }
+            ]
+          },
+          "extensions": [
+            {
+              "name": "something_random_63e05494"
+            }
+          ],
+          "idShort": "Z0",
+          "kind": "Instance",
+          "modelType": "ReferenceElement",
+          "qualifiers": "Expected an array, but we put a string here",
+          "semanticId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_5eae6ead"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "supplementalSemanticIds": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_872c5593"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "value": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_aa46c88e"
+              }
+            ],
+            "type": "GlobalReference"
+          }
+        }
+      ]
+    }
+  ]
+}

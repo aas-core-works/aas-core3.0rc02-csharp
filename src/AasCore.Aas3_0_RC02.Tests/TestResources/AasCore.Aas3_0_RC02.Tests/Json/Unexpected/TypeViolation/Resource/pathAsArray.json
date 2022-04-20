@@ -1,0 +1,17 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance",
+        "defaultThumbnail": {
+          "contentType": "application/something-random",
+          "path": [
+            "Unexpected array here"
+          ]
+        }
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "category": "CONSTANT",
+          "checksum": "something_random_1067153b",
+          "dataSpecifications": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_5d6b22be"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "description": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_364abd7d"
+              }
+            ]
+          },
+          "displayName": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_5a38b8ff"
+              }
+            ]
+          },
+          "extensions": "Expected an array, but we put a string here",
+          "idShort": "Z0",
+          "kind": "Instance",
+          "modelType": "MultiLanguageProperty",
+          "qualifiers": [
+            {
+              "type": "something_random_67f4cf31",
+              "valueType": "xs:gMonth"
+            }
+          ],
+          "semanticId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_5eae6ead"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "supplementalSemanticIds": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_872c5593"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "value": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_624e0864"
+              }
+            ]
+          },
+          "valueId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_a94833e8"
+              }
+            ],
+            "type": "GlobalReference"
+          }
+        }
+      ]
+    }
+  ]
+}

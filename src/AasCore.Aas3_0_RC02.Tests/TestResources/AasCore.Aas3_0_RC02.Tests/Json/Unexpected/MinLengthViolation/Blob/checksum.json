@@ -1,0 +1,16 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "checksum": "",
+          "contentType": "application/something-random",
+          "idShort": "some_id_short_5a3e7c0f",
+          "modelType": "Blob"
+        }
+      ]
+    }
+  ]
+}

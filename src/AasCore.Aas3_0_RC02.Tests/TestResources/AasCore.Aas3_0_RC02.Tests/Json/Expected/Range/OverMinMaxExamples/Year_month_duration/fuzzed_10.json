@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "idShort": "some_id_short_5a3e7c0f",
+          "max": "-P10Y",
+          "min": "-P10Y",
+          "modelType": "Range",
+          "valueType": "xs:yearMonthDuration"
+        }
+      ]
+    }
+  ]
+}
