@@ -1,0 +1,22 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "derivedFrom": {
+        "keys": [
+          {
+            "type": "AssetAdministrationShell",
+            "value": [
+              "Unexpected array here"
+            ]
+          }
+        ],
+        "type": "GlobalReference"
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

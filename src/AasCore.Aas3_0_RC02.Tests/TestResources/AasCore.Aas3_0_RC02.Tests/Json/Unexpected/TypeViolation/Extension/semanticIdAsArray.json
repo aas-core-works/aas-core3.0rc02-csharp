@@ -1,0 +1,41 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "extensions": [
+        {
+          "name": "something_random_f1141fef",
+          "refersTo": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_b6f09148"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "semanticId": [
+            "Unexpected array here"
+          ],
+          "supplementalSemanticIds": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_01c1ce98"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "value": "something_random_44b43817",
+          "valueType": "xs:byte"
+        }
+      ],
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

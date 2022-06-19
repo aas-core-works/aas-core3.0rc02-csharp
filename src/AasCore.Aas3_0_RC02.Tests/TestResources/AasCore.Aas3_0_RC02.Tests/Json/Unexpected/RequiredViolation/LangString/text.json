@@ -1,0 +1,18 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "displayName": {
+        "langStrings": [
+          {
+            "language": "en"
+          }
+        ]
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

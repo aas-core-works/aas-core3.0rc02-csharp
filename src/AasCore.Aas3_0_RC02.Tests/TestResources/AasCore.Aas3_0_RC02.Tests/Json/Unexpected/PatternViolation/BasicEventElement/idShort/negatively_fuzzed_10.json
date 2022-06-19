@@ -1,0 +1,29 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "direction": "OUTPUT",
+          "idShort": "\ud97d\udc2bS\u00b3G",
+          "modelType": "BasicEventElement",
+          "observed": {
+            "keys": [
+              {
+                "type": "Submodel",
+                "value": "something_random_b773a704"
+              },
+              {
+                "type": "Referable",
+                "value": "something_random_34fbb155"
+              }
+            ],
+            "type": "ModelReference"
+          },
+          "state": "OFF"
+        }
+      ]
+    }
+  ]
+}

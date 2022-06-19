@@ -1,0 +1,38 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": [
+          "Unexpected array here"
+        ],
+        "defaultThumbnail": {
+          "path": "file:/path/to/somewhere"
+        },
+        "globalAssetId": {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_8616ee5a"
+            }
+          ],
+          "type": "GlobalReference"
+        },
+        "specificAssetId": {
+          "externalSubjectId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_1747b3e3"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "name": "something_random_52c946f0",
+          "value": "something_random_ab97d593"
+        }
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

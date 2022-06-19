@@ -1,0 +1,30 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "direction": "OUTPUT",
+          "idShort": "some_id_short_5a3e7c0f",
+          "minInterval": "\udae7\udefd\udae7\udefd\ud9ae\udefe\ud82f\udfa8\udbe4\udc8c\ud80f\udeb6",
+          "modelType": "BasicEventElement",
+          "observed": {
+            "keys": [
+              {
+                "type": "Submodel",
+                "value": "something_random_b773a704"
+              },
+              {
+                "type": "Referable",
+                "value": "something_random_34fbb155"
+              }
+            ],
+            "type": "ModelReference"
+          },
+          "state": "OFF"
+        }
+      ]
+    }
+  ]
+}

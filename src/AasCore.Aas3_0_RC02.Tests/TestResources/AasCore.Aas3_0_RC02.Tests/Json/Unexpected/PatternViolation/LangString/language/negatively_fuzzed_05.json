@@ -1,0 +1,19 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "displayName": {
+        "langStrings": [
+          {
+            "language": "\udbc2\udf017111",
+            "text": "something_random_5435ff47"
+          }
+        ]
+      },
+      "id": "something_random_e73790ba",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "conceptDescriptions": [
+    {
+      "administration": {},
+      "category": "VALUE",
+      "checksum": [
+        "Unexpected array here"
+      ],
+      "dataSpecifications": [
+        {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_e57b35d3"
+            }
+          ],
+          "type": "GlobalReference"
+        }
+      ],
+      "description": {
+        "langStrings": [
+          {
+            "language": "en",
+            "text": "something_random_3dc85883"
+          }
+        ]
+      },
+      "displayName": {
+        "langStrings": [
+          {
+            "language": "en",
+            "text": "something_random_d5957c4a"
+          }
+        ]
+      },
+      "extensions": [
+        {
+          "name": "something_random_6145cadf"
+        }
+      ],
+      "id": "something_random_e77fa5b4",
+      "idShort": "Z0",
+      "isCaseOf": [
+        {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_5ef43728"
+            }
+          ],
+          "type": "GlobalReference"
+        }
+      ],
+      "modelType": "ConceptDescription"
+    }
+  ]
+}

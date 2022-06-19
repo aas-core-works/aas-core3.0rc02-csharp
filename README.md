@@ -1,2 +1,3 @@
-# aas-core3.0rc02-csharp8-dotnet6
-Manipulate, verify and de/serialize asset administration shells.
+# aas-core3.0rc02-csharp
+
+This is a software development kit (SDK) to to manipulate, verify and de/serialize Asset Administration Shells.
