@@ -17,3 +17,6 @@
 # Development artefacts
 obj/
 bin/
+
+# Python environment
+venv/
