@@ -5,8 +5,7 @@
 
 using CodeAnalysis = System.Diagnostics.CodeAnalysis;
 using Xml = System.Xml;
-using System.Collections.Generic;  // can't alias
-
+using System.Collections.Generic; // can't alias
 using Aas = AasCore.Aas3_0_RC02;
 
 namespace AasCore.Aas3_0_RC02
@@ -63,6 +62,7 @@ namespace AasCore.Aas3_0_RC02
                 {
                     stream.Write(buffer, 0, readBytes);
                 }
+
                 return stream.ToArray();
             }
 
@@ -173,7 +173,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IHasSemantics? IHasSemanticsFromElement
+            } // internal static Aas.IHasSemantics? IHasSemanticsFromElement
 
             /// <summary>
             /// Deserialize an instance of class Extension from a sequence of XML elements.
@@ -208,6 +208,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -233,6 +234,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -260,13 +262,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "name":
@@ -301,6 +304,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "valueType":
@@ -356,6 +360,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueType"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -390,6 +395,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "refersTo":
@@ -406,6 +412,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "refersTo"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -427,6 +434,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -435,6 +443,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -442,6 +451,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -465,14 +475,14 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Extension(
                     theName
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theSemanticId,
                     theSupplementalSemanticIds,
                     theValueType,
                     theValue,
                     theRefersTo);
-            }  // internal static Aas.Extension? ExtensionFromSequence
+            } // internal static Aas.Extension? ExtensionFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Extension from an XML element.
@@ -551,7 +561,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Extension? ExtensionFromElement
+            } // internal static Aas.Extension? ExtensionFromElement
 
             /// <summary>
             /// Deserialize an instance of IHasExtensions from an XML element.
@@ -656,7 +666,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IHasExtensions? IHasExtensionsFromElement
+            } // internal static Aas.IHasExtensions? IHasExtensionsFromElement
 
             /// <summary>
             /// Deserialize an instance of IReferable from an XML element.
@@ -761,7 +771,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IReferable? IReferableFromElement
+            } // internal static Aas.IReferable? IReferableFromElement
 
             /// <summary>
             /// Deserialize an instance of IIdentifiable from an XML element.
@@ -810,7 +820,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IIdentifiable? IIdentifiableFromElement
+            } // internal static Aas.IIdentifiable? IIdentifiableFromElement
 
             /// <summary>
             /// Deserialize an instance of IHasKind from an XML element.
@@ -907,7 +917,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IHasKind? IHasKindFromElement
+            } // internal static Aas.IHasKind? IHasKindFromElement
 
             /// <summary>
             /// Deserialize an instance of IHasDataSpecification from an XML element.
@@ -1016,7 +1026,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IHasDataSpecification? IHasDataSpecificationFromElement
+            } // internal static Aas.IHasDataSpecification? IHasDataSpecificationFromElement
 
             /// <summary>
             /// Deserialize an instance of class AdministrativeInformation from a sequence of XML elements.
@@ -1048,6 +1058,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -1084,13 +1095,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "version":
@@ -1125,6 +1137,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "revision":
@@ -1159,6 +1172,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -1180,6 +1194,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -1188,6 +1203,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -1195,6 +1211,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -1212,7 +1229,7 @@ namespace AasCore.Aas3_0_RC02
                     theDataSpecifications,
                     theVersion,
                     theRevision);
-            }  // internal static Aas.AdministrativeInformation? AdministrativeInformationFromSequence
+            } // internal static Aas.AdministrativeInformation? AdministrativeInformationFromSequence
 
             /// <summary>
             /// Deserialize an instance of class AdministrativeInformation from an XML element.
@@ -1291,7 +1308,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.AdministrativeInformation? AdministrativeInformationFromElement
+            } // internal static Aas.AdministrativeInformation? AdministrativeInformationFromElement
 
             /// <summary>
             /// Deserialize an instance of IQualifiable from an XML element.
@@ -1388,7 +1405,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IQualifiable? IQualifiableFromElement
+            } // internal static Aas.IQualifiable? IQualifiableFromElement
 
             /// <summary>
             /// Deserialize an instance of class Qualifier from a sequence of XML elements.
@@ -1424,6 +1441,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -1449,6 +1467,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -1476,13 +1495,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -1538,6 +1558,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "type":
@@ -1572,6 +1593,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "valueType":
@@ -1627,6 +1649,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueType"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -1661,6 +1684,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "valueId":
@@ -1677,6 +1701,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -1698,6 +1723,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -1706,6 +1732,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -1713,6 +1740,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -1744,17 +1772,17 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Qualifier(
                     theType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theValueType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theSemanticId,
                     theSupplementalSemanticIds,
                     theKind,
                     theValue,
                     theValueId);
-            }  // internal static Aas.Qualifier? QualifierFromSequence
+            } // internal static Aas.Qualifier? QualifierFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Qualifier from an XML element.
@@ -1833,7 +1861,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Qualifier? QualifierFromElement
+            } // internal static Aas.Qualifier? QualifierFromElement
 
             /// <summary>
             /// Deserialize an instance of class AssetAdministrationShell from a sequence of XML elements.
@@ -1874,6 +1902,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -1910,13 +1939,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -1951,6 +1981,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -1985,6 +2016,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -2001,6 +2033,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -2017,6 +2050,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -2051,6 +2085,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "administration":
@@ -2067,6 +2102,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "administration"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "id":
@@ -2101,6 +2137,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -2128,13 +2165,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "derivedFrom":
@@ -2151,6 +2189,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "derivedFrom"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "assetInformation":
@@ -2167,6 +2206,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "assetInformation"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "submodels":
@@ -2194,13 +2234,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSubmodels.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSubmodels++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -2222,6 +2263,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -2230,6 +2272,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -2237,6 +2280,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -2268,11 +2312,11 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.AssetAdministrationShell(
                     theId
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theAssetInformation
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -2283,7 +2327,7 @@ namespace AasCore.Aas3_0_RC02
                     theDataSpecifications,
                     theDerivedFrom,
                     theSubmodels);
-            }  // internal static Aas.AssetAdministrationShell? AssetAdministrationShellFromSequence
+            } // internal static Aas.AssetAdministrationShell? AssetAdministrationShellFromSequence
 
             /// <summary>
             /// Deserialize an instance of class AssetAdministrationShell from an XML element.
@@ -2362,7 +2406,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.AssetAdministrationShell? AssetAdministrationShellFromElement
+            } // internal static Aas.AssetAdministrationShell? AssetAdministrationShellFromElement
 
             /// <summary>
             /// Deserialize an instance of class AssetInformation from a sequence of XML elements.
@@ -2395,6 +2439,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -2459,6 +2504,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "assetKind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "globalAssetId":
@@ -2475,6 +2521,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "globalAssetId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "specificAssetId":
@@ -2491,6 +2538,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "specificAssetId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "defaultThumbnail":
@@ -2507,6 +2555,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "defaultThumbnail"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -2528,6 +2577,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -2536,6 +2586,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -2543,6 +2594,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -2566,12 +2618,12 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.AssetInformation(
                     theAssetKind
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theGlobalAssetId,
                     theSpecificAssetId,
                     theDefaultThumbnail);
-            }  // internal static Aas.AssetInformation? AssetInformationFromSequence
+            } // internal static Aas.AssetInformation? AssetInformationFromSequence
 
             /// <summary>
             /// Deserialize an instance of class AssetInformation from an XML element.
@@ -2650,7 +2702,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.AssetInformation? AssetInformationFromElement
+            } // internal static Aas.AssetInformation? AssetInformationFromElement
 
             /// <summary>
             /// Deserialize an instance of class Resource from a sequence of XML elements.
@@ -2681,6 +2733,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -2724,6 +2777,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "contentType":
@@ -2758,6 +2812,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -2779,6 +2834,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -2787,6 +2843,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -2794,6 +2851,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -2817,10 +2875,10 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Resource(
                     thePath
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theContentType);
-            }  // internal static Aas.Resource? ResourceFromSequence
+            } // internal static Aas.Resource? ResourceFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Resource from an XML element.
@@ -2899,7 +2957,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Resource? ResourceFromElement
+            } // internal static Aas.Resource? ResourceFromElement
 
             /// <summary>
             /// Deserialize an instance of class SpecificAssetId from a sequence of XML elements.
@@ -2933,6 +2991,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -2958,6 +3017,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -2985,13 +3045,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "name":
@@ -3026,6 +3087,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -3060,6 +3122,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "externalSubjectId":
@@ -3076,6 +3139,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "externalSubjectId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -3097,6 +3161,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -3105,6 +3170,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -3112,6 +3178,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -3151,17 +3218,17 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.SpecificAssetId(
                     theName
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theValue
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExternalSubjectId
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theSemanticId,
                     theSupplementalSemanticIds);
-            }  // internal static Aas.SpecificAssetId? SpecificAssetIdFromSequence
+            } // internal static Aas.SpecificAssetId? SpecificAssetIdFromSequence
 
             /// <summary>
             /// Deserialize an instance of class SpecificAssetId from an XML element.
@@ -3240,7 +3307,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.SpecificAssetId? SpecificAssetIdFromElement
+            } // internal static Aas.SpecificAssetId? SpecificAssetIdFromElement
 
             /// <summary>
             /// Deserialize an instance of class Submodel from a sequence of XML elements.
@@ -3283,6 +3350,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -3319,13 +3387,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -3360,6 +3429,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -3394,6 +3464,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -3410,6 +3481,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -3426,6 +3498,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -3460,6 +3533,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "administration":
@@ -3476,6 +3550,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "administration"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "id":
@@ -3510,6 +3585,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -3565,6 +3641,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -3581,6 +3658,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -3608,13 +3686,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -3642,13 +3721,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -3676,13 +3756,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "submodelElements":
@@ -3710,13 +3791,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSubmodelElements.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSubmodelElements++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -3738,6 +3820,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -3746,6 +3829,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -3753,6 +3837,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -3776,8 +3861,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Submodel(
                     theId
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -3791,7 +3876,7 @@ namespace AasCore.Aas3_0_RC02
                     theQualifiers,
                     theDataSpecifications,
                     theSubmodelElements);
-            }  // internal static Aas.Submodel? SubmodelFromSequence
+            } // internal static Aas.Submodel? SubmodelFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Submodel from an XML element.
@@ -3870,7 +3955,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Submodel? SubmodelFromElement
+            } // internal static Aas.Submodel? SubmodelFromElement
 
             /// <summary>
             /// Deserialize an instance of ISubmodelElement from an XML element.
@@ -3963,7 +4048,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.ISubmodelElement? ISubmodelElementFromElement
+            } // internal static Aas.ISubmodelElement? ISubmodelElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class RelationshipElement from a sequence of XML elements.
@@ -4005,6 +4090,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -4041,13 +4127,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -4082,6 +4169,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -4116,6 +4204,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -4132,6 +4221,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -4148,6 +4238,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -4182,6 +4273,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -4237,6 +4329,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -4253,6 +4346,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -4280,13 +4374,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -4314,13 +4409,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -4348,13 +4444,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "first":
@@ -4371,6 +4468,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "first"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "second":
@@ -4387,6 +4485,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "second"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -4408,6 +4507,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -4416,6 +4516,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -4423,6 +4524,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -4454,11 +4556,11 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.RelationshipElement(
                     theFirst
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theSecond
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -4470,7 +4572,7 @@ namespace AasCore.Aas3_0_RC02
                     theSupplementalSemanticIds,
                     theQualifiers,
                     theDataSpecifications);
-            }  // internal static Aas.RelationshipElement? RelationshipElementFromSequence
+            } // internal static Aas.RelationshipElement? RelationshipElementFromSequence
 
             /// <summary>
             /// Deserialize an instance of IRelationshipElement from an XML element.
@@ -4515,7 +4617,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IRelationshipElement? IRelationshipElementFromElement
+            } // internal static Aas.IRelationshipElement? IRelationshipElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class RelationshipElement from an XML element.
@@ -4594,7 +4696,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.RelationshipElement? RelationshipElementFromElement
+            } // internal static Aas.RelationshipElement? RelationshipElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class SubmodelElementList from a sequence of XML elements.
@@ -4639,6 +4741,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -4675,13 +4778,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -4716,6 +4820,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -4750,6 +4855,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -4766,6 +4872,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -4782,6 +4889,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -4816,6 +4924,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -4871,6 +4980,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -4887,6 +4997,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -4914,13 +5025,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -4948,13 +5060,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -4982,13 +5095,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "orderRelevant":
@@ -5030,6 +5144,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -5057,13 +5172,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theValue.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexValue++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "semanticIdListElement":
@@ -5080,6 +5196,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticIdListElement"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "typeValueListElement":
@@ -5135,6 +5252,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "typeValueListElement"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "valueTypeListElement":
@@ -5190,6 +5308,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueTypeListElement"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -5211,6 +5330,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -5219,6 +5339,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -5226,6 +5347,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -5249,8 +5371,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.SubmodelElementList(
                     theTypeValueListElement
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -5266,7 +5388,7 @@ namespace AasCore.Aas3_0_RC02
                     theValue,
                     theSemanticIdListElement,
                     theValueTypeListElement);
-            }  // internal static Aas.SubmodelElementList? SubmodelElementListFromSequence
+            } // internal static Aas.SubmodelElementList? SubmodelElementListFromSequence
 
             /// <summary>
             /// Deserialize an instance of class SubmodelElementList from an XML element.
@@ -5345,7 +5467,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.SubmodelElementList? SubmodelElementListFromElement
+            } // internal static Aas.SubmodelElementList? SubmodelElementListFromElement
 
             /// <summary>
             /// Deserialize an instance of class SubmodelElementCollection from a sequence of XML elements.
@@ -5386,6 +5508,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -5422,13 +5545,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -5463,6 +5587,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -5497,6 +5622,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -5513,6 +5639,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -5529,6 +5656,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -5563,6 +5691,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -5618,6 +5747,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -5634,6 +5764,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -5661,13 +5792,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -5695,13 +5827,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -5729,13 +5862,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -5763,13 +5897,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theValue.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexValue++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -5791,6 +5926,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -5799,6 +5935,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -5806,6 +5943,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -5832,7 +5970,7 @@ namespace AasCore.Aas3_0_RC02
                     theQualifiers,
                     theDataSpecifications,
                     theValue);
-            }  // internal static Aas.SubmodelElementCollection? SubmodelElementCollectionFromSequence
+            } // internal static Aas.SubmodelElementCollection? SubmodelElementCollectionFromSequence
 
             /// <summary>
             /// Deserialize an instance of class SubmodelElementCollection from an XML element.
@@ -5911,7 +6049,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.SubmodelElementCollection? SubmodelElementCollectionFromElement
+            } // internal static Aas.SubmodelElementCollection? SubmodelElementCollectionFromElement
 
             /// <summary>
             /// Deserialize an instance of IDataElement from an XML element.
@@ -5972,7 +6110,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IDataElement? IDataElementFromElement
+            } // internal static Aas.IDataElement? IDataElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class Property from a sequence of XML elements.
@@ -6015,6 +6153,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -6051,13 +6190,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -6092,6 +6232,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -6126,6 +6267,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -6142,6 +6284,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -6158,6 +6301,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -6192,6 +6336,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -6247,6 +6392,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -6263,6 +6409,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -6290,13 +6437,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -6324,13 +6472,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -6358,13 +6507,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "valueType":
@@ -6420,6 +6570,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueType"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -6454,6 +6605,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "valueId":
@@ -6470,6 +6622,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -6491,6 +6644,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -6499,6 +6653,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -6506,6 +6661,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -6529,8 +6685,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Property(
                     theValueType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -6544,7 +6700,7 @@ namespace AasCore.Aas3_0_RC02
                     theDataSpecifications,
                     theValue,
                     theValueId);
-            }  // internal static Aas.Property? PropertyFromSequence
+            } // internal static Aas.Property? PropertyFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Property from an XML element.
@@ -6623,7 +6779,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Property? PropertyFromElement
+            } // internal static Aas.Property? PropertyFromElement
 
             /// <summary>
             /// Deserialize an instance of class MultiLanguageProperty from a sequence of XML elements.
@@ -6665,6 +6821,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -6701,13 +6858,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -6742,6 +6900,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -6776,6 +6935,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -6792,6 +6952,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -6808,6 +6969,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -6842,6 +7004,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -6897,6 +7060,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -6913,6 +7077,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -6940,13 +7105,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -6974,13 +7140,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -7008,13 +7175,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -7031,6 +7199,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "value"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "valueId":
@@ -7047,6 +7216,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -7068,6 +7238,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -7076,6 +7247,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -7083,6 +7255,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -7110,7 +7283,7 @@ namespace AasCore.Aas3_0_RC02
                     theDataSpecifications,
                     theValue,
                     theValueId);
-            }  // internal static Aas.MultiLanguageProperty? MultiLanguagePropertyFromSequence
+            } // internal static Aas.MultiLanguageProperty? MultiLanguagePropertyFromSequence
 
             /// <summary>
             /// Deserialize an instance of class MultiLanguageProperty from an XML element.
@@ -7189,7 +7362,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.MultiLanguageProperty? MultiLanguagePropertyFromElement
+            } // internal static Aas.MultiLanguageProperty? MultiLanguagePropertyFromElement
 
             /// <summary>
             /// Deserialize an instance of class Range from a sequence of XML elements.
@@ -7232,6 +7405,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -7268,13 +7442,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -7309,6 +7484,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -7343,6 +7519,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -7359,6 +7536,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -7375,6 +7553,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -7409,6 +7588,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -7464,6 +7644,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -7480,6 +7661,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -7507,13 +7689,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -7541,13 +7724,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -7575,13 +7759,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "valueType":
@@ -7637,6 +7822,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "valueType"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "min":
@@ -7671,6 +7857,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "max":
@@ -7705,6 +7892,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -7726,6 +7914,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -7734,6 +7923,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -7741,6 +7931,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -7764,8 +7955,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Range(
                     theValueType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -7779,7 +7970,7 @@ namespace AasCore.Aas3_0_RC02
                     theDataSpecifications,
                     theMin,
                     theMax);
-            }  // internal static Aas.Range? RangeFromSequence
+            } // internal static Aas.Range? RangeFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Range from an XML element.
@@ -7858,7 +8049,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Range? RangeFromElement
+            } // internal static Aas.Range? RangeFromElement
 
             /// <summary>
             /// Deserialize an instance of class ReferenceElement from a sequence of XML elements.
@@ -7899,6 +8090,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -7935,13 +8127,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -7976,6 +8169,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -8010,6 +8204,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -8026,6 +8221,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -8042,6 +8238,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -8076,6 +8273,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -8131,6 +8329,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -8147,6 +8346,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -8174,13 +8374,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -8208,13 +8409,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -8242,13 +8444,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -8265,6 +8468,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "value"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -8286,6 +8490,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -8294,6 +8499,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -8301,6 +8507,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -8327,7 +8534,7 @@ namespace AasCore.Aas3_0_RC02
                     theQualifiers,
                     theDataSpecifications,
                     theValue);
-            }  // internal static Aas.ReferenceElement? ReferenceElementFromSequence
+            } // internal static Aas.ReferenceElement? ReferenceElementFromSequence
 
             /// <summary>
             /// Deserialize an instance of class ReferenceElement from an XML element.
@@ -8406,7 +8613,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.ReferenceElement? ReferenceElementFromElement
+            } // internal static Aas.ReferenceElement? ReferenceElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class Blob from a sequence of XML elements.
@@ -8448,6 +8655,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -8484,13 +8692,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -8525,6 +8734,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -8559,6 +8769,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -8575,6 +8786,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -8591,6 +8803,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -8625,6 +8838,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -8680,6 +8894,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -8696,6 +8911,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -8723,13 +8939,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -8757,13 +8974,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -8791,13 +9009,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -8827,7 +9046,7 @@ namespace AasCore.Aas3_0_RC02
                                         try
                                         {
                                             theValue = DeserializeImplementation.ReadWholeContentAsBase64(
-                                            reader);
+                                                reader);
                                         }
                                         catch (System.FormatException exception)
                                         {
@@ -8840,6 +9059,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "contentType":
@@ -8874,6 +9094,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -8895,6 +9116,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -8903,6 +9125,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -8910,6 +9133,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -8933,8 +9157,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Blob(
                     theContentType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -8947,7 +9171,7 @@ namespace AasCore.Aas3_0_RC02
                     theQualifiers,
                     theDataSpecifications,
                     theValue);
-            }  // internal static Aas.Blob? BlobFromSequence
+            } // internal static Aas.Blob? BlobFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Blob from an XML element.
@@ -9026,7 +9250,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Blob? BlobFromElement
+            } // internal static Aas.Blob? BlobFromElement
 
             /// <summary>
             /// Deserialize an instance of class File from a sequence of XML elements.
@@ -9068,6 +9292,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -9104,13 +9329,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -9145,6 +9371,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -9179,6 +9406,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -9195,6 +9423,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -9211,6 +9440,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -9245,6 +9475,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -9300,6 +9531,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -9316,6 +9548,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -9343,13 +9576,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -9377,13 +9611,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -9411,13 +9646,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -9452,6 +9688,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "contentType":
@@ -9486,6 +9723,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -9507,6 +9745,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -9515,6 +9754,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -9522,6 +9762,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -9545,8 +9786,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.File(
                     theContentType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -9559,7 +9800,7 @@ namespace AasCore.Aas3_0_RC02
                     theQualifiers,
                     theDataSpecifications,
                     theValue);
-            }  // internal static Aas.File? FileFromSequence
+            } // internal static Aas.File? FileFromSequence
 
             /// <summary>
             /// Deserialize an instance of class File from an XML element.
@@ -9638,7 +9879,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.File? FileFromElement
+            } // internal static Aas.File? FileFromElement
 
             /// <summary>
             /// Deserialize an instance of class AnnotatedRelationshipElement from a sequence of XML elements.
@@ -9681,6 +9922,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -9717,13 +9959,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -9758,6 +10001,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -9792,6 +10036,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -9808,6 +10053,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -9824,6 +10070,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -9858,6 +10105,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -9913,6 +10161,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -9929,6 +10178,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -9956,13 +10206,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -9990,13 +10241,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -10024,13 +10276,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "first":
@@ -10047,6 +10300,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "first"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "second":
@@ -10063,6 +10317,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "second"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "annotations":
@@ -10090,13 +10345,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theAnnotations.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexAnnotations++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -10118,6 +10374,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -10126,6 +10383,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -10133,6 +10391,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -10164,11 +10423,11 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.AnnotatedRelationshipElement(
                     theFirst
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theSecond
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -10181,7 +10440,7 @@ namespace AasCore.Aas3_0_RC02
                     theQualifiers,
                     theDataSpecifications,
                     theAnnotations);
-            }  // internal static Aas.AnnotatedRelationshipElement? AnnotatedRelationshipElementFromSequence
+            } // internal static Aas.AnnotatedRelationshipElement? AnnotatedRelationshipElementFromSequence
 
             /// <summary>
             /// Deserialize an instance of class AnnotatedRelationshipElement from an XML element.
@@ -10260,7 +10519,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.AnnotatedRelationshipElement? AnnotatedRelationshipElementFromElement
+            } // internal static Aas.AnnotatedRelationshipElement? AnnotatedRelationshipElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class Entity from a sequence of XML elements.
@@ -10304,6 +10563,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -10340,13 +10600,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -10381,6 +10642,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -10415,6 +10677,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -10431,6 +10694,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -10447,6 +10711,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -10481,6 +10746,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -10536,6 +10802,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -10552,6 +10819,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -10579,13 +10847,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -10613,13 +10882,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -10647,13 +10917,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "statements":
@@ -10681,13 +10952,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theStatements.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexStatements++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "entityType":
@@ -10743,6 +11015,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "entityType"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "globalAssetId":
@@ -10759,6 +11032,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "globalAssetId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "specificAssetId":
@@ -10775,6 +11049,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "specificAssetId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -10796,6 +11071,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -10804,6 +11080,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -10811,6 +11088,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -10834,8 +11112,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Entity(
                     theEntityType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -10850,7 +11128,7 @@ namespace AasCore.Aas3_0_RC02
                     theStatements,
                     theGlobalAssetId,
                     theSpecificAssetId);
-            }  // internal static Aas.Entity? EntityFromSequence
+            } // internal static Aas.Entity? EntityFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Entity from an XML element.
@@ -10929,7 +11207,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Entity? EntityFromElement
+            } // internal static Aas.Entity? EntityFromElement
 
             /// <summary>
             /// Deserialize an instance of class EventPayload from a sequence of XML elements.
@@ -10966,6 +11244,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -10991,6 +11270,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "source"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "sourceSemanticId":
@@ -11007,6 +11287,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "sourceSemanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "observableReference":
@@ -11023,6 +11304,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "observableReference"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "observableSemanticId":
@@ -11039,6 +11321,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "observableSemanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "topic":
@@ -11073,6 +11356,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "subjectId":
@@ -11089,6 +11373,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "subjectId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "timeStamp":
@@ -11123,6 +11408,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "payload":
@@ -11157,6 +11443,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -11178,6 +11465,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -11186,6 +11474,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -11193,6 +11482,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -11232,20 +11522,20 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.EventPayload(
                     theSource
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theObservableReference
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theTimeStamp
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theSourceSemanticId,
                     theObservableSemanticId,
                     theTopic,
                     theSubjectId,
                     thePayload);
-            }  // internal static Aas.EventPayload? EventPayloadFromSequence
+            } // internal static Aas.EventPayload? EventPayloadFromSequence
 
             /// <summary>
             /// Deserialize an instance of class EventPayload from an XML element.
@@ -11324,7 +11614,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.EventPayload? EventPayloadFromElement
+            } // internal static Aas.EventPayload? EventPayloadFromElement
 
             /// <summary>
             /// Deserialize an instance of IEventElement from an XML element.
@@ -11365,7 +11655,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IEventElement? IEventElementFromElement
+            } // internal static Aas.IEventElement? IEventElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class BasicEventElement from a sequence of XML elements.
@@ -11413,6 +11703,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -11449,13 +11740,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -11490,6 +11782,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -11524,6 +11817,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -11540,6 +11834,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -11556,6 +11851,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -11590,6 +11886,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -11645,6 +11942,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -11661,6 +11959,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -11688,13 +11987,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -11722,13 +12022,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -11756,13 +12057,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "observed":
@@ -11779,6 +12081,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "observed"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "direction":
@@ -11834,6 +12137,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "direction"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "state":
@@ -11889,6 +12193,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "state"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "messageTopic":
@@ -11923,6 +12228,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "messageBroker":
@@ -11939,6 +12245,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "messageBroker"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "lastUpdate":
@@ -11973,6 +12280,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "minInterval":
@@ -12007,6 +12315,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "maxInterval":
@@ -12041,6 +12350,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -12062,6 +12372,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -12070,6 +12381,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -12077,6 +12389,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -12116,14 +12429,14 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.BasicEventElement(
                     theObserved
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theDirection
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theState
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -12140,7 +12453,7 @@ namespace AasCore.Aas3_0_RC02
                     theLastUpdate,
                     theMinInterval,
                     theMaxInterval);
-            }  // internal static Aas.BasicEventElement? BasicEventElementFromSequence
+            } // internal static Aas.BasicEventElement? BasicEventElementFromSequence
 
             /// <summary>
             /// Deserialize an instance of class BasicEventElement from an XML element.
@@ -12219,7 +12532,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.BasicEventElement? BasicEventElementFromElement
+            } // internal static Aas.BasicEventElement? BasicEventElementFromElement
 
             /// <summary>
             /// Deserialize an instance of class Operation from a sequence of XML elements.
@@ -12262,6 +12575,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -12298,13 +12612,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -12339,6 +12654,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -12373,6 +12689,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -12389,6 +12706,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -12405,6 +12723,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -12439,6 +12758,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -12494,6 +12814,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -12510,6 +12831,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -12537,13 +12859,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -12571,13 +12894,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -12605,13 +12929,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "inputVariables":
@@ -12639,13 +12964,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theInputVariables.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexInputVariables++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "outputVariables":
@@ -12673,13 +12999,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theOutputVariables.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexOutputVariables++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "inoutputVariables":
@@ -12707,13 +13034,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theInoutputVariables.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexInoutputVariables++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -12735,6 +13063,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -12743,6 +13072,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -12750,6 +13080,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -12778,7 +13109,7 @@ namespace AasCore.Aas3_0_RC02
                     theInputVariables,
                     theOutputVariables,
                     theInoutputVariables);
-            }  // internal static Aas.Operation? OperationFromSequence
+            } // internal static Aas.Operation? OperationFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Operation from an XML element.
@@ -12857,7 +13188,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Operation? OperationFromElement
+            } // internal static Aas.Operation? OperationFromElement
 
             /// <summary>
             /// Deserialize an instance of class OperationVariable from a sequence of XML elements.
@@ -12887,6 +13218,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -12929,6 +13261,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "value"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             default:
@@ -12950,6 +13283,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -12958,6 +13292,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -12965,6 +13300,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -12988,9 +13324,9 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.OperationVariable(
                     theValue
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"));
-            }  // internal static Aas.OperationVariable? OperationVariableFromSequence
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"));
+            } // internal static Aas.OperationVariable? OperationVariableFromSequence
 
             /// <summary>
             /// Deserialize an instance of class OperationVariable from an XML element.
@@ -13069,7 +13405,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.OperationVariable? OperationVariableFromElement
+            } // internal static Aas.OperationVariable? OperationVariableFromElement
 
             /// <summary>
             /// Deserialize an instance of class Capability from a sequence of XML elements.
@@ -13109,6 +13445,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -13145,13 +13482,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -13186,6 +13524,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -13220,6 +13559,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -13236,6 +13576,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -13252,6 +13593,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -13286,6 +13628,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "kind":
@@ -13341,6 +13684,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "kind"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "semanticId":
@@ -13357,6 +13701,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "semanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "supplementalSemanticIds":
@@ -13384,13 +13729,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSupplementalSemanticIds.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSupplementalSemanticIds++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "qualifiers":
@@ -13418,13 +13764,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theQualifiers.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexQualifiers++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -13452,13 +13799,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -13480,6 +13828,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -13488,6 +13837,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -13495,6 +13845,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -13520,7 +13871,7 @@ namespace AasCore.Aas3_0_RC02
                     theSupplementalSemanticIds,
                     theQualifiers,
                     theDataSpecifications);
-            }  // internal static Aas.Capability? CapabilityFromSequence
+            } // internal static Aas.Capability? CapabilityFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Capability from an XML element.
@@ -13599,7 +13950,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Capability? CapabilityFromElement
+            } // internal static Aas.Capability? CapabilityFromElement
 
             /// <summary>
             /// Deserialize an instance of class ConceptDescription from a sequence of XML elements.
@@ -13638,6 +13989,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -13674,13 +14026,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theExtensions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexExtensions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "category":
@@ -13715,6 +14068,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "idShort":
@@ -13749,6 +14103,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "displayName":
@@ -13765,6 +14120,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "displayName"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "description":
@@ -13781,6 +14137,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "description"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "checksum":
@@ -13815,6 +14172,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "administration":
@@ -13831,6 +14189,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "administration"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "id":
@@ -13865,6 +14224,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -13892,13 +14252,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "isCaseOf":
@@ -13926,13 +14287,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theIsCaseOf.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexIsCaseOf++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -13954,6 +14316,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -13962,6 +14325,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -13969,6 +14333,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -13992,8 +14357,8 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.ConceptDescription(
                     theId
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theExtensions,
                     theCategory,
                     theIdShort,
@@ -14003,7 +14368,7 @@ namespace AasCore.Aas3_0_RC02
                     theAdministration,
                     theDataSpecifications,
                     theIsCaseOf);
-            }  // internal static Aas.ConceptDescription? ConceptDescriptionFromSequence
+            } // internal static Aas.ConceptDescription? ConceptDescriptionFromSequence
 
             /// <summary>
             /// Deserialize an instance of class ConceptDescription from an XML element.
@@ -14082,7 +14447,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.ConceptDescription? ConceptDescriptionFromElement
+            } // internal static Aas.ConceptDescription? ConceptDescriptionFromElement
 
             /// <summary>
             /// Deserialize an instance of class Reference from a sequence of XML elements.
@@ -14114,6 +14479,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -14178,6 +14544,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "type"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "referredSemanticId":
@@ -14194,6 +14561,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "referredSemanticId"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "keys":
@@ -14221,13 +14589,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theKeys.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexKeys++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -14249,6 +14618,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -14257,6 +14627,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -14264,6 +14635,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -14295,13 +14667,13 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Reference(
                     theType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theKeys
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theReferredSemanticId);
-            }  // internal static Aas.Reference? ReferenceFromSequence
+            } // internal static Aas.Reference? ReferenceFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Reference from an XML element.
@@ -14380,7 +14752,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Reference? ReferenceFromElement
+            } // internal static Aas.Reference? ReferenceFromElement
 
             /// <summary>
             /// Deserialize an instance of class Key from a sequence of XML elements.
@@ -14411,6 +14783,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -14475,6 +14848,7 @@ namespace AasCore.Aas3_0_RC02
                                                 "type"));
                                         return null;
                                     }
+
                                     break;
                                 }
                             case "value":
@@ -14509,6 +14883,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -14530,6 +14905,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -14538,6 +14914,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -14545,6 +14922,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -14576,12 +14954,12 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.Key(
                     theType
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theValue
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"));
-            }  // internal static Aas.Key? KeyFromSequence
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"));
+            } // internal static Aas.Key? KeyFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Key from an XML element.
@@ -14660,7 +15038,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Key? KeyFromElement
+            } // internal static Aas.Key? KeyFromElement
 
             /// <summary>
             /// Deserialize an instance of class LangString from a sequence of XML elements.
@@ -14691,6 +15069,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -14734,6 +15113,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             case "text":
@@ -14768,6 +15148,7 @@ namespace AasCore.Aas3_0_RC02
                                             return null;
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -14789,6 +15170,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -14797,6 +15179,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -14804,6 +15187,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -14835,12 +15219,12 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.LangString(
                     theLanguage
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"),
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"),
                     theText
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"));
-            }  // internal static Aas.LangString? LangStringFromSequence
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"));
+            } // internal static Aas.LangString? LangStringFromSequence
 
             /// <summary>
             /// Deserialize an instance of class LangString from an XML element.
@@ -14919,7 +15303,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.LangString? LangStringFromElement
+            } // internal static Aas.LangString? LangStringFromElement
 
             /// <summary>
             /// Deserialize an instance of class LangStringSet from a sequence of XML elements.
@@ -14949,6 +15333,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -14985,13 +15370,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theLangStrings.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexLangStrings++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -15013,6 +15399,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -15021,6 +15408,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -15028,6 +15416,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -15051,9 +15440,9 @@ namespace AasCore.Aas3_0_RC02
 
                 return new Aas.LangStringSet(
                     theLangStrings
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"));
-            }  // internal static Aas.LangStringSet? LangStringSetFromSequence
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null, had to be handled before"));
+            } // internal static Aas.LangStringSet? LangStringSetFromSequence
 
             /// <summary>
             /// Deserialize an instance of class LangStringSet from an XML element.
@@ -15132,7 +15521,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.LangStringSet? LangStringSetFromElement
+            } // internal static Aas.LangStringSet? LangStringSetFromElement
 
             /// <summary>
             /// Deserialize an instance of IDataSpecificationContent from an XML element.
@@ -15169,7 +15558,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IDataSpecificationContent? IDataSpecificationContentFromElement
+            } // internal static Aas.IDataSpecificationContent? IDataSpecificationContentFromElement
 
             /// <summary>
             /// Deserialize an instance of IDataSpecification from an XML element.
@@ -15206,7 +15595,7 @@ namespace AasCore.Aas3_0_RC02
                             $"Unexpected element with the name {reader.Name}");
                         return null;
                 }
-            }  // internal static Aas.IDataSpecification? IDataSpecificationFromElement
+            } // internal static Aas.IDataSpecification? IDataSpecificationFromElement
 
             /// <summary>
             /// Deserialize an instance of class Environment from a sequence of XML elements.
@@ -15239,6 +15628,7 @@ namespace AasCore.Aas3_0_RC02
                             "but reached the end-of-file");
                         return null;
                     }
+
                     while (reader.NodeType == Xml.XmlNodeType.Element)
                     {
                         string elementName = reader.Name;
@@ -15275,13 +15665,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theAssetAdministrationShells.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexAssetAdministrationShells++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "submodels":
@@ -15309,13 +15700,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theSubmodels.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexSubmodels++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "conceptDescriptions":
@@ -15343,13 +15735,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theConceptDescriptions.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexConceptDescriptions++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             case "dataSpecifications":
@@ -15377,13 +15770,14 @@ namespace AasCore.Aas3_0_RC02
 
                                             theDataSpecifications.Add(
                                                 item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
                                             indexDataSpecifications++;
                                             SkipNoneWhitespaceAndComments(reader);
                                         }
                                     }
+
                                     break;
                                 }
                             default:
@@ -15405,6 +15799,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     "but got the end-of-file.");
                             }
+
                             if (reader.NodeType != Xml.XmlNodeType.EndElement)
                             {
                                 error = new Reporting.Error(
@@ -15413,6 +15808,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"but got the node of type {reader.NodeType} " +
                                     $"with the value {reader.Value}");
                             }
+
                             if (reader.Name != elementName)
                             {
                                 error = new Reporting.Error(
@@ -15420,6 +15816,7 @@ namespace AasCore.Aas3_0_RC02
                                     $"with the element name {elementName}, " +
                                     $"but got the end element with the name {reader.Name}");
                             }
+
                             // Skip the expected end element
                             reader.Read();
 
@@ -15438,7 +15835,7 @@ namespace AasCore.Aas3_0_RC02
                     theSubmodels,
                     theConceptDescriptions,
                     theDataSpecifications);
-            }  // internal static Aas.Environment? EnvironmentFromSequence
+            } // internal static Aas.Environment? EnvironmentFromSequence
 
             /// <summary>
             /// Deserialize an instance of class Environment from an XML element.
@@ -15517,8 +15914,8 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 return result;
-            }  // internal static Aas.Environment? EnvironmentFromElement
-        }  // internal static class DeserializeImplementation
+            } // internal static Aas.Environment? EnvironmentFromElement
+        } // internal static class DeserializeImplementation
 
         /// <summary>
         /// Represent a critical error during the deserialization.
@@ -15527,6 +15924,7 @@ namespace AasCore.Aas3_0_RC02
         {
             public readonly string Path;
             public readonly string Cause;
+
             public Exception(string path, string cause)
                 : base($"{cause} at: {path}")
             {
@@ -15570,9 +15968,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15596,9 +15995,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15623,9 +16023,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15650,9 +16051,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15677,9 +16079,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15704,9 +16107,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15731,9 +16135,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15757,9 +16162,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15784,9 +16190,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15810,9 +16217,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15836,9 +16244,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15862,9 +16271,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15888,9 +16298,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15914,9 +16325,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15940,9 +16352,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15967,9 +16380,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -15994,9 +16408,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16020,9 +16435,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16046,9 +16462,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16072,9 +16489,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16099,9 +16517,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16125,9 +16544,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16151,9 +16571,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16177,9 +16598,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16203,9 +16625,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16229,9 +16652,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16255,9 +16679,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16281,9 +16706,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16307,9 +16733,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16333,9 +16760,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16360,9 +16788,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16386,9 +16815,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16412,9 +16842,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16438,9 +16869,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16464,9 +16896,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16490,9 +16923,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16516,9 +16950,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16542,9 +16977,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16568,9 +17004,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16594,9 +17031,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16621,9 +17059,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16648,9 +17087,10 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
 
             /// <summary>
@@ -16674,11 +17114,12 @@ namespace AasCore.Aas3_0_RC02
                         Reporting.GenerateRelativeXPath(error.PathSegments),
                         error.Cause);
                 }
+
                 return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
+                       ?? throw new System.InvalidOperationException(
+                           "Unexpected output null when error is null");
             }
-        }  // public static class Deserialize
+        } // public static class Deserialize
 
         /// <summary>
         /// Serialize recursively the instances as XML elements.
@@ -16734,9 +17175,9 @@ namespace AasCore.Aas3_0_RC02
                         that.ValueType);
                     writer.WriteValue(
                         textValueType
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration DataTypeDefXsd: " +
-                                that.ValueType.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration DataTypeDefXsd: " +
+                            that.ValueType.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -16763,7 +17204,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void ExtensionToSequence
+            } // private void ExtensionToSequence
 
             public override void Visit(
                 Aas.Extension that,
@@ -16817,7 +17258,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void AdministrativeInformationToSequence
+            } // private void AdministrativeInformationToSequence
 
             public override void Visit(
                 Aas.AdministrativeInformation that,
@@ -16871,9 +17312,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration QualifierKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration QualifierKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -16893,9 +17334,9 @@ namespace AasCore.Aas3_0_RC02
                     that.ValueType);
                 writer.WriteValue(
                     textValueType
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration DataTypeDefXsd: " +
-                            that.ValueType.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration DataTypeDefXsd: " +
+                        that.ValueType.ToString()));
 
                 writer.WriteEndElement();
 
@@ -16921,7 +17362,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void QualifierToSequence
+            } // private void QualifierToSequence
 
             public override void Visit(
                 Aas.Qualifier that,
@@ -17081,7 +17522,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void AssetAdministrationShellToSequence
+            } // private void AssetAdministrationShellToSequence
 
             public override void Visit(
                 Aas.AssetAdministrationShell that,
@@ -17106,9 +17547,9 @@ namespace AasCore.Aas3_0_RC02
                     that.AssetKind);
                 writer.WriteValue(
                     textAssetKind
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration AssetKind: " +
-                            that.AssetKind.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration AssetKind: " +
+                        that.AssetKind.ToString()));
 
                 writer.WriteEndElement();
 
@@ -17147,7 +17588,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void AssetInformationToSequence
+            } // private void AssetInformationToSequence
 
             public override void Visit(
                 Aas.AssetInformation that,
@@ -17183,7 +17624,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void ResourceToSequence
+            } // private void ResourceToSequence
 
             public override void Visit(
                 Aas.Resource that,
@@ -17252,7 +17693,7 @@ namespace AasCore.Aas3_0_RC02
                     writer);
 
                 writer.WriteEndElement();
-            }  // private void SpecificAssetIdToSequence
+            } // private void SpecificAssetIdToSequence
 
             public override void Visit(
                 Aas.SpecificAssetId that,
@@ -17371,9 +17812,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -17449,7 +17890,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void SubmodelToSequence
+            } // private void SubmodelToSequence
 
             public override void Visit(
                 Aas.Submodel that,
@@ -17548,9 +17989,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -17629,7 +18070,7 @@ namespace AasCore.Aas3_0_RC02
                     writer);
 
                 writer.WriteEndElement();
-            }  // private void RelationshipElementToSequence
+            } // private void RelationshipElementToSequence
 
             public override void Visit(
                 Aas.RelationshipElement that,
@@ -17728,9 +18169,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -17837,9 +18278,9 @@ namespace AasCore.Aas3_0_RC02
                     that.TypeValueListElement);
                 writer.WriteValue(
                     textTypeValueListElement
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration AasSubmodelElements: " +
-                            that.TypeValueListElement.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration AasSubmodelElements: " +
+                        that.TypeValueListElement.ToString()));
 
                 writer.WriteEndElement();
 
@@ -17852,13 +18293,13 @@ namespace AasCore.Aas3_0_RC02
                         that.ValueTypeListElement);
                     writer.WriteValue(
                         textValueTypeListElement
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration DataTypeDefXsd: " +
-                                that.ValueTypeListElement.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration DataTypeDefXsd: " +
+                            that.ValueTypeListElement.ToString()));
 
                     writer.WriteEndElement();
                 }
-            }  // private void SubmodelElementListToSequence
+            } // private void SubmodelElementListToSequence
 
             public override void Visit(
                 Aas.SubmodelElementList that,
@@ -17957,9 +18398,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -18035,7 +18476,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void SubmodelElementCollectionToSequence
+            } // private void SubmodelElementCollectionToSequence
 
             public override void Visit(
                 Aas.SubmodelElementCollection that,
@@ -18134,9 +18575,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -18205,9 +18646,9 @@ namespace AasCore.Aas3_0_RC02
                     that.ValueType);
                 writer.WriteValue(
                     textValueType
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration DataTypeDefXsd: " +
-                            that.ValueType.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration DataTypeDefXsd: " +
+                        that.ValueType.ToString()));
 
                 writer.WriteEndElement();
 
@@ -18233,7 +18674,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void PropertyToSequence
+            } // private void PropertyToSequence
 
             public override void Visit(
                 Aas.Property that,
@@ -18332,9 +18773,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -18419,7 +18860,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void MultiLanguagePropertyToSequence
+            } // private void MultiLanguagePropertyToSequence
 
             public override void Visit(
                 Aas.MultiLanguageProperty that,
@@ -18518,9 +18959,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -18589,9 +19030,9 @@ namespace AasCore.Aas3_0_RC02
                     that.ValueType);
                 writer.WriteValue(
                     textValueType
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration DataTypeDefXsd: " +
-                            that.ValueType.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration DataTypeDefXsd: " +
+                        that.ValueType.ToString()));
 
                 writer.WriteEndElement();
 
@@ -18616,7 +19057,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void RangeToSequence
+            } // private void RangeToSequence
 
             public override void Visit(
                 Aas.Range that,
@@ -18715,9 +19156,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -18790,7 +19231,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void ReferenceElementToSequence
+            } // private void ReferenceElementToSequence
 
             public override void Visit(
                 Aas.ReferenceElement that,
@@ -18889,9 +19330,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -18971,7 +19412,7 @@ namespace AasCore.Aas3_0_RC02
                     that.ContentType);
 
                 writer.WriteEndElement();
-            }  // private void BlobToSequence
+            } // private void BlobToSequence
 
             public override void Visit(
                 Aas.Blob that,
@@ -19070,9 +19511,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -19152,7 +19593,7 @@ namespace AasCore.Aas3_0_RC02
                     that.ContentType);
 
                 writer.WriteEndElement();
-            }  // private void FileToSequence
+            } // private void FileToSequence
 
             public override void Visit(
                 Aas.File that,
@@ -19251,9 +19692,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -19347,7 +19788,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void AnnotatedRelationshipElementToSequence
+            } // private void AnnotatedRelationshipElementToSequence
 
             public override void Visit(
                 Aas.AnnotatedRelationshipElement that,
@@ -19446,9 +19887,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -19532,9 +19973,9 @@ namespace AasCore.Aas3_0_RC02
                     that.EntityType);
                 writer.WriteValue(
                     textEntityType
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration EntityType: " +
-                            that.EntityType.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration EntityType: " +
+                        that.EntityType.ToString()));
 
                 writer.WriteEndElement();
 
@@ -19561,7 +20002,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void EntityToSequence
+            } // private void EntityToSequence
 
             public override void Visit(
                 Aas.Entity that,
@@ -19662,7 +20103,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void EventPayloadToSequence
+            } // private void EventPayloadToSequence
 
             public override void Visit(
                 Aas.EventPayload that,
@@ -19761,9 +20202,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -19841,9 +20282,9 @@ namespace AasCore.Aas3_0_RC02
                     that.Direction);
                 writer.WriteValue(
                     textDirection
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration Direction: " +
-                            that.Direction.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration Direction: " +
+                        that.Direction.ToString()));
 
                 writer.WriteEndElement();
 
@@ -19854,9 +20295,9 @@ namespace AasCore.Aas3_0_RC02
                     that.State);
                 writer.WriteValue(
                     textState
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration StateOfEvent: " +
-                            that.State.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration StateOfEvent: " +
+                        that.State.ToString()));
 
                 writer.WriteEndElement();
 
@@ -19915,7 +20356,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void BasicEventElementToSequence
+            } // private void BasicEventElementToSequence
 
             public override void Visit(
                 Aas.BasicEventElement that,
@@ -20014,9 +20455,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -20122,7 +20563,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void OperationToSequence
+            } // private void OperationToSequence
 
             public override void Visit(
                 Aas.Operation that,
@@ -20148,7 +20589,7 @@ namespace AasCore.Aas3_0_RC02
                     writer);
 
                 writer.WriteEndElement();
-            }  // private void OperationVariableToSequence
+            } // private void OperationVariableToSequence
 
             public override void Visit(
                 Aas.OperationVariable that,
@@ -20247,9 +20688,9 @@ namespace AasCore.Aas3_0_RC02
                         that.Kind);
                     writer.WriteValue(
                         textKind
-                            ?? throw new System.ArgumentException(
-                                "Invalid literal for the enumeration ModelingKind: " +
-                                that.Kind.ToString()));
+                        ?? throw new System.ArgumentException(
+                            "Invalid literal for the enumeration ModelingKind: " +
+                            that.Kind.ToString()));
 
                     writer.WriteEndElement();
                 }
@@ -20310,7 +20751,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void CapabilityToSequence
+            } // private void CapabilityToSequence
 
             public override void Visit(
                 Aas.Capability that,
@@ -20449,7 +20890,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void ConceptDescriptionToSequence
+            } // private void ConceptDescriptionToSequence
 
             public override void Visit(
                 Aas.ConceptDescription that,
@@ -20474,9 +20915,9 @@ namespace AasCore.Aas3_0_RC02
                     that.Type);
                 writer.WriteValue(
                     textType
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration ReferenceTypes: " +
-                            that.Type.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration ReferenceTypes: " +
+                        that.Type.ToString()));
 
                 writer.WriteEndElement();
 
@@ -20503,7 +20944,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 writer.WriteEndElement();
-            }  // private void ReferenceToSequence
+            } // private void ReferenceToSequence
 
             public override void Visit(
                 Aas.Reference that,
@@ -20528,9 +20969,9 @@ namespace AasCore.Aas3_0_RC02
                     that.Type);
                 writer.WriteValue(
                     textType
-                        ?? throw new System.ArgumentException(
-                            "Invalid literal for the enumeration KeyTypes: " +
-                            that.Type.ToString()));
+                    ?? throw new System.ArgumentException(
+                        "Invalid literal for the enumeration KeyTypes: " +
+                        that.Type.ToString()));
 
                 writer.WriteEndElement();
 
@@ -20541,7 +20982,7 @@ namespace AasCore.Aas3_0_RC02
                     that.Value);
 
                 writer.WriteEndElement();
-            }  // private void KeyToSequence
+            } // private void KeyToSequence
 
             public override void Visit(
                 Aas.Key that,
@@ -20574,7 +21015,7 @@ namespace AasCore.Aas3_0_RC02
                     that.Text);
 
                 writer.WriteEndElement();
-            }  // private void LangStringToSequence
+            } // private void LangStringToSequence
 
             public override void Visit(
                 Aas.LangString that,
@@ -20603,7 +21044,7 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 writer.WriteEndElement();
-            }  // private void LangStringSetToSequence
+            } // private void LangStringSetToSequence
 
             public override void Visit(
                 Aas.LangStringSet that,
@@ -20680,7 +21121,7 @@ namespace AasCore.Aas3_0_RC02
 
                     writer.WriteEndElement();
                 }
-            }  // private void EnvironmentToSequence
+            } // private void EnvironmentToSequence
 
             public override void Visit(
                 Aas.Environment that,
@@ -20693,7 +21134,7 @@ namespace AasCore.Aas3_0_RC02
                     writer);
                 writer.WriteEndElement();
             }
-        }  // internal class VisitorWithWriter
+        } // internal class VisitorWithWriter
 
         /// <summary>
         /// Wrap the writer so that we can omit the namespace and the prefix.
@@ -20752,7 +21193,7 @@ namespace AasCore.Aas3_0_RC02
                     0,
                     buffer.Length);
             }
-        }  // WrappedXmlWriter
+        } // WrappedXmlWriter
 
         /// <summary>
         /// Serialize instances of meta-model classes to XML.
@@ -20805,9 +21246,9 @@ namespace AasCore.Aas3_0_RC02
                 Serialize._visitorWithWriter.Visit(
                     that, wrappedWriter);
             }
-        }  // public static class Serialize
-    }  // public static class Xmlization
-}  // namespace AasCore.Aas3_0_RC02
+        } // public static class Serialize
+    } // public static class Xmlization
+} // namespace AasCore.Aas3_0_RC02
 
 /*
  * This code has been automatically generated by aas-core-codegen.

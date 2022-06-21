@@ -2197,6 +2197,25 @@ namespace AasCore.Aas3_0_RC02
                 category);
         }
 
+        private static readonly HashSet<string> DataElementCategories = new HashSet<string>
+        {
+            "CONSTANT",
+            "PARAMETER",
+            "VARIABLE"
+        };
+
+        /// <summary>
+        /// Check that <paramref name="category" /> is a valid
+        /// category of a data element.
+        /// </summary>
+        public static bool DataElementCategoryIsValid(
+            string category
+        )
+        {
+            return DataElementCategories.Contains(
+                category);
+        }
+
         /// <summary>
         /// Hash allowed enum values for efficient validation of enums.
         /// </summary>
@@ -4331,22 +4350,14 @@ namespace AasCore.Aas3_0_RC02
 
                 if (!(
                     !(that.Category != null)
-                    || (
-                        that.Category == "CONSTANT"
-                        || that.Category == "PARAMETER"
-                        || that.Category == "VARIABLE"
-                    )))
+                    || Verification.DataElementCategoryIsValid(that.Category)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
                         "Constraint AASd-090: For data elements category shall be " +
                         "one of the following values: CONSTANT, PARAMETER or VARIABLE\n" +
                         "!(that.Category != null)\n" +
-                        "|| (\n" +
-                        "    that.Category == \"CONSTANT\"\n" +
-                        "    || that.Category == \"PARAMETER\"\n" +
-                        "    || that.Category == \"VARIABLE\"\n" +
-                        ")");
+                        "|| Verification.DataElementCategoryIsValid(that.Category)");
                 }
 
                 if (!(
@@ -4614,22 +4625,14 @@ namespace AasCore.Aas3_0_RC02
 
                 if (!(
                     !(that.Category != null)
-                    || (
-                        that.Category == "CONSTANT"
-                        || that.Category == "PARAMETER"
-                        || that.Category == "VARIABLE"
-                    )))
+                    || Verification.DataElementCategoryIsValid(that.Category)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
                         "Constraint AASd-090: For data elements category shall be " +
                         "one of the following values: CONSTANT, PARAMETER or VARIABLE\n" +
                         "!(that.Category != null)\n" +
-                        "|| (\n" +
-                        "    that.Category == \"CONSTANT\"\n" +
-                        "    || that.Category == \"PARAMETER\"\n" +
-                        "    || that.Category == \"VARIABLE\"\n" +
-                        ")");
+                        "|| Verification.DataElementCategoryIsValid(that.Category)");
                 }
 
                 if (that.Extensions != null)
@@ -4879,22 +4882,14 @@ namespace AasCore.Aas3_0_RC02
 
                 if (!(
                     !(that.Category != null)
-                    || (
-                        that.Category == "CONSTANT"
-                        || that.Category == "PARAMETER"
-                        || that.Category == "VARIABLE"
-                    )))
+                    || Verification.DataElementCategoryIsValid(that.Category)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
                         "Constraint AASd-090: For data elements category shall be " +
                         "one of the following values: CONSTANT, PARAMETER or VARIABLE\n" +
                         "!(that.Category != null)\n" +
-                        "|| (\n" +
-                        "    that.Category == \"CONSTANT\"\n" +
-                        "    || that.Category == \"PARAMETER\"\n" +
-                        "    || that.Category == \"VARIABLE\"\n" +
-                        ")");
+                        "|| Verification.DataElementCategoryIsValid(that.Category)");
                 }
 
                 if (!(
@@ -5172,22 +5167,14 @@ namespace AasCore.Aas3_0_RC02
 
                 if (!(
                     !(that.Category != null)
-                    || (
-                        that.Category == "CONSTANT"
-                        || that.Category == "PARAMETER"
-                        || that.Category == "VARIABLE"
-                    )))
+                    || Verification.DataElementCategoryIsValid(that.Category)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
                         "Constraint AASd-090: For data elements category shall be " +
                         "one of the following values: CONSTANT, PARAMETER or VARIABLE\n" +
                         "!(that.Category != null)\n" +
-                        "|| (\n" +
-                        "    that.Category == \"CONSTANT\"\n" +
-                        "    || that.Category == \"PARAMETER\"\n" +
-                        "    || that.Category == \"VARIABLE\"\n" +
-                        ")");
+                        "|| Verification.DataElementCategoryIsValid(that.Category)");
                 }
 
                 if (that.Extensions != null)
@@ -5426,22 +5413,14 @@ namespace AasCore.Aas3_0_RC02
 
                 if (!(
                     !(that.Category != null)
-                    || (
-                        that.Category == "CONSTANT"
-                        || that.Category == "PARAMETER"
-                        || that.Category == "VARIABLE"
-                    )))
+                    || Verification.DataElementCategoryIsValid(that.Category)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
                         "Constraint AASd-090: For data elements category shall be " +
                         "one of the following values: CONSTANT, PARAMETER or VARIABLE\n" +
                         "!(that.Category != null)\n" +
-                        "|| (\n" +
-                        "    that.Category == \"CONSTANT\"\n" +
-                        "    || that.Category == \"PARAMETER\"\n" +
-                        "    || that.Category == \"VARIABLE\"\n" +
-                        ")");
+                        "|| Verification.DataElementCategoryIsValid(that.Category)");
                 }
 
                 if (that.Extensions != null)
@@ -5688,22 +5667,14 @@ namespace AasCore.Aas3_0_RC02
 
                 if (!(
                     !(that.Category != null)
-                    || (
-                        that.Category == "CONSTANT"
-                        || that.Category == "PARAMETER"
-                        || that.Category == "VARIABLE"
-                    )))
+                    || Verification.DataElementCategoryIsValid(that.Category)))
                 {
                     yield return new Reporting.Error(
                         "Invariant violated:\n" +
                         "Constraint AASd-090: For data elements category shall be " +
                         "one of the following values: CONSTANT, PARAMETER or VARIABLE\n" +
                         "!(that.Category != null)\n" +
-                        "|| (\n" +
-                        "    that.Category == \"CONSTANT\"\n" +
-                        "    || that.Category == \"PARAMETER\"\n" +
-                        "    || that.Category == \"VARIABLE\"\n" +
-                        ")");
+                        "|| Verification.DataElementCategoryIsValid(that.Category)");
                 }
 
                 if (that.Extensions != null)
