@@ -7,7 +7,7 @@
         {
           "idShort": "\n\u00d12",
           "modelType": "Range",
-          "valueType": "xs:time"
+          "valueType": "xs:int"
         }
       ]
     }

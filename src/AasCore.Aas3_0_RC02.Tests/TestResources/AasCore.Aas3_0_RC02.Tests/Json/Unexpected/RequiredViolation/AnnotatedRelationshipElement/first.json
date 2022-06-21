@@ -5,13 +5,13 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "idShort": "some_id_short_5a3e7c0f",
+          "idShort": "some_id_short_10b21b1b",
           "modelType": "AnnotatedRelationshipElement",
           "second": {
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_0ead3a88"
+                "value": "something_random_3945ca3e"
               }
             ],
             "type": "GlobalReference"

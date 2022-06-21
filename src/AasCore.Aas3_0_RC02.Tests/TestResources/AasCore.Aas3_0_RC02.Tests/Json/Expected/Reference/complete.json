@@ -8,21 +8,12 @@
         "keys": [
           {
             "type": "AssetAdministrationShell",
-            "value": "something_random_5047a577"
+            "value": "44e7dc4a"
           }
         ],
-        "referredSemanticId": {
-          "keys": [
-            {
-              "type": "GlobalReference",
-              "value": "something_random_03aeb662"
-            }
-          ],
-          "type": "GlobalReference"
-        },
-        "type": "GlobalReference"
+        "type": "ModelReference"
       },
-      "id": "something_random_e73790ba",
+      "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }
   ]

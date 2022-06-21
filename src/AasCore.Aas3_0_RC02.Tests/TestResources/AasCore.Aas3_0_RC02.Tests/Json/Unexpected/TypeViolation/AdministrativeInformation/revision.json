@@ -1,0 +1,34 @@
+{
+  "assetAdministrationShells": [
+    {
+      "administration": {
+        "dataSpecifications": [
+          {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_1db164a9"
+              }
+            ],
+            "type": "GlobalReference"
+          }
+        ],
+        "revision": {
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "something_random_b1ba0055"
+            }
+          ],
+          "type": "GlobalReference"
+        },
+        "version": "something_random_3c186758"
+      },
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

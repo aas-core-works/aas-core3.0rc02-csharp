@@ -6,18 +6,18 @@
       "submodelElements": [
         {
           "direction": "OUTPUT",
-          "idShort": "some_id_short_5a3e7c0f",
+          "idShort": "some_id_short_10b21b1b",
           "lastUpdate": "-3020-08-21T24:00:00.0Z",
           "modelType": "BasicEventElement",
           "observed": {
             "keys": [
               {
                 "type": "Submodel",
-                "value": "something_random_b773a704"
+                "value": "something_random_d041916a"
               },
               {
                 "type": "Referable",
-                "value": "something_random_34fbb155"
+                "value": "something_random_c0f0d84b"
               }
             ],
             "type": "ModelReference"

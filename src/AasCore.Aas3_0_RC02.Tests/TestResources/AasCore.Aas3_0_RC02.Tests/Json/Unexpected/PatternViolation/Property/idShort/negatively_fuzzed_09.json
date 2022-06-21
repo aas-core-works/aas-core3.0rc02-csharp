@@ -7,7 +7,7 @@
         {
           "idShort": "M\u00c7j",
           "modelType": "Property",
-          "valueType": "xs:time"
+          "valueType": "xs:boolean"
         }
       ]
     }

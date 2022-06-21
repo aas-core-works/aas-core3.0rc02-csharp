@@ -7,7 +7,7 @@
         {
           "idShort": "PiXO1wyHierj",
           "modelType": "Range",
-          "valueType": "xs:time"
+          "valueType": "xs:int"
         }
       ]
     }

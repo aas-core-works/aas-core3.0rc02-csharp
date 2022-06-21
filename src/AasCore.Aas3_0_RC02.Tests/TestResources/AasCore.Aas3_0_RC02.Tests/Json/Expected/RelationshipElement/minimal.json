@@ -9,18 +9,18 @@
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_27262b15"
+                "value": "something_random_40549f9f"
               }
             ],
             "type": "GlobalReference"
           },
-          "idShort": "some_id_short_5a3e7c0f",
+          "idShort": "some_id_short_10b21b1b",
           "modelType": "RelationshipElement",
           "second": {
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_0ead3a88"
+                "value": "something_random_3945ca3e"
               }
             ],
             "type": "GlobalReference"

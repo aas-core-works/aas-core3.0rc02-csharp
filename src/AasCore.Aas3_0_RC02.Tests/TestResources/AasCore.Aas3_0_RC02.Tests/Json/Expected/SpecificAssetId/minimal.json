@@ -8,16 +8,16 @@
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_b4fc64db"
+                "value": "something_random_ecd20100"
               }
             ],
             "type": "GlobalReference"
           },
-          "name": "something_random_862e4a5d",
-          "value": "something_random_a48fd9e8"
+          "name": "something_random_73ff3355",
+          "value": "something_random_d43e0a3b"
         }
       },
-      "id": "something_random_e73790ba",
+      "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }
   ]

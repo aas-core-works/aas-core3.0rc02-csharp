@@ -1,0 +1,8 @@
+<environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+	<assetAdministrationShells>
+		<assetAdministrationShell>
+			<id>something_random_428f0205</id>
+			<assetInformation/>
+		</assetAdministrationShell>
+	</assetAdministrationShells>
+</environment>

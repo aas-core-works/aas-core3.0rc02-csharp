@@ -7,7 +7,7 @@
         {
           "idShort": "A10HQ7",
           "modelType": "Range",
-          "valueType": "xs:time"
+          "valueType": "xs:int"
         }
       ]
     }

@@ -6,10 +6,11 @@
       },
       "extensions": [
         {
-          "name": "something_random_f1141fef"
+          "name": "something_random_8ddedf5d",
+          "valueType": "xs:boolean"
         }
       ],
-      "id": "something_random_e73790ba",
+      "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }
   ]

@@ -6,14 +6,14 @@
       "submodelElements": [
         {
           "category": "CONSTANT",
-          "checksum": "something_random_1067153b",
+          "checksum": "something_random_9711a3c9",
           "contentType": "application/something-random",
           "dataSpecifications": [
             {
               "keys": [
                 {
                   "type": "GlobalReference",
-                  "value": "something_random_5d6b22be"
+                  "value": "something_random_03894792"
                 }
               ],
               "type": "GlobalReference"
@@ -23,7 +23,7 @@
             "langStrings": [
               {
                 "language": "en",
-                "text": "something_random_364abd7d"
+                "text": "something_random_02557bc9"
               }
             ]
           },
@@ -31,29 +31,30 @@
             "langStrings": [
               {
                 "language": "en",
-                "text": "something_random_5a38b8ff"
+                "text": "something_random_c94bb548"
               }
             ]
           },
           "extensions": [
             {
-              "name": "something_random_63e05494"
+              "name": "something_random_49c224a4",
+              "valueType": "xs:boolean"
             }
           ],
-          "idShort": "Z0",
-          "kind": "Instance",
+          "idShort": "some_id_short_10b21b1b",
+          "kind": "Template",
           "modelType": "Blob",
           "qualifiers": [
             {
-              "type": "something_random_67f4cf31",
-              "valueType": "xs:gMonth"
+              "type": "something_random_a250eeff",
+              "valueType": "xs:boolean"
             }
           ],
           "semanticId": {
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_5eae6ead"
+                "value": "something_random_bd061acd"
               }
             ],
             "type": "GlobalReference"
@@ -63,13 +64,13 @@
               "keys": [
                 {
                   "type": "GlobalReference",
-                  "value": "something_random_872c5593"
+                  "value": "something_random_e14ad770"
                 }
               ],
               "type": "GlobalReference"
             }
           ],
-          "value": "VoI3ZA=="
+          "value": "HHSzCQ=="
         }
       ]
     }

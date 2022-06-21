@@ -6,12 +6,12 @@
       },
       "extensions": [
         {
-          "name": "something_random_f1141fef",
+          "name": "something_random_8ddedf5d",
           "refersTo": {
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_b6f09148"
+                "value": "something_random_528a0d8f"
               }
             ],
             "type": "GlobalReference"
@@ -20,7 +20,7 @@
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_b220c67a"
+                "value": "something_random_94672a83"
               }
             ],
             "type": "GlobalReference"
@@ -30,17 +30,17 @@
               "keys": [
                 {
                   "type": "GlobalReference",
-                  "value": "something_random_01c1ce98"
+                  "value": "something_random_2edb125c"
                 }
               ],
               "type": "GlobalReference"
             }
           ],
-          "value": "something_random_44b43817",
-          "valueType": "xs:byte"
+          "value": "true",
+          "valueType": "xs:boolean"
         }
       ],
-      "id": "something_random_e73790ba",
+      "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }
   ]

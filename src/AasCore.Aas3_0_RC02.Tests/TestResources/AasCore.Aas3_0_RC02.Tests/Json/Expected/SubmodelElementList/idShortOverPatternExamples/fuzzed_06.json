@@ -7,7 +7,7 @@
         {
           "idShort": "A10HQ7",
           "modelType": "SubmodelElementList",
-          "typeValueListElement": "SubmodelElementList"
+          "typeValueListElement": "SubmodelElementCollection"
         }
       ]
     }

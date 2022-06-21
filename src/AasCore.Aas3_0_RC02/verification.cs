@@ -2486,6 +2486,16 @@ namespace AasCore.Aas3_0_RC02
                         "|| (that.SemanticId != null)");
                 }
 
+                if (!(
+                    !(that.Value != null)
+                    || Verification.ValueConsistentWithXsdType(that.Value, that.ValueTypeOrDefault())))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "!(that.Value != null)\n" +
+                        "|| Verification.ValueConsistentWithXsdType(that.Value, that.ValueTypeOrDefault())");
+                }
+
                 if (that.SemanticId != null)
                 {
                     foreach (var error in Verification.Verify(that.SemanticId))
@@ -3140,13 +3150,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -3155,13 +3165,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -3401,13 +3411,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -3416,13 +3426,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -3640,13 +3650,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -3655,13 +3665,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -4025,13 +4035,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4040,13 +4050,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -4294,13 +4304,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4309,13 +4319,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -4577,13 +4587,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4592,13 +4602,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -4842,13 +4852,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -4857,13 +4867,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -5135,13 +5145,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -5150,13 +5160,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -5389,13 +5399,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -5404,13 +5414,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -5651,13 +5661,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -5666,13 +5676,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -5913,13 +5923,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -5928,13 +5938,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -6171,13 +6181,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -6186,13 +6196,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -6586,13 +6596,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -6601,13 +6611,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -6917,13 +6927,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -6932,13 +6942,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 
@@ -7210,13 +7220,13 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
-                    !(that.KindOrDefault() == ModelingKind.Template)
+                    !(that.Qualifiers != null)
                     || (
-                        !(that.Qualifiers != null)
-                        || (
-                            that.Qualifiers.All(
+                        !(
+                            that.Qualifiers.Any(
                                 qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)
                         )
+                        || (that.KindOrDefault() == ModelingKind.Template)
                     )))
                 {
                     yield return new Reporting.Error(
@@ -7225,13 +7235,13 @@ namespace AasCore.Aas3_0_RC02
                         "a qualifiable qualifier is equal to template qualifier and " +
                         "the qualified element has kind then the qualified element " +
                         "shall be of kind template.\n" +
-                        "!(that.KindOrDefault() == ModelingKind.Template)\n" +
+                        "!(that.Qualifiers != null)\n" +
                         "|| (\n" +
-                        "    !(that.Qualifiers != null)\n" +
-                        "    || (\n" +
-                        "        that.Qualifiers.All(\n" +
+                        "    !(\n" +
+                        "        that.Qualifiers.Any(\n" +
                         "            qualifier => qualifier.Kind == QualifierKind.TemplateQualifier)\n" +
                         "    )\n" +
+                        "    || (that.KindOrDefault() == ModelingKind.Template)\n" +
                         ")");
                 }
 

@@ -7,7 +7,7 @@
         {
           "idShort": "g1WbUAIAP_94",
           "modelType": "SubmodelElementList",
-          "typeValueListElement": "SubmodelElementList"
+          "typeValueListElement": "SubmodelElementCollection"
         }
       ]
     }

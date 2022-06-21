@@ -7,7 +7,7 @@
         {
           "idShort": "g1WbUAIAP_94",
           "modelType": "Range",
-          "valueType": "xs:time"
+          "valueType": "xs:int"
         }
       ]
     }

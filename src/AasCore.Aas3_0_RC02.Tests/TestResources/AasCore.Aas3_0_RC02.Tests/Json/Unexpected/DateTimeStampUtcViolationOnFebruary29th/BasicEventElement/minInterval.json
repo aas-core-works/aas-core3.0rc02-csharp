@@ -6,18 +6,18 @@
       "submodelElements": [
         {
           "direction": "OUTPUT",
-          "idShort": "some_id_short_5a3e7c0f",
-          "minInterval": "2022-02-29T05:08:31.640911Z",
+          "idShort": "some_id_short_10b21b1b",
+          "minInterval": "2022-02-29T01:10:09.129009Z",
           "modelType": "BasicEventElement",
           "observed": {
             "keys": [
               {
                 "type": "Submodel",
-                "value": "something_random_b773a704"
+                "value": "something_random_d041916a"
               },
               {
                 "type": "Referable",
-                "value": "something_random_34fbb155"
+                "value": "something_random_c0f0d84b"
               }
             ],
             "type": "ModelReference"
