@@ -10,7 +10,7 @@
           "keys": [
             {
               "type": "GlobalReference",
-              "value": "something_random_8616ee5a"
+              "value": "something_random_0e76b5cc"
             }
           ],
           "type": "GlobalReference"
@@ -20,16 +20,16 @@
             "keys": [
               {
                 "type": "GlobalReference",
-                "value": "something_random_1747b3e3"
+                "value": "something_random_ecd20100"
               }
             ],
             "type": "GlobalReference"
           },
-          "name": "something_random_52c946f0",
-          "value": "something_random_ab97d593"
+          "name": "something_random_73ff3355",
+          "value": "something_random_d43e0a3b"
         }
       },
-      "id": "something_random_e73790ba",
+      "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }
   ]

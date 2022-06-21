@@ -7,7 +7,7 @@
         {
           "idShort": "fiZ",
           "modelType": "Range",
-          "valueType": "xs:time"
+          "valueType": "xs:int"
         }
       ]
     }

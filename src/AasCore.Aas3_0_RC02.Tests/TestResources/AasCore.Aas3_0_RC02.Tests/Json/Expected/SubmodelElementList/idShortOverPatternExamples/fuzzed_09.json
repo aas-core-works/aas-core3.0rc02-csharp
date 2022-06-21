@@ -7,7 +7,7 @@
         {
           "idShort": "PiXO1wyHierj",
           "modelType": "SubmodelElementList",
-          "typeValueListElement": "SubmodelElementList"
+          "typeValueListElement": "SubmodelElementCollection"
         }
       ]
     }

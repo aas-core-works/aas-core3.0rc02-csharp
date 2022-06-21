@@ -7,7 +7,7 @@
         {
           "idShort": "uI",
           "modelType": "SubmodelElementList",
-          "typeValueListElement": "SubmodelElementList"
+          "typeValueListElement": "SubmodelElementCollection"
         }
       ]
     }

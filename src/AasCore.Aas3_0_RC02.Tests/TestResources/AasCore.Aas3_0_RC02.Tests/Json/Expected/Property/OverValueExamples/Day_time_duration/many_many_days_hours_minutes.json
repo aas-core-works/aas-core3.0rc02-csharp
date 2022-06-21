@@ -5,7 +5,7 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "idShort": "some_id_short_5a3e7c0f",
+          "idShort": "some_id_short_10b21b1b",
           "modelType": "Property",
           "value": "P12345678901234567890DT12345678901234567890H12345678901234567890M",
           "valueType": "xs:dayTimeDuration"

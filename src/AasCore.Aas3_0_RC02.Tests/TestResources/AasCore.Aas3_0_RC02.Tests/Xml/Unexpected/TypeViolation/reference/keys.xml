@@ -1,0 +1,14 @@
+<environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+	<assetAdministrationShells>
+		<assetAdministrationShell>
+			<id>something_random_428f0205</id>
+			<derivedFrom>
+				<type>ModelReference</type>
+				<keys>Unexpected string value</keys>
+			</derivedFrom>
+			<assetInformation>
+				<assetKind>Instance</assetKind>
+			</assetInformation>
+		</assetAdministrationShell>
+	</assetAdministrationShells>
+</environment>

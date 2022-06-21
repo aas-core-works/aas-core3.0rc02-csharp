@@ -5,7 +5,7 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "idShort": "some_id_short_5a3e7c0f",
+          "idShort": "some_id_short_10b21b1b",
           "max": "https://github.com/aas-core-works/aas-core-codegen",
           "min": "https://github.com/aas-core-works/aas-core-codegen",
           "modelType": "Range",

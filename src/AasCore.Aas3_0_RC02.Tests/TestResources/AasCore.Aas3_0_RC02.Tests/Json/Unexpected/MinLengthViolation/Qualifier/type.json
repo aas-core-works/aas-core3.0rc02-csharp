@@ -6,7 +6,7 @@
       "qualifiers": [
         {
           "type": "",
-          "valueType": "xs:hexBinary"
+          "valueType": "xs:boolean"
         }
       ]
     }

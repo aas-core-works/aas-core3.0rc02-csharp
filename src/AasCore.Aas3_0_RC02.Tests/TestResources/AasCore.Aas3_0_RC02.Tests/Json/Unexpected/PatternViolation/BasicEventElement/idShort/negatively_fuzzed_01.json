@@ -12,11 +12,11 @@
             "keys": [
               {
                 "type": "Submodel",
-                "value": "something_random_b773a704"
+                "value": "something_random_d041916a"
               },
               {
                 "type": "Referable",
-                "value": "something_random_34fbb155"
+                "value": "something_random_c0f0d84b"
               }
             ],
             "type": "ModelReference"

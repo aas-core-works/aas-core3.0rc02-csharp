@@ -2,6 +2,7 @@
   "submodels": [
     {
       "id": "something_random_b0c234ba",
+      "kind": "Template",
       "modelType": "Submodel",
       "qualifiers": [
         {
@@ -20,14 +21,14 @@
               "keys": [
                 {
                   "type": "GlobalReference",
-                  "value": "something_random_03773799"
+                  "value": "something_random_cfe1d0d8"
                 }
               ],
               "type": "GlobalReference"
             }
           ],
           "type": "something_random_cfd39ba4",
-          "value": "1234",
+          "value": "true",
           "valueId": {
             "keys": [
               {
@@ -37,7 +38,7 @@
             ],
             "type": "GlobalReference"
           },
-          "valueType": "xs:int"
+          "valueType": "xs:boolean"
         }
       ]
     }

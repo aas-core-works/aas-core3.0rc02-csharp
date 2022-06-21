@@ -7,7 +7,7 @@
         {
           "idShort": "g1WbUAIAP_94",
           "modelType": "Property",
-          "valueType": "xs:time"
+          "valueType": "xs:boolean"
         }
       ]
     }

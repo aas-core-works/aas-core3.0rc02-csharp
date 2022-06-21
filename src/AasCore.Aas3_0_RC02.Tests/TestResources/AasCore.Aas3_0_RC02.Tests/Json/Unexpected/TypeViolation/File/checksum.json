@@ -1,0 +1,86 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "category": "CONSTANT",
+          "checksum": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_3a98988a"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "contentType": "application/something-random",
+          "dataSpecifications": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_03894792"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "description": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_02557bc9"
+              }
+            ]
+          },
+          "displayName": {
+            "langStrings": [
+              {
+                "language": "en",
+                "text": "something_random_c94bb548"
+              }
+            ]
+          },
+          "extensions": [
+            {
+              "name": "something_random_49c224a4",
+              "valueType": "xs:boolean"
+            }
+          ],
+          "idShort": "some_id_short_10b21b1b",
+          "kind": "Template",
+          "modelType": "File",
+          "qualifiers": [
+            {
+              "type": "something_random_a250eeff",
+              "valueType": "xs:boolean"
+            }
+          ],
+          "semanticId": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_bd061acd"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "supplementalSemanticIds": [
+            {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_e14ad770"
+                }
+              ],
+              "type": "GlobalReference"
+            }
+          ],
+          "value": "file:/path/to/somewhere"
+        }
+      ]
+    }
+  ]
+}

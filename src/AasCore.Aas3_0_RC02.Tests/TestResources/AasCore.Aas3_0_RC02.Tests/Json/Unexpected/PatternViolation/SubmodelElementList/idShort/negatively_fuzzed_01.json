@@ -7,7 +7,7 @@
         {
           "idShort": "L\u00b4",
           "modelType": "SubmodelElementList",
-          "typeValueListElement": "SubmodelElementList"
+          "typeValueListElement": "SubmodelElementCollection"
         }
       ]
     }
