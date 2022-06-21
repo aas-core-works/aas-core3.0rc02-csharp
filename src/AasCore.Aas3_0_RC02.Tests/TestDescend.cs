@@ -33,7 +33,6 @@ namespace AasCore.Aas3_0_RC02.Tests
                 System.IO.SearchOption.AllDirectories).ToList();
             pathsToCompleteExamples.Sort();
 
-
             string recordingBaseDir = Path.Combine(
                 AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
                 "Descend");
