@@ -1,0 +1,2 @@
+aas-core-meta==2022.6.21
+aas-core-codegen==0.0.15
