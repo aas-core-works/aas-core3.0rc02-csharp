@@ -1,0 +1,25 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "direction": "OUTPUT",
+          "kind": "invalid-literal",
+          "modelType": "BasicEventElement",
+          "observed": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_d041916a"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "state": "OFF"
+        }
+      ]
+    }
+  ]
+}
