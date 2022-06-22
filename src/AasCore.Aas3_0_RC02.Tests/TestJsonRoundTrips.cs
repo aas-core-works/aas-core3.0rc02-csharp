@@ -293,7 +293,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var dirNames = new List<string>()
             {
                 "TypeViolation",
-                "RequiredViolation"
+                "RequiredViolation",
+                "EnumViolation"
             };
 
             var paths = new List<string>();
