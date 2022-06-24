@@ -391,7 +391,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "MinLengthViolation",
                 "PatternViolation",
                 "InvalidValueExamples",
-                "InvalidMinMaxExamples"
+                "InvalidMinMaxExamples",
+                "ConstraintViolation"
             };
 
             var paths = new List<string>();
