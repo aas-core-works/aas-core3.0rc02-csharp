@@ -253,6 +253,12 @@ namespace AasCore.Aas3_0_RC02.Tests
                 {
                     exception = observedException;
                 }
+                catch (System.Exception unexpectedException)
+                {
+                    throw new System.InvalidOperationException(
+                        $"Unexpected exception when de-serializing the file {path}",
+                        unexpectedException);
+                }
 
                 if (exception == null)
                 {
@@ -299,7 +305,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "MinLengthViolation",
                 "PatternViolation",
                 "InvalidValueExamples",
-                "InvalidMinMaxExamples"
+                "InvalidMinMaxExamples",
+                "ConstraintViolation"
             };
 
             var paths = new List<string>();
