@@ -1,8 +1,5 @@
 using Directory = System.IO.Directory;
-using FileMode = System.IO.FileMode;
-using FileStream = System.IO.FileStream;
 using Nodes = System.Text.Json.Nodes;
-using JsonException = System.Text.Json.JsonException;
 using Path = System.IO.Path;
 using System.Collections.Generic;
 using System.IO; // can't alias
@@ -15,31 +12,6 @@ namespace AasCore.Aas3_0_RC02.Tests
     // ReSharper disable once InconsistentNaming
     public class TestJsonRoundTrips
     {
-        private static Nodes.JsonNode ReadFromFile(string path)
-        {
-            using var stream = new FileStream(path, FileMode.Open);
-            Nodes.JsonNode? node;
-            try
-            {
-                node = Nodes.JsonNode.Parse(stream);
-            }
-            catch (JsonException exception)
-            {
-                throw new System.InvalidOperationException(
-                    $"Expected the file to be a valid JSON, but it was not: {path}; exception was: {exception}"
-                );
-            }
-
-            if (node is null)
-            {
-                throw new System.InvalidOperationException(
-                    $"Expected the file to be a non-null JSON value, but it was null: {path}"
-                );
-            }
-
-            return node;
-        }
-
         /// <summary>
         /// List the JSON files in the "Expected" directory. 
         /// </summary>
@@ -67,147 +39,12 @@ namespace AasCore.Aas3_0_RC02.Tests
             return paths;
         }
 
-        /// <summary>
-        /// Infer the node kind of the JSON node.
-        /// </summary>
-        /// <remarks>
-        /// This function is necessary since NET6 does not fully support node kinds yet.
-        /// See:
-        /// <ul>
-        /// <li>https://github.com/dotnet/runtime/issues/53406</li>
-        /// <li>https://github.com/dotnet/runtime/issues/55827</li>
-        /// <li>https://github.com/dotnet/runtime/issues/56592</li>
-        /// </ul>
-        /// </remarks>
-        private static string GetNodeKind(Nodes.JsonNode node)
-        {
-            switch (node)
-            {
-                case Nodes.JsonArray _:
-                    return "array";
-                case Nodes.JsonObject _:
-                    return "object";
-                case Nodes.JsonValue _:
-                    return "value";
-                default:
-                    throw new System.InvalidOperationException(
-                        $"Unhandled JsonNode: {node.GetType()}");
-            }
-        }
-
-        private static void CheckJsonNodesEqual(
-            Nodes.JsonNode that,
-            Nodes.JsonNode other,
-            out Reporting.Error? error)
-        {
-            error = null;
-
-            var thatNodeKind = GetNodeKind(that);
-            var otherNodeKind = GetNodeKind(other);
-
-            if (thatNodeKind != otherNodeKind)
-            {
-                error = new Reporting.Error(
-                    $"Mismatch in node kinds : {thatNodeKind} != {otherNodeKind}"
-                );
-                return;
-            }
-
-            switch (that)
-            {
-                case Nodes.JsonArray thatArray:
-                    {
-                        var otherArray = (other as Nodes.JsonArray)!;
-                        if (thatArray.Count != otherArray.Count)
-                        {
-                            error = new Reporting.Error(
-                                $"Unequal array lengths: {thatArray.Count} != {otherArray.Count}"
-                            );
-                            return;
-                        }
-
-                        for (int i = 0; i < thatArray.Count; i++)
-                        {
-                            CheckJsonNodesEqual(thatArray[i]!, otherArray[i]!, out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(new Reporting.IndexSegment(i));
-                                return;
-                            }
-                        }
-
-                        break;
-                    }
-                case Nodes.JsonObject thatObject:
-                    {
-                        var thatDictionary = thatObject as IDictionary<string, Nodes.JsonNode>;
-                        var otherDictionary = (other as IDictionary<string, Nodes.JsonNode>)!;
-
-                        var thatKeys = thatDictionary.Keys.ToList();
-                        thatKeys.Sort();
-
-                        var otherKeys = otherDictionary.Keys.ToList();
-                        otherKeys.Sort();
-
-                        if (!thatKeys.SequenceEqual(otherKeys))
-                        {
-                            error = new Reporting.Error(
-                                "Objects with different properties: " +
-                                $"{string.Join(", ", thatKeys)} != " +
-                                $"{string.Join(", ", otherKeys)}"
-                            );
-                            return;
-                        }
-
-                        foreach (var key in thatKeys)
-                        {
-                            CheckJsonNodesEqual(thatDictionary[key], otherDictionary[key], out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(new Reporting.NameSegment(key));
-                                return;
-                            }
-                        }
-
-                        break;
-                    }
-                case Nodes.JsonValue thatValue:
-                    {
-                        string thatAsJsonString = thatValue.ToJsonString();
-
-                        // NOTE (mristin, 2022-05-13):
-                        // This is slow, but there is no way around it at the moment with NET6.
-                        // See:
-                        // * https://github.com/dotnet/runtime/issues/56592
-                        // * https://github.com/dotnet/runtime/issues/55827
-                        // * https://github.com/dotnet/runtime/issues/53406
-                        var otherValue = (other as Nodes.JsonValue)!;
-                        string otherAsJsonString = otherValue.ToJsonString();
-
-                        if (thatAsJsonString != otherAsJsonString)
-                        {
-                            error = new Reporting.Error(
-                                $"Unequal values: {thatAsJsonString} != {otherAsJsonString}"
-                            );
-                            // ReSharper disable once RedundantJumpStatement
-                            return;
-                        }
-
-                        break;
-                    }
-                default:
-                    throw new System.InvalidOperationException(
-                        $"Unhandled JSON node: {that.GetType()}"
-                    );
-            }
-        }
-
         [Test]
         public void Test_json_deserialize_verify_json_serialize_equal()
         {
             foreach (string path in ExpectedPaths())
             {
-                var originalNode = ReadFromFile(path);
+                var originalNode = Aas3_0_RC02.Tests.CommonJson.ReadFromFile(path);
                 AasCore.Aas3_0_RC02.Environment? instance = null;
                 try
                 {
@@ -268,7 +105,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 }
                 else
                 {
-                    CheckJsonNodesEqual(
+                    Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
                         originalNode,
                         serialized,
                         out Reporting.Error? inequalityError);
@@ -332,7 +169,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             foreach (string path in PathsWithFailedDeserializations())
             {
-                var node = ReadFromFile(path);
+                var node = Aas3_0_RC02.Tests.CommonJson.ReadFromFile(path);
 
                 AasCore.Aas3_0_RC02.Jsonization.Exception? exception = null;
 
@@ -436,7 +273,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             foreach (string path in PathsWithFailedVerifications())
             {
-                var node = ReadFromFile(path);
+                var node = Aas3_0_RC02.Tests.CommonJson.ReadFromFile(path);
                 AasCore.Aas3_0_RC02.Environment? instance = null;
                 try
                 {

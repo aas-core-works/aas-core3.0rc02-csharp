@@ -4,9 +4,6 @@
  */
 
 using Directory = System.IO.Directory;
-using FileMode = System.IO.FileMode;
-using FileStream = System.IO.FileStream;
-using Nodes = System.Text.Json.Nodes;
 using Path = System.IO.Path;
 
 using System.Linq; // can't alias
@@ -16,30 +13,6 @@ namespace AasCore.Aas3_0_RC02.Tests
 {
     public class TestDescendOnce
     {
-        private static Environment LoadEnvironment(
-            string path)
-        {
-            Environment? environment;
-
-            {
-                using var stream = new FileStream(path, FileMode.Open);
-                var node = Nodes.JsonNode.Parse(stream)
-                           ?? throw new System.InvalidOperationException(
-                               "node unexpectedly null");
-
-                environment = AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(
-                    node);
-            }
-
-            if (environment == null)
-            {
-                throw new System.InvalidOperationException(
-                    "environment unexpectedly null");
-            }
-
-            return environment;
-        }
-
         private static void CompareOrRerecordTrace(
             IClass instance,
             string expectedPath)
@@ -110,15 +83,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Extension",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Extension)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Extension could be found")
+                (container is Extension)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Extension)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Extension could be found")
             );
 
             CompareOrRerecordTrace(
@@ -140,15 +115,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "AdministrativeInformation",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is AdministrativeInformation)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of AdministrativeInformation could be found")
+                (container is AdministrativeInformation)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is AdministrativeInformation)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of AdministrativeInformation could be found")
             );
 
             CompareOrRerecordTrace(
@@ -170,15 +147,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Qualifier",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Qualifier)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Qualifier could be found")
+                (container is Qualifier)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Qualifier)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Qualifier could be found")
             );
 
             CompareOrRerecordTrace(
@@ -200,15 +179,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "AssetAdministrationShell",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is AssetAdministrationShell)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of AssetAdministrationShell could be found")
+                (container is AssetAdministrationShell)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is AssetAdministrationShell)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of AssetAdministrationShell could be found")
             );
 
             CompareOrRerecordTrace(
@@ -230,15 +211,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "AssetInformation",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is AssetInformation)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of AssetInformation could be found")
+                (container is AssetInformation)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is AssetInformation)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of AssetInformation could be found")
             );
 
             CompareOrRerecordTrace(
@@ -260,15 +243,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Resource",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Resource)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Resource could be found")
+                (container is Resource)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Resource)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Resource could be found")
             );
 
             CompareOrRerecordTrace(
@@ -290,15 +275,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "SpecificAssetId",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is SpecificAssetId)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of SpecificAssetId could be found")
+                (container is SpecificAssetId)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is SpecificAssetId)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of SpecificAssetId could be found")
             );
 
             CompareOrRerecordTrace(
@@ -320,15 +307,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Submodel",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Submodel)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Submodel could be found")
+                (container is Submodel)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Submodel)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Submodel could be found")
             );
 
             CompareOrRerecordTrace(
@@ -350,15 +339,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "RelationshipElement",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is RelationshipElement)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of RelationshipElement could be found")
+                (container is RelationshipElement)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is RelationshipElement)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of RelationshipElement could be found")
             );
 
             CompareOrRerecordTrace(
@@ -380,15 +371,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is SubmodelElementCollection)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of SubmodelElementCollection could be found")
+                (container is SubmodelElementCollection)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is SubmodelElementCollection)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of SubmodelElementCollection could be found")
             );
 
             CompareOrRerecordTrace(
@@ -410,15 +403,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Property",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Property)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Property could be found")
+                (container is Property)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Property)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Property could be found")
             );
 
             CompareOrRerecordTrace(
@@ -440,15 +435,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is MultiLanguageProperty)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of MultiLanguageProperty could be found")
+                (container is MultiLanguageProperty)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is MultiLanguageProperty)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of MultiLanguageProperty could be found")
             );
 
             CompareOrRerecordTrace(
@@ -470,15 +467,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Range",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Range)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Range could be found")
+                (container is Range)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Range)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Range could be found")
             );
 
             CompareOrRerecordTrace(
@@ -500,15 +499,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "ReferenceElement",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is ReferenceElement)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of ReferenceElement could be found")
+                (container is ReferenceElement)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is ReferenceElement)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of ReferenceElement could be found")
             );
 
             CompareOrRerecordTrace(
@@ -530,15 +531,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Blob",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Blob)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Blob could be found")
+                (container is Blob)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Blob)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Blob could be found")
             );
 
             CompareOrRerecordTrace(
@@ -560,15 +563,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "File",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is File)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of File could be found")
+                (container is File)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is File)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of File could be found")
             );
 
             CompareOrRerecordTrace(
@@ -590,15 +595,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is AnnotatedRelationshipElement)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of AnnotatedRelationshipElement could be found")
+                (container is AnnotatedRelationshipElement)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is AnnotatedRelationshipElement)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of AnnotatedRelationshipElement could be found")
             );
 
             CompareOrRerecordTrace(
@@ -620,15 +627,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Entity",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Entity)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Entity could be found")
+                (container is Entity)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Entity)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Entity could be found")
             );
 
             CompareOrRerecordTrace(
@@ -650,15 +659,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "BasicEventElement",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is BasicEventElement)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of BasicEventElement could be found")
+                (container is BasicEventElement)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is BasicEventElement)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of BasicEventElement could be found")
             );
 
             CompareOrRerecordTrace(
@@ -680,15 +691,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Operation",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Operation)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Operation could be found")
+                (container is Operation)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Operation)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Operation could be found")
             );
 
             CompareOrRerecordTrace(
@@ -710,15 +723,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "OperationVariable",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is OperationVariable)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of OperationVariable could be found")
+                (container is OperationVariable)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is OperationVariable)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of OperationVariable could be found")
             );
 
             CompareOrRerecordTrace(
@@ -740,15 +755,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Capability",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Capability)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Capability could be found")
+                (container is Capability)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Capability)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Capability could be found")
             );
 
             CompareOrRerecordTrace(
@@ -770,15 +787,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "ConceptDescription",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is ConceptDescription)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of ConceptDescription could be found")
+                (container is ConceptDescription)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is ConceptDescription)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of ConceptDescription could be found")
             );
 
             CompareOrRerecordTrace(
@@ -800,15 +819,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Reference",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Reference)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Reference could be found")
+                (container is Reference)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Reference)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Reference could be found")
             );
 
             CompareOrRerecordTrace(
@@ -830,15 +851,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Key",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is Key)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of Key could be found")
+                (container is Key)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Key)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Key could be found")
             );
 
             CompareOrRerecordTrace(
@@ -860,15 +883,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "LangString",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is LangString)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of LangString could be found")
+                (container is LangString)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is LangString)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of LangString could be found")
             );
 
             CompareOrRerecordTrace(
@@ -890,15 +915,17 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "LangStringSet",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
             var instance = (
-                environment
-                        .Descend()
-                        .First(something => something is LangStringSet)
-                ?? throw new System.InvalidOperationException(
-                    "No instance of LangStringSet could be found")
+                (container is LangStringSet)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is LangStringSet)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of LangStringSet could be found")
             );
 
             CompareOrRerecordTrace(
@@ -920,11 +947,21 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "Environment",
                 "complete.json");
 
-            var environment = LoadEnvironment(
+            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
+            var instance = (
+                (container is Environment)
+                ? container
+                : container
+                    .Descend()
+                    .First(something => something is Environment)
+                        ?? throw new System.InvalidOperationException(
+                            "No instance of Environment could be found")
+            );
+
             CompareOrRerecordTrace(
-                environment,
+                instance,
                 Path.Combine(
                     AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
                     "DescendOnce",
