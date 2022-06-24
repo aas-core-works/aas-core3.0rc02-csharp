@@ -4,3 +4,4 @@ out/
 *.sln.DotSettings.user
 coverage.json
 coverage.opencover.xml
+coverage-report/
