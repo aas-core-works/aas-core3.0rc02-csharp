@@ -32,11 +32,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/CommonJson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/CommonJson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestDescendOnce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestDescendOnce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXOrDefault.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXOrDefault.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_descend_once.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_descend_once.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_get_X_or_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_get_X_or_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestDescend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestDescendAndVisitorThrough.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestVisitThrough.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/visitation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/visitation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +59,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/rist/workspace/aas-core-works/aas-core3.0rc02-csharp/testgen",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rist/workspace/aas-core-works/aas-core3.0rc02-csharp/testgen&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen" />
