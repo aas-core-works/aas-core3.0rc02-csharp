@@ -6,7 +6,6 @@ using System.IO; // can't alias
 using System.Linq; // can't alias
 using NUnit.Framework; // can't alias
 
-
 namespace AasCore.Aas3_0_RC02.Tests
 {
     // ReSharper disable once InconsistentNaming
