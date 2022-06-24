@@ -99,13 +99,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             foreach (string path in ExpectedPaths())
             {
-                using var reader = System.Xml.XmlReader.Create(path);
+                using var xmlReader = System.Xml.XmlReader.Create(path);
 
                 AasCore.Aas3_0_RC02.Environment? instance = null;
                 try
                 {
                     instance = AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom(
-                        reader);
+                        xmlReader);
                 }
                 catch (AasCore.Aas3_0_RC02.Xmlization.Exception exception)
                 {
@@ -148,7 +148,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         outputBuilder,
                         new System.Xml.XmlWriterSettings()
                         {
-                            Encoding = System.Text.Encoding.UTF8
+                            Encoding = System.Text.Encoding.UTF8,
+                            OmitXmlDeclaration = true
                         }
                     );
                     AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
@@ -159,36 +160,62 @@ namespace AasCore.Aas3_0_RC02.Tests
                 }
 
                 string outputText = outputBuilder.ToString();
-                using var outputReader = new System.IO.StringReader(outputText);
-                var gotDoc = XDocument.Load(outputReader);
 
-                Assert.AreEqual(
-                    gotDoc.Root?.Name.Namespace.ToString(),
-                    "https://www.admin-shell.io/aas/3/0/RC02");
-
-                foreach (var child in gotDoc.Descendants())
+                // Check that we can de-serialize the output
                 {
+                    using var outputReader = new System.IO.StringReader(
+                        outputText);
+                    using var anotherXmlReader = System.Xml.XmlReader.Create(
+                        outputReader);
+
+                    try
+                    {
+                        _ = AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom(
+                            anotherXmlReader,
+                            "https://www.admin-shell.io/aas/3/0/RC02");
+                    }
+                    catch (AasCore.Aas3_0_RC02.Xmlization.Exception exception)
+                    {
+                        Assert.Fail(
+                            "Expected no exception upon de-serialization of an environment " +
+                            $"from the output, but got: {exception}"
+                        );
+                    }
+                }
+
+                // Compare input == output
+                {
+                    using var outputReader = new System.IO.StringReader(outputText);
+                    var gotDoc = XDocument.Load(outputReader);
+
                     Assert.AreEqual(
-                        child.GetPrefixOfNamespace(child.Name.Namespace),
-                        "aas");
+                        gotDoc.Root?.Name.Namespace.ToString(),
+                        "https://www.admin-shell.io/aas/3/0/RC02");
+
+                    foreach (var child in gotDoc.Descendants())
+                    {
+                        Assert.AreEqual(
+                            child.GetPrefixOfNamespace(child.Name.Namespace),
+                            "aas");
+                    }
+
+                    var expectedDoc = XDocument.Load(path);
+
+                    CheckElementsEqual(
+                        expectedDoc.Root!,
+                        gotDoc.Root!,
+                        out Reporting.Error? inequalityError);
+
+                    if (inequalityError != null)
+                    {
+                        Assert.Fail(
+                            $"The original XML from {path} is unequal the serialized XML: " +
+                            $"#/{Reporting.GenerateRelativeXPath(inequalityError.PathSegments)}: " +
+                            inequalityError.Cause
+                        );
+                    }
                 }
 
-                // Check that the input equals output
-                var expectedDoc = XDocument.Load(path);
-
-                CheckElementsEqual(
-                    expectedDoc.Root!,
-                    gotDoc.Root!,
-                    out Reporting.Error? inequalityError);
-
-                if (inequalityError != null)
-                {
-                    Assert.Fail(
-                        $"The original XML from {path} is unequal the serialized XML: " +
-                        $"#/{Reporting.GenerateRelativeXPath(inequalityError.PathSegments)}: " +
-                        inequalityError.Cause
-                    );
-                }
             }
         }
 

@@ -31,13 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestJsonizationOfInterfaces.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfInterfaces.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_interfaces.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestJsonRoundTrips.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestJsonizationOfConcreteClasses.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlRoundTrips.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClasses.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_get_X_or_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_get_X_or_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClasses.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/types.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/types.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/verification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/verification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/xmlization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/xmlization.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
