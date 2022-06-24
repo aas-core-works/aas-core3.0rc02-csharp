@@ -1,4 +1,4 @@
-"""Generate the test code for the ``DescendOnce`` methods."""
+"""Generate the test code for the ``XOrDefault`` methods."""
 
 import io
 import os
