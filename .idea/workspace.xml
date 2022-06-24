@@ -31,9 +31,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestJsonizationOfConcreteClassesOutsideEnvironment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_concrete_classes_outside_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestJsonizationOfConcreteClasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestJsonizationOfConcreteClassesThroughEnvironment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

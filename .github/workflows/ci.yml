@@ -32,11 +32,6 @@ jobs:
         working-directory: src
         run: dotnet tool restore
 
-      - name: Install coveralls.net (to send test coverage)
-        if: github.repository == 'aas-core-works/aas-core3.0rc02-csharp' && github.event_name == 'push' && github.ref == 'refs/heads/main'
-        working-directory: src
-        run: dotnet tool install coveralls.net --version 3.0.0
-
       - name: Check
         working-directory: src
         run: powershell .\Check.ps1
