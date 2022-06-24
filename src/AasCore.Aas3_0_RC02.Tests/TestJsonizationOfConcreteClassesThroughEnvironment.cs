@@ -9,7 +9,7 @@ using NUnit.Framework; // can't alias
 namespace AasCore.Aas3_0_RC02.Tests
 {
     // ReSharper disable once InconsistentNaming
-    public class TestJsonizationOfConcreteClasses
+    public class TestJsonizationOfConcreteClassesThroughEnvironment
     {
         /// <summary>
         /// List the JSON files in the "Expected" directory. 
