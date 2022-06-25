@@ -1,0 +1,34 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "first": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_40549f9f"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "modelType": "AnnotatedRelationshipElement",
+          "qualifiers": [
+            null
+          ],
+          "second": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_3945ca3e"
+              }
+            ],
+            "type": "GlobalReference"
+          }
+        }
+      ]
+    }
+  ]
+}
