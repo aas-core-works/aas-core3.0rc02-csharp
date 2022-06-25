@@ -130,7 +130,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 "TypeViolation",
                 "RequiredViolation",
-                "EnumViolation"
+                "EnumViolation",
+                "NullViolation"
             };
 
             var paths = new List<string>();

@@ -1,0 +1,17 @@
+{
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel",
+      "submodelElements": [
+        {
+          "modelType": "Range",
+          "qualifiers": [
+            null
+          ],
+          "valueType": "xs:int"
+        }
+      ]
+    }
+  ]
+}

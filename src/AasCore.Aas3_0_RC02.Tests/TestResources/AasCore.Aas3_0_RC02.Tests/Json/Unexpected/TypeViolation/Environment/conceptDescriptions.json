@@ -1,0 +1,24 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ],
+  "conceptDescriptions": "Unexpected string value",
+  "dataSpecifications": [
+    {
+      "dataSpecificationContent": {},
+      "id": "something_random_aa1a03ab"
+    }
+  ],
+  "submodels": [
+    {
+      "id": "something_random_b0c234ba",
+      "modelType": "Submodel"
+    }
+  ]
+}
