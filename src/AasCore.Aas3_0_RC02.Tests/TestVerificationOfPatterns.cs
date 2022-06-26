@@ -2,7 +2,7 @@
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
-    public class TestVerification
+    public class TestVerificationOfPatterns
     {
         [Test]
         public void Test_ucshar()
