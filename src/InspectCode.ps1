@@ -26,7 +26,7 @@ function Main
         "--properties:Configuration=DebugSlow" `
         "-o=$codeInspectionPath" `
         "--caches-home=$cachesHome" `
-        '--exclude=*\obj\*;packages\*;*\bin\*;*\*.json;*\TestResources\*' `
+        '--exclude=**\obj\**\*.*;packages\**\*.*;**\bin\**\*.*;**\*.json;**\TestResources\**\*.*' `
         "--build" `
         aas-core3.0rc02-csharp.sln
 
