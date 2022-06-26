@@ -8,7 +8,7 @@ using NUnit.Framework; // can't alias
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
-    public class TestXmlizationOfConcreteClasses
+    public class TestXmlizationOfConcreteClassesThroughEnvironment
     {
         /// <summary>
         /// List the XML files in the "Expected" directory. 

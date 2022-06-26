@@ -1,5 +1,8 @@
-﻿using Path = System.IO.Path;
+﻿using System.Linq;
+using Path = System.IO.Path;
 using TestContext = NUnit.Framework.TestContext;
+
+using Aas = AasCore.Aas3_0_RC02;
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -22,5 +25,24 @@ namespace AasCore.Aas3_0_RC02.Tests
             Path.Join(
                 "TestResources"),
             $"{nameof(AasCore)}.{nameof(Aas3_0_RC02)}.{nameof(Tests)}");
+
+        /// <summary>
+        /// Find the first instance of <typeparamref name="T"/> in the <paramref name="container" />,
+        /// including the <paramref name="container" /> itself.
+        /// </summary>
+        public static T MustFind<T>(Aas.IClass container) where T : Aas.IClass
+        {
+            var instance = (
+                (container is T)
+                    ? container
+                    : container
+                          .Descend()
+                          .First(something => something is T)
+                      ?? throw new System.InvalidOperationException(
+                          $"No instance of {nameof(T)} could be found")
+            );
+
+            return (T)instance;
+        }
     }
 }

@@ -31,9 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestVerificationOfEnums.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgen/generate_test_verification_of_enums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestVerification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestVerificationOfPatterns.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideEnvironment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgen/generate_test_for_xmlization_of_concrete_classes_outside_environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/Common.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/Common.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesThroughEnvironment.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.generate_test_verification_of_enums">
+  <component name="RunManager" selected="Python.generate_test_for_xmlization_of_concrete_classes_outside_environment">
     <configuration name="generate_test_for_jsonization_of_concrete_classes_outside_environment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aas-core3.0rc02-csharp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,7 +117,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generate_test_for_jsonization_of_interfaces" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="generate_test_for_xmlization_of_concrete_classes_outside_environment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aas-core3.0rc02-csharp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,7 +129,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_interfaces.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testgen/generate_test_for_xmlization_of_concrete_classes_outside_environment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.generate_test_for_xmlization_of_concrete_classes_outside_environment" />
         <item itemvalue="Python.generate_test_verification_of_enums" />
         <item itemvalue="Python.generate_test_for_jsonization_of_concrete_classes_outside_environment" />
         <item itemvalue="Python.generate_test_for_jsonization_of_enums" />
         <item itemvalue="Python.generate_test_for_xmlization_of_interfaces" />
-        <item itemvalue="Python.generate_test_for_jsonization_of_interfaces" />
       </list>
     </recent_temporary>
   </component>
