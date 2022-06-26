@@ -19,12 +19,18 @@ from aas_core_codegen.csharp import (
     common as csharp_common
 )
 
+import testgen.common
 from testgen.common import load_symbol_table
 
 
 def main() -> int:
     """Execute the main routine."""
     symbol_table = load_symbol_table()
+
+    this_path = pathlib.Path(os.path.realpath(__file__))
+    repo_root = this_path.parent.parent
+
+    test_data_dir = repo_root / "test_data"
 
     # noinspection PyListCreation
     blocks = []  # type: List[str]
@@ -94,14 +100,12 @@ private static void CompareOrRerecordTrace(
         )
     )
 
+    environment_cls = symbol_table.must_find(
+        aas_core_codegen.common.Identifier("Environment"))
+    assert isinstance(environment_cls, intermediate.ConcreteClass)
+
     for symbol in symbol_table.symbols:
         if not isinstance(symbol, intermediate.ConcreteClass):
-            continue
-
-        if symbol.name == aas_core_codegen.common.Identifier("Event_payload"):
-            # NOTE (mristin, 2022-06-21):
-            # Event payload is a dangling class and can not be reached from
-            # the environment. Hence, we skip it.
             continue
 
         cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
@@ -113,23 +117,13 @@ private static void CompareOrRerecordTrace(
 [Test]
 public void Test_{cls_name_csharp}()
 {{
-    string pathToCompleteExample = Path.Combine(
-        Aas.Tests.Common.OurTestResourceDir,
-        "Json",
-        "Expected",
-        {csharp_common.string_literal(cls_name_json)},
-        "complete.json");
-    
-    var container = Aas.Tests.CommonJson.LoadInstance(
-        pathToCompleteExample);
+    Aas.{cls_name_csharp} instance = (
+        Aas.Tests.CommonJsonization.LoadComplete{cls_name_csharp}());
 
-    var instance = Aas.Tests.Common.MustFind<Aas.{cls_name_csharp}>(
-        container);
-    
     CompareOrRerecordTrace(
         instance,
         Path.Combine(
-            Aas.Tests.Common.OurTestResourceDir,
+            Aas.Tests.Common.TestDataDir,
             "DescendOnce",
             {csharp_common.string_literal(cls_name_json)},
             "complete.json.trace"));
@@ -176,9 +170,6 @@ namespace AasCore.Aas3_0_RC02.Tests
  */
 """
     )
-
-    this_path = pathlib.Path(os.path.realpath(__file__))
-    repo_root = this_path.parent.parent
 
     target_pth = repo_root / "src/AasCore.Aas3_0_RC02.Tests/TestDescendOnce.cs"
     target_pth.write_text(writer.getvalue(), encoding='utf-8')

@@ -1,0 +1,4 @@
+submodels[0].submodelElements[0].minInterval: Invariant violated:
+Verification.MatchesXsDateTimeStampUtc(that);
+submodels[0].submodelElements[0].minInterval: Invariant violated:
+Verification.IsXsDateTimeStampUtc(that)

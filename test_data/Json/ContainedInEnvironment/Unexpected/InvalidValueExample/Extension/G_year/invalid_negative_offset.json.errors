@@ -1,0 +1,3 @@
+assetAdministrationShells[0].extensions[0]: Invariant violated:
+!(that.Value != null)
+|| Verification.ValueConsistentWithXsdType(that.Value, that.ValueTypeOrDefault())

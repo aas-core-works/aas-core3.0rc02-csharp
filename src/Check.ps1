@@ -19,6 +19,10 @@ function Main
         throw "Format check failed."
     }
 
+    $env:AAS_CORE_AAS3_0_RC02_TESTS_TEST_DATA_DIR = (
+        Join-Path (Split-Path $PSScriptRoot -Parent) "test_data"
+    )
+
     Write-Host "${nl}Check.ps1: Running the unit tests...${nl}"
     dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     if ($LASTEXITCODE -ne 0)
