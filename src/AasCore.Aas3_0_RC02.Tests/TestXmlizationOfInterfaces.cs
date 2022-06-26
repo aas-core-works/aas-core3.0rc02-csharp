@@ -6,9 +6,8 @@
 using Path = System.IO.Path;
 
 using NUnit.Framework;  // can't alias
-using System.Linq; // can't alias
 
-using Aas = AasCore.Aas3_0_RC02;
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -20,24 +19,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -52,10 +44,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -70,7 +60,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -86,8 +76,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -104,24 +94,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -136,10 +119,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -154,7 +135,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -170,8 +151,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -188,24 +169,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -220,10 +194,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -238,7 +210,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -254,8 +226,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -272,24 +244,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -304,10 +269,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -322,7 +285,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -338,8 +301,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -356,24 +319,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -388,10 +344,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -406,7 +360,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -422,8 +376,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -440,24 +394,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -472,10 +419,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -490,7 +435,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -506,8 +451,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -524,24 +469,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -556,10 +494,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -574,7 +510,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -590,8 +526,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -608,24 +544,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -640,10 +569,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -658,7 +585,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -674,8 +601,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -692,24 +619,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -724,10 +644,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -742,7 +660,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -758,8 +676,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -776,24 +694,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -808,10 +719,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -826,7 +735,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -842,8 +751,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -860,24 +769,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -892,10 +794,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -910,7 +810,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -926,8 +826,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -944,24 +844,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -976,10 +869,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -994,7 +885,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1010,8 +901,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1028,24 +919,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1060,10 +944,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1078,7 +960,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1094,8 +976,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1112,24 +994,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1144,10 +1019,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1162,7 +1035,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1178,8 +1051,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1196,24 +1069,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1228,10 +1094,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHassemantics = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1246,7 +1110,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHassemantics = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1262,8 +1126,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHassemantics,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1280,24 +1144,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1312,10 +1169,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1330,7 +1185,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1346,8 +1201,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1364,24 +1219,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1396,10 +1244,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1414,7 +1260,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1430,8 +1276,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1448,24 +1294,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AssetAdministrationShell",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AssetAdministrationShell)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AssetAdministrationShell)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AssetAdministrationShell could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1480,10 +1319,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.AssetAdministrationShell)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1498,7 +1335,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1514,8 +1351,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1532,24 +1369,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1564,10 +1394,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1582,7 +1410,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1598,8 +1426,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1616,24 +1444,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1648,10 +1469,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1666,7 +1485,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1682,8 +1501,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1700,24 +1519,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1732,10 +1544,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1750,7 +1560,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1766,8 +1576,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1784,24 +1594,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ConceptDescription)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1816,10 +1619,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.ConceptDescription)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1834,7 +1635,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1850,8 +1651,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1868,24 +1669,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1900,10 +1694,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1918,7 +1710,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -1934,8 +1726,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -1952,24 +1744,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1984,10 +1769,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2002,7 +1785,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2018,8 +1801,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2036,24 +1819,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2068,10 +1844,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2086,7 +1860,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2102,8 +1876,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2120,24 +1894,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2152,10 +1919,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2170,7 +1935,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2186,8 +1951,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2204,24 +1969,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2236,10 +1994,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2254,7 +2010,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2270,8 +2026,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2288,24 +2044,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2320,10 +2069,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2338,7 +2085,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2354,8 +2101,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2372,24 +2119,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2404,10 +2144,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2422,7 +2160,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2438,8 +2176,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2456,24 +2194,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2488,10 +2219,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2506,7 +2235,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2522,8 +2251,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2540,24 +2269,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2572,10 +2294,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2590,7 +2310,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2606,8 +2326,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2624,24 +2344,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2656,10 +2369,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasextensions = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2674,7 +2385,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasextensions = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2690,8 +2401,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasextensions,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2708,24 +2419,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2740,10 +2444,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2758,7 +2460,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2774,8 +2476,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2792,24 +2494,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2824,10 +2519,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2842,7 +2535,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2858,8 +2551,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2876,24 +2569,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AssetAdministrationShell",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AssetAdministrationShell)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AssetAdministrationShell)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AssetAdministrationShell could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2908,10 +2594,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.AssetAdministrationShell)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2926,7 +2610,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -2942,8 +2626,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -2960,24 +2644,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2992,10 +2669,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3010,7 +2685,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3026,8 +2701,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3044,24 +2719,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3076,10 +2744,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3094,7 +2760,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3110,8 +2776,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3128,24 +2794,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3160,10 +2819,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3178,7 +2835,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3194,8 +2851,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3212,24 +2869,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ConceptDescription)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3244,10 +2894,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.ConceptDescription)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3262,7 +2910,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3278,8 +2926,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3296,24 +2944,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3328,10 +2969,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3346,7 +2985,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3362,8 +3001,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3380,24 +3019,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3412,10 +3044,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3430,7 +3060,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3446,8 +3076,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3464,24 +3094,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3496,10 +3119,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3514,7 +3135,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3530,8 +3151,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3548,24 +3169,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3580,10 +3194,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3598,7 +3210,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3614,8 +3226,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3632,24 +3244,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3664,10 +3269,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3682,7 +3285,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3698,8 +3301,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3716,24 +3319,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3748,10 +3344,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3766,7 +3360,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3782,8 +3376,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3800,24 +3394,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3832,10 +3419,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3850,7 +3435,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3866,8 +3451,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3884,24 +3469,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3916,10 +3494,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3934,7 +3510,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -3950,8 +3526,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -3968,24 +3544,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4000,10 +3569,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4018,7 +3585,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4034,8 +3601,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4052,24 +3619,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4084,10 +3644,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theReferable = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theReferable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4102,7 +3660,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherReferable = Aas.Xmlization.Deserialize.IReferableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4118,8 +3676,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherReferable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4136,24 +3694,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AssetAdministrationShell",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AssetAdministrationShell)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AssetAdministrationShell)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AssetAdministrationShell could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4168,10 +3719,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theIdentifiable = (Aas.AssetAdministrationShell)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theIdentifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4186,7 +3735,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherIdentifiable = Aas.Xmlization.Deserialize.IIdentifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IIdentifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4202,8 +3751,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherIdentifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4220,24 +3769,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ConceptDescription)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4252,10 +3794,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theIdentifiable = (Aas.ConceptDescription)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theIdentifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4270,7 +3810,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherIdentifiable = Aas.Xmlization.Deserialize.IIdentifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IIdentifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4286,8 +3826,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherIdentifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4304,24 +3844,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4336,10 +3869,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theIdentifiable = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theIdentifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4354,7 +3885,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherIdentifiable = Aas.Xmlization.Deserialize.IIdentifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IIdentifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4370,8 +3901,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherIdentifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4388,24 +3919,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4420,10 +3944,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4438,7 +3960,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4454,8 +3976,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4472,24 +3994,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4504,10 +4019,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4522,7 +4035,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4538,8 +4051,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4556,24 +4069,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4588,10 +4094,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4606,7 +4110,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4622,8 +4126,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4640,24 +4144,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4672,10 +4169,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4690,7 +4185,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4706,8 +4201,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4724,24 +4219,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4756,10 +4244,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4774,7 +4260,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4790,8 +4276,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4808,24 +4294,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4840,10 +4319,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4858,7 +4335,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4874,8 +4351,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4892,24 +4369,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4924,10 +4394,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4942,7 +4410,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -4958,8 +4426,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -4976,24 +4444,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5008,10 +4469,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5026,7 +4485,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5042,8 +4501,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5060,24 +4519,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5092,10 +4544,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5110,7 +4560,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5126,8 +4576,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5144,24 +4594,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5176,10 +4619,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5194,7 +4635,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5210,8 +4651,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5228,24 +4669,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5260,10 +4694,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5278,7 +4710,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5294,8 +4726,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5312,24 +4744,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5344,10 +4769,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5362,7 +4785,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5378,8 +4801,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5396,24 +4819,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5428,10 +4844,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5446,7 +4860,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5462,8 +4876,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5480,24 +4894,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5512,10 +4919,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5530,7 +4935,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5546,8 +4951,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5564,24 +4969,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5596,10 +4994,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHaskind = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHaskind,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5614,7 +5010,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHaskind = Aas.Xmlization.Deserialize.IHasKindFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5630,8 +5026,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHaskind,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5648,24 +5044,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5680,10 +5069,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5698,7 +5085,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5714,8 +5101,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5732,24 +5119,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5764,10 +5144,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5782,7 +5160,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5798,8 +5176,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5816,24 +5194,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AssetAdministrationShell",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AssetAdministrationShell)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AssetAdministrationShell)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AssetAdministrationShell could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5848,10 +5219,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.AssetAdministrationShell)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5866,7 +5235,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5882,8 +5251,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5900,24 +5269,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5932,10 +5294,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5950,7 +5310,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -5966,8 +5326,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -5984,24 +5344,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6016,10 +5369,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6034,7 +5385,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6050,8 +5401,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6068,24 +5419,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6100,10 +5444,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6118,7 +5460,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6134,8 +5476,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6152,24 +5494,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ConceptDescription)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6184,10 +5519,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.ConceptDescription)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6202,7 +5535,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6218,8 +5551,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6236,24 +5569,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6268,10 +5594,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6286,7 +5610,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6302,8 +5626,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6320,24 +5644,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6352,10 +5669,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6370,7 +5685,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6386,8 +5701,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6404,24 +5719,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6436,10 +5744,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6454,7 +5760,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6470,8 +5776,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6488,24 +5794,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6520,10 +5819,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6538,7 +5835,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6554,8 +5851,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6572,24 +5869,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6604,10 +5894,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6622,7 +5910,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6638,8 +5926,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6656,24 +5944,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6688,10 +5969,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6706,7 +5985,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6722,8 +6001,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6740,24 +6019,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6772,10 +6044,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6790,7 +6060,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6806,8 +6076,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6824,24 +6094,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6856,10 +6119,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6874,7 +6135,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6890,8 +6151,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6908,24 +6169,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6940,10 +6194,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6958,7 +6210,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -6974,8 +6226,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -6992,24 +6244,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7024,10 +6269,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theHasdataspecification = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7042,7 +6285,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherHasdataspecification = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7058,8 +6301,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherHasdataspecification,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7076,24 +6319,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7108,10 +6344,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7126,7 +6360,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7142,8 +6376,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7160,24 +6394,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7192,10 +6419,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7210,7 +6435,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7226,8 +6451,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7244,24 +6469,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7276,10 +6494,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7294,7 +6510,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7310,8 +6526,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7328,24 +6544,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7360,10 +6569,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7378,7 +6585,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7394,8 +6601,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7412,24 +6619,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7444,10 +6644,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7462,7 +6660,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7478,8 +6676,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7496,24 +6694,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7528,10 +6719,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7546,7 +6735,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7562,8 +6751,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7580,24 +6769,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7612,10 +6794,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7630,7 +6810,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7646,8 +6826,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7664,24 +6844,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7696,10 +6869,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7714,7 +6885,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7730,8 +6901,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7748,24 +6919,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7780,10 +6944,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7798,7 +6960,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7814,8 +6976,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7832,24 +6994,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7864,10 +7019,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7882,7 +7035,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7898,8 +7051,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7916,24 +7069,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7948,10 +7094,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -7966,7 +7110,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -7982,8 +7126,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8000,24 +7144,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8032,10 +7169,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8050,7 +7185,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8066,8 +7201,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8084,24 +7219,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Submodel)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8116,10 +7244,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.Submodel)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8134,7 +7260,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8150,8 +7276,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8168,24 +7294,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8200,10 +7319,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8218,7 +7335,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8234,8 +7351,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8252,24 +7369,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8284,10 +7394,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theQualifiable = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8302,7 +7410,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherQualifiable = Aas.Xmlization.Deserialize.IQualifiableFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8318,8 +7426,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherQualifiable,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8336,24 +7444,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8368,10 +7469,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8386,7 +7485,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8402,8 +7501,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8420,24 +7519,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8452,10 +7544,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8470,7 +7560,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8486,8 +7576,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8504,24 +7594,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8536,10 +7619,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8554,7 +7635,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8570,8 +7651,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8588,24 +7669,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8620,10 +7694,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8638,7 +7710,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8654,8 +7726,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8672,24 +7744,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Capability)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8704,10 +7769,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.Capability)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8722,7 +7785,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8738,8 +7801,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8756,24 +7819,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Entity)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8788,10 +7844,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.Entity)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8806,7 +7860,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8822,8 +7876,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8840,24 +7894,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8872,10 +7919,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8890,7 +7935,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8906,8 +7951,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8924,24 +7969,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8956,10 +7994,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -8974,7 +8010,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -8990,8 +8026,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9008,24 +8044,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Operation)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9040,10 +8069,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.Operation)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9058,7 +8085,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9074,8 +8101,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9092,24 +8119,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9124,10 +8144,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9142,7 +8160,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9158,8 +8176,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9176,24 +8194,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9208,10 +8219,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9226,7 +8235,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9242,8 +8251,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9260,24 +8269,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9292,10 +8294,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9310,7 +8310,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9326,8 +8326,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9344,24 +8344,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementCollection)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9376,10 +8369,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.SubmodelElementCollection)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9394,7 +8385,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9410,8 +8401,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9428,24 +8419,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is SubmodelElementList)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9460,10 +8444,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theSubmodelelement = (Aas.SubmodelElementList)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9478,7 +8460,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherSubmodelelement = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9494,8 +8476,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherSubmodelelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9512,24 +8494,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is AnnotatedRelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9544,10 +8519,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theRelationshipelement = (Aas.AnnotatedRelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theRelationshipelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9562,7 +8535,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherRelationshipelement = Aas.Xmlization.Deserialize.IRelationshipElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IRelationshipElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9578,8 +8551,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherRelationshipelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9596,24 +8569,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is RelationshipElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9628,10 +8594,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theRelationshipelement = (Aas.RelationshipElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theRelationshipelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9646,7 +8610,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherRelationshipelement = Aas.Xmlization.Deserialize.IRelationshipElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IRelationshipElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9662,8 +8626,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherRelationshipelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9680,24 +8644,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Blob)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9712,10 +8669,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theDataelement = (Aas.Blob)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theDataelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9730,7 +8685,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherDataelement = Aas.Xmlization.Deserialize.IDataElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9746,8 +8701,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherDataelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9764,24 +8719,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is File)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9796,10 +8744,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theDataelement = (Aas.File)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theDataelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9814,7 +8760,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherDataelement = Aas.Xmlization.Deserialize.IDataElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9830,8 +8776,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherDataelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9848,24 +8794,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is MultiLanguageProperty)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9880,10 +8819,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theDataelement = (Aas.MultiLanguageProperty)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theDataelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9898,7 +8835,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherDataelement = Aas.Xmlization.Deserialize.IDataElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9914,8 +8851,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherDataelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9932,24 +8869,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Property)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9964,10 +8894,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theDataelement = (Aas.Property)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theDataelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -9982,7 +8910,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherDataelement = Aas.Xmlization.Deserialize.IDataElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -9998,8 +8926,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherDataelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -10016,24 +8944,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is Range)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -10048,10 +8969,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theDataelement = (Aas.Range)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theDataelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -10066,7 +8985,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherDataelement = Aas.Xmlization.Deserialize.IDataElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -10082,8 +9001,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherDataelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -10100,24 +9019,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is ReferenceElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -10132,10 +9044,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theDataelement = (Aas.ReferenceElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theDataelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -10150,7 +9060,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherDataelement = Aas.Xmlization.Deserialize.IDataElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -10166,8 +9076,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherDataelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -10184,24 +9094,17 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                    ? container
-                    : container
-                          .Descend()
-                          .First(something => something is BasicEventElement)
-                      ?? throw new System.InvalidOperationException(
-                          "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -10216,10 +9119,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                var theEventelement = (Aas.BasicEventElement)instance;
-
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    theEventelement,
+                Aas.Xmlization.Serialize.To(
+                    instance,
                     xmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");
@@ -10234,7 +9135,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 outputReader,
                 new System.Xml.XmlReaderSettings());
 
-            var anotherEventelement = Aas.Xmlization.Deserialize.IEventElementFrom(
+            var anotherInstance = Aas.Xmlization.Deserialize.IEventElementFrom(
                 xmlReader,
                 "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -10250,8 +9151,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         OmitXmlDeclaration = true
                     });
 
-                AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-                    anotherEventelement,
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
                     anotherXmlWriter,
                     "aas",
                     "https://www.admin-shell.io/aas/3/0/RC02");

@@ -5,10 +5,9 @@
 
 using Path = System.IO.Path;
 
-using System.Linq; // can't alias
 using NUnit.Framework; // can't alias
 
-using Aas = AasCore.Aas3_0_RC02;
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -18,24 +17,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Extension()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Extension",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Extension)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Extension)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Extension could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -45,7 +37,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -65,24 +57,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_AdministrativeInformation()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AdministrativeInformation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AdministrativeInformation)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is AdministrativeInformation)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of AdministrativeInformation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AdministrativeInformation>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -92,7 +77,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -112,24 +97,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Qualifier()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Qualifier",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Qualifier)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Qualifier)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Qualifier could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -139,7 +117,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -159,24 +137,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_AssetAdministrationShell()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AssetAdministrationShell",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AssetAdministrationShell)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is AssetAdministrationShell)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of AssetAdministrationShell could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -186,7 +157,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -206,24 +177,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_AssetInformation()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AssetInformation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AssetInformation)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is AssetInformation)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of AssetInformation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AssetInformation>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -233,7 +197,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -253,24 +217,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Resource()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Resource",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Resource)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Resource)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Resource could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Resource>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -280,7 +237,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -300,24 +257,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_SpecificAssetId()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SpecificAssetId",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SpecificAssetId)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SpecificAssetId)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SpecificAssetId could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SpecificAssetId>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -327,7 +277,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -347,24 +297,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Submodel()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Submodel)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Submodel could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -374,7 +317,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -394,24 +337,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_RelationshipElement()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is RelationshipElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of RelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -421,7 +357,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -441,24 +377,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_SubmodelElementList()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementList)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -468,7 +397,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -488,24 +417,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_SubmodelElementCollection()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementCollection)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementCollection could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -515,7 +437,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -535,24 +457,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Property()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Property)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -562,7 +477,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -582,24 +497,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_MultiLanguageProperty()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is MultiLanguageProperty)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -609,7 +517,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -629,24 +537,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Range()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Range)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -656,7 +557,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -676,24 +577,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_ReferenceElement()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ReferenceElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -703,7 +597,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -723,24 +617,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Blob()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Blob)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -750,7 +637,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -770,24 +657,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_File()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is File)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -797,7 +677,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -817,24 +697,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_AnnotatedRelationshipElement()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is AnnotatedRelationshipElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of AnnotatedRelationshipElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -844,7 +717,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -864,24 +737,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Entity()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Entity)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Entity could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -891,7 +757,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -911,24 +777,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_BasicEventElement()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is BasicEventElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of BasicEventElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -938,7 +797,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -958,24 +817,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Operation()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Operation)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Operation could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -985,7 +837,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1005,24 +857,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_OperationVariable()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "OperationVariable",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is OperationVariable)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is OperationVariable)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of OperationVariable could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.OperationVariable>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1032,7 +877,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1052,24 +897,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Capability()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Capability)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Capability could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1079,7 +917,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1099,24 +937,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_ConceptDescription()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ConceptDescription)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1126,7 +957,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1146,24 +977,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Reference()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Reference",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Reference)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Reference)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Reference could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Reference>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1173,7 +997,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1193,24 +1017,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Key()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Key",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Key)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Key)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Key could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Key>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1220,7 +1037,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1240,24 +1057,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_LangString()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "LangString",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is LangString)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is LangString)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of LangString could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.LangString>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1267,7 +1077,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1287,24 +1097,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_LangStringSet()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "LangStringSet",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is LangStringSet)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is LangStringSet)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of LangStringSet could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1314,7 +1117,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);
@@ -1334,24 +1137,17 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Environment()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Environment",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Environment)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Environment)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Environment could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Environment>(
+                container);
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1361,7 +1157,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
-            AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
                 jsonObject,
                 anotherJsonObject,
                 out Aas.Reporting.Error? error);

@@ -51,25 +51,18 @@ def main() -> int:
 public void Test_round_trip_{cls_name_csharp}()
 {{
     string pathToCompleteExample = Path.Combine(
-        AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+        Aas.Tests.Common.OurTestResourceDir,
         "Json",
         "Expected",
         {csharp_common.string_literal(cls_name_json)},
         "complete.json");
     
-    var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+    var container = Aas.Tests.CommonJson.LoadInstance(
         pathToCompleteExample);
-
-    var instance = (
-        (container is {cls_name_csharp})
-        ? container
-        : container
-            .Descend()
-            .First(something => something is {cls_name_csharp})
-                ?? throw new System.InvalidOperationException(
-                    "No instance of {cls_name_csharp} could be found") 
-    );
     
+    var instance = Aas.Tests.Common.MustFind<Aas.{cls_name_csharp}>(
+        container);
+
     var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
     
     var anotherInstance = Aas.Jsonization.Deserialize.{cls_name_csharp}From(
@@ -78,7 +71,7 @@ public void Test_round_trip_{cls_name_csharp}()
     var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
         anotherInstance);
 
-    AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+    Aas.Tests.CommonJson.CheckJsonNodesEqual(
         jsonObject,
         anotherJsonObject,
         out Aas.Reporting.Error? error);
@@ -106,10 +99,9 @@ public void Test_round_trip_{cls_name_csharp}()
 
 using Path = System.IO.Path;
 
-using System.Linq; // can't alias
 using NUnit.Framework; // can't alias
 
-using Aas = AasCore.Aas3_0_RC02;
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

@@ -5,14 +5,14 @@ using Path = System.IO.Path;
 using System.Linq; // can't alias
 using NUnit.Framework; // can't alias
 
-using Aas = AasCore.Aas3_0_RC02;
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
     public class TestDescendAndVisitorThrough
     {
         private static readonly string JsonExpectedDir = Path.Combine(
-            AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+            Aas.Tests.Common.OurTestResourceDir,
             "Json",
             "Expected");
 
@@ -73,8 +73,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             foreach (string pathToCompleteExample in PathsToCompleteExamples())
             {
-                IClass? environment = AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(
-                    AasCore.Aas3_0_RC02.Tests.CommonJson.ReadFromFile(
+                IClass? environment = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    Aas.Tests.CommonJson.ReadFromFile(
                         pathToCompleteExample));
 
                 if (environment == null)
@@ -110,13 +110,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_against_the_recorded()
         {
             string recordingBaseDir = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Descend");
 
             foreach (string pathToCompleteExample in PathsToCompleteExamples())
             {
-                IClass? environment = AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(
-                    AasCore.Aas3_0_RC02.Tests.CommonJson.ReadFromFile(
+                IClass? environment = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    Aas.Tests.CommonJson.ReadFromFile(
                         pathToCompleteExample));
 
                 if (environment == null)
@@ -139,7 +139,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 var expectedPath = Path.Join(
                     recordingBaseDir, relativePath + ".trace");
 
-                if (AasCore.Aas3_0_RC02.Tests.Common.RecordMode)
+                if (Aas.Tests.Common.RecordMode)
                 {
                     string? parent = Path.GetDirectoryName(expectedPath);
                     if (parent != null)

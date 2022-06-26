@@ -6,10 +6,10 @@
 using Directory = System.IO.Directory;
 using Nodes = System.Text.Json.Nodes;
 using Path = System.IO.Path;
-using Aas = AasCore.Aas3_0_RC02;
 
 using NUnit.Framework;  // can't alias
-using System.Linq;  // can't alias
+
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -19,10 +19,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             object value,
             string expectedPath)
         {
-            Nodes.JsonNode got = AasCore.Aas3_0_RC02.Tests.CommonJson.ToJson(
+            Nodes.JsonNode got = Aas.Tests.CommonJson.ToJson(
                 value);
 
-            if (AasCore.Aas3_0_RC02.Tests.Common.RecordMode)
+            if (Aas.Tests.Common.RecordMode)
             {
                 string? parent = Path.GetDirectoryName(expectedPath);
                 if (parent != null)
@@ -44,10 +44,10 @@ namespace AasCore.Aas3_0_RC02.Tests
                         $"The file with the recorded value does not exist: {expectedPath}");
                 }
 
-                Nodes.JsonNode expected = AasCore.Aas3_0_RC02.Tests.CommonJson.ReadFromFile(
+                Nodes.JsonNode expected = Aas.Tests.CommonJson.ReadFromFile(
                     expectedPath);
 
-                AasCore.Aas3_0_RC02.Tests.CommonJson.CheckJsonNodesEqual(
+                Aas.Tests.CommonJson.CheckJsonNodesEqual(
                     expected, got, out Aas.Reporting.Error? error);
 
                 if (error != null)
@@ -66,40 +66,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Extension_ValueTypeOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Extension",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Extension)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Extension)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Extension could be found")
-            );
-
-            var theExtension = (instance as Aas.Extension)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Extension " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theExtension.ValueTypeOrDefault())
+                instance.ValueTypeOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Extension",
                     "ValueTypeOrDefault.non-default.json"));
@@ -109,40 +96,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Extension_ValueTypeOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Extension",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Extension)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Extension)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Extension could be found")
-            );
-
-            var theExtension = (instance as Aas.Extension)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Extension " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theExtension.ValueTypeOrDefault())
+                instance.ValueTypeOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Extension",
                     "ValueTypeOrDefault.default.json"));
@@ -152,40 +126,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Qualifier_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Qualifier",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Qualifier)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Qualifier)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Qualifier could be found")
-            );
-
-            var theQualifier = (instance as Aas.Qualifier)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Qualifier " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theQualifier.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Qualifier",
                     "KindOrDefault.non-default.json"));
@@ -195,40 +156,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Qualifier_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Qualifier",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Qualifier)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Qualifier)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Qualifier could be found")
-            );
-
-            var theQualifier = (instance as Aas.Qualifier)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Qualifier " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theQualifier.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Qualifier",
                     "KindOrDefault.default.json"));
@@ -238,40 +186,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Submodel_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Submodel)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Submodel)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Submodel could be found")
-            );
-
-            var theSubmodel = (instance as Aas.Submodel)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Submodel " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theSubmodel.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Submodel",
                     "KindOrDefault.non-default.json"));
@@ -281,40 +216,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Submodel_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Submodel",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Submodel)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Submodel)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Submodel could be found")
-            );
-
-            var theSubmodel = (instance as Aas.Submodel)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Submodel " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theSubmodel.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Submodel",
                     "KindOrDefault.default.json"));
@@ -324,40 +246,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_RelationshipElement_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is RelationshipElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of RelationshipElement could be found")
-            );
-
-            var theRelationshipElement = (instance as Aas.RelationshipElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of RelationshipElement " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theRelationshipElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "RelationshipElement",
                     "KindOrDefault.non-default.json"));
@@ -367,40 +276,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_RelationshipElement_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "RelationshipElement",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is RelationshipElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is RelationshipElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of RelationshipElement could be found")
-            );
-
-            var theRelationshipElement = (instance as Aas.RelationshipElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of RelationshipElement " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theRelationshipElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "RelationshipElement",
                     "KindOrDefault.default.json"));
@@ -410,40 +306,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_SubmodelElementList_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementList)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementList could be found")
-            );
-
-            var theSubmodelElementList = (instance as Aas.SubmodelElementList)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of SubmodelElementList " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theSubmodelElementList.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "KindOrDefault.non-default.json"));
@@ -453,40 +336,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_SubmodelElementList_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementList)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementList could be found")
-            );
-
-            var theSubmodelElementList = (instance as Aas.SubmodelElementList)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of SubmodelElementList " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theSubmodelElementList.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "KindOrDefault.default.json"));
@@ -496,37 +366,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_SubmodelElementList_OrderRelevantOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementList)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
-            var theSubmodelElementList = (instance as Aas.SubmodelElementList)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of SubmodelElementList " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theSubmodelElementList.OrderRelevantOrDefault();
+            var value = instance.OrderRelevantOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "OrderRelevantOrDefault.non-default.json"));
@@ -536,37 +393,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_SubmodelElementList_OrderRelevantOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementList",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is SubmodelElementList)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementList)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementList could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+                container);
 
-            var theSubmodelElementList = (instance as Aas.SubmodelElementList)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of SubmodelElementList " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theSubmodelElementList.OrderRelevantOrDefault();
+            var value = instance.OrderRelevantOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "OrderRelevantOrDefault.default.json"));
@@ -576,40 +420,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_SubmodelElementCollection_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementCollection)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementCollection could be found")
-            );
-
-            var theSubmodelElementCollection = (instance as Aas.SubmodelElementCollection)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of SubmodelElementCollection " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theSubmodelElementCollection.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "SubmodelElementCollection",
                     "KindOrDefault.non-default.json"));
@@ -619,40 +450,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_SubmodelElementCollection_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "SubmodelElementCollection",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is SubmodelElementCollection)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is SubmodelElementCollection)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of SubmodelElementCollection could be found")
-            );
-
-            var theSubmodelElementCollection = (instance as Aas.SubmodelElementCollection)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of SubmodelElementCollection " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theSubmodelElementCollection.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "SubmodelElementCollection",
                     "KindOrDefault.default.json"));
@@ -662,40 +480,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Property_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Property)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Property could be found")
-            );
-
-            var theProperty = (instance as Aas.Property)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Property " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theProperty.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Property",
                     "KindOrDefault.non-default.json"));
@@ -705,40 +510,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Property_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Property)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Property)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Property could be found")
-            );
-
-            var theProperty = (instance as Aas.Property)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Property " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theProperty.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Property",
                     "KindOrDefault.default.json"));
@@ -748,37 +540,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Property_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Property)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Property)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
-            var theProperty = (instance as Aas.Property)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Property " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theProperty.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Property",
                     "CategoryOrDefault.non-default.json"));
@@ -788,37 +567,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Property_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Property",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Property)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Property)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Property could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+                container);
 
-            var theProperty = (instance as Aas.Property)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Property " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theProperty.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Property",
                     "CategoryOrDefault.default.json"));
@@ -828,40 +594,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_MultiLanguageProperty_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is MultiLanguageProperty)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of MultiLanguageProperty could be found")
-            );
-
-            var theMultiLanguageProperty = (instance as Aas.MultiLanguageProperty)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of MultiLanguageProperty " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theMultiLanguageProperty.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "KindOrDefault.non-default.json"));
@@ -871,40 +624,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_MultiLanguageProperty_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is MultiLanguageProperty)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of MultiLanguageProperty could be found")
-            );
-
-            var theMultiLanguageProperty = (instance as Aas.MultiLanguageProperty)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of MultiLanguageProperty " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theMultiLanguageProperty.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "KindOrDefault.default.json"));
@@ -914,37 +654,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_MultiLanguageProperty_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is MultiLanguageProperty)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
-            var theMultiLanguageProperty = (instance as Aas.MultiLanguageProperty)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of MultiLanguageProperty " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theMultiLanguageProperty.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "CategoryOrDefault.non-default.json"));
@@ -954,37 +681,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_MultiLanguageProperty_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "MultiLanguageProperty",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is MultiLanguageProperty)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is MultiLanguageProperty)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of MultiLanguageProperty could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+                container);
 
-            var theMultiLanguageProperty = (instance as Aas.MultiLanguageProperty)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of MultiLanguageProperty " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theMultiLanguageProperty.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "CategoryOrDefault.default.json"));
@@ -994,40 +708,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Range_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Range)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Range could be found")
-            );
-
-            var theRange = (instance as Aas.Range)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Range " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theRange.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Range",
                     "KindOrDefault.non-default.json"));
@@ -1037,40 +738,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Range_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Range)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Range)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Range could be found")
-            );
-
-            var theRange = (instance as Aas.Range)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Range " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theRange.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Range",
                     "KindOrDefault.default.json"));
@@ -1080,37 +768,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Range_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Range)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Range)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
-            var theRange = (instance as Aas.Range)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Range " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theRange.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Range",
                     "CategoryOrDefault.non-default.json"));
@@ -1120,37 +795,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Range_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Range",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Range)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Range)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Range could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+                container);
 
-            var theRange = (instance as Aas.Range)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Range " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theRange.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Range",
                     "CategoryOrDefault.default.json"));
@@ -1160,40 +822,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_ReferenceElement_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ReferenceElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ReferenceElement could be found")
-            );
-
-            var theReferenceElement = (instance as Aas.ReferenceElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of ReferenceElement " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theReferenceElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "KindOrDefault.non-default.json"));
@@ -1203,40 +852,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_ReferenceElement_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ReferenceElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ReferenceElement could be found")
-            );
-
-            var theReferenceElement = (instance as Aas.ReferenceElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of ReferenceElement " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theReferenceElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "KindOrDefault.default.json"));
@@ -1246,37 +882,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_ReferenceElement_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ReferenceElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
-            var theReferenceElement = (instance as Aas.ReferenceElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of ReferenceElement " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theReferenceElement.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "CategoryOrDefault.non-default.json"));
@@ -1286,37 +909,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_ReferenceElement_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ReferenceElement",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is ReferenceElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ReferenceElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ReferenceElement could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+                container);
 
-            var theReferenceElement = (instance as Aas.ReferenceElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of ReferenceElement " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theReferenceElement.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "CategoryOrDefault.default.json"));
@@ -1326,40 +936,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Blob_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Blob)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Blob could be found")
-            );
-
-            var theBlob = (instance as Aas.Blob)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Blob " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theBlob.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Blob",
                     "KindOrDefault.non-default.json"));
@@ -1369,40 +966,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Blob_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Blob)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Blob)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Blob could be found")
-            );
-
-            var theBlob = (instance as Aas.Blob)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Blob " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theBlob.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Blob",
                     "KindOrDefault.default.json"));
@@ -1412,37 +996,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Blob_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Blob)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Blob)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
-            var theBlob = (instance as Aas.Blob)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Blob " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theBlob.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Blob",
                     "CategoryOrDefault.non-default.json"));
@@ -1452,37 +1023,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Blob_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Blob",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Blob)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Blob)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Blob could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+                container);
 
-            var theBlob = (instance as Aas.Blob)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Blob " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theBlob.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Blob",
                     "CategoryOrDefault.default.json"));
@@ -1492,40 +1050,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_File_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is File)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of File could be found")
-            );
-
-            var theFile = (instance as Aas.File)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of File " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theFile.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "File",
                     "KindOrDefault.non-default.json"));
@@ -1535,40 +1080,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_File_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is File)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is File)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of File could be found")
-            );
-
-            var theFile = (instance as Aas.File)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of File " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theFile.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "File",
                     "KindOrDefault.default.json"));
@@ -1578,37 +1110,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_File_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is File)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is File)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
-            var theFile = (instance as Aas.File)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of File " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theFile.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "File",
                     "CategoryOrDefault.non-default.json"));
@@ -1618,37 +1137,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_File_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "File",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is File)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is File)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of File could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.File>(
+                container);
 
-            var theFile = (instance as Aas.File)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of File " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theFile.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "File",
                     "CategoryOrDefault.default.json"));
@@ -1658,40 +1164,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_AnnotatedRelationshipElement_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is AnnotatedRelationshipElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of AnnotatedRelationshipElement could be found")
-            );
-
-            var theAnnotatedRelationshipElement = (instance as Aas.AnnotatedRelationshipElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of AnnotatedRelationshipElement " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theAnnotatedRelationshipElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "AnnotatedRelationshipElement",
                     "KindOrDefault.non-default.json"));
@@ -1701,40 +1194,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_AnnotatedRelationshipElement_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "AnnotatedRelationshipElement",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is AnnotatedRelationshipElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is AnnotatedRelationshipElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of AnnotatedRelationshipElement could be found")
-            );
-
-            var theAnnotatedRelationshipElement = (instance as Aas.AnnotatedRelationshipElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of AnnotatedRelationshipElement " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theAnnotatedRelationshipElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "AnnotatedRelationshipElement",
                     "KindOrDefault.default.json"));
@@ -1744,40 +1224,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Entity_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Entity)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Entity)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Entity could be found")
-            );
-
-            var theEntity = (instance as Aas.Entity)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Entity " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theEntity.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Entity",
                     "KindOrDefault.non-default.json"));
@@ -1787,40 +1254,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Entity_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Entity",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Entity)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Entity)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Entity could be found")
-            );
-
-            var theEntity = (instance as Aas.Entity)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Entity " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theEntity.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Entity",
                     "KindOrDefault.default.json"));
@@ -1830,40 +1284,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_BasicEventElement_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is BasicEventElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of BasicEventElement could be found")
-            );
-
-            var theBasicEventElement = (instance as Aas.BasicEventElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of BasicEventElement " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theBasicEventElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "BasicEventElement",
                     "KindOrDefault.non-default.json"));
@@ -1873,40 +1314,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_BasicEventElement_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "BasicEventElement",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is BasicEventElement)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is BasicEventElement)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of BasicEventElement could be found")
-            );
-
-            var theBasicEventElement = (instance as Aas.BasicEventElement)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of BasicEventElement " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theBasicEventElement.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "BasicEventElement",
                     "KindOrDefault.default.json"));
@@ -1916,40 +1344,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Operation_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Operation)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Operation)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Operation could be found")
-            );
-
-            var theOperation = (instance as Aas.Operation)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Operation " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theOperation.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Operation",
                     "KindOrDefault.non-default.json"));
@@ -1959,40 +1374,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Operation_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Operation",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Operation)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Operation)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Operation could be found")
-            );
-
-            var theOperation = (instance as Aas.Operation)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Operation " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theOperation.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Operation",
                     "KindOrDefault.default.json"));
@@ -2002,40 +1404,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Capability_KindOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is Capability)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Capability)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Capability could be found")
-            );
-
-            var theCapability = (instance as Aas.Capability)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Capability " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theCapability.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Capability",
                     "KindOrDefault.non-default.json"));
@@ -2045,40 +1434,27 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_Capability_KindOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "Capability",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is Capability)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is Capability)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of Capability could be found")
-            );
-
-            var theCapability = (instance as Aas.Capability)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of Capability " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
+            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+                container);
 
             string value = Aas.Stringification.ToString(
-                theCapability.KindOrDefault())
+                instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "Capability",
                     "KindOrDefault.default.json"));
@@ -2088,37 +1464,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_ConceptDescription_CategoryOrDefault_non_default()
         {
             string pathToCompleteExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "complete.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToCompleteExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ConceptDescription)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
-            var theConceptDescription = (instance as Aas.ConceptDescription)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of ConceptDescription " +
-                    $"in {pathToCompleteExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theConceptDescription.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "ConceptDescription",
                     "CategoryOrDefault.non-default.json"));
@@ -2128,37 +1491,24 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_ConceptDescription_CategoryOrDefault_default()
         {
             string pathToMinimalExample = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected",
                 "ConceptDescription",
                 "minimal.json");
 
-            var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+            var container = Aas.Tests.CommonJson.LoadInstance(
                 pathToMinimalExample);
 
-            var instance = (
-                (container is ConceptDescription)
-                ? container
-                : container
-                    .Descend()
-                    .First(something => something is ConceptDescription)
-                        ?? throw new System.InvalidOperationException(
-                            "No instance of ConceptDescription could be found")
-            );
+            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+                container);
 
-            var theConceptDescription = (instance as Aas.ConceptDescription)
-                ?? throw new System.InvalidOperationException(
-                    "Expected an instance of ConceptDescription " +
-                    $"in {pathToMinimalExample}, " +
-                    $"but got a {instance.GetType()}");
-
-            var value = theConceptDescription.CategoryOrDefault();
+            var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "XOrDefault",
                     "ConceptDescription",
                     "CategoryOrDefault.default.json"));

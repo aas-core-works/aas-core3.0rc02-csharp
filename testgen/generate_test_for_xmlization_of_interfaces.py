@@ -52,18 +52,6 @@ def main() -> int:
                 symbol.interface.name
             )
 
-            assert interface_name_csharp.startswith("I")
-            var_name = aas_core_codegen.csharp.naming.variable_name(
-                aas_core_codegen.common.Identifier(
-                    "the_" + interface_name_csharp[1:]
-                )
-            )
-            another_var_name = aas_core_codegen.csharp.naming.variable_name(
-                aas_core_codegen.common.Identifier(
-                    "another_" + interface_name_csharp[1:]
-                )
-            )
-
             cls_name_csharp = aas_core_codegen.csharp.naming.class_name(cls.name)
             cls_name_json = aas_core_codegen.naming.json_model_type(cls.name)
 
@@ -76,24 +64,17 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
     // We load from JSON here just to jump-start the round trip.
     // The round-trip goes then over XML.
     string pathToCompleteExample = Path.Combine(
-        AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+        Aas.Tests.Common.OurTestResourceDir,
         "Json",
         "Expected",
         "{cls_name_json}",
         "complete.json");
 
-    var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+    var container = Aas.Tests.CommonJson.LoadInstance(
         pathToCompleteExample);
 
-    var instance = (
-        (container is {cls_name_csharp})
-            ? container
-            : container
-                  .Descend()
-                  .First(something => something is {cls_name_csharp})
-              ?? throw new System.InvalidOperationException(
-                  "No instance of {cls_name_csharp} could be found")
-    );
+    var instance = Aas.Tests.Common.MustFind<Aas.{cls_name_csharp}>(
+        container);
 
     // The round-trip starts here.
     var outputBuilder = new System.Text.StringBuilder();
@@ -108,10 +89,8 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
                 OmitXmlDeclaration = true
             }});
 
-        var {var_name} = (Aas.{cls_name_csharp})instance;
-
-        AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-            {var_name},
+        Aas.Xmlization.Serialize.To(
+            instance,
             xmlWriter,
             "aas",
             "https://www.admin-shell.io/aas/3/0/RC02");
@@ -126,7 +105,7 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
         outputReader,
         new System.Xml.XmlReaderSettings());
 
-    var {another_var_name} = Aas.Xmlization.Deserialize.{interface_name_csharp}From(
+    var anotherInstance = Aas.Xmlization.Deserialize.{interface_name_csharp}From(
         xmlReader,
         "https://www.admin-shell.io/aas/3/0/RC02");
 
@@ -142,8 +121,8 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
                 OmitXmlDeclaration = true
             }});
 
-        AasCore.Aas3_0_RC02.Xmlization.Serialize.To(
-            {another_var_name},
+        Aas.Xmlization.Serialize.To(
+            anotherInstance,
             anotherXmlWriter,
             "aas",
             "https://www.admin-shell.io/aas/3/0/RC02");
@@ -167,9 +146,8 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
 using Path = System.IO.Path;
 
 using NUnit.Framework;  // can't alias
-using System.Linq; // can't alias
 
-using Aas = AasCore.Aas3_0_RC02;
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
