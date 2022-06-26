@@ -1,10 +1,13 @@
 using Directory = System.IO.Directory;
 using Nodes = System.Text.Json.Nodes;
 using Path = System.IO.Path;
-using System.Collections.Generic;
+
+using System.Collections.Generic;  // can't alias
 using System.IO; // can't alias
 using System.Linq; // can't alias
 using NUnit.Framework; // can't alias
+
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -17,7 +20,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         private static IEnumerable<string> ExpectedPaths()
         {
             string expectedDir = Path.Combine(
-                AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                Aas.Tests.Common.OurTestResourceDir,
                 "Json",
                 "Expected");
 
@@ -44,13 +47,13 @@ namespace AasCore.Aas3_0_RC02.Tests
             foreach (string path in ExpectedPaths())
             {
                 var originalNode = Aas3_0_RC02.Tests.CommonJson.ReadFromFile(path);
-                AasCore.Aas3_0_RC02.Environment? instance = null;
+                Aas.Environment? instance = null;
                 try
                 {
-                    instance = AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(
+                    instance = Aas.Jsonization.Deserialize.EnvironmentFrom(
                         originalNode);
                 }
-                catch (AasCore.Aas3_0_RC02.Jsonization.Exception exception)
+                catch (Aas.Jsonization.Exception exception)
                 {
                     Assert.Fail(
                         "Expected no exception upon de-serialization of an environment " +
@@ -66,7 +69,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                     );
                 }
 
-                var errors = AasCore.Aas3_0_RC02.Verification.Verify(instance).ToList();
+                var errors = Aas.Verification.Verify(instance).ToList();
                 if (errors.Count > 0)
                 {
                     var builder = new System.Text.StringBuilder();
@@ -86,7 +89,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 Nodes.JsonObject? serialized = null;
                 try
                 {
-                    serialized = AasCore.Aas3_0_RC02.Jsonization.Serialize.ToJsonObject(instance);
+                    serialized = Aas.Jsonization.Serialize.ToJsonObject(instance);
                 }
                 catch (System.Exception exception)
                 {
@@ -139,7 +142,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             foreach (string dirName in dirNames)
             {
                 string unexpectedDir = Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "Json",
                     "Unexpected",
                     dirName);
@@ -171,14 +174,14 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 var node = Aas3_0_RC02.Tests.CommonJson.ReadFromFile(path);
 
-                AasCore.Aas3_0_RC02.Jsonization.Exception? exception = null;
+                Aas.Jsonization.Exception? exception = null;
 
                 try
                 {
-                    var _ = AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(
+                    var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
                         node);
                 }
-                catch (AasCore.Aas3_0_RC02.Jsonization.Exception observedException)
+                catch (Aas.Jsonization.Exception observedException)
                 {
                     exception = observedException;
                 }
@@ -193,7 +196,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 {
                     string exceptionPath = path + ".exception";
                     string got = exception.Message;
-                    if (AasCore.Aas3_0_RC02.Tests.Common.RecordMode)
+                    if (Aas.Tests.Common.RecordMode)
                     {
                         System.IO.File.WriteAllText(exceptionPath, got);
                     }
@@ -237,7 +240,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             foreach (string dirName in dirNames)
             {
                 string unexpectedDir = Path.Combine(
-                    AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.OurTestResourceDir,
                     "Json",
                     "Unexpected",
                     dirName);
@@ -274,13 +277,13 @@ namespace AasCore.Aas3_0_RC02.Tests
             foreach (string path in PathsWithFailedVerifications())
             {
                 var node = Aas3_0_RC02.Tests.CommonJson.ReadFromFile(path);
-                AasCore.Aas3_0_RC02.Environment? instance = null;
+                Aas.Environment? instance = null;
                 try
                 {
-                    instance = AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(
+                    instance = Aas.Jsonization.Deserialize.EnvironmentFrom(
                         node);
                 }
-                catch (AasCore.Aas3_0_RC02.Jsonization.Exception exception)
+                catch (Aas.Jsonization.Exception exception)
                 {
                     Assert.Fail(
                         "Expected no exception upon de-serialization of an environment " +
@@ -296,7 +299,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                     );
                 }
 
-                var errors = AasCore.Aas3_0_RC02.Verification.Verify(instance).ToList();
+                var errors = Aas.Verification.Verify(instance).ToList();
                 if (errors.Count == 0)
                 {
                     Assert.Fail(
@@ -309,7 +312,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         error => $"{Reporting.GenerateJsonPath(error.PathSegments)}: {error.Cause}"));
 
                 string errorsPath = path + ".errors";
-                if (AasCore.Aas3_0_RC02.Tests.Common.RecordMode)
+                if (Aas.Tests.Common.RecordMode)
                 {
                     System.IO.File.WriteAllText(errorsPath, got);
                 }

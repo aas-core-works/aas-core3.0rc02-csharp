@@ -6,7 +6,7 @@
 using System.Linq;  // can't alias
 using NUnit.Framework;  // can't alias
 
-using Aas = AasCore.Aas3_0_RC02;
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

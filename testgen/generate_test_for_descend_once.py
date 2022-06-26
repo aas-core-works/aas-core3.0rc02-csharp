@@ -13,8 +13,6 @@ import aas_core_codegen.csharp.naming
 import aas_core_codegen.naming
 import aas_core_codegen.parse
 import aas_core_codegen.run
-import aas_core_meta.v3rc2
-
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
 from aas_core_codegen.csharp import (
@@ -65,7 +63,7 @@ private static void CompareOrRerecordTrace(
 
     string got = writer.ToString();
 
-    if (AasCore.Aas3_0_RC02.Tests.Common.RecordMode)
+    if (Aas.Tests.Common.RecordMode)
     {
         string? parent = Path.GetDirectoryName(expectedPath);
         if (parent != null)
@@ -116,29 +114,22 @@ private static void CompareOrRerecordTrace(
 public void Test_{cls_name_csharp}()
 {{
     string pathToCompleteExample = Path.Combine(
-        AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+        Aas.Tests.Common.OurTestResourceDir,
         "Json",
         "Expected",
         {csharp_common.string_literal(cls_name_json)},
         "complete.json");
     
-    var container = AasCore.Aas3_0_RC02.Tests.CommonJson.LoadInstance(
+    var container = Aas.Tests.CommonJson.LoadInstance(
         pathToCompleteExample);
 
-    var instance = (
-        (container is {cls_name_csharp})
-        ? container
-        : container
-            .Descend()
-            .First(something => something is {cls_name_csharp})
-                ?? throw new System.InvalidOperationException(
-                    "No instance of {cls_name_csharp} could be found") 
-    );
+    var instance = Aas.Tests.Common.MustFind<Aas.{cls_name_csharp}>(
+        container);
     
     CompareOrRerecordTrace(
         instance,
         Path.Combine(
-            AasCore.Aas3_0_RC02.Tests.Common.OurTestResourceDir,
+            Aas.Tests.Common.OurTestResourceDir,
             "DescendOnce",
             {csharp_common.string_literal(cls_name_json)},
             "complete.json.trace"));
@@ -157,8 +148,9 @@ public void Test_{cls_name_csharp}()
 using Directory = System.IO.Directory;
 using Path = System.IO.Path;
 
-using System.Linq; // can't alias
 using NUnit.Framework; // can't alias
+
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
