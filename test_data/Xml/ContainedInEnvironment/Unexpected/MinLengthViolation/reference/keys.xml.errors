@@ -1,0 +1,7 @@
+assetAdministrationShells[0]: Invariant violated:
+!(that.DerivedFrom != null)
+|| Verification.IsModelReferenceTo(
+    that.DerivedFrom,
+    KeyTypes.AssetAdministrationShell);
+assetAdministrationShells[0].derivedFrom: Invariant violated:
+that.Keys.Count >= 1

@@ -1,0 +1,7 @@
+submodels[0].submodelElements[0]: Invariant violated:
+Constraint AASd-108: All first level child elements shall have the same submodel element type as specified in type value list element.
+!(that.Value != null)
+|| (
+    that.Value.All(
+        element => Verification.SubmodelElementIsOfType(element, that.TypeValueListElement))
+)

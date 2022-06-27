@@ -3,8 +3,6 @@
  * Do NOT edit or append.
  */
 
-using Path = System.IO.Path;
-
 using NUnit.Framework;  // can't alias
 
 using Aas = AasCore.Aas3_0_RC02;  // renamed
@@ -16,18 +14,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -45,7 +32,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -56,18 +43,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -85,7 +61,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -96,18 +72,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -125,7 +90,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -136,18 +101,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -165,7 +119,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -176,18 +130,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -205,7 +148,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -216,18 +159,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -245,7 +177,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -256,18 +188,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -285,7 +206,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -296,18 +217,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -325,7 +235,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -336,18 +246,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -365,7 +264,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -376,18 +275,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -405,7 +293,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -416,18 +304,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -445,7 +322,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -456,18 +333,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -485,7 +351,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -496,18 +362,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -525,7 +380,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -536,18 +391,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -565,7 +409,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -576,18 +420,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasSemantics_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -605,7 +438,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as IHasSemantics, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -616,18 +449,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -645,7 +467,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -656,18 +478,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -685,7 +496,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -696,18 +507,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_AssetAdministrationShell()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -725,7 +525,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AssetAdministrationShell " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -736,18 +536,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -765,7 +554,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -776,18 +565,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -805,7 +583,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -816,18 +594,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -845,7 +612,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -856,18 +623,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_ConceptDescription()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -885,7 +641,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ConceptDescription " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -896,18 +652,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -925,7 +670,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -936,18 +681,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -965,7 +699,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -976,18 +710,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1005,7 +728,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1016,18 +739,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1045,7 +757,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1056,18 +768,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1085,7 +786,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1096,18 +797,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1125,7 +815,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1136,18 +826,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1165,7 +844,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1176,18 +855,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1205,7 +873,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1216,18 +884,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1245,7 +902,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1256,18 +913,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasExtensions_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1285,7 +931,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as IHasExtensions, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1296,18 +942,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1325,7 +960,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1336,18 +971,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1365,7 +989,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1376,18 +1000,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_AssetAdministrationShell()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1405,7 +1018,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AssetAdministrationShell " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1416,18 +1029,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1445,7 +1047,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1456,18 +1058,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1485,7 +1076,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1496,18 +1087,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1525,7 +1105,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1536,18 +1116,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_ConceptDescription()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1565,7 +1134,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ConceptDescription " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1576,18 +1145,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1605,7 +1163,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1616,18 +1174,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1645,7 +1192,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1656,18 +1203,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1685,7 +1221,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1696,18 +1232,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1725,7 +1250,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1736,18 +1261,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1765,7 +1279,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1776,18 +1290,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1805,7 +1308,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1816,18 +1319,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1845,7 +1337,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1856,18 +1348,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1885,7 +1366,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1896,18 +1377,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1925,7 +1395,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1936,18 +1406,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IReferable_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -1965,7 +1424,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as IReferable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -1976,18 +1435,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IIdentifiable_from_AssetAdministrationShell()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2005,7 +1453,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AssetAdministrationShell " +
                     "as IIdentifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2016,18 +1464,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IIdentifiable_from_ConceptDescription()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2045,7 +1482,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ConceptDescription " +
                     "as IIdentifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2056,18 +1493,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IIdentifiable_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2085,7 +1511,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IIdentifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2096,18 +1522,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2125,7 +1540,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2136,18 +1551,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2165,7 +1569,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2176,18 +1580,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2205,7 +1598,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2216,18 +1609,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2245,7 +1627,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2256,18 +1638,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2285,7 +1656,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2296,18 +1667,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2325,7 +1685,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2336,18 +1696,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2365,7 +1714,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2376,18 +1725,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2405,7 +1743,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2416,18 +1754,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2445,7 +1772,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2456,18 +1783,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2485,7 +1801,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2496,18 +1812,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2525,7 +1830,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2536,18 +1841,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2565,7 +1859,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2576,18 +1870,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2605,7 +1888,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2616,18 +1899,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2645,7 +1917,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2656,18 +1928,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasKind_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2685,7 +1946,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as IHasKind, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2696,18 +1957,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2725,7 +1975,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2736,18 +1986,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2765,7 +2004,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2776,18 +2015,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_AssetAdministrationShell()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2805,7 +2033,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AssetAdministrationShell " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2816,18 +2044,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2845,7 +2062,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2856,18 +2073,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2885,7 +2091,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2896,18 +2102,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2925,7 +2120,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2936,18 +2131,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_ConceptDescription()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -2965,7 +2149,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ConceptDescription " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -2976,18 +2160,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3005,7 +2178,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3016,18 +2189,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3045,7 +2207,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3056,18 +2218,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3085,7 +2236,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3096,18 +2247,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3125,7 +2265,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3136,18 +2276,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3165,7 +2294,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3176,18 +2305,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3205,7 +2323,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3216,18 +2334,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3245,7 +2352,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3256,18 +2363,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3285,7 +2381,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3296,18 +2392,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3325,7 +2410,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3336,18 +2421,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IHasDataSpecification_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3365,7 +2439,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as IHasDataSpecification, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3376,18 +2450,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3405,7 +2468,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3416,18 +2479,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3445,7 +2497,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3456,18 +2508,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3485,7 +2526,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3496,18 +2537,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3525,7 +2555,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3536,18 +2566,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3565,7 +2584,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3576,18 +2595,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3605,7 +2613,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3616,18 +2624,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3645,7 +2642,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3656,18 +2653,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3685,7 +2671,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3696,18 +2682,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3725,7 +2700,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3736,18 +2711,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3765,7 +2729,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3776,18 +2740,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3805,7 +2758,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3816,18 +2769,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3845,7 +2787,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3856,18 +2798,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3885,7 +2816,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Submodel " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3896,18 +2827,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3925,7 +2845,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3936,18 +2856,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IQualifiable_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -3965,7 +2874,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as IQualifiable, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -3976,18 +2885,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4005,7 +2903,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4016,18 +2914,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4045,7 +2932,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4056,18 +2943,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4085,7 +2961,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4096,18 +2972,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4125,7 +2990,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4136,18 +3001,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4165,7 +3019,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Capability " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4176,18 +3030,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4205,7 +3048,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Entity " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4216,18 +3059,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4245,7 +3077,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4256,18 +3088,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4285,7 +3106,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4296,18 +3117,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4325,7 +3135,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Operation " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4336,18 +3146,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4365,7 +3164,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4376,18 +3175,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4405,7 +3193,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4416,18 +3204,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4445,7 +3222,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4456,18 +3233,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4485,7 +3251,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementCollection " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4496,18 +3262,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_ISubmodelElement_from_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4525,7 +3280,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of SubmodelElementList " +
                     "as ISubmodelElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4536,18 +3291,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IRelationshipElement_from_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4565,7 +3309,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of AnnotatedRelationshipElement " +
                     "as IRelationshipElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4576,18 +3320,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IRelationshipElement_from_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4605,7 +3338,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of RelationshipElement " +
                     "as IRelationshipElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4616,18 +3349,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IDataElement_from_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4645,7 +3367,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Blob " +
                     "as IDataElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4656,18 +3378,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IDataElement_from_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4685,7 +3396,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of File " +
                     "as IDataElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4696,18 +3407,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IDataElement_from_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4725,7 +3425,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of MultiLanguageProperty " +
                     "as IDataElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4736,18 +3436,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IDataElement_from_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4765,7 +3454,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Property " +
                     "as IDataElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4776,18 +3465,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IDataElement_from_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4805,7 +3483,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of Range " +
                     "as IDataElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4816,18 +3494,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IDataElement_from_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4845,7 +3512,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of ReferenceElement " +
                     "as IDataElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause
@@ -4856,18 +3523,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_round_trip_IEventElement_from_BasicEventElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
 
@@ -4885,7 +3541,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             if (error != null)
             {
                 Assert.Fail(
-                    $"When we serialize the instance from {pathToCompleteExample} " +
+                    "When we serialize the complete instance of BasicEventElement " +
                     "as IEventElement, we get an error in the round trip: " +
                     $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
                     error.Cause

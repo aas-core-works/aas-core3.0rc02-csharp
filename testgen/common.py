@@ -1,12 +1,16 @@
+import enum
 import io
 import pathlib
+from typing import MutableMapping
 
 import aas_core_codegen
 import aas_core_codegen.parse
 import aas_core_codegen.run
 import aas_core_codegen.common
+import aas_core_codegen.naming
 import aas_core_meta.v3rc2
 from aas_core_codegen import intermediate
+from icontract import require, ensure
 
 
 def load_symbol_table() -> intermediate.SymbolTable:
@@ -73,3 +77,41 @@ def load_symbol_table() -> intermediate.SymbolTable:
     assert ir_symbol_table is not None
 
     return ir_symbol_table
+
+
+@require(lambda test_data_dir: test_data_dir.is_dir())
+@require(lambda environment_cls: environment_cls.name == "Environment")
+def determine_container_class(
+        cls: intermediate.ConcreteClass,
+        test_data_dir: pathlib.Path,
+        environment_cls: intermediate.ConcreteClass
+) -> intermediate.ConcreteClass:
+    """Determine the container class based on the test data directory."""
+    cls_name_json = aas_core_codegen.naming.json_model_type(cls.name)
+
+    contained_in_environment_path = (
+            test_data_dir
+            / "Json"
+            / "ContainedInEnvironment"
+            / "Expected"
+            / cls_name_json
+    )
+
+    self_contained_path = (
+            test_data_dir
+            / "Json"
+            / "SelfContained"
+            / "Expected"
+            / cls_name_json
+    )
+
+    if contained_in_environment_path.exists():
+        return environment_cls
+    elif self_contained_path.exists():
+        return cls
+    else:
+        raise RuntimeError(
+            f"Neither {contained_in_environment_path} nor {self_contained_path} "
+            f"exist beneath {test_data_dir}. We do not know how to infer "
+            f"the kind of how the instance of {cls_name_json} is contained."
+        )

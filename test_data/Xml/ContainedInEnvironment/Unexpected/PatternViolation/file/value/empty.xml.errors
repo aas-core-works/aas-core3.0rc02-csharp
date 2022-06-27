@@ -1,0 +1,4 @@
+submodels[0].submodelElements[0].value: Invariant violated:
+that.Length >= 1;
+submodels[0].submodelElements[0].value: Invariant violated:
+Verification.MatchesRfc8089Path(that)

@@ -1,0 +1,4 @@
+submodels[0].submodelElements[0].contentType: Invariant violated:
+that.Length >= 1;
+submodels[0].submodelElements[0].contentType: Invariant violated:
+Verification.MatchesMimeType(that)

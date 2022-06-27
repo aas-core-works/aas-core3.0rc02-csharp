@@ -13,8 +13,6 @@ import aas_core_codegen.csharp.naming
 import aas_core_codegen.naming
 import aas_core_codegen.parse
 import aas_core_codegen.run
-import aas_core_meta.v3rc2
-
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
 from aas_core_codegen.csharp import (
@@ -87,12 +85,6 @@ private static void CompareOrRerecordValue(
         if not isinstance(symbol, intermediate.ConcreteClass):
             continue
 
-        if symbol.name == aas_core_codegen.common.Identifier("Event_payload"):
-            # NOTE (mristin, 2022-06-21):
-            # Event payload is a dangling class and can not be reached from
-            # the environment. Hence, we skip it.
-            continue
-
         cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
         cls_name_json = aas_core_codegen.naming.json_model_type(symbol.name)
 
@@ -137,25 +129,15 @@ string value = Aas.Stringification.ToString(
 [Test]
 public void Test_{cls_name_csharp}_{method_name_csharp}_non_default()
 {{
-    string pathToCompleteExample = Path.Combine(
-        Aas.Tests.Common.OurTestResourceDir,
-        "Json",
-        "Expected",
-        {csharp_common.string_literal(cls_name_json)},
-        "complete.json");
-    
-    var container = Aas.Tests.CommonJson.LoadInstance(
-        pathToCompleteExample);
-
-    var instance = Aas.Tests.Common.MustFind<Aas.{cls_name_csharp}>(
-        container);
+    Aas.{cls_name_csharp} instance = (
+        Aas.Tests.CommonJsonization.LoadComplete{cls_name_csharp}());
     
     {aas_core_codegen.common.indent_but_first_line(value_assignment_snippet, indent)}
 
     CompareOrRerecordValue(
         value, 
         Path.Combine(
-            Aas.Tests.Common.OurTestResourceDir,
+            Aas.Tests.Common.TestDataDir,
             "XOrDefault",
             {csharp_common.string_literal(cls_name_json)},
             "{method_name_csharp}.non-default.json"));
@@ -164,25 +146,15 @@ public void Test_{cls_name_csharp}_{method_name_csharp}_non_default()
 [Test]
 public void Test_{cls_name_csharp}_{method_name_csharp}_default()
 {{
-    string pathToMinimalExample = Path.Combine(
-        Aas.Tests.Common.OurTestResourceDir,
-        "Json",
-        "Expected",
-        {csharp_common.string_literal(cls_name_json)},
-        "minimal.json");
-    
-    var container = Aas.Tests.CommonJson.LoadInstance(
-        pathToMinimalExample);
-
-    var instance = Aas.Tests.Common.MustFind<Aas.{cls_name_csharp}>(
-        container);
+    Aas.{cls_name_csharp} instance = (
+        Aas.Tests.CommonJsonization.LoadMinimal{cls_name_csharp}());
 
     {aas_core_codegen.common.indent_but_first_line(value_assignment_snippet, indent)}
 
     CompareOrRerecordValue(
         value, 
         Path.Combine(
-            Aas.Tests.Common.OurTestResourceDir,
+            Aas.Tests.Common.TestDataDir,
             "XOrDefault",
             {csharp_common.string_literal(cls_name_json)},
             "{method_name_csharp}.default.json"));

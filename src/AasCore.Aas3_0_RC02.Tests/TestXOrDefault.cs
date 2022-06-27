@@ -65,18 +65,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Extension_ValueTypeOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Extension",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
-                container);
+            Aas.Extension instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteExtension());
 
             string value = Aas.Stringification.ToString(
                 instance.ValueTypeOrDefault())
@@ -86,7 +76,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Extension",
                     "ValueTypeOrDefault.non-default.json"));
@@ -95,18 +85,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Extension_ValueTypeOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Extension",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
-                container);
+            Aas.Extension instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalExtension());
 
             string value = Aas.Stringification.ToString(
                 instance.ValueTypeOrDefault())
@@ -116,7 +96,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Extension",
                     "ValueTypeOrDefault.default.json"));
@@ -125,18 +105,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Qualifier_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Qualifier",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
-                container);
+            Aas.Qualifier instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteQualifier());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -146,7 +116,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Qualifier",
                     "KindOrDefault.non-default.json"));
@@ -155,18 +125,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Qualifier_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Qualifier",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
-                container);
+            Aas.Qualifier instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalQualifier());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -176,7 +136,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Qualifier",
                     "KindOrDefault.default.json"));
@@ -185,18 +145,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Submodel_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            Aas.Submodel instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodel());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -206,7 +156,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Submodel",
                     "KindOrDefault.non-default.json"));
@@ -215,18 +165,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Submodel_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            Aas.Submodel instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalSubmodel());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -236,7 +176,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Submodel",
                     "KindOrDefault.default.json"));
@@ -245,18 +185,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_RelationshipElement_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            Aas.RelationshipElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -266,7 +196,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "RelationshipElement",
                     "KindOrDefault.non-default.json"));
@@ -275,18 +205,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_RelationshipElement_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            Aas.RelationshipElement instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalRelationshipElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -296,7 +216,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "RelationshipElement",
                     "KindOrDefault.default.json"));
@@ -305,18 +225,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementList_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            Aas.SubmodelElementList instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -326,7 +236,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "KindOrDefault.non-default.json"));
@@ -335,18 +245,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementList_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            Aas.SubmodelElementList instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalSubmodelElementList());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -356,7 +256,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "KindOrDefault.default.json"));
@@ -365,25 +265,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementList_OrderRelevantOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            Aas.SubmodelElementList instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
 
             var value = instance.OrderRelevantOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "OrderRelevantOrDefault.non-default.json"));
@@ -392,25 +282,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementList_OrderRelevantOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            Aas.SubmodelElementList instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalSubmodelElementList());
 
             var value = instance.OrderRelevantOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "SubmodelElementList",
                     "OrderRelevantOrDefault.default.json"));
@@ -419,18 +299,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementCollection_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            Aas.SubmodelElementCollection instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -440,7 +310,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "SubmodelElementCollection",
                     "KindOrDefault.non-default.json"));
@@ -449,18 +319,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementCollection_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            Aas.SubmodelElementCollection instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalSubmodelElementCollection());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -470,7 +330,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "SubmodelElementCollection",
                     "KindOrDefault.default.json"));
@@ -479,18 +339,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Property_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            Aas.Property instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteProperty());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -500,7 +350,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Property",
                     "KindOrDefault.non-default.json"));
@@ -509,18 +359,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Property_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            Aas.Property instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalProperty());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -530,7 +370,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Property",
                     "KindOrDefault.default.json"));
@@ -539,25 +379,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Property_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            Aas.Property instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteProperty());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Property",
                     "CategoryOrDefault.non-default.json"));
@@ -566,25 +396,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Property_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            Aas.Property instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalProperty());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Property",
                     "CategoryOrDefault.default.json"));
@@ -593,18 +413,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_MultiLanguageProperty_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            Aas.MultiLanguageProperty instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -614,7 +424,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "KindOrDefault.non-default.json"));
@@ -623,18 +433,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_MultiLanguageProperty_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            Aas.MultiLanguageProperty instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalMultiLanguageProperty());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -644,7 +444,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "KindOrDefault.default.json"));
@@ -653,25 +453,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_MultiLanguageProperty_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            Aas.MultiLanguageProperty instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "CategoryOrDefault.non-default.json"));
@@ -680,25 +470,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_MultiLanguageProperty_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            Aas.MultiLanguageProperty instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalMultiLanguageProperty());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "MultiLanguageProperty",
                     "CategoryOrDefault.default.json"));
@@ -707,18 +487,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Range_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            Aas.Range instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteRange());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -728,7 +498,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Range",
                     "KindOrDefault.non-default.json"));
@@ -737,18 +507,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Range_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            Aas.Range instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalRange());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -758,7 +518,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Range",
                     "KindOrDefault.default.json"));
@@ -767,25 +527,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Range_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            Aas.Range instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteRange());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Range",
                     "CategoryOrDefault.non-default.json"));
@@ -794,25 +544,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Range_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            Aas.Range instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalRange());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Range",
                     "CategoryOrDefault.default.json"));
@@ -821,18 +561,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ReferenceElement_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            Aas.ReferenceElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -842,7 +572,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "KindOrDefault.non-default.json"));
@@ -851,18 +581,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ReferenceElement_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            Aas.ReferenceElement instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalReferenceElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -872,7 +592,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "KindOrDefault.default.json"));
@@ -881,25 +601,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ReferenceElement_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            Aas.ReferenceElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "CategoryOrDefault.non-default.json"));
@@ -908,25 +618,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ReferenceElement_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            Aas.ReferenceElement instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalReferenceElement());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "ReferenceElement",
                     "CategoryOrDefault.default.json"));
@@ -935,18 +635,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Blob_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            Aas.Blob instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteBlob());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -956,7 +646,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Blob",
                     "KindOrDefault.non-default.json"));
@@ -965,18 +655,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Blob_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            Aas.Blob instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalBlob());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -986,7 +666,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Blob",
                     "KindOrDefault.default.json"));
@@ -995,25 +675,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Blob_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            Aas.Blob instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteBlob());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Blob",
                     "CategoryOrDefault.non-default.json"));
@@ -1022,25 +692,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Blob_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            Aas.Blob instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalBlob());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Blob",
                     "CategoryOrDefault.default.json"));
@@ -1049,18 +709,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_File_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            Aas.File instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteFile());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1070,7 +720,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "File",
                     "KindOrDefault.non-default.json"));
@@ -1079,18 +729,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_File_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            Aas.File instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalFile());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1100,7 +740,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "File",
                     "KindOrDefault.default.json"));
@@ -1109,25 +749,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_File_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            Aas.File instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteFile());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "File",
                     "CategoryOrDefault.non-default.json"));
@@ -1136,25 +766,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_File_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            Aas.File instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalFile());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "File",
                     "CategoryOrDefault.default.json"));
@@ -1163,18 +783,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_AnnotatedRelationshipElement_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            Aas.AnnotatedRelationshipElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1184,7 +794,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "AnnotatedRelationshipElement",
                     "KindOrDefault.non-default.json"));
@@ -1193,18 +803,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_AnnotatedRelationshipElement_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            Aas.AnnotatedRelationshipElement instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalAnnotatedRelationshipElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1214,7 +814,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "AnnotatedRelationshipElement",
                     "KindOrDefault.default.json"));
@@ -1223,18 +823,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Entity_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            Aas.Entity instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEntity());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1244,7 +834,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Entity",
                     "KindOrDefault.non-default.json"));
@@ -1253,18 +843,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Entity_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            Aas.Entity instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalEntity());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1274,7 +854,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Entity",
                     "KindOrDefault.default.json"));
@@ -1283,18 +863,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_BasicEventElement_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            Aas.BasicEventElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1304,7 +874,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "BasicEventElement",
                     "KindOrDefault.non-default.json"));
@@ -1313,18 +883,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_BasicEventElement_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            Aas.BasicEventElement instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalBasicEventElement());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1334,7 +894,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "BasicEventElement",
                     "KindOrDefault.default.json"));
@@ -1343,18 +903,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Operation_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            Aas.Operation instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteOperation());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1364,7 +914,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Operation",
                     "KindOrDefault.non-default.json"));
@@ -1373,18 +923,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Operation_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            Aas.Operation instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalOperation());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1394,7 +934,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Operation",
                     "KindOrDefault.default.json"));
@@ -1403,18 +943,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Capability_KindOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            Aas.Capability instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteCapability());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1424,7 +954,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Capability",
                     "KindOrDefault.non-default.json"));
@@ -1433,18 +963,8 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Capability_KindOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            Aas.Capability instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalCapability());
 
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
@@ -1454,7 +974,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "Capability",
                     "KindOrDefault.default.json"));
@@ -1463,25 +983,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ConceptDescription_CategoryOrDefault_non_default()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            Aas.ConceptDescription instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteConceptDescription());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "ConceptDescription",
                     "CategoryOrDefault.non-default.json"));
@@ -1490,25 +1000,15 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ConceptDescription_CategoryOrDefault_default()
         {
-            string pathToMinimalExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "minimal.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToMinimalExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            Aas.ConceptDescription instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalConceptDescription());
 
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
                 value,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
                     "ConceptDescription",
                     "CategoryOrDefault.default.json"));

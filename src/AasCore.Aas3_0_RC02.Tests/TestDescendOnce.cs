@@ -77,23 +77,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Extension()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Extension",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
-                container);
+            Aas.Extension instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteExtension());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Extension",
                     "complete.json.trace"));
@@ -102,23 +92,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_AdministrativeInformation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AdministrativeInformation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AdministrativeInformation>(
-                container);
+            Aas.AdministrativeInformation instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteAdministrativeInformation());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "AdministrativeInformation",
                     "complete.json.trace"));
@@ -127,23 +107,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Qualifier()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Qualifier",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
-                container);
+            Aas.Qualifier instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteQualifier());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Qualifier",
                     "complete.json.trace"));
@@ -152,23 +122,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_AssetAdministrationShell()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            Aas.AssetAdministrationShell instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "AssetAdministrationShell",
                     "complete.json.trace"));
@@ -177,23 +137,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_AssetInformation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetInformation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetInformation>(
-                container);
+            Aas.AssetInformation instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteAssetInformation());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "AssetInformation",
                     "complete.json.trace"));
@@ -202,23 +152,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Resource()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Resource",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Resource>(
-                container);
+            Aas.Resource instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteResource());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Resource",
                     "complete.json.trace"));
@@ -227,23 +167,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SpecificAssetId()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SpecificAssetId",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SpecificAssetId>(
-                container);
+            Aas.SpecificAssetId instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSpecificAssetId());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "SpecificAssetId",
                     "complete.json.trace"));
@@ -252,23 +182,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Submodel()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            Aas.Submodel instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodel());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Submodel",
                     "complete.json.trace"));
@@ -277,23 +197,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_RelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            Aas.RelationshipElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "RelationshipElement",
                     "complete.json.trace"));
@@ -302,23 +212,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementList()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            Aas.SubmodelElementList instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "SubmodelElementList",
                     "complete.json.trace"));
@@ -327,23 +227,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_SubmodelElementCollection()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            Aas.SubmodelElementCollection instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "SubmodelElementCollection",
                     "complete.json.trace"));
@@ -352,23 +242,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Property()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            Aas.Property instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteProperty());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Property",
                     "complete.json.trace"));
@@ -377,23 +257,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_MultiLanguageProperty()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            Aas.MultiLanguageProperty instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "MultiLanguageProperty",
                     "complete.json.trace"));
@@ -402,23 +272,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Range()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            Aas.Range instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteRange());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Range",
                     "complete.json.trace"));
@@ -427,23 +287,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ReferenceElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            Aas.ReferenceElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "ReferenceElement",
                     "complete.json.trace"));
@@ -452,23 +302,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Blob()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            Aas.Blob instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteBlob());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Blob",
                     "complete.json.trace"));
@@ -477,23 +317,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_File()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            Aas.File instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteFile());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "File",
                     "complete.json.trace"));
@@ -502,23 +332,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_AnnotatedRelationshipElement()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            Aas.AnnotatedRelationshipElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "AnnotatedRelationshipElement",
                     "complete.json.trace"));
@@ -527,48 +347,43 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Entity()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            Aas.Entity instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEntity());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Entity",
                     "complete.json.trace"));
         }  // public void Test_Entity
 
         [Test]
-        public void Test_BasicEventElement()
+        public void Test_EventPayload()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            Aas.EventPayload instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEventPayload());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "EventPayload",
+                    "complete.json.trace"));
+        }  // public void Test_EventPayload
+
+        [Test]
+        public void Test_BasicEventElement()
+        {
+            Aas.BasicEventElement instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "BasicEventElement",
                     "complete.json.trace"));
@@ -577,23 +392,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Operation()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            Aas.Operation instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteOperation());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Operation",
                     "complete.json.trace"));
@@ -602,23 +407,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_OperationVariable()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "OperationVariable",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.OperationVariable>(
-                container);
+            Aas.OperationVariable instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteOperationVariable());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "OperationVariable",
                     "complete.json.trace"));
@@ -627,23 +422,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Capability()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            Aas.Capability instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteCapability());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Capability",
                     "complete.json.trace"));
@@ -652,23 +437,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_ConceptDescription()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            Aas.ConceptDescription instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteConceptDescription());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "ConceptDescription",
                     "complete.json.trace"));
@@ -677,23 +452,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Reference()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Reference",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Reference>(
-                container);
+            Aas.Reference instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteReference());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Reference",
                     "complete.json.trace"));
@@ -702,23 +467,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Key()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Key",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Key>(
-                container);
+            Aas.Key instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteKey());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Key",
                     "complete.json.trace"));
@@ -727,23 +482,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_LangString()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "LangString",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.LangString>(
-                container);
+            Aas.LangString instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteLangString());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "LangString",
                     "complete.json.trace"));
@@ -752,23 +497,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_LangStringSet()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "LangStringSet",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
-                container);
+            Aas.LangStringSet instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteLangStringSet());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "LangStringSet",
                     "complete.json.trace"));
@@ -777,23 +512,13 @@ namespace AasCore.Aas3_0_RC02.Tests
         [Test]
         public void Test_Environment()
         {
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Environment",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Environment>(
-                container);
+            Aas.Environment instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEnvironment());
 
             CompareOrRerecordTrace(
                 instance,
                 Path.Combine(
-                    Aas.Tests.Common.OurTestResourceDir,
+                    Aas.Tests.Common.TestDataDir,
                     "DescendOnce",
                     "Environment",
                     "complete.json.trace"));

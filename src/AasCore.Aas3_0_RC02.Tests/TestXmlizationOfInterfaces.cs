@@ -3,8 +3,6 @@
  * Do NOT edit or append.
  */
 
-using Path = System.IO.Path;
-
 using NUnit.Framework;  // can't alias
 
 using Aas = AasCore.Aas3_0_RC02;  // renamed
@@ -18,18 +16,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -93,18 +80,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -168,18 +144,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -243,18 +208,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -318,18 +272,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -393,18 +336,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -468,18 +400,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -543,18 +464,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -618,18 +528,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -693,18 +592,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -768,18 +656,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -843,18 +720,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -918,18 +784,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -993,18 +848,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1068,18 +912,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1143,18 +976,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1218,18 +1040,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1293,18 +1104,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1368,18 +1168,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1443,18 +1232,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1518,18 +1296,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1593,18 +1360,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1668,18 +1424,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1743,18 +1488,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1818,18 +1552,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1893,18 +1616,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -1968,18 +1680,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2043,18 +1744,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2118,18 +1808,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2193,18 +1872,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2268,18 +1936,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2343,18 +2000,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2418,18 +2064,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2493,18 +2128,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2568,18 +2192,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2643,18 +2256,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2718,18 +2320,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2793,18 +2384,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2868,18 +2448,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -2943,18 +2512,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3018,18 +2576,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3093,18 +2640,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3168,18 +2704,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3243,18 +2768,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3318,18 +2832,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3393,18 +2896,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3468,18 +2960,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3543,18 +3024,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3618,18 +3088,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3693,18 +3152,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3768,18 +3216,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3843,18 +3280,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3918,18 +3344,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -3993,18 +3408,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4068,18 +3472,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4143,18 +3536,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4218,18 +3600,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4293,18 +3664,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4368,18 +3728,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4443,18 +3792,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4518,18 +3856,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4593,18 +3920,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4668,18 +3984,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4743,18 +4048,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4818,18 +4112,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4893,18 +4176,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -4968,18 +4240,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5043,18 +4304,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5118,18 +4368,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5193,18 +4432,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AssetAdministrationShell",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5268,18 +4496,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5343,18 +4560,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5418,18 +4624,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5493,18 +4688,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ConceptDescription",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5568,18 +4752,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5643,18 +4816,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5718,18 +4880,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5793,18 +4944,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5868,18 +5008,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -5943,18 +5072,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6018,18 +5136,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6093,18 +5200,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6168,18 +5264,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6243,18 +5328,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6318,18 +5392,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6393,18 +5456,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6468,18 +5520,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6543,18 +5584,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6618,18 +5648,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6693,18 +5712,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6768,18 +5776,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6843,18 +5840,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6918,18 +5904,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -6993,18 +5968,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7068,18 +6032,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7143,18 +6096,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7218,18 +6160,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Submodel",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7293,18 +6224,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7368,18 +6288,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7443,18 +6352,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7518,18 +6416,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7593,18 +6480,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7668,18 +6544,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7743,18 +6608,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Capability",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7818,18 +6672,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Entity",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7893,18 +6736,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -7968,18 +6800,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8043,18 +6864,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Operation",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8118,18 +6928,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8193,18 +6992,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8268,18 +7056,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8343,18 +7120,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementCollection",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8418,18 +7184,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "SubmodelElementList",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8493,18 +7248,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "AnnotatedRelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8568,18 +7312,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "RelationshipElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8643,18 +7376,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Blob",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8718,18 +7440,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "File",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8793,18 +7504,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "MultiLanguageProperty",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8868,18 +7568,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Property",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -8943,18 +7632,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "Range",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9018,18 +7696,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "ReferenceElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
@@ -9093,18 +7760,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
-            string pathToCompleteExample = Path.Combine(
-                Aas.Tests.Common.OurTestResourceDir,
-                "Json",
-                "Expected",
-                "BasicEventElement",
-                "complete.json");
-
-            var container = Aas.Tests.CommonJson.LoadInstance(
-                pathToCompleteExample);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();

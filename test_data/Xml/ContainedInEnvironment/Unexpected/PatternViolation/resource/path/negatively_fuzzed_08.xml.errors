@@ -1,0 +1,2 @@
+assetAdministrationShells[0].assetInformation.defaultThumbnail.path: Invariant violated:
+Verification.MatchesRfc8089Path(that)
