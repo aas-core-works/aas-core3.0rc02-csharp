@@ -1,2 +1,2 @@
-aas-core-meta==2022.6.21
+aas-core-meta@git+https://github.com/aas-core-works/aas-core-meta@11edba5#egg=aas-core-meta
 aas-core-codegen==0.0.15

@@ -143,8 +143,8 @@ private static void CompareOrRerecordTrace(
 
         string expected = System.IO.File.ReadAllText(expectedPath);
         Assert.AreEqual(
-            expected,
-            got,
+            expected.Replace("\\r\\n", "\\n"),
+            got.Replace("\\r\\n", "\\n"),
             $"The expected trace from {expectedPath} does not match the actual one");
     }
 }"""

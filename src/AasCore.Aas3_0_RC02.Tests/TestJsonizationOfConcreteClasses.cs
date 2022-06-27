@@ -93,8 +93,8 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                     string expected = System.IO.File.ReadAllText(exceptionPath);
                     Assert.AreEqual(
-                        expected,
-                        got,
+                        expected.Replace("\r\n", "\n"),
+                        got.Replace("\r\n", "\n"),
                         $"The expected exception does not match the actual one for the file {path}");
                 }
             }
@@ -3466,6 +3466,238 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_LangStringSet_verification_fail
 
         [Test]
+        public void Test_DataSpecificationContent_ok()
+        {
+            var paths = Directory.GetFiles(
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "ContainedInEnvironment",
+                    "Expected",
+                    "DataSpecificationContent"
+                ),
+                "*.json",
+                System.IO.SearchOption.AllDirectories).ToList();
+            paths.Sort();
+
+            foreach (var path in paths)
+            {
+                var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    node);
+
+                var errors = Aas.Verification.Verify(container).ToList();
+                Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
+
+                AssertSerializeDeserializeEqualsOriginal(
+                    node, container, path);
+            }
+        }  // public void Test_DataSpecificationContent_ok
+
+        [Test]
+        public void Test_DataSpecificationContent_deserialization_fail()
+        {
+            foreach (string cause in CausesForDeserializationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "DataSpecificationContent");
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecificationContent for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.json",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                    Aas.Jsonization.Exception? exception = null;
+                    try
+                    {
+                        var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                            node);
+                    }
+                    catch (Aas.Jsonization.Exception observedException)
+                    {
+                        exception = observedException;
+                    }
+
+                    AssertEqualsExpectedOrRerecordDeserializationException(
+                        exception, path);
+                }
+            }
+        }  // public void Test_DataSpecificationContent_deserialization_fail
+
+        [Test]
+        public void Test_DataSpecificationContent_verification_fail()
+        {
+            foreach (string cause in Aas.Tests.Common.CausesForVerificationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "DataSpecificationContent"
+                );
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecificationContent for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.json",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                    var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                        node);
+
+                    var errors = Aas.Verification.Verify(container).ToList();
+                    Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
+                        errors, path);
+                }
+            }
+        }  // public void Test_DataSpecificationContent_verification_fail
+
+        [Test]
+        public void Test_DataSpecification_ok()
+        {
+            var paths = Directory.GetFiles(
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "ContainedInEnvironment",
+                    "Expected",
+                    "DataSpecification"
+                ),
+                "*.json",
+                System.IO.SearchOption.AllDirectories).ToList();
+            paths.Sort();
+
+            foreach (var path in paths)
+            {
+                var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    node);
+
+                var errors = Aas.Verification.Verify(container).ToList();
+                Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
+
+                AssertSerializeDeserializeEqualsOriginal(
+                    node, container, path);
+            }
+        }  // public void Test_DataSpecification_ok
+
+        [Test]
+        public void Test_DataSpecification_deserialization_fail()
+        {
+            foreach (string cause in CausesForDeserializationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "DataSpecification");
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecification for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.json",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                    Aas.Jsonization.Exception? exception = null;
+                    try
+                    {
+                        var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                            node);
+                    }
+                    catch (Aas.Jsonization.Exception observedException)
+                    {
+                        exception = observedException;
+                    }
+
+                    AssertEqualsExpectedOrRerecordDeserializationException(
+                        exception, path);
+                }
+            }
+        }  // public void Test_DataSpecification_deserialization_fail
+
+        [Test]
+        public void Test_DataSpecification_verification_fail()
+        {
+            foreach (string cause in Aas.Tests.Common.CausesForVerificationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "DataSpecification"
+                );
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecification for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.json",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                    var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                        node);
+
+                    var errors = Aas.Verification.Verify(container).ToList();
+                    Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
+                        errors, path);
+                }
+            }
+        }  // public void Test_DataSpecification_verification_fail
+
+        [Test]
         public void Test_Environment_ok()
         {
             var paths = Directory.GetFiles(
@@ -3581,7 +3813,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 }
             }
         }  // public void Test_Environment_verification_fail
-    }  // class TestDescendOnce
+    }  // class TestJsonizationOfConcreteClasses
 }  // namespace AasCore.Aas3_0_RC02.Tests
 
 /*

@@ -123,8 +123,8 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 string expected = System.IO.File.ReadAllText(expectedPath);
                 Assert.AreEqual(
-                    expected,
-                    got,
+                    expected.Replace("\r\n", "\n"),
+                    got.Replace("\r\n", "\n"),
                     $"The expected trace from {expectedPath} does not match the actual one");
             }
         }
@@ -853,6 +853,56 @@ namespace AasCore.Aas3_0_RC02.Tests
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_LangStringSet
+
+        [Test]
+        public void Test_Descend_of_DataSpecificationContent()
+        {
+            Aas.DataSpecificationContent instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "DataSpecificationContent",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_DataSpecificationContent
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_DataSpecificationContent()
+        {
+            Aas.DataSpecificationContent instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_DataSpecificationContent
+
+        [Test]
+        public void Test_Descend_of_DataSpecification()
+        {
+            Aas.DataSpecification instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "DataSpecification",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_DataSpecification
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_DataSpecification()
+        {
+            Aas.DataSpecification instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_DataSpecification
 
         [Test]
         public void Test_Descend_of_Environment()

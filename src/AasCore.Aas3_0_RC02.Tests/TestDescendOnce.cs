@@ -68,8 +68,8 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 string expected = System.IO.File.ReadAllText(expectedPath);
                 Assert.AreEqual(
-                    expected,
-                    got,
+                    expected.Replace("\r\n", "\n"),
+                    got.Replace("\r\n", "\n"),
                     $"The expected trace from {expectedPath} does not match the actual one");
             }
         }
@@ -508,6 +508,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     "LangStringSet",
                     "complete.json.trace"));
         }  // public void Test_LangStringSet
+
+        [Test]
+        public void Test_DataSpecificationContent()
+        {
+            Aas.DataSpecificationContent instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "DataSpecificationContent",
+                    "complete.json.trace"));
+        }  // public void Test_DataSpecificationContent
+
+        [Test]
+        public void Test_DataSpecification()
+        {
+            Aas.DataSpecification instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "DataSpecification",
+                    "complete.json.trace"));
+        }  // public void Test_DataSpecification
 
         [Test]
         public void Test_Environment()

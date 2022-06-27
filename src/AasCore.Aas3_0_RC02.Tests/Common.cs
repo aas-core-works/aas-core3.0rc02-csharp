@@ -106,8 +106,8 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 string expected = System.IO.File.ReadAllText(errorsPath);
                 Assert.AreEqual(
-                    expected,
-                    got,
+                    expected.Replace("\r\n", "\n"),
+                    got.Replace("\r\n", "\n"),
                     $"The expected verification errors do not match the actual ones for the file {path}");
             }
         }
