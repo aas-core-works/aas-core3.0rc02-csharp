@@ -1,0 +1,6 @@
+submodels[0].submodelElements[0]: Invariant violated:
+!(that.Max != null)
+|| Verification.ValueConsistentWithXsdType(that.Max, that.ValueType);
+submodels[0].submodelElements[0]: Invariant violated:
+!(that.Min != null)
+|| Verification.ValueConsistentWithXsdType(that.Min, that.ValueType)
