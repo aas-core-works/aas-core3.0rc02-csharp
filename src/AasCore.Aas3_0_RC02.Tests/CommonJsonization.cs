@@ -1226,6 +1226,90 @@ namespace AasCore.Aas3_0_RC02.Tests
             return instance;
         }  // public static Aas.LangStringSet LoadMinimalLangStringSet
 
+        public static Aas.DataSpecificationContent LoadCompleteDataSpecificationContent()
+        {
+            string path = Path.Combine(
+                Aas.Tests.Common.TestDataDir,
+                "Json",
+                "ContainedInEnvironment",
+                "Expected",
+                "DataSpecificationContent",
+                "complete.json");
+
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+               node);
+
+            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecificationContent>(
+                container);
+
+            return instance;
+        }  // public static Aas.DataSpecificationContent LoadCompleteDataSpecificationContent
+
+        public static Aas.DataSpecificationContent LoadMinimalDataSpecificationContent()
+        {
+            string path = Path.Combine(
+                Aas.Tests.Common.TestDataDir,
+                "Json",
+                "ContainedInEnvironment",
+                "Expected",
+                "DataSpecificationContent",
+                "minimal.json");
+
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+               node);
+
+            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecificationContent>(
+                container);
+
+            return instance;
+        }  // public static Aas.DataSpecificationContent LoadMinimalDataSpecificationContent
+
+        public static Aas.DataSpecification LoadCompleteDataSpecification()
+        {
+            string path = Path.Combine(
+                Aas.Tests.Common.TestDataDir,
+                "Json",
+                "ContainedInEnvironment",
+                "Expected",
+                "DataSpecification",
+                "complete.json");
+
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+               node);
+
+            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecification>(
+                container);
+
+            return instance;
+        }  // public static Aas.DataSpecification LoadCompleteDataSpecification
+
+        public static Aas.DataSpecification LoadMinimalDataSpecification()
+        {
+            string path = Path.Combine(
+                Aas.Tests.Common.TestDataDir,
+                "Json",
+                "ContainedInEnvironment",
+                "Expected",
+                "DataSpecification",
+                "minimal.json");
+
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+               node);
+
+            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecification>(
+                container);
+
+            return instance;
+        }  // public static Aas.DataSpecification LoadMinimalDataSpecification
+
         public static Aas.Environment LoadCompleteEnvironment()
         {
             string path = Path.Combine(

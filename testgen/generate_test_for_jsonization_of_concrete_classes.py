@@ -401,8 +401,8 @@ private static void AssertEqualsExpectedOrRerecordDeserializationException(
 
             string expected = System.IO.File.ReadAllText(exceptionPath);
             Assert.AreEqual(
-                expected,
-                got,
+                expected.Replace("\\r\\n", "\\n"),
+                got.Replace("\\r\\n", "\\n"),
                 $"The expected exception does not match the actual one for the file {path}");
         }
     }

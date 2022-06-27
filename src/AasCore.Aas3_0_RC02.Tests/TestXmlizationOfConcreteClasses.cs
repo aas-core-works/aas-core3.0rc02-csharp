@@ -168,8 +168,8 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                     string expected = System.IO.File.ReadAllText(exceptionPath);
                     Assert.AreEqual(
-                        expected,
-                        got,
+                        expected.Replace("\r\n", "\n"),
+                        got.Replace("\r\n", "\n"),
                         $"The expected exception does not match the actual one for the file {path}");
                 }
             }
@@ -3568,6 +3568,240 @@ namespace AasCore.Aas3_0_RC02.Tests
                 }
             }
         }  // public void Test_LangStringSet_verification_fail
+
+        [Test]
+        public void Test_DataSpecificationContent_ok()
+        {
+            var paths = Directory.GetFiles(
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Xml",
+                    "ContainedInEnvironment",
+                    "Expected",
+                    "dataSpecificationContent"
+                ),
+                "*.xml",
+                System.IO.SearchOption.AllDirectories).ToList();
+            paths.Sort();
+
+            foreach (var path in paths)
+            {
+                using var xmlReader = System.Xml.XmlReader.Create(path);
+
+                var container = Aas.Xmlization.Deserialize.EnvironmentFrom(
+                    xmlReader);
+
+                var errors = Aas.Verification.Verify(container).ToList();
+                Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
+
+                AssertSerializeDeserializeEqualsOriginal(
+                    container, path);
+            }
+        }  // public void Test_DataSpecificationContent_ok
+
+        [Test]
+        public void Test_DataSpecificationContent_deserialization_fail()
+        {
+            foreach (string cause in CausesForDeserializationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Xml",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "dataSpecificationContent");
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecificationContent for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.xml",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    using var xmlReader = System.Xml.XmlReader.Create(path);
+
+                    Aas.Xmlization.Exception? exception = null;
+
+                    try
+                    {
+                        _ = Aas.Xmlization.Deserialize.EnvironmentFrom(
+                            xmlReader);
+                    }
+                    catch (Aas.Xmlization.Exception observedException)
+                    {
+                        exception = observedException;
+                    }
+
+                    AssertEqualsExpectedOrRerecordDeserializationException(
+                        exception, path);
+                }
+            }
+        }  // public void Test_DataSpecificationContent_deserialization_fail
+
+        [Test]
+        public void Test_DataSpecificationContent_verification_fail()
+        {
+            foreach (string cause in Aas.Tests.Common.CausesForVerificationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Xml",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "dataSpecificationContent"
+                );
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecificationContent for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.xml",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    using var xmlReader = System.Xml.XmlReader.Create(path);
+
+                    var container = Aas.Xmlization.Deserialize.EnvironmentFrom(
+                        xmlReader);
+
+                    var errors = Aas.Verification.Verify(container).ToList();
+                    Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
+                        errors, path);
+                }
+            }
+        }  // public void Test_DataSpecificationContent_verification_fail
+
+        [Test]
+        public void Test_DataSpecification_ok()
+        {
+            var paths = Directory.GetFiles(
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Xml",
+                    "ContainedInEnvironment",
+                    "Expected",
+                    "dataSpecification"
+                ),
+                "*.xml",
+                System.IO.SearchOption.AllDirectories).ToList();
+            paths.Sort();
+
+            foreach (var path in paths)
+            {
+                using var xmlReader = System.Xml.XmlReader.Create(path);
+
+                var container = Aas.Xmlization.Deserialize.EnvironmentFrom(
+                    xmlReader);
+
+                var errors = Aas.Verification.Verify(container).ToList();
+                Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
+
+                AssertSerializeDeserializeEqualsOriginal(
+                    container, path);
+            }
+        }  // public void Test_DataSpecification_ok
+
+        [Test]
+        public void Test_DataSpecification_deserialization_fail()
+        {
+            foreach (string cause in CausesForDeserializationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Xml",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "dataSpecification");
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecification for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.xml",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    using var xmlReader = System.Xml.XmlReader.Create(path);
+
+                    Aas.Xmlization.Exception? exception = null;
+
+                    try
+                    {
+                        _ = Aas.Xmlization.Deserialize.EnvironmentFrom(
+                            xmlReader);
+                    }
+                    catch (Aas.Xmlization.Exception observedException)
+                    {
+                        exception = observedException;
+                    }
+
+                    AssertEqualsExpectedOrRerecordDeserializationException(
+                        exception, path);
+                }
+            }
+        }  // public void Test_DataSpecification_deserialization_fail
+
+        [Test]
+        public void Test_DataSpecification_verification_fail()
+        {
+            foreach (string cause in Aas.Tests.Common.CausesForVerificationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Xml",
+                    "ContainedInEnvironment",
+                    "Unexpected",
+                    cause,
+                    "dataSpecification"
+                );
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecification for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.xml",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    using var xmlReader = System.Xml.XmlReader.Create(path);
+
+                    var container = Aas.Xmlization.Deserialize.EnvironmentFrom(
+                        xmlReader);
+
+                    var errors = Aas.Verification.Verify(container).ToList();
+                    Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
+                        errors, path);
+                }
+            }
+        }  // public void Test_DataSpecification_verification_fail
 
         [Test]
         public void Test_Environment_ok()
