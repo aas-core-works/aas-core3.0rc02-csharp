@@ -7,7 +7,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 {
     /// <summary>
     /// Provide common functionality to be re-used across different tests
-    /// such as reading of environment variables. 
+    /// such as reading of environment variables.
     /// </summary>
     public static class Common
     {
