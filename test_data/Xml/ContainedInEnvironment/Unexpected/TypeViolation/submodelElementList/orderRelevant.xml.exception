@@ -1,7 +1,1 @@
-The property OrderRelevant of an instance of class SubmodelElementList could not be de-serialized: System.Xml.XmlException: Content cannot be converted to the type Boolean. Line 71, position 8.
- ---> System.FormatException: The string '' is not a valid Boolean value.
-   at System.Xml.XmlConvert.ToBoolean(String s)
-   at System.Xml.XmlReader.ReadContentAsBoolean()
-   --- End of inner exception stack trace ---
-   at System.Xml.XmlReader.ReadContentAsBoolean()
-   at AasCore.Aas3_0_RC02.Xmlization.DeserializeImplementation.SubmodelElementListFromSequence(XmlReader reader, Boolean isEmptySequence, String ns, Error& error) in C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\src\AasCore.Aas3_0_RC02\xmlization.cs:line 5472 at: *[0]/*[0]/orderRelevant
+The property OrderRelevant of an instance of class SubmodelElementList could not be de-serialized: Content cannot be converted to the type Boolean. Line 71, position 8. at: *[0]/*[0]/orderRelevant

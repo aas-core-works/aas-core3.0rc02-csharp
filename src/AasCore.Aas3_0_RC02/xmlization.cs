@@ -102,7 +102,7 @@ namespace AasCore.Aas3_0_RC02
                         error = new Reporting.Error(
                             $"Expected an element within a namespace {ns}, " +
                             $"but got: {reader.NamespaceURI}");
-                        return "";
+                            return "";
                     }
                     return reader.LocalName;
                 }
@@ -258,201 +258,201 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "name":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theName = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Name of an instance of class Extension, " +
-                                                "but reached the end-of-file");
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theName = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Name of an instance of class Extension " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "name"));
-                                                return null;
-                                            }
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
-                                            throw;
-                                        }
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
-                            case "valueType":
+                                break;
+                            }
+                            case "name":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theName = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
                                         error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Extension " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
+                                            "Expected an XML content representing " +
+                                            "the property Name of an instance of class Extension, " +
+                                            "but reached the end-of-file");
                                         return null;
                                     }
 
-                                    if (reader.EOF)
+                                    try
                                     {
+                                        theName = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Name of an instance of class Extension " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "name"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "valueType":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Extension " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property ValueType of an instance of class Extension, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textValueType;
+                                try
+                                {
+                                    textValueType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Extension " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+
+                                theValueType = Stringification.DataTypeDefXsdFromString(
+                                    textValueType);
+
+                                if (theValueType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Extension " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textValueType);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theValue = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class Extension, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textValueType;
                                     try
                                     {
-                                        textValueType = reader.ReadContentAsString();
+                                        theValue = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Extension " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-
-                                    theValueType = Stringification.DataTypeDefXsdFromString(
-                                        textValueType);
-
-                                    if (theValueType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Extension " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textValueType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theValue = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class Extension, " +
-                                                "but reached the end-of-file");
+                                                "The property Value of an instance of class Extension " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theValue = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class Extension " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "refersTo":
-                                {
-                                    theRefersTo = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theRefersTo = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "refersTo"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "refersTo"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Extension, " +
@@ -1115,118 +1115,118 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "dataSpecifications":
-                                {
-                                    theDataSpecifications = new List<Reference>();
+                            {
+                                theDataSpecifications = new List<Reference>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
+                                        }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "version":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theVersion = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theVersion = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Version of an instance of class AdministrativeInformation, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theVersion = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Version of an instance of class AdministrativeInformation, " +
-                                                "but reached the end-of-file");
+                                                "The property Version of an instance of class AdministrativeInformation " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "version"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theVersion = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Version of an instance of class AdministrativeInformation " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "version"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "revision":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theRevision = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theRevision = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Revision of an instance of class AdministrativeInformation, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theRevision = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Revision of an instance of class AdministrativeInformation, " +
-                                                "but reached the end-of-file");
+                                                "The property Revision of an instance of class AdministrativeInformation " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "revision"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theRevision = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Revision of an instance of class AdministrativeInformation " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "revision"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class AdministrativeInformation, " +
@@ -1535,256 +1535,256 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "kind":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Qualifier " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Qualifier " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Qualifier, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Qualifier " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                theKind = Stringification.QualifierKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Qualifier " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textKind);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "type":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theType = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Type of an instance of class Qualifier, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textKind;
                                     try
                                     {
-                                        textKind = reader.ReadContentAsString();
+                                        theType = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Qualifier " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
-                                    theKind = Stringification.QualifierKindFromString(
-                                        textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Qualifier " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "type":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theType = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Type of an instance of class Qualifier, " +
-                                                "but reached the end-of-file");
+                                                "The property Type of an instance of class Qualifier " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "type"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theType = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Type of an instance of class Qualifier " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "type"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "valueType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Qualifier " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Qualifier " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property ValueType of an instance of class Qualifier, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textValueType;
+                                try
+                                {
+                                    textValueType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Qualifier " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+
+                                theValueType = Stringification.DataTypeDefXsdFromString(
+                                    textValueType);
+
+                                if (theValueType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Qualifier " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textValueType);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theValue = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class Qualifier, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textValueType;
                                     try
                                     {
-                                        textValueType = reader.ReadContentAsString();
+                                        theValue = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Qualifier " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-
-                                    theValueType = Stringification.DataTypeDefXsdFromString(
-                                        textValueType);
-
-                                    if (theValueType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Qualifier " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textValueType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theValue = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class Qualifier, " +
-                                                "but reached the end-of-file");
+                                                "The property Value of an instance of class Qualifier " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theValue = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class Qualifier " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "valueId":
-                                {
-                                    theValueId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theValueId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Qualifier, " +
@@ -2032,334 +2032,334 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
+                            {
+                                theExtensions = new List<Extension>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theExtensions = new List<Extension>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
 
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
                                         }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theCategory = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theCategory = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class AssetAdministrationShell, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class AssetAdministrationShell, " +
-                                                "but reached the end-of-file");
+                                                "The property Category of an instance of class AssetAdministrationShell " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class AssetAdministrationShell " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "idShort":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theIdShort = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class AssetAdministrationShell, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class AssetAdministrationShell, " +
-                                                "but reached the end-of-file");
+                                                "The property IdShort of an instance of class AssetAdministrationShell " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class AssetAdministrationShell " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "checksum":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theChecksum = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class AssetAdministrationShell, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class AssetAdministrationShell, " +
-                                                "but reached the end-of-file");
+                                                "The property Checksum of an instance of class AssetAdministrationShell " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class AssetAdministrationShell " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "administration":
-                                {
-                                    theAdministration = AdministrativeInformationFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theAdministration = AdministrativeInformationFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "id":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theId = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "administration"));
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Id of an instance of class AssetAdministrationShell, " +
+                                            "but reached the end-of-file");
                                         return null;
                                     }
-                                    break;
-                                }
-                            case "id":
-                                {
-                                    if (isEmptyProperty)
+
+                                    try
                                     {
-                                        theId = "";
+                                        theId = reader.ReadContentAsString();
                                     }
-                                    else
+                                    catch (System.Exception exception)
                                     {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Id of an instance of class AssetAdministrationShell, " +
-                                                "but reached the end-of-file");
+                                                "The property Id of an instance of class AssetAdministrationShell " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "id"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theId = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Id of an instance of class AssetAdministrationShell " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "id"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "derivedFrom":
-                                {
-                                    theDerivedFrom = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDerivedFrom = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "derivedFrom"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "derivedFrom"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "assetInformation":
-                                {
-                                    theAssetInformation = AssetInformationFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theAssetInformation = AssetInformationFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "assetInformation"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "assetInformation"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "submodels":
+                            {
+                                theSubmodels = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSubmodels = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSubmodels = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSubmodels = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSubmodels));
-                                                return null;
-                                            }
-
-                                            theSubmodels.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSubmodels++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSubmodels));
+                                            return null;
                                         }
+
+                                        theSubmodels.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSubmodels++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class AssetAdministrationShell, " +
@@ -2604,121 +2604,121 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "assetKind":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property AssetKind of an instance of class AssetInformation " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "assetKind"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property AssetKind of an instance of class AssetInformation " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "assetKind"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property AssetKind of an instance of class AssetInformation, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textAssetKind;
-                                    try
-                                    {
-                                        textAssetKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property AssetKind of an instance of class AssetInformation " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "assetKind"));
-                                        return null;
-                                    }
+                                string textAssetKind;
+                                try
+                                {
+                                    textAssetKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property AssetKind of an instance of class AssetInformation " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "assetKind"));
+                                    return null;
+                                }
 
-                                    theAssetKind = Stringification.AssetKindFromString(
+                                theAssetKind = Stringification.AssetKindFromString(
+                                    textAssetKind);
+
+                                if (theAssetKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property AssetKind of an instance of class AssetInformation " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textAssetKind);
-
-                                    if (theAssetKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property AssetKind of an instance of class AssetInformation " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textAssetKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "assetKind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "assetKind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "globalAssetId":
-                                {
-                                    theGlobalAssetId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theGlobalAssetId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "globalAssetId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "globalAssetId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "specificAssetIds":
+                            {
+                                theSpecificAssetIds = new List<SpecificAssetId>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSpecificAssetIds = new List<SpecificAssetId>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSpecificAssetIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        SpecificAssetId? item = SpecificAssetIdFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSpecificAssetIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            SpecificAssetId? item = SpecificAssetIdFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSpecificAssetIds));
-                                                return null;
-                                            }
-
-                                            theSpecificAssetIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSpecificAssetIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSpecificAssetIds));
+                                            return null;
                                         }
-                                    }
-                                    break;
-                                }
-                            case "defaultThumbnail":
-                                {
-                                    theDefaultThumbnail = ResourceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "defaultThumbnail"));
-                                        return null;
+                                        theSpecificAssetIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSpecificAssetIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
+                            case "defaultThumbnail":
+                            {
+                                theDefaultThumbnail = ResourceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "defaultThumbnail"));
+                                    return null;
+                                }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class AssetInformation, " +
@@ -2943,85 +2943,85 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "path":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    thePath = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        thePath = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Path of an instance of class Resource, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        thePath = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Path of an instance of class Resource, " +
-                                                "but reached the end-of-file");
+                                                "The property Path of an instance of class Resource " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "path"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            thePath = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Path of an instance of class Resource " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "path"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "contentType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theContentType = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theContentType = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property ContentType of an instance of class Resource, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theContentType = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property ContentType of an instance of class Resource, " +
-                                                "but reached the end-of-file");
+                                                "The property ContentType of an instance of class Resource " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "contentType"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theContentType = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property ContentType of an instance of class Resource " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "contentType"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Resource, " +
@@ -3247,146 +3247,146 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
-                                {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
+                                        }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "name":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theName = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Name of an instance of class SpecificAssetId, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theName = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Name of an instance of class SpecificAssetId " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "name"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theName = "";
                                 }
-                            case "value":
+                                else
                                 {
-                                    if (isEmptyProperty)
+                                    if (reader.EOF)
                                     {
-                                        theValue = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class SpecificAssetId, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theValue = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class SpecificAssetId " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "externalSubjectId":
-                                {
-                                    theExternalSubjectId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "externalSubjectId"));
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Name of an instance of class SpecificAssetId, " +
+                                            "but reached the end-of-file");
                                         return null;
                                     }
-                                    break;
+
+                                    try
+                                    {
+                                        theName = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Name of an instance of class SpecificAssetId " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "name"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
                                 }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theValue = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class SpecificAssetId, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theValue = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Value of an instance of class SpecificAssetId " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "externalSubjectId":
+                            {
+                                theExternalSubjectId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "externalSubjectId"));
+                                    return null;
+                                }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class SpecificAssetId, " +
@@ -3644,441 +3644,441 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Submodel, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Submodel " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Submodel, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Submodel " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Submodel, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Submodel " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "administration":
-                                {
-                                    theAdministration = AdministrativeInformationFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "administration"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "id":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theId = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Id of an instance of class Submodel, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theId = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Id of an instance of class Submodel " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "id"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Submodel " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Submodel, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Submodel " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Submodel, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Submodel " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Submodel, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Submodel " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "administration":
+                            {
+                                theAdministration = AdministrativeInformationFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "id":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theId = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Id of an instance of class Submodel, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theId = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Id of an instance of class Submodel " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "id"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Submodel " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Submodel, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Submodel " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Submodel " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Submodel " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Submodel " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "submodelElements":
+                            {
+                                theSubmodelElements = new List<ISubmodelElement>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSubmodelElements = new List<ISubmodelElement>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSubmodelElements = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        ISubmodelElement? item = ISubmodelElementFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSubmodelElements = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            ISubmodelElement? item = ISubmodelElementFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSubmodelElements));
-                                                return null;
-                                            }
-
-                                            theSubmodelElements.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSubmodelElements++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSubmodelElements));
+                                            return null;
                                         }
+
+                                        theSubmodelElements.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSubmodelElements++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Submodel, " +
@@ -4411,382 +4411,382 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class RelationshipElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class RelationshipElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class RelationshipElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class RelationshipElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class RelationshipElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class RelationshipElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class RelationshipElement " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class RelationshipElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class RelationshipElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class RelationshipElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class RelationshipElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class RelationshipElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class RelationshipElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class RelationshipElement " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class RelationshipElement, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class RelationshipElement " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class RelationshipElement " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class RelationshipElement " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class RelationshipElement " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "first":
-                                {
-                                    theFirst = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theFirst = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "first"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "first"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "second":
-                                {
-                                    theSecond = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSecond = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "second"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "second"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class RelationshipElement, " +
@@ -5095,558 +5095,558 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class SubmodelElementList, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class SubmodelElementList " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class SubmodelElementList, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class SubmodelElementList " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class SubmodelElementList, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class SubmodelElementList " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class SubmodelElementList " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class SubmodelElementList, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class SubmodelElementList " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class SubmodelElementList, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class SubmodelElementList " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class SubmodelElementList, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class SubmodelElementList " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class SubmodelElementList " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class SubmodelElementList, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class SubmodelElementList " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class SubmodelElementList " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class SubmodelElementList " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class SubmodelElementList " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "qualifiers":
-                                {
-                                    theQualifiers = new List<Qualifier>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "dataSpecifications":
-                                {
-                                    theDataSpecifications = new List<Reference>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "orderRelevant":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property OrderRelevant of an instance of class SubmodelElementList " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "orderRelevant"));
-                                        return null;
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property OrderRelevant of an instance of class SubmodelElementList, " +
-                                                "but reached the end-of-file");
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theOrderRelevant = reader.ReadContentAsBoolean();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property OrderRelevant of an instance of class SubmodelElementList " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "orderRelevant"));
-                                                return null;
-                                            }
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    theValue = new List<ISubmodelElement>();
-
-                                    if (!isEmptyProperty)
-                                    {
+                                        indexSupplementalSemanticIds++;
                                         SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
 
-                                        int indexValue = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
                                         {
-                                            ISubmodelElement? item = ISubmodelElementFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexValue));
-                                                return null;
-                                            }
-
-                                            theValue.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexValue++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
-                                    }
-                                    break;
-                                }
-                            case "semanticIdListElement":
-                                {
-                                    theSemanticIdListElement = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticIdListElement"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "typeValueListElement":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property TypeValueListElement of an instance of class SubmodelElementList " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "typeValueListElement"));
-                                        return null;
-                                    }
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
 
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
+                                        }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "orderRelevant":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property OrderRelevant of an instance of class SubmodelElementList " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "orderRelevant"));
+                                    return null;
+                                }
+                                else
+                                {
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property OrderRelevant of an instance of class SubmodelElementList, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theOrderRelevant = reader.ReadContentAsBoolean();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property OrderRelevant of an instance of class SubmodelElementList " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "orderRelevant"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                theValue = new List<ISubmodelElement>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexValue = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        ISubmodelElement? item = ISubmodelElementFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexValue));
+                                            return null;
+                                        }
+
+                                        theValue.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexValue++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "semanticIdListElement":
+                            {
+                                theSemanticIdListElement = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticIdListElement"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "typeValueListElement":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property TypeValueListElement of an instance of class SubmodelElementList " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "typeValueListElement"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property TypeValueListElement of an instance of class SubmodelElementList, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
-
-                                    string textTypeValueListElement;
-                                    try
-                                    {
-                                        textTypeValueListElement = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property TypeValueListElement of an instance of class SubmodelElementList " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "typeValueListElement"));
-                                        return null;
-                                    }
-
-                                    theTypeValueListElement = Stringification.AasSubmodelElementsFromString(
-                                        textTypeValueListElement);
-
-                                    if (theTypeValueListElement == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property TypeValueListElement of an instance of class SubmodelElementList " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textTypeValueListElement);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "typeValueListElement"));
-                                        return null;
-                                    }
-                                    break;
                                 }
-                            case "valueTypeListElement":
+
+                                string textTypeValueListElement;
+                                try
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueTypeListElement of an instance of class SubmodelElementList " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueTypeListElement"));
-                                        return null;
-                                    }
+                                    textTypeValueListElement = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property TypeValueListElement of an instance of class SubmodelElementList " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "typeValueListElement"));
+                                    return null;
+                                }
+
+                                theTypeValueListElement = Stringification.AasSubmodelElementsFromString(
+                                    textTypeValueListElement);
+
+                                if (theTypeValueListElement == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property TypeValueListElement of an instance of class SubmodelElementList " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textTypeValueListElement);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "typeValueListElement"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "valueTypeListElement":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueTypeListElement of an instance of class SubmodelElementList " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueTypeListElement"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property ValueTypeListElement of an instance of class SubmodelElementList, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
-
-                                    string textValueTypeListElement;
-                                    try
-                                    {
-                                        textValueTypeListElement = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueTypeListElement of an instance of class SubmodelElementList " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueTypeListElement"));
-                                        return null;
-                                    }
-
-                                    theValueTypeListElement = Stringification.DataTypeDefXsdFromString(
-                                        textValueTypeListElement);
-
-                                    if (theValueTypeListElement == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueTypeListElement of an instance of class SubmodelElementList " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textValueTypeListElement);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueTypeListElement"));
-                                        return null;
-                                    }
-                                    break;
                                 }
+
+                                string textValueTypeListElement;
+                                try
+                                {
+                                    textValueTypeListElement = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueTypeListElement of an instance of class SubmodelElementList " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueTypeListElement"));
+                                    return null;
+                                }
+
+                                theValueTypeListElement = Stringification.DataTypeDefXsdFromString(
+                                    textValueTypeListElement);
+
+                                if (theValueTypeListElement == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueTypeListElement of an instance of class SubmodelElementList " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textValueTypeListElement);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueTypeListElement"));
+                                    return null;
+                                }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class SubmodelElementList, " +
@@ -5893,387 +5893,387 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class SubmodelElementCollection, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class SubmodelElementCollection " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class SubmodelElementCollection, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class SubmodelElementCollection " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class SubmodelElementCollection, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class SubmodelElementCollection " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class SubmodelElementCollection " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class SubmodelElementCollection, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class SubmodelElementCollection " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class SubmodelElementCollection, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class SubmodelElementCollection " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class SubmodelElementCollection, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class SubmodelElementCollection " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class SubmodelElementCollection " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class SubmodelElementCollection, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class SubmodelElementCollection " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class SubmodelElementCollection " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class SubmodelElementCollection " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class SubmodelElementCollection " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "value":
+                            {
+                                theValue = new List<ISubmodelElement>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theValue = new List<ISubmodelElement>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexValue = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        ISubmodelElement? item = ISubmodelElementFromElement(
+                                            reader, ns, out error);
 
-                                        int indexValue = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            ISubmodelElement? item = ISubmodelElementFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexValue));
-                                                return null;
-                                            }
-
-                                            theValue.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexValue++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexValue));
+                                            return null;
                                         }
+
+                                        theValue.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexValue++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class SubmodelElementCollection, " +
@@ -6571,463 +6571,463 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Property, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Property " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Property, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Property " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Property, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Property " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Property " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Property, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Property " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Property, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Property " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Property, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Property " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Property " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Property, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Property " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Property " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Property " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Property " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "valueType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Property " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Property " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property ValueType of an instance of class Property, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textValueType;
+                                try
+                                {
+                                    textValueType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Property " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+
+                                theValueType = Stringification.DataTypeDefXsdFromString(
+                                    textValueType);
+
+                                if (theValueType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Property " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textValueType);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theValue = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class Property, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textValueType;
                                     try
                                     {
-                                        textValueType = reader.ReadContentAsString();
+                                        theValue = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Property " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-
-                                    theValueType = Stringification.DataTypeDefXsdFromString(
-                                        textValueType);
-
-                                    if (theValueType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Property " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textValueType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theValue = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class Property, " +
-                                                "but reached the end-of-file");
+                                                "The property Value of an instance of class Property " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theValue = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class Property " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "valueId":
-                                {
-                                    theValueId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theValueId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Property, " +
@@ -7273,382 +7273,382 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class MultiLanguageProperty, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class MultiLanguageProperty " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class MultiLanguageProperty, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class MultiLanguageProperty " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class MultiLanguageProperty, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class MultiLanguageProperty " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class MultiLanguageProperty " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class MultiLanguageProperty, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class MultiLanguageProperty " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class MultiLanguageProperty, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class MultiLanguageProperty " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class MultiLanguageProperty, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class MultiLanguageProperty " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class MultiLanguageProperty " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class MultiLanguageProperty, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class MultiLanguageProperty " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class MultiLanguageProperty " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class MultiLanguageProperty " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class MultiLanguageProperty " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "value":
-                                {
-                                    theValue = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theValue = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "value"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "valueId":
-                                {
-                                    theValueId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theValueId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class MultiLanguageProperty, " +
@@ -7884,489 +7884,489 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Range, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Range " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Range, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Range " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Range, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Range " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Range " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Range, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Range " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Range, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Range " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Range, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Range " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Range " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Range, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Range " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Range " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Range " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Range " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "valueType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Range " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Range " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property ValueType of an instance of class Range, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textValueType;
+                                try
+                                {
+                                    textValueType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Range " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+
+                                theValueType = Stringification.DataTypeDefXsdFromString(
+                                    textValueType);
+
+                                if (theValueType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property ValueType of an instance of class Range " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textValueType);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "min":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theMin = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Min of an instance of class Range, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textValueType;
                                     try
                                     {
-                                        textValueType = reader.ReadContentAsString();
+                                        theMin = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Range " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-
-                                    theValueType = Stringification.DataTypeDefXsdFromString(
-                                        textValueType);
-
-                                    if (theValueType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property ValueType of an instance of class Range " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textValueType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "valueType"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "min":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theMin = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Min of an instance of class Range, " +
-                                                "but reached the end-of-file");
+                                                "The property Min of an instance of class Range " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "min"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theMin = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Min of an instance of class Range " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "min"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "max":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theMax = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theMax = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Max of an instance of class Range, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theMax = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Max of an instance of class Range, " +
-                                                "but reached the end-of-file");
+                                                "The property Max of an instance of class Range " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "max"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theMax = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Max of an instance of class Range " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "max"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Range, " +
@@ -8611,368 +8611,368 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class ReferenceElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class ReferenceElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class ReferenceElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class ReferenceElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class ReferenceElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class ReferenceElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class ReferenceElement " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class ReferenceElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class ReferenceElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class ReferenceElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class ReferenceElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class ReferenceElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class ReferenceElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class ReferenceElement " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class ReferenceElement, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class ReferenceElement " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class ReferenceElement " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class ReferenceElement " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class ReferenceElement " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    theValue = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "value"));
-                                        return null;
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
+                            case "value":
+                            {
+                                theValue = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class ReferenceElement, " +
@@ -9206,442 +9206,442 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Blob, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Blob " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Blob, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Blob " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Blob, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Blob " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Blob " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Blob, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Blob " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Blob, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Blob " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Blob, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Blob " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Blob " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Blob, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Blob " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Blob " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textKind);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "semanticId":
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
+                                        }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
+                                        }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
+                                        }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Value of an instance of class Blob " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class Blob, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textKind;
                                     try
                                     {
-                                        textKind = reader.ReadContentAsString();
+                                        theValue = DeserializeImplementation.ReadWholeContentAsBase64(
+                                        reader);
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Blob " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
-                                    theKind = Stringification.ModelingKindFromString(
-                                        textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Blob " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "supplementalSemanticIds":
-                                {
-                                    theSupplementalSemanticIds = new List<Reference>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "qualifiers":
-                                {
-                                    theQualifiers = new List<Qualifier>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "dataSpecifications":
-                                {
-                                    theDataSpecifications = new List<Reference>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Value of an instance of class Blob " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "value"));
-                                        return null;
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class Blob, " +
-                                                "but reached the end-of-file");
+                                                "The property Value of an instance of class Blob " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theValue = DeserializeImplementation.ReadWholeContentAsBase64(
-                                            reader);
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class Blob " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "contentType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theContentType = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theContentType = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property ContentType of an instance of class Blob, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theContentType = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property ContentType of an instance of class Blob, " +
-                                                "but reached the end-of-file");
+                                                "The property ContentType of an instance of class Blob " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "contentType"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theContentType = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property ContentType of an instance of class Blob " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "contentType"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Blob, " +
@@ -9886,434 +9886,434 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class File, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class File " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class File, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class File " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class File, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class File " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class File " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class File, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class File " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class File, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class File " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class File, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class File " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class File " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class File, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class File " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class File " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textKind);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "semanticId":
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
+                                        }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
+                                        }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
+                                    {
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
+                                        }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
+                                    }
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theValue = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class File, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textKind;
                                     try
                                     {
-                                        textKind = reader.ReadContentAsString();
+                                        theValue = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class File " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
-                                    theKind = Stringification.ModelingKindFromString(
-                                        textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class File " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "supplementalSemanticIds":
-                                {
-                                    theSupplementalSemanticIds = new List<Reference>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "qualifiers":
-                                {
-                                    theQualifiers = new List<Qualifier>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "dataSpecifications":
-                                {
-                                    theDataSpecifications = new List<Reference>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theValue = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class File, " +
-                                                "but reached the end-of-file");
+                                                "The property Value of an instance of class File " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theValue = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class File " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "contentType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theContentType = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theContentType = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property ContentType of an instance of class File, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theContentType = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property ContentType of an instance of class File, " +
-                                                "but reached the end-of-file");
+                                                "The property ContentType of an instance of class File " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "contentType"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theContentType = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property ContentType of an instance of class File " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "contentType"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class File, " +
@@ -10559,415 +10559,415 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class AnnotatedRelationshipElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class AnnotatedRelationshipElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class AnnotatedRelationshipElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class AnnotatedRelationshipElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class AnnotatedRelationshipElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class AnnotatedRelationshipElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class AnnotatedRelationshipElement " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class AnnotatedRelationshipElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class AnnotatedRelationshipElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class AnnotatedRelationshipElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class AnnotatedRelationshipElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class AnnotatedRelationshipElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class AnnotatedRelationshipElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class AnnotatedRelationshipElement " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class AnnotatedRelationshipElement, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class AnnotatedRelationshipElement " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class AnnotatedRelationshipElement " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class AnnotatedRelationshipElement " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class AnnotatedRelationshipElement " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "first":
-                                {
-                                    theFirst = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theFirst = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "first"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "first"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "second":
-                                {
-                                    theSecond = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSecond = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "second"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "second"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "annotations":
+                            {
+                                theAnnotations = new List<IDataElement>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theAnnotations = new List<IDataElement>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexAnnotations = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        IDataElement? item = IDataElementFromElement(
+                                            reader, ns, out error);
 
-                                        int indexAnnotations = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            IDataElement? item = IDataElementFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexAnnotations));
-                                                return null;
-                                            }
-
-                                            theAnnotations.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexAnnotations++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexAnnotations));
+                                            return null;
                                         }
+
+                                        theAnnotations.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexAnnotations++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class AnnotatedRelationshipElement, " +
@@ -11225,470 +11225,470 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Entity, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Entity " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Entity, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Entity " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Entity, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Entity " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Entity " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Entity, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Entity " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Entity, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Entity " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Entity, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Entity " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Entity " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Entity, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Entity " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Entity " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Entity " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Entity " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "statements":
+                            {
+                                theStatements = new List<ISubmodelElement>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theStatements = new List<ISubmodelElement>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexStatements = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        ISubmodelElement? item = ISubmodelElementFromElement(
+                                            reader, ns, out error);
 
-                                        int indexStatements = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            ISubmodelElement? item = ISubmodelElementFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexStatements));
-                                                return null;
-                                            }
-
-                                            theStatements.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexStatements++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexStatements));
+                                            return null;
                                         }
+
+                                        theStatements.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexStatements++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "entityType":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property EntityType of an instance of class Entity " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "entityType"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property EntityType of an instance of class Entity " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "entityType"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property EntityType of an instance of class Entity, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textEntityType;
-                                    try
-                                    {
-                                        textEntityType = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property EntityType of an instance of class Entity " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "entityType"));
-                                        return null;
-                                    }
+                                string textEntityType;
+                                try
+                                {
+                                    textEntityType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property EntityType of an instance of class Entity " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "entityType"));
+                                    return null;
+                                }
 
-                                    theEntityType = Stringification.EntityTypeFromString(
+                                theEntityType = Stringification.EntityTypeFromString(
+                                    textEntityType);
+
+                                if (theEntityType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property EntityType of an instance of class Entity " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textEntityType);
-
-                                    if (theEntityType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property EntityType of an instance of class Entity " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textEntityType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "entityType"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "entityType"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "globalAssetId":
-                                {
-                                    theGlobalAssetId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theGlobalAssetId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "globalAssetId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "globalAssetId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "specificAssetId":
-                                {
-                                    theSpecificAssetId = SpecificAssetIdFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSpecificAssetId = SpecificAssetIdFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "specificAssetId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "specificAssetId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Entity, " +
@@ -11930,195 +11930,195 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "source":
-                                {
-                                    theSource = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSource = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "source"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "source"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "sourceSemanticId":
-                                {
-                                    theSourceSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSourceSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "sourceSemanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "sourceSemanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "observableReference":
-                                {
-                                    theObservableReference = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theObservableReference = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "observableReference"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "observableReference"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "observableSemanticId":
-                                {
-                                    theObservableSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theObservableSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "observableSemanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "observableSemanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "topic":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theTopic = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Topic of an instance of class EventPayload, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theTopic = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Topic of an instance of class EventPayload " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "topic"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theTopic = "";
                                 }
-                            case "subjectId":
+                                else
                                 {
-                                    theSubjectId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
+                                    if (reader.EOF)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "subjectId"));
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Topic of an instance of class EventPayload, " +
+                                            "but reached the end-of-file");
                                         return null;
                                     }
-                                    break;
+
+                                    try
+                                    {
+                                        theTopic = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Topic of an instance of class EventPayload " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "topic"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
                                 }
+                                break;
+                            }
+                            case "subjectId":
+                            {
+                                theSubjectId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "subjectId"));
+                                    return null;
+                                }
+                                break;
+                            }
                             case "timeStamp":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theTimeStamp = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theTimeStamp = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property TimeStamp of an instance of class EventPayload, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theTimeStamp = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property TimeStamp of an instance of class EventPayload, " +
-                                                "but reached the end-of-file");
+                                                "The property TimeStamp of an instance of class EventPayload " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "timeStamp"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theTimeStamp = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property TimeStamp of an instance of class EventPayload " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "timeStamp"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "payload":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    thePayload = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        thePayload = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Payload of an instance of class EventPayload, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        thePayload = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Payload of an instance of class EventPayload, " +
-                                                "but reached the end-of-file");
+                                                "The property Payload of an instance of class EventPayload " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "payload"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            thePayload = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Payload of an instance of class EventPayload " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "payload"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class EventPayload, " +
@@ -12432,652 +12432,652 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class BasicEventElement " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class BasicEventElement " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class BasicEventElement, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class BasicEventElement " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class BasicEventElement " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class BasicEventElement " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class BasicEventElement " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
-                                    }
-                                    break;
-                                }
-                            case "observed":
-                                {
-                                    theObserved = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "observed"));
-                                        return null;
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
-                            case "direction":
+                                break;
+                            }
+                            case "observed":
+                            {
+                                theObserved = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Direction of an instance of class BasicEventElement " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "direction"));
-                                        return null;
-                                    }
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "observed"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "direction":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Direction of an instance of class BasicEventElement " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "direction"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Direction of an instance of class BasicEventElement, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
-
-                                    string textDirection;
-                                    try
-                                    {
-                                        textDirection = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Direction of an instance of class BasicEventElement " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "direction"));
-                                        return null;
-                                    }
-
-                                    theDirection = Stringification.DirectionFromString(
-                                        textDirection);
-
-                                    if (theDirection == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Direction of an instance of class BasicEventElement " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textDirection);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "direction"));
-                                        return null;
-                                    }
-                                    break;
                                 }
-                            case "state":
+
+                                string textDirection;
+                                try
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property State of an instance of class BasicEventElement " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "state"));
-                                        return null;
-                                    }
+                                    textDirection = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Direction of an instance of class BasicEventElement " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "direction"));
+                                    return null;
+                                }
+
+                                theDirection = Stringification.DirectionFromString(
+                                    textDirection);
+
+                                if (theDirection == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Direction of an instance of class BasicEventElement " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textDirection);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "direction"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "state":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property State of an instance of class BasicEventElement " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "state"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property State of an instance of class BasicEventElement, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textState;
+                                try
+                                {
+                                    textState = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property State of an instance of class BasicEventElement " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "state"));
+                                    return null;
+                                }
+
+                                theState = Stringification.StateOfEventFromString(
+                                    textState);
+
+                                if (theState == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property State of an instance of class BasicEventElement " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textState);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "state"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "messageTopic":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theMessageTopic = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property MessageTopic of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textState;
                                     try
                                     {
-                                        textState = reader.ReadContentAsString();
+                                        theMessageTopic = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property State of an instance of class BasicEventElement " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "state"));
-                                        return null;
-                                    }
-
-                                    theState = Stringification.StateOfEventFromString(
-                                        textState);
-
-                                    if (theState == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property State of an instance of class BasicEventElement " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textState);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "state"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "messageTopic":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theMessageTopic = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property MessageTopic of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
+                                                "The property MessageTopic of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "messageTopic"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theMessageTopic = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property MessageTopic of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "messageTopic"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "messageBroker":
-                                {
-                                    theMessageBroker = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theMessageBroker = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "messageBroker"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "lastUpdate":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theLastUpdate = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "messageBroker"));
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property LastUpdate of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
                                         return null;
                                     }
-                                    break;
-                                }
-                            case "lastUpdate":
-                                {
-                                    if (isEmptyProperty)
+
+                                    try
                                     {
-                                        theLastUpdate = "";
+                                        theLastUpdate = reader.ReadContentAsString();
                                     }
-                                    else
+                                    catch (System.Exception exception)
                                     {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property LastUpdate of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
+                                                "The property LastUpdate of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "lastUpdate"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theLastUpdate = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property LastUpdate of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "lastUpdate"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "minInterval":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theMinInterval = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theMinInterval = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property MinInterval of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theMinInterval = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property MinInterval of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
+                                                "The property MinInterval of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "minInterval"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theMinInterval = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property MinInterval of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "minInterval"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "maxInterval":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theMaxInterval = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theMaxInterval = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property MaxInterval of an instance of class BasicEventElement, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theMaxInterval = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property MaxInterval of an instance of class BasicEventElement, " +
-                                                "but reached the end-of-file");
+                                                "The property MaxInterval of an instance of class BasicEventElement " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "maxInterval"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theMaxInterval = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property MaxInterval of an instance of class BasicEventElement " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "maxInterval"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class BasicEventElement, " +
@@ -13349,453 +13349,453 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Operation, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Operation " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Operation, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Operation " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Operation, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Operation " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Operation " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Operation, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Operation " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Operation, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Operation " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Operation, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Operation " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Operation " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Operation, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Operation " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Operation " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Operation " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Operation " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "inputVariables":
+                            {
+                                theInputVariables = new List<OperationVariable>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theInputVariables = new List<OperationVariable>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexInputVariables = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        OperationVariable? item = OperationVariableFromElement(
+                                            reader, ns, out error);
 
-                                        int indexInputVariables = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            OperationVariable? item = OperationVariableFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexInputVariables));
-                                                return null;
-                                            }
-
-                                            theInputVariables.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexInputVariables++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexInputVariables));
+                                            return null;
                                         }
+
+                                        theInputVariables.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexInputVariables++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "outputVariables":
+                            {
+                                theOutputVariables = new List<OperationVariable>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theOutputVariables = new List<OperationVariable>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexOutputVariables = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        OperationVariable? item = OperationVariableFromElement(
+                                            reader, ns, out error);
 
-                                        int indexOutputVariables = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            OperationVariable? item = OperationVariableFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexOutputVariables));
-                                                return null;
-                                            }
-
-                                            theOutputVariables.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexOutputVariables++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexOutputVariables));
+                                            return null;
                                         }
+
+                                        theOutputVariables.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexOutputVariables++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "inoutputVariables":
+                            {
+                                theInoutputVariables = new List<OperationVariable>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theInoutputVariables = new List<OperationVariable>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexInoutputVariables = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        OperationVariable? item = OperationVariableFromElement(
+                                            reader, ns, out error);
 
-                                        int indexInoutputVariables = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            OperationVariable? item = OperationVariableFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexInoutputVariables));
-                                                return null;
-                                            }
-
-                                            theInoutputVariables.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexInoutputVariables++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexInoutputVariables));
+                                            return null;
                                         }
+
+                                        theInoutputVariables.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexInoutputVariables++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Operation, " +
@@ -14019,37 +14019,37 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "value":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            $"Expected an XML element within the element {elementName} representing " +
-                                            "the property Value of an instance of class OperationVariable, " +
-                                            "but encountered a self-closing element {elementName}");
-                                        return null;
-                                    }
-
-                                    if (reader.EOF)
-                                    {
-                                        error = new Reporting.Error(
-                                            $"Expected an XML element within the element {elementName} representing " +
-                                            "the property Value of an instance of class OperationVariable, " +
-                                            "but reached the end-of-file");
-                                        return null;
-                                    }
-
-                                    theValue = ISubmodelElementFromElement(
-                                        reader, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "value"));
-                                        return null;
-                                    }
-                                    break;
+                                    error = new Reporting.Error(
+                                        $"Expected an XML element within the element {elementName} representing " +
+                                        "the property Value of an instance of class OperationVariable, " +
+                                        "but encountered a self-closing element {elementName}");
+                                    return null;
                                 }
+
+                                if (reader.EOF)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected an XML element within the element {elementName} representing " +
+                                        "the property Value of an instance of class OperationVariable, " +
+                                        "but reached the end-of-file");
+                                    return null;
+                                }
+
+                                theValue = ISubmodelElementFromElement(
+                                    reader, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class OperationVariable, " +
@@ -14280,354 +14280,354 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
-                                {
-                                    theExtensions = new List<Extension>();
+                            {
+                                theExtensions = new List<Extension>();
 
-                                    if (!isEmptyProperty)
+                                if (!isEmptyProperty)
+                                {
+                                    SkipNoneWhitespaceAndComments(reader);
+
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
+
+                                        if (error != null)
+                                        {
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
+                                        }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
                                         SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theCategory = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class Capability, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class Capability " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theCategory = "";
                                 }
-                            case "idShort":
+                                else
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theIdShort = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class Capability, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class Capability " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "checksum":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class Capability, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class Capability " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
-                                }
-                            case "kind":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Capability " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-
                                     if (reader.EOF)
                                     {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class Capability, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Category of an instance of class Capability " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "idShort":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class Capability, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property IdShort of an instance of class Capability " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "displayName":
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "description":
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "checksum":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theChecksum = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class Capability, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theChecksum = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Checksum of an instance of class Capability " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
+                            case "kind":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Capability " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+
+                                    if (reader.EOF)
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Kind of an instance of class Capability, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textKind;
-                                    try
-                                    {
-                                        textKind = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Capability " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
+                                string textKind;
+                                try
+                                {
+                                    textKind = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Capability " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
 
-                                    theKind = Stringification.ModelingKindFromString(
+                                theKind = Stringification.ModelingKindFromString(
+                                    textKind);
+
+                                if (theKind == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Kind of an instance of class Capability " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textKind);
-
-                                    if (theKind == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Kind of an instance of class Capability " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textKind);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "kind"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "semanticId":
-                                {
-                                    theSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "semanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "supplementalSemanticIds":
+                            {
+                                theSupplementalSemanticIds = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSupplementalSemanticIds = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSupplementalSemanticIds = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSupplementalSemanticIds = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSupplementalSemanticIds));
-                                                return null;
-                                            }
-
-                                            theSupplementalSemanticIds.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSupplementalSemanticIds++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSupplementalSemanticIds));
+                                            return null;
                                         }
+
+                                        theSupplementalSemanticIds.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSupplementalSemanticIds++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "qualifiers":
+                            {
+                                theQualifiers = new List<Qualifier>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theQualifiers = new List<Qualifier>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexQualifiers = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Qualifier? item = QualifierFromElement(
+                                            reader, ns, out error);
 
-                                        int indexQualifiers = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Qualifier? item = QualifierFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexQualifiers));
-                                                return null;
-                                            }
-
-                                            theQualifiers.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexQualifiers++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexQualifiers));
+                                            return null;
                                         }
+
+                                        theQualifiers.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexQualifiers++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Capability, " +
@@ -14857,306 +14857,306 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "extensions":
+                            {
+                                theExtensions = new List<Extension>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theExtensions = new List<Extension>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexExtensions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Extension? item = ExtensionFromElement(
+                                            reader, ns, out error);
 
-                                        int indexExtensions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Extension? item = ExtensionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexExtensions));
-                                                return null;
-                                            }
-
-                                            theExtensions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexExtensions++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexExtensions));
+                                            return null;
                                         }
+
+                                        theExtensions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexExtensions++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "category":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theCategory = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theCategory = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Category of an instance of class ConceptDescription, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theCategory = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Category of an instance of class ConceptDescription, " +
-                                                "but reached the end-of-file");
+                                                "The property Category of an instance of class ConceptDescription " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "category"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theCategory = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Category of an instance of class ConceptDescription " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "category"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "idShort":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theIdShort = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theIdShort = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property IdShort of an instance of class ConceptDescription, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theIdShort = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property IdShort of an instance of class ConceptDescription, " +
-                                                "but reached the end-of-file");
+                                                "The property IdShort of an instance of class ConceptDescription " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "idShort"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theIdShort = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property IdShort of an instance of class ConceptDescription " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "idShort"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "displayName":
-                                {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDisplayName = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "checksum":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        theChecksum = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
-                                        {
-                                            error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Checksum of an instance of class ConceptDescription, " +
-                                                "but reached the end-of-file");
-                                            return null;
-                                        }
-
-                                        try
-                                        {
-                                            theChecksum = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Checksum of an instance of class ConceptDescription " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "checksum"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
-                                    }
-                                    break;
+                                    theChecksum = "";
                                 }
-                            case "administration":
+                                else
                                 {
-                                    theAdministration = AdministrativeInformationFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
-
-                                    if (error != null)
+                                    if (reader.EOF)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "administration"));
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Checksum of an instance of class ConceptDescription, " +
+                                            "but reached the end-of-file");
                                         return null;
                                     }
-                                    break;
-                                }
-                            case "id":
-                                {
-                                    if (isEmptyProperty)
+
+                                    try
                                     {
-                                        theId = "";
+                                        theChecksum = reader.ReadContentAsString();
                                     }
-                                    else
+                                    catch (System.Exception exception)
                                     {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Id of an instance of class ConceptDescription, " +
-                                                "but reached the end-of-file");
+                                                "The property Checksum of an instance of class ConceptDescription " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "checksum"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theId = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Id of an instance of class ConceptDescription " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "id"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
+                            case "administration":
+                            {
+                                theAdministration = AdministrativeInformationFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
+
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "id":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theId = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Id of an instance of class ConceptDescription, " +
+                                            "but reached the end-of-file");
+                                        return null;
+                                    }
+
+                                    try
+                                    {
+                                        theId = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
+                                        {
+                                            error = new Reporting.Error(
+                                                "The property Id of an instance of class ConceptDescription " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "id"));
+                                            return null;
+                                        }
+
+                                        throw;
+                                    }
+                                }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "isCaseOf":
+                            {
+                                theIsCaseOf = new List<Reference>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theIsCaseOf = new List<Reference>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexIsCaseOf = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Reference? item = ReferenceFromElement(
+                                            reader, ns, out error);
 
-                                        int indexIsCaseOf = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Reference? item = ReferenceFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexIsCaseOf));
-                                                return null;
-                                            }
-
-                                            theIsCaseOf.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexIsCaseOf++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexIsCaseOf));
+                                            return null;
                                         }
+
+                                        theIsCaseOf.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexIsCaseOf++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class ConceptDescription, " +
@@ -15388,107 +15388,107 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "type":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Type of an instance of class Reference " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "type"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property Type of an instance of class Reference " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Type of an instance of class Reference, " +
                                             "but reached the end-of-file");
                                         return null;
-                                    }
+                                }
 
-                                    string textType;
-                                    try
-                                    {
-                                        textType = reader.ReadContentAsString();
-                                    }
-                                    catch (System.FormatException exception)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Type of an instance of class Reference " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "type"));
-                                        return null;
-                                    }
+                                string textType;
+                                try
+                                {
+                                    textType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Type of an instance of class Reference " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
 
-                                    theType = Stringification.ReferenceTypesFromString(
+                                theType = Stringification.ReferenceTypesFromString(
+                                    textType);
+
+                                if (theType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Type of an instance of class Reference " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
                                         textType);
-
-                                    if (theType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Type of an instance of class Reference " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "type"));
-                                        return null;
-                                    }
-                                    break;
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "referredSemanticId":
-                                {
-                                    theReferredSemanticId = ReferenceFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theReferredSemanticId = ReferenceFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "referredSemanticId"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "referredSemanticId"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "keys":
+                            {
+                                theKeys = new List<Key>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theKeys = new List<Key>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexKeys = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Key? item = KeyFromElement(
+                                            reader, ns, out error);
 
-                                        int indexKeys = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Key? item = KeyFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexKeys));
-                                                return null;
-                                            }
-
-                                            theKeys.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexKeys++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexKeys));
+                                            return null;
                                         }
+
+                                        theKeys.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexKeys++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Reference, " +
@@ -15722,100 +15722,100 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "type":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Type of an instance of class Key " +
-                                            "can not be de-serialized from a self-closing element " +
-                                            "since it needs content");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "type"));
-                                        return null;
-                                    }
+                                    error = new Reporting.Error(
+                                        "The property Type of an instance of class Key " +
+                                        "can not be de-serialized from a self-closing element " +
+                                        "since it needs content");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
 
                                     if (reader.EOF)
-                                    {
+                                {
                                         error = new Reporting.Error(
                                             "Expected an XML content representing " +
                                             "the property Type of an instance of class Key, " +
                                             "but reached the end-of-file");
                                         return null;
+                                }
+
+                                string textType;
+                                try
+                                {
+                                    textType = reader.ReadContentAsString();
+                                }
+                                catch (System.FormatException exception)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Type of an instance of class Key " +
+                                        $"could not be de-serialized as a string: {exception}");
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
+
+                                theType = Stringification.KeyTypesFromString(
+                                    textType);
+
+                                if (theType == null)
+                                {
+                                    error = new Reporting.Error(
+                                        "The property Type of an instance of class Key " +
+                                        "could not be de-serialized from an unexpected enumeration literal: " +
+                                        textType);
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
+                                break;
+                            }
+                            case "value":
+                            {
+                                if (isEmptyProperty)
+                                {
+                                    theValue = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Value of an instance of class Key, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
 
-                                    string textType;
                                     try
                                     {
-                                        textType = reader.ReadContentAsString();
+                                        theValue = reader.ReadContentAsString();
                                     }
-                                    catch (System.FormatException exception)
+                                    catch (System.Exception exception)
                                     {
-                                        error = new Reporting.Error(
-                                            "The property Type of an instance of class Key " +
-                                            $"could not be de-serialized as a string: {exception}");
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "type"));
-                                        return null;
-                                    }
-
-                                    theType = Stringification.KeyTypesFromString(
-                                        textType);
-
-                                    if (theType == null)
-                                    {
-                                        error = new Reporting.Error(
-                                            "The property Type of an instance of class Key " +
-                                            "could not be de-serialized from an unexpected enumeration literal: " +
-                                            textType);
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "type"));
-                                        return null;
-                                    }
-                                    break;
-                                }
-                            case "value":
-                                {
-                                    if (isEmptyProperty)
-                                    {
-                                        theValue = "";
-                                    }
-                                    else
-                                    {
-                                        if (reader.EOF)
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Value of an instance of class Key, " +
-                                                "but reached the end-of-file");
+                                                "The property Value of an instance of class Key " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "value"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theValue = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Value of an instance of class Key " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "value"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Key, " +
@@ -16048,85 +16048,85 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "language":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theLanguage = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theLanguage = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Language of an instance of class LangString, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theLanguage = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Language of an instance of class LangString, " +
-                                                "but reached the end-of-file");
+                                                "The property Language of an instance of class LangString " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "language"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theLanguage = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Language of an instance of class LangString " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "language"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "text":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theText = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theText = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Text of an instance of class LangString, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theText = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Text of an instance of class LangString, " +
-                                                "but reached the end-of-file");
+                                                "The property Text of an instance of class LangString " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "text"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theText = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Text of an instance of class LangString " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "text"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class LangString, " +
@@ -16358,38 +16358,38 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "langStrings":
+                            {
+                                theLangStrings = new List<LangString>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theLangStrings = new List<LangString>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexLangStrings = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        LangString? item = LangStringFromElement(
+                                            reader, ns, out error);
 
-                                        int indexLangStrings = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            LangString? item = LangStringFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexLangStrings));
-                                                return null;
-                                            }
-
-                                            theLangStrings.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexLangStrings++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexLangStrings));
+                                            return null;
                                         }
+
+                                        theLangStrings.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexLangStrings++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class LangStringSet, " +
@@ -16731,87 +16731,87 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "id":
+                            {
+                                if (isEmptyProperty)
                                 {
-                                    if (isEmptyProperty)
+                                    theId = "";
+                                }
+                                else
+                                {
+                                    if (reader.EOF)
                                     {
-                                        theId = "";
+                                        error = new Reporting.Error(
+                                            "Expected an XML content representing " +
+                                            "the property Id of an instance of class DataSpecification, " +
+                                            "but reached the end-of-file");
+                                        return null;
                                     }
-                                    else
+
+                                    try
                                     {
-                                        if (reader.EOF)
+                                        theId = reader.ReadContentAsString();
+                                    }
+                                    catch (System.Exception exception)
+                                    {
+                                        if (exception is System.FormatException
+                                            || exception is System.Xml.XmlException)
                                         {
                                             error = new Reporting.Error(
-                                                "Expected an XML content representing " +
-                                                "the property Id of an instance of class DataSpecification, " +
-                                                "but reached the end-of-file");
+                                                "The property Id of an instance of class DataSpecification " +
+                                                $"could not be de-serialized: {exception.Message}");
+                                            error.PrependSegment(
+                                                new Reporting.NameSegment(
+                                                    "id"));
                                             return null;
                                         }
 
-                                        try
-                                        {
-                                            theId = reader.ReadContentAsString();
-                                        }
-                                        catch (System.Exception exception)
-                                        {
-                                            if (exception is System.FormatException
-                                                || exception is System.Xml.XmlException)
-                                            {
-                                                error = new Reporting.Error(
-                                                    "The property Id of an instance of class DataSpecification " +
-                                                    $"could not be de-serialized: {exception}");
-                                                error.PrependSegment(
-                                                    new Reporting.NameSegment(
-                                                        "id"));
-                                                return null;
-                                            }
-
-                                            throw;
-                                        }
+                                        throw;
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecificationContent":
-                                {
-                                    theDataSpecificationContent = DataSpecificationContentFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDataSpecificationContent = DataSpecificationContentFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "dataSpecificationContent"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "dataSpecificationContent"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "administration":
-                                {
-                                    theAdministration = AdministrativeInformationFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theAdministration = AdministrativeInformationFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "administration"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
                                 }
+                                break;
+                            }
                             case "description":
-                                {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, ns, out error);
+                            {
+                                theDescription = LangStringSetFromSequence(
+                                    reader, isEmptyProperty, ns, out error);
 
-                                    if (error != null)
-                                    {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
-                                    }
-                                    break;
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class DataSpecification, " +
@@ -17048,137 +17048,137 @@ namespace AasCore.Aas3_0_RC02
                         switch (elementName)
                         {
                             case "assetAdministrationShells":
+                            {
+                                theAssetAdministrationShells = new List<AssetAdministrationShell>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theAssetAdministrationShells = new List<AssetAdministrationShell>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexAssetAdministrationShells = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        AssetAdministrationShell? item = AssetAdministrationShellFromElement(
+                                            reader, ns, out error);
 
-                                        int indexAssetAdministrationShells = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            AssetAdministrationShell? item = AssetAdministrationShellFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexAssetAdministrationShells));
-                                                return null;
-                                            }
-
-                                            theAssetAdministrationShells.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexAssetAdministrationShells++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexAssetAdministrationShells));
+                                            return null;
                                         }
+
+                                        theAssetAdministrationShells.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexAssetAdministrationShells++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "submodels":
+                            {
+                                theSubmodels = new List<Submodel>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theSubmodels = new List<Submodel>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexSubmodels = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        Submodel? item = SubmodelFromElement(
+                                            reader, ns, out error);
 
-                                        int indexSubmodels = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            Submodel? item = SubmodelFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexSubmodels));
-                                                return null;
-                                            }
-
-                                            theSubmodels.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexSubmodels++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexSubmodels));
+                                            return null;
                                         }
+
+                                        theSubmodels.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexSubmodels++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "conceptDescriptions":
+                            {
+                                theConceptDescriptions = new List<ConceptDescription>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theConceptDescriptions = new List<ConceptDescription>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexConceptDescriptions = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        ConceptDescription? item = ConceptDescriptionFromElement(
+                                            reader, ns, out error);
 
-                                        int indexConceptDescriptions = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            ConceptDescription? item = ConceptDescriptionFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexConceptDescriptions));
-                                                return null;
-                                            }
-
-                                            theConceptDescriptions.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexConceptDescriptions++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexConceptDescriptions));
+                                            return null;
                                         }
+
+                                        theConceptDescriptions.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexConceptDescriptions++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             case "dataSpecifications":
+                            {
+                                theDataSpecifications = new List<DataSpecification>();
+
+                                if (!isEmptyProperty)
                                 {
-                                    theDataSpecifications = new List<DataSpecification>();
+                                    SkipNoneWhitespaceAndComments(reader);
 
-                                    if (!isEmptyProperty)
+                                    int indexDataSpecifications = 0;
+                                    while (reader.NodeType == Xml.XmlNodeType.Element)
                                     {
-                                        SkipNoneWhitespaceAndComments(reader);
+                                        DataSpecification? item = DataSpecificationFromElement(
+                                            reader, ns, out error);
 
-                                        int indexDataSpecifications = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        if (error != null)
                                         {
-                                            DataSpecification? item = DataSpecificationFromElement(
-                                                reader, ns, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexDataSpecifications));
-                                                return null;
-                                            }
-
-                                            theDataSpecifications.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexDataSpecifications++;
-                                            SkipNoneWhitespaceAndComments(reader);
+                                            error.PrependSegment(
+                                                new Reporting.IndexSegment(
+                                                    indexDataSpecifications));
+                                            return null;
                                         }
+
+                                        theDataSpecifications.Add(
+                                            item
+                                                ?? throw new System.InvalidOperationException(
+                                                    "Unexpected item null when error null"));
+
+                                        indexDataSpecifications++;
+                                        SkipNoneWhitespaceAndComments(reader);
                                     }
-                                    break;
                                 }
+                                break;
+                            }
                             default:
                                 error = new Reporting.Error(
                                     "We expected properties of the class Environment, " +
@@ -17397,8 +17397,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IHasSemantics.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IHasSemantics IHasSemanticsFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IHasSemantics IHasSemanticsFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17462,8 +17461,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IHasExtensions.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IHasExtensions IHasExtensionsFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IHasExtensions IHasExtensionsFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17495,8 +17493,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IReferable.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IReferable IReferableFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IReferable IReferableFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17528,8 +17525,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IIdentifiable.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IIdentifiable IIdentifiableFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IIdentifiable IIdentifiableFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17561,8 +17557,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IHasKind.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IHasKind IHasKindFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IHasKind IHasKindFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17594,8 +17589,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IHasDataSpecification.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IHasDataSpecification IHasDataSpecificationFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IHasDataSpecification IHasDataSpecificationFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17659,8 +17653,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IQualifiable.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IQualifiable IQualifiableFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IQualifiable IQualifiableFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17884,8 +17877,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of ISubmodelElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.ISubmodelElement ISubmodelElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.ISubmodelElement ISubmodelElementFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -17917,8 +17909,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IRelationshipElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IRelationshipElement IRelationshipElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IRelationshipElement IRelationshipElementFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -18046,8 +18037,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IDataElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IDataElement IDataElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IDataElement IDataElementFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
@@ -18367,8 +18357,7 @@ namespace AasCore.Aas3_0_RC02
             /// Thrown when the element is not a valid XML
             /// representation of IEventElement.
             /// </exception>
-            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]
-            public static Aas.IEventElement IEventElementFrom(
+            [CodeAnalysis.SuppressMessage("ReSharper", "InconsistentNaming")]public static Aas.IEventElement IEventElementFrom(
                 Xml.XmlReader reader,
                 string? ns = null)
             {
