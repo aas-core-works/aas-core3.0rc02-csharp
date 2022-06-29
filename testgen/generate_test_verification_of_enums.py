@@ -1,7 +1,6 @@
 """Generate the test code for the verification of enums."""
 
 import io
-import json
 import os
 import pathlib
 import sys
@@ -14,13 +13,8 @@ import aas_core_codegen.csharp.naming
 import aas_core_codegen.naming
 import aas_core_codegen.parse
 import aas_core_codegen.run
-import aas_core_meta.v3rc2
-
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
-from aas_core_codegen.csharp import (
-    common as csharp_common
-)
 
 from testgen.common import load_symbol_table
 
@@ -32,18 +26,18 @@ def main() -> int:
     # noinspection PyListCreation
     blocks = []  # type: List[str]
 
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.Enumeration):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.Enumeration):
             continue
 
-        enum_name = aas_core_codegen.csharp.naming.enum_name(symbol.name)
+        enum_name = aas_core_codegen.csharp.naming.enum_name(our_type.name)
 
-        assert len(symbol.literals) > 0, (
-            f"Unexpected enumeration without literals: {symbol.name}"
+        assert len(our_type.literals) > 0, (
+            f"Unexpected enumeration without literals: {our_type.name}"
         )
 
         literal_name = aas_core_codegen.csharp.naming.enum_literal_name(
-            symbol.literals[0].name
+            our_type.literals[0].name
         )
 
         blocks.append(

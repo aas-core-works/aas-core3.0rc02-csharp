@@ -5,7 +5,7 @@ import os
 import pathlib
 import sys
 import textwrap
-from typing import List, Optional
+from typing import List
 
 import aas_core_codegen
 import aas_core_codegen.common
@@ -15,9 +15,6 @@ import aas_core_codegen.parse
 import aas_core_codegen.run
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
-from aas_core_codegen.csharp import (
-    common as csharp_common
-)
 
 from testgen.common import load_symbol_table
 
@@ -29,13 +26,13 @@ def main() -> int:
     # noinspection PyListCreation
     blocks = []  # type: List[str]
 
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.ConcreteClass):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
-        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
+        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
 
-        for prop in symbol.properties:
+        for prop in our_type.properties:
             if (
                     isinstance(
                         prop.type_annotation, intermediate.OptionalTypeAnnotation)

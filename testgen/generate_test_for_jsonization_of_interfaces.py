@@ -13,13 +13,8 @@ import aas_core_codegen.csharp.naming
 import aas_core_codegen.naming
 import aas_core_codegen.parse
 import aas_core_codegen.run
-import aas_core_meta.v3rc2
-
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
-from aas_core_codegen.csharp import (
-    common as csharp_common
-)
 
 from testgen.common import load_symbol_table
 
@@ -31,28 +26,27 @@ def main() -> int:
     # noinspection PyListCreation
     blocks = []  # type: List[str]
 
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.Class):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.Class):
             continue
 
-        if symbol.interface is None or len(symbol.interface.implementers) == 0:
+        if our_type.interface is None or len(our_type.interface.implementers) == 0:
             continue
 
-        if symbol.name == aas_core_codegen.common.Identifier("Event_payload"):
+        if our_type.name == aas_core_codegen.common.Identifier("Event_payload"):
             # NOTE (mristin, 2022-06-21):
             # Event payload is a dangling class and can not be reached from
             # the environment. Hence, we skip it.
             continue
 
-        for cls in symbol.interface.implementers:
+        for cls in our_type.interface.implementers:
             if cls.serialization is None or not cls.serialization.with_model_type:
                 continue
 
             interface_name_csharp = aas_core_codegen.csharp.naming.interface_name(
-                symbol.interface.name
+                our_type.interface.name
             )
             cls_name_csharp = aas_core_codegen.csharp.naming.class_name(cls.name)
-            cls_name_json = aas_core_codegen.naming.json_model_type(cls.name)
 
             blocks.append(
                 Stripped(

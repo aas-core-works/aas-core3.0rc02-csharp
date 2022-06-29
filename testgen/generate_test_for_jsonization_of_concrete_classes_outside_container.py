@@ -31,25 +31,24 @@ def main() -> int:
     # noinspection PyListCreation
     blocks = []  # type: List[str]
 
-    environment_cls = symbol_table.must_find(
+    environment_cls = symbol_table.must_find_concrete_class(
         aas_core_codegen.common.Identifier("Environment"))
-    assert isinstance(environment_cls, intermediate.ConcreteClass)
 
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.ConcreteClass):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
         container_cls = testgen.common.determine_container_class(
-            cls=symbol, test_data_dir=test_data_dir,
+            cls=our_type, test_data_dir=test_data_dir,
             environment_cls=environment_cls)
 
-        if container_cls is symbol:
+        if container_cls is our_type:
             # NOTE (mristin, 2022-06-27):
             # These classes are tested already in TestJsonizationOfConcreteClasses.
             # We only need to test for class instances contained in a container.
             continue
 
-        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
+        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
 
         blocks.append(
             Stripped(
