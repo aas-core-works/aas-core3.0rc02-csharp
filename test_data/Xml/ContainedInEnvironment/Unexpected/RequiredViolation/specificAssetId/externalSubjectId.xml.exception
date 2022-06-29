@@ -1,1 +1,1 @@
-The required property ExternalSubjectId has not been given in the XML representation of an instance of class SpecificAssetId at: *[0]/assetInformation/specificAssetId
+The required property ExternalSubjectId has not been given in the XML representation of an instance of class SpecificAssetId at: *[0]/assetInformation/*[0]
