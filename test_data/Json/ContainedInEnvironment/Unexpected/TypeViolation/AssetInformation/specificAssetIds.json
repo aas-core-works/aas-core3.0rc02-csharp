@@ -15,7 +15,7 @@
           ],
           "type": "GlobalReference"
         },
-        "specificAssetId": "Unexpected string value"
+        "specificAssetIds": "Unexpected string value"
       },
       "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"

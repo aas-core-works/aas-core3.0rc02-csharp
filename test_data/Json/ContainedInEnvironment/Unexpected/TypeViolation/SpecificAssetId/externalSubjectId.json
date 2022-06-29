@@ -3,31 +3,33 @@
     {
       "assetInformation": {
         "assetKind": "Instance",
-        "specificAssetId": {
-          "externalSubjectId": "Unexpected string value",
-          "name": "something_random_73ff3355",
-          "semanticId": {
-            "keys": [
-              {
-                "type": "GlobalReference",
-                "value": "something_random_0181d044"
-              }
-            ],
-            "type": "GlobalReference"
-          },
-          "supplementalSemanticIds": [
-            {
+        "specificAssetIds": [
+          {
+            "externalSubjectId": "Unexpected string value",
+            "name": "something_random_3cac9102",
+            "semanticId": {
               "keys": [
                 {
                   "type": "GlobalReference",
-                  "value": "something_random_5dc21371"
+                  "value": "something_random_d33b5d47"
                 }
               ],
               "type": "GlobalReference"
-            }
-          ],
-          "value": "something_random_d43e0a3b"
-        }
+            },
+            "supplementalSemanticIds": [
+              {
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "something_random_ea569830"
+                  }
+                ],
+                "type": "GlobalReference"
+              }
+            ],
+            "value": "something_random_4f886934"
+          }
+        ]
       },
       "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"

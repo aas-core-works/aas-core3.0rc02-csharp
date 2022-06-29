@@ -13,7 +13,7 @@
 						</key>
 					</keys>
 				</globalAssetId>
-				<specificAssetId>Unexpected string value</specificAssetId>
+				<specificAssetIds>Unexpected string value</specificAssetIds>
 				<defaultThumbnail>
 					<path>file:/path/to/somewhere</path>
 				</defaultThumbnail>

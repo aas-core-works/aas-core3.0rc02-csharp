@@ -1,2 +1,2 @@
-assetAdministrationShells[0].assetInformation.specificAssetId.name: Invariant violated:
+assetAdministrationShells[0].assetInformation.specificAssetIds[0].name: Invariant violated:
 that.Length >= 1

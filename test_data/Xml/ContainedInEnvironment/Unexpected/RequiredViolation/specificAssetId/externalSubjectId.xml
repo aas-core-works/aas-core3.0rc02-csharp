@@ -4,10 +4,12 @@
 			<id>something_random_428f0205</id>
 			<assetInformation>
 				<assetKind>Instance</assetKind>
-				<specificAssetId>
-					<name>something_random_73ff3355</name>
-					<value>something_random_d43e0a3b</value>
-				</specificAssetId>
+				<specificAssetIds>
+					<specificAssetId>
+						<name>something_random_3cac9102</name>
+						<value>something_random_4f886934</value>
+					</specificAssetId>
+				</specificAssetIds>
 			</assetInformation>
 		</assetAdministrationShell>
 	</assetAdministrationShells>

@@ -1,1 +1,1 @@
-Expected a JsonValue, but got System.Text.Json.Nodes.JsonObject at: assetAdministrationShells[0].assetInformation.specificAssetId.name
+Expected a JsonValue, but got System.Text.Json.Nodes.JsonObject at: assetAdministrationShells[0].assetInformation.specificAssetIds[0].name
