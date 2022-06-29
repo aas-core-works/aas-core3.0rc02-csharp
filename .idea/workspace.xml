@@ -30,7 +30,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="" />
+    <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_common_jsonization.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_common_jsonization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_descend_and_visitor_through.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_descend_and_visitor_through.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_descend_once.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_descend_once.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_get_X_or_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_get_X_or_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_concrete_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_concrete_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_concrete_classes_outside_container.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_concrete_classes_outside_container.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_jsonization_of_interfaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_over_X_or_empty.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_over_X_or_empty.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/generate_test_for_xmlization_of_concrete_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/generate_test_for_xmlization_of_concrete_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +82,7 @@
       <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.generate_test_for_over_X_or_empty">
+  <component name="RunManager" selected="Python.generate_all">
     <configuration name="generate_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aas-core3.0rc02-csharp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.generate_test_for_over_X_or_empty" />
         <item itemvalue="Python.generate_all" />
+        <item itemvalue="Python.generate_test_for_over_X_or_empty" />
         <item itemvalue="Python.generate_test_for_jsonization_of_concrete_classes_outside_container" />
         <item itemvalue="Python.generate_test_for_xmlization_of_interfaces" />
         <item itemvalue="Python.generate_test_for_xmlization_of_concrete_classes_outside_environment" />

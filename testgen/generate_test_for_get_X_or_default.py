@@ -81,15 +81,15 @@ private static void CompareOrRerecordValue(
         )
     )
 
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.ConcreteClass):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
-        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
-        cls_name_json = aas_core_codegen.naming.json_model_type(symbol.name)
+        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
+        cls_name_json = aas_core_codegen.naming.json_model_type(our_type.name)
 
         x_or_default_methods = []  # type: List[intermediate.Method]
-        for method in symbol.methods:
+        for method in our_type.methods:
             if method.name.endswith("_or_default"):
                 x_or_default_methods.append(method)
 
@@ -99,14 +99,14 @@ private static void CompareOrRerecordValue(
             result_enum = None  # type: Optional[intermediate.Enumeration]
             assert method.returns is not None, (
                 f"Expected all X_or_default to return something, "
-                f"but got None for {symbol}.{method.name}"
+                f"but got None for {our_type}.{method.name}"
             )
 
             if (
                     isinstance(method.returns, intermediate.OurTypeAnnotation)
-                    and isinstance(method.returns.symbol, intermediate.Enumeration)
+                    and isinstance(method.returns.our_type, intermediate.Enumeration)
             ):
-                result_enum = method.returns.symbol
+                result_enum = method.returns.our_type
 
             if result_enum is None:
                 value_assignment_snippet = Stripped(

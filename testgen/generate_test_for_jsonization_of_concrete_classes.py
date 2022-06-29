@@ -410,25 +410,24 @@ private static void AssertEqualsExpectedOrRerecordDeserializationException(
         )
     )
 
-    environment_cls = symbol_table.must_find(
+    environment_cls = symbol_table.must_find_concrete_class(
         aas_core_codegen.common.Identifier("Environment"))
-    assert isinstance(environment_cls, intermediate.ConcreteClass)
 
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.ConcreteClass):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
         container_cls = testgen.common.determine_container_class(
-            cls=symbol, test_data_dir=test_data_dir,
+            cls=our_type, test_data_dir=test_data_dir,
             environment_cls=environment_cls)
         container_cls_csharp = aas_core_codegen.csharp.naming.class_name(
             container_cls.name
         )
 
-        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
-        cls_name_json = aas_core_codegen.naming.json_model_type(symbol.name)
+        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
+        cls_name_json = aas_core_codegen.naming.json_model_type(our_type.name)
 
-        if container_cls is symbol:
+        if container_cls is our_type:
             blocks.extend(
                 _generate_for_self_contained(
                     cls_name_csharp=cls_name_csharp,

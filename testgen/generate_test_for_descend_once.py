@@ -20,17 +20,14 @@ from aas_core_codegen.csharp import (
 )
 
 import testgen.common
-from testgen.common import load_symbol_table
 
 
 def main() -> int:
     """Execute the main routine."""
-    symbol_table = load_symbol_table()
+    symbol_table = testgen.common.load_symbol_table()
 
     this_path = pathlib.Path(os.path.realpath(__file__))
     repo_root = this_path.parent.parent
-
-    test_data_dir = repo_root / "test_data"
 
     # noinspection PyListCreation
     blocks = []  # type: List[str]
@@ -100,16 +97,12 @@ private static void CompareOrRerecordTrace(
         )
     )
 
-    environment_cls = symbol_table.must_find(
-        aas_core_codegen.common.Identifier("Environment"))
-    assert isinstance(environment_cls, intermediate.ConcreteClass)
-
-    for symbol in symbol_table.symbols:
-        if not isinstance(symbol, intermediate.ConcreteClass):
+    for our_type in symbol_table.our_types:
+        if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
-        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(symbol.name)
-        cls_name_json = aas_core_codegen.naming.json_model_type(symbol.name)
+        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
+        cls_name_json = aas_core_codegen.naming.json_model_type(our_type.name)
 
         blocks.append(
             Stripped(
