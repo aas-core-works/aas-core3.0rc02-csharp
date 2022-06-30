@@ -277,6 +277,28 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_AasReferableNonIdentifiables_invalid
 
         [Test]
+        public void Test_AasReferables_valid()
+        {
+            var errors = Aas.Verification.VerifyAasReferables(
+                Aas.AasReferables.Referable).ToList();
+
+            Assert.IsEmpty(errors);
+        }  // void Test_AasReferables_valid
+
+        [Test]
+        public void Test_AasReferables_invalid()
+        {
+            int valueAsInt = -1;
+            Aas.AasReferables value = (Aas.AasReferables)valueAsInt;
+
+            var errors = Aas.Verification.VerifyAasReferables(
+                value).ToList();
+
+            Assert.AreEqual(1, errors.Count);
+            Assert.AreEqual("Invalid AasReferables: -1", errors[0].Cause);
+        }  // void Test_AasReferables_invalid
+
+        [Test]
         public void Test_GloballyIdentifiables_valid()
         {
             var errors = Aas.Verification.VerifyGloballyIdentifiables(
