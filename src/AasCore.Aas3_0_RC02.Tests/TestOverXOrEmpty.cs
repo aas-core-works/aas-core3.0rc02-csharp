@@ -192,6 +192,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_AssetAdministrationShell_OverSubmodelsOrEmpty_default
 
         [Test]
+        public void Test_AssetInformation_OverSpecificAssetIdsOrEmpty_non_default()
+        {
+            Aas.AssetInformation instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteAssetInformation());
+
+            int count = 0;
+            foreach (var _ in instance.OverSpecificAssetIdsOrEmpty())
+            {
+                count++;
+            }
+
+            Assert.Greater(count, 0);
+        }  // public void Test_AssetInformation_OverSpecificAssetIdsOrEmpty_non_default
+
+        [Test]
+        public void Test_AssetInformation_OverSpecificAssetIdsOrEmpty_default()
+        {
+            Aas.AssetInformation instance = (
+                Aas.Tests.CommonJsonization.LoadMinimalAssetInformation());
+
+            int count = 0;
+            foreach (var _ in instance.OverSpecificAssetIdsOrEmpty())
+            {
+                count++;
+            }
+
+            Assert.AreEqual(0, count);
+        }  // public void Test_AssetInformation_OverSpecificAssetIdsOrEmpty_default
+
+        [Test]
         public void Test_SpecificAssetId_OverSupplementalSemanticIdsOrEmpty_non_default()
         {
             Aas.SpecificAssetId instance = (

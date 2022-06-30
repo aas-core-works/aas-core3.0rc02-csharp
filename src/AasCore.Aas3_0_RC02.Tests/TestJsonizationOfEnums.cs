@@ -242,6 +242,25 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_round_trip_AasReferableNonIdentifiables
 
         [Test]
+        public void Test_round_trip_AasReferables()
+        {
+            var node = Nodes.JsonValue.Create(
+                "Referable")
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null node");
+
+            var parsed = Aas.Jsonization.Deserialize.AasReferablesFrom(
+                node);
+
+            var serialized = Aas.Jsonization.Serialize.AasReferablesToJsonValue(
+                parsed);
+
+            Assert.AreEqual(
+                "\"Referable\"",
+                serialized.ToJsonString());
+        }  // void Test_round_trip_AasReferables
+
+        [Test]
         public void Test_round_trip_GloballyIdentifiables()
         {
             var node = Nodes.JsonValue.Create(

@@ -7,5 +7,5 @@ Constraint AASd-107: If a first level child element has a semantic ID it shall b
 || (
     that.Value.All(
         child => !(child.SemanticId != null)
-            || Verification.ReferenceKeysAndTypeEqual(child.SemanticId, that.SemanticIdListElement))
+            || Verification.ReferenceKeyValuesEqual(child.SemanticId, that.SemanticIdListElement))
 )
