@@ -1,6 +1,6 @@
 conceptDescriptions[0]: Invariant violated:
 Constraint AASd-051: A concept description shall have one of the following categories: 'VALUE', 'PROPERTY', 'REFERENCE', 'DOCUMENT', 'CAPABILITY',; 'RELATIONSHIP', 'COLLECTION', 'FUNCTION', 'EVENT', 'ENTITY', 'APPLICATION_CLASS', 'QUALIFIER', 'VIEW'.
 !(that.Category != null)
-|| Verification.ConceptDescriptionCategoryIsValid(that.Category);
+|| Aas.Constants.ValidCategoriesForConceptDescription.Contains(that.Category);
 conceptDescriptions[0].category: Invariant violated:
 that.Length >= 1
