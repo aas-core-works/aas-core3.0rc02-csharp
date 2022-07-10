@@ -1,19 +1,16 @@
 <environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
-	<assetAdministrationShells>
-		<assetAdministrationShell>
-			<id>something_random_428f0205</id>
-			<derivedFrom>
+	<submodels>
+		<submodel>
+			<id>some_submodel</id>
+			<semanticId>
 				<type>invalid-literal</type>
 				<keys>
 					<key>
-						<type>AssetAdministrationShell</type>
-						<value>44e7dc4a</value>
+						<type>GlobalReference</type>
+						<value>something_random_920ea681</value>
 					</key>
 				</keys>
-			</derivedFrom>
-			<assetInformation>
-				<assetKind>Instance</assetKind>
-			</assetInformation>
-		</assetAdministrationShell>
-	</assetAdministrationShells>
+			</semanticId>
+		</submodel>
+	</submodels>
 </environment>

@@ -7,7 +7,7 @@
 				<value>something_random_3e686d1a</value>
 			</key>
 			<key>
-				<type>Referable</type>
+				<type>Blob</type>
 				<value>something_random_95803fdc</value>
 			</key>
 		</keys>
@@ -29,7 +29,7 @@
 				<value>something_random_b10c3750</value>
 			</key>
 			<key>
-				<type>Referable</type>
+				<type>Blob</type>
 				<value>something_random_65b526ce</value>
 			</key>
 		</keys>
