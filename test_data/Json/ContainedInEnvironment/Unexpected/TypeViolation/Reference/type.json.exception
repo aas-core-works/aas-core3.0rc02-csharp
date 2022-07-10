@@ -1,1 +1,1 @@
-Not a valid JSON representation of ReferenceTypes  at: assetAdministrationShells[0].derivedFrom.type
+Not a valid JSON representation of ReferenceTypes  at: submodels[0].semanticId.type

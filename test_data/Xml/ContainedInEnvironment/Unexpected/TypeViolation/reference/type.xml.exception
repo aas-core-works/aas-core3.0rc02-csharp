@@ -1,1 +1,1 @@
-The property Type of an instance of class Reference could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: *[0]/derivedFrom/type
+The property Type of an instance of class Reference could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: *[0]/semanticId/type

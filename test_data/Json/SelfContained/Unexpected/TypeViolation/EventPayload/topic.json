@@ -6,7 +6,7 @@
         "value": "something_random_b10c3750"
       },
       {
-        "type": "Referable",
+        "type": "Blob",
         "value": "something_random_65b526ce"
       }
     ],
@@ -29,7 +29,7 @@
         "value": "something_random_3e686d1a"
       },
       {
-        "type": "Referable",
+        "type": "Blob",
         "value": "something_random_95803fdc"
       }
     ],

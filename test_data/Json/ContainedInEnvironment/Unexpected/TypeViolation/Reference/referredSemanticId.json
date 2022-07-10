@@ -1,21 +1,18 @@
 {
-  "assetAdministrationShells": [
+  "submodels": [
     {
-      "assetInformation": {
-        "assetKind": "Instance"
-      },
-      "derivedFrom": {
+      "id": "some_submodel",
+      "modelType": "Submodel",
+      "semanticId": {
         "keys": [
           {
-            "type": "AssetAdministrationShell",
-            "value": "44e7dc4a"
+            "type": "GlobalReference",
+            "value": "something_random_920ea681"
           }
         ],
         "referredSemanticId": "Unexpected string value",
-        "type": "ModelReference"
-      },
-      "id": "something_random_428f0205",
-      "modelType": "AssetAdministrationShell"
+        "type": "GlobalReference"
+      }
     }
   ]
 }

@@ -1,1 +1,1 @@
-Required property "keys" is missing  at: assetAdministrationShells[0].derivedFrom
+Required property "keys" is missing  at: submodels[0].semanticId
