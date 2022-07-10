@@ -79,6 +79,28 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_AssetKind_invalid
 
         [Test]
+        public void Test_AasSubmodelElements_valid()
+        {
+            var errors = Aas.Verification.VerifyAasSubmodelElements(
+                Aas.AasSubmodelElements.AnnotatedRelationshipElement).ToList();
+
+            Assert.IsEmpty(errors);
+        }  // void Test_AasSubmodelElements_valid
+
+        [Test]
+        public void Test_AasSubmodelElements_invalid()
+        {
+            int valueAsInt = -1;
+            Aas.AasSubmodelElements value = (Aas.AasSubmodelElements)valueAsInt;
+
+            var errors = Aas.Verification.VerifyAasSubmodelElements(
+                value).ToList();
+
+            Assert.AreEqual(1, errors.Count);
+            Assert.AreEqual("Invalid AasSubmodelElements: -1", errors[0].Cause);
+        }  // void Test_AasSubmodelElements_invalid
+
+        [Test]
         public void Test_EntityType_valid()
         {
             var errors = Aas.Verification.VerifyEntityType(
@@ -167,182 +189,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_ReferenceTypes_invalid
 
         [Test]
-        public void Test_GenericFragmentKeys_valid()
-        {
-            var errors = Aas.Verification.VerifyGenericFragmentKeys(
-                Aas.GenericFragmentKeys.FragmentReference).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_GenericFragmentKeys_valid
-
-        [Test]
-        public void Test_GenericFragmentKeys_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.GenericFragmentKeys value = (Aas.GenericFragmentKeys)valueAsInt;
-
-            var errors = Aas.Verification.VerifyGenericFragmentKeys(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid GenericFragmentKeys: -1", errors[0].Cause);
-        }  // void Test_GenericFragmentKeys_invalid
-
-        [Test]
-        public void Test_GenericGloballyIdentifiables_valid()
-        {
-            var errors = Aas.Verification.VerifyGenericGloballyIdentifiables(
-                Aas.GenericGloballyIdentifiables.GlobalReference).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_GenericGloballyIdentifiables_valid
-
-        [Test]
-        public void Test_GenericGloballyIdentifiables_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.GenericGloballyIdentifiables value = (Aas.GenericGloballyIdentifiables)valueAsInt;
-
-            var errors = Aas.Verification.VerifyGenericGloballyIdentifiables(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid GenericGloballyIdentifiables: -1", errors[0].Cause);
-        }  // void Test_GenericGloballyIdentifiables_invalid
-
-        [Test]
-        public void Test_AasIdentifiables_valid()
-        {
-            var errors = Aas.Verification.VerifyAasIdentifiables(
-                Aas.AasIdentifiables.AssetAdministrationShell).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_AasIdentifiables_valid
-
-        [Test]
-        public void Test_AasIdentifiables_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.AasIdentifiables value = (Aas.AasIdentifiables)valueAsInt;
-
-            var errors = Aas.Verification.VerifyAasIdentifiables(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid AasIdentifiables: -1", errors[0].Cause);
-        }  // void Test_AasIdentifiables_invalid
-
-        [Test]
-        public void Test_AasSubmodelElements_valid()
-        {
-            var errors = Aas.Verification.VerifyAasSubmodelElements(
-                Aas.AasSubmodelElements.AnnotatedRelationshipElement).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_AasSubmodelElements_valid
-
-        [Test]
-        public void Test_AasSubmodelElements_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.AasSubmodelElements value = (Aas.AasSubmodelElements)valueAsInt;
-
-            var errors = Aas.Verification.VerifyAasSubmodelElements(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid AasSubmodelElements: -1", errors[0].Cause);
-        }  // void Test_AasSubmodelElements_invalid
-
-        [Test]
-        public void Test_AasReferableNonIdentifiables_valid()
-        {
-            var errors = Aas.Verification.VerifyAasReferableNonIdentifiables(
-                Aas.AasReferableNonIdentifiables.AnnotatedRelationshipElement).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_AasReferableNonIdentifiables_valid
-
-        [Test]
-        public void Test_AasReferableNonIdentifiables_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.AasReferableNonIdentifiables value = (Aas.AasReferableNonIdentifiables)valueAsInt;
-
-            var errors = Aas.Verification.VerifyAasReferableNonIdentifiables(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid AasReferableNonIdentifiables: -1", errors[0].Cause);
-        }  // void Test_AasReferableNonIdentifiables_invalid
-
-        [Test]
-        public void Test_AasReferables_valid()
-        {
-            var errors = Aas.Verification.VerifyAasReferables(
-                Aas.AasReferables.Referable).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_AasReferables_valid
-
-        [Test]
-        public void Test_AasReferables_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.AasReferables value = (Aas.AasReferables)valueAsInt;
-
-            var errors = Aas.Verification.VerifyAasReferables(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid AasReferables: -1", errors[0].Cause);
-        }  // void Test_AasReferables_invalid
-
-        [Test]
-        public void Test_GloballyIdentifiables_valid()
-        {
-            var errors = Aas.Verification.VerifyGloballyIdentifiables(
-                Aas.GloballyIdentifiables.GlobalReference).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_GloballyIdentifiables_valid
-
-        [Test]
-        public void Test_GloballyIdentifiables_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.GloballyIdentifiables value = (Aas.GloballyIdentifiables)valueAsInt;
-
-            var errors = Aas.Verification.VerifyGloballyIdentifiables(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid GloballyIdentifiables: -1", errors[0].Cause);
-        }  // void Test_GloballyIdentifiables_invalid
-
-        [Test]
-        public void Test_FragmentKeys_valid()
-        {
-            var errors = Aas.Verification.VerifyFragmentKeys(
-                Aas.FragmentKeys.FragmentReference).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_FragmentKeys_valid
-
-        [Test]
-        public void Test_FragmentKeys_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.FragmentKeys value = (Aas.FragmentKeys)valueAsInt;
-
-            var errors = Aas.Verification.VerifyFragmentKeys(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid FragmentKeys: -1", errors[0].Cause);
-        }  // void Test_FragmentKeys_invalid
-
-        [Test]
         public void Test_KeyTypes_valid()
         {
             var errors = Aas.Verification.VerifyKeyTypes(
@@ -385,50 +231,6 @@ namespace AasCore.Aas3_0_RC02.Tests
             Assert.AreEqual(1, errors.Count);
             Assert.AreEqual("Invalid DataTypeDefXsd: -1", errors[0].Cause);
         }  // void Test_DataTypeDefXsd_invalid
-
-        [Test]
-        public void Test_DataTypeDefRdf_valid()
-        {
-            var errors = Aas.Verification.VerifyDataTypeDefRdf(
-                Aas.DataTypeDefRdf.LangString).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_DataTypeDefRdf_valid
-
-        [Test]
-        public void Test_DataTypeDefRdf_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.DataTypeDefRdf value = (Aas.DataTypeDefRdf)valueAsInt;
-
-            var errors = Aas.Verification.VerifyDataTypeDefRdf(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid DataTypeDefRdf: -1", errors[0].Cause);
-        }  // void Test_DataTypeDefRdf_invalid
-
-        [Test]
-        public void Test_DataTypeDef_valid()
-        {
-            var errors = Aas.Verification.VerifyDataTypeDef(
-                Aas.DataTypeDef.AnyUri).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_DataTypeDef_valid
-
-        [Test]
-        public void Test_DataTypeDef_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.DataTypeDef value = (Aas.DataTypeDef)valueAsInt;
-
-            var errors = Aas.Verification.VerifyDataTypeDef(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid DataTypeDef: -1", errors[0].Cause);
-        }  // void Test_DataTypeDef_invalid
     }  // class TestVerificationOfEnums
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

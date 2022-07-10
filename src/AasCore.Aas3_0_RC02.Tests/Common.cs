@@ -74,6 +74,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "PatternViolation",
                 "InvalidValueExample",
                 "InvalidMinMaxExample",
+                "SetViolation",
                 "ConstraintViolation"
             });
 

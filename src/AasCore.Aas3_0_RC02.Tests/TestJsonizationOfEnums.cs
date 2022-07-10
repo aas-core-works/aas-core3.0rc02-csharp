@@ -71,6 +71,25 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_round_trip_AssetKind
 
         [Test]
+        public void Test_round_trip_AasSubmodelElements()
+        {
+            var node = Nodes.JsonValue.Create(
+                "AnnotatedRelationshipElement")
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null node");
+
+            var parsed = Aas.Jsonization.Deserialize.AasSubmodelElementsFrom(
+                node);
+
+            var serialized = Aas.Jsonization.Serialize.AasSubmodelElementsToJsonValue(
+                parsed);
+
+            Assert.AreEqual(
+                "\"AnnotatedRelationshipElement\"",
+                serialized.ToJsonString());
+        }  // void Test_round_trip_AasSubmodelElements
+
+        [Test]
         public void Test_round_trip_EntityType()
         {
             var node = Nodes.JsonValue.Create(
@@ -147,158 +166,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_round_trip_ReferenceTypes
 
         [Test]
-        public void Test_round_trip_GenericFragmentKeys()
-        {
-            var node = Nodes.JsonValue.Create(
-                "FragmentReference")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.GenericFragmentKeysFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.GenericFragmentKeysToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"FragmentReference\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_GenericFragmentKeys
-
-        [Test]
-        public void Test_round_trip_GenericGloballyIdentifiables()
-        {
-            var node = Nodes.JsonValue.Create(
-                "GlobalReference")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.GenericGloballyIdentifiablesFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.GenericGloballyIdentifiablesToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"GlobalReference\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_GenericGloballyIdentifiables
-
-        [Test]
-        public void Test_round_trip_AasIdentifiables()
-        {
-            var node = Nodes.JsonValue.Create(
-                "AssetAdministrationShell")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.AasIdentifiablesFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.AasIdentifiablesToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"AssetAdministrationShell\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_AasIdentifiables
-
-        [Test]
-        public void Test_round_trip_AasSubmodelElements()
-        {
-            var node = Nodes.JsonValue.Create(
-                "AnnotatedRelationshipElement")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.AasSubmodelElementsFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.AasSubmodelElementsToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"AnnotatedRelationshipElement\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_AasSubmodelElements
-
-        [Test]
-        public void Test_round_trip_AasReferableNonIdentifiables()
-        {
-            var node = Nodes.JsonValue.Create(
-                "AnnotatedRelationshipElement")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.AasReferableNonIdentifiablesFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.AasReferableNonIdentifiablesToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"AnnotatedRelationshipElement\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_AasReferableNonIdentifiables
-
-        [Test]
-        public void Test_round_trip_AasReferables()
-        {
-            var node = Nodes.JsonValue.Create(
-                "Referable")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.AasReferablesFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.AasReferablesToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"Referable\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_AasReferables
-
-        [Test]
-        public void Test_round_trip_GloballyIdentifiables()
-        {
-            var node = Nodes.JsonValue.Create(
-                "GlobalReference")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.GloballyIdentifiablesFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.GloballyIdentifiablesToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"GlobalReference\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_GloballyIdentifiables
-
-        [Test]
-        public void Test_round_trip_FragmentKeys()
-        {
-            var node = Nodes.JsonValue.Create(
-                "FragmentReference")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.FragmentKeysFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.FragmentKeysToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"FragmentReference\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_FragmentKeys
-
-        [Test]
         public void Test_round_trip_KeyTypes()
         {
             var node = Nodes.JsonValue.Create(
@@ -335,44 +202,6 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "\"xs:anyURI\"",
                 serialized.ToJsonString());
         }  // void Test_round_trip_DataTypeDefXsd
-
-        [Test]
-        public void Test_round_trip_DataTypeDefRdf()
-        {
-            var node = Nodes.JsonValue.Create(
-                "rdf:langString")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.DataTypeDefRdfFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.DataTypeDefRdfToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"rdf:langString\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_DataTypeDefRdf
-
-        [Test]
-        public void Test_round_trip_DataTypeDef()
-        {
-            var node = Nodes.JsonValue.Create(
-                "xs:anyURI")
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected null node");
-
-            var parsed = Aas.Jsonization.Deserialize.DataTypeDefFrom(
-                node);
-
-            var serialized = Aas.Jsonization.Serialize.DataTypeDefToJsonValue(
-                parsed);
-
-            Assert.AreEqual(
-                "\"xs:anyURI\"",
-                serialized.ToJsonString());
-        }  // void Test_round_trip_DataTypeDef
     }  // class TestJsonizationOfEnums
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

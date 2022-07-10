@@ -2,7 +2,7 @@
   "conceptDescriptions": [
     {
       "administration": "Unexpected string value",
-      "category": "VALUE",
+      "category": "DOCUMENT",
       "checksum": "something_random_3362add6",
       "dataSpecifications": [
         {

@@ -2,7 +2,7 @@
 	<conceptDescriptions>
 		<conceptDescription>
 			<extensions>Unexpected string value</extensions>
-			<category>VALUE</category>
+			<category>DOCUMENT</category>
 			<idShort>Z0</idShort>
 			<displayName>
 				<langStrings>
