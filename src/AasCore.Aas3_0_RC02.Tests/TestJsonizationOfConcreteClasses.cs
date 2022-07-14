@@ -106,8 +106,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Extension"
                 ),
@@ -137,18 +137,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Extension");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Extension for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -183,19 +183,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Extension"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Extension for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -222,8 +222,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "AdministrativeInformation"
                 ),
@@ -253,18 +253,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AdministrativeInformation");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AdministrativeInformation for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -299,19 +299,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AdministrativeInformation"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AdministrativeInformation for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -338,8 +338,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Qualifier"
                 ),
@@ -369,18 +369,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Qualifier");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Qualifier for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -415,19 +415,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Qualifier"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Qualifier for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -454,8 +454,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "AssetAdministrationShell"
                 ),
@@ -485,18 +485,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AssetAdministrationShell");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AssetAdministrationShell for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -531,19 +531,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AssetAdministrationShell"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AssetAdministrationShell for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -570,8 +570,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "AssetInformation"
                 ),
@@ -601,18 +601,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AssetInformation");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AssetInformation for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -647,19 +647,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AssetInformation"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AssetInformation for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -686,8 +686,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Resource"
                 ),
@@ -717,18 +717,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Resource");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Resource for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -763,19 +763,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Resource"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Resource for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -802,8 +802,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "SpecificAssetId"
                 ),
@@ -833,18 +833,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "SpecificAssetId");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of SpecificAssetId for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -879,19 +879,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "SpecificAssetId"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of SpecificAssetId for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -918,8 +918,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Submodel"
                 ),
@@ -949,18 +949,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Submodel");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Submodel for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -995,19 +995,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Submodel"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Submodel for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1034,8 +1034,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "RelationshipElement"
                 ),
@@ -1065,18 +1065,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "RelationshipElement");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of RelationshipElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1111,19 +1111,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "RelationshipElement"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of RelationshipElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1150,8 +1150,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "SubmodelElementList"
                 ),
@@ -1181,18 +1181,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "SubmodelElementList");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of SubmodelElementList for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1227,19 +1227,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "SubmodelElementList"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of SubmodelElementList for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1266,8 +1266,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "SubmodelElementCollection"
                 ),
@@ -1297,18 +1297,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "SubmodelElementCollection");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of SubmodelElementCollection for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1343,19 +1343,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "SubmodelElementCollection"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of SubmodelElementCollection for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1382,8 +1382,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Property"
                 ),
@@ -1413,18 +1413,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Property");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Property for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1459,19 +1459,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Property"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Property for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1498,8 +1498,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "MultiLanguageProperty"
                 ),
@@ -1529,18 +1529,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "MultiLanguageProperty");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of MultiLanguageProperty for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1575,19 +1575,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "MultiLanguageProperty"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of MultiLanguageProperty for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1614,8 +1614,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Range"
                 ),
@@ -1645,18 +1645,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Range");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Range for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1691,19 +1691,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Range"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Range for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1730,8 +1730,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "ReferenceElement"
                 ),
@@ -1761,18 +1761,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "ReferenceElement");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of ReferenceElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1807,19 +1807,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "ReferenceElement"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of ReferenceElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1846,8 +1846,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Blob"
                 ),
@@ -1877,18 +1877,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Blob");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Blob for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1923,19 +1923,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Blob"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Blob for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -1962,8 +1962,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "File"
                 ),
@@ -1993,18 +1993,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "File");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of File for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2039,19 +2039,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "File"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of File for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2078,8 +2078,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "AnnotatedRelationshipElement"
                 ),
@@ -2109,18 +2109,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AnnotatedRelationshipElement");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AnnotatedRelationshipElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2155,19 +2155,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "AnnotatedRelationshipElement"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of AnnotatedRelationshipElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2194,8 +2194,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Entity"
                 ),
@@ -2225,18 +2225,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Entity");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Entity for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2271,19 +2271,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Entity"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Entity for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2310,8 +2310,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "SelfContained",
+                    "Json", 
+                    "SelfContained", 
                     "Expected",
                     "EventPayload"
                 ),
@@ -2341,19 +2341,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "SelfContained",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
                     "EventPayload"
                 );
-
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of EventPayload for the failure cause.
                     continue;
-                }
-
+                } 
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2388,19 +2388,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "SelfContained",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
                     "EventPayload"
                 );
-
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of EventPayload for the failure cause.
                     continue;
                 }
-
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2413,7 +2413,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                     var instance = Aas.Jsonization.Deserialize.EventPayloadFrom(
                         node);
-
+ 
                     var errors = Aas.Verification.Verify(instance).ToList();
                     Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                         errors, path);
@@ -2427,8 +2427,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "BasicEventElement"
                 ),
@@ -2458,18 +2458,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "BasicEventElement");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of BasicEventElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2504,19 +2504,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "BasicEventElement"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of BasicEventElement for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2543,8 +2543,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Operation"
                 ),
@@ -2574,18 +2574,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Operation");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Operation for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2620,19 +2620,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Operation"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Operation for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2659,8 +2659,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "OperationVariable"
                 ),
@@ -2690,18 +2690,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "OperationVariable");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of OperationVariable for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2736,19 +2736,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "OperationVariable"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of OperationVariable for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2775,8 +2775,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Capability"
                 ),
@@ -2806,18 +2806,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Capability");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Capability for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2852,19 +2852,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Capability"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Capability for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2891,8 +2891,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "ConceptDescription"
                 ),
@@ -2922,18 +2922,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "ConceptDescription");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of ConceptDescription for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -2968,19 +2968,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "ConceptDescription"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of ConceptDescription for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3007,8 +3007,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Reference"
                 ),
@@ -3038,18 +3038,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Reference");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Reference for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3084,19 +3084,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Reference"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Reference for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3123,8 +3123,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "Key"
                 ),
@@ -3154,18 +3154,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Key");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Key for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3200,19 +3200,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "Key"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Key for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3239,8 +3239,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "LangString"
                 ),
@@ -3270,18 +3270,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "LangString");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of LangString for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3316,19 +3316,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "LangString"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of LangString for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3355,8 +3355,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "ContainedInEnvironment", 
                     "Expected",
                     "LangStringSet"
                 ),
@@ -3386,18 +3386,18 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "LangStringSet");
-
+            
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of LangStringSet for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3432,19 +3432,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "ContainedInEnvironment", 
+                    "Unexpected", 
                     cause,
                     "LangStringSet"
                 );
-
+    
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of LangStringSet for the failure cause.
                     continue;
                 }
-
+    
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3471,8 +3471,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "SelfContained", 
                     "Expected",
                     "DataSpecificationContent"
                 ),
@@ -3484,14 +3484,14 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                var instance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                     node);
 
-                var errors = Aas.Verification.Verify(container).ToList();
+                var errors = Aas.Verification.Verify(instance).ToList();
                 Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
 
                 AssertSerializeDeserializeEqualsOriginal(
-                    node, container, path);
+                    node, instance, path);
             }
         }  // public void Test_DataSpecificationContent_ok
 
@@ -3502,18 +3502,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
-                    "DataSpecificationContent");
-
+                    "DataSpecificationContent"
+                );
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of DataSpecificationContent for the failure cause.
                     continue;
-                }
-
+                } 
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3527,7 +3528,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                     Aas.Jsonization.Exception? exception = null;
                     try
                     {
-                        var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                        var _ = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                             node);
                     }
                     catch (Aas.Jsonization.Exception observedException)
@@ -3548,19 +3549,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
                     "DataSpecificationContent"
                 );
-
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of DataSpecificationContent for the failure cause.
                     continue;
                 }
-
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3571,10 +3572,10 @@ namespace AasCore.Aas3_0_RC02.Tests
                 {
                     var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                    var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    var instance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                         node);
-
-                    var errors = Aas.Verification.Verify(container).ToList();
+ 
+                    var errors = Aas.Verification.Verify(instance).ToList();
                     Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                         errors, path);
                 }
@@ -3587,8 +3588,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "Json", 
+                    "SelfContained", 
                     "Expected",
                     "DataSpecification"
                 ),
@@ -3600,14 +3601,14 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                var instance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                     node);
 
-                var errors = Aas.Verification.Verify(container).ToList();
+                var errors = Aas.Verification.Verify(instance).ToList();
                 Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
 
                 AssertSerializeDeserializeEqualsOriginal(
-                    node, container, path);
+                    node, instance, path);
             }
         }  // public void Test_DataSpecification_ok
 
@@ -3618,18 +3619,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
-                    "DataSpecification");
-
+                    "DataSpecification"
+                );
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of DataSpecification for the failure cause.
                     continue;
-                }
-
+                } 
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3643,7 +3645,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                     Aas.Jsonization.Exception? exception = null;
                     try
                     {
-                        var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                        var _ = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                             node);
                     }
                     catch (Aas.Jsonization.Exception observedException)
@@ -3664,19 +3666,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
                     "DataSpecification"
                 );
-
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of DataSpecification for the failure cause.
                     continue;
                 }
-
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3687,10 +3689,10 @@ namespace AasCore.Aas3_0_RC02.Tests
                 {
                     var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                    var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    var instance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                         node);
-
-                    var errors = Aas.Verification.Verify(container).ToList();
+ 
+                    var errors = Aas.Verification.Verify(instance).ToList();
                     Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                         errors, path);
                 }
@@ -3703,8 +3705,8 @@ namespace AasCore.Aas3_0_RC02.Tests
             var paths = Directory.GetFiles(
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "SelfContained",
+                    "Json", 
+                    "SelfContained", 
                     "Expected",
                     "Environment"
                 ),
@@ -3734,19 +3736,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "SelfContained",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
                     "Environment"
                 );
-
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Environment for the failure cause.
                     continue;
-                }
-
+                } 
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3781,19 +3783,19 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "SelfContained",
-                    "Unexpected",
+                    "Json", 
+                    "SelfContained", 
+                    "Unexpected", 
                     cause,
                     "Environment"
                 );
-
+         
                 if (!Directory.Exists(baseDir))
                 {
                     // No examples of Environment for the failure cause.
                     continue;
                 }
-
+        
                 var paths = Directory.GetFiles(
                     baseDir,
                     "*.json",
@@ -3806,7 +3808,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                     var instance = Aas.Jsonization.Deserialize.EnvironmentFrom(
                         node);
-
+ 
                     var errors = Aas.Verification.Verify(instance).ToList();
                     Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                         errors, path);

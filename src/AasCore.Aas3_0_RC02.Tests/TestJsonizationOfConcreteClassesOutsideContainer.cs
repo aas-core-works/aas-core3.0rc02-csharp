@@ -26,10 +26,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteExtension();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.ExtensionFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -55,10 +55,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAdministrativeInformation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.AdministrativeInformationFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -84,10 +84,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteQualifier();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.QualifierFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -113,10 +113,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.AssetAdministrationShellFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -142,10 +142,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetInformation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.AssetInformationFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -171,10 +171,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteResource();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.ResourceFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -200,10 +200,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSpecificAssetId();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.SpecificAssetIdFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -229,10 +229,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.SubmodelFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -258,10 +258,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.RelationshipElementFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -287,10 +287,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.SubmodelElementListFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -316,10 +316,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.SubmodelElementCollectionFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -345,10 +345,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.PropertyFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -374,10 +374,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.MultiLanguagePropertyFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -403,10 +403,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.RangeFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -432,10 +432,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.ReferenceElementFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -461,10 +461,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.BlobFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -490,10 +490,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.FileFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -519,10 +519,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.AnnotatedRelationshipElementFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -548,10 +548,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.EntityFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -577,10 +577,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.BasicEventElementFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -606,10 +606,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.OperationFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -635,10 +635,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteOperationVariable();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.OperationVariableFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -664,10 +664,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.CapabilityFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -693,10 +693,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.ConceptDescriptionFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -722,10 +722,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteReference();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.ReferenceFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -751,10 +751,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteKey();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.KeyFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -780,10 +780,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteLangString();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.LangStringFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -809,10 +809,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             var instance = Aas.Tests.CommonJsonization.LoadCompleteLangStringSet();
 
             var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
+    
             var anotherInstance = Aas.Jsonization.Deserialize.LangStringSetFrom(
                 jsonObject);
-
+    
             var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
                 anotherInstance);
 
@@ -831,64 +831,6 @@ namespace AasCore.Aas3_0_RC02.Tests
                 );
             }
         }  // public void Test_round_trip_LangStringSet
-
-        [Test]
-        public void Test_round_trip_DataSpecificationContent()
-        {
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent();
-
-            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
-            var anotherInstance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
-                jsonObject);
-
-            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
-                anotherInstance);
-
-            Aas.Tests.CommonJson.CheckJsonNodesEqual(
-                jsonObject,
-                anotherJsonObject,
-                out Aas.Reporting.Error? error);
-
-            if (error != null)
-            {
-                Assert.Fail(
-                    "When we de/serialize the complete instance " +
-                    "as DataSpecificationContent, we get an error in the round trip: " +
-                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
-                    error.Cause
-                );
-            }
-        }  // public void Test_round_trip_DataSpecificationContent
-
-        [Test]
-        public void Test_round_trip_DataSpecification()
-        {
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecification();
-
-            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
-            var anotherInstance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
-                jsonObject);
-
-            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
-                anotherInstance);
-
-            Aas.Tests.CommonJson.CheckJsonNodesEqual(
-                jsonObject,
-                anotherJsonObject,
-                out Aas.Reporting.Error? error);
-
-            if (error != null)
-            {
-                Assert.Fail(
-                    "When we de/serialize the complete instance " +
-                    "as DataSpecification, we get an error in the round trip: " +
-                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
-                    error.Cause
-                );
-            }
-        }  // public void Test_round_trip_DataSpecification
     }  // class TestJsonizationOfConcreteClassesOutsideContainer
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

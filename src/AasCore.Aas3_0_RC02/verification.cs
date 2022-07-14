@@ -1416,514 +1416,505 @@ namespace AasCore.Aas3_0_RC02
             switch (valueType)
             {
                 case Aas.DataTypeDefXsd.AnyUri:
-                    {
-                        return MatchesXsAnyUri(value);
-                    }
+                {
+                    return MatchesXsAnyUri(value);
+                }
                 case Aas.DataTypeDefXsd.Base64Binary:
-                    {
-                        return MatchesXsBase64Binary(value);
-                    }
+                {
+                    return MatchesXsBase64Binary(value);
+                }
                 case Aas.DataTypeDefXsd.Boolean:
-                    {
-                        return MatchesXsBoolean(value);
-                    }
+                {
+                    return MatchesXsBoolean(value);
+                }
                 case Aas.DataTypeDefXsd.Date:
+                {
+                    if (!MatchesXsDate(value))
                     {
-                        if (!MatchesXsDate(value))
-                        {
-                            return false;
-                        }
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.DateTime.ParseExact(
-                                ClipToDate(value),
-                                XsDateFormats,
-                                System.Globalization.CultureInfo.InvariantCulture,
-                                System.Globalization.DateTimeStyles.None);
-                            return true;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.DateTime.ParseExact(
+                            ClipToDate(value),
+                            XsDateFormats,
+                            System.Globalization.CultureInfo.InvariantCulture,
+                            System.Globalization.DateTimeStyles.None );
+                        return true;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.DateTime:
+                {
+                    if (!MatchesXsDateTime(value))
                     {
-                        if (!MatchesXsDateTime(value))
-                        {
-                            return false;
-                        }
-
-                        // The time part and the time zone part will be checked by
-                        // MatchesXsDateTime. We need to check that the date part is
-                        // correct in sense of the day/month combination.
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.DateTime.ParseExact(
-                                ClipToDate(value),
-                                XsDateFormats,
-                                System.Globalization.CultureInfo.InvariantCulture,
-                                System.Globalization.DateTimeStyles.None);
-                            return true;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    // The time part and the time zone part will be checked by
+                    // MatchesXsDateTime. We need to check that the date part is
+                    // correct in sense of the day/month combination.
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.DateTime.ParseExact(
+                            ClipToDate(value),
+                            XsDateFormats,
+                            System.Globalization.CultureInfo.InvariantCulture,
+                            System.Globalization.DateTimeStyles.None );
+                        return true;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.DateTimeStamp:
+                {
+                    if (!MatchesXsDateTimeStamp(value))
                     {
-                        if (!MatchesXsDateTimeStamp(value))
-                        {
-                            return false;
-                        }
-
-                        // The time part and the time zone part will be checked by
-                        // MatchesXsDateTimeStamp. We need to check that the date part is
-                        // correct in sense of the day/month combination.
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.DateTime.ParseExact(
-                                ClipToDate(value),
-                                XsDateFormats,
-                                System.Globalization.CultureInfo.InvariantCulture,
-                                System.Globalization.DateTimeStyles.None);
-                            return true;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    // The time part and the time zone part will be checked by
+                    // MatchesXsDateTimeStamp. We need to check that the date part is
+                    // correct in sense of the day/month combination.
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.DateTime.ParseExact(
+                            ClipToDate(value),
+                            XsDateFormats,
+                            System.Globalization.CultureInfo.InvariantCulture,
+                            System.Globalization.DateTimeStyles.None );
+                        return true;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.Decimal:
-                    {
-                        return MatchesXsDecimal(value);
-                    }
+                {
+                    return MatchesXsDecimal(value);
+                }
                 case Aas.DataTypeDefXsd.Double:
+                {
+                    // We need to check explicitly for the regular expression since
+                    // System.Xml.XmlConvert.ToDouble is too permissive. For example,
+                    // it accepts "nan" although only "NaN" is valid.
+                    // See: https://www.w3.org/TR/xmlschema-2/#double
+                    if (!MatchesXsDouble(value))
                     {
-                        // We need to check explicitly for the regular expression since
-                        // System.Xml.XmlConvert.ToDouble is too permissive. For example,
-                        // it accepts "nan" although only "NaN" is valid.
-                        // See: https://www.w3.org/TR/xmlschema-2/#double
-                        if (!MatchesXsDouble(value))
-                        {
-                            return false;
-                        }
-
-                        double converted;
-                        try
-                        {
-                            converted = System.Xml.XmlConvert.ToDouble(value);
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
-
-                        if (System.Double.IsInfinity(converted))
-                        {
-                            // Check that the value is either "INF" or "-INF".
-                            // Otherwise, the value is a decimal which is too big
-                            // to be represented as a double-precision floating point
-                            // number.
-                            //
-                            // Earlier C# used to throw an exception in this case. Today it
-                            // simply rounds the parsed value to infinity. In the context
-                            // of data exchange formats (such as AAS), this can cause
-                            // critical errors, so we check for this edge case explicitly.
-                            if (value.Length == 3)
-                            {
-                                return value == "INF";
-                            }
-                            else if (value.Length == 4)
-                            {
-                                return value == "-INF";
-                            }
-                            else
-                            {
-                                return false;
-                            }
-                        }
-                        return true;
+                        return false;
                     }
+
+                    double converted;
+                    try
+                    {
+                        converted = System.Xml.XmlConvert.ToDouble(value);
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+
+                    if (System.Double.IsInfinity(converted))
+                    {
+                        // Check that the value is either "INF" or "-INF".
+                        // Otherwise, the value is a decimal which is too big
+                        // to be represented as a double-precision floating point
+                        // number.
+                        //
+                        // Earlier C# used to throw an exception in this case. Today it
+                        // simply rounds the parsed value to infinity. In the context
+                        // of data exchange formats (such as AAS), this can cause
+                        // critical errors, so we check for this edge case explicitly.
+                        if (value.Length == 3)
+                        {
+                            return value == "INF";
+                        }
+                        else if (value.Length == 4)
+                        {
+                            return value == "-INF";
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
                 case Aas.DataTypeDefXsd.Duration:
-                    {
-                        return MatchesXsDuration(value);
-                    }
+                {
+                    return MatchesXsDuration(value);
+                }
                 case Aas.DataTypeDefXsd.Float:
+                {
+                    // We need to check explicitly for the regular expression since
+                    // System.Xml.XmlConvert.ToSingle is too permissive. For example,
+                    // it accepts "nan" although only "NaN" is valid.
+                    // See: https://www.w3.org/TR/xmlschema-2/#float
+                    if (!MatchesXsFloat(value))
                     {
-                        // We need to check explicitly for the regular expression since
-                        // System.Xml.XmlConvert.ToSingle is too permissive. For example,
-                        // it accepts "nan" although only "NaN" is valid.
-                        // See: https://www.w3.org/TR/xmlschema-2/#float
-                        if (!MatchesXsFloat(value))
+                        return false;
+                    }
+
+                    float converted;
+                    try
+                    {
+                        converted = System.Xml.XmlConvert.ToSingle(value);
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+
+                    if (System.Single.IsInfinity(converted))
+                    {
+                        // Check that the value is either "INF" or "-INF".
+                        // Otherwise, the value is a decimal which is too big
+                        // to be represented as a single-precision floating point
+                        // number.
+                        //
+                        // Earlier C# used to throw an exception in this case. Today it
+                        // simply rounds the parsed value to infinity. In the context
+                        // of data exchange formats (such as AAS), this can cause
+                        // critical errors, so we check for this edge case explicitly.
+                        if (value.Length == 3)
+                        {
+                            return value == "INF";
+                        }
+                        else if (value.Length == 4)
+                        {
+                            return value == "-INF";
+                        }
+                        else
                         {
                             return false;
                         }
+                    }
+                    return true;
+                }
+                case Aas.DataTypeDefXsd.GDay:
+                {
+                    return MatchesXsGDay(value);
+                }
+                case Aas.DataTypeDefXsd.GMonth:
+                {
+                    return MatchesXsGMonth(value);
+                }
+                case Aas.DataTypeDefXsd.GMonthDay:
+                {
+                    if (!MatchesXsGMonthDay(value))
+                    {
+                        return false;
+                    }
 
-                        float converted;
-                        try
-                        {
-                            converted = System.Xml.XmlConvert.ToSingle(value);
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
-
-                        if (System.Single.IsInfinity(converted))
-                        {
-                            // Check that the value is either "INF" or "-INF".
-                            // Otherwise, the value is a decimal which is too big
-                            // to be represented as a single-precision floating point
-                            // number.
-                            //
-                            // Earlier C# used to throw an exception in this case. Today it
-                            // simply rounds the parsed value to infinity. In the context
-                            // of data exchange formats (such as AAS), this can cause
-                            // critical errors, so we check for this edge case explicitly.
-                            if (value.Length == 3)
-                            {
-                                return value == "INF";
-                            }
-                            else if (value.Length == 4)
-                            {
-                                return value == "-INF";
-                            }
-                            else
-                            {
-                                return false;
-                            }
-                        }
+                    var month = int.Parse(value.Substring(2,2));
+                    var day = int.Parse(value.Substring(5,2));
+                    switch (month)
+                    {
+                        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                            return day <= 31;
+                        case 4: case 6: case 9: case 11:
+                            return day <= 30;
+                        case 2:
+                            return day <= 29;
+                        default:
+                            throw new System.InvalidOperationException(
+                                $"Unhandled month: {month}; " +
+                                "is there maybe a bug in MatchesXsGMonthDay?"
+                            );
+                    }
+                }
+                case Aas.DataTypeDefXsd.GYear:
+                {
+                    return MatchesXsGYear(value);
+                }
+                case Aas.DataTypeDefXsd.GYearMonth:
+                {
+                    return MatchesXsGYearMonth(value);
+                }
+                case Aas.DataTypeDefXsd.HexBinary:
+                {
+                    return MatchesXsHexBinary(value);
+                }
+                case Aas.DataTypeDefXsd.String:
+                {
+                    return MatchesXsString(value);
+                }
+                case Aas.DataTypeDefXsd.Time:
+                {
+                    return MatchesXsTime(value);
+                }
+                case Aas.DataTypeDefXsd.DayTimeDuration:
+                {
+                    return MatchesXsDayTimeDuration(value);
+                }
+                case Aas.DataTypeDefXsd.YearMonthDuration:
+                {
+                    return MatchesXsYearMonthDuration(value);
+                }
+                case Aas.DataTypeDefXsd.Integer:
+                {
+                    return MatchesXsInteger(value);
+                }
+                case Aas.DataTypeDefXsd.Long:
+                {
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToInt64(value);
                         return true;
                     }
-                case Aas.DataTypeDefXsd.GDay:
+                    catch (System.OverflowException)
                     {
-                        return MatchesXsGDay(value);
+                        return false;
                     }
-                case Aas.DataTypeDefXsd.GMonth:
+                    catch (System.FormatException)
                     {
-                        return MatchesXsGMonth(value);
+                        return false;
                     }
-                case Aas.DataTypeDefXsd.GMonthDay:
-                    {
-                        if (!MatchesXsGMonthDay(value))
-                        {
-                            return false;
-                        }
-
-                        var month = int.Parse(value.Substring(2, 2));
-                        var day = int.Parse(value.Substring(5, 2));
-                        switch (month)
-                        {
-                            case 1:
-                            case 3:
-                            case 5:
-                            case 7:
-                            case 8:
-                            case 10:
-                            case 12:
-                                return day <= 31;
-                            case 4:
-                            case 6:
-                            case 9:
-                            case 11:
-                                return day <= 30;
-                            case 2:
-                                return day <= 29;
-                            default:
-                                throw new System.InvalidOperationException(
-                                    $"Unhandled month: {month}; " +
-                                    "is there maybe a bug in MatchesXsGMonthDay?"
-                                );
-                        }
-                    }
-                case Aas.DataTypeDefXsd.GYear:
-                    {
-                        return MatchesXsGYear(value);
-                    }
-                case Aas.DataTypeDefXsd.GYearMonth:
-                    {
-                        return MatchesXsGYearMonth(value);
-                    }
-                case Aas.DataTypeDefXsd.HexBinary:
-                    {
-                        return MatchesXsHexBinary(value);
-                    }
-                case Aas.DataTypeDefXsd.String:
-                    {
-                        return MatchesXsString(value);
-                    }
-                case Aas.DataTypeDefXsd.Time:
-                    {
-                        return MatchesXsTime(value);
-                    }
-                case Aas.DataTypeDefXsd.DayTimeDuration:
-                    {
-                        return MatchesXsDayTimeDuration(value);
-                    }
-                case Aas.DataTypeDefXsd.YearMonthDuration:
-                    {
-                        return MatchesXsYearMonthDuration(value);
-                    }
-                case Aas.DataTypeDefXsd.Integer:
-                    {
-                        return MatchesXsInteger(value);
-                    }
-                case Aas.DataTypeDefXsd.Long:
-                    {
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToInt64(value);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
-                    }
+                }
                 case Aas.DataTypeDefXsd.Int:
+                {
+                    try
                     {
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToInt32(value);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToInt32(value);
+                        return true;
                     }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.Short:
+                {
+                    try
                     {
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToInt16(value);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToInt16(value);
+                        return true;
                     }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.Byte:
+                {
+                    try
                     {
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToSByte(value);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToSByte(value);
+                        return true;
                     }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.NonNegativeInteger:
-                    {
-                        return MatchesXsNonNegativeInteger(value);
-                    }
+                {
+                    return MatchesXsNonNegativeInteger(value);
+                }
                 case Aas.DataTypeDefXsd.PositiveInteger:
-                    {
-                        return MatchesXsPositiveInteger(value);
-                    }
+                {
+                    return MatchesXsPositiveInteger(value);
+                }
                 case Aas.DataTypeDefXsd.UnsignedLong:
+                {
+                    if (value.Length == 0)
                     {
-                        if (value.Length == 0)
-                        {
-                            return false;
-                        }
-
-                        // We need to allow negative zeros which are allowed in the lexical
-                        // representation of an unsigned long, but System.Xml.XmlConvert.ToUInt64
-                        // rejects it.
-                        // See: https://www.w3.org/TR/xmlschema11-2/#unsignedLong
-                        if (value == "-0")
-                        {
-                            return true;
-                        }
-
-                        // We need to strip the prefix positive sign since
-                        // System.Xml.XmlConvert.ToUInt64 does not adhere to lexical representation
-                        // of an unsigned long.
-                        //
-                        // The positive sign is indeed allowed in the lexical representation, see:
-                        // https://www.w3.org/TR/xmlschema11-2/#unsignedLong
-                        string clipped = (value[0] == '+')
-                            ? value.Substring(1, value.Length - 1)
-                            : value;
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToUInt64(clipped);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    // We need to allow negative zeros which are allowed in the lexical
+                    // representation of an unsigned long, but System.Xml.XmlConvert.ToUInt64
+                    // rejects it.
+                    // See: https://www.w3.org/TR/xmlschema11-2/#unsignedLong
+                    if (value == "-0")
+                    {
+                        return true;
+                    }
+
+                    // We need to strip the prefix positive sign since
+                    // System.Xml.XmlConvert.ToUInt64 does not adhere to lexical representation
+                    // of an unsigned long.
+                    //
+                    // The positive sign is indeed allowed in the lexical representation, see:
+                    // https://www.w3.org/TR/xmlschema11-2/#unsignedLong
+                    string clipped = (value[0] == '+')
+                        ? value.Substring(1, value.Length - 1)
+                        : value;
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToUInt64(clipped);
+                        return true;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.UnsignedInt:
+                {
+                    if (value.Length == 0)
                     {
-                        if (value.Length == 0)
-                        {
-                            return false;
-                        }
-
-                        // We need to allow negative zeros which are allowed in the lexical
-                        // representation of an unsigned int, but System.Xml.XmlConvert.ToUInt32
-                        // rejects it.
-                        // See: https://www.w3.org/TR/xmlschema11-2/#unsignedInt
-                        if (value == "-0")
-                        {
-                            return true;
-                        }
-
-                        // We need to strip the prefix positive sign since
-                        // System.Xml.XmlConvert.ToUInt32 does not adhere to lexical representation
-                        // of an unsigned int.
-                        //
-                        // The positive sign is indeed allowed in the lexical representation, see:
-                        // https://www.w3.org/TR/xmlschema11-2/#unsignedInt
-                        string clipped = (value[0] == '+')
-                            ? value.Substring(1, value.Length - 1)
-                            : value;
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToUInt32(clipped);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    // We need to allow negative zeros which are allowed in the lexical
+                    // representation of an unsigned int, but System.Xml.XmlConvert.ToUInt32
+                    // rejects it.
+                    // See: https://www.w3.org/TR/xmlschema11-2/#unsignedInt
+                    if (value == "-0")
+                    {
+                        return true;
+                    }
+
+                    // We need to strip the prefix positive sign since
+                    // System.Xml.XmlConvert.ToUInt32 does not adhere to lexical representation
+                    // of an unsigned int.
+                    //
+                    // The positive sign is indeed allowed in the lexical representation, see:
+                    // https://www.w3.org/TR/xmlschema11-2/#unsignedInt
+                    string clipped = (value[0] == '+')
+                        ? value.Substring(1, value.Length - 1)
+                        : value;
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToUInt32(clipped);
+                        return true;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.UnsignedShort:
+                {
+                    if (value.Length == 0)
                     {
-                        if (value.Length == 0)
-                        {
-                            return false;
-                        }
-
-                        // We need to allow negative zeros which are allowed in the lexical
-                        // representation of an unsigned short, but System.Xml.XmlConvert.ToUInt16
-                        // rejects it.
-                        // See: https://www.w3.org/TR/xmlschema11-2/#unsignedShort
-                        if (value == "-0")
-                        {
-                            return true;
-                        }
-
-                        // We need to strip the prefix positive sign since
-                        // System.Xml.XmlConvert.ToUInt16 does not adhere to lexical representation
-                        // of an unsigned short.
-                        //
-                        // The positive sign is indeed allowed in the lexical representation, see:
-                        // https://www.w3.org/TR/xmlschema11-2/#unsignedShort
-                        string clipped = (value[0] == '+')
-                            ? value.Substring(1, value.Length - 1)
-                            : value;
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToUInt16(clipped);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    // We need to allow negative zeros which are allowed in the lexical
+                    // representation of an unsigned short, but System.Xml.XmlConvert.ToUInt16
+                    // rejects it.
+                    // See: https://www.w3.org/TR/xmlschema11-2/#unsignedShort
+                    if (value == "-0")
+                    {
+                        return true;
+                    }
+
+                    // We need to strip the prefix positive sign since
+                    // System.Xml.XmlConvert.ToUInt16 does not adhere to lexical representation
+                    // of an unsigned short.
+                    //
+                    // The positive sign is indeed allowed in the lexical representation, see:
+                    // https://www.w3.org/TR/xmlschema11-2/#unsignedShort
+                    string clipped = (value[0] == '+')
+                        ? value.Substring(1, value.Length - 1)
+                        : value;
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToUInt16(clipped);
+                        return true;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.UnsignedByte:
+                {
+                    if (value.Length == 0)
                     {
-                        if (value.Length == 0)
-                        {
-                            return false;
-                        }
-
-                        // We need to allow negative zeros which are allowed in the lexical
-                        // representation of an unsigned byte, but System.Xml.XmlConvert.ToByte
-                        // rejects it.
-                        // See: https://www.w3.org/TR/xmlschema11-2/#unsignedByte
-                        if (value == "-0")
-                        {
-                            return true;
-                        }
-
-                        // We need to strip the prefix positive sign since
-                        // System.Xml.XmlConvert.ToByte does not adhere to lexical representation
-                        // of an unsigned byte.
-                        //
-                        // The positive sign is indeed allowed in the lexical representation, see:
-                        // https://www.w3.org/TR/xmlschema11-2/#unsignedByte
-                        string clipped = (value[0] == '+')
-                            ? value.Substring(1, value.Length - 1)
-                            : value;
-
-                        try
-                        {
-                            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-                            System.Xml.XmlConvert.ToByte(clipped);
-                            return true;
-                        }
-                        catch (System.OverflowException)
-                        {
-                            return false;
-                        }
-                        catch (System.FormatException)
-                        {
-                            return false;
-                        }
+                        return false;
                     }
+
+                    // We need to allow negative zeros which are allowed in the lexical
+                    // representation of an unsigned byte, but System.Xml.XmlConvert.ToByte
+                    // rejects it.
+                    // See: https://www.w3.org/TR/xmlschema11-2/#unsignedByte
+                    if (value == "-0")
+                    {
+                        return true;
+                    }
+
+                    // We need to strip the prefix positive sign since
+                    // System.Xml.XmlConvert.ToByte does not adhere to lexical representation
+                    // of an unsigned byte.
+                    //
+                    // The positive sign is indeed allowed in the lexical representation, see:
+                    // https://www.w3.org/TR/xmlschema11-2/#unsignedByte
+                    string clipped = (value[0] == '+')
+                        ? value.Substring(1, value.Length - 1)
+                        : value;
+
+                    try
+                    {
+                        // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                        System.Xml.XmlConvert.ToByte(clipped);
+                        return true;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        return false;
+                    }
+                    catch (System.FormatException)
+                    {
+                        return false;
+                    }
+                }
                 case Aas.DataTypeDefXsd.NonPositiveInteger:
-                    {
-                        return MatchesXsNonPositiveInteger(value);
-                    }
+                {
+                    return MatchesXsNonPositiveInteger(value);
+                }
                 case Aas.DataTypeDefXsd.NegativeInteger:
-                    {
-                        return MatchesXsNegativeInteger(value);
-                    }
+                {
+                    return MatchesXsNegativeInteger(value);
+                }
                 default:
                     throw new System.ArgumentException(
                         $"valueType is an invalid  DataTypeDefXsd: {valueType}"
@@ -2038,38 +2029,38 @@ namespace AasCore.Aas3_0_RC02
             IEnumerable<Aas.ISubmodelElement> elements
         )
         {
-            Aas.Reference? thatSemanticId = null;
+                Aas.Reference? thatSemanticId = null;
 
-            foreach (var element in elements)
-            {
-                if (element.SemanticId == null)
+                foreach (var element in elements)
                 {
-                    continue;
-                }
+                    if (element.SemanticId == null)
+                    {
+                        continue;
+                    }
 
-                if (thatSemanticId == null)
-                {
-                    thatSemanticId = element.SemanticId;
-                    continue;
-                }
+                    if (thatSemanticId == null)
+                    {
+                        thatSemanticId = element.SemanticId;
+                        continue;
+                    }
 
-                var thisSemanticId = element.SemanticId;
+                    var thisSemanticId = element.SemanticId;
 
-                if (thatSemanticId.Keys.Count != thisSemanticId.Keys.Count)
-                {
-                    return false;
-                }
-
-                for (int i = 0; i < thisSemanticId.Keys.Count; i++)
-                {
-                    if (thatSemanticId.Keys[i].Value != thisSemanticId.Keys[i].Value)
+                    if (thatSemanticId.Keys.Count != thisSemanticId.Keys.Count)
                     {
                         return false;
                     }
-                }
-            }
 
-            return true;
+                    for (int i = 0; i < thisSemanticId.Keys.Count; i++)
+                    {
+                        if (thatSemanticId.Keys[i].Value != thisSemanticId.Keys[i].Value)
+                        {
+                            return false;
+                        }
+                    }
+                }
+
+                return true;
         }
 
         public static bool SubmodelElementIsOfType(
@@ -2461,6 +2452,23 @@ namespace AasCore.Aas3_0_RC02
                 Aas.AdministrativeInformation that)
             {
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Revision != null)
                     || (that.Version != null)))
                 {
@@ -2641,6 +2649,23 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -3014,6 +3039,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.SubmodelElements != null)
                     || (
                         that.SubmodelElements.All(
@@ -3304,6 +3346,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -3540,6 +3599,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -3928,6 +4004,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -4194,6 +4287,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -4472,6 +4582,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -4726,6 +4853,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -5014,6 +5158,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -5257,6 +5418,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -5514,6 +5692,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -5765,6 +5960,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -6023,6 +6235,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -6441,6 +6670,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -6772,6 +7018,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -7065,6 +7328,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -7261,6 +7541,23 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -7836,25 +8133,6 @@ namespace AasCore.Aas3_0_RC02
                         indexConceptDescriptions++;
                     }
                 }
-
-                if (that.DataSpecifications != null)
-                {
-                    int indexDataSpecifications = 0;
-                    foreach (var item in that.DataSpecifications)
-                    {
-                        foreach (var error in Verification.Verify(item))
-                        {
-                            error.PrependSegment(
-                                new Reporting.IndexSegment(
-                                    indexDataSpecifications));
-                            error.PrependSegment(
-                                new Reporting.NameSegment(
-                                    "dataSpecifications"));
-                            yield return error;
-                        }
-                        indexDataSpecifications++;
-                    }
-                }
             }
         }  // private class Transformer
 
@@ -7875,7 +8153,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyNonEmptyString(
+        public static IEnumerable<Reporting.Error> VerifyNonEmptyString (
             string that)
         {
             if (!(that.Length >= 1))
@@ -7889,7 +8167,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyDateTimeStampUtc(
+        public static IEnumerable<Reporting.Error> VerifyDateTimeStampUtc (
             string that)
         {
             if (!Verification.MatchesXsDateTimeStampUtc(that))
@@ -7910,7 +8188,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyBlobType(
+        public static IEnumerable<Reporting.Error> VerifyBlobType (
             byte[] that)
         {
             // There is no verification specified.
@@ -7920,7 +8198,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyIdentifier(
+        public static IEnumerable<Reporting.Error> VerifyIdentifier (
             string that)
         {
             if (!(that.Length >= 1))
@@ -7934,7 +8212,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyBcp47LanguageTag(
+        public static IEnumerable<Reporting.Error> VerifyBcp47LanguageTag (
             string that)
         {
             if (!Verification.MatchesBcp47(that))
@@ -7948,7 +8226,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyContentType(
+        public static IEnumerable<Reporting.Error> VerifyContentType (
             string that)
         {
             if (!(that.Length >= 1))
@@ -7969,7 +8247,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyPathType(
+        public static IEnumerable<Reporting.Error> VerifyPathType (
             string that)
         {
             if (!(that.Length >= 1))
@@ -7990,7 +8268,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyQualifierType(
+        public static IEnumerable<Reporting.Error> VerifyQualifierType (
             string that)
         {
             if (!(that.Length >= 1))
@@ -8004,7 +8282,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyValueDataType(
+        public static IEnumerable<Reporting.Error> VerifyValueDataType (
             string that)
         {
             // There is no verification specified.
@@ -8014,7 +8292,7 @@ namespace AasCore.Aas3_0_RC02
         /// <summary>
         /// Verify the constraints of <paramref name="that" />.
         /// </summary>
-        public static IEnumerable<Reporting.Error> VerifyIdShort(
+        public static IEnumerable<Reporting.Error> VerifyIdShort (
             string that)
         {
             if (!(that.Length <= 128))

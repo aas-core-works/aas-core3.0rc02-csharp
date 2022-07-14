@@ -1,0 +1,21 @@
+{
+  "administration": {},
+  "dataSpecificationContent": {},
+  "description": {
+    "langStrings": [
+      {
+        "language": "en",
+        "text": "something_random_1940cf56"
+      }
+    ]
+  },
+  "id": {
+    "keys": [
+      {
+        "type": "GlobalReference",
+        "value": "something_random_7c3356b5"
+      }
+    ],
+    "type": "GlobalReference"
+  }
+}

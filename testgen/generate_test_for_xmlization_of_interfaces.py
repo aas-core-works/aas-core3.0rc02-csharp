@@ -74,9 +74,7 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
 
         Aas.Xmlization.Serialize.To(
             instance,
-            xmlWriter,
-            "aas",
-            "https://www.admin-shell.io/aas/3/0/RC02");
+            xmlWriter);
     }}
 
     // De-serialize from XML
@@ -89,8 +87,7 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
         new System.Xml.XmlReaderSettings());
 
     var anotherInstance = Aas.Xmlization.Deserialize.{interface_name_csharp}From(
-        xmlReader,
-        "https://www.admin-shell.io/aas/3/0/RC02");
+        xmlReader);
 
     // Serialize back to XML
     var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -106,9 +103,7 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
 
         Aas.Xmlization.Serialize.To(
             anotherInstance,
-            anotherXmlWriter,
-            "aas",
-            "https://www.admin-shell.io/aas/3/0/RC02");
+            anotherXmlWriter);
     }}
 
 

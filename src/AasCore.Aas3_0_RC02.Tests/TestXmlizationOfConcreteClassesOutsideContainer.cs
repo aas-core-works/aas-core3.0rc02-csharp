@@ -26,10 +26,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteExtension();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -42,11 +42,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -57,8 +55,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ExtensionFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -74,11 +71,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Extension
@@ -89,10 +84,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAdministrativeInformation();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -105,11 +100,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -120,8 +113,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.AdministrativeInformationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -137,11 +129,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_AdministrativeInformation
@@ -152,10 +142,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteQualifier();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -168,11 +158,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -183,8 +171,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.QualifierFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -200,11 +187,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Qualifier
@@ -215,10 +200,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -231,11 +216,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -246,8 +229,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.AssetAdministrationShellFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -263,11 +245,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_AssetAdministrationShell
@@ -278,10 +258,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAssetInformation();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -294,11 +274,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -309,8 +287,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.AssetInformationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -326,11 +303,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_AssetInformation
@@ -341,10 +316,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteResource();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -357,11 +332,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -372,8 +345,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ResourceFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -389,11 +361,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Resource
@@ -404,10 +374,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSpecificAssetId();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -420,11 +390,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -435,8 +403,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.SpecificAssetIdFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -452,11 +419,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_SpecificAssetId
@@ -467,10 +432,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodel();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -483,11 +448,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -498,8 +461,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.SubmodelFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -515,11 +477,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Submodel
@@ -530,10 +490,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -546,11 +506,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -561,8 +519,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.RelationshipElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -578,11 +535,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_RelationshipElement
@@ -593,10 +548,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -609,11 +564,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -624,8 +577,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.SubmodelElementListFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -641,11 +593,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_SubmodelElementList
@@ -656,10 +606,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -672,11 +622,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -687,8 +635,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.SubmodelElementCollectionFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -704,11 +651,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_SubmodelElementCollection
@@ -719,10 +664,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteProperty();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -735,11 +680,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -750,8 +693,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.PropertyFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -767,11 +709,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Property
@@ -782,10 +722,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -798,11 +738,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -813,8 +751,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.MultiLanguagePropertyFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -830,11 +767,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_MultiLanguageProperty
@@ -845,10 +780,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteRange();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -861,11 +796,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -876,8 +809,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.RangeFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -893,11 +825,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Range
@@ -908,10 +838,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteReferenceElement();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -924,11 +854,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -939,8 +867,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ReferenceElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -956,11 +883,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_ReferenceElement
@@ -971,10 +896,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteBlob();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -987,11 +912,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1002,8 +925,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.BlobFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1019,11 +941,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Blob
@@ -1034,10 +954,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteFile();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1050,11 +970,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1065,8 +983,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.FileFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1082,11 +999,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_File
@@ -1097,10 +1012,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1113,11 +1028,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1128,8 +1041,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.AnnotatedRelationshipElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1145,11 +1057,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_AnnotatedRelationshipElement
@@ -1160,10 +1070,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteEntity();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1176,11 +1086,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1191,8 +1099,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.EntityFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1208,11 +1115,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Entity
@@ -1223,10 +1128,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1239,11 +1144,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1254,8 +1157,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.BasicEventElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1271,11 +1173,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_BasicEventElement
@@ -1286,10 +1186,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteOperation();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1302,11 +1202,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1317,8 +1215,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.OperationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1334,11 +1231,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Operation
@@ -1349,10 +1244,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteOperationVariable();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1365,11 +1260,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1380,8 +1273,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.OperationVariableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1397,11 +1289,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_OperationVariable
@@ -1412,10 +1302,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteCapability();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1428,11 +1318,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1443,8 +1331,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.CapabilityFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1460,11 +1347,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Capability
@@ -1475,10 +1360,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteConceptDescription();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1491,11 +1376,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1506,8 +1389,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ConceptDescriptionFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1523,11 +1405,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_ConceptDescription
@@ -1538,10 +1418,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteReference();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1554,11 +1434,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1569,8 +1447,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ReferenceFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1586,11 +1463,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Reference
@@ -1601,10 +1476,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteKey();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1617,11 +1492,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1632,8 +1505,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.KeyFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1649,11 +1521,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_Key
@@ -1664,10 +1534,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteLangString();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1680,11 +1550,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1695,8 +1563,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.LangStringFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1712,11 +1579,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_LangString
@@ -1727,10 +1592,10 @@ namespace AasCore.Aas3_0_RC02.Tests
             // We load from JSON here just to jump-start the round trip.
             // The round-trip goes then over XML.
             var instance = Aas.Tests.CommonJsonization.LoadCompleteLangStringSet();
-
+    
             // The round-trip starts here.
             var outputBuilder = new System.Text.StringBuilder();
-
+    
             // Serialize to XML
             {
                 using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -1743,11 +1608,9 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
-
+    
             // De-serialize from XML
             string outputText = outputBuilder.ToString();
 
@@ -1758,8 +1621,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.LangStringSetFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1775,140 +1637,12 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
-
+    
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // public void Test_round_trip_LangStringSet
-
-        [Test]
-        public void Test_round_trip_DataSpecificationContent()
-        {
-            // We load from JSON here just to jump-start the round trip.
-            // The round-trip goes then over XML.
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent();
-
-            // The round-trip starts here.
-            var outputBuilder = new System.Text.StringBuilder();
-
-            // Serialize to XML
-            {
-                using var xmlWriter = System.Xml.XmlWriter.Create(
-                    outputBuilder,
-                    new System.Xml.XmlWriterSettings()
-                    {
-                        Encoding = System.Text.Encoding.UTF8,
-                        OmitXmlDeclaration = true
-                    });
-
-                Aas.Xmlization.Serialize.To(
-                    instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
-            }
-
-            // De-serialize from XML
-            string outputText = outputBuilder.ToString();
-
-            using var outputReader = new System.IO.StringReader(outputText);
-
-            using var xmlReader = System.Xml.XmlReader.Create(
-                outputReader,
-                new System.Xml.XmlReaderSettings());
-
-            var anotherInstance = Aas.Xmlization.Deserialize.DataSpecificationContentFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
-
-            // Serialize back to XML
-            var anotherOutputBuilder = new System.Text.StringBuilder();
-
-            {
-                using var anotherXmlWriter = System.Xml.XmlWriter.Create(
-                    anotherOutputBuilder,
-                    new System.Xml.XmlWriterSettings()
-                    {
-                        Encoding = System.Text.Encoding.UTF8,
-                        OmitXmlDeclaration = true
-                    });
-
-                Aas.Xmlization.Serialize.To(
-                    anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
-            }
-
-            // Compare
-            Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
-        }  // public void Test_round_trip_DataSpecificationContent
-
-        [Test]
-        public void Test_round_trip_DataSpecification()
-        {
-            // We load from JSON here just to jump-start the round trip.
-            // The round-trip goes then over XML.
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecification();
-
-            // The round-trip starts here.
-            var outputBuilder = new System.Text.StringBuilder();
-
-            // Serialize to XML
-            {
-                using var xmlWriter = System.Xml.XmlWriter.Create(
-                    outputBuilder,
-                    new System.Xml.XmlWriterSettings()
-                    {
-                        Encoding = System.Text.Encoding.UTF8,
-                        OmitXmlDeclaration = true
-                    });
-
-                Aas.Xmlization.Serialize.To(
-                    instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
-            }
-
-            // De-serialize from XML
-            string outputText = outputBuilder.ToString();
-
-            using var outputReader = new System.IO.StringReader(outputText);
-
-            using var xmlReader = System.Xml.XmlReader.Create(
-                outputReader,
-                new System.Xml.XmlReaderSettings());
-
-            var anotherInstance = Aas.Xmlization.Deserialize.DataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
-
-            // Serialize back to XML
-            var anotherOutputBuilder = new System.Text.StringBuilder();
-
-            {
-                using var anotherXmlWriter = System.Xml.XmlWriter.Create(
-                    anotherOutputBuilder,
-                    new System.Xml.XmlWriterSettings()
-                    {
-                        Encoding = System.Text.Encoding.UTF8,
-                        OmitXmlDeclaration = true
-                    });
-
-                Aas.Xmlization.Serialize.To(
-                    anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
-            }
-
-            // Compare
-            Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
-        }  // public void Test_round_trip_DataSpecification
     }  // class TestXmlizationOfConcreteClassesOutsideContainer
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

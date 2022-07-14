@@ -14,11 +14,5 @@
       "modelType": "ConceptDescription"
     }
   ],
-  "dataSpecifications": [
-    {
-      "dataSpecificationContent": {},
-      "id": "something_random_aa1a03ab"
-    }
-  ],
   "submodels": "Unexpected string value"
 }

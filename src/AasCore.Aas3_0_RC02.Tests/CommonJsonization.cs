@@ -29,9 +29,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
+               container);
+    
             return instance;
         }  // public static Aas.Extension LoadCompleteExtension
 
@@ -50,9 +50,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Extension>(
+               container);
+    
             return instance;
         }  // public static Aas.Extension LoadMinimalExtension
 
@@ -71,9 +71,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AdministrativeInformation>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AdministrativeInformation>(
+               container);
+    
             return instance;
         }  // public static Aas.AdministrativeInformation LoadCompleteAdministrativeInformation
 
@@ -92,9 +92,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AdministrativeInformation>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AdministrativeInformation>(
+               container);
+    
             return instance;
         }  // public static Aas.AdministrativeInformation LoadMinimalAdministrativeInformation
 
@@ -113,9 +113,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
+               container);
+    
             return instance;
         }  // public static Aas.Qualifier LoadCompleteQualifier
 
@@ -134,9 +134,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Qualifier>(
+               container);
+    
             return instance;
         }  // public static Aas.Qualifier LoadMinimalQualifier
 
@@ -155,9 +155,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+               container);
+    
             return instance;
         }  // public static Aas.AssetAdministrationShell LoadCompleteAssetAdministrationShell
 
@@ -176,9 +176,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AssetAdministrationShell>(
+               container);
+    
             return instance;
         }  // public static Aas.AssetAdministrationShell LoadMinimalAssetAdministrationShell
 
@@ -197,9 +197,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetInformation>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AssetInformation>(
+               container);
+    
             return instance;
         }  // public static Aas.AssetInformation LoadCompleteAssetInformation
 
@@ -218,9 +218,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AssetInformation>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AssetInformation>(
+               container);
+    
             return instance;
         }  // public static Aas.AssetInformation LoadMinimalAssetInformation
 
@@ -239,9 +239,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Resource>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Resource>(
+               container);
+    
             return instance;
         }  // public static Aas.Resource LoadCompleteResource
 
@@ -260,9 +260,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Resource>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Resource>(
+               container);
+    
             return instance;
         }  // public static Aas.Resource LoadMinimalResource
 
@@ -281,9 +281,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.SpecificAssetId>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.SpecificAssetId>(
+               container);
+    
             return instance;
         }  // public static Aas.SpecificAssetId LoadCompleteSpecificAssetId
 
@@ -302,9 +302,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.SpecificAssetId>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.SpecificAssetId>(
+               container);
+    
             return instance;
         }  // public static Aas.SpecificAssetId LoadMinimalSpecificAssetId
 
@@ -323,9 +323,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+               container);
+    
             return instance;
         }  // public static Aas.Submodel LoadCompleteSubmodel
 
@@ -344,9 +344,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Submodel>(
+               container);
+    
             return instance;
         }  // public static Aas.Submodel LoadMinimalSubmodel
 
@@ -365,9 +365,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+               container);
+    
             return instance;
         }  // public static Aas.RelationshipElement LoadCompleteRelationshipElement
 
@@ -386,9 +386,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.RelationshipElement>(
+               container);
+    
             return instance;
         }  // public static Aas.RelationshipElement LoadMinimalRelationshipElement
 
@@ -407,9 +407,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+               container);
+    
             return instance;
         }  // public static Aas.SubmodelElementList LoadCompleteSubmodelElementList
 
@@ -428,9 +428,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementList>(
+               container);
+    
             return instance;
         }  // public static Aas.SubmodelElementList LoadMinimalSubmodelElementList
 
@@ -449,9 +449,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+               container);
+    
             return instance;
         }  // public static Aas.SubmodelElementCollection LoadCompleteSubmodelElementCollection
 
@@ -470,9 +470,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.SubmodelElementCollection>(
+               container);
+    
             return instance;
         }  // public static Aas.SubmodelElementCollection LoadMinimalSubmodelElementCollection
 
@@ -491,9 +491,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+               container);
+    
             return instance;
         }  // public static Aas.Property LoadCompleteProperty
 
@@ -512,9 +512,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Property>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Property>(
+               container);
+    
             return instance;
         }  // public static Aas.Property LoadMinimalProperty
 
@@ -533,9 +533,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+               container);
+    
             return instance;
         }  // public static Aas.MultiLanguageProperty LoadCompleteMultiLanguageProperty
 
@@ -554,9 +554,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.MultiLanguageProperty>(
+               container);
+    
             return instance;
         }  // public static Aas.MultiLanguageProperty LoadMinimalMultiLanguageProperty
 
@@ -575,9 +575,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+               container);
+    
             return instance;
         }  // public static Aas.Range LoadCompleteRange
 
@@ -596,9 +596,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Range>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Range>(
+               container);
+    
             return instance;
         }  // public static Aas.Range LoadMinimalRange
 
@@ -617,9 +617,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+               container);
+    
             return instance;
         }  // public static Aas.ReferenceElement LoadCompleteReferenceElement
 
@@ -638,9 +638,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.ReferenceElement>(
+               container);
+    
             return instance;
         }  // public static Aas.ReferenceElement LoadMinimalReferenceElement
 
@@ -659,9 +659,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+               container);
+    
             return instance;
         }  // public static Aas.Blob LoadCompleteBlob
 
@@ -680,9 +680,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Blob>(
+               container);
+    
             return instance;
         }  // public static Aas.Blob LoadMinimalBlob
 
@@ -701,9 +701,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.File>(
+               container);
+    
             return instance;
         }  // public static Aas.File LoadCompleteFile
 
@@ -722,9 +722,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.File>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.File>(
+               container);
+    
             return instance;
         }  // public static Aas.File LoadMinimalFile
 
@@ -743,9 +743,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+               container);
+    
             return instance;
         }  // public static Aas.AnnotatedRelationshipElement LoadCompleteAnnotatedRelationshipElement
 
@@ -764,9 +764,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.AnnotatedRelationshipElement>(
+               container);
+    
             return instance;
         }  // public static Aas.AnnotatedRelationshipElement LoadMinimalAnnotatedRelationshipElement
 
@@ -785,9 +785,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+               container);
+    
             return instance;
         }  // public static Aas.Entity LoadCompleteEntity
 
@@ -806,9 +806,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Entity>(
+               container);
+    
             return instance;
         }  // public static Aas.Entity LoadMinimalEntity
 
@@ -826,7 +826,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var instance = Aas.Jsonization.Deserialize.EventPayloadFrom(
                node);
-
+    
             return instance;
         }  // public static Aas.EventPayload LoadCompleteEventPayload
 
@@ -844,7 +844,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var instance = Aas.Jsonization.Deserialize.EventPayloadFrom(
                node);
-
+    
             return instance;
         }  // public static Aas.EventPayload LoadMinimalEventPayload
 
@@ -863,9 +863,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+               container);
+    
             return instance;
         }  // public static Aas.BasicEventElement LoadCompleteBasicEventElement
 
@@ -884,9 +884,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.BasicEventElement>(
+               container);
+    
             return instance;
         }  // public static Aas.BasicEventElement LoadMinimalBasicEventElement
 
@@ -905,9 +905,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+               container);
+    
             return instance;
         }  // public static Aas.Operation LoadCompleteOperation
 
@@ -926,9 +926,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Operation>(
+               container);
+    
             return instance;
         }  // public static Aas.Operation LoadMinimalOperation
 
@@ -947,9 +947,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.OperationVariable>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.OperationVariable>(
+               container);
+    
             return instance;
         }  // public static Aas.OperationVariable LoadCompleteOperationVariable
 
@@ -968,9 +968,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.OperationVariable>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.OperationVariable>(
+               container);
+    
             return instance;
         }  // public static Aas.OperationVariable LoadMinimalOperationVariable
 
@@ -989,9 +989,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+               container);
+    
             return instance;
         }  // public static Aas.Capability LoadCompleteCapability
 
@@ -1010,9 +1010,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Capability>(
+               container);
+    
             return instance;
         }  // public static Aas.Capability LoadMinimalCapability
 
@@ -1031,9 +1031,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+               container);
+    
             return instance;
         }  // public static Aas.ConceptDescription LoadCompleteConceptDescription
 
@@ -1052,9 +1052,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.ConceptDescription>(
+               container);
+    
             return instance;
         }  // public static Aas.ConceptDescription LoadMinimalConceptDescription
 
@@ -1073,9 +1073,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Reference>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Reference>(
+               container);
+    
             return instance;
         }  // public static Aas.Reference LoadCompleteReference
 
@@ -1094,9 +1094,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Reference>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Reference>(
+               container);
+    
             return instance;
         }  // public static Aas.Reference LoadMinimalReference
 
@@ -1115,9 +1115,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Key>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Key>(
+               container);
+    
             return instance;
         }  // public static Aas.Key LoadCompleteKey
 
@@ -1136,9 +1136,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.Key>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.Key>(
+               container);
+    
             return instance;
         }  // public static Aas.Key LoadMinimalKey
 
@@ -1157,9 +1157,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.LangString>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.LangString>(
+               container);
+    
             return instance;
         }  // public static Aas.LangString LoadCompleteLangString
 
@@ -1178,9 +1178,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.LangString>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.LangString>(
+               container);
+    
             return instance;
         }  // public static Aas.LangString LoadMinimalLangString
 
@@ -1199,9 +1199,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
+               container);
+    
             return instance;
         }  // public static Aas.LangStringSet LoadCompleteLangStringSet
 
@@ -1220,9 +1220,9 @@ namespace AasCore.Aas3_0_RC02.Tests
             var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
 
-            var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
-                container);
-
+           var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
+               container);
+    
             return instance;
         }  // public static Aas.LangStringSet LoadMinimalLangStringSet
 
@@ -1231,19 +1231,16 @@ namespace AasCore.Aas3_0_RC02.Tests
             string path = Path.Combine(
                 Aas.Tests.Common.TestDataDir,
                 "Json",
-                "ContainedInEnvironment",
+                "SelfContained",
                 "Expected",
                 "DataSpecificationContent",
                 "complete.json");
 
             var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+            var instance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                node);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecificationContent>(
-                container);
-
+    
             return instance;
         }  // public static Aas.DataSpecificationContent LoadCompleteDataSpecificationContent
 
@@ -1252,19 +1249,16 @@ namespace AasCore.Aas3_0_RC02.Tests
             string path = Path.Combine(
                 Aas.Tests.Common.TestDataDir,
                 "Json",
-                "ContainedInEnvironment",
+                "SelfContained",
                 "Expected",
                 "DataSpecificationContent",
                 "minimal.json");
 
             var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+            var instance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                node);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecificationContent>(
-                container);
-
+    
             return instance;
         }  // public static Aas.DataSpecificationContent LoadMinimalDataSpecificationContent
 
@@ -1273,19 +1267,16 @@ namespace AasCore.Aas3_0_RC02.Tests
             string path = Path.Combine(
                 Aas.Tests.Common.TestDataDir,
                 "Json",
-                "ContainedInEnvironment",
+                "SelfContained",
                 "Expected",
                 "DataSpecification",
                 "complete.json");
 
             var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+            var instance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                node);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecification>(
-                container);
-
+    
             return instance;
         }  // public static Aas.DataSpecification LoadCompleteDataSpecification
 
@@ -1294,19 +1285,16 @@ namespace AasCore.Aas3_0_RC02.Tests
             string path = Path.Combine(
                 Aas.Tests.Common.TestDataDir,
                 "Json",
-                "ContainedInEnvironment",
+                "SelfContained",
                 "Expected",
                 "DataSpecification",
                 "minimal.json");
 
             var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+            var instance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                node);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.DataSpecification>(
-                container);
-
+    
             return instance;
         }  // public static Aas.DataSpecification LoadMinimalDataSpecification
 
@@ -1324,7 +1312,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var instance = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
-
+    
             return instance;
         }  // public static Aas.Environment LoadCompleteEnvironment
 
@@ -1342,7 +1330,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var instance = Aas.Jsonization.Deserialize.EnvironmentFrom(
                node);
-
+    
             return instance;
         }  // public static Aas.Environment LoadMinimalEnvironment
     }  // class CommonJsonization

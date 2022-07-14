@@ -26,7 +26,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.ModelingKindToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"Template\"",
                 serialized.ToJsonString());
@@ -45,7 +45,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.QualifierKindToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"ValueQualifier\"",
                 serialized.ToJsonString());
@@ -64,7 +64,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.AssetKindToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"Type\"",
                 serialized.ToJsonString());
@@ -83,7 +83,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.AasSubmodelElementsToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"AnnotatedRelationshipElement\"",
                 serialized.ToJsonString());
@@ -102,7 +102,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.EntityTypeToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"CoManagedEntity\"",
                 serialized.ToJsonString());
@@ -121,7 +121,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.DirectionToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"INPUT\"",
                 serialized.ToJsonString());
@@ -140,7 +140,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.StateOfEventToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"ON\"",
                 serialized.ToJsonString());
@@ -159,7 +159,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.ReferenceTypesToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"GlobalReference\"",
                 serialized.ToJsonString());
@@ -178,7 +178,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.KeyTypesToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"FragmentReference\"",
                 serialized.ToJsonString());
@@ -197,7 +197,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var serialized = Aas.Jsonization.Serialize.DataTypeDefXsdToJsonValue(
                 parsed);
-
+    
             Assert.AreEqual(
                 "\"xs:anyURI\"",
                 serialized.ToJsonString());

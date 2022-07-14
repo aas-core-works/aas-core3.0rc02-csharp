@@ -9,12 +9,6 @@
     }
   ],
   "conceptDescriptions": "Unexpected string value",
-  "dataSpecifications": [
-    {
-      "dataSpecificationContent": {},
-      "id": "something_random_aa1a03ab"
-    }
-  ],
   "submodels": [
     {
       "id": "something_random_b0c234ba",
