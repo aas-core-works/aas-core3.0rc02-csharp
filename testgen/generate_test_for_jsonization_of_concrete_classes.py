@@ -215,6 +215,41 @@ public void Test_{cls_name_csharp}_ok()
         Stripped(
             f"""\
 [Test]
+public void Test_{cls_name_csharp}_deserialization_from_non_object_fail()
+{{
+    var node = Nodes.JsonValue.Create("INVALID") 
+        ?? throw new System.InvalidOperationException(
+            "Unexpected failure of the node creation");
+
+    Aas.Jsonization.Exception? exception = null;
+    try
+    {{
+        var _ = Aas.Jsonization.Deserialize.{cls_name_csharp}From(
+            node);
+    }}
+    catch (Aas.Jsonization.Exception observedException)
+    {{
+        exception = observedException;
+    }}
+
+    if (exception == null)
+    {{
+        throw new AssertionException("Expected an exception, but got none");
+    }}
+
+    if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+    {{
+        throw new AssertionException(
+            $"Unexpected exception message: {{exception.Message}}");
+    }}
+}}  // public void Test_{cls_name_csharp}_deserialization_from_non_object_fail"""
+        )
+    )
+
+    blocks.append(
+        Stripped(
+            f"""\
+[Test]
 public void Test_{cls_name_csharp}_deserialization_fail()
 {{
     foreach (string cause in CausesForDeserializationFailure)
