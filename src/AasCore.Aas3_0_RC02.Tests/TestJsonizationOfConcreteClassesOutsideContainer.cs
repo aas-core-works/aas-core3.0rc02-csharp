@@ -831,64 +831,6 @@ namespace AasCore.Aas3_0_RC02.Tests
                 );
             }
         }  // public void Test_round_trip_LangStringSet
-
-        [Test]
-        public void Test_round_trip_DataSpecificationContent()
-        {
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent();
-
-            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
-            var anotherInstance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
-                jsonObject);
-
-            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
-                anotherInstance);
-
-            Aas.Tests.CommonJson.CheckJsonNodesEqual(
-                jsonObject,
-                anotherJsonObject,
-                out Aas.Reporting.Error? error);
-
-            if (error != null)
-            {
-                Assert.Fail(
-                    "When we de/serialize the complete instance " +
-                    "as DataSpecificationContent, we get an error in the round trip: " +
-                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
-                    error.Cause
-                );
-            }
-        }  // public void Test_round_trip_DataSpecificationContent
-
-        [Test]
-        public void Test_round_trip_DataSpecification()
-        {
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecification();
-
-            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
-            var anotherInstance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
-                jsonObject);
-
-            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
-                anotherInstance);
-
-            Aas.Tests.CommonJson.CheckJsonNodesEqual(
-                jsonObject,
-                anotherJsonObject,
-                out Aas.Reporting.Error? error);
-
-            if (error != null)
-            {
-                Assert.Fail(
-                    "When we de/serialize the complete instance " +
-                    "as DataSpecification, we get an error in the round trip: " +
-                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
-                    error.Cause
-                );
-            }
-        }  // public void Test_round_trip_DataSpecification
     }  // class TestJsonizationOfConcreteClassesOutsideContainer
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

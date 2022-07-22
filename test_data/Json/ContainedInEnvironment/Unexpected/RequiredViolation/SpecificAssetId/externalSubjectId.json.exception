@@ -1,1 +1,1 @@
-Required property "externalSubjectId" is missing  at: assetAdministrationShells[0].assetInformation.specificAssetIds[0]
+Required property "externalSubjectId" is missing at: assetAdministrationShells[0].assetInformation.specificAssetIds[0]

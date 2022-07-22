@@ -13,10 +13,4 @@
 		</submodel>
 	</submodels>
 	<conceptDescriptions>Unexpected string value</conceptDescriptions>
-	<dataSpecifications>
-		<dataSpecification>
-			<id>something_random_aa1a03ab</id>
-			<dataSpecificationContent/>
-		</dataSpecification>
-	</dataSpecifications>
 </environment>
