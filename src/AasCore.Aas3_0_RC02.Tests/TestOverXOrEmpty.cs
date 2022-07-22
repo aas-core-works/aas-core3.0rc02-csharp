@@ -2470,36 +2470,6 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             Assert.AreEqual(0, count);
         }  // public void Test_Environment_OverConceptDescriptionsOrEmpty_default
-
-        [Test]
-        public void Test_Environment_OverDataSpecificationsOrEmpty_non_default()
-        {
-            Aas.Environment instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteEnvironment());
-
-            int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
-            {
-                count++;
-            }
-
-            Assert.Greater(count, 0);
-        }  // public void Test_Environment_OverDataSpecificationsOrEmpty_non_default
-
-        [Test]
-        public void Test_Environment_OverDataSpecificationsOrEmpty_default()
-        {
-            Aas.Environment instance = (
-                Aas.Tests.CommonJsonization.LoadMinimalEnvironment());
-
-            int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
-            {
-                count++;
-            }
-
-            Assert.AreEqual(0, count);
-        }  // public void Test_Environment_OverDataSpecificationsOrEmpty_default
     }  // class TestOverXOrEmpty
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

@@ -1,0 +1,17 @@
+<environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+	<submodels>
+		<submodel>
+			<id>some_submodel</id>
+			<semanticId>
+				<type>GlobalReference</type>
+				<keys>
+					<key>
+						<type>GlobalReference</type>
+						<value>something_random_920ea681</value>
+					</key>
+				</keys>
+				<unexpectedAdditionalProperty>INVALID</unexpectedAdditionalProperty>
+			</semanticId>
+		</submodel>
+	</submodels>
+</environment>

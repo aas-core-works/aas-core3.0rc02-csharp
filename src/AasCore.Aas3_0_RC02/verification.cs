@@ -77,11 +77,14 @@ namespace AasCore.Aas3_0_RC02
         /// Check that <paramref name="text" /> conforms to the pattern of an <c>xs:dateTimeStamp</c>.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// The time zone must be fixed to UTC. We verify only that the <c>text</c> matches
         /// a pre-defined pattern. We <em>do not</em> verify that the day of month is
         /// correct nor do we check for leap seconds.
-        ///
+        /// </para>
+        /// <para>
         /// See: https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp
+        /// </para>
         /// </remarks>
         /// <param name="text">
         /// Text to be checked
@@ -2461,6 +2464,23 @@ namespace AasCore.Aas3_0_RC02
                 Aas.AdministrativeInformation that)
             {
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Revision != null)
                     || (that.Version != null)))
                 {
@@ -2641,6 +2661,23 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -3014,6 +3051,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.SubmodelElements != null)
                     || (
                         that.SubmodelElements.All(
@@ -3304,6 +3358,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -3540,6 +3611,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -3928,6 +4016,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -4194,6 +4299,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -4472,6 +4594,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -4726,6 +4865,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -5014,6 +5170,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -5257,6 +5430,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -5514,6 +5704,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -5765,6 +5972,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -6023,6 +6247,23 @@ namespace AasCore.Aas3_0_RC02
                         "qualifier with the same type.\n" +
                         "!(that.Qualifiers != null)\n" +
                         "|| Verification.QualifierTypesAreUnique(that.Qualifiers)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -6441,6 +6682,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -6772,6 +7030,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -7065,6 +7340,23 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
+                }
+
+                if (!(
                     !(that.Qualifiers != null)
                     || (
                         !(
@@ -7261,6 +7553,23 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.DataSpecifications != null)
+                    || (
+                        that.DataSpecifications.All(
+                            dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)
+                    )))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "References to data specifications are global references.\n" +
+                        "!(that.DataSpecifications != null)\n" +
+                        "|| (\n" +
+                        "    that.DataSpecifications.All(\n" +
+                        "        dataSpecification => dataSpecification.Type == ReferenceTypes.GlobalReference)\n" +
+                        ")");
                 }
 
                 if (!(
@@ -7834,25 +8143,6 @@ namespace AasCore.Aas3_0_RC02
                             yield return error;
                         }
                         indexConceptDescriptions++;
-                    }
-                }
-
-                if (that.DataSpecifications != null)
-                {
-                    int indexDataSpecifications = 0;
-                    foreach (var item in that.DataSpecifications)
-                    {
-                        foreach (var error in Verification.Verify(item))
-                        {
-                            error.PrependSegment(
-                                new Reporting.IndexSegment(
-                                    indexDataSpecifications));
-                            error.PrependSegment(
-                                new Reporting.NameSegment(
-                                    "dataSpecifications"));
-                            yield return error;
-                        }
-                        indexDataSpecifications++;
                     }
                 }
             }

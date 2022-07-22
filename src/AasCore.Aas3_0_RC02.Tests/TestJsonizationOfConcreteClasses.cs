@@ -62,7 +62,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "TypeViolation",
                 "RequiredViolation",
                 "EnumViolation",
-                "NullViolation"
+                "NullViolation",
+                "UnexpectedAdditionalProperty"
             });
 
         private static void AssertEqualsExpectedOrRerecordDeserializationException(
@@ -3472,7 +3473,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "Json",
-                    "ContainedInEnvironment",
+                    "SelfContained",
                     "Expected",
                     "DataSpecificationContent"
                 ),
@@ -3484,14 +3485,14 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                var instance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                     node);
 
-                var errors = Aas.Verification.Verify(container).ToList();
+                var errors = Aas.Verification.Verify(instance).ToList();
                 Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
 
                 AssertSerializeDeserializeEqualsOriginal(
-                    node, container, path);
+                    node, instance, path);
             }
         }  // public void Test_DataSpecificationContent_ok
 
@@ -3503,10 +3504,11 @@ namespace AasCore.Aas3_0_RC02.Tests
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "Json",
-                    "ContainedInEnvironment",
+                    "SelfContained",
                     "Unexpected",
                     cause,
-                    "DataSpecificationContent");
+                    "DataSpecificationContent"
+                );
 
                 if (!Directory.Exists(baseDir))
                 {
@@ -3527,7 +3529,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                     Aas.Jsonization.Exception? exception = null;
                     try
                     {
-                        var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                        var _ = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                             node);
                     }
                     catch (Aas.Jsonization.Exception observedException)
@@ -3549,7 +3551,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "Json",
-                    "ContainedInEnvironment",
+                    "SelfContained",
                     "Unexpected",
                     cause,
                     "DataSpecificationContent"
@@ -3571,10 +3573,10 @@ namespace AasCore.Aas3_0_RC02.Tests
                 {
                     var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                    var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    var instance = Aas.Jsonization.Deserialize.DataSpecificationContentFrom(
                         node);
 
-                    var errors = Aas.Verification.Verify(container).ToList();
+                    var errors = Aas.Verification.Verify(instance).ToList();
                     Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                         errors, path);
                 }
@@ -3588,7 +3590,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "Json",
-                    "ContainedInEnvironment",
+                    "SelfContained",
                     "Expected",
                     "DataSpecification"
                 ),
@@ -3600,14 +3602,14 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                var instance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                     node);
 
-                var errors = Aas.Verification.Verify(container).ToList();
+                var errors = Aas.Verification.Verify(instance).ToList();
                 Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
 
                 AssertSerializeDeserializeEqualsOriginal(
-                    node, container, path);
+                    node, instance, path);
             }
         }  // public void Test_DataSpecification_ok
 
@@ -3619,53 +3621,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 string baseDir = Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "Json",
-                    "ContainedInEnvironment",
-                    "Unexpected",
-                    cause,
-                    "DataSpecification");
-
-                if (!Directory.Exists(baseDir))
-                {
-                    // No examples of DataSpecification for the failure cause.
-                    continue;
-                }
-
-                var paths = Directory.GetFiles(
-                    baseDir,
-                    "*.json",
-                    System.IO.SearchOption.AllDirectories).ToList();
-                paths.Sort();
-
-                foreach (var path in paths)
-                {
-                    var node = Aas.Tests.CommonJson.ReadFromFile(path);
-
-                    Aas.Jsonization.Exception? exception = null;
-                    try
-                    {
-                        var _ = Aas.Jsonization.Deserialize.EnvironmentFrom(
-                            node);
-                    }
-                    catch (Aas.Jsonization.Exception observedException)
-                    {
-                        exception = observedException;
-                    }
-
-                    AssertEqualsExpectedOrRerecordDeserializationException(
-                        exception, path);
-                }
-            }
-        }  // public void Test_DataSpecification_deserialization_fail
-
-        [Test]
-        public void Test_DataSpecification_verification_fail()
-        {
-            foreach (string cause in Aas.Tests.Common.CausesForVerificationFailure)
-            {
-                string baseDir = Path.Combine(
-                    Aas.Tests.Common.TestDataDir,
-                    "Json",
-                    "ContainedInEnvironment",
+                    "SelfContained",
                     "Unexpected",
                     cause,
                     "DataSpecification"
@@ -3687,10 +3643,57 @@ namespace AasCore.Aas3_0_RC02.Tests
                 {
                     var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
-                    var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
+                    Aas.Jsonization.Exception? exception = null;
+                    try
+                    {
+                        var _ = Aas.Jsonization.Deserialize.DataSpecificationFrom(
+                            node);
+                    }
+                    catch (Aas.Jsonization.Exception observedException)
+                    {
+                        exception = observedException;
+                    }
+
+                    AssertEqualsExpectedOrRerecordDeserializationException(
+                        exception, path);
+                }
+            }
+        }  // public void Test_DataSpecification_deserialization_fail
+
+        [Test]
+        public void Test_DataSpecification_verification_fail()
+        {
+            foreach (string cause in Aas.Tests.Common.CausesForVerificationFailure)
+            {
+                string baseDir = Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Json",
+                    "SelfContained",
+                    "Unexpected",
+                    cause,
+                    "DataSpecification"
+                );
+
+                if (!Directory.Exists(baseDir))
+                {
+                    // No examples of DataSpecification for the failure cause.
+                    continue;
+                }
+
+                var paths = Directory.GetFiles(
+                    baseDir,
+                    "*.json",
+                    System.IO.SearchOption.AllDirectories).ToList();
+                paths.Sort();
+
+                foreach (var path in paths)
+                {
+                    var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+                    var instance = Aas.Jsonization.Deserialize.DataSpecificationFrom(
                         node);
 
-                    var errors = Aas.Verification.Verify(container).ToList();
+                    var errors = Aas.Verification.Verify(instance).ToList();
                     Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                         errors, path);
                 }

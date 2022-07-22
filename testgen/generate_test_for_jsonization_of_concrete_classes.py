@@ -370,7 +370,8 @@ private static readonly List<string> CausesForDeserializationFailure = (
         "TypeViolation",
         "RequiredViolation",
         "EnumViolation",
-        "NullViolation"
+        "NullViolation",
+        "UnexpectedAdditionalProperty"
     });
 
 private static void AssertEqualsExpectedOrRerecordDeserializationException(
