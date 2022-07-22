@@ -132,6 +132,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Extension_ok
 
         [Test]
+        public void Test_Extension_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.ExtensionFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Extension_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_Extension_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -246,6 +276,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_AdministrativeInformation_ok
+
+        [Test]
+        public void Test_AdministrativeInformation_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.AdministrativeInformationFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_AdministrativeInformation_deserialization_from_non_object_fail
 
         [Test]
         public void Test_AdministrativeInformation_deserialization_fail()
@@ -364,6 +424,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Qualifier_ok
 
         [Test]
+        public void Test_Qualifier_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.QualifierFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Qualifier_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_Qualifier_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -478,6 +568,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_AssetAdministrationShell_ok
+
+        [Test]
+        public void Test_AssetAdministrationShell_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.AssetAdministrationShellFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_AssetAdministrationShell_deserialization_from_non_object_fail
 
         [Test]
         public void Test_AssetAdministrationShell_deserialization_fail()
@@ -596,6 +716,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_AssetInformation_ok
 
         [Test]
+        public void Test_AssetInformation_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.AssetInformationFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_AssetInformation_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_AssetInformation_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -710,6 +860,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Resource_ok
+
+        [Test]
+        public void Test_Resource_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.ResourceFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Resource_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Resource_deserialization_fail()
@@ -828,6 +1008,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_SpecificAssetId_ok
 
         [Test]
+        public void Test_SpecificAssetId_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.SpecificAssetIdFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_SpecificAssetId_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_SpecificAssetId_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -942,6 +1152,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Submodel_ok
+
+        [Test]
+        public void Test_Submodel_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.SubmodelFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Submodel_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Submodel_deserialization_fail()
@@ -1060,6 +1300,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_RelationshipElement_ok
 
         [Test]
+        public void Test_RelationshipElement_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.RelationshipElementFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_RelationshipElement_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_RelationshipElement_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -1174,6 +1444,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_SubmodelElementList_ok
+
+        [Test]
+        public void Test_SubmodelElementList_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.SubmodelElementListFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_SubmodelElementList_deserialization_from_non_object_fail
 
         [Test]
         public void Test_SubmodelElementList_deserialization_fail()
@@ -1292,6 +1592,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_SubmodelElementCollection_ok
 
         [Test]
+        public void Test_SubmodelElementCollection_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.SubmodelElementCollectionFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_SubmodelElementCollection_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_SubmodelElementCollection_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -1406,6 +1736,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Property_ok
+
+        [Test]
+        public void Test_Property_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.PropertyFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Property_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Property_deserialization_fail()
@@ -1524,6 +1884,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_MultiLanguageProperty_ok
 
         [Test]
+        public void Test_MultiLanguageProperty_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.MultiLanguagePropertyFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_MultiLanguageProperty_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_MultiLanguageProperty_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -1638,6 +2028,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Range_ok
+
+        [Test]
+        public void Test_Range_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.RangeFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Range_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Range_deserialization_fail()
@@ -1756,6 +2176,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_ReferenceElement_ok
 
         [Test]
+        public void Test_ReferenceElement_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.ReferenceElementFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_ReferenceElement_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_ReferenceElement_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -1870,6 +2320,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Blob_ok
+
+        [Test]
+        public void Test_Blob_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.BlobFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Blob_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Blob_deserialization_fail()
@@ -1988,6 +2468,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_File_ok
 
         [Test]
+        public void Test_File_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.FileFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_File_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_File_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -2104,6 +2614,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_AnnotatedRelationshipElement_ok
 
         [Test]
+        public void Test_AnnotatedRelationshipElement_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.AnnotatedRelationshipElementFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_AnnotatedRelationshipElement_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_AnnotatedRelationshipElement_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -2218,6 +2758,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Entity_ok
+
+        [Test]
+        public void Test_Entity_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.EntityFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Entity_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Entity_deserialization_fail()
@@ -2453,6 +3023,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_BasicEventElement_ok
 
         [Test]
+        public void Test_BasicEventElement_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.BasicEventElementFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_BasicEventElement_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_BasicEventElement_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -2567,6 +3167,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Operation_ok
+
+        [Test]
+        public void Test_Operation_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.OperationFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Operation_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Operation_deserialization_fail()
@@ -2685,6 +3315,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_OperationVariable_ok
 
         [Test]
+        public void Test_OperationVariable_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.OperationVariableFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_OperationVariable_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_OperationVariable_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -2799,6 +3459,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Capability_ok
+
+        [Test]
+        public void Test_Capability_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.CapabilityFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Capability_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Capability_deserialization_fail()
@@ -2917,6 +3607,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_ConceptDescription_ok
 
         [Test]
+        public void Test_ConceptDescription_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.ConceptDescriptionFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_ConceptDescription_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_ConceptDescription_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -3031,6 +3751,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_Reference_ok
+
+        [Test]
+        public void Test_Reference_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.ReferenceFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Reference_deserialization_from_non_object_fail
 
         [Test]
         public void Test_Reference_deserialization_fail()
@@ -3149,6 +3899,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Key_ok
 
         [Test]
+        public void Test_Key_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.KeyFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_Key_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_Key_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -3265,6 +4045,36 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_LangString_ok
 
         [Test]
+        public void Test_LangString_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.LangStringFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_LangString_deserialization_from_non_object_fail
+
+        [Test]
         public void Test_LangString_deserialization_fail()
         {
             foreach (string cause in CausesForDeserializationFailure)
@@ -3379,6 +4189,36 @@ namespace AasCore.Aas3_0_RC02.Tests
                     node, container, path);
             }
         }  // public void Test_LangStringSet_ok
+
+        [Test]
+        public void Test_LangStringSet_deserialization_from_non_object_fail()
+        {
+            var node = Nodes.JsonValue.Create("INVALID")
+                ?? throw new System.InvalidOperationException(
+                    "Unexpected failure of the node creation");
+
+            Aas.Jsonization.Exception? exception = null;
+            try
+            {
+                var _ = Aas.Jsonization.Deserialize.LangStringSetFrom(
+                    node);
+            }
+            catch (Aas.Jsonization.Exception observedException)
+            {
+                exception = observedException;
+            }
+
+            if (exception == null)
+            {
+                throw new AssertionException("Expected an exception, but got none");
+            }
+
+            if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+            {
+                throw new AssertionException(
+                    $"Unexpected exception message: {exception.Message}");
+            }
+        }  // public void Test_LangStringSet_deserialization_from_non_object_fail
 
         [Test]
         public void Test_LangStringSet_deserialization_fail()
