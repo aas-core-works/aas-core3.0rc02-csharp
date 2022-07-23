@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+﻿using NUnit.Framework;  // can't alias
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

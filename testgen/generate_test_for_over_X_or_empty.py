@@ -87,9 +87,9 @@ public void Test_{cls_name_csharp}_{method_name_csharp}_default()
  * Do NOT edit or append.
  */
 
-using NUnit.Framework;  // can't alias
-
 using Aas = AasCore.Aas3_0_RC02;  // renamed
+
+using NUnit.Framework;  // can't alias
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

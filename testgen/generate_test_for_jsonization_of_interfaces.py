@@ -90,9 +90,9 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
  * Do NOT edit or append.
  */
 
-using NUnit.Framework;  // can't alias
-
 using Aas = AasCore.Aas3_0_RC02;  // renamed
+
+using NUnit.Framework;  // can't alias
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

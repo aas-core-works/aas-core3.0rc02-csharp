@@ -75,11 +75,10 @@ public void Test_round_trip_{enum_name}()
  * Do NOT edit or append.
  */
 
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 using Nodes = System.Text.Json.Nodes;
 
 using NUnit.Framework;  // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
