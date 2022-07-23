@@ -75,10 +75,10 @@ public void Test_{enum_name}_invalid()
  * Do NOT edit or append.
  */
 
+using Aas = AasCore.Aas3_0_RC02;  // renamed
+
 using System.Linq;  // can't alias
 using NUnit.Framework;  // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

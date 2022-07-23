@@ -25,6 +25,18 @@
       "commands": [
         "reportgenerator"
       ]
+    },
+    "bitesized": {
+      "version": "2.0.0",
+      "commands": [
+        "bite-sized"
+      ]
+    },
+    "opinionatedusings": {
+      "version": "1.0.0",
+      "commands": [
+        "opinionated-usings"
+      ]
     }
   }
 }

@@ -3,13 +3,12 @@
  * Do NOT edit or append.
  */
 
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 using Directory = System.IO.Directory;
 using Nodes = System.Text.Json.Nodes;
 using Path = System.IO.Path;
 
 using NUnit.Framework;  // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -21,7 +20,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Nodes.JsonNode got = Aas.Tests.CommonJson.ToJson(
                 value);
-
+    
             if (Aas.Tests.Common.RecordMode)
             {
                 string? parent = Path.GetDirectoryName(expectedPath);
@@ -67,14 +66,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Extension instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteExtension());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.ValueTypeOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -94,7 +93,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -107,14 +106,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Qualifier instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteQualifier());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -134,7 +133,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -147,14 +146,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Submodel instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodel());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -174,7 +173,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -187,14 +186,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.RelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -214,7 +213,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -227,14 +226,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.SubmodelElementList instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -254,7 +253,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -267,11 +266,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.SubmodelElementList instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
-
+    
             var value = instance.OrderRelevantOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -288,7 +287,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.OrderRelevantOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -301,14 +300,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.SubmodelElementCollection instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -328,7 +327,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -341,14 +340,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Property instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteProperty());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -368,7 +367,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -381,11 +380,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Property instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteProperty());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -402,7 +401,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -415,14 +414,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.MultiLanguageProperty instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -442,7 +441,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -455,11 +454,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.MultiLanguageProperty instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -476,7 +475,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -489,14 +488,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Range instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRange());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -516,7 +515,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -529,11 +528,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Range instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRange());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -550,7 +549,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -563,14 +562,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.ReferenceElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -590,7 +589,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -603,11 +602,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.ReferenceElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -624,7 +623,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -637,14 +636,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Blob instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBlob());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -664,7 +663,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -677,11 +676,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Blob instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBlob());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -698,7 +697,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -711,14 +710,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.File instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteFile());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -738,7 +737,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -751,11 +750,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.File instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteFile());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -772,7 +771,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -785,14 +784,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.AnnotatedRelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -812,7 +811,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -825,14 +824,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Entity instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteEntity());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -852,7 +851,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -865,14 +864,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.BasicEventElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -892,7 +891,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -905,14 +904,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Operation instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteOperation());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -932,7 +931,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -945,14 +944,14 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Capability instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteCapability());
-
+    
             string value = Aas.Stringification.ToString(
                 instance.KindOrDefault())
                     ?? throw new System.InvalidOperationException(
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -972,7 +971,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                         "Failed to stringify the enum");
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -985,11 +984,11 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.ConceptDescription instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteConceptDescription());
-
+    
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",
@@ -1006,7 +1005,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             var value = instance.CategoryOrDefault();
 
             CompareOrRerecordValue(
-                value,
+                value, 
                 Path.Combine(
                     Aas.Tests.Common.TestDataDir,
                     "XOrDefault",

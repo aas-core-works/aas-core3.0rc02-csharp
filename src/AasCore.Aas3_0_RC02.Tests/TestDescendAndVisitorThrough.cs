@@ -3,13 +3,12 @@
  * Do NOT edit or append.
  */
 
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 using Directory = System.IO.Directory;
 using Path = System.IO.Path;
 
 using NUnit.Framework; // can't alias
 using System.Collections.Generic;  // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -53,7 +52,7 @@ namespace AasCore.Aas3_0_RC02.Tests
             {
                 logFromDescend.Add(Trace(subInstance));
             }
-
+    
             var visitor = new TracingVisitorThrough();
             visitor.Visit(instance);
             var traceFromVisitor = visitor.Log;
@@ -149,7 +148,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Extension instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteExtension());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Extension
@@ -174,7 +173,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.AdministrativeInformation instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAdministrativeInformation());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_AdministrativeInformation
@@ -199,7 +198,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Qualifier instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteQualifier());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Qualifier
@@ -224,7 +223,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.AssetAdministrationShell instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_AssetAdministrationShell
@@ -249,7 +248,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.AssetInformation instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAssetInformation());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_AssetInformation
@@ -274,7 +273,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Resource instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteResource());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Resource
@@ -299,7 +298,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.SpecificAssetId instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSpecificAssetId());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_SpecificAssetId
@@ -324,7 +323,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Submodel instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodel());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Submodel
@@ -349,7 +348,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.RelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_RelationshipElement
@@ -374,7 +373,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.SubmodelElementList instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_SubmodelElementList
@@ -399,7 +398,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.SubmodelElementCollection instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_SubmodelElementCollection
@@ -424,7 +423,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Property instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteProperty());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Property
@@ -449,7 +448,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.MultiLanguageProperty instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_MultiLanguageProperty
@@ -474,7 +473,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Range instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRange());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Range
@@ -499,7 +498,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.ReferenceElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_ReferenceElement
@@ -524,7 +523,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Blob instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBlob());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Blob
@@ -549,7 +548,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.File instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteFile());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_File
@@ -574,7 +573,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.AnnotatedRelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_AnnotatedRelationshipElement
@@ -599,7 +598,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Entity instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteEntity());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Entity
@@ -624,7 +623,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.EventPayload instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteEventPayload());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_EventPayload
@@ -649,7 +648,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.BasicEventElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_BasicEventElement
@@ -674,7 +673,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Operation instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteOperation());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Operation
@@ -699,7 +698,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.OperationVariable instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteOperationVariable());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_OperationVariable
@@ -724,7 +723,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Capability instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteCapability());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Capability
@@ -749,7 +748,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.ConceptDescription instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteConceptDescription());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_ConceptDescription
@@ -774,7 +773,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Reference instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteReference());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Reference
@@ -799,7 +798,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Key instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteKey());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Key
@@ -824,7 +823,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.LangString instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteLangString());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_LangString
@@ -849,7 +848,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.LangStringSet instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteLangStringSet());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_LangStringSet
@@ -874,7 +873,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.DataSpecificationContent instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_DataSpecificationContent
@@ -899,7 +898,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.DataSpecification instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_DataSpecification
@@ -924,7 +923,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         {
             Aas.Environment instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteEnvironment());
-
+    
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Environment
