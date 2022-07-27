@@ -487,6 +487,7 @@ private static void AssertEqualsExpectedOrRerecordDeserializationException(
  * Do NOT edit or append.
  */
 
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 using Directory = System.IO.Directory;
 using Nodes = System.Text.Json.Nodes;
 using Path = System.IO.Path;
@@ -494,8 +495,6 @@ using Path = System.IO.Path;
 using System.Collections.Generic;  // can't alias
 using System.Linq;  // can't alias
 using NUnit.Framework; // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

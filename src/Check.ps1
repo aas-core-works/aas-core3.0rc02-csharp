@@ -19,6 +19,20 @@ function Main
         throw "Format check failed."
     }
 
+    Write-Host "${nl}Check.ps1: Inspecting the code with bite-sized...${nl}"
+
+    # NOTE (mristin, 2022-07-23):
+    # We ignore the lines where regexes were transpiled since breaking regex into
+    # multiple lines in a meaningful way is a difficult problem to get right.
+    dotnet bite-sized `
+        --inputs "AasCore.*/*.cs" `
+        --max-line-length 200 `
+        --max-lines-in-file 100000 `
+        --ignore-lines-matching '^ +var [a-zA-Z0-9_]+ = ".+";'
+
+    Write-Host "${nl}Check.ps1: Inspecting the code with opinionated-usings...${nl}"
+    dotnet opinionated-usings --inputs "AasCore.*/*.cs"
+
     $env:AAS_CORE_AAS3_0_RC02_TESTS_TEST_DATA_DIR = (
         Join-Path (Split-Path $PSScriptRoot -Parent) "test_data"
     )

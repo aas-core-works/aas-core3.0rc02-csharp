@@ -3,13 +3,12 @@
  * Do NOT edit or append.
  */
 
+using Aas = AasCore.Aas3_0_RC02;  // renamed
 using Directory = System.IO.Directory;
 using Path = System.IO.Path;
 
 using NUnit.Framework; // can't alias
 using System.Collections.Generic;  // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;  // renamed
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

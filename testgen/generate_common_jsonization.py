@@ -119,9 +119,8 @@ public static Aas.{cls_name_csharp} LoadMinimal{cls_name_csharp}()
  * Do NOT edit or append.
  */
 
-using Path = System.IO.Path;
-
 using Aas = AasCore.Aas3_0_RC02;  // renamed
+using Path = System.IO.Path;
 
 namespace AasCore.Aas3_0_RC02.Tests
 {

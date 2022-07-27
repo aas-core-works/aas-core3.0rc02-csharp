@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Aas = AasCore.Aas3_0_RC02;  // renamed
 using FileMode = System.IO.FileMode;
 using FileStream = System.IO.FileStream;
-using Nodes = System.Text.Json.Nodes;
 using JsonException = System.Text.Json.JsonException;
+using Nodes = System.Text.Json.Nodes;
 
 using System.Collections.Generic;  // can't alias
 using System.Linq;  // can't alias
-
-using Aas = AasCore.Aas3_0_RC02;
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
@@ -56,14 +54,14 @@ namespace AasCore.Aas3_0_RC02.Tests
                     return Nodes.JsonValue.Create(aDouble);
                 case string aString:
                     return Nodes.JsonValue.Create(aString)
-                        ?? throw new InvalidOperationException(
+                        ?? throw new System.InvalidOperationException(
                             $"Could not convert {something} " +
                             "to a JSON string");
                 case byte[] someBytes:
                     return Nodes.JsonValue.Create(
                         System.Convert.ToBase64String(
                             someBytes))
-                        ?? throw new InvalidOperationException(
+                        ?? throw new System.InvalidOperationException(
                             $"Could not convert {something} to " +
                             "a base64-encoded JSON string");
                 case Aas.IClass instance:
