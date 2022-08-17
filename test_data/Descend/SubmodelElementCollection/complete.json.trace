@@ -8,6 +8,10 @@ Key
 Reference
 Key
 Qualifier
+EmbeddedDataSpecification
 Reference
 Key
+DataSpecificationIec61360
+LangStringSet
+LangString
 AasCore.Aas3_0_RC02.Capability with ID-short something_random_d909183a

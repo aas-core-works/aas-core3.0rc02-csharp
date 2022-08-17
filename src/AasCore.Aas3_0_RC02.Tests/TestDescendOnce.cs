@@ -509,36 +509,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_LangStringSet
 
         [Test]
-        public void Test_DataSpecificationContent()
-        {
-            Aas.DataSpecificationContent instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
-
-            CompareOrRerecordTrace(
-                instance,
-                Path.Combine(
-                    Aas.Tests.Common.TestDataDir,
-                    "DescendOnce",
-                    "DataSpecificationContent",
-                    "complete.json.trace"));
-        }  // public void Test_DataSpecificationContent
-
-        [Test]
-        public void Test_DataSpecification()
-        {
-            Aas.DataSpecification instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
-
-            CompareOrRerecordTrace(
-                instance,
-                Path.Combine(
-                    Aas.Tests.Common.TestDataDir,
-                    "DescendOnce",
-                    "DataSpecification",
-                    "complete.json.trace"));
-        }  // public void Test_DataSpecification
-
-        [Test]
         public void Test_Environment()
         {
             Aas.Environment instance = (
@@ -552,6 +522,81 @@ namespace AasCore.Aas3_0_RC02.Tests
                     "Environment",
                     "complete.json.trace"));
         }  // public void Test_Environment
+
+        [Test]
+        public void Test_EmbeddedDataSpecification()
+        {
+            Aas.EmbeddedDataSpecification instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEmbeddedDataSpecification());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "EmbeddedDataSpecification",
+                    "complete.json.trace"));
+        }  // public void Test_EmbeddedDataSpecification
+
+        [Test]
+        public void Test_ValueReferencePair()
+        {
+            Aas.ValueReferencePair instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteValueReferencePair());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "ValueReferencePair",
+                    "complete.json.trace"));
+        }  // public void Test_ValueReferencePair
+
+        [Test]
+        public void Test_ValueList()
+        {
+            Aas.ValueList instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteValueList());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "ValueList",
+                    "complete.json.trace"));
+        }  // public void Test_ValueList
+
+        [Test]
+        public void Test_DataSpecificationIec61360()
+        {
+            Aas.DataSpecificationIec61360 instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationIec61360());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "DataSpecificationIEC61360",
+                    "complete.json.trace"));
+        }  // public void Test_DataSpecificationIec61360
+
+        [Test]
+        public void Test_DataSpecificationPhysicalUnit()
+        {
+            Aas.DataSpecificationPhysicalUnit instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationPhysicalUnit());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "DescendOnce",
+                    "DataSpecificationPhysicalUnit",
+                    "complete.json.trace"));
+        }  // public void Test_DataSpecificationPhysicalUnit
     }  // class TestDescendOnce
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

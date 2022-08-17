@@ -1,1 +1,1 @@
-Expected a non-null item, but got a null at: assetAdministrationShells[0].dataSpecifications[0]
+Unexpected property: dataSpecifications at: assetAdministrationShells[0]

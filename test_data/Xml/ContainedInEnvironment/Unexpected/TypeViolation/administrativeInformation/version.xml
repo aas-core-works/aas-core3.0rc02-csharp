@@ -2,17 +2,33 @@
 	<assetAdministrationShells>
 		<assetAdministrationShell>
 			<administration>
-				<dataSpecifications>
-					<reference>
-						<type>GlobalReference</type>
-						<keys>
-							<key>
-								<type>GlobalReference</type>
-								<value>something_random_1db164a9</value>
-							</key>
-						</keys>
-					</reference>
-				</dataSpecifications>
+				<embeddedDataSpecifications>
+					<embeddedDataSpecification>
+						<dataSpecification>
+							<type>GlobalReference</type>
+							<keys>
+								<key>
+									<type>GlobalReference</type>
+									<value>something_random_6d9ab579</value>
+								</key>
+							</keys>
+						</dataSpecification>
+						<dataSpecificationContent>
+							<dataSpecificationPhysicalUnit>
+								<unitName>something_random_f2c42ef6</unitName>
+								<unitSymbol>something_random_839ea974</unitSymbol>
+								<definition>
+									<langStrings>
+										<langString>
+											<language>en</language>
+											<text>something_random_533d5e42</text>
+										</langString>
+									</langStrings>
+								</definition>
+							</dataSpecificationPhysicalUnit>
+						</dataSpecificationContent>
+					</embeddedDataSpecification>
+				</embeddedDataSpecifications>
 				<version>
 					<type>GlobalReference</type>
 					<keys>

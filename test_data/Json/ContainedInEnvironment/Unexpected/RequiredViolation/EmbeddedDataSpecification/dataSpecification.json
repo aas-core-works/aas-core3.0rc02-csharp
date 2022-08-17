@@ -1,0 +1,28 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecificationContent": {
+            "definition": {
+              "langStrings": [
+                {
+                  "language": "en",
+                  "text": "something_random_77285c70"
+                }
+              ]
+            },
+            "modelType": "DataSpecificationPhysicalUnit",
+            "unitName": "something_random_3916f11a",
+            "unitSymbol": "something_random_29dd6e48"
+          }
+        }
+      ],
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

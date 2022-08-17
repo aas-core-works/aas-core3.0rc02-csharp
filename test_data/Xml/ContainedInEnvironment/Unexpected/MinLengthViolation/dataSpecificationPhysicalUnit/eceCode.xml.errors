@@ -1,0 +1,2 @@
+assetAdministrationShells[0].embeddedDataSpecifications[0].dataSpecificationContent.eceCode: Invariant violated:
+that.Length >= 1

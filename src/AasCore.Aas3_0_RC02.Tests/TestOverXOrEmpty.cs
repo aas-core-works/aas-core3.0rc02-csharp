@@ -42,34 +42,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Extension_OverSupplementalSemanticIdsOrEmpty_default
 
         [Test]
-        public void Test_AdministrativeInformation_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_AdministrativeInformation_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.AdministrativeInformation instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAdministrativeInformation());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_AdministrativeInformation_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_AdministrativeInformation_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_AdministrativeInformation_OverDataSpecificationsOrEmpty_default()
+        public void Test_AdministrativeInformation_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.AdministrativeInformation instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalAdministrativeInformation());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_AdministrativeInformation_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_AdministrativeInformation_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Qualifier_OverSupplementalSemanticIdsOrEmpty_non_default()
@@ -132,34 +132,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_AssetAdministrationShell_OverExtensionsOrEmpty_default
 
         [Test]
-        public void Test_AssetAdministrationShell_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_AssetAdministrationShell_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.AssetAdministrationShell instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAssetAdministrationShell());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_AssetAdministrationShell_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_AssetAdministrationShell_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_AssetAdministrationShell_OverDataSpecificationsOrEmpty_default()
+        public void Test_AssetAdministrationShell_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.AssetAdministrationShell instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalAssetAdministrationShell());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_AssetAdministrationShell_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_AssetAdministrationShell_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_AssetAdministrationShell_OverSubmodelsOrEmpty_non_default()
@@ -342,34 +342,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Submodel_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Submodel_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Submodel_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Submodel instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodel());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Submodel_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Submodel_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Submodel_OverDataSpecificationsOrEmpty_default()
+        public void Test_Submodel_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Submodel instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalSubmodel());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Submodel_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Submodel_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Submodel_OverSubmodelElementsOrEmpty_non_default()
@@ -492,34 +492,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_RelationshipElement_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_RelationshipElement_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_RelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.RelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRelationshipElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_RelationshipElement_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_RelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_RelationshipElement_OverDataSpecificationsOrEmpty_default()
+        public void Test_RelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.RelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalRelationshipElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_RelationshipElement_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_RelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_SubmodelElementList_OverExtensionsOrEmpty_non_default()
@@ -612,34 +612,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_SubmodelElementList_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_SubmodelElementList_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_SubmodelElementList_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.SubmodelElementList instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementList());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_SubmodelElementList_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_SubmodelElementList_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_SubmodelElementList_OverDataSpecificationsOrEmpty_default()
+        public void Test_SubmodelElementList_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.SubmodelElementList instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalSubmodelElementList());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_SubmodelElementList_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_SubmodelElementList_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_SubmodelElementList_OverValueOrEmpty_non_default()
@@ -762,34 +762,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_SubmodelElementCollection_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_SubmodelElementCollection_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_SubmodelElementCollection_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.SubmodelElementCollection instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteSubmodelElementCollection());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_SubmodelElementCollection_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_SubmodelElementCollection_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_SubmodelElementCollection_OverDataSpecificationsOrEmpty_default()
+        public void Test_SubmodelElementCollection_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.SubmodelElementCollection instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalSubmodelElementCollection());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_SubmodelElementCollection_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_SubmodelElementCollection_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_SubmodelElementCollection_OverValueOrEmpty_non_default()
@@ -912,34 +912,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Property_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Property_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Property_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Property instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteProperty());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Property_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Property_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Property_OverDataSpecificationsOrEmpty_default()
+        public void Test_Property_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Property instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalProperty());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Property_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Property_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_MultiLanguageProperty_OverExtensionsOrEmpty_non_default()
@@ -1032,34 +1032,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_MultiLanguageProperty_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_MultiLanguageProperty_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_MultiLanguageProperty_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.MultiLanguageProperty instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteMultiLanguageProperty());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_MultiLanguageProperty_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_MultiLanguageProperty_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_MultiLanguageProperty_OverDataSpecificationsOrEmpty_default()
+        public void Test_MultiLanguageProperty_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.MultiLanguageProperty instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalMultiLanguageProperty());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_MultiLanguageProperty_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_MultiLanguageProperty_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Range_OverExtensionsOrEmpty_non_default()
@@ -1152,34 +1152,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Range_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Range_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Range_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Range instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteRange());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Range_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Range_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Range_OverDataSpecificationsOrEmpty_default()
+        public void Test_Range_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Range instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalRange());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Range_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Range_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_ReferenceElement_OverExtensionsOrEmpty_non_default()
@@ -1272,34 +1272,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_ReferenceElement_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_ReferenceElement_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_ReferenceElement_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.ReferenceElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteReferenceElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_ReferenceElement_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_ReferenceElement_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_ReferenceElement_OverDataSpecificationsOrEmpty_default()
+        public void Test_ReferenceElement_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.ReferenceElement instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalReferenceElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_ReferenceElement_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_ReferenceElement_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Blob_OverExtensionsOrEmpty_non_default()
@@ -1392,34 +1392,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Blob_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Blob_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Blob_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Blob instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBlob());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Blob_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Blob_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Blob_OverDataSpecificationsOrEmpty_default()
+        public void Test_Blob_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Blob instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalBlob());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Blob_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Blob_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_File_OverExtensionsOrEmpty_non_default()
@@ -1512,34 +1512,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_File_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_File_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_File_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.File instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteFile());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_File_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_File_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_File_OverDataSpecificationsOrEmpty_default()
+        public void Test_File_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.File instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalFile());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_File_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_File_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_AnnotatedRelationshipElement_OverExtensionsOrEmpty_non_default()
@@ -1632,34 +1632,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_AnnotatedRelationshipElement_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_AnnotatedRelationshipElement_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_AnnotatedRelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.AnnotatedRelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteAnnotatedRelationshipElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_AnnotatedRelationshipElement_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_AnnotatedRelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_AnnotatedRelationshipElement_OverDataSpecificationsOrEmpty_default()
+        public void Test_AnnotatedRelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.AnnotatedRelationshipElement instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalAnnotatedRelationshipElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_AnnotatedRelationshipElement_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_AnnotatedRelationshipElement_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_AnnotatedRelationshipElement_OverAnnotationsOrEmpty_non_default()
@@ -1782,34 +1782,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Entity_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Entity_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Entity_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Entity instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteEntity());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Entity_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Entity_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Entity_OverDataSpecificationsOrEmpty_default()
+        public void Test_Entity_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Entity instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalEntity());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Entity_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Entity_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Entity_OverStatementsOrEmpty_non_default()
@@ -1932,34 +1932,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_BasicEventElement_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_BasicEventElement_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_BasicEventElement_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.BasicEventElement instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteBasicEventElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_BasicEventElement_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_BasicEventElement_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_BasicEventElement_OverDataSpecificationsOrEmpty_default()
+        public void Test_BasicEventElement_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.BasicEventElement instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalBasicEventElement());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_BasicEventElement_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_BasicEventElement_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Operation_OverExtensionsOrEmpty_non_default()
@@ -2052,34 +2052,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Operation_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Operation_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Operation_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Operation instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteOperation());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Operation_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Operation_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Operation_OverDataSpecificationsOrEmpty_default()
+        public void Test_Operation_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Operation instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalOperation());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Operation_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Operation_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_Operation_OverInputVariablesOrEmpty_non_default()
@@ -2262,34 +2262,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Capability_OverQualifiersOrEmpty_default
 
         [Test]
-        public void Test_Capability_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_Capability_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.Capability instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteCapability());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_Capability_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_Capability_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_Capability_OverDataSpecificationsOrEmpty_default()
+        public void Test_Capability_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.Capability instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalCapability());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_Capability_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_Capability_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_ConceptDescription_OverExtensionsOrEmpty_non_default()
@@ -2322,34 +2322,34 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_ConceptDescription_OverExtensionsOrEmpty_default
 
         [Test]
-        public void Test_ConceptDescription_OverDataSpecificationsOrEmpty_non_default()
+        public void Test_ConceptDescription_OverEmbeddedDataSpecificationsOrEmpty_non_default()
         {
             Aas.ConceptDescription instance = (
                 Aas.Tests.CommonJsonization.LoadCompleteConceptDescription());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.Greater(count, 0);
-        }  // public void Test_ConceptDescription_OverDataSpecificationsOrEmpty_non_default
+        }  // public void Test_ConceptDescription_OverEmbeddedDataSpecificationsOrEmpty_non_default
 
         [Test]
-        public void Test_ConceptDescription_OverDataSpecificationsOrEmpty_default()
+        public void Test_ConceptDescription_OverEmbeddedDataSpecificationsOrEmpty_default()
         {
             Aas.ConceptDescription instance = (
                 Aas.Tests.CommonJsonization.LoadMinimalConceptDescription());
 
             int count = 0;
-            foreach (var _ in instance.OverDataSpecificationsOrEmpty())
+            foreach (var _ in instance.OverEmbeddedDataSpecificationsOrEmpty())
             {
                 count++;
             }
 
             Assert.AreEqual(0, count);
-        }  // public void Test_ConceptDescription_OverDataSpecificationsOrEmpty_default
+        }  // public void Test_ConceptDescription_OverEmbeddedDataSpecificationsOrEmpty_default
 
         [Test]
         public void Test_ConceptDescription_OverIsCaseOfOrEmpty_non_default()

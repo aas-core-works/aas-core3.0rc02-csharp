@@ -51,17 +51,31 @@
 							<valueType>xs:boolean</valueType>
 						</qualifier>
 					</qualifiers>
-					<dataSpecifications>
-						<reference>
-							<type>GlobalReference</type>
-							<keys>
-								<key>
-									<type>GlobalReference</type>
-									<value>something_random_03894792</value>
-								</key>
-							</keys>
-						</reference>
-					</dataSpecifications>
+					<embeddedDataSpecifications>
+						<embeddedDataSpecification>
+							<dataSpecification>
+								<type>GlobalReference</type>
+								<keys>
+									<key>
+										<type>GlobalReference</type>
+										<value>something_random_95180a6d</value>
+									</key>
+								</keys>
+							</dataSpecification>
+							<dataSpecificationContent>
+								<dataSpecificationIec61360>
+									<preferredName>
+										<langStrings>
+											<langString>
+												<language>en</language>
+												<text>something_random_10d3ffd0</text>
+											</langString>
+										</langStrings>
+									</preferredName>
+								</dataSpecificationIec61360>
+							</dataSpecificationContent>
+						</embeddedDataSpecification>
+					</embeddedDataSpecifications>
 					<value>file:/path/to/somewhere</value>
 					<contentType>application/something-random</contentType>
 				</file>

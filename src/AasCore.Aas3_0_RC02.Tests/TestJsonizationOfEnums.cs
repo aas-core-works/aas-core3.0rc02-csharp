@@ -201,6 +201,63 @@ namespace AasCore.Aas3_0_RC02.Tests
                 "\"xs:anyURI\"",
                 serialized.ToJsonString());
         }  // void Test_round_trip_DataTypeDefXsd
+
+        [Test]
+        public void Test_round_trip_DataTypeIec61360()
+        {
+            var node = Nodes.JsonValue.Create(
+                "DATE")
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null node");
+
+            var parsed = Aas.Jsonization.Deserialize.DataTypeIec61360From(
+                node);
+
+            var serialized = Aas.Jsonization.Serialize.DataTypeIec61360ToJsonValue(
+                parsed);
+
+            Assert.AreEqual(
+                "\"DATE\"",
+                serialized.ToJsonString());
+        }  // void Test_round_trip_DataTypeIec61360
+
+        [Test]
+        public void Test_round_trip_ConceptDescriptionsCategories()
+        {
+            var node = Nodes.JsonValue.Create(
+                "APPLICATION_CLASS")
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null node");
+
+            var parsed = Aas.Jsonization.Deserialize.ConceptDescriptionsCategoriesFrom(
+                node);
+
+            var serialized = Aas.Jsonization.Serialize.ConceptDescriptionsCategoriesToJsonValue(
+                parsed);
+
+            Assert.AreEqual(
+                "\"APPLICATION_CLASS\"",
+                serialized.ToJsonString());
+        }  // void Test_round_trip_ConceptDescriptionsCategories
+
+        [Test]
+        public void Test_round_trip_LevelType()
+        {
+            var node = Nodes.JsonValue.Create(
+                "Min")
+                    ?? throw new System.InvalidOperationException(
+                        "Unexpected null node");
+
+            var parsed = Aas.Jsonization.Deserialize.LevelTypeFrom(
+                node);
+
+            var serialized = Aas.Jsonization.Serialize.LevelTypeToJsonValue(
+                parsed);
+
+            Assert.AreEqual(
+                "\"Min\"",
+                serialized.ToJsonString());
+        }  // void Test_round_trip_LevelType
     }  // class TestJsonizationOfEnums
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

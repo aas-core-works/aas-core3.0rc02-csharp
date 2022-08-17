@@ -23,17 +23,33 @@
 			<checksum>something_random_3362add6</checksum>
 			<administration/>
 			<id>something_random_7d1e962e</id>
-			<dataSpecifications>
-				<reference>
-					<type>GlobalReference</type>
-					<keys>
-						<key>
-							<type>GlobalReference</type>
-							<value>something_random_7e8e23b1</value>
-						</key>
-					</keys>
-				</reference>
-			</dataSpecifications>
+			<embeddedDataSpecifications>
+				<embeddedDataSpecification>
+					<dataSpecification>
+						<type>GlobalReference</type>
+						<keys>
+							<key>
+								<type>GlobalReference</type>
+								<value>something_random_864c4521</value>
+							</key>
+						</keys>
+					</dataSpecification>
+					<dataSpecificationContent>
+						<dataSpecificationPhysicalUnit>
+							<unitName>something_random_48a11858</unitName>
+							<unitSymbol>something_random_b87f12c4</unitSymbol>
+							<definition>
+								<langStrings>
+									<langString>
+										<language>en</language>
+										<text>something_random_d3ffee7d</text>
+									</langString>
+								</langStrings>
+							</definition>
+						</dataSpecificationPhysicalUnit>
+					</dataSpecificationContent>
+				</embeddedDataSpecification>
+			</embeddedDataSpecifications>
 			<isCaseOf>
 				<reference>
 					<type>GlobalReference</type>

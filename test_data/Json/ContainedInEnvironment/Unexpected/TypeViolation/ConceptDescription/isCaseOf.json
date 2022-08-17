@@ -4,17 +4,6 @@
       "administration": {},
       "category": "DOCUMENT",
       "checksum": "something_random_3362add6",
-      "dataSpecifications": [
-        {
-          "keys": [
-            {
-              "type": "GlobalReference",
-              "value": "something_random_7e8e23b1"
-            }
-          ],
-          "type": "GlobalReference"
-        }
-      ],
       "description": {
         "langStrings": [
           {
@@ -31,6 +20,32 @@
           }
         ]
       },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_864c4521"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "dataSpecificationContent": {
+            "definition": {
+              "langStrings": [
+                {
+                  "language": "en",
+                  "text": "something_random_d3ffee7d"
+                }
+              ]
+            },
+            "modelType": "DataSpecificationPhysicalUnit",
+            "unitName": "something_random_48a11858",
+            "unitSymbol": "something_random_b87f12c4"
+          }
+        }
+      ],
       "extensions": [
         {
           "name": "something_random_afaf8967",
