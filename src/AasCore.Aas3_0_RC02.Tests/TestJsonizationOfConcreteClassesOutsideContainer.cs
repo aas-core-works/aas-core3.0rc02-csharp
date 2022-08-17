@@ -831,6 +831,151 @@ namespace AasCore.Aas3_0_RC02.Tests
                 );
             }
         }  // public void Test_round_trip_LangStringSet
+
+        [Test]
+        public void Test_round_trip_EmbeddedDataSpecification()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteEmbeddedDataSpecification();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.EmbeddedDataSpecificationFrom(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we de/serialize the complete instance " +
+                    "as EmbeddedDataSpecification, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // public void Test_round_trip_EmbeddedDataSpecification
+
+        [Test]
+        public void Test_round_trip_ValueReferencePair()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteValueReferencePair();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.ValueReferencePairFrom(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we de/serialize the complete instance " +
+                    "as ValueReferencePair, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // public void Test_round_trip_ValueReferencePair
+
+        [Test]
+        public void Test_round_trip_ValueList()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteValueList();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.ValueListFrom(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we de/serialize the complete instance " +
+                    "as ValueList, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // public void Test_round_trip_ValueList
+
+        [Test]
+        public void Test_round_trip_DataSpecificationIec61360()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationIec61360();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.DataSpecificationIec61360From(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we de/serialize the complete instance " +
+                    "as DataSpecificationIec61360, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // public void Test_round_trip_DataSpecificationIec61360
+
+        [Test]
+        public void Test_round_trip_DataSpecificationPhysicalUnit()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationPhysicalUnit();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we de/serialize the complete instance " +
+                    "as DataSpecificationPhysicalUnit, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // public void Test_round_trip_DataSpecificationPhysicalUnit
     }  // class TestJsonizationOfConcreteClassesOutsideContainer
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

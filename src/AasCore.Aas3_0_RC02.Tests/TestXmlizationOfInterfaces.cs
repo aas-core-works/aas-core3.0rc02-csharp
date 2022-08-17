@@ -33,9 +33,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -48,8 +46,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -65,9 +62,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -97,9 +92,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -112,8 +105,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -129,9 +121,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -161,9 +151,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -176,8 +164,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -193,9 +180,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -225,9 +210,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -240,8 +223,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -257,9 +239,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -289,9 +269,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -304,8 +282,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -321,9 +298,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -353,9 +328,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -368,8 +341,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -385,9 +357,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -417,9 +387,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -432,8 +400,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -449,9 +416,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -481,9 +446,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -496,8 +459,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -513,9 +475,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -545,9 +505,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -560,8 +518,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -577,9 +534,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -609,9 +564,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -624,8 +577,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -641,9 +593,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -673,9 +623,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -688,8 +636,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -705,9 +652,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -737,9 +682,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -752,8 +695,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -769,9 +711,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -801,9 +741,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -816,8 +754,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -833,9 +770,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -865,9 +800,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -880,8 +813,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -897,9 +829,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -929,9 +859,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -944,8 +872,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasSemanticsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -961,9 +888,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -993,9 +918,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1008,8 +931,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1025,9 +947,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1057,9 +977,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1072,8 +990,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1089,9 +1006,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1121,9 +1036,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1136,8 +1049,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1153,9 +1065,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1185,9 +1095,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1200,8 +1108,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1217,9 +1124,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1249,9 +1154,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1264,8 +1167,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1281,9 +1183,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1313,9 +1213,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1328,8 +1226,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1345,9 +1242,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1377,9 +1272,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1392,8 +1285,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1409,9 +1301,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1441,9 +1331,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1456,8 +1344,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1473,9 +1360,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1505,9 +1390,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1520,8 +1403,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1537,9 +1419,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1569,9 +1449,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1584,8 +1462,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1601,9 +1478,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1633,9 +1508,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1648,8 +1521,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1665,9 +1537,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1697,9 +1567,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1712,8 +1580,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1729,9 +1596,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1761,9 +1626,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1776,8 +1639,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1793,9 +1655,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1825,9 +1685,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1840,8 +1698,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1857,9 +1714,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1889,9 +1744,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1904,8 +1757,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1921,9 +1773,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -1953,9 +1803,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -1968,8 +1816,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -1985,9 +1832,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2017,9 +1862,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2032,8 +1875,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasExtensionsFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2049,9 +1891,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2081,9 +1921,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2096,8 +1934,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2113,9 +1950,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2145,9 +1980,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2160,8 +1993,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2177,9 +2009,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2209,9 +2039,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2224,8 +2052,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2241,9 +2068,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2273,9 +2098,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2288,8 +2111,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2305,9 +2127,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2337,9 +2157,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2352,8 +2170,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2369,9 +2186,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2401,9 +2216,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2416,8 +2229,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2433,9 +2245,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2465,9 +2275,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2480,8 +2288,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2497,9 +2304,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2529,9 +2334,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2544,8 +2347,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2561,9 +2363,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2593,9 +2393,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2608,8 +2406,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2625,9 +2422,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2657,9 +2452,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2672,8 +2465,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2689,9 +2481,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2721,9 +2511,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2736,8 +2524,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2753,9 +2540,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2785,9 +2570,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2800,8 +2583,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2817,9 +2599,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2849,9 +2629,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2864,8 +2642,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2881,9 +2658,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2913,9 +2688,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2928,8 +2701,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -2945,9 +2717,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -2977,9 +2747,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -2992,8 +2760,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3009,9 +2776,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3041,9 +2806,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3056,8 +2819,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3073,9 +2835,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3105,9 +2865,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3120,8 +2878,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IReferableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3137,9 +2894,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3169,9 +2924,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3184,8 +2937,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IIdentifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3201,9 +2953,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3233,9 +2983,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3248,8 +2996,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IIdentifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3265,9 +3012,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3297,9 +3042,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3312,8 +3055,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IIdentifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3329,9 +3071,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3361,9 +3101,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3376,8 +3114,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3393,9 +3130,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3425,9 +3160,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3440,8 +3173,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3457,9 +3189,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3489,9 +3219,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3504,8 +3232,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3521,9 +3248,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3553,9 +3278,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3568,8 +3291,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3585,9 +3307,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3617,9 +3337,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3632,8 +3350,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3649,9 +3366,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3681,9 +3396,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3696,8 +3409,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3713,9 +3425,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3745,9 +3455,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3760,8 +3468,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3777,9 +3484,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3809,9 +3514,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3824,8 +3527,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3841,9 +3543,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3873,9 +3573,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3888,8 +3586,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3905,9 +3602,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -3937,9 +3632,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -3952,8 +3645,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -3969,9 +3661,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4001,9 +3691,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4016,8 +3704,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4033,9 +3720,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4065,9 +3750,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4080,8 +3763,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4097,9 +3779,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4129,9 +3809,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4144,8 +3822,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4161,9 +3838,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4193,9 +3868,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4208,8 +3881,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4225,9 +3897,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4257,9 +3927,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4272,8 +3940,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasKindFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4289,9 +3956,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4321,9 +3986,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4336,8 +3999,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4353,9 +4015,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4385,9 +4045,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4400,8 +4058,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4417,9 +4074,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4449,9 +4104,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4464,8 +4117,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4481,9 +4133,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4513,9 +4163,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4528,8 +4176,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4545,9 +4192,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4577,9 +4222,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4592,8 +4235,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4609,9 +4251,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4641,9 +4281,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4656,8 +4294,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4673,9 +4310,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4705,9 +4340,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4720,8 +4353,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4737,9 +4369,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4769,9 +4399,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4784,8 +4412,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4801,9 +4428,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4833,9 +4458,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4848,8 +4471,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4865,9 +4487,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4897,9 +4517,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4912,8 +4530,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4929,9 +4546,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -4961,9 +4576,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -4976,8 +4589,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -4993,9 +4605,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5025,9 +4635,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5040,8 +4648,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5057,9 +4664,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5089,9 +4694,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5104,8 +4707,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5121,9 +4723,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5153,9 +4753,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5168,8 +4766,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5185,9 +4782,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5217,9 +4812,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5232,8 +4825,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5249,9 +4841,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5281,9 +4871,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5296,8 +4884,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5313,9 +4900,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5345,9 +4930,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5360,8 +4943,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IHasDataSpecificationFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5377,9 +4959,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5409,9 +4989,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5424,8 +5002,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5441,9 +5018,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5473,9 +5048,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5488,8 +5061,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5505,9 +5077,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5537,9 +5107,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5552,8 +5120,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5569,9 +5136,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5601,9 +5166,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5616,8 +5179,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5633,9 +5195,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5665,9 +5225,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5680,8 +5238,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5697,9 +5254,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5729,9 +5284,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5744,8 +5297,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5761,9 +5313,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5793,9 +5343,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5808,8 +5356,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5825,9 +5372,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5857,9 +5402,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5872,8 +5415,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5889,9 +5431,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5921,9 +5461,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -5936,8 +5474,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -5953,9 +5490,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -5985,9 +5520,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6000,8 +5533,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6017,9 +5549,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6049,9 +5579,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6064,8 +5592,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6081,9 +5608,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6113,9 +5638,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6128,8 +5651,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6145,9 +5667,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6177,9 +5697,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6192,8 +5710,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6209,9 +5726,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6241,9 +5756,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6256,8 +5769,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6273,9 +5785,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6305,9 +5815,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6320,8 +5828,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IQualifiableFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6337,9 +5844,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6369,9 +5874,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6384,8 +5887,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6401,9 +5903,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6433,9 +5933,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6448,8 +5946,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6465,9 +5962,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6497,9 +5992,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6512,8 +6005,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6529,9 +6021,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6561,9 +6051,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6576,8 +6064,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6593,9 +6080,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6625,9 +6110,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6640,8 +6123,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6657,9 +6139,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6689,9 +6169,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6704,8 +6182,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6721,9 +6198,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6753,9 +6228,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6768,8 +6241,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6785,9 +6257,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6817,9 +6287,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6832,8 +6300,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6849,9 +6316,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6881,9 +6346,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6896,8 +6359,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6913,9 +6375,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -6945,9 +6405,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -6960,8 +6418,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -6977,9 +6434,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7009,9 +6464,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7024,8 +6477,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7041,9 +6493,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7073,9 +6523,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7088,8 +6536,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7105,9 +6552,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7137,9 +6582,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7152,8 +6595,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7169,9 +6611,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7201,9 +6641,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7216,8 +6654,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.ISubmodelElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7233,9 +6670,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7265,9 +6700,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7280,8 +6713,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IRelationshipElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7297,9 +6729,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7329,9 +6759,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7344,8 +6772,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IRelationshipElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7361,9 +6788,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7393,9 +6818,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7408,8 +6831,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7425,9 +6847,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7457,9 +6877,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7472,8 +6890,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7489,9 +6906,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7521,9 +6936,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7536,8 +6949,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7553,9 +6965,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7585,9 +6995,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7600,8 +7008,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7617,9 +7024,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7649,9 +7054,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7664,8 +7067,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7681,9 +7083,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7713,9 +7113,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7728,8 +7126,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IDataElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7745,9 +7142,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
@@ -7777,9 +7172,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     instance,
-                    xmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    xmlWriter);
             }
 
             // De-serialize from XML
@@ -7792,8 +7185,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 new System.Xml.XmlReaderSettings());
 
             var anotherInstance = Aas.Xmlization.Deserialize.IEventElementFrom(
-                xmlReader,
-                "https://www.admin-shell.io/aas/3/0/RC02");
+                xmlReader);
 
             // Serialize back to XML
             var anotherOutputBuilder = new System.Text.StringBuilder();
@@ -7809,15 +7201,131 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Aas.Xmlization.Serialize.To(
                     anotherInstance,
-                    anotherXmlWriter,
-                    "aas",
-                    "https://www.admin-shell.io/aas/3/0/RC02");
+                    anotherXmlWriter);
             }
 
 
             // Compare
             Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
         }  // void Test_round_trip_IEventElement_from_BasicEventElement
+
+        [Test]
+        public void Test_round_trip_IDataSpecificationContent_from_DataSpecificationIec61360()
+        {
+            // We load from JSON here just to jump-start the round trip.
+            // The round-trip goes then over XML.
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationIec61360();
+
+            // The round-trip starts here.
+            var outputBuilder = new System.Text.StringBuilder();
+
+            // Serialize to XML
+            {
+                using var xmlWriter = System.Xml.XmlWriter.Create(
+                    outputBuilder,
+                    new System.Xml.XmlWriterSettings()
+                    {
+                        Encoding = System.Text.Encoding.UTF8,
+                        OmitXmlDeclaration = true
+                    });
+
+                Aas.Xmlization.Serialize.To(
+                    instance,
+                    xmlWriter);
+            }
+
+            // De-serialize from XML
+            string outputText = outputBuilder.ToString();
+
+            using var outputReader = new System.IO.StringReader(outputText);
+
+            using var xmlReader = System.Xml.XmlReader.Create(
+                outputReader,
+                new System.Xml.XmlReaderSettings());
+
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataSpecificationContentFrom(
+                xmlReader);
+
+            // Serialize back to XML
+            var anotherOutputBuilder = new System.Text.StringBuilder();
+
+            {
+                using var anotherXmlWriter = System.Xml.XmlWriter.Create(
+                    anotherOutputBuilder,
+                    new System.Xml.XmlWriterSettings()
+                    {
+                        Encoding = System.Text.Encoding.UTF8,
+                        OmitXmlDeclaration = true
+                    });
+
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
+                    anotherXmlWriter);
+            }
+
+
+            // Compare
+            Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
+        }  // void Test_round_trip_IDataSpecificationContent_from_DataSpecificationIec61360
+
+        [Test]
+        public void Test_round_trip_IDataSpecificationContent_from_DataSpecificationPhysicalUnit()
+        {
+            // We load from JSON here just to jump-start the round trip.
+            // The round-trip goes then over XML.
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationPhysicalUnit();
+
+            // The round-trip starts here.
+            var outputBuilder = new System.Text.StringBuilder();
+
+            // Serialize to XML
+            {
+                using var xmlWriter = System.Xml.XmlWriter.Create(
+                    outputBuilder,
+                    new System.Xml.XmlWriterSettings()
+                    {
+                        Encoding = System.Text.Encoding.UTF8,
+                        OmitXmlDeclaration = true
+                    });
+
+                Aas.Xmlization.Serialize.To(
+                    instance,
+                    xmlWriter);
+            }
+
+            // De-serialize from XML
+            string outputText = outputBuilder.ToString();
+
+            using var outputReader = new System.IO.StringReader(outputText);
+
+            using var xmlReader = System.Xml.XmlReader.Create(
+                outputReader,
+                new System.Xml.XmlReaderSettings());
+
+            var anotherInstance = Aas.Xmlization.Deserialize.IDataSpecificationContentFrom(
+                xmlReader);
+
+            // Serialize back to XML
+            var anotherOutputBuilder = new System.Text.StringBuilder();
+
+            {
+                using var anotherXmlWriter = System.Xml.XmlWriter.Create(
+                    anotherOutputBuilder,
+                    new System.Xml.XmlWriterSettings()
+                    {
+                        Encoding = System.Text.Encoding.UTF8,
+                        OmitXmlDeclaration = true
+                    });
+
+                Aas.Xmlization.Serialize.To(
+                    anotherInstance,
+                    anotherXmlWriter);
+            }
+
+
+            // Compare
+            Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
+        }  // void Test_round_trip_IDataSpecificationContent_from_DataSpecificationPhysicalUnit
     }  // class TestXmlizationOfInterfaces
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

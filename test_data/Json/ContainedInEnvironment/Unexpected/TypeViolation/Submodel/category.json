@@ -12,17 +12,6 @@
         "type": "GlobalReference"
       },
       "checksum": "something_random_bb3da9d4",
-      "dataSpecifications": [
-        {
-          "keys": [
-            {
-              "type": "GlobalReference",
-              "value": "something_random_7f1ea0a7"
-            }
-          ],
-          "type": "GlobalReference"
-        }
-      ],
       "description": {
         "langStrings": [
           {
@@ -39,6 +28,30 @@
           }
         ]
       },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_27587fef"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIEC61360",
+            "preferredName": {
+              "langStrings": [
+                {
+                  "language": "en",
+                  "text": "something_random_7ee6c314"
+                }
+              ]
+            }
+          }
+        }
+      ],
       "extensions": [
         {
           "name": "something_random_74cc9e9b",

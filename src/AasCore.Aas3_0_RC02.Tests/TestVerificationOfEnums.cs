@@ -231,6 +231,72 @@ namespace AasCore.Aas3_0_RC02.Tests
             Assert.AreEqual(1, errors.Count);
             Assert.AreEqual("Invalid DataTypeDefXsd: -1", errors[0].Cause);
         }  // void Test_DataTypeDefXsd_invalid
+
+        [Test]
+        public void Test_DataTypeIec61360_valid()
+        {
+            var errors = Aas.Verification.VerifyDataTypeIec61360(
+                Aas.DataTypeIec61360.Date).ToList();
+
+            Assert.IsEmpty(errors);
+        }  // void Test_DataTypeIec61360_valid
+
+        [Test]
+        public void Test_DataTypeIec61360_invalid()
+        {
+            int valueAsInt = -1;
+            Aas.DataTypeIec61360 value = (Aas.DataTypeIec61360)valueAsInt;
+
+            var errors = Aas.Verification.VerifyDataTypeIec61360(
+                value).ToList();
+
+            Assert.AreEqual(1, errors.Count);
+            Assert.AreEqual("Invalid DataTypeIec61360: -1", errors[0].Cause);
+        }  // void Test_DataTypeIec61360_invalid
+
+        [Test]
+        public void Test_ConceptDescriptionsCategories_valid()
+        {
+            var errors = Aas.Verification.VerifyConceptDescriptionsCategories(
+                Aas.ConceptDescriptionsCategories.ApplicationClass).ToList();
+
+            Assert.IsEmpty(errors);
+        }  // void Test_ConceptDescriptionsCategories_valid
+
+        [Test]
+        public void Test_ConceptDescriptionsCategories_invalid()
+        {
+            int valueAsInt = -1;
+            Aas.ConceptDescriptionsCategories value = (Aas.ConceptDescriptionsCategories)valueAsInt;
+
+            var errors = Aas.Verification.VerifyConceptDescriptionsCategories(
+                value).ToList();
+
+            Assert.AreEqual(1, errors.Count);
+            Assert.AreEqual("Invalid ConceptDescriptionsCategories: -1", errors[0].Cause);
+        }  // void Test_ConceptDescriptionsCategories_invalid
+
+        [Test]
+        public void Test_LevelType_valid()
+        {
+            var errors = Aas.Verification.VerifyLevelType(
+                Aas.LevelType.Min).ToList();
+
+            Assert.IsEmpty(errors);
+        }  // void Test_LevelType_valid
+
+        [Test]
+        public void Test_LevelType_invalid()
+        {
+            int valueAsInt = -1;
+            Aas.LevelType value = (Aas.LevelType)valueAsInt;
+
+            var errors = Aas.Verification.VerifyLevelType(
+                value).ToList();
+
+            Assert.AreEqual(1, errors.Count);
+            Assert.AreEqual("Invalid LevelType: -1", errors[0].Cause);
+        }  // void Test_LevelType_invalid
     }  // class TestVerificationOfEnums
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

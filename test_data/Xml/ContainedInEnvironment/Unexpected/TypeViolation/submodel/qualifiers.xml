@@ -50,17 +50,31 @@
 				</reference>
 			</supplementalSemanticIds>
 			<qualifiers>Unexpected string value</qualifiers>
-			<dataSpecifications>
-				<reference>
-					<type>GlobalReference</type>
-					<keys>
-						<key>
-							<type>GlobalReference</type>
-							<value>something_random_7f1ea0a7</value>
-						</key>
-					</keys>
-				</reference>
-			</dataSpecifications>
+			<embeddedDataSpecifications>
+				<embeddedDataSpecification>
+					<dataSpecification>
+						<type>GlobalReference</type>
+						<keys>
+							<key>
+								<type>GlobalReference</type>
+								<value>something_random_27587fef</value>
+							</key>
+						</keys>
+					</dataSpecification>
+					<dataSpecificationContent>
+						<dataSpecificationIec61360>
+							<preferredName>
+								<langStrings>
+									<langString>
+										<language>en</language>
+										<text>something_random_7ee6c314</text>
+									</langString>
+								</langStrings>
+							</preferredName>
+						</dataSpecificationIec61360>
+					</dataSpecificationContent>
+				</embeddedDataSpecification>
+			</embeddedDataSpecifications>
 			<submodelElements>
 				<blob>
 					<idShort>some_id_short_10b21b1b</idShort>

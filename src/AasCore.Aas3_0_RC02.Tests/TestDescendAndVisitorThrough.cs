@@ -854,56 +854,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Descend_against_VisitorThrough_for_LangStringSet
 
         [Test]
-        public void Test_Descend_of_DataSpecificationContent()
-        {
-            Aas.DataSpecificationContent instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
-
-            CompareOrRerecordTrace(
-                instance,
-                Path.Combine(
-                    Aas.Tests.Common.TestDataDir,
-                    "Descend",
-                    "DataSpecificationContent",
-                    "complete.json.trace"));
-        }  // public void Test_Descend_of_DataSpecificationContent
-
-        [Test]
-        public void Test_Descend_against_VisitorThrough_for_DataSpecificationContent()
-        {
-            Aas.DataSpecificationContent instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationContent());
-
-            AssertDescendAndVisitorThroughSame(
-                instance);
-        }  // public void Test_Descend_against_VisitorThrough_for_DataSpecificationContent
-
-        [Test]
-        public void Test_Descend_of_DataSpecification()
-        {
-            Aas.DataSpecification instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
-
-            CompareOrRerecordTrace(
-                instance,
-                Path.Combine(
-                    Aas.Tests.Common.TestDataDir,
-                    "Descend",
-                    "DataSpecification",
-                    "complete.json.trace"));
-        }  // public void Test_Descend_of_DataSpecification
-
-        [Test]
-        public void Test_Descend_against_VisitorThrough_for_DataSpecification()
-        {
-            Aas.DataSpecification instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteDataSpecification());
-
-            AssertDescendAndVisitorThroughSame(
-                instance);
-        }  // public void Test_Descend_against_VisitorThrough_for_DataSpecification
-
-        [Test]
         public void Test_Descend_of_Environment()
         {
             Aas.Environment instance = (
@@ -927,6 +877,131 @@ namespace AasCore.Aas3_0_RC02.Tests
             AssertDescendAndVisitorThroughSame(
                 instance);
         }  // public void Test_Descend_against_VisitorThrough_for_Environment
+
+        [Test]
+        public void Test_Descend_of_EmbeddedDataSpecification()
+        {
+            Aas.EmbeddedDataSpecification instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEmbeddedDataSpecification());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "EmbeddedDataSpecification",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_EmbeddedDataSpecification
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_EmbeddedDataSpecification()
+        {
+            Aas.EmbeddedDataSpecification instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteEmbeddedDataSpecification());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_EmbeddedDataSpecification
+
+        [Test]
+        public void Test_Descend_of_ValueReferencePair()
+        {
+            Aas.ValueReferencePair instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteValueReferencePair());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "ValueReferencePair",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_ValueReferencePair
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_ValueReferencePair()
+        {
+            Aas.ValueReferencePair instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteValueReferencePair());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_ValueReferencePair
+
+        [Test]
+        public void Test_Descend_of_ValueList()
+        {
+            Aas.ValueList instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteValueList());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "ValueList",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_ValueList
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_ValueList()
+        {
+            Aas.ValueList instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteValueList());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_ValueList
+
+        [Test]
+        public void Test_Descend_of_DataSpecificationIec61360()
+        {
+            Aas.DataSpecificationIec61360 instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationIec61360());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "DataSpecificationIEC61360",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_DataSpecificationIec61360
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_DataSpecificationIec61360()
+        {
+            Aas.DataSpecificationIec61360 instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationIec61360());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_DataSpecificationIec61360
+
+        [Test]
+        public void Test_Descend_of_DataSpecificationPhysicalUnit()
+        {
+            Aas.DataSpecificationPhysicalUnit instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationPhysicalUnit());
+
+            CompareOrRerecordTrace(
+                instance,
+                Path.Combine(
+                    Aas.Tests.Common.TestDataDir,
+                    "Descend",
+                    "DataSpecificationPhysicalUnit",
+                    "complete.json.trace"));
+        }  // public void Test_Descend_of_DataSpecificationPhysicalUnit
+
+        [Test]
+        public void Test_Descend_against_VisitorThrough_for_DataSpecificationPhysicalUnit()
+        {
+            Aas.DataSpecificationPhysicalUnit instance = (
+                Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationPhysicalUnit());
+
+            AssertDescendAndVisitorThroughSame(
+                instance);
+        }  // public void Test_Descend_against_VisitorThrough_for_DataSpecificationPhysicalUnit
     }  // class TestDescendAndVisitorThrough
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

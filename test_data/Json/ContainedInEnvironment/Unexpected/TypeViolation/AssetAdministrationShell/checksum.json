@@ -15,17 +15,6 @@
         ],
         "type": "GlobalReference"
       },
-      "dataSpecifications": [
-        {
-          "keys": [
-            {
-              "type": "GlobalReference",
-              "value": "something_random_20c938f8"
-            }
-          ],
-          "type": "GlobalReference"
-        }
-      ],
       "derivedFrom": {
         "keys": [
           {
@@ -51,6 +40,32 @@
           }
         ]
       },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_88965b19"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "dataSpecificationContent": {
+            "definition": {
+              "langStrings": [
+                {
+                  "language": "en",
+                  "text": "something_random_77285c70"
+                }
+              ]
+            },
+            "modelType": "DataSpecificationPhysicalUnit",
+            "unitName": "something_random_3916f11a",
+            "unitSymbol": "something_random_29dd6e48"
+          }
+        }
+      ],
       "extensions": [
         {
           "name": "something_random_8ddedf5d",

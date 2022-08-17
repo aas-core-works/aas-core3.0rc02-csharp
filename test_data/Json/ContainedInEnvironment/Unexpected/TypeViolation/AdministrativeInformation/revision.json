@@ -2,15 +2,30 @@
   "assetAdministrationShells": [
     {
       "administration": {
-        "dataSpecifications": [
+        "embeddedDataSpecifications": [
           {
-            "keys": [
-              {
-                "type": "GlobalReference",
-                "value": "something_random_1db164a9"
-              }
-            ],
-            "type": "GlobalReference"
+            "dataSpecification": {
+              "keys": [
+                {
+                  "type": "GlobalReference",
+                  "value": "something_random_6d9ab579"
+                }
+              ],
+              "type": "GlobalReference"
+            },
+            "dataSpecificationContent": {
+              "definition": {
+                "langStrings": [
+                  {
+                    "language": "en",
+                    "text": "something_random_533d5e42"
+                  }
+                ]
+              },
+              "modelType": "DataSpecificationPhysicalUnit",
+              "unitName": "something_random_f2c42ef6",
+              "unitSymbol": "something_random_839ea974"
+            }
           }
         ],
         "revision": {

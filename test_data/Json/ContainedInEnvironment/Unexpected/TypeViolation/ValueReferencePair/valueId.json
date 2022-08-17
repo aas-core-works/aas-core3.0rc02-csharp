@@ -1,0 +1,43 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "something_random_88965b19"
+              }
+            ],
+            "type": "GlobalReference"
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIEC61360",
+            "preferredName": {
+              "langStrings": [
+                {
+                  "language": "en",
+                  "text": "something_random_58b3c6d8"
+                }
+              ]
+            },
+            "valueList": {
+              "valueReferencePairTypes": [
+                {
+                  "value": "something_random_9790d633",
+                  "valueId": "Unexpected string value"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "id": "something_random_428f0205",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

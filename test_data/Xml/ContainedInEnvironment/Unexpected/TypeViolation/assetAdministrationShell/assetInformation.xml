@@ -28,17 +28,33 @@
 			<checksum>something_random_d09521d8</checksum>
 			<administration/>
 			<id>something_random_428f0205</id>
-			<dataSpecifications>
-				<reference>
-					<type>GlobalReference</type>
-					<keys>
-						<key>
-							<type>GlobalReference</type>
-							<value>something_random_20c938f8</value>
-						</key>
-					</keys>
-				</reference>
-			</dataSpecifications>
+			<embeddedDataSpecifications>
+				<embeddedDataSpecification>
+					<dataSpecification>
+						<type>GlobalReference</type>
+						<keys>
+							<key>
+								<type>GlobalReference</type>
+								<value>something_random_88965b19</value>
+							</key>
+						</keys>
+					</dataSpecification>
+					<dataSpecificationContent>
+						<dataSpecificationPhysicalUnit>
+							<unitName>something_random_3916f11a</unitName>
+							<unitSymbol>something_random_29dd6e48</unitSymbol>
+							<definition>
+								<langStrings>
+									<langString>
+										<language>en</language>
+										<text>something_random_77285c70</text>
+									</langString>
+								</langStrings>
+							</definition>
+						</dataSpecificationPhysicalUnit>
+					</dataSpecificationContent>
+				</embeddedDataSpecification>
+			</embeddedDataSpecifications>
 			<derivedFrom>
 				<type>ModelReference</type>
 				<keys>

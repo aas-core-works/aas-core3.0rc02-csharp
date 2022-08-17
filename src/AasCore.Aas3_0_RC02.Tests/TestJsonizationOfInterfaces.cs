@@ -3548,6 +3548,64 @@ namespace AasCore.Aas3_0_RC02.Tests
                 );
             }
         }  // void Test_round_trip_IEventElement_from_BasicEventElement
+
+        [Test]
+        public void Test_round_trip_IDataSpecificationContent_from_DataSpecificationIec61360()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationIec61360();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.IDataSpecificationContentFrom(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we serialize the complete instance of DataSpecificationIec61360 " +
+                    "as IDataSpecificationContent, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // void Test_round_trip_IDataSpecificationContent_from_DataSpecificationIec61360
+
+        [Test]
+        public void Test_round_trip_IDataSpecificationContent_from_DataSpecificationPhysicalUnit()
+        {
+            var instance = Aas.Tests.CommonJsonization.LoadCompleteDataSpecificationPhysicalUnit();
+
+            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
+
+            var anotherInstance = Aas.Jsonization.Deserialize.IDataSpecificationContentFrom(
+                jsonObject);
+
+            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
+                anotherInstance);
+
+            Aas.Tests.CommonJson.CheckJsonNodesEqual(
+                jsonObject,
+                anotherJsonObject,
+                out Aas.Reporting.Error? error);
+
+            if (error != null)
+            {
+                Assert.Fail(
+                    "When we serialize the complete instance of DataSpecificationPhysicalUnit " +
+                    "as IDataSpecificationContent, we get an error in the round trip: " +
+                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
+                    error.Cause
+                );
+            }
+        }  // void Test_round_trip_IDataSpecificationContent_from_DataSpecificationPhysicalUnit
     }  // class TestJsonizationOfInterfaces
 }  // namespace AasCore.Aas3_0_RC02.Tests
 

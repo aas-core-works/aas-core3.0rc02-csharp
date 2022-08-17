@@ -401,9 +401,7 @@ private static void AssertSerializeDeserializeEqualsOriginal(
         );
         Aas.Xmlization.Serialize.To(
             instance,
-            writer,
-            "aas",
-            "https://www.admin-shell.io/aas/3/0/RC02");
+            writer);
     }
 
     string outputText = outputBuilder.ToString();
@@ -415,13 +413,13 @@ private static void AssertSerializeDeserializeEqualsOriginal(
 
         Assert.AreEqual(
             gotDoc.Root?.Name.Namespace.ToString(),
-            "https://www.admin-shell.io/aas/3/0/RC02");
+            "http://www.admin-shell.io/aas/3/0/RC02");
 
         foreach (var child in gotDoc.Descendants())
         {
             Assert.AreEqual(
-                child.GetPrefixOfNamespace(child.Name.Namespace),
-                "aas");
+                child.GetDefaultNamespace().NamespaceName,
+                "http://www.admin-shell.io/aas/3/0/RC02");
         }
 
         var expectedDoc = XDocument.Load(path);
