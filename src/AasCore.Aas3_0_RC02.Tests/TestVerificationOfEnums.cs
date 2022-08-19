@@ -255,28 +255,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // void Test_DataTypeIec61360_invalid
 
         [Test]
-        public void Test_ConceptDescriptionsCategories_valid()
-        {
-            var errors = Aas.Verification.VerifyConceptDescriptionsCategories(
-                Aas.ConceptDescriptionsCategories.ApplicationClass).ToList();
-
-            Assert.IsEmpty(errors);
-        }  // void Test_ConceptDescriptionsCategories_valid
-
-        [Test]
-        public void Test_ConceptDescriptionsCategories_invalid()
-        {
-            int valueAsInt = -1;
-            Aas.ConceptDescriptionsCategories value = (Aas.ConceptDescriptionsCategories)valueAsInt;
-
-            var errors = Aas.Verification.VerifyConceptDescriptionsCategories(
-                value).ToList();
-
-            Assert.AreEqual(1, errors.Count);
-            Assert.AreEqual("Invalid ConceptDescriptionsCategories: -1", errors[0].Cause);
-        }  // void Test_ConceptDescriptionsCategories_invalid
-
-        [Test]
         public void Test_LevelType_valid()
         {
             var errors = Aas.Verification.VerifyLevelType(

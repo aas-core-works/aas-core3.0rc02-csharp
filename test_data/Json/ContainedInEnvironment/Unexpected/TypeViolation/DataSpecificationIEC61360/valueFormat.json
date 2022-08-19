@@ -58,22 +58,6 @@
                 }
               ],
               "type": "GlobalReference"
-            },
-            "valueList": {
-              "valueReferencePairTypes": [
-                {
-                  "value": "something_random_9790d633",
-                  "valueId": {
-                    "keys": [
-                      {
-                        "type": "GlobalReference",
-                        "value": "something_random_d6bd01e2"
-                      }
-                    ],
-                    "type": "GlobalReference"
-                  }
-                }
-              ]
             }
           }
         }
