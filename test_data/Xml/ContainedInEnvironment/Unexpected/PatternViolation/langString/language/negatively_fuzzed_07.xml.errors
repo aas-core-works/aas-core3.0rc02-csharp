@@ -1,2 +1,2 @@
-assetAdministrationShells[0].displayName.langStrings[0].language: Invariant violated:
+assetAdministrationShells[0].displayName[0].language: Invariant violated:
 Verification.MatchesBcp47(that)

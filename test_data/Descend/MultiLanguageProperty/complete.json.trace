@@ -1,7 +1,5 @@
 Extension
-LangStringSet
 LangString
-LangStringSet
 LangString
 Reference
 Key
@@ -12,9 +10,7 @@ EmbeddedDataSpecification
 Reference
 Key
 DataSpecificationIec61360
-LangStringSet
 LangString
-LangStringSet
 LangString
 Reference
 Key

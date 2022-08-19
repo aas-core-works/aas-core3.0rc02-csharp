@@ -14,14 +14,12 @@
               "type": "GlobalReference"
             },
             "dataSpecificationContent": {
-              "definition": {
-                "langStrings": [
-                  {
-                    "language": "en",
-                    "text": "something_random_533d5e42"
-                  }
-                ]
-              },
+              "definition": [
+                {
+                  "language": "en",
+                  "text": "something_random_1d37b9a5"
+                }
+              ],
               "modelType": "DataSpecificationPhysicalUnit",
               "unitName": "something_random_f2c42ef6",
               "unitSymbol": "something_random_839ea974"

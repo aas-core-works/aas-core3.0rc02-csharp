@@ -12,22 +12,18 @@
         "type": "GlobalReference"
       },
       "checksum": "something_random_bb3da9d4",
-      "description": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_efbc3ede"
-          }
-        ]
-      },
-      "displayName": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_848c1827"
-          }
-        ]
-      },
+      "description": [
+        {
+          "language": "en",
+          "text": "something_random_0bcec5eb"
+        }
+      ],
+      "displayName": [
+        {
+          "language": "en",
+          "text": "something_random_18705330"
+        }
+      ],
       "embeddedDataSpecifications": [
         {
           "dataSpecification": {
@@ -41,14 +37,12 @@
           },
           "dataSpecificationContent": {
             "modelType": "DataSpecificationIEC61360",
-            "preferredName": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_7ee6c314"
-                }
-              ]
-            }
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "something_random_0796a3b4"
+              }
+            ]
           }
         }
       ],

@@ -1587,64 +1587,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_round_trip_LangString
 
         [Test]
-        public void Test_round_trip_LangStringSet()
-        {
-            // We load from JSON here just to jump-start the round trip.
-            // The round-trip goes then over XML.
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteLangStringSet();
-
-            // The round-trip starts here.
-            var outputBuilder = new System.Text.StringBuilder();
-
-            // Serialize to XML
-            {
-                using var xmlWriter = System.Xml.XmlWriter.Create(
-                    outputBuilder,
-                    new System.Xml.XmlWriterSettings()
-                    {
-                        Encoding = System.Text.Encoding.UTF8,
-                        OmitXmlDeclaration = true
-                    });
-
-                Aas.Xmlization.Serialize.To(
-                    instance,
-                    xmlWriter);
-            }
-
-            // De-serialize from XML
-            string outputText = outputBuilder.ToString();
-
-            using var outputReader = new System.IO.StringReader(outputText);
-
-            using var xmlReader = System.Xml.XmlReader.Create(
-                outputReader,
-                new System.Xml.XmlReaderSettings());
-
-            var anotherInstance = Aas.Xmlization.Deserialize.LangStringSetFrom(
-                xmlReader);
-
-            // Serialize back to XML
-            var anotherOutputBuilder = new System.Text.StringBuilder();
-
-            {
-                using var anotherXmlWriter = System.Xml.XmlWriter.Create(
-                    anotherOutputBuilder,
-                    new System.Xml.XmlWriterSettings()
-                    {
-                        Encoding = System.Text.Encoding.UTF8,
-                        OmitXmlDeclaration = true
-                    });
-
-                Aas.Xmlization.Serialize.To(
-                    anotherInstance,
-                    anotherXmlWriter);
-            }
-
-            // Compare
-            Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
-        }  // public void Test_round_trip_LangStringSet
-
-        [Test]
         public void Test_round_trip_EmbeddedDataSpecification()
         {
             // We load from JSON here just to jump-start the round trip.

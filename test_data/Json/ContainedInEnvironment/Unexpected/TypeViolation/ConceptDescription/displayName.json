@@ -4,14 +4,12 @@
       "administration": {},
       "category": "DOCUMENT",
       "checksum": "something_random_3362add6",
-      "description": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_e11f7d37"
-          }
-        ]
-      },
+      "description": [
+        {
+          "language": "en",
+          "text": "something_random_73d204bb"
+        }
+      ],
       "displayName": "Unexpected string value",
       "embeddedDataSpecifications": [
         {
@@ -25,14 +23,12 @@
             "type": "GlobalReference"
           },
           "dataSpecificationContent": {
-            "definition": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_d3ffee7d"
-                }
-              ]
-            },
+            "definition": [
+              {
+                "language": "en",
+                "text": "something_random_e863743d"
+              }
+            ],
             "modelType": "DataSpecificationPhysicalUnit",
             "unitName": "something_random_48a11858",
             "unitSymbol": "something_random_b87f12c4"

@@ -8,22 +8,18 @@
       "category": "something_random_a7f4f8a9",
       "checksum": "something_random_d09521d8",
       "derivedFrom": "Unexpected string value",
-      "description": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_edabef06"
-          }
-        ]
-      },
-      "displayName": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_6ad1965e"
-          }
-        ]
-      },
+      "description": [
+        {
+          "language": "en",
+          "text": "something_random_3e91e3e2"
+        }
+      ],
+      "displayName": [
+        {
+          "language": "en",
+          "text": "something_random_56d2caa9"
+        }
+      ],
       "embeddedDataSpecifications": [
         {
           "dataSpecification": {
@@ -36,14 +32,12 @@
             "type": "GlobalReference"
           },
           "dataSpecificationContent": {
-            "definition": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_77285c70"
-                }
-              ]
-            },
+            "definition": [
+              {
+                "language": "en",
+                "text": "something_random_f05e0313"
+              }
+            ],
             "modelType": "DataSpecificationPhysicalUnit",
             "unitName": "something_random_3916f11a",
             "unitSymbol": "something_random_29dd6e48"

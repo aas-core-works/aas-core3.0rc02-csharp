@@ -17,14 +17,12 @@
           },
           "dataSpecificationContent": {
             "conversionFactor": "something_random_5013e084",
-            "definition": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_77285c70"
-                }
-              ]
-            },
+            "definition": [
+              {
+                "language": "en",
+                "text": "something_random_f05e0313"
+              }
+            ],
             "dinNotation": "something_random_70e267e3",
             "eceCode": "something_random_84b9c566",
             "eceName": {

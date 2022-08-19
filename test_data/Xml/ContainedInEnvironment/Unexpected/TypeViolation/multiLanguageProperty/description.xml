@@ -13,12 +13,10 @@
 					<category>PARAMETER</category>
 					<idShort>some_id_short_10b21b1b</idShort>
 					<displayName>
-						<langStrings>
-							<langString>
-								<language>en</language>
-								<text>something_random_c94bb548</text>
-							</langString>
-						</langStrings>
+						<langString>
+							<language>en</language>
+							<text>something_random_1feb47b8</text>
+						</langString>
 					</displayName>
 					<description>Unexpected string value</description>
 					<checksum>something_random_9711a3c9</checksum>
@@ -63,24 +61,20 @@
 							<dataSpecificationContent>
 								<dataSpecificationIec61360>
 									<preferredName>
-										<langStrings>
-											<langString>
-												<language>en</language>
-												<text>something_random_10d3ffd0</text>
-											</langString>
-										</langStrings>
+										<langString>
+											<language>en</language>
+											<text>something_random_692e41e4</text>
+										</langString>
 									</preferredName>
 								</dataSpecificationIec61360>
 							</dataSpecificationContent>
 						</embeddedDataSpecification>
 					</embeddedDataSpecifications>
 					<value>
-						<langStrings>
-							<langString>
-								<language>en</language>
-								<text>something_random_af793cff</text>
-							</langString>
-						</langStrings>
+						<langString>
+							<language>en</language>
+							<text>something_random_e425457b</text>
+						</langString>
 					</value>
 					<valueId>
 						<type>GlobalReference</type>

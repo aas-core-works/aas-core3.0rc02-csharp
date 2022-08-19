@@ -1,0 +1,4 @@
+conceptDescriptions[0]: Invariant violated:
+Display name must be either null or have at least one item
+!(that.DisplayName != null)
+|| (that.DisplayName.Count >= 1)

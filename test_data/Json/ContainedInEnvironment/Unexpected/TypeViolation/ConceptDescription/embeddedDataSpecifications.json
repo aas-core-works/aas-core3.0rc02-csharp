@@ -4,22 +4,18 @@
       "administration": {},
       "category": "DOCUMENT",
       "checksum": "something_random_3362add6",
-      "description": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_e11f7d37"
-          }
-        ]
-      },
-      "displayName": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_1f58c720"
-          }
-        ]
-      },
+      "description": [
+        {
+          "language": "en",
+          "text": "something_random_73d204bb"
+        }
+      ],
+      "displayName": [
+        {
+          "language": "en",
+          "text": "something_random_124dc54e"
+        }
+      ],
       "embeddedDataSpecifications": "Unexpected string value",
       "extensions": [
         {

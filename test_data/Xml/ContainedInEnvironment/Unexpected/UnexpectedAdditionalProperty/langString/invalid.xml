@@ -2,13 +2,11 @@
 	<assetAdministrationShells>
 		<assetAdministrationShell>
 			<displayName>
-				<langStrings>
-					<langString>
-						<language>en</language>
-						<text>something_random_6ad1965e</text>
-						<unexpectedAdditionalProperty>INVALID</unexpectedAdditionalProperty>
-					</langString>
-				</langStrings>
+				<langString>
+					<language>en</language>
+					<text>something_random_56d2caa9</text>
+					<unexpectedAdditionalProperty>INVALID</unexpectedAdditionalProperty>
+				</langString>
 			</displayName>
 			<id>something_random_428f0205</id>
 			<assetInformation>

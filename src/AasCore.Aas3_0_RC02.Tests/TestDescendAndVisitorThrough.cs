@@ -829,31 +829,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_Descend_against_VisitorThrough_for_LangString
 
         [Test]
-        public void Test_Descend_of_LangStringSet()
-        {
-            Aas.LangStringSet instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteLangStringSet());
-
-            CompareOrRerecordTrace(
-                instance,
-                Path.Combine(
-                    Aas.Tests.Common.TestDataDir,
-                    "Descend",
-                    "LangStringSet",
-                    "complete.json.trace"));
-        }  // public void Test_Descend_of_LangStringSet
-
-        [Test]
-        public void Test_Descend_against_VisitorThrough_for_LangStringSet()
-        {
-            Aas.LangStringSet instance = (
-                Aas.Tests.CommonJsonization.LoadCompleteLangStringSet());
-
-            AssertDescendAndVisitorThroughSame(
-                instance);
-        }  // public void Test_Descend_against_VisitorThrough_for_LangStringSet
-
-        [Test]
         public void Test_Descend_of_Environment()
         {
             Aas.Environment instance = (
