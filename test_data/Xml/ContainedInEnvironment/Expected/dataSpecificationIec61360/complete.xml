@@ -47,22 +47,6 @@
 								</langString>
 							</definition>
 							<valueFormat>something_random_1fe01f60</valueFormat>
-							<valueList>
-								<valueReferencePairTypes>
-									<valueReferencePair>
-										<value>something_random_9790d633</value>
-										<valueId>
-											<type>GlobalReference</type>
-											<keys>
-												<key>
-													<type>GlobalReference</type>
-													<value>something_random_d6bd01e2</value>
-												</key>
-											</keys>
-										</valueId>
-									</valueReferencePair>
-								</valueReferencePairTypes>
-							</valueList>
 							<value>something_random_fced4bfa</value>
 							<levelType>Typ</levelType>
 						</dataSpecificationIec61360>

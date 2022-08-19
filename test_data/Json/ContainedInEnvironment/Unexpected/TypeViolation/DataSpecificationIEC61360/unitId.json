@@ -42,23 +42,7 @@
             "unit": "something_random_5674f349",
             "unitId": "Unexpected string value",
             "value": "something_random_fced4bfa",
-            "valueFormat": "something_random_1fe01f60",
-            "valueList": {
-              "valueReferencePairTypes": [
-                {
-                  "value": "something_random_9790d633",
-                  "valueId": {
-                    "keys": [
-                      {
-                        "type": "GlobalReference",
-                        "value": "something_random_d6bd01e2"
-                      }
-                    ],
-                    "type": "GlobalReference"
-                  }
-                }
-              ]
-            }
+            "valueFormat": "something_random_1fe01f60"
           }
         }
       ],

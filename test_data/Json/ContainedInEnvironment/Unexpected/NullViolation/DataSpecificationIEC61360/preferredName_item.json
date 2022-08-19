@@ -19,7 +19,8 @@
             "modelType": "DataSpecificationIEC61360",
             "preferredName": [
               null
-            ]
+            ],
+            "value": "something_random_fced4bfa"
           }
         }
       ],
