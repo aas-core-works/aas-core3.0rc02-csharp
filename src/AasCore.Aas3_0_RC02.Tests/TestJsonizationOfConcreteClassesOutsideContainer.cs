@@ -804,35 +804,6 @@ namespace AasCore.Aas3_0_RC02.Tests
         }  // public void Test_round_trip_LangString
 
         [Test]
-        public void Test_round_trip_LangStringSet()
-        {
-            var instance = Aas.Tests.CommonJsonization.LoadCompleteLangStringSet();
-
-            var jsonObject = Aas.Jsonization.Serialize.ToJsonObject(instance);
-
-            var anotherInstance = Aas.Jsonization.Deserialize.LangStringSetFrom(
-                jsonObject);
-
-            var anotherJsonObject = Aas.Jsonization.Serialize.ToJsonObject(
-                anotherInstance);
-
-            Aas.Tests.CommonJson.CheckJsonNodesEqual(
-                jsonObject,
-                anotherJsonObject,
-                out Aas.Reporting.Error? error);
-
-            if (error != null)
-            {
-                Assert.Fail(
-                    "When we de/serialize the complete instance " +
-                    "as LangStringSet, we get an error in the round trip: " +
-                    $"{Reporting.GenerateJsonPath(error.PathSegments)}: " +
-                    error.Cause
-                );
-            }
-        }  // public void Test_round_trip_LangStringSet
-
-        [Test]
         public void Test_round_trip_EmbeddedDataSpecification()
         {
             var instance = Aas.Tests.CommonJsonization.LoadCompleteEmbeddedDataSpecification();

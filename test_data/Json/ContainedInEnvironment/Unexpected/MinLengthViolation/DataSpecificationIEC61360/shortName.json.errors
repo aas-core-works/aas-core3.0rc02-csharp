@@ -1,0 +1,4 @@
+assetAdministrationShells[0].embeddedDataSpecifications[0].dataSpecificationContent: Invariant violated:
+Short name must be either null or have at least one item
+!(that.ShortName != null)
+|| (that.ShortName.Count > 0)

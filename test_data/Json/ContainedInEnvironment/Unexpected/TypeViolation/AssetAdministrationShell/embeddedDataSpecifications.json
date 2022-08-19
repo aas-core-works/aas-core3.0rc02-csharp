@@ -16,22 +16,18 @@
         ],
         "type": "ModelReference"
       },
-      "description": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_edabef06"
-          }
-        ]
-      },
-      "displayName": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_6ad1965e"
-          }
-        ]
-      },
+      "description": [
+        {
+          "language": "en",
+          "text": "something_random_3e91e3e2"
+        }
+      ],
+      "displayName": [
+        {
+          "language": "en",
+          "text": "something_random_56d2caa9"
+        }
+      ],
       "embeddedDataSpecifications": "Unexpected string value",
       "extensions": [
         {

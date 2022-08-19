@@ -17,14 +17,12 @@
           },
           "dataSpecificationContent": {
             "modelType": "DataSpecificationIEC61360",
-            "preferredName": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_58b3c6d8"
-                }
-              ]
-            },
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "something_random_92a4d25d"
+              }
+            ],
             "valueList": {
               "valueReferencePairTypes": []
             }

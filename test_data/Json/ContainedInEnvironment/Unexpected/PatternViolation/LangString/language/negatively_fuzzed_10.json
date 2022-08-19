@@ -4,14 +4,12 @@
       "assetInformation": {
         "assetKind": "Instance"
       },
-      "displayName": {
-        "langStrings": [
-          {
-            "language": "\udb85\uddc8\u000b~\u00fb\u0095\udb19\udcc4",
-            "text": "something_random_6ad1965e"
-          }
-        ]
-      },
+      "displayName": [
+        {
+          "language": "\udb85\uddc8\u000b~\u00fb\u0095\udb19\udcc4",
+          "text": "something_random_56d2caa9"
+        }
+      ],
       "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }

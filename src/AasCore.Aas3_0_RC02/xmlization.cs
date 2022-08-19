@@ -1973,8 +1973,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 AdministrativeInformation? theAdministration = null;
                 string? theId = null;
@@ -2125,29 +2125,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -3575,8 +3613,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 AdministrativeInformation? theAdministration = null;
                 string? theId = null;
@@ -3729,29 +3767,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -4340,8 +4416,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -4493,29 +4569,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -5018,8 +5132,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -5174,29 +5288,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -5818,8 +5970,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -5970,29 +6122,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -6491,8 +6681,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -6645,29 +6835,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -7192,15 +7420,15 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
                 List<Reference>? theSupplementalSemanticIds = null;
                 List<Qualifier>? theQualifiers = null;
                 List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
-                LangStringSet? theValue = null;
+                List<LangString>? theValue = null;
                 Reference? theValueId = null;
 
                 if (!isEmptySequence)
@@ -7345,29 +7573,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -7581,15 +7847,34 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "value":
                                 {
-                                    theValue = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theValue = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "value"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexValue = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexValue));
+                                                return null;
+                                            }
+
+                                            theValue.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexValue++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -7800,8 +8085,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -7954,29 +8239,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -8527,8 +8850,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -8679,29 +9002,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -9119,8 +9480,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -9272,29 +9633,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -9797,8 +10196,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -9950,29 +10349,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -10467,8 +10904,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -10621,29 +11058,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -11130,8 +11605,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -11285,29 +11760,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -12328,8 +12841,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -12487,29 +13000,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -13248,8 +13799,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -13402,29 +13953,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -14178,8 +14767,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 ModelingKind? theKind = null;
                 Reference? theSemanticId = null;
@@ -14329,29 +14918,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -14754,8 +15381,8 @@ namespace AasCore.Aas3_0_RC02
                 List<Extension>? theExtensions = null;
                 string? theCategory = null;
                 string? theIdShort = null;
-                LangStringSet? theDisplayName = null;
-                LangStringSet? theDescription = null;
+                List<LangString>? theDisplayName = null;
+                List<LangString>? theDescription = null;
                 string? theChecksum = null;
                 AdministrativeInformation? theAdministration = null;
                 string? theId = null;
@@ -14904,29 +15531,67 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "displayName":
                                 {
-                                    theDisplayName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDisplayName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "displayName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDisplayName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDisplayName));
+                                                return null;
+                                            }
+
+                                            theDisplayName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDisplayName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "description":
                                 {
-                                    theDescription = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDescription = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "description"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDescription = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDescription));
+                                                return null;
+                                            }
+
+                                            theDescription.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDescription++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -16239,256 +16904,6 @@ namespace AasCore.Aas3_0_RC02
             }  // internal static Aas.LangString? LangStringFromElement
 
             /// <summary>
-            /// Deserialize an instance of class LangStringSet from a sequence of XML elements.
-            /// </summary>
-            /// <remarks>
-            /// If <paramref name="isEmptySequence" /> is set, we should try to deserialize
-            /// the instance from an empty sequence. That is, the parent element
-            /// was a self-closing element.
-            /// </remarks>
-            internal static Aas.LangStringSet? LangStringSetFromSequence(
-                Xml.XmlReader reader,
-                bool isEmptySequence,
-                out Reporting.Error? error)
-            {
-                error = null;
-
-                List<LangString>? theLangStrings = null;
-
-                if (!isEmptySequence)
-                {
-                    SkipNoneWhitespaceAndComments(reader);
-                    if (reader.EOF)
-                    {
-                        error = new Reporting.Error(
-                            "Expected an XML element representing " +
-                            "a property of an instance of class LangStringSet, " +
-                            "but reached the end-of-file");
-                        return null;
-                    }
-                    while (reader.NodeType == Xml.XmlNodeType.Element)
-                    {
-                        string elementName = TryElementName(
-                            reader, out error);
-                        if (error != null)
-                        {
-                            return null;
-                        }
-
-                        bool isEmptyProperty = reader.IsEmptyElement;
-
-                        // Skip the expected element
-                        reader.Read();
-
-                        switch (elementName)
-                        {
-                            case "langStrings":
-                                {
-                                    theLangStrings = new List<LangString>();
-
-                                    if (!isEmptyProperty)
-                                    {
-                                        SkipNoneWhitespaceAndComments(reader);
-
-                                        int indexLangStrings = 0;
-                                        while (reader.NodeType == Xml.XmlNodeType.Element)
-                                        {
-                                            LangString? item = LangStringFromElement(
-                                                reader, out error);
-
-                                            if (error != null)
-                                            {
-                                                error.PrependSegment(
-                                                    new Reporting.IndexSegment(
-                                                        indexLangStrings));
-                                                return null;
-                                            }
-
-                                            theLangStrings.Add(
-                                                item
-                                                    ?? throw new System.InvalidOperationException(
-                                                        "Unexpected item null when error null"));
-
-                                            indexLangStrings++;
-                                            SkipNoneWhitespaceAndComments(reader);
-                                        }
-                                    }
-                                    break;
-                                }
-                            default:
-                                error = new Reporting.Error(
-                                    "We expected properties of the class LangStringSet, " +
-                                    "but got an unexpected element " +
-                                    $"with the name {elementName}");
-                                return null;
-                        }
-
-                        SkipNoneWhitespaceAndComments(reader);
-
-                        if (!isEmptyProperty)
-                        {
-                            // Read the end element
-
-                            if (reader.EOF)
-                            {
-                                error = new Reporting.Error(
-                                    "Expected an XML end element to conclude a property of class LangStringSet " +
-                                    $"with the element name {elementName}, " +
-                                    "but got the end-of-file.");
-                                return null;
-                            }
-                            if (reader.NodeType != Xml.XmlNodeType.EndElement)
-                            {
-                                error = new Reporting.Error(
-                                    "Expected an XML end element to conclude a property of class LangStringSet " +
-                                    $"with the element name {elementName}, " +
-                                    $"but got the node of type {reader.NodeType} " +
-                                    $"with the value {reader.Value}");
-                                return null;
-                            }
-
-                            string endElementName = TryElementName(
-                                reader, out error);
-                            if (error != null)
-                            {
-                                return null;
-                            }
-
-                            if (endElementName != elementName)
-                            {
-                                error = new Reporting.Error(
-                                    "Expected an XML end element to conclude a property of class LangStringSet " +
-                                    $"with the element name {elementName}, " +
-                                    $"but got the end element with the name {reader.Name}");
-                                return null;
-                            }
-                            // Skip the expected end element
-                            reader.Read();
-
-                            SkipNoneWhitespaceAndComments(reader);
-                        }
-
-                        if (reader.EOF)
-                        {
-                            break;
-                        }
-                    }
-                }
-
-                if (theLangStrings == null)
-                {
-                    error = new Reporting.Error(
-                        "The required property LangStrings has not been given " +
-                        "in the XML representation of an instance of class LangStringSet");
-                    return null;
-                }
-
-                return new Aas.LangStringSet(
-                    theLangStrings
-                         ?? throw new System.InvalidOperationException(
-                            "Unexpected null, had to be handled before"));
-            }  // internal static Aas.LangStringSet? LangStringSetFromSequence
-
-            /// <summary>
-            /// Deserialize an instance of class LangStringSet from an XML element.
-            /// </summary>
-            internal static Aas.LangStringSet? LangStringSetFromElement(
-                Xml.XmlReader reader,
-                out Reporting.Error? error)
-            {
-                error = null;
-
-                SkipNoneWhitespaceAndComments(reader);
-
-                if (reader.EOF)
-                {
-                    error = new Reporting.Error(
-                        "Expected an XML element representing an instance of class LangStringSet, " +
-                        "but reached the end-of-file");
-                    return null;
-                }
-
-                if (reader.NodeType != Xml.XmlNodeType.Element)
-                {
-                    error = new Reporting.Error(
-                        "Expected an XML element representing an instance of class LangStringSet, " +
-                        $"but got a node of type {reader.NodeType} " +
-                        $"with value {reader.Value}");
-                    return null;
-                }
-
-                string elementName = TryElementName(
-                    reader, out error);
-                if (error != null)
-                {
-                    return null;
-                }
-
-                if (elementName != "langStringSet")
-                {
-                    error = new Reporting.Error(
-                        "Expected an element representing an instance of class LangStringSet " +
-                        $"with element name langStringSet, but got: {elementName}");
-                    return null;
-                }
-
-                bool isEmptyElement = reader.IsEmptyElement;
-
-                // Skip the element node and go to the content
-                reader.Read();
-
-                Aas.LangStringSet? result = (
-                    LangStringSetFromSequence(
-                        reader, isEmptyElement, out error));
-                if (error != null)
-                {
-                    return null;
-                }
-
-                SkipNoneWhitespaceAndComments(reader);
-
-                if (!isEmptyElement)
-                {
-                    if (reader.EOF)
-                    {
-                        error = new Reporting.Error(
-                            "Expected an XML end element concluding an instance of class LangStringSet, " +
-                            "but reached the end-of-file");
-                        return null;
-                    }
-
-                    if (reader.NodeType != Xml.XmlNodeType.EndElement)
-                    {
-                        error = new Reporting.Error(
-                            "Expected an XML end element concluding an instance of class LangStringSet, " +
-                            $"but got a node of type {reader.NodeType} " +
-                            $"with value {reader.Value}");
-                        return null;
-                    }
-
-                    string endElementName = TryElementName(
-                        reader, out error);
-                    if (error != null)
-                    {
-                        return null;
-                    }
-
-                    if (endElementName != elementName)
-                    {
-                        error = new Reporting.Error(
-                            $"Expected an XML end element with an name {elementName}, " +
-                            $"but got: {endElementName}");
-                        return null;
-                    }
-
-                    // Skip the end element
-                    reader.Read();
-                }
-
-                return result;
-            }  // internal static Aas.LangStringSet? LangStringSetFromElement
-
-            /// <summary>
             /// Deserialize an instance of class Environment from a sequence of XML elements.
             /// </summary>
             /// <remarks>
@@ -17671,14 +18086,14 @@ namespace AasCore.Aas3_0_RC02
             {
                 error = null;
 
-                LangStringSet? thePreferredName = null;
-                LangStringSet? theShortName = null;
+                List<LangString>? thePreferredName = null;
+                List<LangString>? theShortName = null;
                 string? theUnit = null;
                 Reference? theUnitId = null;
                 string? theSourceOfDefinition = null;
                 string? theSymbol = null;
                 DataTypeIec61360? theDataType = null;
-                LangStringSet? theDefinition = null;
+                List<LangString>? theDefinition = null;
                 string? theValueFormat = null;
                 ValueList? theValueList = null;
                 string? theValue = null;
@@ -17713,29 +18128,67 @@ namespace AasCore.Aas3_0_RC02
                         {
                             case "preferredName":
                                 {
-                                    thePreferredName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    thePreferredName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "preferredName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexPreferredName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexPreferredName));
+                                                return null;
+                                            }
+
+                                            thePreferredName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexPreferredName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
                             case "shortName":
                                 {
-                                    theShortName = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theShortName = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "shortName"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexShortName = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexShortName));
+                                                return null;
+                                            }
+
+                                            theShortName.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexShortName++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -17930,15 +18383,34 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "definition":
                                 {
-                                    theDefinition = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDefinition = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "definition"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDefinition = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDefinition));
+                                                return null;
+                                            }
+
+                                            theDefinition.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDefinition++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -18292,7 +18764,7 @@ namespace AasCore.Aas3_0_RC02
 
                 string? theUnitName = null;
                 string? theUnitSymbol = null;
-                LangStringSet? theDefinition = null;
+                List<LangString>? theDefinition = null;
                 string? theSiNotation = null;
                 string? theSiName = null;
                 string? theDinNotation = null;
@@ -18413,15 +18885,34 @@ namespace AasCore.Aas3_0_RC02
                                 }
                             case "definition":
                                 {
-                                    theDefinition = LangStringSetFromSequence(
-                                        reader, isEmptyProperty, out error);
+                                    theDefinition = new List<LangString>();
 
-                                    if (error != null)
+                                    if (!isEmptyProperty)
                                     {
-                                        error.PrependSegment(
-                                            new Reporting.NameSegment(
-                                                "definition"));
-                                        return null;
+                                        SkipNoneWhitespaceAndComments(reader);
+
+                                        int indexDefinition = 0;
+                                        while (reader.NodeType == Xml.XmlNodeType.Element)
+                                        {
+                                            LangString? item = LangStringFromElement(
+                                                reader, out error);
+
+                                            if (error != null)
+                                            {
+                                                error.PrependSegment(
+                                                    new Reporting.IndexSegment(
+                                                        indexDefinition));
+                                                return null;
+                                            }
+
+                                            theDefinition.Add(
+                                                item
+                                                    ?? throw new System.InvalidOperationException(
+                                                        "Unexpected item null when error null"));
+
+                                            indexDefinition++;
+                                            SkipNoneWhitespaceAndComments(reader);
+                                        }
                                     }
                                     break;
                                 }
@@ -20095,32 +20586,6 @@ namespace AasCore.Aas3_0_RC02
             }
 
             /// <summary>
-            /// Deserialize an instance of LangStringSet from <paramref name="reader" />.
-            /// </summary>
-            /// <param name="reader">Initialized XML reader with cursor set to the element</param>
-            /// <exception cref="Xmlization.Exception">
-            /// Thrown when the element is not a valid XML
-            /// representation of LangStringSet.
-            /// </exception>
-            public static Aas.LangStringSet LangStringSetFrom(
-                Xml.XmlReader reader)
-            {
-                Aas.LangStringSet? result = (
-                    DeserializeImplementation.LangStringSetFromElement(
-                        reader,
-                        out Reporting.Error? error));
-                if (error != null)
-                {
-                    throw new Xmlization.Exception(
-                        Reporting.GenerateRelativeXPath(error.PathSegments),
-                        error.Cause);
-                }
-                return result
-                    ?? throw new System.InvalidOperationException(
-                        "Unexpected output null when error is null");
-            }
-
-            /// <summary>
             /// Deserialize an instance of Environment from <paramref name="reader" />.
             /// </summary>
             /// <param name="reader">Initialized XML reader with cursor set to the element</param>
@@ -20628,9 +21093,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -20641,9 +21109,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -20989,9 +21460,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21002,9 +21476,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21201,9 +21678,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21214,9 +21694,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21395,9 +21878,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21408,9 +21894,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21641,9 +22130,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21654,9 +22146,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21831,9 +22326,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -21844,9 +22342,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22044,9 +22545,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22057,9 +22561,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22160,9 +22667,12 @@ namespace AasCore.Aas3_0_RC02
                         "value",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Value,
-                        writer);
+                    foreach (var item in that.Value)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22244,9 +22754,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22257,9 +22770,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22456,9 +22972,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22469,9 +22988,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22643,9 +23165,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22656,9 +23181,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22840,9 +23368,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -22853,9 +23384,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23035,9 +23569,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23048,9 +23585,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23245,9 +23785,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23258,9 +23801,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23585,9 +24131,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23598,9 +24147,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23858,9 +24410,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -23871,9 +24426,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24108,9 +24666,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24121,9 +24682,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24282,9 +24846,12 @@ namespace AasCore.Aas3_0_RC02
                         "displayName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.DisplayName,
-                        writer);
+                    foreach (var item in that.DisplayName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24295,9 +24862,12 @@ namespace AasCore.Aas3_0_RC02
                         "description",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Description,
-                        writer);
+                    foreach (var item in that.Description)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24517,37 +25087,6 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }
 
-            private void LangStringSetToSequence(
-                LangStringSet that,
-                Xml.XmlWriter writer)
-            {
-                writer.WriteStartElement(
-                    "langStrings",
-                    NS);
-
-                foreach (var item in that.LangStrings)
-                {
-                    this.Visit(
-                        item,
-                        writer);
-                }
-
-                writer.WriteEndElement();
-            }  // private void LangStringSetToSequence
-
-            public override void Visit(
-                Aas.LangStringSet that,
-                Xml.XmlWriter writer)
-            {
-                writer.WriteStartElement(
-                    "langStringSet",
-                    NS);
-                this.LangStringSetToSequence(
-                    that,
-                    writer);
-                writer.WriteEndElement();
-            }
-
             private void EnvironmentToSequence(
                 Environment that,
                 Xml.XmlWriter writer)
@@ -24728,9 +25267,12 @@ namespace AasCore.Aas3_0_RC02
                     "preferredName",
                     NS);
 
-                this.LangStringSetToSequence(
-                    that.PreferredName,
-                    writer);
+                foreach (var item in that.PreferredName)
+                {
+                    this.Visit(
+                        item,
+                        writer);
+                }
 
                 writer.WriteEndElement();
 
@@ -24740,9 +25282,12 @@ namespace AasCore.Aas3_0_RC02
                         "shortName",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.ShortName,
-                        writer);
+                    foreach (var item in that.ShortName)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24819,9 +25364,12 @@ namespace AasCore.Aas3_0_RC02
                         "definition",
                         NS);
 
-                    this.LangStringSetToSequence(
-                        that.Definition,
-                        writer);
+                    foreach (var item in that.Definition)
+                    {
+                        this.Visit(
+                            item,
+                            writer);
+                    }
 
                     writer.WriteEndElement();
                 }
@@ -24920,9 +25468,12 @@ namespace AasCore.Aas3_0_RC02
                     "definition",
                     NS);
 
-                this.LangStringSetToSequence(
-                    that.Definition,
-                    writer);
+                foreach (var item in that.Definition)
+                {
+                    this.Visit(
+                        item,
+                        writer);
+                }
 
                 writer.WriteEndElement();
 

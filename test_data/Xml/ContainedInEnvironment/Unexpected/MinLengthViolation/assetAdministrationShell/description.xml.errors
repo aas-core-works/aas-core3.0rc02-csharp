@@ -1,0 +1,4 @@
+assetAdministrationShells[0]: Invariant violated:
+Description must be either null or have at least one item
+!(that.Description != null)
+|| (that.Description.Count >= 1)

@@ -16,20 +16,16 @@
 					<dataSpecificationContent>
 						<dataSpecificationIec61360>
 							<preferredName>
-								<langStrings>
-									<langString>
-										<language>en</language>
-										<text>something_random_58b3c6d8</text>
-									</langString>
-								</langStrings>
+								<langString>
+									<language>en</language>
+									<text>something_random_92a4d25d</text>
+								</langString>
 							</preferredName>
 							<shortName>
-								<langStrings>
-									<langString>
-										<language>en</language>
-										<text>something_random_ff40e3ca</text>
-									</langString>
-								</langStrings>
+								<langString>
+									<language>en</language>
+									<text>something_random_9c2d1e6c</text>
+								</langString>
 							</shortName>
 							<unit>something_random_5674f349</unit>
 							<unitId>
@@ -45,12 +41,10 @@
 							<symbol>something_random_502f3f91</symbol>
 							<dataType>DATE</dataType>
 							<definition>
-								<langStrings>
-									<langString>
-										<language>en</language>
-										<text>something_random_77285c70</text>
-									</langString>
-								</langStrings>
+								<langString>
+									<language>en</language>
+									<text>something_random_f05e0313</text>
+								</langString>
 							</definition>
 							<valueFormat>something_random_1fe01f60</valueFormat>
 							<valueList>Unexpected string value</valueList>

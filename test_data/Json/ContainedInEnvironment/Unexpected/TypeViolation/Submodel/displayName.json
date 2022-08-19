@@ -4,14 +4,12 @@
       "administration": {},
       "category": "something_random_6c273750",
       "checksum": "something_random_bb3da9d4",
-      "description": {
-        "langStrings": [
-          {
-            "language": "en",
-            "text": "something_random_efbc3ede"
-          }
-        ]
-      },
+      "description": [
+        {
+          "language": "en",
+          "text": "something_random_0bcec5eb"
+        }
+      ],
       "displayName": "Unexpected string value",
       "embeddedDataSpecifications": [
         {
@@ -26,14 +24,12 @@
           },
           "dataSpecificationContent": {
             "modelType": "DataSpecificationIEC61360",
-            "preferredName": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_7ee6c314"
-                }
-              ]
-            }
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "something_random_0796a3b4"
+              }
+            ]
           }
         }
       ],

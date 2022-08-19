@@ -1,1 +1,1 @@
-Required property "text" is missing at: assetAdministrationShells[0].displayName.langStrings[0]
+Required property "text" is missing at: assetAdministrationShells[0].displayName[0]

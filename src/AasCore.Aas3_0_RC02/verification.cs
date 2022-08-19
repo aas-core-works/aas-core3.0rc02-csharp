@@ -2745,6 +2745,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.EmbeddedDataSpecifications != null)
                     || (that.EmbeddedDataSpecifications.Count > 0)))
                 {
@@ -2840,23 +2884,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -3149,6 +3209,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -3317,23 +3421,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -3497,6 +3617,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -3624,23 +3788,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -3779,6 +3959,50 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
                 }
 
                 if (!(
@@ -4017,23 +4241,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -4213,6 +4453,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -4367,23 +4651,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -4525,6 +4825,50 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
                 }
 
                 if (!(
@@ -4677,23 +5021,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -4849,6 +5209,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -4945,6 +5349,28 @@ namespace AasCore.Aas3_0_RC02
                         "|| Aas.Constants.ValidCategoriesForDataElement.Contains(that.Category)");
                 }
 
+                if (!(
+                    !(that.Value != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Value)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Value specifies no duplicate languages\n" +
+                        "!(that.Value != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Value)");
+                }
+
+                if (!(
+                    !(that.Value != null)
+                    || (that.Value.Count > 0)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Value must be either null or have at least one item\n" +
+                        "!(that.Value != null)\n" +
+                        "|| (that.Value.Count > 0)");
+                }
+
                 if (that.Extensions != null)
                 {
                     int indexExtensions = 0;
@@ -4988,23 +5414,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -5103,12 +5545,20 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.Value != null)
                 {
-                    foreach (var error in Verification.Verify(that.Value))
+                    int indexValue = 0;
+                    foreach (var item in that.Value)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "value"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexValue));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "value"));
+                            yield return error;
+                        }
+                        indexValue++;
                     }
                 }
 
@@ -5149,6 +5599,50 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
                 }
 
                 if (!(
@@ -5311,23 +5805,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -5483,6 +5993,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -5622,23 +6176,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -5775,6 +6345,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -5914,23 +6528,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -6075,6 +6705,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -6214,23 +6888,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -6375,6 +7065,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -6513,23 +7247,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -6687,6 +7437,50 @@ namespace AasCore.Aas3_0_RC02
                         "Has-Extensions needs to be unique.\n" +
                         "!(that.Extensions != null)\n" +
                         "|| Verification.ExtensionNamesAreUnique(that.Extensions)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
                 }
 
                 if (!(
@@ -6871,23 +7665,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -7162,6 +7972,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -7318,23 +8172,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -7539,6 +8409,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -7702,23 +8616,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -7914,6 +8844,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.SupplementalSemanticIds != null)
                     || (that.SupplementalSemanticIds.Count > 0)))
                 {
@@ -8041,23 +9015,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -8183,6 +9173,50 @@ namespace AasCore.Aas3_0_RC02
                 }
 
                 if (!(
+                    !(that.Description != null)
+                    || (that.Description.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description must be either null or have at least one item\n" +
+                        "!(that.Description != null)\n" +
+                        "|| (that.Description.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.Description != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Description)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Description specifies no duplicate languages\n" +
+                        "!(that.Description != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Description)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || (that.DisplayName.Count >= 1)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name must be either null or have at least one item\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| (that.DisplayName.Count >= 1)");
+                }
+
+                if (!(
+                    !(that.DisplayName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.DisplayName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Display name specifies no duplicate languages\n" +
+                        "!(that.DisplayName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.DisplayName)");
+                }
+
+                if (!(
                     !(that.EmbeddedDataSpecifications != null)
                     || (that.EmbeddedDataSpecifications.Count > 0)))
                 {
@@ -8263,23 +9297,39 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.DisplayName != null)
                 {
-                    foreach (var error in Verification.Verify(that.DisplayName))
+                    int indexDisplayName = 0;
+                    foreach (var item in that.DisplayName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "displayName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDisplayName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "displayName"));
+                            yield return error;
+                        }
+                        indexDisplayName++;
                     }
                 }
 
                 if (that.Description != null)
                 {
-                    foreach (var error in Verification.Verify(that.Description))
+                    int indexDescription = 0;
+                    foreach (var item in that.Description)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "description"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDescription));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "description"));
+                            yield return error;
+                        }
+                        indexDescription++;
                     }
                 }
 
@@ -8633,42 +9683,6 @@ namespace AasCore.Aas3_0_RC02
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
             public override IEnumerable<Reporting.Error> Transform(
-                Aas.LangStringSet that)
-            {
-                if (!(that.LangStrings.Count >= 1))
-                {
-                    yield return new Reporting.Error(
-                        "Invariant violated:\n" +
-                        "that.LangStrings.Count >= 1");
-                }
-
-                if (!(
-                    Verification.LangStringsHaveUniqueLanguages(that.LangStrings)))
-                {
-                    yield return new Reporting.Error(
-                        "Invariant violated:\n" +
-                        "Verification.LangStringsHaveUniqueLanguages(that.LangStrings)");
-                }
-
-                int indexLangStrings = 0;
-                foreach (var item in that.LangStrings)
-                {
-                    foreach (var error in Verification.Verify(item))
-                    {
-                        error.PrependSegment(
-                            new Reporting.IndexSegment(
-                                indexLangStrings));
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "langStrings"));
-                        yield return error;
-                    }
-                    indexLangStrings++;
-                }
-            }
-
-            [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
                 Aas.Environment that)
             {
                 if (!(
@@ -8830,22 +9844,99 @@ namespace AasCore.Aas3_0_RC02
             public override IEnumerable<Reporting.Error> Transform(
                 Aas.DataSpecificationIec61360 that)
             {
-                foreach (var error in Verification.Verify(that.PreferredName))
+                if (!(
+                    !(that.Definition != null)
+                    || (that.Definition.Count > 0)))
                 {
-                    error.PrependSegment(
-                        new Reporting.NameSegment(
-                            "preferredName"));
-                    yield return error;
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Definition must be either null or have at least one item\n" +
+                        "!(that.Definition != null)\n" +
+                        "|| (that.Definition.Count > 0)");
+                }
+
+                if (!(
+                    !(that.Definition != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.Definition)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Definition specifies no duplicate languages\n" +
+                        "!(that.Definition != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.Definition)");
+                }
+
+                if (!(
+                    !(that.ShortName != null)
+                    || (that.ShortName.Count > 0)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Short name must be either null or have at least one item\n" +
+                        "!(that.ShortName != null)\n" +
+                        "|| (that.ShortName.Count > 0)");
+                }
+
+                if (!(
+                    !(that.ShortName != null)
+                    || Verification.LangStringsHaveUniqueLanguages(that.ShortName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Short name specifies no duplicate languages\n" +
+                        "!(that.ShortName != null)\n" +
+                        "|| Verification.LangStringsHaveUniqueLanguages(that.ShortName)");
+                }
+
+                if (!(that.PreferredName.Count > 0))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Preferred name must be either null or have at least one item\n" +
+                        "that.PreferredName.Count > 0");
+                }
+
+                if (!(
+                    Verification.LangStringsHaveUniqueLanguages(that.PreferredName)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Preferred name specifies no duplicate languages\n" +
+                        "Verification.LangStringsHaveUniqueLanguages(that.PreferredName)");
+                }
+
+                int indexPreferredName = 0;
+                foreach (var item in that.PreferredName)
+                {
+                    foreach (var error in Verification.Verify(item))
+                    {
+                        error.PrependSegment(
+                            new Reporting.IndexSegment(
+                                indexPreferredName));
+                        error.PrependSegment(
+                            new Reporting.NameSegment(
+                                "preferredName"));
+                        yield return error;
+                    }
+                    indexPreferredName++;
                 }
 
                 if (that.ShortName != null)
                 {
-                    foreach (var error in Verification.Verify(that.ShortName))
+                    int indexShortName = 0;
+                    foreach (var item in that.ShortName)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "shortName"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexShortName));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "shortName"));
+                            yield return error;
+                        }
+                        indexShortName++;
                     }
                 }
 
@@ -8911,12 +10002,20 @@ namespace AasCore.Aas3_0_RC02
 
                 if (that.Definition != null)
                 {
-                    foreach (var error in Verification.Verify(that.Definition))
+                    int indexDefinition = 0;
+                    foreach (var item in that.Definition)
                     {
-                        error.PrependSegment(
-                            new Reporting.NameSegment(
-                                "definition"));
-                        yield return error;
+                        foreach (var error in Verification.Verify(item))
+                        {
+                            error.PrependSegment(
+                                new Reporting.IndexSegment(
+                                    indexDefinition));
+                            error.PrependSegment(
+                                new Reporting.NameSegment(
+                                    "definition"));
+                            yield return error;
+                        }
+                        indexDefinition++;
                     }
                 }
 
@@ -8961,6 +10060,23 @@ namespace AasCore.Aas3_0_RC02
             public override IEnumerable<Reporting.Error> Transform(
                 Aas.DataSpecificationPhysicalUnit that)
             {
+                if (!(that.Definition.Count > 0))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Definition must have at least one item\n" +
+                        "that.Definition.Count > 0");
+                }
+
+                if (!(
+                    Verification.LangStringsHaveUniqueLanguages(that.Definition)))
+                {
+                    yield return new Reporting.Error(
+                        "Invariant violated:\n" +
+                        "Definition specifies no duplicate languages\n" +
+                        "Verification.LangStringsHaveUniqueLanguages(that.Definition)");
+                }
+
                 foreach (var error in Verification.VerifyNonEmptyString(that.UnitName))
                 {
                     error.PrependSegment(
@@ -8977,12 +10093,20 @@ namespace AasCore.Aas3_0_RC02
                     yield return error;
                 }
 
-                foreach (var error in Verification.Verify(that.Definition))
+                int indexDefinition = 0;
+                foreach (var item in that.Definition)
                 {
-                    error.PrependSegment(
-                        new Reporting.NameSegment(
-                            "definition"));
-                    yield return error;
+                    foreach (var error in Verification.Verify(item))
+                    {
+                        error.PrependSegment(
+                            new Reporting.IndexSegment(
+                                indexDefinition));
+                        error.PrependSegment(
+                            new Reporting.NameSegment(
+                                "definition"));
+                        yield return error;
+                    }
+                    indexDefinition++;
                 }
 
                 if (that.SiNotation != null)

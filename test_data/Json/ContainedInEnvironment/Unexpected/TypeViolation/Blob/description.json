@@ -9,14 +9,12 @@
           "checksum": "something_random_9711a3c9",
           "contentType": "application/something-random",
           "description": "Unexpected string value",
-          "displayName": {
-            "langStrings": [
-              {
-                "language": "en",
-                "text": "something_random_c94bb548"
-              }
-            ]
-          },
+          "displayName": [
+            {
+              "language": "en",
+              "text": "something_random_1feb47b8"
+            }
+          ],
           "embeddedDataSpecifications": [
             {
               "dataSpecification": {
@@ -30,14 +28,12 @@
               },
               "dataSpecificationContent": {
                 "modelType": "DataSpecificationIEC61360",
-                "preferredName": {
-                  "langStrings": [
-                    {
-                      "language": "en",
-                      "text": "something_random_10d3ffd0"
-                    }
-                  ]
-                }
+                "preferredName": [
+                  {
+                    "language": "en",
+                    "text": "something_random_692e41e4"
+                  }
+                ]
               }
             }
           ],

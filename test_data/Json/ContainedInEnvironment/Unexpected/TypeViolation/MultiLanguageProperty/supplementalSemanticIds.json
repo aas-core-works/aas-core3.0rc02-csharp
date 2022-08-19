@@ -7,22 +7,18 @@
         {
           "category": "PARAMETER",
           "checksum": "something_random_9711a3c9",
-          "description": {
-            "langStrings": [
-              {
-                "language": "en",
-                "text": "something_random_02557bc9"
-              }
-            ]
-          },
-          "displayName": {
-            "langStrings": [
-              {
-                "language": "en",
-                "text": "something_random_c94bb548"
-              }
-            ]
-          },
+          "description": [
+            {
+              "language": "en",
+              "text": "something_random_926f39ee"
+            }
+          ],
+          "displayName": [
+            {
+              "language": "en",
+              "text": "something_random_1feb47b8"
+            }
+          ],
           "embeddedDataSpecifications": [
             {
               "dataSpecification": {
@@ -36,14 +32,12 @@
               },
               "dataSpecificationContent": {
                 "modelType": "DataSpecificationIEC61360",
-                "preferredName": {
-                  "langStrings": [
-                    {
-                      "language": "en",
-                      "text": "something_random_10d3ffd0"
-                    }
-                  ]
-                }
+                "preferredName": [
+                  {
+                    "language": "en",
+                    "text": "something_random_692e41e4"
+                  }
+                ]
               }
             }
           ],
@@ -72,14 +66,12 @@
             "type": "GlobalReference"
           },
           "supplementalSemanticIds": "Unexpected string value",
-          "value": {
-            "langStrings": [
-              {
-                "language": "en",
-                "text": "something_random_af793cff"
-              }
-            ]
-          },
+          "value": [
+            {
+              "language": "en",
+              "text": "something_random_e425457b"
+            }
+          ],
           "valueId": {
             "keys": [
               {

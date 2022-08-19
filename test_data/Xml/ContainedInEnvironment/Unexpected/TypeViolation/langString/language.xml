@@ -2,20 +2,18 @@
 	<assetAdministrationShells>
 		<assetAdministrationShell>
 			<displayName>
-				<langStrings>
-					<langString>
-						<language>
-							<type>GlobalReference</type>
-							<keys>
-								<key>
-									<type>GlobalReference</type>
-									<value>something_random_bf488661</value>
-								</key>
-							</keys>
-						</language>
-						<text>something_random_6ad1965e</text>
-					</langString>
-				</langStrings>
+				<langString>
+					<language>
+						<type>GlobalReference</type>
+						<keys>
+							<key>
+								<type>GlobalReference</type>
+								<value>something_random_500492f8</value>
+							</key>
+						</keys>
+					</language>
+					<text>something_random_56d2caa9</text>
+				</langString>
 			</displayName>
 			<id>something_random_428f0205</id>
 			<assetInformation>

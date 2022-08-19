@@ -4,13 +4,11 @@
       "assetInformation": {
         "assetKind": "Instance"
       },
-      "displayName": {
-        "langStrings": [
-          {
-            "language": "en"
-          }
-        ]
-      },
+      "displayName": [
+        {
+          "language": "en"
+        }
+      ],
       "id": "something_random_428f0205",
       "modelType": "AssetAdministrationShell"
     }

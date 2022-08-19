@@ -1,7 +1,5 @@
 Extension
-LangStringSet
 LangString
-LangStringSet
 LangString
 Reference
 Key
@@ -12,7 +10,6 @@ EmbeddedDataSpecification
 Reference
 Key
 DataSpecificationIec61360
-LangStringSet
 LangString
 OperationVariable
 AasCore.Aas3_0_RC02.Blob with ID-short 

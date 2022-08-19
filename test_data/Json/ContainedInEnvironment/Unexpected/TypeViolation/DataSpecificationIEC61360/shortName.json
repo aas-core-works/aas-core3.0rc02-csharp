@@ -17,24 +17,20 @@
           },
           "dataSpecificationContent": {
             "dataType": "DATE",
-            "definition": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_77285c70"
-                }
-              ]
-            },
+            "definition": [
+              {
+                "language": "en",
+                "text": "something_random_f05e0313"
+              }
+            ],
             "levelType": "Typ",
             "modelType": "DataSpecificationIEC61360",
-            "preferredName": {
-              "langStrings": [
-                {
-                  "language": "en",
-                  "text": "something_random_58b3c6d8"
-                }
-              ]
-            },
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "something_random_92a4d25d"
+              }
+            ],
             "shortName": "Unexpected string value",
             "sourceOfDefinition": "something_random_2261a0b2",
             "symbol": "something_random_502f3f91",

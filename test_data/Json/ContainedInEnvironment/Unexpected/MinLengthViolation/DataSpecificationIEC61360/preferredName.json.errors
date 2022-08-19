@@ -1,0 +1,3 @@
+assetAdministrationShells[0].embeddedDataSpecifications[0].dataSpecificationContent: Invariant violated:
+Preferred name must be either null or have at least one item
+that.PreferredName.Count > 0

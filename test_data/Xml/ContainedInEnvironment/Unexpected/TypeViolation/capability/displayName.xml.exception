@@ -1,1 +1,1 @@
-The required property LangStrings has not been given in the XML representation of an instance of class LangStringSet at: *[0]/*[0]/displayName
+Expected an XML end element to conclude a property of class Capability with the element name displayName, but got the node of type Text with the value Unexpected string value at: *[0]/*[0]

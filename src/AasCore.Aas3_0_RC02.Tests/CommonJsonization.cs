@@ -1183,48 +1183,6 @@ namespace AasCore.Aas3_0_RC02.Tests
             return instance;
         }  // public static Aas.LangString LoadMinimalLangString
 
-        public static Aas.LangStringSet LoadCompleteLangStringSet()
-        {
-            string path = Path.Combine(
-                Aas.Tests.Common.TestDataDir,
-                "Json",
-                "ContainedInEnvironment",
-                "Expected",
-                "LangStringSet",
-                "complete.json");
-
-            var node = Aas.Tests.CommonJson.ReadFromFile(path);
-
-            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
-               node);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
-                container);
-
-            return instance;
-        }  // public static Aas.LangStringSet LoadCompleteLangStringSet
-
-        public static Aas.LangStringSet LoadMinimalLangStringSet()
-        {
-            string path = Path.Combine(
-                Aas.Tests.Common.TestDataDir,
-                "Json",
-                "ContainedInEnvironment",
-                "Expected",
-                "LangStringSet",
-                "minimal.json");
-
-            var node = Aas.Tests.CommonJson.ReadFromFile(path);
-
-            var container = Aas.Jsonization.Deserialize.EnvironmentFrom(
-               node);
-
-            var instance = Aas.Tests.Common.MustFind<Aas.LangStringSet>(
-                container);
-
-            return instance;
-        }  // public static Aas.LangStringSet LoadMinimalLangStringSet
-
         public static Aas.Environment LoadCompleteEnvironment()
         {
             string path = Path.Combine(
