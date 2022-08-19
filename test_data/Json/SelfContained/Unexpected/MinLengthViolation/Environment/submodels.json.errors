@@ -1,0 +1,4 @@
+: Invariant violated:
+Submodels must be either null or have at least one item
+!(that.Submodels != null)
+|| (that.Submodels.Count > 0)

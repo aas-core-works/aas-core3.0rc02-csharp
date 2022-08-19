@@ -1,0 +1,4 @@
+submodels[0].submodelElements[0]: Invariant violated:
+Output variables must be either null or have at least one item
+!(that.OutputVariables != null)
+|| (that.OutputVariables.Count > 0)

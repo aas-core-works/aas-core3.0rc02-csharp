@@ -4105,7 +4105,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "VARIABLE";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForDataElement.Contains(
                     result))
             {
@@ -4113,7 +4113,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }
@@ -4583,7 +4583,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "VARIABLE";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForDataElement.Contains(
                     result))
             {
@@ -4591,7 +4591,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }
@@ -5070,7 +5070,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "VARIABLE";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForDataElement.Contains(
                     result))
             {
@@ -5078,7 +5078,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }
@@ -5515,7 +5515,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "VARIABLE";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForDataElement.Contains(
                     result))
             {
@@ -5523,7 +5523,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }
@@ -5990,7 +5990,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "VARIABLE";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForDataElement.Contains(
                     result))
             {
@@ -5998,7 +5998,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }
@@ -6443,7 +6443,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "VARIABLE";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForDataElement.Contains(
                     result))
             {
@@ -6451,7 +6451,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }
@@ -9693,7 +9693,7 @@ namespace AasCore.Aas3_0_RC02
         {
             string result = Category ?? "PROPERTY";
 
-        #if DEBUG
+#if DEBUG
             if (!Constants.ValidCategoriesForConceptDescription.Contains(
                     result))
             {
@@ -9701,7 +9701,7 @@ namespace AasCore.Aas3_0_RC02
                     $"Unexpected default category: {result}"
                 );
             }
-        #endif
+#endif
 
             return result;
         }

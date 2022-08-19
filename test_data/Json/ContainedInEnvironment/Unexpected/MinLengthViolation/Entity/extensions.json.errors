@@ -1,0 +1,4 @@
+submodels[0].submodelElements[0]: Invariant violated:
+Extensions must be either null or have at least one item
+!(that.Extensions != null)
+|| (that.Extensions.Count > 0)

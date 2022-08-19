@@ -1,0 +1,4 @@
+assetAdministrationShells[0].assetInformation: Invariant violated:
+Specific asset IDs must be either null or have at least one item
+!(that.SpecificAssetIds != null)
+|| (that.SpecificAssetIds.Count > 0)

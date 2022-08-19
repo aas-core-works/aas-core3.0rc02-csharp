@@ -1,0 +1,4 @@
+submodels[0].submodelElements[0]: Invariant violated:
+Input variables must be either null or have at least one item
+!(that.InputVariables != null)
+|| (that.InputVariables.Count > 0)

@@ -338,180 +338,180 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "name":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theName = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "name"));
-                                return null;
-                            }
-                            if (theName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theName null when error is also null");
-                            }
-                            break;
-                        }
-                        case "semanticId":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
-                            }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
-                        case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    continue;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theName = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        new Reporting.NameSegment(
+                                            "name"));
+                                    return null;
+                                }
+                                if (theName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theName null when error is also null");
+                                }
+                                break;
+                            }
+                        case "semanticId":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
+                            }
+                        case "supplementalSemanticIds":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case "valueType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueType"));
-                                return null;
+                                theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                if (theValueType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueType null when error is also null");
-                            }
-                            break;
-                        }
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "refersTo":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theRefersTo = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "refersTo"));
-                                return null;
+                                theRefersTo = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "refersTo"));
+                                    return null;
+                                }
+                                if (theRefersTo == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theRefersTo null when error is also null");
+                                }
+                                break;
                             }
-                            if (theRefersTo == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theRefersTo null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -1075,108 +1075,108 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "version":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theVersion = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "version"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theVersion == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theVersion null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "version":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theVersion = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "version"));
-                                return null;
-                            }
-                            if (theVersion == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theVersion null when error is also null");
-                            }
-                            break;
-                        }
                         case "revision":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theRevision = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "revision"));
-                                return null;
+                                theRevision = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "revision"));
+                                    return null;
+                                }
+                                if (theRevision == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theRevision null when error is also null");
+                                }
+                                break;
                             }
-                            if (theRevision == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theRevision null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -1353,204 +1353,204 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "type":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theType = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "type"));
-                                return null;
-                            }
-                            if (theType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theType null when error is also null");
-                            }
-                            break;
-                        }
-                        case "valueType":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueType"));
-                                return null;
-                            }
-                            if (theValueType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueType null when error is also null");
-                            }
-                            break;
-                        }
-                        case "semanticId":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
-                            }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
-                        case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    continue;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theType = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
+                                if (theType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theType null when error is also null");
+                                }
+                                break;
+                            }
+                        case "valueType":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                if (theValueType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueType null when error is also null");
+                                }
+                                break;
+                            }
+                        case "semanticId":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
+                            }
+                        case "supplementalSemanticIds":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.QualifierKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.QualifierKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueId"));
-                                return null;
+                                theValueId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
+                                }
+                                if (theValueId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueId null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -1623,386 +1623,386 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "id":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theId = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "id"));
-                                return null;
+                                theId = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "id"));
+                                    return null;
+                                }
+                                if (theId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theId null when error is also null");
-                            }
-                            break;
-                        }
                         case "assetInformation":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theAssetInformation = DeserializeImplementation.AssetInformationFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "assetInformation"));
-                                return null;
+                                theAssetInformation = DeserializeImplementation.AssetInformationFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "assetInformation"));
+                                    return null;
+                                }
+                                if (theAssetInformation == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theAssetInformation null when error is also null");
+                                }
+                                break;
                             }
-                            if (theAssetInformation == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theAssetInformation null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "administration":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theAdministration = DeserializeImplementation.AdministrativeInformationFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "administration"));
-                                return null;
+                                theAdministration = DeserializeImplementation.AdministrativeInformationFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
+                                }
+                                if (theAdministration == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theAdministration null when error is also null");
+                                }
+                                break;
                             }
-                            if (theAdministration == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theAdministration null when error is also null");
-                            }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "derivedFrom":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theDerivedFrom = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "derivedFrom"));
-                                return null;
-                            }
-                            if (theDerivedFrom == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDerivedFrom null when error is also null");
-                            }
-                            break;
-                        }
-                        case "submodels":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arraySubmodels = keyValue.Value as Nodes.JsonArray;
-                            if (arraySubmodels == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "submodels"));
-                                return null;
-                            }
-                            theSubmodels = new List<Reference>(
-                                arraySubmodels.Count);
-                            int indexSubmodels = 0;
-                            foreach (Nodes.JsonNode? item in arraySubmodels)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSubmodels));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "submodels"));
-                                    return null;
+                                    continue;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theDerivedFrom = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSubmodels));
+                                        new Reporting.NameSegment(
+                                            "derivedFrom"));
+                                    return null;
+                                }
+                                if (theDerivedFrom == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDerivedFrom null when error is also null");
+                                }
+                                break;
+                            }
+                        case "submodels":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arraySubmodels = keyValue.Value as Nodes.JsonArray;
+                                if (arraySubmodels == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "submodels"));
                                     return null;
                                 }
-                                theSubmodels.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSubmodels++;
+                                theSubmodels = new List<Reference>(
+                                    arraySubmodels.Count);
+                                int indexSubmodels = 0;
+                                foreach (Nodes.JsonNode? item in arraySubmodels)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSubmodels));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "submodels"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSubmodels));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "submodels"));
+                                        return null;
+                                    }
+                                    theSubmodels.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSubmodels++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -2074,132 +2074,132 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "assetKind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theAssetKind = DeserializeImplementation.AssetKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "assetKind"));
-                                return null;
-                            }
-                            if (theAssetKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theAssetKind null when error is also null");
-                            }
-                            break;
-                        }
-                        case "globalAssetId":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theGlobalAssetId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "globalAssetId"));
-                                return null;
-                            }
-                            if (theGlobalAssetId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theGlobalAssetId null when error is also null");
-                            }
-                            break;
-                        }
-                        case "specificAssetIds":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arraySpecificAssetIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySpecificAssetIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "specificAssetIds"));
-                                return null;
-                            }
-                            theSpecificAssetIds = new List<SpecificAssetId>(
-                                arraySpecificAssetIds.Count);
-                            int indexSpecificAssetIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySpecificAssetIds)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSpecificAssetIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "specificAssetIds"));
-                                    return null;
+                                    continue;
                                 }
-                                SpecificAssetId? parsedItem = DeserializeImplementation.SpecificAssetIdFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theAssetKind = DeserializeImplementation.AssetKindFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSpecificAssetIds));
+                                        new Reporting.NameSegment(
+                                            "assetKind"));
+                                    return null;
+                                }
+                                if (theAssetKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theAssetKind null when error is also null");
+                                }
+                                break;
+                            }
+                        case "globalAssetId":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theGlobalAssetId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "globalAssetId"));
+                                    return null;
+                                }
+                                if (theGlobalAssetId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theGlobalAssetId null when error is also null");
+                                }
+                                break;
+                            }
+                        case "specificAssetIds":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arraySpecificAssetIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySpecificAssetIds == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "specificAssetIds"));
                                     return null;
                                 }
-                                theSpecificAssetIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSpecificAssetIds++;
+                                theSpecificAssetIds = new List<SpecificAssetId>(
+                                    arraySpecificAssetIds.Count);
+                                int indexSpecificAssetIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySpecificAssetIds)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSpecificAssetIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "specificAssetIds"));
+                                        return null;
+                                    }
+                                    SpecificAssetId? parsedItem = DeserializeImplementation.SpecificAssetIdFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSpecificAssetIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "specificAssetIds"));
+                                        return null;
+                                    }
+                                    theSpecificAssetIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSpecificAssetIds++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case "defaultThumbnail":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDefaultThumbnail = DeserializeImplementation.ResourceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "defaultThumbnail"));
-                                return null;
+                                theDefaultThumbnail = DeserializeImplementation.ResourceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "defaultThumbnail"));
+                                    return null;
+                                }
+                                if (theDefaultThumbnail == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDefaultThumbnail null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDefaultThumbnail == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDefaultThumbnail null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -2250,53 +2250,53 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "path":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            thePath = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "path"));
-                                return null;
+                                thePath = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "path"));
+                                    return null;
+                                }
+                                if (thePath == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected thePath null when error is also null");
+                                }
+                                break;
                             }
-                            if (thePath == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected thePath null when error is also null");
-                            }
-                            break;
-                        }
                         case "contentType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theContentType = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "contentType"));
-                                return null;
+                                theContentType = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "contentType"));
+                                    return null;
+                                }
+                                if (theContentType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theContentType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theContentType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theContentType null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -2378,156 +2378,156 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "name":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theName = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "name"));
-                                return null;
-                            }
-                            if (theName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theName null when error is also null");
-                            }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
-                        case "externalSubjectId":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theExternalSubjectId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "externalSubjectId"));
-                                return null;
-                            }
-                            if (theExternalSubjectId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theExternalSubjectId null when error is also null");
-                            }
-                            break;
-                        }
-                        case "semanticId":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
-                            }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
-                        case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    continue;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theName = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        new Reporting.NameSegment(
+                                            "name"));
+                                    return null;
+                                }
+                                if (theName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theName null when error is also null");
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
+                            }
+                        case "externalSubjectId":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theExternalSubjectId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "externalSubjectId"));
+                                    return null;
+                                }
+                                if (theExternalSubjectId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theExternalSubjectId null when error is also null");
+                                }
+                                break;
+                            }
+                        case "semanticId":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
+                            }
+                        case "supplementalSemanticIds":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -2609,496 +2609,496 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "id":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theId = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "id"));
-                                return null;
+                                theId = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "id"));
+                                    return null;
+                                }
+                                if (theId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theId null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "administration":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theAdministration = DeserializeImplementation.AdministrativeInformationFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "administration"));
-                                return null;
+                                theAdministration = DeserializeImplementation.AdministrativeInformationFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
+                                }
+                                if (theAdministration == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theAdministration null when error is also null");
+                                }
+                                break;
                             }
-                            if (theAdministration == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theAdministration null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "submodelElements":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySubmodelElements = keyValue.Value as Nodes.JsonArray;
-                            if (arraySubmodelElements == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "submodelElements"));
-                                return null;
-                            }
-                            theSubmodelElements = new List<ISubmodelElement>(
-                                arraySubmodelElements.Count);
-                            int indexSubmodelElements = 0;
-                            foreach (Nodes.JsonNode? item in arraySubmodelElements)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySubmodelElements = keyValue.Value as Nodes.JsonArray;
+                                if (arraySubmodelElements == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSubmodelElements));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "submodelElements"));
                                     return null;
                                 }
-                                ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSubmodelElements = new List<ISubmodelElement>(
+                                    arraySubmodelElements.Count);
+                                int indexSubmodelElements = 0;
+                                foreach (Nodes.JsonNode? item in arraySubmodelElements)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSubmodelElements));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "submodelElements"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSubmodelElements));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "submodelElements"));
+                                        return null;
+                                    }
+                                    ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSubmodelElements));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "submodelElements"));
+                                        return null;
+                                    }
+                                    theSubmodelElements.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSubmodelElements++;
                                 }
-                                theSubmodelElements.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSubmodelElements++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -3328,441 +3328,441 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "first":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theFirst = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "first"));
-                                return null;
+                                theFirst = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "first"));
+                                    return null;
+                                }
+                                if (theFirst == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theFirst null when error is also null");
+                                }
+                                break;
                             }
-                            if (theFirst == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theFirst null when error is also null");
-                            }
-                            break;
-                        }
                         case "second":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSecond = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "second"));
-                                return null;
+                                theSecond = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "second"));
+                                    return null;
+                                }
+                                if (theSecond == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSecond null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSecond == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSecond null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -3877,544 +3877,544 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "typeValueListElement":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theTypeValueListElement = DeserializeImplementation.AasSubmodelElementsFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "typeValueListElement"));
-                                return null;
+                                theTypeValueListElement = DeserializeImplementation.AasSubmodelElementsFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "typeValueListElement"));
+                                    return null;
+                                }
+                                if (theTypeValueListElement == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theTypeValueListElement null when error is also null");
+                                }
+                                break;
                             }
-                            if (theTypeValueListElement == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theTypeValueListElement null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "orderRelevant":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theOrderRelevant = DeserializeImplementation.BoolFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "orderRelevant"));
-                                return null;
-                            }
-                            if (theOrderRelevant == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theOrderRelevant null when error is also null");
-                            }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arrayValue = keyValue.Value as Nodes.JsonArray;
-                            if (arrayValue == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            theValue = new List<ISubmodelElement>(
-                                arrayValue.Count);
-                            int indexValue = 0;
-                            foreach (Nodes.JsonNode? item in arrayValue)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexValue));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "value"));
-                                    return null;
+                                    continue;
                                 }
-                                ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theOrderRelevant = DeserializeImplementation.BoolFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexValue));
+                                        new Reporting.NameSegment(
+                                            "orderRelevant"));
+                                    return null;
+                                }
+                                if (theOrderRelevant == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theOrderRelevant null when error is also null");
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arrayValue = keyValue.Value as Nodes.JsonArray;
+                                if (arrayValue == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "value"));
                                     return null;
                                 }
-                                theValue.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexValue++;
+                                theValue = new List<ISubmodelElement>(
+                                    arrayValue.Count);
+                                int indexValue = 0;
+                                foreach (Nodes.JsonNode? item in arrayValue)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexValue));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "value"));
+                                        return null;
+                                    }
+                                    ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexValue));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "value"));
+                                        return null;
+                                    }
+                                    theValue.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexValue++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case "semanticIdListElement":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticIdListElement = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticIdListElement"));
-                                return null;
+                                theSemanticIdListElement = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticIdListElement"));
+                                    return null;
+                                }
+                                if (theSemanticIdListElement == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticIdListElement null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticIdListElement == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticIdListElement null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueTypeListElement":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueTypeListElement = DeserializeImplementation.DataTypeDefXsdFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueTypeListElement"));
-                                return null;
+                                theValueTypeListElement = DeserializeImplementation.DataTypeDefXsdFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueTypeListElement"));
+                                    return null;
+                                }
+                                if (theValueTypeListElement == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueTypeListElement null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueTypeListElement == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueTypeListElement null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -4489,448 +4489,448 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayValue = keyValue.Value as Nodes.JsonArray;
-                            if (arrayValue == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            theValue = new List<ISubmodelElement>(
-                                arrayValue.Count);
-                            int indexValue = 0;
-                            foreach (Nodes.JsonNode? item in arrayValue)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayValue = keyValue.Value as Nodes.JsonArray;
+                                if (arrayValue == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexValue));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "value"));
                                     return null;
                                 }
-                                ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theValue = new List<ISubmodelElement>(
+                                    arrayValue.Count);
+                                int indexValue = 0;
+                                foreach (Nodes.JsonNode? item in arrayValue)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexValue));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "value"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexValue));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "value"));
+                                        return null;
+                                    }
+                                    ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexValue));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "value"));
+                                        return null;
+                                    }
+                                    theValue.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexValue++;
                                 }
-                                theValue.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexValue++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -5068,465 +5068,465 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "valueType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueType"));
-                                return null;
+                                theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                if (theValueType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueType null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "value"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueId"));
-                                return null;
+                                theValueId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
+                                }
+                                if (theValueId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueId null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -5600,441 +5600,441 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValue = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "value"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValue = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueId"));
-                                return null;
+                                theValueId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
+                                }
+                                if (theValueId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueId null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -6101,465 +6101,465 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "valueType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueType"));
-                                return null;
+                                theValueType = DeserializeImplementation.DataTypeDefXsdFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueType"));
+                                    return null;
+                                }
+                                if (theValueType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueType null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "min":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theMin = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "min"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theMin == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theMin null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "min":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theMin = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "min"));
-                                return null;
-                            }
-                            if (theMin == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theMin null when error is also null");
-                            }
-                            break;
-                        }
                         case "max":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theMax = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "max"));
-                                return null;
+                                theMax = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "max"));
+                                    return null;
+                                }
+                                if (theMax == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theMax null when error is also null");
+                                }
+                                break;
                             }
-                            if (theMax == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theMax null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -6632,417 +6632,417 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValue = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "value"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValue = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -7107,441 +7107,441 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "contentType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theContentType = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "contentType"));
-                                return null;
+                                theContentType = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "contentType"));
+                                    return null;
+                                }
+                                if (theContentType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theContentType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theContentType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theContentType null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValue = DeserializeImplementation.BytesFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "value"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValue = DeserializeImplementation.BytesFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -7614,441 +7614,441 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "contentType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theContentType = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "contentType"));
-                                return null;
+                                theContentType = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "contentType"));
+                                    return null;
+                                }
+                                if (theContentType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theContentType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theContentType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theContentType null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "value":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "value"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "value":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
-                            }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -8122,496 +8122,496 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "first":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theFirst = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "first"));
-                                return null;
+                                theFirst = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "first"));
+                                    return null;
+                                }
+                                if (theFirst == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theFirst null when error is also null");
+                                }
+                                break;
                             }
-                            if (theFirst == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theFirst null when error is also null");
-                            }
-                            break;
-                        }
                         case "second":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSecond = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "second"));
-                                return null;
+                                theSecond = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "second"));
+                                    return null;
+                                }
+                                if (theSecond == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSecond null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSecond == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSecond null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "annotations":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayAnnotations = keyValue.Value as Nodes.JsonArray;
-                            if (arrayAnnotations == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "annotations"));
-                                return null;
-                            }
-                            theAnnotations = new List<IDataElement>(
-                                arrayAnnotations.Count);
-                            int indexAnnotations = 0;
-                            foreach (Nodes.JsonNode? item in arrayAnnotations)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayAnnotations = keyValue.Value as Nodes.JsonArray;
+                                if (arrayAnnotations == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexAnnotations));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "annotations"));
                                     return null;
                                 }
-                                IDataElement? parsedItem = DeserializeImplementation.IDataElementFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theAnnotations = new List<IDataElement>(
+                                    arrayAnnotations.Count);
+                                int indexAnnotations = 0;
+                                foreach (Nodes.JsonNode? item in arrayAnnotations)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexAnnotations));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "annotations"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexAnnotations));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "annotations"));
+                                        return null;
+                                    }
+                                    IDataElement? parsedItem = DeserializeImplementation.IDataElementFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexAnnotations));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "annotations"));
+                                        return null;
+                                    }
+                                    theAnnotations.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexAnnotations++;
                                 }
-                                theAnnotations.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexAnnotations++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -8726,520 +8726,520 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "entityType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theEntityType = DeserializeImplementation.EntityTypeFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "entityType"));
-                                return null;
+                                theEntityType = DeserializeImplementation.EntityTypeFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "entityType"));
+                                    return null;
+                                }
+                                if (theEntityType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theEntityType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theEntityType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theEntityType null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "statements":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayStatements = keyValue.Value as Nodes.JsonArray;
-                            if (arrayStatements == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "statements"));
-                                return null;
-                            }
-                            theStatements = new List<ISubmodelElement>(
-                                arrayStatements.Count);
-                            int indexStatements = 0;
-                            foreach (Nodes.JsonNode? item in arrayStatements)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayStatements = keyValue.Value as Nodes.JsonArray;
+                                if (arrayStatements == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexStatements));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "statements"));
                                     return null;
                                 }
-                                ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theStatements = new List<ISubmodelElement>(
+                                    arrayStatements.Count);
+                                int indexStatements = 0;
+                                foreach (Nodes.JsonNode? item in arrayStatements)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexStatements));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "statements"));
+                                        return null;
+                                    }
+                                    ISubmodelElement? parsedItem = DeserializeImplementation.ISubmodelElementFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexStatements));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "statements"));
+                                        return null;
+                                    }
+                                    theStatements.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexStatements++;
+                                }
+                                break;
+                            }
+                        case "globalAssetId":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theGlobalAssetId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexStatements));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "statements"));
+                                            "globalAssetId"));
                                     return null;
                                 }
-                                theStatements.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexStatements++;
+                                if (theGlobalAssetId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theGlobalAssetId null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "globalAssetId":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theGlobalAssetId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "globalAssetId"));
-                                return null;
-                            }
-                            if (theGlobalAssetId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theGlobalAssetId null when error is also null");
-                            }
-                            break;
-                        }
                         case "specificAssetId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSpecificAssetId = DeserializeImplementation.SpecificAssetIdFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "specificAssetId"));
-                                return null;
+                                theSpecificAssetId = DeserializeImplementation.SpecificAssetIdFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "specificAssetId"));
+                                    return null;
+                                }
+                                if (theSpecificAssetId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSpecificAssetId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSpecificAssetId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSpecificAssetId null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -9369,197 +9369,197 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "source":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSource = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "source"));
-                                return null;
+                                theSource = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "source"));
+                                    return null;
+                                }
+                                if (theSource == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSource null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSource == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSource null when error is also null");
-                            }
-                            break;
-                        }
                         case "observableReference":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theObservableReference = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "observableReference"));
-                                return null;
+                                theObservableReference = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "observableReference"));
+                                    return null;
+                                }
+                                if (theObservableReference == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theObservableReference null when error is also null");
+                                }
+                                break;
                             }
-                            if (theObservableReference == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theObservableReference null when error is also null");
-                            }
-                            break;
-                        }
                         case "timeStamp":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theTimeStamp = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "timeStamp"));
-                                return null;
+                                theTimeStamp = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "timeStamp"));
+                                    return null;
+                                }
+                                if (theTimeStamp == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theTimeStamp null when error is also null");
+                                }
+                                break;
                             }
-                            if (theTimeStamp == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theTimeStamp null when error is also null");
-                            }
-                            break;
-                        }
                         case "sourceSemanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSourceSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "sourceSemanticId"));
-                                return null;
+                                theSourceSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "sourceSemanticId"));
+                                    return null;
+                                }
+                                if (theSourceSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSourceSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSourceSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSourceSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "observableSemanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theObservableSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "observableSemanticId"));
-                                return null;
+                                theObservableSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "observableSemanticId"));
+                                    return null;
+                                }
+                                if (theObservableSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theObservableSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theObservableSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theObservableSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "topic":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theTopic = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "topic"));
-                                return null;
+                                theTopic = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "topic"));
+                                    return null;
+                                }
+                                if (theTopic == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theTopic null when error is also null");
+                                }
+                                break;
                             }
-                            if (theTopic == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theTopic null when error is also null");
-                            }
-                            break;
-                        }
                         case "subjectId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSubjectId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "subjectId"));
-                                return null;
+                                theSubjectId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "subjectId"));
+                                    return null;
+                                }
+                                if (theSubjectId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSubjectId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSubjectId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSubjectId null when error is also null");
-                            }
-                            break;
-                        }
                         case "payload":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            thePayload = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "payload"));
-                                return null;
+                                thePayload = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "payload"));
+                                    return null;
+                                }
+                                if (thePayload == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected thePayload null when error is also null");
+                                }
+                                break;
                             }
-                            if (thePayload == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected thePayload null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -9706,585 +9706,585 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "observed":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theObserved = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "observed"));
-                                return null;
+                                theObserved = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "observed"));
+                                    return null;
+                                }
+                                if (theObserved == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theObserved null when error is also null");
+                                }
+                                break;
                             }
-                            if (theObserved == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theObserved null when error is also null");
-                            }
-                            break;
-                        }
                         case "direction":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDirection = DeserializeImplementation.DirectionFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "direction"));
-                                return null;
+                                theDirection = DeserializeImplementation.DirectionFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "direction"));
+                                    return null;
+                                }
+                                if (theDirection == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDirection null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDirection == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDirection null when error is also null");
-                            }
-                            break;
-                        }
                         case "state":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theState = DeserializeImplementation.StateOfEventFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "state"));
-                                return null;
+                                theState = DeserializeImplementation.StateOfEventFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "state"));
+                                    return null;
+                                }
+                                if (theState == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theState null when error is also null");
+                                }
+                                break;
                             }
-                            if (theState == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theState null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
+                                }
+                                break;
+                            }
+                        case "messageTopic":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                theMessageTopic = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
                                         new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
+                                            "messageTopic"));
                                     return null;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                if (theMessageTopic == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theMessageTopic null when error is also null");
+                                }
+                                break;
                             }
-                            break;
-                        }
-                        case "messageTopic":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            theMessageTopic = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "messageTopic"));
-                                return null;
-                            }
-                            if (theMessageTopic == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theMessageTopic null when error is also null");
-                            }
-                            break;
-                        }
                         case "messageBroker":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theMessageBroker = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "messageBroker"));
-                                return null;
+                                theMessageBroker = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "messageBroker"));
+                                    return null;
+                                }
+                                if (theMessageBroker == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theMessageBroker null when error is also null");
+                                }
+                                break;
                             }
-                            if (theMessageBroker == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theMessageBroker null when error is also null");
-                            }
-                            break;
-                        }
                         case "lastUpdate":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theLastUpdate = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "lastUpdate"));
-                                return null;
+                                theLastUpdate = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "lastUpdate"));
+                                    return null;
+                                }
+                                if (theLastUpdate == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theLastUpdate null when error is also null");
+                                }
+                                break;
                             }
-                            if (theLastUpdate == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theLastUpdate null when error is also null");
-                            }
-                            break;
-                        }
                         case "minInterval":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theMinInterval = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "minInterval"));
-                                return null;
+                                theMinInterval = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "minInterval"));
+                                    return null;
+                                }
+                                if (theMinInterval == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theMinInterval null when error is also null");
+                                }
+                                break;
                             }
-                            if (theMinInterval == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theMinInterval null when error is also null");
-                            }
-                            break;
-                        }
                         case "maxInterval":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theMaxInterval = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "maxInterval"));
-                                return null;
+                                theMaxInterval = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "maxInterval"));
+                                    return null;
+                                }
+                                if (theMaxInterval == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theMaxInterval null when error is also null");
+                                }
+                                break;
                             }
-                            if (theMaxInterval == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theMaxInterval null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -10382,558 +10382,558 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "inputVariables":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayInputVariables = keyValue.Value as Nodes.JsonArray;
-                            if (arrayInputVariables == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "inputVariables"));
-                                return null;
-                            }
-                            theInputVariables = new List<OperationVariable>(
-                                arrayInputVariables.Count);
-                            int indexInputVariables = 0;
-                            foreach (Nodes.JsonNode? item in arrayInputVariables)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayInputVariables = keyValue.Value as Nodes.JsonArray;
+                                if (arrayInputVariables == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexInputVariables));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "inputVariables"));
                                     return null;
                                 }
-                                OperationVariable? parsedItem = DeserializeImplementation.OperationVariableFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theInputVariables = new List<OperationVariable>(
+                                    arrayInputVariables.Count);
+                                int indexInputVariables = 0;
+                                foreach (Nodes.JsonNode? item in arrayInputVariables)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexInputVariables));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "inputVariables"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexInputVariables));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "inputVariables"));
+                                        return null;
+                                    }
+                                    OperationVariable? parsedItem = DeserializeImplementation.OperationVariableFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexInputVariables));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "inputVariables"));
+                                        return null;
+                                    }
+                                    theInputVariables.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexInputVariables++;
                                 }
-                                theInputVariables.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexInputVariables++;
+                                break;
                             }
-                            break;
-                        }
                         case "outputVariables":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayOutputVariables = keyValue.Value as Nodes.JsonArray;
-                            if (arrayOutputVariables == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "outputVariables"));
-                                return null;
-                            }
-                            theOutputVariables = new List<OperationVariable>(
-                                arrayOutputVariables.Count);
-                            int indexOutputVariables = 0;
-                            foreach (Nodes.JsonNode? item in arrayOutputVariables)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayOutputVariables = keyValue.Value as Nodes.JsonArray;
+                                if (arrayOutputVariables == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexOutputVariables));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "outputVariables"));
                                     return null;
                                 }
-                                OperationVariable? parsedItem = DeserializeImplementation.OperationVariableFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theOutputVariables = new List<OperationVariable>(
+                                    arrayOutputVariables.Count);
+                                int indexOutputVariables = 0;
+                                foreach (Nodes.JsonNode? item in arrayOutputVariables)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexOutputVariables));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "outputVariables"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexOutputVariables));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "outputVariables"));
+                                        return null;
+                                    }
+                                    OperationVariable? parsedItem = DeserializeImplementation.OperationVariableFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexOutputVariables));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "outputVariables"));
+                                        return null;
+                                    }
+                                    theOutputVariables.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexOutputVariables++;
                                 }
-                                theOutputVariables.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexOutputVariables++;
+                                break;
                             }
-                            break;
-                        }
                         case "inoutputVariables":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayInoutputVariables = keyValue.Value as Nodes.JsonArray;
-                            if (arrayInoutputVariables == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "inoutputVariables"));
-                                return null;
-                            }
-                            theInoutputVariables = new List<OperationVariable>(
-                                arrayInoutputVariables.Count);
-                            int indexInoutputVariables = 0;
-                            foreach (Nodes.JsonNode? item in arrayInoutputVariables)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayInoutputVariables = keyValue.Value as Nodes.JsonArray;
+                                if (arrayInoutputVariables == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexInoutputVariables));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "inoutputVariables"));
                                     return null;
                                 }
-                                OperationVariable? parsedItem = DeserializeImplementation.OperationVariableFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theInoutputVariables = new List<OperationVariable>(
+                                    arrayInoutputVariables.Count);
+                                int indexInoutputVariables = 0;
+                                foreach (Nodes.JsonNode? item in arrayInoutputVariables)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexInoutputVariables));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "inoutputVariables"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexInoutputVariables));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "inoutputVariables"));
+                                        return null;
+                                    }
+                                    OperationVariable? parsedItem = DeserializeImplementation.OperationVariableFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexInoutputVariables));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "inoutputVariables"));
+                                        return null;
+                                    }
+                                    theInoutputVariables.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexInoutputVariables++;
                                 }
-                                theInoutputVariables.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexInoutputVariables++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -10988,29 +10988,29 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValue = DeserializeImplementation.ISubmodelElementFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
+                                theValue = DeserializeImplementation.ISubmodelElementFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -11067,393 +11067,393 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "kind":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theKind = DeserializeImplementation.ModelingKindFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "kind"));
-                                return null;
+                                theKind = DeserializeImplementation.ModelingKindFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "kind"));
+                                    return null;
+                                }
+                                if (theKind == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theKind null when error is also null");
+                                }
+                                break;
                             }
-                            if (theKind == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theKind null when error is also null");
-                            }
-                            break;
-                        }
                         case "semanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "semanticId"));
-                                return null;
+                                theSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "semanticId"));
+                                    return null;
+                                }
+                                if (theSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplementalSemanticIds":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
-                            if (arraySupplementalSemanticIds == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplementalSemanticIds"));
-                                return null;
-                            }
-                            theSupplementalSemanticIds = new List<Reference>(
-                                arraySupplementalSemanticIds.Count);
-                            int indexSupplementalSemanticIds = 0;
-                            foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySupplementalSemanticIds = keyValue.Value as Nodes.JsonArray;
+                                if (arraySupplementalSemanticIds == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "supplementalSemanticIds"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSupplementalSemanticIds = new List<Reference>(
+                                    arraySupplementalSemanticIds.Count);
+                                int indexSupplementalSemanticIds = 0;
+                                foreach (Nodes.JsonNode? item in arraySupplementalSemanticIds)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSupplementalSemanticIds));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "supplementalSemanticIds"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSupplementalSemanticIds));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "supplementalSemanticIds"));
+                                        return null;
+                                    }
+                                    theSupplementalSemanticIds.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSupplementalSemanticIds++;
                                 }
-                                theSupplementalSemanticIds.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSupplementalSemanticIds++;
+                                break;
                             }
-                            break;
-                        }
                         case "qualifiers":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
-                            if (arrayQualifiers == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "qualifiers"));
-                                return null;
-                            }
-                            theQualifiers = new List<Qualifier>(
-                                arrayQualifiers.Count);
-                            int indexQualifiers = 0;
-                            foreach (Nodes.JsonNode? item in arrayQualifiers)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayQualifiers = keyValue.Value as Nodes.JsonArray;
+                                if (arrayQualifiers == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "qualifiers"));
                                     return null;
                                 }
-                                Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theQualifiers = new List<Qualifier>(
+                                    arrayQualifiers.Count);
+                                int indexQualifiers = 0;
+                                foreach (Nodes.JsonNode? item in arrayQualifiers)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexQualifiers));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "qualifiers"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    Qualifier? parsedItem = DeserializeImplementation.QualifierFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexQualifiers));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "qualifiers"));
+                                        return null;
+                                    }
+                                    theQualifiers.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexQualifiers++;
                                 }
-                                theQualifiers.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexQualifiers++;
+                                break;
                             }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -11514,338 +11514,338 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "id":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theId = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "id"));
-                                return null;
+                                theId = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "id"));
+                                    return null;
+                                }
+                                if (theId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theId null when error is also null");
-                            }
-                            break;
-                        }
                         case "extensions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayExtensions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "extensions"));
-                                return null;
-                            }
-                            theExtensions = new List<Extension>(
-                                arrayExtensions.Count);
-                            int indexExtensions = 0;
-                            foreach (Nodes.JsonNode? item in arrayExtensions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayExtensions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayExtensions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "extensions"));
                                     return null;
                                 }
-                                Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theExtensions = new List<Extension>(
+                                    arrayExtensions.Count);
+                                int indexExtensions = 0;
+                                foreach (Nodes.JsonNode? item in arrayExtensions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexExtensions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "extensions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    Extension? parsedItem = DeserializeImplementation.ExtensionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexExtensions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "extensions"));
+                                        return null;
+                                    }
+                                    theExtensions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexExtensions++;
                                 }
-                                theExtensions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexExtensions++;
+                                break;
                             }
-                            break;
-                        }
                         case "category":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theCategory = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "category"));
-                                return null;
+                                theCategory = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "category"));
+                                    return null;
+                                }
+                                if (theCategory == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theCategory null when error is also null");
+                                }
+                                break;
                             }
-                            if (theCategory == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theCategory null when error is also null");
-                            }
-                            break;
-                        }
                         case "idShort":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theIdShort = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "idShort"));
-                                return null;
+                                theIdShort = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "idShort"));
+                                    return null;
+                                }
+                                if (theIdShort == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theIdShort null when error is also null");
+                                }
+                                break;
                             }
-                            if (theIdShort == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theIdShort null when error is also null");
-                            }
-                            break;
-                        }
                         case "displayName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDisplayName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "displayName"));
-                                return null;
+                                theDisplayName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "displayName"));
+                                    return null;
+                                }
+                                if (theDisplayName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDisplayName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDisplayName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDisplayName null when error is also null");
-                            }
-                            break;
-                        }
                         case "description":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDescription = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "description"));
-                                return null;
+                                theDescription = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "description"));
+                                    return null;
+                                }
+                                if (theDescription == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDescription null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDescription == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDescription null when error is also null");
-                            }
-                            break;
-                        }
                         case "checksum":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theChecksum = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "checksum"));
-                                return null;
+                                theChecksum = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "checksum"));
+                                    return null;
+                                }
+                                if (theChecksum == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theChecksum null when error is also null");
+                                }
+                                break;
                             }
-                            if (theChecksum == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theChecksum null when error is also null");
-                            }
-                            break;
-                        }
                         case "administration":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theAdministration = DeserializeImplementation.AdministrativeInformationFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "administration"));
-                                return null;
+                                theAdministration = DeserializeImplementation.AdministrativeInformationFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "administration"));
+                                    return null;
+                                }
+                                if (theAdministration == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theAdministration null when error is also null");
+                                }
+                                break;
                             }
-                            if (theAdministration == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theAdministration null when error is also null");
-                            }
-                            break;
-                        }
                         case "embeddedDataSpecifications":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
-                            if (arrayEmbeddedDataSpecifications == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "embeddedDataSpecifications"));
-                                return null;
-                            }
-                            theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
-                                arrayEmbeddedDataSpecifications.Count);
-                            int indexEmbeddedDataSpecifications = 0;
-                            foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayEmbeddedDataSpecifications = keyValue.Value as Nodes.JsonArray;
+                                if (arrayEmbeddedDataSpecifications == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "embeddedDataSpecifications"));
                                     return null;
                                 }
-                                EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                                    arrayEmbeddedDataSpecifications.Count);
+                                int indexEmbeddedDataSpecifications = 0;
+                                foreach (Nodes.JsonNode? item in arrayEmbeddedDataSpecifications)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexEmbeddedDataSpecifications));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "embeddedDataSpecifications"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    EmbeddedDataSpecification? parsedItem = DeserializeImplementation.EmbeddedDataSpecificationFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexEmbeddedDataSpecifications));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "embeddedDataSpecifications"));
+                                        return null;
+                                    }
+                                    theEmbeddedDataSpecifications.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexEmbeddedDataSpecifications++;
                                 }
-                                theEmbeddedDataSpecifications.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexEmbeddedDataSpecifications++;
+                                break;
                             }
-                            break;
-                        }
                         case "isCaseOf":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayIsCaseOf = keyValue.Value as Nodes.JsonArray;
-                            if (arrayIsCaseOf == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "isCaseOf"));
-                                return null;
-                            }
-                            theIsCaseOf = new List<Reference>(
-                                arrayIsCaseOf.Count);
-                            int indexIsCaseOf = 0;
-                            foreach (Nodes.JsonNode? item in arrayIsCaseOf)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayIsCaseOf = keyValue.Value as Nodes.JsonArray;
+                                if (arrayIsCaseOf == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexIsCaseOf));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "isCaseOf"));
                                     return null;
                                 }
-                                Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theIsCaseOf = new List<Reference>(
+                                    arrayIsCaseOf.Count);
+                                int indexIsCaseOf = 0;
+                                foreach (Nodes.JsonNode? item in arrayIsCaseOf)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexIsCaseOf));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "isCaseOf"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexIsCaseOf));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "isCaseOf"));
+                                        return null;
+                                    }
+                                    Reference? parsedItem = DeserializeImplementation.ReferenceFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexIsCaseOf));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "isCaseOf"));
+                                        return null;
+                                    }
+                                    theIsCaseOf.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexIsCaseOf++;
                                 }
-                                theIsCaseOf.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexIsCaseOf++;
+                                break;
                             }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -11935,108 +11935,108 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "type":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
-
-                            theType = DeserializeImplementation.ReferenceTypesFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "type"));
-                                return null;
-                            }
-                            if (theType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theType null when error is also null");
-                            }
-                            break;
-                        }
-                        case "keys":
-                        {
-                            if (keyValue.Value == null)
-                            {
-                                continue;
-                            }
-
-                            Nodes.JsonArray? arrayKeys = keyValue.Value as Nodes.JsonArray;
-                            if (arrayKeys == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "keys"));
-                                return null;
-                            }
-                            theKeys = new List<Key>(
-                                arrayKeys.Count);
-                            int indexKeys = 0;
-                            foreach (Nodes.JsonNode? item in arrayKeys)
-                            {
-                                if (item == null)
+                                if (keyValue.Value == null)
                                 {
-                                    error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexKeys));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "keys"));
-                                    return null;
+                                    continue;
                                 }
-                                Key? parsedItem = DeserializeImplementation.KeyFrom(
-                                    item ?? throw new System.InvalidOperationException(),
+
+                                theType = DeserializeImplementation.ReferenceTypesFrom(
+                                    keyValue.Value,
                                     out error);
                                 if (error != null)
                                 {
                                     error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexKeys));
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
+                                if (theType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theType null when error is also null");
+                                }
+                                break;
+                            }
+                        case "keys":
+                            {
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
+
+                                Nodes.JsonArray? arrayKeys = keyValue.Value as Nodes.JsonArray;
+                                if (arrayKeys == null)
+                                {
+                                    error = new Reporting.Error(
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "keys"));
                                     return null;
                                 }
-                                theKeys.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexKeys++;
+                                theKeys = new List<Key>(
+                                    arrayKeys.Count);
+                                int indexKeys = 0;
+                                foreach (Nodes.JsonNode? item in arrayKeys)
+                                {
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexKeys));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "keys"));
+                                        return null;
+                                    }
+                                    Key? parsedItem = DeserializeImplementation.KeyFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexKeys));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "keys"));
+                                        return null;
+                                    }
+                                    theKeys.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexKeys++;
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case "referredSemanticId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theReferredSemanticId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "referredSemanticId"));
-                                return null;
+                                theReferredSemanticId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "referredSemanticId"));
+                                    return null;
+                                }
+                                if (theReferredSemanticId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theReferredSemanticId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theReferredSemanticId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theReferredSemanticId null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -12095,53 +12095,53 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "type":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theType = DeserializeImplementation.KeyTypesFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "type"));
-                                return null;
+                                theType = DeserializeImplementation.KeyTypesFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "type"));
+                                    return null;
+                                }
+                                if (theType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theType null when error is also null");
-                            }
-                            break;
-                        }
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -12259,53 +12259,53 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "language":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theLanguage = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "language"));
-                                return null;
+                                theLanguage = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "language"));
+                                    return null;
+                                }
+                                if (theLanguage == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theLanguage null when error is also null");
+                                }
+                                break;
                             }
-                            if (theLanguage == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theLanguage null when error is also null");
-                            }
-                            break;
-                        }
                         case "text":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theText = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "text"));
-                                return null;
+                                theText = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "text"));
+                                    return null;
+                                }
+                                if (theText == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theText null when error is also null");
+                                }
+                                break;
                             }
-                            if (theText == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theText null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -12362,60 +12362,60 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "langStrings":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayLangStrings = keyValue.Value as Nodes.JsonArray;
-                            if (arrayLangStrings == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "langStrings"));
-                                return null;
-                            }
-                            theLangStrings = new List<LangString>(
-                                arrayLangStrings.Count);
-                            int indexLangStrings = 0;
-                            foreach (Nodes.JsonNode? item in arrayLangStrings)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayLangStrings = keyValue.Value as Nodes.JsonArray;
+                                if (arrayLangStrings == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexLangStrings));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "langStrings"));
                                     return null;
                                 }
-                                LangString? parsedItem = DeserializeImplementation.LangStringFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theLangStrings = new List<LangString>(
+                                    arrayLangStrings.Count);
+                                int indexLangStrings = 0;
+                                foreach (Nodes.JsonNode? item in arrayLangStrings)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexLangStrings));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "langStrings"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexLangStrings));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "langStrings"));
+                                        return null;
+                                    }
+                                    LangString? parsedItem = DeserializeImplementation.LangStringFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexLangStrings));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "langStrings"));
+                                        return null;
+                                    }
+                                    theLangStrings.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexLangStrings++;
                                 }
-                                theLangStrings.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexLangStrings++;
+                                break;
                             }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -12464,170 +12464,170 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "assetAdministrationShells":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayAssetAdministrationShells = keyValue.Value as Nodes.JsonArray;
-                            if (arrayAssetAdministrationShells == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "assetAdministrationShells"));
-                                return null;
-                            }
-                            theAssetAdministrationShells = new List<AssetAdministrationShell>(
-                                arrayAssetAdministrationShells.Count);
-                            int indexAssetAdministrationShells = 0;
-                            foreach (Nodes.JsonNode? item in arrayAssetAdministrationShells)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayAssetAdministrationShells = keyValue.Value as Nodes.JsonArray;
+                                if (arrayAssetAdministrationShells == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexAssetAdministrationShells));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "assetAdministrationShells"));
                                     return null;
                                 }
-                                AssetAdministrationShell? parsedItem = DeserializeImplementation.AssetAdministrationShellFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theAssetAdministrationShells = new List<AssetAdministrationShell>(
+                                    arrayAssetAdministrationShells.Count);
+                                int indexAssetAdministrationShells = 0;
+                                foreach (Nodes.JsonNode? item in arrayAssetAdministrationShells)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexAssetAdministrationShells));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "assetAdministrationShells"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexAssetAdministrationShells));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "assetAdministrationShells"));
+                                        return null;
+                                    }
+                                    AssetAdministrationShell? parsedItem = DeserializeImplementation.AssetAdministrationShellFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexAssetAdministrationShells));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "assetAdministrationShells"));
+                                        return null;
+                                    }
+                                    theAssetAdministrationShells.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexAssetAdministrationShells++;
                                 }
-                                theAssetAdministrationShells.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexAssetAdministrationShells++;
+                                break;
                             }
-                            break;
-                        }
                         case "submodels":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arraySubmodels = keyValue.Value as Nodes.JsonArray;
-                            if (arraySubmodels == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "submodels"));
-                                return null;
-                            }
-                            theSubmodels = new List<Submodel>(
-                                arraySubmodels.Count);
-                            int indexSubmodels = 0;
-                            foreach (Nodes.JsonNode? item in arraySubmodels)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arraySubmodels = keyValue.Value as Nodes.JsonArray;
+                                if (arraySubmodels == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSubmodels));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "submodels"));
                                     return null;
                                 }
-                                Submodel? parsedItem = DeserializeImplementation.SubmodelFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theSubmodels = new List<Submodel>(
+                                    arraySubmodels.Count);
+                                int indexSubmodels = 0;
+                                foreach (Nodes.JsonNode? item in arraySubmodels)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexSubmodels));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "submodels"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSubmodels));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "submodels"));
+                                        return null;
+                                    }
+                                    Submodel? parsedItem = DeserializeImplementation.SubmodelFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexSubmodels));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "submodels"));
+                                        return null;
+                                    }
+                                    theSubmodels.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexSubmodels++;
                                 }
-                                theSubmodels.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexSubmodels++;
+                                break;
                             }
-                            break;
-                        }
                         case "conceptDescriptions":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayConceptDescriptions = keyValue.Value as Nodes.JsonArray;
-                            if (arrayConceptDescriptions == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "conceptDescriptions"));
-                                return null;
-                            }
-                            theConceptDescriptions = new List<ConceptDescription>(
-                                arrayConceptDescriptions.Count);
-                            int indexConceptDescriptions = 0;
-                            foreach (Nodes.JsonNode? item in arrayConceptDescriptions)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayConceptDescriptions = keyValue.Value as Nodes.JsonArray;
+                                if (arrayConceptDescriptions == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexConceptDescriptions));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "conceptDescriptions"));
                                     return null;
                                 }
-                                ConceptDescription? parsedItem = DeserializeImplementation.ConceptDescriptionFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theConceptDescriptions = new List<ConceptDescription>(
+                                    arrayConceptDescriptions.Count);
+                                int indexConceptDescriptions = 0;
+                                foreach (Nodes.JsonNode? item in arrayConceptDescriptions)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexConceptDescriptions));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "conceptDescriptions"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexConceptDescriptions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "conceptDescriptions"));
+                                        return null;
+                                    }
+                                    ConceptDescription? parsedItem = DeserializeImplementation.ConceptDescriptionFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexConceptDescriptions));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "conceptDescriptions"));
+                                        return null;
+                                    }
+                                    theConceptDescriptions.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexConceptDescriptions++;
                                 }
-                                theConceptDescriptions.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexConceptDescriptions++;
+                                break;
                             }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -12730,53 +12730,53 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "dataSpecification":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDataSpecification = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "dataSpecification"));
-                                return null;
+                                theDataSpecification = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "dataSpecification"));
+                                    return null;
+                                }
+                                if (theDataSpecification == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDataSpecification null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDataSpecification == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDataSpecification null when error is also null");
-                            }
-                            break;
-                        }
                         case "dataSpecificationContent":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDataSpecificationContent = DeserializeImplementation.IDataSpecificationContentFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "dataSpecificationContent"));
-                                return null;
+                                theDataSpecificationContent = DeserializeImplementation.IDataSpecificationContentFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "dataSpecificationContent"));
+                                    return null;
+                                }
+                                if (theDataSpecificationContent == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDataSpecificationContent null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDataSpecificationContent == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDataSpecificationContent null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -12924,53 +12924,53 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueId"));
-                                return null;
+                                theValueId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueId"));
+                                    return null;
+                                }
+                                if (theValueId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueId null when error is also null");
-                            }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -13027,60 +13027,60 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "valueReferencePairTypes":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            Nodes.JsonArray? arrayValueReferencePairTypes = keyValue.Value as Nodes.JsonArray;
-                            if (arrayValueReferencePairTypes == null)
-                            {
-                                error = new Reporting.Error(
-                                    $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueReferencePairTypes"));
-                                return null;
-                            }
-                            theValueReferencePairTypes = new List<ValueReferencePair>(
-                                arrayValueReferencePairTypes.Count);
-                            int indexValueReferencePairTypes = 0;
-                            foreach (Nodes.JsonNode? item in arrayValueReferencePairTypes)
-                            {
-                                if (item == null)
+                                Nodes.JsonArray? arrayValueReferencePairTypes = keyValue.Value as Nodes.JsonArray;
+                                if (arrayValueReferencePairTypes == null)
                                 {
                                     error = new Reporting.Error(
-                                        "Expected a non-null item, but got a null");
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexValueReferencePairTypes));
+                                        $"Expected a JsonArray, but got {keyValue.Value.GetType()}");
                                     error.PrependSegment(
                                         new Reporting.NameSegment(
                                             "valueReferencePairTypes"));
                                     return null;
                                 }
-                                ValueReferencePair? parsedItem = DeserializeImplementation.ValueReferencePairFrom(
-                                    item ?? throw new System.InvalidOperationException(),
-                                    out error);
-                                if (error != null)
+                                theValueReferencePairTypes = new List<ValueReferencePair>(
+                                    arrayValueReferencePairTypes.Count);
+                                int indexValueReferencePairTypes = 0;
+                                foreach (Nodes.JsonNode? item in arrayValueReferencePairTypes)
                                 {
-                                    error.PrependSegment(
-                                        new Reporting.IndexSegment(
-                                            indexValueReferencePairTypes));
-                                    error.PrependSegment(
-                                        new Reporting.NameSegment(
-                                            "valueReferencePairTypes"));
-                                    return null;
+                                    if (item == null)
+                                    {
+                                        error = new Reporting.Error(
+                                            "Expected a non-null item, but got a null");
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexValueReferencePairTypes));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "valueReferencePairTypes"));
+                                        return null;
+                                    }
+                                    ValueReferencePair? parsedItem = DeserializeImplementation.ValueReferencePairFrom(
+                                        item ?? throw new System.InvalidOperationException(),
+                                        out error);
+                                    if (error != null)
+                                    {
+                                        error.PrependSegment(
+                                            new Reporting.IndexSegment(
+                                                indexValueReferencePairTypes));
+                                        error.PrependSegment(
+                                            new Reporting.NameSegment(
+                                                "valueReferencePairTypes"));
+                                        return null;
+                                    }
+                                    theValueReferencePairTypes.Add(
+                                        parsedItem
+                                            ?? throw new System.InvalidOperationException(
+                                                "Unexpected result null when error is null"));
+                                    indexValueReferencePairTypes++;
                                 }
-                                theValueReferencePairTypes.Add(
-                                    parsedItem
-                                        ?? throw new System.InvalidOperationException(
-                                            "Unexpected result null when error is null"));
-                                indexValueReferencePairTypes++;
+                                break;
                             }
-                            break;
-                        }
                         default:
                             error = new Reporting.Error(
                                 $"Unexpected property: {keyValue.Key}");
@@ -13138,293 +13138,293 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "preferredName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            thePreferredName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "preferredName"));
-                                return null;
+                                thePreferredName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "preferredName"));
+                                    return null;
+                                }
+                                if (thePreferredName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected thePreferredName null when error is also null");
+                                }
+                                break;
                             }
-                            if (thePreferredName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected thePreferredName null when error is also null");
-                            }
-                            break;
-                        }
                         case "shortName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theShortName = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "shortName"));
-                                return null;
+                                theShortName = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "shortName"));
+                                    return null;
+                                }
+                                if (theShortName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theShortName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theShortName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theShortName null when error is also null");
-                            }
-                            break;
-                        }
                         case "unit":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theUnit = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "unit"));
-                                return null;
+                                theUnit = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "unit"));
+                                    return null;
+                                }
+                                if (theUnit == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theUnit null when error is also null");
+                                }
+                                break;
                             }
-                            if (theUnit == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theUnit null when error is also null");
-                            }
-                            break;
-                        }
                         case "unitId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theUnitId = DeserializeImplementation.ReferenceFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "unitId"));
-                                return null;
+                                theUnitId = DeserializeImplementation.ReferenceFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "unitId"));
+                                    return null;
+                                }
+                                if (theUnitId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theUnitId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theUnitId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theUnitId null when error is also null");
-                            }
-                            break;
-                        }
                         case "sourceOfDefinition":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSourceOfDefinition = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "sourceOfDefinition"));
-                                return null;
+                                theSourceOfDefinition = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "sourceOfDefinition"));
+                                    return null;
+                                }
+                                if (theSourceOfDefinition == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSourceOfDefinition null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSourceOfDefinition == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSourceOfDefinition null when error is also null");
-                            }
-                            break;
-                        }
                         case "symbol":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSymbol = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "symbol"));
-                                return null;
+                                theSymbol = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "symbol"));
+                                    return null;
+                                }
+                                if (theSymbol == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSymbol null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSymbol == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSymbol null when error is also null");
-                            }
-                            break;
-                        }
                         case "dataType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDataType = DeserializeImplementation.DataTypeIec61360From(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "dataType"));
-                                return null;
+                                theDataType = DeserializeImplementation.DataTypeIec61360From(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "dataType"));
+                                    return null;
+                                }
+                                if (theDataType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDataType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDataType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDataType null when error is also null");
-                            }
-                            break;
-                        }
                         case "definition":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDefinition = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "definition"));
-                                return null;
+                                theDefinition = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "definition"));
+                                    return null;
+                                }
+                                if (theDefinition == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDefinition null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDefinition == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDefinition null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueFormat":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueFormat = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueFormat"));
-                                return null;
+                                theValueFormat = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueFormat"));
+                                    return null;
+                                }
+                                if (theValueFormat == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueFormat null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueFormat == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueFormat null when error is also null");
-                            }
-                            break;
-                        }
                         case "valueList":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValueList = DeserializeImplementation.ValueListFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "valueList"));
-                                return null;
+                                theValueList = DeserializeImplementation.ValueListFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "valueList"));
+                                    return null;
+                                }
+                                if (theValueList == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValueList null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValueList == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValueList null when error is also null");
-                            }
-                            break;
-                        }
                         case "value":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theValue = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "value"));
-                                return null;
+                                theValue = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "value"));
+                                    return null;
+                                }
+                                if (theValue == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theValue null when error is also null");
+                                }
+                                break;
                             }
-                            if (theValue == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theValue null when error is also null");
-                            }
-                            break;
-                        }
                         case "levelType":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theLevelType = DeserializeImplementation.LevelTypeFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "levelType"));
-                                return null;
+                                theLevelType = DeserializeImplementation.LevelTypeFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "levelType"));
+                                    return null;
+                                }
+                                if (theLevelType == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theLevelType null when error is also null");
+                                }
+                                break;
                             }
-                            if (theLevelType == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theLevelType null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:
@@ -13496,317 +13496,317 @@ namespace AasCore.Aas3_0_RC02
                     switch (keyValue.Key)
                     {
                         case "unitName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theUnitName = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "unitName"));
-                                return null;
+                                theUnitName = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "unitName"));
+                                    return null;
+                                }
+                                if (theUnitName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theUnitName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theUnitName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theUnitName null when error is also null");
-                            }
-                            break;
-                        }
                         case "unitSymbol":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theUnitSymbol = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "unitSymbol"));
-                                return null;
+                                theUnitSymbol = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "unitSymbol"));
+                                    return null;
+                                }
+                                if (theUnitSymbol == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theUnitSymbol null when error is also null");
+                                }
+                                break;
                             }
-                            if (theUnitSymbol == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theUnitSymbol null when error is also null");
-                            }
-                            break;
-                        }
                         case "definition":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDefinition = DeserializeImplementation.LangStringSetFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "definition"));
-                                return null;
+                                theDefinition = DeserializeImplementation.LangStringSetFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "definition"));
+                                    return null;
+                                }
+                                if (theDefinition == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDefinition null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDefinition == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDefinition null when error is also null");
-                            }
-                            break;
-                        }
                         case "siNotation":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSiNotation = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "siNotation"));
-                                return null;
+                                theSiNotation = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "siNotation"));
+                                    return null;
+                                }
+                                if (theSiNotation == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSiNotation null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSiNotation == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSiNotation null when error is also null");
-                            }
-                            break;
-                        }
                         case "siName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSiName = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "siName"));
-                                return null;
+                                theSiName = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "siName"));
+                                    return null;
+                                }
+                                if (theSiName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSiName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSiName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSiName null when error is also null");
-                            }
-                            break;
-                        }
                         case "dinNotation":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theDinNotation = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "dinNotation"));
-                                return null;
+                                theDinNotation = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "dinNotation"));
+                                    return null;
+                                }
+                                if (theDinNotation == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theDinNotation null when error is also null");
+                                }
+                                break;
                             }
-                            if (theDinNotation == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theDinNotation null when error is also null");
-                            }
-                            break;
-                        }
                         case "eceName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theEceName = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "eceName"));
-                                return null;
+                                theEceName = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "eceName"));
+                                    return null;
+                                }
+                                if (theEceName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theEceName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theEceName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theEceName null when error is also null");
-                            }
-                            break;
-                        }
                         case "eceCode":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theEceCode = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "eceCode"));
-                                return null;
+                                theEceCode = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "eceCode"));
+                                    return null;
+                                }
+                                if (theEceCode == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theEceCode null when error is also null");
+                                }
+                                break;
                             }
-                            if (theEceCode == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theEceCode null when error is also null");
-                            }
-                            break;
-                        }
                         case "nistName":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theNistName = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "nistName"));
-                                return null;
+                                theNistName = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "nistName"));
+                                    return null;
+                                }
+                                if (theNistName == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theNistName null when error is also null");
+                                }
+                                break;
                             }
-                            if (theNistName == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theNistName null when error is also null");
-                            }
-                            break;
-                        }
                         case "sourceOfDefinition":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSourceOfDefinition = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "sourceOfDefinition"));
-                                return null;
+                                theSourceOfDefinition = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "sourceOfDefinition"));
+                                    return null;
+                                }
+                                if (theSourceOfDefinition == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSourceOfDefinition null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSourceOfDefinition == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSourceOfDefinition null when error is also null");
-                            }
-                            break;
-                        }
                         case "conversionFactor":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theConversionFactor = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "conversionFactor"));
-                                return null;
+                                theConversionFactor = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "conversionFactor"));
+                                    return null;
+                                }
+                                if (theConversionFactor == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theConversionFactor null when error is also null");
+                                }
+                                break;
                             }
-                            if (theConversionFactor == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theConversionFactor null when error is also null");
-                            }
-                            break;
-                        }
                         case "registrationAuthorityId":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theRegistrationAuthorityId = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "registrationAuthorityId"));
-                                return null;
+                                theRegistrationAuthorityId = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "registrationAuthorityId"));
+                                    return null;
+                                }
+                                if (theRegistrationAuthorityId == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theRegistrationAuthorityId null when error is also null");
+                                }
+                                break;
                             }
-                            if (theRegistrationAuthorityId == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theRegistrationAuthorityId null when error is also null");
-                            }
-                            break;
-                        }
                         case "supplier":
-                        {
-                            if (keyValue.Value == null)
                             {
-                                continue;
-                            }
+                                if (keyValue.Value == null)
+                                {
+                                    continue;
+                                }
 
-                            theSupplier = DeserializeImplementation.StringFrom(
-                                keyValue.Value,
-                                out error);
-                            if (error != null)
-                            {
-                                error.PrependSegment(
-                                    new Reporting.NameSegment(
-                                        "supplier"));
-                                return null;
+                                theSupplier = DeserializeImplementation.StringFrom(
+                                    keyValue.Value,
+                                    out error);
+                                if (error != null)
+                                {
+                                    error.PrependSegment(
+                                        new Reporting.NameSegment(
+                                            "supplier"));
+                                    return null;
+                                }
+                                if (theSupplier == null)
+                                {
+                                    throw new System.InvalidOperationException(
+                                        "Unexpected theSupplier null when error is also null");
+                                }
+                                break;
                             }
-                            if (theSupplier == null)
-                            {
-                                throw new System.InvalidOperationException(
-                                    "Unexpected theSupplier null when error is also null");
-                            }
-                            break;
-                        }
                         case "modelType":
                             continue;
                         default:

@@ -1,0 +1,4 @@
+conceptDescriptions[0]: Invariant violated:
+Is-case-of must be either null or have at least one item
+!(that.IsCaseOf != null)
+|| (that.IsCaseOf.Count > 0)
