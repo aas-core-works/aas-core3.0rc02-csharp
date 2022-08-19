@@ -1,0 +1,8 @@
+submodels[0]: Invariant violated:
+Supplemental semantic IDs must be either null or have at least one item
+!(that.SupplementalSemanticIds != null)
+|| (that.SupplementalSemanticIds.Count > 0);
+submodels[0]: Invariant violated:
+Constraint AASd-118: If there are supplemental semantic IDs defined then there shall be also a main semantic ID.
+!(that.SupplementalSemanticIds != null)
+|| (that.SemanticId != null)
