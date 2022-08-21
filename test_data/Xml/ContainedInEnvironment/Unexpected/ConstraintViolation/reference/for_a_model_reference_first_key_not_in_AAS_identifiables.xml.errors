@@ -1,7 +1,2 @@
 submodels[0].semanticId: Invariant violated:
 Constraint AASd-123: For model references the type of the first key shall be one of AAS identifiables
-!(
-    that.Type == ReferenceTypes.ModelReference
-    && that.Keys.Count > 0
-)
-|| Aas.Constants.AasIdentifiables.Contains(that.Keys[0].Type)

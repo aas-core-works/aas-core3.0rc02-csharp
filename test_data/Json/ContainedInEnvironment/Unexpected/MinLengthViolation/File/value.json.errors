@@ -1,4 +1,4 @@
 submodels[0].submodelElements[0].value: Invariant violated:
-that.Length >= 1;
+Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.;
 submodels[0].submodelElements[0].value: Invariant violated:
-Verification.MatchesRfc8089Path(that)
+The value must represent a valid file URI scheme according to RFC 8089.

@@ -1,6 +1,4 @@
 conceptDescriptions[0]: Invariant violated:
-Constraint AASd-051: A concept description shall have one of the following categories: 'VALUE', 'PROPERTY', 'REFERENCE', 'DOCUMENT', 'CAPABILITY',; 'RELATIONSHIP', 'COLLECTION', 'FUNCTION', 'EVENT', 'ENTITY', 'APPLICATION_CLASS', 'QUALIFIER', 'VIEW'.
-!(that.Category != null)
-|| Aas.Constants.ValidCategoriesForConceptDescription.Contains(that.Category);
+Constraint AASd-051: A concept description shall have one of the following categories: 'VALUE', 'PROPERTY', 'REFERENCE', 'DOCUMENT', 'CAPABILITY',; 'RELATIONSHIP', 'COLLECTION', 'FUNCTION', 'EVENT', 'ENTITY', 'APPLICATION_CLASS', 'QUALIFIER', 'VIEW'.;
 conceptDescriptions[0].category: Invariant violated:
-that.Length >= 1
+Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.

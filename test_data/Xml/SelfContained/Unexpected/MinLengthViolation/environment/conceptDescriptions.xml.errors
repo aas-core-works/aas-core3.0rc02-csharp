@@ -1,4 +1,2 @@
 : Invariant violated:
-Concept descriptions must be either null or have at least one item
-!(that.ConceptDescriptions != null)
-|| (that.ConceptDescriptions.Count > 0)
+Concept descriptions must be either not set or have at least one item

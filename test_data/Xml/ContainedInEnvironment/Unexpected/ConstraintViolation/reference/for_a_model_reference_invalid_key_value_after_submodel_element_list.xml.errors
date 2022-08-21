@@ -1,14 +1,2 @@
 submodels[0].semanticId: Invariant violated:
 Constraint AASd-128: For model references, the value of a key preceded by a key with type Submodel element list is an integer number denoting the position in the array of the submodel element list.
-!(
-    that.Type == ReferenceTypes.ModelReference
-    && that.Keys.Count > 2
-)
-|| (
-    Enumerable.Range(
-        0,
-        that.Keys.Count - 1
-    ).All(
-        i => !(that.Keys[i].Type == KeyTypes.SubmodelElementList)
-            || Verification.MatchesXsPositiveInteger(that.Keys[i + 1].Value))
-)

@@ -1,4 +1,2 @@
 submodels[0].submodelElements[0]: Invariant violated:
-Embedded data specifications must be either null or have at least one item
-!(that.EmbeddedDataSpecifications != null)
-|| (that.EmbeddedDataSpecifications.Count > 0)
+Embedded data specifications must be either not set or have at least one item

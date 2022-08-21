@@ -1,4 +1,2 @@
 : Invariant violated:
-Asset administration shells must be either null or have at least one item
-!(that.AssetAdministrationShells != null)
-|| (that.AssetAdministrationShells.Count > 0)
+Asset administration shells must be either not set or have at least one item

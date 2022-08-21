@@ -1,2 +1,2 @@
 assetAdministrationShells[0].assetInformation.defaultThumbnail.path: Invariant violated:
-Verification.MatchesRfc8089Path(that)
+The value must represent a valid file URI scheme according to RFC 8089.
