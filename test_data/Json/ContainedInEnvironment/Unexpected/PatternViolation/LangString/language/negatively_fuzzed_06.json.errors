@@ -1,2 +1,2 @@
 assetAdministrationShells[0].displayName[0].language: Invariant violated:
-Verification.MatchesBcp47(that)
+The value must represent a value language tag conformant to BCP 47.

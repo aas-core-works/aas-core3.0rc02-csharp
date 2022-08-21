@@ -1,3 +1,2 @@
 conceptDescriptions[0].idShort: Invariant violated:
 Constraint AASd-027: ID-short shall have a maximum length of 128 characters.
-that.Length <= 128

@@ -1,6 +1,4 @@
 submodels[0].submodelElements[0]: Invariant violated:
-Constraint AASd-090: For data elements category shall be one of the following values: CONSTANT, PARAMETER or VARIABLE
-!(that.Category != null)
-|| Aas.Constants.ValidCategoriesForDataElement.Contains(that.Category);
+Constraint AASd-090: For data elements category shall be one of the following values: CONSTANT, PARAMETER or VARIABLE;
 submodels[0].submodelElements[0].category: Invariant violated:
-that.Length >= 1
+Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.

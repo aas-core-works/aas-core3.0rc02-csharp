@@ -1,10 +1,2 @@
 submodels[0].semanticId: Invariant violated:
 Constraint AASd-124: For global references the last key shall be either one of Generic globally identifiables or one of Generic fragment keys.
-!(
-    that.Type == ReferenceTypes.GlobalReference
-    && that.Keys.Count > 0
-)
-|| (
-    Aas.Constants.GenericGloballyIdentifiables.Contains(that.Keys[^1].Type)
-    || Aas.Constants.GenericFragmentKeys.Contains(that.Keys[^1].Type)
-)

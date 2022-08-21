@@ -1,2 +1,2 @@
 submodels[0].semanticId: Invariant violated:
-that.Keys.Count >= 1
+Keys must containt at least one item.

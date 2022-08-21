@@ -1,4 +1,4 @@
 submodels[0].submodelElements[0].contentType: Invariant violated:
-that.Length >= 1;
+Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.;
 submodels[0].submodelElements[0].contentType: Invariant violated:
-Verification.MatchesMimeType(that)
+The value must represent a valid content MIME type according to RFC 2046.
