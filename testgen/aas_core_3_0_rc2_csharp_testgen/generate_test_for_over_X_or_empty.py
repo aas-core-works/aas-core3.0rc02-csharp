@@ -16,7 +16,7 @@ import aas_core_codegen.run
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
 
-from testgen.common import load_symbol_table
+from aas_core_3_0_rc2_csharp_testgen.common import load_symbol_table
 
 
 def main() -> int:
@@ -117,7 +117,7 @@ namespace AasCore.Aas3_0_RC02.Tests
     )
 
     this_path = pathlib.Path(os.path.realpath(__file__))
-    repo_root = this_path.parent.parent
+    repo_root = this_path.parent.parent.parent
 
     target_pth = repo_root / "src/AasCore.Aas3_0_RC02.Tests/TestOverXOrEmpty.cs"
     target_pth.write_text(writer.getvalue(), encoding='utf-8')

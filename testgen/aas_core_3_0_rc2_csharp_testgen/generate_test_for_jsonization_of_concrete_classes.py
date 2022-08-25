@@ -1,4 +1,4 @@
-"""Generate the test code for the de/serialization of instances in XML."""
+"""Generate the test code for the JSON de/serialization of classes."""
 
 import io
 import os
@@ -20,12 +20,12 @@ from aas_core_codegen.csharp import (
 )
 from icontract import require
 
-import testgen.common
+import aas_core_3_0_rc2_csharp_testgen.common
 
 
 def _generate_for_self_contained(
         cls_name_csharp: str,
-        cls_name_xml: str,
+        cls_name_json: str,
 ) -> List[Stripped]:
     """Generate the tests for a self-contained class."""
     # noinspection PyListCreation
@@ -40,27 +40,27 @@ public void Test_{cls_name_csharp}_ok()
     var paths = Directory.GetFiles(
         Path.Combine(
             Aas.Tests.Common.TestDataDir,
-            "Xml", 
+            "Json", 
             "SelfContained", 
             "Expected",
-            {csharp_common.string_literal(cls_name_xml)}
+            {csharp_common.string_literal(cls_name_json)}
         ),
-        "*.xml",
+        "*.json",
         System.IO.SearchOption.AllDirectories).ToList();
     paths.Sort();
 
     foreach (var path in paths)
     {{
-        using var xmlReader = System.Xml.XmlReader.Create(path);
-        
-        var instance = Aas.Xmlization.Deserialize.{cls_name_csharp}From(
-            xmlReader);
+        var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+        var instance = Aas.Jsonization.Deserialize.{cls_name_csharp}From(
+            node);
 
         var errors = Aas.Verification.Verify(instance).ToList();
         Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
 
         AssertSerializeDeserializeEqualsOriginal(
-            instance, path);
+            node, instance, path);
     }}
 }}  // public void Test_{cls_name_csharp}_ok"""
         )
@@ -76,11 +76,11 @@ public void Test_{cls_name_csharp}_deserialization_fail()
     {{
         string baseDir = Path.Combine(
             Aas.Tests.Common.TestDataDir,
-            "Xml", 
+            "Json", 
             "SelfContained", 
             "Unexpected", 
             cause,
-            {csharp_common.string_literal(cls_name_xml)}
+            {csharp_common.string_literal(cls_name_json)}
         );
          
         if (!Directory.Exists(baseDir))
@@ -91,22 +91,21 @@ public void Test_{cls_name_csharp}_deserialization_fail()
         
         var paths = Directory.GetFiles(
             baseDir,
-            "*.xml",
+            "*.json",
             System.IO.SearchOption.AllDirectories).ToList();
         paths.Sort();
 
         foreach (var path in paths)
         {{
-            using var xmlReader = System.Xml.XmlReader.Create(path);
-            
-            Aas.Xmlization.Exception? exception = null;
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
+            Aas.Jsonization.Exception? exception = null;
             try
             {{
-                _ = Aas.Xmlization.Deserialize.{cls_name_csharp}From(
-                    xmlReader);
+                var _ = Aas.Jsonization.Deserialize.{cls_name_csharp}From(
+                    node);
             }}
-            catch (Aas.Xmlization.Exception observedException)
+            catch (Aas.Jsonization.Exception observedException)
             {{
                 exception = observedException;
             }}
@@ -129,11 +128,11 @@ public void Test_{cls_name_csharp}_verification_fail()
     {{
         string baseDir = Path.Combine(
             Aas.Tests.Common.TestDataDir,
-            "Xml", 
+            "Json", 
             "SelfContained", 
             "Unexpected", 
             cause,
-            {csharp_common.string_literal(cls_name_xml)}
+            {csharp_common.string_literal(cls_name_json)}
         );
          
         if (!Directory.Exists(baseDir))
@@ -144,17 +143,17 @@ public void Test_{cls_name_csharp}_verification_fail()
         
         var paths = Directory.GetFiles(
             baseDir,
-            "*.xml",
+            "*.json",
             System.IO.SearchOption.AllDirectories).ToList();
         paths.Sort();
 
         foreach (var path in paths)
         {{
-            using var xmlReader = System.Xml.XmlReader.Create(path);
-        
-            var instance = Aas.Xmlization.Deserialize.{cls_name_csharp}From(
-                xmlReader);
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
+            var instance = Aas.Jsonization.Deserialize.{cls_name_csharp}From(
+                node);
+ 
             var errors = Aas.Verification.Verify(instance).ToList();
             Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
                 errors, path);
@@ -170,7 +169,7 @@ public void Test_{cls_name_csharp}_verification_fail()
 @require(lambda container_cls_csharp: container_cls_csharp == "Environment")
 def _generate_for_contained_in_environment(
         cls_name_csharp: str,
-        cls_name_xml: str,
+        cls_name_json: str,
         container_cls_csharp: str,
 ) -> List[Stripped]:
     """Generate the tests for a class contained in an ``Environment`` instance."""
@@ -186,29 +185,64 @@ public void Test_{cls_name_csharp}_ok()
     var paths = Directory.GetFiles(
         Path.Combine(
             Aas.Tests.Common.TestDataDir,
-            "Xml", 
+            "Json", 
             "ContainedInEnvironment", 
             "Expected",
-            {csharp_common.string_literal(cls_name_xml)}
+            {csharp_common.string_literal(cls_name_json)}
         ),
-        "*.xml",
+        "*.json",
         System.IO.SearchOption.AllDirectories).ToList();
     paths.Sort();
 
     foreach (var path in paths)
     {{
-        using var xmlReader = System.Xml.XmlReader.Create(path);
-        
-        var container = Aas.Xmlization.Deserialize.{container_cls_csharp}From(
-            xmlReader);
+        var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+        var container = Aas.Jsonization.Deserialize.{container_cls_csharp}From(
+            node);
 
         var errors = Aas.Verification.Verify(container).ToList();
         Aas.Tests.Common.AssertNoVerificationErrors(errors, path);
 
         AssertSerializeDeserializeEqualsOriginal(
-            container, path);
+            node, container, path);
     }}
 }}  // public void Test_{cls_name_csharp}_ok"""
+        )
+    )
+
+    blocks.append(
+        Stripped(
+            f"""\
+[Test]
+public void Test_{cls_name_csharp}_deserialization_from_non_object_fail()
+{{
+    var node = Nodes.JsonValue.Create("INVALID") 
+        ?? throw new System.InvalidOperationException(
+            "Unexpected failure of the node creation");
+
+    Aas.Jsonization.Exception? exception = null;
+    try
+    {{
+        var _ = Aas.Jsonization.Deserialize.{cls_name_csharp}From(
+            node);
+    }}
+    catch (Aas.Jsonization.Exception observedException)
+    {{
+        exception = observedException;
+    }}
+
+    if (exception == null)
+    {{
+        throw new AssertionException("Expected an exception, but got none");
+    }}
+
+    if (!exception.Message.StartsWith("Expected a JsonObject, but got "))
+    {{
+        throw new AssertionException(
+            $"Unexpected exception message: {{exception.Message}}");
+    }}
+}}  // public void Test_{cls_name_csharp}_deserialization_from_non_object_fail"""
         )
     )
 
@@ -222,11 +256,11 @@ public void Test_{cls_name_csharp}_deserialization_fail()
     {{
         string baseDir = Path.Combine(
             Aas.Tests.Common.TestDataDir,
-            "Xml", 
+            "Json", 
             "ContainedInEnvironment", 
             "Unexpected", 
             cause,
-            {csharp_common.string_literal(cls_name_xml)});
+            {csharp_common.string_literal(cls_name_json)});
             
         if (!Directory.Exists(baseDir))
         {{
@@ -236,22 +270,21 @@ public void Test_{cls_name_csharp}_deserialization_fail()
     
         var paths = Directory.GetFiles(
             baseDir,
-            "*.xml",
+            "*.json",
             System.IO.SearchOption.AllDirectories).ToList();
         paths.Sort();
 
         foreach (var path in paths)
         {{
-            using var xmlReader = System.Xml.XmlReader.Create(path);
-            
-            Aas.Xmlization.Exception? exception = null;
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
 
+            Aas.Jsonization.Exception? exception = null;
             try
             {{
-                _ = Aas.Xmlization.Deserialize.{container_cls_csharp}From(
-                    xmlReader);
+                var _ = Aas.Jsonization.Deserialize.{container_cls_csharp}From(
+                    node);
             }}
-            catch (Aas.Xmlization.Exception observedException)
+            catch (Aas.Jsonization.Exception observedException)
             {{
                 exception = observedException;
             }}
@@ -274,11 +307,11 @@ public void Test_{cls_name_csharp}_verification_fail()
     {{
         string baseDir = Path.Combine(
             Aas.Tests.Common.TestDataDir,
-            "Xml", 
+            "Json", 
             "ContainedInEnvironment", 
             "Unexpected", 
             cause,
-            {csharp_common.string_literal(cls_name_xml)}
+            {csharp_common.string_literal(cls_name_json)}
         );
     
         if (!Directory.Exists(baseDir))
@@ -289,16 +322,16 @@ public void Test_{cls_name_csharp}_verification_fail()
     
         var paths = Directory.GetFiles(
             baseDir,
-            "*.xml",
+            "*.json",
             System.IO.SearchOption.AllDirectories).ToList();
         paths.Sort();
 
         foreach (var path in paths)
         {{
-            using var xmlReader = System.Xml.XmlReader.Create(path);
-        
-            var container = Aas.Xmlization.Deserialize.{container_cls_csharp}From(
-                xmlReader);
+            var node = Aas.Tests.CommonJson.ReadFromFile(path);
+
+            var container = Aas.Jsonization.Deserialize.{container_cls_csharp}From(
+                node);
 
             var errors = Aas.Verification.Verify(container).ToList();
             Aas.Tests.Common.AssertEqualsExpectedOrRerecordVerificationErrors(
@@ -314,10 +347,10 @@ public void Test_{cls_name_csharp}_verification_fail()
 
 def main() -> int:
     """Execute the main routine."""
-    symbol_table = testgen.common.load_symbol_table()
+    symbol_table = aas_core_3_0_rc2_csharp_testgen.common.load_symbol_table()
 
     this_path = pathlib.Path(os.path.realpath(__file__))
-    repo_root = this_path.parent.parent
+    repo_root = this_path.parent.parent.parent
 
     test_data_dir = repo_root / "test_data"
 
@@ -327,113 +360,39 @@ def main() -> int:
     blocks.append(
         Stripped(
             """\
-private static void CheckElementsEqual(
-    XElement expected,
-    XElement got,
-    out Reporting.Error? error)
-{
-    error = null;
-
-    if (expected.Name.LocalName != got.Name.LocalName)
-    {
-        error = new Reporting.Error(
-            "Mismatch in element names: " +
-            $"{expected} != {got}"
-        );
-        return;
-    }
-
-    string? expectedContent = (expected.FirstNode as XText)?.Value;
-    string? gotContent = (got.FirstNode as XText)?.Value;
-
-    if (expectedContent != gotContent)
-    {
-        error = new Reporting.Error(
-            $"Mismatch in element contents: {expected} != {got}"
-        );
-        return;
-    }
-
-    var expectedChildren = expected.Elements().ToList();
-    var gotChildren = got.Elements().ToList();
-
-    if (expectedChildren.Count != gotChildren.Count)
-    {
-        error = new Reporting.Error(
-            $"Mismatch in child elements: {expected} != {got}"
-        );
-        return;
-    }
-
-    for (int i = 0; i < expectedChildren.Count; i++)
-    {
-        CheckElementsEqual(
-            expectedChildren[i],
-            gotChildren[i],
-            out error);
-
-        if (error != null)
-        {
-            error.PrependSegment(
-                new Reporting.IndexSegment(i));
-
-            error.PrependSegment(
-                new Reporting.NameSegment(
-                    expected.Name.ToString()));
-        }
-    }
-}
-
 private static void AssertSerializeDeserializeEqualsOriginal(
-    Aas.IClass instance, string path)
+    Nodes.JsonNode originalNode, Aas.IClass instance, string path)
 {
-    // Serialize
-    var outputBuilder = new System.Text.StringBuilder();
-
+    Nodes.JsonObject? serialized = null;
+    try
     {
-        using var writer = System.Xml.XmlWriter.Create(
-            outputBuilder,
-            new System.Xml.XmlWriterSettings()
-            {
-                Encoding = System.Text.Encoding.UTF8,
-                OmitXmlDeclaration = true
-            }
+        serialized = Aas.Jsonization.Serialize.ToJsonObject(instance);
+    }
+    catch (System.Exception exception)
+    {
+        Assert.Fail(
+            "Expected no exception upon serialization of an instance " +
+            $"de-serialized from {path}, but got: {exception}"
         );
-        Aas.Xmlization.Serialize.To(
-            instance,
-            writer);
     }
 
-    string outputText = outputBuilder.ToString();
-
-    // Compare input == output
+    if (serialized == null)
     {
-        using var outputReader = new System.IO.StringReader(outputText);
-        var gotDoc = XDocument.Load(outputReader);
-
-        Assert.AreEqual(
-            gotDoc.Root?.Name.Namespace.ToString(),
-            "http://www.admin-shell.io/aas/3/0/RC02");
-
-        foreach (var child in gotDoc.Descendants())
-        {
-            Assert.AreEqual(
-                child.GetDefaultNamespace().NamespaceName,
-                "http://www.admin-shell.io/aas/3/0/RC02");
-        }
-
-        var expectedDoc = XDocument.Load(path);
-
-        CheckElementsEqual(
-            expectedDoc.Root!,
-            gotDoc.Root!,
+        Assert.Fail(
+            $"Unexpected null serialization of an instance from {path}"
+        );
+    }
+    else
+    {
+        Aas.Tests.CommonJson.CheckJsonNodesEqual(
+            originalNode,
+            serialized,
             out Reporting.Error? inequalityError);
-
         if (inequalityError != null)
         {
             Assert.Fail(
-                $"The original XML from {path} is unequal the serialized XML: " +
-                $"#/{Reporting.GenerateRelativeXPath(inequalityError.PathSegments)}: " +
+                $"The original JSON from {path} is unequal the serialized JSON: " +
+                $"{Reporting.GenerateJsonPath(inequalityError.PathSegments)}: " +
                 inequalityError.Cause
             );
         }
@@ -446,17 +405,18 @@ private static readonly List<string> CausesForDeserializationFailure = (
         "TypeViolation",
         "RequiredViolation",
         "EnumViolation",
+        "NullViolation",
         "UnexpectedAdditionalProperty"
     });
 
 private static void AssertEqualsExpectedOrRerecordDeserializationException(
-    Aas.Xmlization.Exception? exception,
+    Aas.Jsonization.Exception? exception,
     string path)
 {
     if (exception == null)
     {
         Assert.Fail(
-            $"Expected a Xmlization exception when de-serializing {path}, but got none."
+            $"Expected a Jsonization exception when de-serializing {path}, but got none."
         );
     }
     else
@@ -493,7 +453,7 @@ private static void AssertEqualsExpectedOrRerecordDeserializationException(
         if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
-        container_cls = testgen.common.determine_container_class(
+        container_cls = aas_core_3_0_rc2_csharp_testgen.common.determine_container_class(
             cls=our_type, test_data_dir=test_data_dir,
             environment_cls=environment_cls)
         container_cls_csharp = aas_core_codegen.csharp.naming.class_name(
@@ -501,20 +461,20 @@ private static void AssertEqualsExpectedOrRerecordDeserializationException(
         )
 
         cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
-        cls_name_xml = aas_core_codegen.naming.xml_class_name(our_type.name)
+        cls_name_json = aas_core_codegen.naming.json_model_type(our_type.name)
 
         if container_cls is our_type:
             blocks.extend(
                 _generate_for_self_contained(
                     cls_name_csharp=cls_name_csharp,
-                    cls_name_xml=cls_name_xml
+                    cls_name_json=cls_name_json
                 )
             )
         else:
             blocks.extend(
                 _generate_for_contained_in_environment(
                     cls_name_csharp=cls_name_csharp,
-                    cls_name_xml=cls_name_xml,
+                    cls_name_json=cls_name_json,
                     container_cls_csharp=container_cls_csharp
                 )
             )
@@ -529,16 +489,16 @@ private static void AssertEqualsExpectedOrRerecordDeserializationException(
 
 using Aas = AasCore.Aas3_0_RC02;  // renamed
 using Directory = System.IO.Directory;
+using Nodes = System.Text.Json.Nodes;
 using Path = System.IO.Path;
 
-using NUnit.Framework; // can't alias
 using System.Collections.Generic;  // can't alias
 using System.Linq;  // can't alias
-using System.Xml.Linq; // can't alias
+using NUnit.Framework; // can't alias
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
-    public class TestXmlizationOfConcreteClasses
+    public class TestJsonizationOfConcreteClasses
     {
 """
     )
@@ -551,7 +511,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
     writer.write(
         """
-    }  // class TestXmlizationOfConcreteClasses
+    }  // class TestJsonizationOfConcreteClasses
 }  // namespace AasCore.Aas3_0_RC02.Tests
 
 /*
@@ -561,7 +521,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 """
     )
 
-    target_pth = repo_root / "src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClasses.cs"
+    target_pth = repo_root / "src/AasCore.Aas3_0_RC02.Tests/TestJsonizationOfConcreteClasses.cs"
     target_pth.write_text(writer.getvalue(), encoding='utf-8')
 
     return 0

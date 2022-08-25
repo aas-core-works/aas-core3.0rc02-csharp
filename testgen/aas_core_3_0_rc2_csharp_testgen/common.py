@@ -1,16 +1,14 @@
-import enum
 import io
 import pathlib
-from typing import MutableMapping
 
 import aas_core_codegen
-import aas_core_codegen.parse
-import aas_core_codegen.run
 import aas_core_codegen.common
 import aas_core_codegen.naming
+import aas_core_codegen.parse
+import aas_core_codegen.run
 import aas_core_meta.v3rc2
 from aas_core_codegen import intermediate
-from icontract import require, ensure
+from icontract import require
 
 
 def load_symbol_table() -> intermediate.SymbolTable:

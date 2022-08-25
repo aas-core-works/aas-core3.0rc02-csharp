@@ -1,4 +1,4 @@
-"""Generate the test code for the XML de/serialization of interfaces."""
+"""Generate the test code for the xmlization of classes outside a container."""
 
 import io
 import os
@@ -16,52 +16,53 @@ import aas_core_codegen.run
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
 
-from testgen.common import load_symbol_table
+import aas_core_3_0_rc2_csharp_testgen.common
 
 
 def main() -> int:
     """Execute the main routine."""
-    symbol_table = load_symbol_table()
+    symbol_table = aas_core_3_0_rc2_csharp_testgen.common.load_symbol_table()
+
+    this_path = pathlib.Path(os.path.realpath(__file__))
+    repo_root = this_path.parent.parent.parent
+
+    test_data_dir = repo_root / "test_data"
+
+    environment_cls = symbol_table.must_find_concrete_class(
+        aas_core_codegen.common.Identifier("Environment"))
 
     # noinspection PyListCreation
     blocks = []  # type: List[str]
 
     for our_type in symbol_table.our_types:
-        if not isinstance(our_type, intermediate.Class):
+        if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
-        if our_type.interface is None or len(our_type.interface.implementers) == 0:
+        container_cls = aas_core_3_0_rc2_csharp_testgen.common.determine_container_class(
+            cls=our_type, test_data_dir=test_data_dir,
+            environment_cls=environment_cls)
+
+        if container_cls is our_type:
+            # NOTE (mristin, 2022-06-27):
+            # These classes are tested already in TestXmlizationOfConcreteClasses.
+            # We only need to test for class instances contained in a container.
             continue
 
-        if our_type.name == aas_core_codegen.common.Identifier("Event_payload"):
-            # NOTE (mristin, 2022-06-21):
-            # Event payload is a dangling class and can not be reached from
-            # the environment. Hence, we skip it.
-            continue
+        cls_name_csharp = aas_core_codegen.csharp.naming.class_name(our_type.name)
 
-        for cls in our_type.interface.implementers:
-            if cls.serialization is None or not cls.serialization.with_model_type:
-                continue
-
-            interface_name_csharp = aas_core_codegen.csharp.naming.interface_name(
-                our_type.interface.name
-            )
-
-            cls_name_csharp = aas_core_codegen.csharp.naming.class_name(cls.name)
-
-            blocks.append(
-                Stripped(
-                    f"""\
+        blocks.append(
+            Stripped(
+                f"""\
 [Test]
-public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
+public void Test_round_trip_{cls_name_csharp}()
 {{
     // We load from JSON here just to jump-start the round trip.
     // The round-trip goes then over XML.
     var instance = Aas.Tests.CommonJsonization.LoadComplete{cls_name_csharp}();
-
+    
     // The round-trip starts here.
     var outputBuilder = new System.Text.StringBuilder();
-
+    
     // Serialize to XML
     {{
         using var xmlWriter = System.Xml.XmlWriter.Create(
@@ -76,7 +77,7 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
             instance,
             xmlWriter);
     }}
-
+    
     // De-serialize from XML
     string outputText = outputBuilder.ToString();
 
@@ -86,7 +87,7 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
         outputReader,
         new System.Xml.XmlReaderSettings());
 
-    var anotherInstance = Aas.Xmlization.Deserialize.{interface_name_csharp}From(
+    var anotherInstance = Aas.Xmlization.Deserialize.{cls_name_csharp}From(
         xmlReader);
 
     // Serialize back to XML
@@ -105,13 +106,12 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
             anotherInstance,
             anotherXmlWriter);
     }}
-
-
+    
     // Compare
     Assert.AreEqual(outputText, anotherOutputBuilder.ToString());
-}}  // void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}"""
-                )
+}}  // public void Test_round_trip_{cls_name_csharp}"""
             )
+        )
 
     writer = io.StringIO()
     writer.write(
@@ -123,11 +123,20 @@ public void Test_round_trip_{interface_name_csharp}_from_{cls_name_csharp}()
 
 using Aas = AasCore.Aas3_0_RC02;  // renamed
 
-using NUnit.Framework;  // can't alias
+using NUnit.Framework; // can't alias
 
 namespace AasCore.Aas3_0_RC02.Tests
 {
-    public class TestXmlizationOfInterfaces
+    /// <summary>
+    /// Test de/serialization of classes contained in a container <i>outside</i>
+    /// of that container.
+    /// </summary>
+    /// <remarks>
+    /// This is necessary so that we also test the methods that directly de/serialize
+    /// an instance in rare use cases where it does not reside within a container such
+    /// as <see cref="Aas.Environment" />.
+    /// </remarks>
+    public class TestXmlizationOfConcreteClassesOutsideContainer
     {
 """
     )
@@ -140,7 +149,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
     writer.write(
         """
-    }  // class TestXmlizationOfInterfaces
+    }  // class TestXmlizationOfConcreteClassesOutsideContainer
 }  // namespace AasCore.Aas3_0_RC02.Tests
 
 /*
@@ -150,11 +159,10 @@ namespace AasCore.Aas3_0_RC02.Tests
 """
     )
 
-    this_path = pathlib.Path(os.path.realpath(__file__))
-    repo_root = this_path.parent.parent
-
     target_pth = (
-            repo_root / "src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfInterfaces.cs"
+            repo_root /
+            "src/AasCore.Aas3_0_RC02.Tests" /
+            "TestXmlizationOfConcreteClassesOutsideContainer.cs"
     )
     target_pth.write_text(writer.getvalue(), encoding='utf-8')
 
