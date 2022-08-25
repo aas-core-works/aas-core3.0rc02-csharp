@@ -24,9 +24,7 @@
               }
             ],
             "valueList": {
-              "valueReferencePairTypes": [
-                null
-              ]
+              "valueReferencePairs": null
             }
           }
         }

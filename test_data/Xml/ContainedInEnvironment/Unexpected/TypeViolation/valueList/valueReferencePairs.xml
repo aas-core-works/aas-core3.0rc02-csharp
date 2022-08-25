@@ -22,7 +22,7 @@
 								</langString>
 							</preferredName>
 							<valueList>
-								<valueReferencePairTypes>Unexpected string value</valueReferencePairTypes>
+								<valueReferencePairs>Unexpected string value</valueReferencePairs>
 							</valueList>
 						</dataSpecificationIec61360>
 					</dataSpecificationContent>
