@@ -16,15 +16,15 @@ import aas_core_codegen.run
 from aas_core_codegen import intermediate
 from aas_core_codegen.common import Stripped
 
-import testgen.common
+import aas_core_3_0_rc2_csharp_testgen.common
 
 
 def main() -> int:
     """Execute the main routine."""
-    symbol_table = testgen.common.load_symbol_table()
+    symbol_table = aas_core_3_0_rc2_csharp_testgen.common.load_symbol_table()
 
     this_path = pathlib.Path(os.path.realpath(__file__))
-    repo_root = this_path.parent.parent
+    repo_root = this_path.parent.parent.parent
 
     test_data_dir = repo_root / "test_data"
 
@@ -38,7 +38,7 @@ def main() -> int:
         if not isinstance(our_type, intermediate.ConcreteClass):
             continue
 
-        container_cls = testgen.common.determine_container_class(
+        container_cls = aas_core_3_0_rc2_csharp_testgen.common.determine_container_class(
             cls=our_type, test_data_dir=test_data_dir,
             environment_cls=environment_cls)
 
@@ -131,7 +131,7 @@ namespace AasCore.Aas3_0_RC02.Tests
     )
 
     this_path = pathlib.Path(os.path.realpath(__file__))
-    repo_root = this_path.parent.parent
+    repo_root = this_path.parent.parent.parent
 
     target_pth = (
             repo_root /
