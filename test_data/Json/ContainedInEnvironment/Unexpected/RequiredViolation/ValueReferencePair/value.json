@@ -24,13 +24,13 @@
               }
             ],
             "valueList": {
-              "valueReferencePairTypes": [
+              "valueReferencePairs": [
                 {
                   "valueId": {
                     "keys": [
                       {
                         "type": "GlobalReference",
-                        "value": "something_random_d6bd01e2"
+                        "value": "something_random_0bd908de"
                       }
                     ],
                     "type": "GlobalReference"

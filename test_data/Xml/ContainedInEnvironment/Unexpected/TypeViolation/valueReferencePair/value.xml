@@ -22,14 +22,14 @@
 								</langString>
 							</preferredName>
 							<valueList>
-								<valueReferencePairTypes>
+								<valueReferencePairs>
 									<valueReferencePair>
 										<value>
 											<type>GlobalReference</type>
 											<keys>
 												<key>
 													<type>GlobalReference</type>
-													<value>something_random_fe411fef</value>
+													<value>something_random_3205fb93</value>
 												</key>
 											</keys>
 										</value>
@@ -38,12 +38,12 @@
 											<keys>
 												<key>
 													<type>GlobalReference</type>
-													<value>something_random_d6bd01e2</value>
+													<value>something_random_0bd908de</value>
 												</key>
 											</keys>
 										</valueId>
 									</valueReferencePair>
-								</valueReferencePairTypes>
+								</valueReferencePairs>
 							</valueList>
 						</dataSpecificationIec61360>
 					</dataSpecificationContent>

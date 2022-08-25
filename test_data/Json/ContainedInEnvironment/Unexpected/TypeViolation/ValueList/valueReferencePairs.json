@@ -24,7 +24,7 @@
               }
             ],
             "valueList": {
-              "valueReferencePairTypes": "Unexpected string value"
+              "valueReferencePairs": "Unexpected string value"
             }
           }
         }
