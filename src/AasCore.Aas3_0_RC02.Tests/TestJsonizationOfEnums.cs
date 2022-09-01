@@ -111,7 +111,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_Direction()
         {
             var node = Nodes.JsonValue.Create(
-                "INPUT")
+                "input")
                     ?? throw new System.InvalidOperationException(
                         "Unexpected null node");
 
@@ -122,7 +122,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 parsed);
 
             Assert.AreEqual(
-                "\"INPUT\"",
+                "\"input\"",
                 serialized.ToJsonString());
         }  // void Test_round_trip_Direction
 
@@ -130,7 +130,7 @@ namespace AasCore.Aas3_0_RC02.Tests
         public void Test_round_trip_StateOfEvent()
         {
             var node = Nodes.JsonValue.Create(
-                "ON")
+                "on")
                     ?? throw new System.InvalidOperationException(
                         "Unexpected null node");
 
@@ -141,7 +141,7 @@ namespace AasCore.Aas3_0_RC02.Tests
                 parsed);
 
             Assert.AreEqual(
-                "\"ON\"",
+                "\"on\"",
                 serialized.ToJsonString());
         }  // void Test_round_trip_StateOfEvent
 

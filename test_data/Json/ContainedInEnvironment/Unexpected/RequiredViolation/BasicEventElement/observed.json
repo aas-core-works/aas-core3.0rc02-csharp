@@ -5,10 +5,10 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "direction": "OUTPUT",
+          "direction": "output",
           "idShort": "some_id_short_10b21b1b",
           "modelType": "BasicEventElement",
-          "state": "OFF"
+          "state": "off"
         }
       ]
     }

@@ -5,7 +5,7 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "direction": "OUTPUT",
+          "direction": "output",
           "extensions": [
             null
           ],
@@ -24,7 +24,7 @@
             ],
             "type": "ModelReference"
           },
-          "state": "OFF"
+          "state": "off"
         }
       ]
     }

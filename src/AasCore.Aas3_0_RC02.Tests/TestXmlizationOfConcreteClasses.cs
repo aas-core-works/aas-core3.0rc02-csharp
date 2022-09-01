@@ -102,13 +102,13 @@ namespace AasCore.Aas3_0_RC02.Tests
 
                 Assert.AreEqual(
                     gotDoc.Root?.Name.Namespace.ToString(),
-                    "http://www.admin-shell.io/aas/3/0/RC02");
+                    "https://admin-shell.io/aas/3/0/RC02");
 
                 foreach (var child in gotDoc.Descendants())
                 {
                     Assert.AreEqual(
                         child.GetDefaultNamespace().NamespaceName,
-                        "http://www.admin-shell.io/aas/3/0/RC02");
+                        "https://admin-shell.io/aas/3/0/RC02");
                 }
 
                 var expectedDoc = XDocument.Load(path);

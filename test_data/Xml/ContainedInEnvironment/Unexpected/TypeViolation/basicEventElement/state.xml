@@ -1,4 +1,4 @@
-<environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+<environment xmlns="https://admin-shell.io/aas/3/0/RC02">
 	<submodels>
 		<submodel>
 			<id>something_random_b0c234ba</id>
@@ -89,7 +89,7 @@
 							</key>
 						</keys>
 					</observed>
-					<direction>OUTPUT</direction>
+					<direction>output</direction>
 					<state>Unexpected string value</state>
 					<messageTopic>something_random_57b2a829</messageTopic>
 					<messageBroker>
