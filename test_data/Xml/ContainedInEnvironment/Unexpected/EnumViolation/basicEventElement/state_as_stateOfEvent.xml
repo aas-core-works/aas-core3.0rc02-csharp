@@ -1,4 +1,4 @@
-<environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+<environment xmlns="https://admin-shell.io/aas/3/0/RC02">
 	<submodels>
 		<submodel>
 			<id>something_random_b0c234ba</id>
@@ -18,7 +18,7 @@
 							</key>
 						</keys>
 					</observed>
-					<direction>OUTPUT</direction>
+					<direction>output</direction>
 					<state>invalid-literal</state>
 				</basicEventElement>
 			</submodelElements>

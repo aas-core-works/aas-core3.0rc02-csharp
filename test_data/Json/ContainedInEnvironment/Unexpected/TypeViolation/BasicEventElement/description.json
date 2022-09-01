@@ -8,7 +8,7 @@
           "category": "something_random_b8813eeb",
           "checksum": "something_random_9711a3c9",
           "description": "Unexpected string value",
-          "direction": "OUTPUT",
+          "direction": "output",
           "displayName": [
             {
               "language": "en",
@@ -92,7 +92,7 @@
             ],
             "type": "GlobalReference"
           },
-          "state": "OFF",
+          "state": "off",
           "supplementalSemanticIds": [
             {
               "keys": [

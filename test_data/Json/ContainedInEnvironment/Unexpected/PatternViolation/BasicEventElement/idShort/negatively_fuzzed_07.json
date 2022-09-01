@@ -5,7 +5,7 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "direction": "OUTPUT",
+          "direction": "output",
           "idShort": "\u00e9\f&\u00e9\ud86a\ude66\ud919\udc7f\udb90\udc06\u00c9\udbe5\udd7a\uda7c\uddfd",
           "modelType": "BasicEventElement",
           "observed": {
@@ -21,7 +21,7 @@
             ],
             "type": "ModelReference"
           },
-          "state": "OFF"
+          "state": "off"
         }
       ]
     }

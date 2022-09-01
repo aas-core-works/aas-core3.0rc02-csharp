@@ -6,7 +6,7 @@
       "submodelElements": [
         {
           "checksum": "",
-          "direction": "OUTPUT",
+          "direction": "output",
           "idShort": "some_id_short_10b21b1b",
           "modelType": "BasicEventElement",
           "observed": {
@@ -22,7 +22,7 @@
             ],
             "type": "ModelReference"
           },
-          "state": "OFF"
+          "state": "off"
         }
       ]
     }

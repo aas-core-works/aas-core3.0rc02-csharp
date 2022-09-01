@@ -13,7 +13,7 @@
               "text": "something_random_926f39ee"
             }
           ],
-          "direction": "OUTPUT",
+          "direction": "output",
           "displayName": [
             {
               "language": "en",
@@ -89,7 +89,7 @@
             }
           ],
           "semanticId": "Unexpected string value",
-          "state": "OFF",
+          "state": "off",
           "supplementalSemanticIds": [
             {
               "keys": [

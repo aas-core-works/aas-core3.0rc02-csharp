@@ -324,103 +324,107 @@ def main() -> int:
     # noinspection PyListCreation
     blocks = []  # type: List[str]
 
+    xml_namespace_literal = csharp_common.string_literal(
+        symbol_table.meta_model.xml_namespace
+    )
+
     blocks.append(
         Stripped(
-            """\
+            f"""\
 private static void CheckElementsEqual(
     XElement expected,
     XElement got,
     out Reporting.Error? error)
-{
+{{
     error = null;
 
     if (expected.Name.LocalName != got.Name.LocalName)
-    {
+    {{
         error = new Reporting.Error(
             "Mismatch in element names: " +
-            $"{expected} != {got}"
+            $"{{expected}} != {{got}}"
         );
         return;
-    }
+    }}
 
     string? expectedContent = (expected.FirstNode as XText)?.Value;
     string? gotContent = (got.FirstNode as XText)?.Value;
 
     if (expectedContent != gotContent)
-    {
+    {{
         error = new Reporting.Error(
-            $"Mismatch in element contents: {expected} != {got}"
+            $"Mismatch in element contents: {{expected}} != {{got}}"
         );
         return;
-    }
+    }}
 
     var expectedChildren = expected.Elements().ToList();
     var gotChildren = got.Elements().ToList();
 
     if (expectedChildren.Count != gotChildren.Count)
-    {
+    {{
         error = new Reporting.Error(
-            $"Mismatch in child elements: {expected} != {got}"
+            $"Mismatch in child elements: {{expected}} != {{got}}"
         );
         return;
-    }
+    }}
 
     for (int i = 0; i < expectedChildren.Count; i++)
-    {
+    {{
         CheckElementsEqual(
             expectedChildren[i],
             gotChildren[i],
             out error);
 
         if (error != null)
-        {
+        {{
             error.PrependSegment(
                 new Reporting.IndexSegment(i));
 
             error.PrependSegment(
                 new Reporting.NameSegment(
                     expected.Name.ToString()));
-        }
-    }
-}
+        }}
+    }}
+}}
 
 private static void AssertSerializeDeserializeEqualsOriginal(
     Aas.IClass instance, string path)
-{
+{{
     // Serialize
     var outputBuilder = new System.Text.StringBuilder();
 
-    {
+    {{
         using var writer = System.Xml.XmlWriter.Create(
             outputBuilder,
             new System.Xml.XmlWriterSettings()
-            {
+            {{
                 Encoding = System.Text.Encoding.UTF8,
                 OmitXmlDeclaration = true
-            }
+            }}
         );
         Aas.Xmlization.Serialize.To(
             instance,
             writer);
-    }
+    }}
 
     string outputText = outputBuilder.ToString();
 
     // Compare input == output
-    {
+    {{
         using var outputReader = new System.IO.StringReader(outputText);
         var gotDoc = XDocument.Load(outputReader);
 
         Assert.AreEqual(
             gotDoc.Root?.Name.Namespace.ToString(),
-            "http://www.admin-shell.io/aas/3/0/RC02");
+            {xml_namespace_literal});
 
         foreach (var child in gotDoc.Descendants())
-        {
+        {{
             Assert.AreEqual(
                 child.GetDefaultNamespace().NamespaceName,
-                "http://www.admin-shell.io/aas/3/0/RC02");
-        }
+                {xml_namespace_literal});
+        }}
 
         var expectedDoc = XDocument.Load(path);
 
@@ -430,59 +434,59 @@ private static void AssertSerializeDeserializeEqualsOriginal(
             out Reporting.Error? inequalityError);
 
         if (inequalityError != null)
-        {
+        {{
             Assert.Fail(
-                $"The original XML from {path} is unequal the serialized XML: " +
-                $"#/{Reporting.GenerateRelativeXPath(inequalityError.PathSegments)}: " +
+                $"The original XML from {{path}} is unequal the serialized XML: " +
+                $"#/{{Reporting.GenerateRelativeXPath(inequalityError.PathSegments)}}: " +
                 inequalityError.Cause
             );
-        }
-    }
-}
+        }}
+    }}
+}}
 
 private static readonly List<string> CausesForDeserializationFailure = (
     new List<string>()
-    {
+    {{
         "TypeViolation",
         "RequiredViolation",
         "EnumViolation",
         "UnexpectedAdditionalProperty"
-    });
+    }});
 
 private static void AssertEqualsExpectedOrRerecordDeserializationException(
     Aas.Xmlization.Exception? exception,
     string path)
-{
+{{
     if (exception == null)
-    {
+    {{
         Assert.Fail(
-            $"Expected a Xmlization exception when de-serializing {path}, but got none."
+            $"Expected a Xmlization exception when de-serializing {{path}}, but got none."
         );
-    }
+    }}
     else
-    {
+    {{
         string exceptionPath = path + ".exception";
         string got = exception.Message;
         if (Aas.Tests.Common.RecordMode)
-        {
+        {{
             System.IO.File.WriteAllText(exceptionPath, got);
-        }
+        }}
         else
-        {
+        {{
             if (!System.IO.File.Exists(exceptionPath))
-            {
+            {{
                 throw new System.IO.FileNotFoundException(
-                    $"The file with the recorded exception does not exist: {exceptionPath}");
-            }
+                    $"The file with the recorded exception does not exist: {{exceptionPath}}");
+            }}
 
             string expected = System.IO.File.ReadAllText(exceptionPath);
             Assert.AreEqual(
                 expected.Replace("\\r\\n", "\\n"),
                 got.Replace("\\r\\n", "\\n"),
-                $"The expected exception does not match the actual one for the file {path}");
-        }
-    }
-}"""
+                $"The expected exception does not match the actual one for the file {{path}}");
+        }}
+    }}
+}}"""
         )
     )
 

@@ -5,7 +5,7 @@
       "modelType": "Submodel",
       "submodelElements": [
         {
-          "direction": "OUTPUT",
+          "direction": "output",
           "idShort": "some_id_short_10b21b1b",
           "lastUpdate": "2022-02-29T16:55:45.852945Z",
           "modelType": "BasicEventElement",
@@ -22,7 +22,7 @@
             ],
             "type": "ModelReference"
           },
-          "state": "OFF"
+          "state": "off"
         }
       ]
     }

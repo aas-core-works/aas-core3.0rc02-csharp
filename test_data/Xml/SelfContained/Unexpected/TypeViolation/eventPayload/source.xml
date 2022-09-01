@@ -1,4 +1,4 @@
-<eventPayload xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+<eventPayload xmlns="https://admin-shell.io/aas/3/0/RC02">
 	<source>Unexpected string value</source>
 	<sourceSemanticId>
 		<type>GlobalReference</type>
