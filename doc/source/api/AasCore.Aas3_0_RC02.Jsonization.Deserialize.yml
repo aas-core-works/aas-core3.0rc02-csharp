@@ -1,0 +1,3307 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  commentId: T:AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  id: Jsonization.Deserialize
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  - AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  langs:
+  - csharp
+  - vb
+  name: Jsonization.Deserialize
+  nameWithType: Jsonization.Deserialize
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Deserialize
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 14968
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize instances of meta-model classes from JSON nodes.\n"
+  example:
+  - "\nHere is an example how to parse an instance of IHasSemantics:\n<pre><code>string someString = &quot;... some JSON ...&quot;;\nvar node = System.Text.Json.Nodes.JsonNode.Parse(someString);\nAas.IHasSemantics anInstance = Deserialize.IHasSemanticsFrom(\n    node);</code></pre>\n"
+  syntax:
+    content: 'public static class Deserialize : object'
+    content.vb: >-
+      Public Module Deserialize
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  id: IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasSemanticsFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 14978
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasSemantics from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasSemantics IHasSemanticsFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IHasSemantics
+    content.vb: Public Shared Function IHasSemanticsFrom(node As System.Text.Json.Nodes.JsonNode) As IHasSemantics
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IHasSemantics.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  id: ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ExtensionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15004
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Extension from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Extension ExtensionFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Extension
+    content.vb: Public Shared Function ExtensionFrom(node As System.Text.Json.Nodes.JsonNode) As Extension
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Extension.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  id: IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasExtensionsFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15029
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasExtensions from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasExtensions IHasExtensionsFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IHasExtensions
+    content.vb: Public Shared Function IHasExtensionsFrom(node As System.Text.Json.Nodes.JsonNode) As IHasExtensions
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IHasExtensions.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  id: IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IReferableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15055
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IReferable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IReferable IReferableFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IReferable
+    content.vb: Public Shared Function IReferableFrom(node As System.Text.Json.Nodes.JsonNode) As IReferable
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IReferable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  id: IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IIdentifiableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15081
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IIdentifiable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IIdentifiable IIdentifiableFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IIdentifiable
+    content.vb: Public Shared Function IIdentifiableFrom(node As System.Text.Json.Nodes.JsonNode) As IIdentifiable
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IIdentifiable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  id: ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ModelingKindFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15107
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ModelingKind from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ModelingKind ModelingKindFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ModelingKind
+    content.vb: Public Shared Function ModelingKindFrom(node As System.Text.Json.Nodes.JsonNode) As ModelingKind
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ModelingKind.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  id: IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasKindFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15132
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasKind from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasKind IHasKindFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IHasKind
+    content.vb: Public Shared Function IHasKindFrom(node As System.Text.Json.Nodes.JsonNode) As IHasKind
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IHasKind.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  id: IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasDataSpecificationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15158
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasDataSpecification from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasDataSpecification IHasDataSpecificationFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IHasDataSpecification
+    content.vb: Public Shared Function IHasDataSpecificationFrom(node As System.Text.Json.Nodes.JsonNode) As IHasDataSpecification
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IHasDataSpecification.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  id: AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AdministrativeInformationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15184
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AdministrativeInformation from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static AdministrativeInformation AdministrativeInformationFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.AdministrativeInformation
+    content.vb: Public Shared Function AdministrativeInformationFrom(node As System.Text.Json.Nodes.JsonNode) As AdministrativeInformation
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of AdministrativeInformation.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  id: IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IQualifiableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15209
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IQualifiable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IQualifiable IQualifiableFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IQualifiable
+    content.vb: Public Shared Function IQualifiableFrom(node As System.Text.Json.Nodes.JsonNode) As IQualifiable
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IQualifiable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  id: QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: QualifierKindFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15235
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of QualifierKind from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static QualifierKind QualifierKindFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.QualifierKind
+    content.vb: Public Shared Function QualifierKindFrom(node As System.Text.Json.Nodes.JsonNode) As QualifierKind
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of QualifierKind.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  id: QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: QualifierFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15260
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Qualifier from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Qualifier QualifierFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Qualifier
+    content.vb: Public Shared Function QualifierFrom(node As System.Text.Json.Nodes.JsonNode) As Qualifier
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Qualifier.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  id: AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AssetAdministrationShellFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15285
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AssetAdministrationShell from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static AssetAdministrationShell AssetAdministrationShellFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    content.vb: Public Shared Function AssetAdministrationShellFrom(node As System.Text.Json.Nodes.JsonNode) As AssetAdministrationShell
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of AssetAdministrationShell.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  id: AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AssetInformationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15310
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AssetInformation from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static AssetInformation AssetInformationFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.AssetInformation
+    content.vb: Public Shared Function AssetInformationFrom(node As System.Text.Json.Nodes.JsonNode) As AssetInformation
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of AssetInformation.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  id: ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ResourceFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15335
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Resource from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Resource ResourceFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Resource
+    content.vb: Public Shared Function ResourceFrom(node As System.Text.Json.Nodes.JsonNode) As Resource
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Resource.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  id: AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AssetKindFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15360
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AssetKind from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static AssetKind AssetKindFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.AssetKind
+    content.vb: Public Shared Function AssetKindFrom(node As System.Text.Json.Nodes.JsonNode) As AssetKind
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of AssetKind.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  id: SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SpecificAssetIdFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15385
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of SpecificAssetId from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static SpecificAssetId SpecificAssetIdFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.SpecificAssetId
+    content.vb: Public Shared Function SpecificAssetIdFrom(node As System.Text.Json.Nodes.JsonNode) As SpecificAssetId
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of SpecificAssetId.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  id: SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15410
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Submodel from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Submodel SubmodelFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Submodel
+    content.vb: Public Shared Function SubmodelFrom(node As System.Text.Json.Nodes.JsonNode) As Submodel
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Submodel.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ISubmodelElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15435
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ISubmodelElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ISubmodelElement ISubmodelElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ISubmodelElement
+    content.vb: Public Shared Function ISubmodelElementFrom(node As System.Text.Json.Nodes.JsonNode) As ISubmodelElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ISubmodelElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IRelationshipElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15461
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IRelationshipElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IRelationshipElement IRelationshipElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IRelationshipElement
+    content.vb: Public Shared Function IRelationshipElementFrom(node As System.Text.Json.Nodes.JsonNode) As IRelationshipElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IRelationshipElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RelationshipElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15487
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of RelationshipElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static RelationshipElement RelationshipElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.RelationshipElement
+    content.vb: Public Shared Function RelationshipElementFrom(node As System.Text.Json.Nodes.JsonNode) As RelationshipElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of RelationshipElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  id: AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AasSubmodelElementsFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15512
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AasSubmodelElements from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static AasSubmodelElements AasSubmodelElementsFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+    content.vb: Public Shared Function AasSubmodelElementsFrom(node As System.Text.Json.Nodes.JsonNode) As AasSubmodelElements
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of AasSubmodelElements.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  id: SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementListFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15537
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of SubmodelElementList from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static SubmodelElementList SubmodelElementListFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.SubmodelElementList
+    content.vb: Public Shared Function SubmodelElementListFrom(node As System.Text.Json.Nodes.JsonNode) As SubmodelElementList
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of SubmodelElementList.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  id: SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementCollectionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15562
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of SubmodelElementCollection from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static SubmodelElementCollection SubmodelElementCollectionFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.SubmodelElementCollection
+    content.vb: Public Shared Function SubmodelElementCollectionFrom(node As System.Text.Json.Nodes.JsonNode) As SubmodelElementCollection
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of SubmodelElementCollection.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IDataElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15587
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IDataElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IDataElement IDataElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IDataElement
+    content.vb: Public Shared Function IDataElementFrom(node As System.Text.Json.Nodes.JsonNode) As IDataElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IDataElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  id: PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: PropertyFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15613
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Property from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Property PropertyFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Property
+    content.vb: 'Public Shared Function PropertyFrom(node As System.Text.Json.Nodes.JsonNode) As '
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Property.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  id: MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MultiLanguagePropertyFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15638
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of MultiLanguageProperty from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static MultiLanguageProperty MultiLanguagePropertyFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.MultiLanguageProperty
+    content.vb: Public Shared Function MultiLanguagePropertyFrom(node As System.Text.Json.Nodes.JsonNode) As MultiLanguageProperty
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of MultiLanguageProperty.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom(System.Text.Json.Nodes.JsonNode)
+  id: RangeFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: RangeFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.RangeFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RangeFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15663
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Range from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Range RangeFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Range
+    content.vb: Public Shared Function RangeFrom(node As System.Text.Json.Nodes.JsonNode) As Range
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Range.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15688
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ReferenceElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ReferenceElement ReferenceElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ReferenceElement
+    content.vb: Public Shared Function ReferenceElementFrom(node As System.Text.Json.Nodes.JsonNode) As ReferenceElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ReferenceElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom(System.Text.Json.Nodes.JsonNode)
+  id: BlobFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: BlobFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.BlobFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: BlobFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15713
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Blob from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Blob BlobFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Blob
+    content.vb: Public Shared Function BlobFrom(node As System.Text.Json.Nodes.JsonNode) As Blob
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Blob.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom(System.Text.Json.Nodes.JsonNode)
+  id: FileFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: FileFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.FileFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: FileFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15738
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of File from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static File FileFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.File
+    content.vb: Public Shared Function FileFrom(node As System.Text.Json.Nodes.JsonNode) As File
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of File.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AnnotatedRelationshipElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15763
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AnnotatedRelationshipElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static AnnotatedRelationshipElement AnnotatedRelationshipElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+    content.vb: Public Shared Function AnnotatedRelationshipElementFrom(node As System.Text.Json.Nodes.JsonNode) As AnnotatedRelationshipElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of AnnotatedRelationshipElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  id: EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EntityTypeFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15788
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of EntityType from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static EntityType EntityTypeFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.EntityType
+    content.vb: Public Shared Function EntityTypeFrom(node As System.Text.Json.Nodes.JsonNode) As EntityType
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of EntityType.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom(System.Text.Json.Nodes.JsonNode)
+  id: EntityFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EntityFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.EntityFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EntityFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15813
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Entity from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Entity EntityFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Entity
+    content.vb: Public Shared Function EntityFrom(node As System.Text.Json.Nodes.JsonNode) As Entity
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Entity.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  id: DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DirectionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15838
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Direction from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Direction DirectionFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Direction
+    content.vb: Public Shared Function DirectionFrom(node As System.Text.Json.Nodes.JsonNode) As Direction
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Direction.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  id: StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: StateOfEventFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15863
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of StateOfEvent from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static StateOfEvent StateOfEventFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.StateOfEvent
+    content.vb: Public Shared Function StateOfEventFrom(node As System.Text.Json.Nodes.JsonNode) As StateOfEvent
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of StateOfEvent.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  id: EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EventPayloadFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15888
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of EventPayload from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static EventPayload EventPayloadFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.EventPayload
+    content.vb: Public Shared Function EventPayloadFrom(node As System.Text.Json.Nodes.JsonNode) As EventPayload
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of EventPayload.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IEventElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15913
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IEventElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IEventElement IEventElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IEventElement
+    content.vb: Public Shared Function IEventElementFrom(node As System.Text.Json.Nodes.JsonNode) As IEventElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IEventElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  id: BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: BasicEventElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15939
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of BasicEventElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static BasicEventElement BasicEventElementFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.BasicEventElement
+    content.vb: Public Shared Function BasicEventElementFrom(node As System.Text.Json.Nodes.JsonNode) As BasicEventElement
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of BasicEventElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom(System.Text.Json.Nodes.JsonNode)
+  id: OperationFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: OperationFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.OperationFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OperationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15964
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Operation from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Operation OperationFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Operation
+    content.vb: Public Shared Function OperationFrom(node As System.Text.Json.Nodes.JsonNode) As Operation
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Operation.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  id: OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OperationVariableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 15989
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of OperationVariable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static OperationVariable OperationVariableFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.OperationVariable
+    content.vb: Public Shared Function OperationVariableFrom(node As System.Text.Json.Nodes.JsonNode) As OperationVariable
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of OperationVariable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  id: CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: CapabilityFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16014
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Capability from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Capability CapabilityFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Capability
+    content.vb: Public Shared Function CapabilityFrom(node As System.Text.Json.Nodes.JsonNode) As Capability
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Capability.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  id: ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ConceptDescriptionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16039
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ConceptDescription from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ConceptDescription ConceptDescriptionFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ConceptDescription
+    content.vb: Public Shared Function ConceptDescriptionFrom(node As System.Text.Json.Nodes.JsonNode) As ConceptDescription
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ConceptDescription.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  id: ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceTypesFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16064
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ReferenceTypes from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ReferenceTypes ReferenceTypesFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ReferenceTypes
+    content.vb: Public Shared Function ReferenceTypesFrom(node As System.Text.Json.Nodes.JsonNode) As ReferenceTypes
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ReferenceTypes.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  id: ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16089
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Reference from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Reference ReferenceFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Reference
+    content.vb: Public Shared Function ReferenceFrom(node As System.Text.Json.Nodes.JsonNode) As Reference
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Reference.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom(System.Text.Json.Nodes.JsonNode)
+  id: KeyFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: KeyFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.KeyFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: KeyFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16114
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Key from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Key KeyFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Key
+    content.vb: Public Shared Function KeyFrom(node As System.Text.Json.Nodes.JsonNode) As Key
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Key.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  id: KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: KeyTypesFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16139
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of KeyTypes from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static KeyTypes KeyTypesFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.KeyTypes
+    content.vb: Public Shared Function KeyTypesFrom(node As System.Text.Json.Nodes.JsonNode) As KeyTypes
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of KeyTypes.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  id: DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataTypeDefXsdFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16164
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of DataTypeDefXsd from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static DataTypeDefXsd DataTypeDefXsdFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeDefXsd
+    content.vb: Public Shared Function DataTypeDefXsdFrom(node As System.Text.Json.Nodes.JsonNode) As DataTypeDefXsd
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of DataTypeDefXsd.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  id: LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: LangStringFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16189
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of LangString from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static LangString LangStringFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.LangString
+    content.vb: Public Shared Function LangStringFrom(node As System.Text.Json.Nodes.JsonNode) As LangString
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of LangString.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  id: EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EnvironmentFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16214
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Environment from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static Environment EnvironmentFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.Environment
+    content.vb: Public Shared Function EnvironmentFrom(node As System.Text.Json.Nodes.JsonNode) As Environment
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of Environment.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  id: IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IDataSpecificationContentFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16239
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IDataSpecificationContent from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static IDataSpecificationContent IDataSpecificationContentFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.IDataSpecificationContent
+    content.vb: Public Shared Function IDataSpecificationContentFrom(node As System.Text.Json.Nodes.JsonNode) As IDataSpecificationContent
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of IDataSpecificationContent.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  id: EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EmbeddedDataSpecificationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16265
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of EmbeddedDataSpecification from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static EmbeddedDataSpecification EmbeddedDataSpecificationFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    content.vb: Public Shared Function EmbeddedDataSpecificationFrom(node As System.Text.Json.Nodes.JsonNode) As EmbeddedDataSpecification
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of EmbeddedDataSpecification.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  id: DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataTypeIec61360From
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16290
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of DataTypeIec61360 from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static DataTypeIec61360 DataTypeIec61360From(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+    content.vb: Public Shared Function DataTypeIec61360From(node As System.Text.Json.Nodes.JsonNode) As DataTypeIec61360
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of DataTypeIec61360.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  id: LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: LevelTypeFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16315
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of LevelType from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static LevelType LevelTypeFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.LevelType
+    content.vb: Public Shared Function LevelTypeFrom(node As System.Text.Json.Nodes.JsonNode) As LevelType
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of LevelType.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  id: ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ValueReferencePairFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16340
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ValueReferencePair from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ValueReferencePair ValueReferencePairFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ValueReferencePair
+    content.vb: Public Shared Function ValueReferencePairFrom(node As System.Text.Json.Nodes.JsonNode) As ValueReferencePair
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ValueReferencePair.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  id: ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ValueListFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16365
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ValueList from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static ValueList ValueListFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.ValueList
+    content.vb: Public Shared Function ValueListFrom(node As System.Text.Json.Nodes.JsonNode) As ValueList
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of ValueList.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  id: DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360From
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16390
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of DataSpecificationIec61360 from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static DataSpecificationIec61360 DataSpecificationIec61360From(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+    content.vb: Public Shared Function DataSpecificationIec61360From(node As System.Text.Json.Nodes.JsonNode) As DataSpecificationIec61360
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of DataSpecificationIec61360.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  commentId: M:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  id: DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  parent: AasCore.Aas3_0_RC02.Jsonization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  nameWithType: Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/jsonization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationPhysicalUnitFrom
+    path: ../../src/AasCore.Aas3_0_RC02/jsonization.cs
+    startLine: 16415
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of DataSpecificationPhysicalUnit from <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code>.\n"
+  example: []
+  syntax:
+    content: public static DataSpecificationPhysicalUnit DataSpecificationPhysicalUnitFrom(System.Text.Json.Nodes.JsonNode node)
+    parameters:
+    - id: node
+      type: System.Text.Json.Nodes.JsonNode
+      description: JSON node to be parsed
+    return:
+      type: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+    content.vb: Public Shared Function DataSpecificationPhysicalUnitFrom(node As System.Text.Json.Nodes.JsonNode) As DataSpecificationPhysicalUnit
+  overload: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Jsonization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+    description: "\nThrown when <code data-dev-comment-type=\"paramref\" class=\"paramref\">node</code> is not a valid JSON\nrepresentation of DataSpecificationPhysicalUnit.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.Jsonization.Exception
+  commentId: T:AasCore.Aas3_0_RC02.Jsonization.Exception
+  name: Jsonization.Exception
+  nameWithType: Jsonization.Exception
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Exception
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom
+  name: IHasSemanticsFrom
+  nameWithType: Jsonization.Deserialize.IHasSemanticsFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasSemanticsFrom
+- uid: System.Text.Json.Nodes.JsonNode
+  isExternal: true
+  name: System.Text.Json.Nodes.JsonNode
+  nameWithType: System.Text.Json.Nodes.JsonNode
+  fullName: System.Text.Json.Nodes.JsonNode
+- uid: AasCore.Aas3_0_RC02.IHasSemantics
+  commentId: T:AasCore.Aas3_0_RC02.IHasSemantics
+  parent: AasCore.Aas3_0_RC02
+  name: IHasSemantics
+  nameWithType: IHasSemantics
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom
+  name: ExtensionFrom
+  nameWithType: Jsonization.Deserialize.ExtensionFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ExtensionFrom
+- uid: AasCore.Aas3_0_RC02.Extension
+  commentId: T:AasCore.Aas3_0_RC02.Extension
+  parent: AasCore.Aas3_0_RC02
+  name: Extension
+  nameWithType: Extension
+  fullName: AasCore.Aas3_0_RC02.Extension
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom
+  name: IHasExtensionsFrom
+  nameWithType: Jsonization.Deserialize.IHasExtensionsFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasExtensionsFrom
+- uid: AasCore.Aas3_0_RC02.IHasExtensions
+  commentId: T:AasCore.Aas3_0_RC02.IHasExtensions
+  parent: AasCore.Aas3_0_RC02
+  name: IHasExtensions
+  nameWithType: IHasExtensions
+  fullName: AasCore.Aas3_0_RC02.IHasExtensions
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom
+  name: IReferableFrom
+  nameWithType: Jsonization.Deserialize.IReferableFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IReferableFrom
+- uid: AasCore.Aas3_0_RC02.IReferable
+  commentId: T:AasCore.Aas3_0_RC02.IReferable
+  parent: AasCore.Aas3_0_RC02
+  name: IReferable
+  nameWithType: IReferable
+  fullName: AasCore.Aas3_0_RC02.IReferable
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom
+  name: IIdentifiableFrom
+  nameWithType: Jsonization.Deserialize.IIdentifiableFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IIdentifiableFrom
+- uid: AasCore.Aas3_0_RC02.IIdentifiable
+  commentId: T:AasCore.Aas3_0_RC02.IIdentifiable
+  parent: AasCore.Aas3_0_RC02
+  name: IIdentifiable
+  nameWithType: IIdentifiable
+  fullName: AasCore.Aas3_0_RC02.IIdentifiable
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom
+  name: ModelingKindFrom
+  nameWithType: Jsonization.Deserialize.ModelingKindFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ModelingKindFrom
+- uid: AasCore.Aas3_0_RC02.ModelingKind
+  commentId: T:AasCore.Aas3_0_RC02.ModelingKind
+  parent: AasCore.Aas3_0_RC02
+  name: ModelingKind
+  nameWithType: ModelingKind
+  fullName: AasCore.Aas3_0_RC02.ModelingKind
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom
+  name: IHasKindFrom
+  nameWithType: Jsonization.Deserialize.IHasKindFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasKindFrom
+- uid: AasCore.Aas3_0_RC02.IHasKind
+  commentId: T:AasCore.Aas3_0_RC02.IHasKind
+  parent: AasCore.Aas3_0_RC02
+  name: IHasKind
+  nameWithType: IHasKind
+  fullName: AasCore.Aas3_0_RC02.IHasKind
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom
+  name: IHasDataSpecificationFrom
+  nameWithType: Jsonization.Deserialize.IHasDataSpecificationFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IHasDataSpecificationFrom
+- uid: AasCore.Aas3_0_RC02.IHasDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.IHasDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: IHasDataSpecification
+  nameWithType: IHasDataSpecification
+  fullName: AasCore.Aas3_0_RC02.IHasDataSpecification
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom
+  name: AdministrativeInformationFrom
+  nameWithType: Jsonization.Deserialize.AdministrativeInformationFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AdministrativeInformationFrom
+- uid: AasCore.Aas3_0_RC02.AdministrativeInformation
+  commentId: T:AasCore.Aas3_0_RC02.AdministrativeInformation
+  parent: AasCore.Aas3_0_RC02
+  name: AdministrativeInformation
+  nameWithType: AdministrativeInformation
+  fullName: AasCore.Aas3_0_RC02.AdministrativeInformation
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom
+  name: IQualifiableFrom
+  nameWithType: Jsonization.Deserialize.IQualifiableFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IQualifiableFrom
+- uid: AasCore.Aas3_0_RC02.IQualifiable
+  commentId: T:AasCore.Aas3_0_RC02.IQualifiable
+  parent: AasCore.Aas3_0_RC02
+  name: IQualifiable
+  nameWithType: IQualifiable
+  fullName: AasCore.Aas3_0_RC02.IQualifiable
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom
+  name: QualifierKindFrom
+  nameWithType: Jsonization.Deserialize.QualifierKindFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierKindFrom
+- uid: AasCore.Aas3_0_RC02.QualifierKind
+  commentId: T:AasCore.Aas3_0_RC02.QualifierKind
+  parent: AasCore.Aas3_0_RC02
+  name: QualifierKind
+  nameWithType: QualifierKind
+  fullName: AasCore.Aas3_0_RC02.QualifierKind
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom
+  name: QualifierFrom
+  nameWithType: Jsonization.Deserialize.QualifierFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.QualifierFrom
+- uid: AasCore.Aas3_0_RC02.Qualifier
+  commentId: T:AasCore.Aas3_0_RC02.Qualifier
+  parent: AasCore.Aas3_0_RC02
+  name: Qualifier
+  nameWithType: Qualifier
+  fullName: AasCore.Aas3_0_RC02.Qualifier
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom
+  name: AssetAdministrationShellFrom
+  nameWithType: Jsonization.Deserialize.AssetAdministrationShellFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetAdministrationShellFrom
+- uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  commentId: T:AasCore.Aas3_0_RC02.AssetAdministrationShell
+  parent: AasCore.Aas3_0_RC02
+  name: AssetAdministrationShell
+  nameWithType: AssetAdministrationShell
+  fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom
+  name: AssetInformationFrom
+  nameWithType: Jsonization.Deserialize.AssetInformationFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetInformationFrom
+- uid: AasCore.Aas3_0_RC02.AssetInformation
+  commentId: T:AasCore.Aas3_0_RC02.AssetInformation
+  parent: AasCore.Aas3_0_RC02
+  name: AssetInformation
+  nameWithType: AssetInformation
+  fullName: AasCore.Aas3_0_RC02.AssetInformation
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom
+  name: ResourceFrom
+  nameWithType: Jsonization.Deserialize.ResourceFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ResourceFrom
+- uid: AasCore.Aas3_0_RC02.Resource
+  commentId: T:AasCore.Aas3_0_RC02.Resource
+  parent: AasCore.Aas3_0_RC02
+  name: Resource
+  nameWithType: Resource
+  fullName: AasCore.Aas3_0_RC02.Resource
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom
+  name: AssetKindFrom
+  nameWithType: Jsonization.Deserialize.AssetKindFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AssetKindFrom
+- uid: AasCore.Aas3_0_RC02.AssetKind
+  commentId: T:AasCore.Aas3_0_RC02.AssetKind
+  parent: AasCore.Aas3_0_RC02
+  name: AssetKind
+  nameWithType: AssetKind
+  fullName: AasCore.Aas3_0_RC02.AssetKind
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom
+  name: SpecificAssetIdFrom
+  nameWithType: Jsonization.Deserialize.SpecificAssetIdFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SpecificAssetIdFrom
+- uid: AasCore.Aas3_0_RC02.SpecificAssetId
+  commentId: T:AasCore.Aas3_0_RC02.SpecificAssetId
+  parent: AasCore.Aas3_0_RC02
+  name: SpecificAssetId
+  nameWithType: SpecificAssetId
+  fullName: AasCore.Aas3_0_RC02.SpecificAssetId
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom
+  name: SubmodelFrom
+  nameWithType: Jsonization.Deserialize.SubmodelFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelFrom
+- uid: AasCore.Aas3_0_RC02.Submodel
+  commentId: T:AasCore.Aas3_0_RC02.Submodel
+  parent: AasCore.Aas3_0_RC02
+  name: Submodel
+  nameWithType: Submodel
+  fullName: AasCore.Aas3_0_RC02.Submodel
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom
+  name: ISubmodelElementFrom
+  nameWithType: Jsonization.Deserialize.ISubmodelElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ISubmodelElementFrom
+- uid: AasCore.Aas3_0_RC02.ISubmodelElement
+  commentId: T:AasCore.Aas3_0_RC02.ISubmodelElement
+  parent: AasCore.Aas3_0_RC02
+  name: ISubmodelElement
+  nameWithType: ISubmodelElement
+  fullName: AasCore.Aas3_0_RC02.ISubmodelElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom
+  name: IRelationshipElementFrom
+  nameWithType: Jsonization.Deserialize.IRelationshipElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IRelationshipElementFrom
+- uid: AasCore.Aas3_0_RC02.IRelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.IRelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: IRelationshipElement
+  nameWithType: IRelationshipElement
+  fullName: AasCore.Aas3_0_RC02.IRelationshipElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom
+  name: RelationshipElementFrom
+  nameWithType: Jsonization.Deserialize.RelationshipElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RelationshipElementFrom
+- uid: AasCore.Aas3_0_RC02.RelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.RelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: RelationshipElement
+  nameWithType: RelationshipElement
+  fullName: AasCore.Aas3_0_RC02.RelationshipElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom
+  name: AasSubmodelElementsFrom
+  nameWithType: Jsonization.Deserialize.AasSubmodelElementsFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AasSubmodelElementsFrom
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements
+  commentId: T:AasCore.Aas3_0_RC02.AasSubmodelElements
+  parent: AasCore.Aas3_0_RC02
+  name: AasSubmodelElements
+  nameWithType: AasSubmodelElements
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom
+  name: SubmodelElementListFrom
+  nameWithType: Jsonization.Deserialize.SubmodelElementListFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementListFrom
+- uid: AasCore.Aas3_0_RC02.SubmodelElementList
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementList
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementList
+  nameWithType: SubmodelElementList
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementList
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom
+  name: SubmodelElementCollectionFrom
+  nameWithType: Jsonization.Deserialize.SubmodelElementCollectionFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.SubmodelElementCollectionFrom
+- uid: AasCore.Aas3_0_RC02.SubmodelElementCollection
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementCollection
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementCollection
+  nameWithType: SubmodelElementCollection
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementCollection
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom
+  name: IDataElementFrom
+  nameWithType: Jsonization.Deserialize.IDataElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataElementFrom
+- uid: AasCore.Aas3_0_RC02.IDataElement
+  commentId: T:AasCore.Aas3_0_RC02.IDataElement
+  parent: AasCore.Aas3_0_RC02
+  name: IDataElement
+  nameWithType: IDataElement
+  fullName: AasCore.Aas3_0_RC02.IDataElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom
+  name: PropertyFrom
+  nameWithType: Jsonization.Deserialize.PropertyFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.PropertyFrom
+- uid: AasCore.Aas3_0_RC02.Property
+  commentId: T:AasCore.Aas3_0_RC02.Property
+  parent: AasCore.Aas3_0_RC02
+  name: Property
+  nameWithType: Property
+  fullName: AasCore.Aas3_0_RC02.Property
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom
+  name: MultiLanguagePropertyFrom
+  nameWithType: Jsonization.Deserialize.MultiLanguagePropertyFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.MultiLanguagePropertyFrom
+- uid: AasCore.Aas3_0_RC02.MultiLanguageProperty
+  commentId: T:AasCore.Aas3_0_RC02.MultiLanguageProperty
+  parent: AasCore.Aas3_0_RC02
+  name: MultiLanguageProperty
+  nameWithType: MultiLanguageProperty
+  fullName: AasCore.Aas3_0_RC02.MultiLanguageProperty
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom
+  name: RangeFrom
+  nameWithType: Jsonization.Deserialize.RangeFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.RangeFrom
+- uid: AasCore.Aas3_0_RC02.Range
+  commentId: T:AasCore.Aas3_0_RC02.Range
+  parent: AasCore.Aas3_0_RC02
+  name: Range
+  nameWithType: Range
+  fullName: AasCore.Aas3_0_RC02.Range
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom
+  name: ReferenceElementFrom
+  nameWithType: Jsonization.Deserialize.ReferenceElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceElementFrom
+- uid: AasCore.Aas3_0_RC02.ReferenceElement
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceElement
+  parent: AasCore.Aas3_0_RC02
+  name: ReferenceElement
+  nameWithType: ReferenceElement
+  fullName: AasCore.Aas3_0_RC02.ReferenceElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom
+  name: BlobFrom
+  nameWithType: Jsonization.Deserialize.BlobFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BlobFrom
+- uid: AasCore.Aas3_0_RC02.Blob
+  commentId: T:AasCore.Aas3_0_RC02.Blob
+  parent: AasCore.Aas3_0_RC02
+  name: Blob
+  nameWithType: Blob
+  fullName: AasCore.Aas3_0_RC02.Blob
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom
+  name: FileFrom
+  nameWithType: Jsonization.Deserialize.FileFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.FileFrom
+- uid: AasCore.Aas3_0_RC02.File
+  commentId: T:AasCore.Aas3_0_RC02.File
+  parent: AasCore.Aas3_0_RC02
+  name: File
+  nameWithType: File
+  fullName: AasCore.Aas3_0_RC02.File
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom
+  name: AnnotatedRelationshipElementFrom
+  nameWithType: Jsonization.Deserialize.AnnotatedRelationshipElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.AnnotatedRelationshipElementFrom
+- uid: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: AnnotatedRelationshipElement
+  nameWithType: AnnotatedRelationshipElement
+  fullName: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom
+  name: EntityTypeFrom
+  nameWithType: Jsonization.Deserialize.EntityTypeFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityTypeFrom
+- uid: AasCore.Aas3_0_RC02.EntityType
+  commentId: T:AasCore.Aas3_0_RC02.EntityType
+  parent: AasCore.Aas3_0_RC02
+  name: EntityType
+  nameWithType: EntityType
+  fullName: AasCore.Aas3_0_RC02.EntityType
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom
+  name: EntityFrom
+  nameWithType: Jsonization.Deserialize.EntityFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EntityFrom
+- uid: AasCore.Aas3_0_RC02.Entity
+  commentId: T:AasCore.Aas3_0_RC02.Entity
+  parent: AasCore.Aas3_0_RC02
+  name: Entity
+  nameWithType: Entity
+  fullName: AasCore.Aas3_0_RC02.Entity
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom
+  name: DirectionFrom
+  nameWithType: Jsonization.Deserialize.DirectionFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DirectionFrom
+- uid: AasCore.Aas3_0_RC02.Direction
+  commentId: T:AasCore.Aas3_0_RC02.Direction
+  parent: AasCore.Aas3_0_RC02
+  name: Direction
+  nameWithType: Direction
+  fullName: AasCore.Aas3_0_RC02.Direction
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom
+  name: StateOfEventFrom
+  nameWithType: Jsonization.Deserialize.StateOfEventFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.StateOfEventFrom
+- uid: AasCore.Aas3_0_RC02.StateOfEvent
+  commentId: T:AasCore.Aas3_0_RC02.StateOfEvent
+  parent: AasCore.Aas3_0_RC02
+  name: StateOfEvent
+  nameWithType: StateOfEvent
+  fullName: AasCore.Aas3_0_RC02.StateOfEvent
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom
+  name: EventPayloadFrom
+  nameWithType: Jsonization.Deserialize.EventPayloadFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EventPayloadFrom
+- uid: AasCore.Aas3_0_RC02.EventPayload
+  commentId: T:AasCore.Aas3_0_RC02.EventPayload
+  parent: AasCore.Aas3_0_RC02
+  name: EventPayload
+  nameWithType: EventPayload
+  fullName: AasCore.Aas3_0_RC02.EventPayload
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom
+  name: IEventElementFrom
+  nameWithType: Jsonization.Deserialize.IEventElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IEventElementFrom
+- uid: AasCore.Aas3_0_RC02.IEventElement
+  commentId: T:AasCore.Aas3_0_RC02.IEventElement
+  parent: AasCore.Aas3_0_RC02
+  name: IEventElement
+  nameWithType: IEventElement
+  fullName: AasCore.Aas3_0_RC02.IEventElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom
+  name: BasicEventElementFrom
+  nameWithType: Jsonization.Deserialize.BasicEventElementFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.BasicEventElementFrom
+- uid: AasCore.Aas3_0_RC02.BasicEventElement
+  commentId: T:AasCore.Aas3_0_RC02.BasicEventElement
+  parent: AasCore.Aas3_0_RC02
+  name: BasicEventElement
+  nameWithType: BasicEventElement
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom
+  name: OperationFrom
+  nameWithType: Jsonization.Deserialize.OperationFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationFrom
+- uid: AasCore.Aas3_0_RC02.Operation
+  commentId: T:AasCore.Aas3_0_RC02.Operation
+  parent: AasCore.Aas3_0_RC02
+  name: Operation
+  nameWithType: Operation
+  fullName: AasCore.Aas3_0_RC02.Operation
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom
+  name: OperationVariableFrom
+  nameWithType: Jsonization.Deserialize.OperationVariableFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.OperationVariableFrom
+- uid: AasCore.Aas3_0_RC02.OperationVariable
+  commentId: T:AasCore.Aas3_0_RC02.OperationVariable
+  parent: AasCore.Aas3_0_RC02
+  name: OperationVariable
+  nameWithType: OperationVariable
+  fullName: AasCore.Aas3_0_RC02.OperationVariable
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom
+  name: CapabilityFrom
+  nameWithType: Jsonization.Deserialize.CapabilityFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.CapabilityFrom
+- uid: AasCore.Aas3_0_RC02.Capability
+  commentId: T:AasCore.Aas3_0_RC02.Capability
+  parent: AasCore.Aas3_0_RC02
+  name: Capability
+  nameWithType: Capability
+  fullName: AasCore.Aas3_0_RC02.Capability
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom
+  name: ConceptDescriptionFrom
+  nameWithType: Jsonization.Deserialize.ConceptDescriptionFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ConceptDescriptionFrom
+- uid: AasCore.Aas3_0_RC02.ConceptDescription
+  commentId: T:AasCore.Aas3_0_RC02.ConceptDescription
+  parent: AasCore.Aas3_0_RC02
+  name: ConceptDescription
+  nameWithType: ConceptDescription
+  fullName: AasCore.Aas3_0_RC02.ConceptDescription
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom
+  name: ReferenceTypesFrom
+  nameWithType: Jsonization.Deserialize.ReferenceTypesFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceTypesFrom
+- uid: AasCore.Aas3_0_RC02.ReferenceTypes
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceTypes
+  parent: AasCore.Aas3_0_RC02
+  name: ReferenceTypes
+  nameWithType: ReferenceTypes
+  fullName: AasCore.Aas3_0_RC02.ReferenceTypes
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom
+  name: ReferenceFrom
+  nameWithType: Jsonization.Deserialize.ReferenceFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ReferenceFrom
+- uid: AasCore.Aas3_0_RC02.Reference
+  commentId: T:AasCore.Aas3_0_RC02.Reference
+  parent: AasCore.Aas3_0_RC02
+  name: Reference
+  nameWithType: Reference
+  fullName: AasCore.Aas3_0_RC02.Reference
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom
+  name: KeyFrom
+  nameWithType: Jsonization.Deserialize.KeyFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyFrom
+- uid: AasCore.Aas3_0_RC02.Key
+  commentId: T:AasCore.Aas3_0_RC02.Key
+  parent: AasCore.Aas3_0_RC02
+  name: Key
+  nameWithType: Key
+  fullName: AasCore.Aas3_0_RC02.Key
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom
+  name: KeyTypesFrom
+  nameWithType: Jsonization.Deserialize.KeyTypesFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.KeyTypesFrom
+- uid: AasCore.Aas3_0_RC02.KeyTypes
+  commentId: T:AasCore.Aas3_0_RC02.KeyTypes
+  parent: AasCore.Aas3_0_RC02
+  name: KeyTypes
+  nameWithType: KeyTypes
+  fullName: AasCore.Aas3_0_RC02.KeyTypes
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom
+  name: DataTypeDefXsdFrom
+  nameWithType: Jsonization.Deserialize.DataTypeDefXsdFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeDefXsdFrom
+- uid: AasCore.Aas3_0_RC02.DataTypeDefXsd
+  commentId: T:AasCore.Aas3_0_RC02.DataTypeDefXsd
+  parent: AasCore.Aas3_0_RC02
+  name: DataTypeDefXsd
+  nameWithType: DataTypeDefXsd
+  fullName: AasCore.Aas3_0_RC02.DataTypeDefXsd
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom
+  name: LangStringFrom
+  nameWithType: Jsonization.Deserialize.LangStringFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LangStringFrom
+- uid: AasCore.Aas3_0_RC02.LangString
+  commentId: T:AasCore.Aas3_0_RC02.LangString
+  parent: AasCore.Aas3_0_RC02
+  name: LangString
+  nameWithType: LangString
+  fullName: AasCore.Aas3_0_RC02.LangString
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom
+  name: EnvironmentFrom
+  nameWithType: Jsonization.Deserialize.EnvironmentFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EnvironmentFrom
+- uid: AasCore.Aas3_0_RC02.Environment
+  commentId: T:AasCore.Aas3_0_RC02.Environment
+  parent: AasCore.Aas3_0_RC02
+  name: Environment
+  nameWithType: Environment
+  fullName: AasCore.Aas3_0_RC02.Environment
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom
+  name: IDataSpecificationContentFrom
+  nameWithType: Jsonization.Deserialize.IDataSpecificationContentFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.IDataSpecificationContentFrom
+- uid: AasCore.Aas3_0_RC02.IDataSpecificationContent
+  commentId: T:AasCore.Aas3_0_RC02.IDataSpecificationContent
+  parent: AasCore.Aas3_0_RC02
+  name: IDataSpecificationContent
+  nameWithType: IDataSpecificationContent
+  fullName: AasCore.Aas3_0_RC02.IDataSpecificationContent
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom
+  name: EmbeddedDataSpecificationFrom
+  nameWithType: Jsonization.Deserialize.EmbeddedDataSpecificationFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.EmbeddedDataSpecificationFrom
+- uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: EmbeddedDataSpecification
+  nameWithType: EmbeddedDataSpecification
+  fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From
+  name: DataTypeIec61360From
+  nameWithType: Jsonization.Deserialize.DataTypeIec61360From
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataTypeIec61360From
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataTypeIec61360
+  parent: AasCore.Aas3_0_RC02
+  name: DataTypeIec61360
+  nameWithType: DataTypeIec61360
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom
+  name: LevelTypeFrom
+  nameWithType: Jsonization.Deserialize.LevelTypeFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.LevelTypeFrom
+- uid: AasCore.Aas3_0_RC02.LevelType
+  commentId: T:AasCore.Aas3_0_RC02.LevelType
+  parent: AasCore.Aas3_0_RC02
+  name: LevelType
+  nameWithType: LevelType
+  fullName: AasCore.Aas3_0_RC02.LevelType
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom
+  name: ValueReferencePairFrom
+  nameWithType: Jsonization.Deserialize.ValueReferencePairFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueReferencePairFrom
+- uid: AasCore.Aas3_0_RC02.ValueReferencePair
+  commentId: T:AasCore.Aas3_0_RC02.ValueReferencePair
+  parent: AasCore.Aas3_0_RC02
+  name: ValueReferencePair
+  nameWithType: ValueReferencePair
+  fullName: AasCore.Aas3_0_RC02.ValueReferencePair
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom
+  name: ValueListFrom
+  nameWithType: Jsonization.Deserialize.ValueListFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.ValueListFrom
+- uid: AasCore.Aas3_0_RC02.ValueList
+  commentId: T:AasCore.Aas3_0_RC02.ValueList
+  parent: AasCore.Aas3_0_RC02
+  name: ValueList
+  nameWithType: ValueList
+  fullName: AasCore.Aas3_0_RC02.ValueList
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From
+  name: DataSpecificationIec61360From
+  nameWithType: Jsonization.Deserialize.DataSpecificationIec61360From
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationIec61360From
+- uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataSpecificationIec61360
+  parent: AasCore.Aas3_0_RC02
+  name: DataSpecificationIec61360
+  nameWithType: DataSpecificationIec61360
+  fullName: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+- uid: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom
+  name: DataSpecificationPhysicalUnitFrom
+  nameWithType: Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom
+  fullName: AasCore.Aas3_0_RC02.Jsonization.Deserialize.DataSpecificationPhysicalUnitFrom
+- uid: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+  commentId: T:AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+  parent: AasCore.Aas3_0_RC02
+  name: DataSpecificationPhysicalUnit
+  nameWithType: DataSpecificationPhysicalUnit
+  fullName: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit

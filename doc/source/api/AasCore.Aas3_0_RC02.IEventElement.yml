@@ -1,0 +1,706 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.IEventElement
+  commentId: T:AasCore.Aas3_0_RC02.IEventElement
+  id: IEventElement
+  parent: AasCore.Aas3_0_RC02
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IEventElement
+  nameWithType: IEventElement
+  fullName: AasCore.Aas3_0_RC02.IEventElement
+  type: Interface
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IEventElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8359
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAn event element.\n"
+  example: []
+  syntax:
+    content: 'public interface IEventElement : ISubmodelElement, IReferable, IHasExtensions, IHasKind, IHasSemantics, IQualifiable, IHasDataSpecification, IClass'
+    content.vb: >-
+      Public Interface IEventElement
+
+          Inherits ISubmodelElement
+  inheritedMembers:
+  - AasCore.Aas3_0_RC02.IReferable.Category
+  - AasCore.Aas3_0_RC02.IReferable.IdShort
+  - AasCore.Aas3_0_RC02.IReferable.DisplayName
+  - AasCore.Aas3_0_RC02.IReferable.Description
+  - AasCore.Aas3_0_RC02.IReferable.Checksum
+  - AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+  - AasCore.Aas3_0_RC02.IHasKind.Kind
+  - AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  - AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  - AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+  - AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+  - AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+  - AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - AasCore.Aas3_0_RC02.IClass.Descend
+  - AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  - AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}},{TContext})
+  - AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}})
+  - AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}},{TContext})
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.IReferable.Category
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.Category
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: Category
+  nameWithType: IReferable.Category
+  fullName: AasCore.Aas3_0_RC02.IReferable.Category
+- uid: AasCore.Aas3_0_RC02.IReferable.IdShort
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.IdShort
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: IdShort
+  nameWithType: IReferable.IdShort
+  fullName: AasCore.Aas3_0_RC02.IReferable.IdShort
+- uid: AasCore.Aas3_0_RC02.IReferable.DisplayName
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.DisplayName
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: DisplayName
+  nameWithType: IReferable.DisplayName
+  fullName: AasCore.Aas3_0_RC02.IReferable.DisplayName
+- uid: AasCore.Aas3_0_RC02.IReferable.Description
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.Description
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: Description
+  nameWithType: IReferable.Description
+  fullName: AasCore.Aas3_0_RC02.IReferable.Description
+- uid: AasCore.Aas3_0_RC02.IReferable.Checksum
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.Checksum
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: Checksum
+  nameWithType: IReferable.Checksum
+  fullName: AasCore.Aas3_0_RC02.IReferable.Checksum
+- uid: AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+  commentId: P:AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+  parent: AasCore.Aas3_0_RC02.IHasExtensions
+  name: Extensions
+  nameWithType: IHasExtensions.Extensions
+  fullName: AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+- uid: AasCore.Aas3_0_RC02.IHasKind.Kind
+  commentId: P:AasCore.Aas3_0_RC02.IHasKind.Kind
+  parent: AasCore.Aas3_0_RC02.IHasKind
+  name: Kind
+  nameWithType: IHasKind.Kind
+  fullName: AasCore.Aas3_0_RC02.IHasKind.Kind
+- uid: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  commentId: M:AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  parent: AasCore.Aas3_0_RC02.IHasKind
+  name: KindOrDefault()
+  nameWithType: IHasKind.KindOrDefault()
+  fullName: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+    name: KindOrDefault
+    nameWithType: IHasKind.KindOrDefault
+    fullName: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+    name: KindOrDefault
+    nameWithType: IHasKind.KindOrDefault
+    fullName: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  commentId: P:AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  parent: AasCore.Aas3_0_RC02.IHasSemantics
+  name: SemanticId
+  nameWithType: IHasSemantics.SemanticId
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+- uid: AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+  commentId: P:AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+  parent: AasCore.Aas3_0_RC02.IHasSemantics
+  name: SupplementalSemanticIds
+  nameWithType: IHasSemantics.SupplementalSemanticIds
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+- uid: AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+  commentId: P:AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+  parent: AasCore.Aas3_0_RC02.IQualifiable
+  name: Qualifiers
+  nameWithType: IQualifiable.Qualifiers
+  fullName: AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+- uid: AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+  commentId: P:AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+  parent: AasCore.Aas3_0_RC02.IHasDataSpecification
+  name: EmbeddedDataSpecifications
+  nameWithType: IHasDataSpecification.EmbeddedDataSpecifications
+  fullName: AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+- uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  commentId: M:AasCore.Aas3_0_RC02.IClass.DescendOnce
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: DescendOnce()
+  nameWithType: IClass.DescendOnce()
+  fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+    name: DescendOnce
+    nameWithType: IClass.DescendOnce
+    fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+    name: DescendOnce
+    nameWithType: IClass.DescendOnce
+    fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Descend
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Descend
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: Descend()
+  nameWithType: IClass.Descend()
+  fullName: AasCore.Aas3_0_RC02.IClass.Descend()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Descend
+    name: Descend
+    nameWithType: IClass.Descend
+    fullName: AasCore.Aas3_0_RC02.IClass.Descend
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Descend
+    name: Descend
+    nameWithType: IClass.Descend
+    fullName: AasCore.Aas3_0_RC02.IClass.Descend
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: Accept(Visitation.IVisitor)
+  nameWithType: IClass.Accept(Visitation.IVisitor)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+    name: Accept
+    nameWithType: IClass.Accept
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    name: Visitation.IVisitor
+    nameWithType: Visitation.IVisitor
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+    name: Accept
+    nameWithType: IClass.Accept
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    name: Visitation.IVisitor
+    nameWithType: Visitation.IVisitor
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}},{TContext})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: IClass.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType.vb: IClass.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept<TContext>
+    nameWithType: IClass.Accept<TContext>
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept(Of TContext)
+    nameWithType: IClass.Accept(Of TContext)
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: IClass.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  nameWithType.vb: IClass.Transform(Of T)(Visitation.ITransformer(Of T))
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform<T>
+    nameWithType: IClass.Transform<T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform(Of T)
+    nameWithType: IClass.Transform(Of T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}},{TContext})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: IClass.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType.vb: IClass.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform<TContext, T>
+    nameWithType: IClass.Transform<TContext, T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform(Of TContext, T)
+    nameWithType: IClass.Transform(Of TContext, T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IReferable
+  commentId: T:AasCore.Aas3_0_RC02.IReferable
+  parent: AasCore.Aas3_0_RC02
+  name: IReferable
+  nameWithType: IReferable
+  fullName: AasCore.Aas3_0_RC02.IReferable
+- uid: AasCore.Aas3_0_RC02.IHasExtensions
+  commentId: T:AasCore.Aas3_0_RC02.IHasExtensions
+  parent: AasCore.Aas3_0_RC02
+  name: IHasExtensions
+  nameWithType: IHasExtensions
+  fullName: AasCore.Aas3_0_RC02.IHasExtensions
+- uid: AasCore.Aas3_0_RC02.IHasKind
+  commentId: T:AasCore.Aas3_0_RC02.IHasKind
+  parent: AasCore.Aas3_0_RC02
+  name: IHasKind
+  nameWithType: IHasKind
+  fullName: AasCore.Aas3_0_RC02.IHasKind
+- uid: AasCore.Aas3_0_RC02.IHasSemantics
+  commentId: T:AasCore.Aas3_0_RC02.IHasSemantics
+  parent: AasCore.Aas3_0_RC02
+  name: IHasSemantics
+  nameWithType: IHasSemantics
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics
+- uid: AasCore.Aas3_0_RC02.IQualifiable
+  commentId: T:AasCore.Aas3_0_RC02.IQualifiable
+  parent: AasCore.Aas3_0_RC02
+  name: IQualifiable
+  nameWithType: IQualifiable
+  fullName: AasCore.Aas3_0_RC02.IQualifiable
+- uid: AasCore.Aas3_0_RC02.IHasDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.IHasDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: IHasDataSpecification
+  nameWithType: IHasDataSpecification
+  fullName: AasCore.Aas3_0_RC02.IHasDataSpecification
+- uid: AasCore.Aas3_0_RC02.IClass
+  commentId: T:AasCore.Aas3_0_RC02.IClass
+  parent: AasCore.Aas3_0_RC02
+  name: IClass
+  nameWithType: IClass
+  fullName: AasCore.Aas3_0_RC02.IClass
+- uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: IClass.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType.vb: IClass.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept<TContext>
+    nameWithType: IClass.Accept<TContext>
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept(Of TContext)
+    nameWithType: IClass.Accept(Of TContext)
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: IClass.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  nameWithType.vb: IClass.Transform(Of T)(Visitation.ITransformer(Of T))
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform<T>
+    nameWithType: IClass.Transform<T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform(Of T)
+    nameWithType: IClass.Transform(Of T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: IClass.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType.vb: IClass.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform<TContext, T>
+    nameWithType: IClass.Transform<TContext, T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform(Of TContext, T)
+    nameWithType: IClass.Transform(Of TContext, T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )

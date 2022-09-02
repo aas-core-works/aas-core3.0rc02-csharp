@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.LevelType
+  commentId: T:AasCore.Aas3_0_RC02.LevelType
+  id: LevelType
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.LevelType.Max
+  - AasCore.Aas3_0_RC02.LevelType.Min
+  - AasCore.Aas3_0_RC02.LevelType.Nom
+  - AasCore.Aas3_0_RC02.LevelType.Typ
+  langs:
+  - csharp
+  - vb
+  name: LevelType
+  nameWithType: LevelType
+  fullName: AasCore.Aas3_0_RC02.LevelType
+  type: Enum
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: LevelType
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11585
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: 'public enum LevelType : int'
+    content.vb: Public Enum LevelType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AasCore.Aas3_0_RC02.LevelType.Min
+  commentId: F:AasCore.Aas3_0_RC02.LevelType.Min
+  id: Min
+  parent: AasCore.Aas3_0_RC02.LevelType
+  langs:
+  - csharp
+  - vb
+  name: Min
+  nameWithType: LevelType.Min
+  fullName: AasCore.Aas3_0_RC02.LevelType.Min
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Min
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11587
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Min = 0
+    return:
+      type: AasCore.Aas3_0_RC02.LevelType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.LevelType.Max
+  commentId: F:AasCore.Aas3_0_RC02.LevelType.Max
+  id: Max
+  parent: AasCore.Aas3_0_RC02.LevelType
+  langs:
+  - csharp
+  - vb
+  name: Max
+  nameWithType: LevelType.Max
+  fullName: AasCore.Aas3_0_RC02.LevelType.Max
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Max
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11590
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Max = 1
+    return:
+      type: AasCore.Aas3_0_RC02.LevelType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.LevelType.Nom
+  commentId: F:AasCore.Aas3_0_RC02.LevelType.Nom
+  id: Nom
+  parent: AasCore.Aas3_0_RC02.LevelType
+  langs:
+  - csharp
+  - vb
+  name: Nom
+  nameWithType: LevelType.Nom
+  fullName: AasCore.Aas3_0_RC02.LevelType.Nom
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Nom
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11593
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Nom = 2
+    return:
+      type: AasCore.Aas3_0_RC02.LevelType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.LevelType.Typ
+  commentId: F:AasCore.Aas3_0_RC02.LevelType.Typ
+  id: Typ
+  parent: AasCore.Aas3_0_RC02.LevelType
+  langs:
+  - csharp
+  - vb
+  name: Typ
+  nameWithType: LevelType.Typ
+  fullName: AasCore.Aas3_0_RC02.LevelType.Typ
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Typ
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11596
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Typ = 3
+    return:
+      type: AasCore.Aas3_0_RC02.LevelType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.LevelType
+  commentId: T:AasCore.Aas3_0_RC02.LevelType
+  parent: AasCore.Aas3_0_RC02
+  name: LevelType
+  nameWithType: LevelType
+  fullName: AasCore.Aas3_0_RC02.LevelType

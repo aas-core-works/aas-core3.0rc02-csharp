@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.ModelingKind
+  commentId: T:AasCore.Aas3_0_RC02.ModelingKind
+  id: ModelingKind
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.ModelingKind.Instance
+  - AasCore.Aas3_0_RC02.ModelingKind.Template
+  langs:
+  - csharp
+  - vb
+  name: ModelingKind
+  nameWithType: ModelingKind
+  fullName: AasCore.Aas3_0_RC02.ModelingKind
+  type: Enum
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ModelingKind
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 431
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nEnumeration for denoting whether an element is a template or an instance.\n"
+  example: []
+  syntax:
+    content: 'public enum ModelingKind : int'
+    content.vb: Public Enum ModelingKind As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AasCore.Aas3_0_RC02.ModelingKind.Template
+  commentId: F:AasCore.Aas3_0_RC02.ModelingKind.Template
+  id: Template
+  parent: AasCore.Aas3_0_RC02.ModelingKind
+  langs:
+  - csharp
+  - vb
+  name: Template
+  nameWithType: ModelingKind.Template
+  fullName: AasCore.Aas3_0_RC02.ModelingKind.Template
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Template
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 440
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nSoftware element which specifies the common attributes shared by all instances of\nthe template.\n"
+  remarks: "\n[SOURCE: IEC TR 62390:2005-01, 3.1.25] modified\n"
+  example: []
+  syntax:
+    content: Template = 0
+    return:
+      type: AasCore.Aas3_0_RC02.ModelingKind
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.ModelingKind.Instance
+  commentId: F:AasCore.Aas3_0_RC02.ModelingKind.Instance
+  id: Instance
+  parent: AasCore.Aas3_0_RC02.ModelingKind
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ModelingKind.Instance
+  fullName: AasCore.Aas3_0_RC02.ModelingKind.Instance
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Instance
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 459
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nConcrete, clearly identifiable component of a certain template.\n"
+  remarks: "\n<p>\nIt becomes an individual entity of a  template,  for example a\ndevice model, by defining specific property values.\n</p>\n<p>\nIn an object oriented view,  an instance denotes an object of a\ntemplate (class).\n</p>\n<p>\n[SOURCE: IEC 62890:2016, 3.1.16 65/617/CDV]  modified\n</p>\n"
+  example: []
+  syntax:
+    content: Instance = 1
+    return:
+      type: AasCore.Aas3_0_RC02.ModelingKind
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.ModelingKind
+  commentId: T:AasCore.Aas3_0_RC02.ModelingKind
+  parent: AasCore.Aas3_0_RC02
+  name: ModelingKind
+  nameWithType: ModelingKind
+  fullName: AasCore.Aas3_0_RC02.ModelingKind

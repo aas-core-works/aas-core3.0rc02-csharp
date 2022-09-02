@@ -5,7 +5,7 @@
 			<submodelElements>
 				<range>
 					<idShort>some_id_short_10b21b1b</idShort>
-					<valueType>xs:NonNegativeInteger</valueType>
+					<valueType>xs:nonNegativeInteger</valueType>
 					<min>some free form text</min>
 					<max>some free form text</max>
 				</range>

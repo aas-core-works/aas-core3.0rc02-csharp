@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Reporting.Segment
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.Segment
+  id: Reporting.Segment
+  parent: AasCore.Aas3_0_RC02
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Reporting.Segment
+  nameWithType: Reporting.Segment
+  fullName: AasCore.Aas3_0_RC02.Reporting.Segment
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Segment
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 20
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCapture a path segment of a value in a model.\n"
+  example: []
+  syntax:
+    content: 'public abstract class Segment : object'
+    content.vb: >-
+      Public MustInherit Class Segment
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - AasCore.Aas3_0_RC02.Reporting.IndexSegment
+  - AasCore.Aas3_0_RC02.Reporting.NameSegment
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02

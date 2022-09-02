@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.ReferenceTypes
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceTypes
+  id: ReferenceTypes
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.ReferenceTypes.GlobalReference
+  - AasCore.Aas3_0_RC02.ReferenceTypes.ModelReference
+  langs:
+  - csharp
+  - vb
+  name: ReferenceTypes
+  nameWithType: ReferenceTypes
+  fullName: AasCore.Aas3_0_RC02.ReferenceTypes
+  type: Enum
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceTypes
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 10479
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nReferenceTypes\n"
+  example: []
+  syntax:
+    content: 'public enum ReferenceTypes : int'
+    content.vb: Public Enum ReferenceTypes As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AasCore.Aas3_0_RC02.ReferenceTypes.GlobalReference
+  commentId: F:AasCore.Aas3_0_RC02.ReferenceTypes.GlobalReference
+  id: GlobalReference
+  parent: AasCore.Aas3_0_RC02.ReferenceTypes
+  langs:
+  - csharp
+  - vb
+  name: GlobalReference
+  nameWithType: ReferenceTypes.GlobalReference
+  fullName: AasCore.Aas3_0_RC02.ReferenceTypes.GlobalReference
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: GlobalReference
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 10484
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nGlobalReference.\n"
+  example: []
+  syntax:
+    content: GlobalReference = 0
+    return:
+      type: AasCore.Aas3_0_RC02.ReferenceTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.ReferenceTypes.ModelReference
+  commentId: F:AasCore.Aas3_0_RC02.ReferenceTypes.ModelReference
+  id: ModelReference
+  parent: AasCore.Aas3_0_RC02.ReferenceTypes
+  langs:
+  - csharp
+  - vb
+  name: ModelReference
+  nameWithType: ReferenceTypes.ModelReference
+  fullName: AasCore.Aas3_0_RC02.ReferenceTypes.ModelReference
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ModelReference
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 10490
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nModelReference\n"
+  example: []
+  syntax:
+    content: ModelReference = 1
+    return:
+      type: AasCore.Aas3_0_RC02.ReferenceTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.ReferenceTypes
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceTypes
+  parent: AasCore.Aas3_0_RC02
+  name: ReferenceTypes
+  nameWithType: ReferenceTypes
+  fullName: AasCore.Aas3_0_RC02.ReferenceTypes

@@ -1,0 +1,1465 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  id: Visitation.IVisitorWithContext`1
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AdministrativeInformation,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AssetAdministrationShell,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AssetInformation,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.BasicEventElement,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Blob,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Capability,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ConceptDescription,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.DataSpecificationIec61360,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.EmbeddedDataSpecification,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Entity,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Environment,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.EventPayload,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Extension,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.File,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.IClass,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Key,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.LangString,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.MultiLanguageProperty,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Operation,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.OperationVariable,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Property,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Qualifier,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Range,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Reference,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ReferenceElement,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.RelationshipElement,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Resource,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SpecificAssetId,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Submodel,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SubmodelElementCollection,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SubmodelElementList,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ValueList,`0)
+  - AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ValueReferencePair,`0)
+  langs:
+  - csharp
+  - vb
+  name: Visitation.IVisitorWithContext<TContext>
+  nameWithType: Visitation.IVisitorWithContext<TContext>
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>
+  type: Interface
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IVisitorWithContext
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 422
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDefine the interface for a visitor which visits the instances of the model.\n"
+  example: []
+  syntax:
+    content: public interface IVisitorWithContext<in TContext>
+    typeParameters:
+    - id: TContext
+      description: Context type
+    content.vb: Public Interface IVisitorWithContext(Of In TContext)
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext)
+  name.vb: Visitation.IVisitorWithContext(Of TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.IClass,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.IClass,`0)
+  id: Visit(AasCore.Aas3_0_RC02.IClass,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(IClass, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(IClass, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.IClass, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 424
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(IClass that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.IClass
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As IClass, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(IClass, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.IClass, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Extension,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Extension,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Extension,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Extension, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Extension, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Extension, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 425
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Extension that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Extension
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Extension, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Extension, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Extension, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AdministrativeInformation,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AdministrativeInformation,`0)
+  id: Visit(AasCore.Aas3_0_RC02.AdministrativeInformation,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(AdministrativeInformation, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(AdministrativeInformation, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.AdministrativeInformation, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 426
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(AdministrativeInformation that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.AdministrativeInformation
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As AdministrativeInformation, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(AdministrativeInformation, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.AdministrativeInformation, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Qualifier,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Qualifier,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Qualifier,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Qualifier, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Qualifier, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Qualifier, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 427
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Qualifier that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Qualifier
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Qualifier, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Qualifier, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Qualifier, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AssetAdministrationShell,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AssetAdministrationShell,`0)
+  id: Visit(AasCore.Aas3_0_RC02.AssetAdministrationShell,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(AssetAdministrationShell, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(AssetAdministrationShell, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.AssetAdministrationShell, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 428
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(AssetAdministrationShell that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As AssetAdministrationShell, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(AssetAdministrationShell, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.AssetAdministrationShell, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AssetInformation,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AssetInformation,`0)
+  id: Visit(AasCore.Aas3_0_RC02.AssetInformation,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(AssetInformation, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(AssetInformation, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.AssetInformation, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 429
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(AssetInformation that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.AssetInformation
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As AssetInformation, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(AssetInformation, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.AssetInformation, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Resource,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Resource,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Resource,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Resource, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Resource, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Resource, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 430
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Resource that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Resource
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Resource, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Resource, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Resource, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SpecificAssetId,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SpecificAssetId,`0)
+  id: Visit(AasCore.Aas3_0_RC02.SpecificAssetId,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(SpecificAssetId, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(SpecificAssetId, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.SpecificAssetId, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 431
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(SpecificAssetId that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.SpecificAssetId
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As SpecificAssetId, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(SpecificAssetId, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.SpecificAssetId, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Submodel,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Submodel,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Submodel,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Submodel, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Submodel, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Submodel, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 432
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Submodel that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Submodel
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Submodel, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Submodel, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Submodel, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.RelationshipElement,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.RelationshipElement,`0)
+  id: Visit(AasCore.Aas3_0_RC02.RelationshipElement,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(RelationshipElement, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(RelationshipElement, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.RelationshipElement, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 433
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(RelationshipElement that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.RelationshipElement
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As RelationshipElement, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(RelationshipElement, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.RelationshipElement, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SubmodelElementList,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SubmodelElementList,`0)
+  id: Visit(AasCore.Aas3_0_RC02.SubmodelElementList,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(SubmodelElementList, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(SubmodelElementList, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.SubmodelElementList, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 434
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(SubmodelElementList that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.SubmodelElementList
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As SubmodelElementList, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(SubmodelElementList, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.SubmodelElementList, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SubmodelElementCollection,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.SubmodelElementCollection,`0)
+  id: Visit(AasCore.Aas3_0_RC02.SubmodelElementCollection,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(SubmodelElementCollection, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(SubmodelElementCollection, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.SubmodelElementCollection, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 435
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(SubmodelElementCollection that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.SubmodelElementCollection
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As SubmodelElementCollection, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(SubmodelElementCollection, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.SubmodelElementCollection, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Property,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Property,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Property,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Property, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Property, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Property, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 436
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Property that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Property
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As  Property, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Property, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Property, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.MultiLanguageProperty,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.MultiLanguageProperty,`0)
+  id: Visit(AasCore.Aas3_0_RC02.MultiLanguageProperty,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(MultiLanguageProperty, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(MultiLanguageProperty, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.MultiLanguageProperty, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 437
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(MultiLanguageProperty that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.MultiLanguageProperty
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As MultiLanguageProperty, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(MultiLanguageProperty, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.MultiLanguageProperty, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Range,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Range,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Range,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Range, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Range, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Range, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 438
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Range that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Range
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Range, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Range, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Range, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ReferenceElement,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ReferenceElement,`0)
+  id: Visit(AasCore.Aas3_0_RC02.ReferenceElement,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(ReferenceElement, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(ReferenceElement, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.ReferenceElement, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 439
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(ReferenceElement that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.ReferenceElement
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As ReferenceElement, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(ReferenceElement, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.ReferenceElement, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Blob,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Blob,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Blob,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Blob, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Blob, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Blob, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 440
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Blob that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Blob
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Blob, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Blob, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Blob, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.File,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.File,`0)
+  id: Visit(AasCore.Aas3_0_RC02.File,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(File, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(File, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.File, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 441
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(File that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.File
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As File, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(File, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.File, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement,`0)
+  id: Visit(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(AnnotatedRelationshipElement, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(AnnotatedRelationshipElement, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 442
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(AnnotatedRelationshipElement that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As AnnotatedRelationshipElement, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(AnnotatedRelationshipElement, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Entity,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Entity,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Entity,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Entity, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Entity, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Entity, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 443
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Entity that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Entity
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Entity, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Entity, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Entity, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.EventPayload,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.EventPayload,`0)
+  id: Visit(AasCore.Aas3_0_RC02.EventPayload,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(EventPayload, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(EventPayload, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.EventPayload, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 444
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(EventPayload that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.EventPayload
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As EventPayload, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(EventPayload, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.EventPayload, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.BasicEventElement,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.BasicEventElement,`0)
+  id: Visit(AasCore.Aas3_0_RC02.BasicEventElement,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(BasicEventElement, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(BasicEventElement, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.BasicEventElement, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 445
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(BasicEventElement that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.BasicEventElement
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As BasicEventElement, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(BasicEventElement, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.BasicEventElement, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Operation,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Operation,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Operation,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Operation, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Operation, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Operation, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 446
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Operation that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Operation
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Operation, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Operation, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Operation, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.OperationVariable,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.OperationVariable,`0)
+  id: Visit(AasCore.Aas3_0_RC02.OperationVariable,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(OperationVariable, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(OperationVariable, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.OperationVariable, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 447
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(OperationVariable that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.OperationVariable
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As OperationVariable, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(OperationVariable, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.OperationVariable, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Capability,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Capability,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Capability,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Capability, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Capability, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Capability, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 448
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Capability that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Capability
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Capability, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Capability, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Capability, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ConceptDescription,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ConceptDescription,`0)
+  id: Visit(AasCore.Aas3_0_RC02.ConceptDescription,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(ConceptDescription, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(ConceptDescription, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.ConceptDescription, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 449
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(ConceptDescription that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.ConceptDescription
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As ConceptDescription, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(ConceptDescription, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.ConceptDescription, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Reference,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Reference,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Reference,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Reference, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Reference, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Reference, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 450
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Reference that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Reference
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Reference, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Reference, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Reference, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Key,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Key,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Key,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Key, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Key, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Key, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 451
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Key that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Key
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Key, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Key, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Key, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.LangString,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.LangString,`0)
+  id: Visit(AasCore.Aas3_0_RC02.LangString,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(LangString, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(LangString, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.LangString, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 452
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(LangString that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.LangString
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As LangString, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(LangString, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.LangString, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Environment,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.Environment,`0)
+  id: Visit(AasCore.Aas3_0_RC02.Environment,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(Environment, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(Environment, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.Environment, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 453
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(Environment that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Environment
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As Environment, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(Environment, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.Environment, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.EmbeddedDataSpecification,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.EmbeddedDataSpecification,`0)
+  id: Visit(AasCore.Aas3_0_RC02.EmbeddedDataSpecification,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(EmbeddedDataSpecification, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(EmbeddedDataSpecification, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.EmbeddedDataSpecification, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 454
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(EmbeddedDataSpecification that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As EmbeddedDataSpecification, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(EmbeddedDataSpecification, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.EmbeddedDataSpecification, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ValueReferencePair,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ValueReferencePair,`0)
+  id: Visit(AasCore.Aas3_0_RC02.ValueReferencePair,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(ValueReferencePair, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(ValueReferencePair, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.ValueReferencePair, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 455
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(ValueReferencePair that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.ValueReferencePair
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As ValueReferencePair, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(ValueReferencePair, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.ValueReferencePair, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ValueList,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.ValueList,`0)
+  id: Visit(AasCore.Aas3_0_RC02.ValueList,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(ValueList, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(ValueList, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.ValueList, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 456
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(ValueList that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.ValueList
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As ValueList, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(ValueList, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.ValueList, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.DataSpecificationIec61360,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.DataSpecificationIec61360,`0)
+  id: Visit(AasCore.Aas3_0_RC02.DataSpecificationIec61360,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(DataSpecificationIec61360, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(DataSpecificationIec61360, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.DataSpecificationIec61360, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 457
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(DataSpecificationIec61360 that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As DataSpecificationIec61360, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(DataSpecificationIec61360, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.DataSpecificationIec61360, TContext)
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit,`0)
+  commentId: M:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit,`0)
+  id: Visit(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit,`0)
+  parent: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  langs:
+  - csharp
+  - vb
+  name: Visit(DataSpecificationPhysicalUnit, TContext)
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit(DataSpecificationPhysicalUnit, TContext)
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/visitation.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Visit
+    path: ../../src/AasCore.Aas3_0_RC02/visitation.cs
+    startLine: 458
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: void Visit(DataSpecificationPhysicalUnit that, TContext context)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+    - id: context
+      type: '{TContext}'
+    content.vb: Sub Visit(that As DataSpecificationPhysicalUnit, context As TContext)
+  overload: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit(DataSpecificationPhysicalUnit, TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit, TContext)
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit*
+  commentId: Overload:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1.Visit
+  name: Visit
+  nameWithType: Visitation.IVisitorWithContext<TContext>.Visit
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>.Visit
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext).Visit
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext).Visit
+- uid: AasCore.Aas3_0_RC02.IClass
+  commentId: T:AasCore.Aas3_0_RC02.IClass
+  parent: AasCore.Aas3_0_RC02
+  name: IClass
+  nameWithType: IClass
+  fullName: AasCore.Aas3_0_RC02.IClass
+- uid: '{TContext}'
+  commentId: '!:TContext'
+  definition: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: AasCore.Aas3_0_RC02.Extension
+  commentId: T:AasCore.Aas3_0_RC02.Extension
+  parent: AasCore.Aas3_0_RC02
+  name: Extension
+  nameWithType: Extension
+  fullName: AasCore.Aas3_0_RC02.Extension
+- uid: AasCore.Aas3_0_RC02.AdministrativeInformation
+  commentId: T:AasCore.Aas3_0_RC02.AdministrativeInformation
+  parent: AasCore.Aas3_0_RC02
+  name: AdministrativeInformation
+  nameWithType: AdministrativeInformation
+  fullName: AasCore.Aas3_0_RC02.AdministrativeInformation
+- uid: AasCore.Aas3_0_RC02.Qualifier
+  commentId: T:AasCore.Aas3_0_RC02.Qualifier
+  parent: AasCore.Aas3_0_RC02
+  name: Qualifier
+  nameWithType: Qualifier
+  fullName: AasCore.Aas3_0_RC02.Qualifier
+- uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  commentId: T:AasCore.Aas3_0_RC02.AssetAdministrationShell
+  parent: AasCore.Aas3_0_RC02
+  name: AssetAdministrationShell
+  nameWithType: AssetAdministrationShell
+  fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+- uid: AasCore.Aas3_0_RC02.AssetInformation
+  commentId: T:AasCore.Aas3_0_RC02.AssetInformation
+  parent: AasCore.Aas3_0_RC02
+  name: AssetInformation
+  nameWithType: AssetInformation
+  fullName: AasCore.Aas3_0_RC02.AssetInformation
+- uid: AasCore.Aas3_0_RC02.Resource
+  commentId: T:AasCore.Aas3_0_RC02.Resource
+  parent: AasCore.Aas3_0_RC02
+  name: Resource
+  nameWithType: Resource
+  fullName: AasCore.Aas3_0_RC02.Resource
+- uid: AasCore.Aas3_0_RC02.SpecificAssetId
+  commentId: T:AasCore.Aas3_0_RC02.SpecificAssetId
+  parent: AasCore.Aas3_0_RC02
+  name: SpecificAssetId
+  nameWithType: SpecificAssetId
+  fullName: AasCore.Aas3_0_RC02.SpecificAssetId
+- uid: AasCore.Aas3_0_RC02.Submodel
+  commentId: T:AasCore.Aas3_0_RC02.Submodel
+  parent: AasCore.Aas3_0_RC02
+  name: Submodel
+  nameWithType: Submodel
+  fullName: AasCore.Aas3_0_RC02.Submodel
+- uid: AasCore.Aas3_0_RC02.RelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.RelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: RelationshipElement
+  nameWithType: RelationshipElement
+  fullName: AasCore.Aas3_0_RC02.RelationshipElement
+- uid: AasCore.Aas3_0_RC02.SubmodelElementList
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementList
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementList
+  nameWithType: SubmodelElementList
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementList
+- uid: AasCore.Aas3_0_RC02.SubmodelElementCollection
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementCollection
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementCollection
+  nameWithType: SubmodelElementCollection
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementCollection
+- uid: AasCore.Aas3_0_RC02.Property
+  commentId: T:AasCore.Aas3_0_RC02.Property
+  parent: AasCore.Aas3_0_RC02
+  name: Property
+  nameWithType: Property
+  fullName: AasCore.Aas3_0_RC02.Property
+- uid: AasCore.Aas3_0_RC02.MultiLanguageProperty
+  commentId: T:AasCore.Aas3_0_RC02.MultiLanguageProperty
+  parent: AasCore.Aas3_0_RC02
+  name: MultiLanguageProperty
+  nameWithType: MultiLanguageProperty
+  fullName: AasCore.Aas3_0_RC02.MultiLanguageProperty
+- uid: AasCore.Aas3_0_RC02.Range
+  commentId: T:AasCore.Aas3_0_RC02.Range
+  parent: AasCore.Aas3_0_RC02
+  name: Range
+  nameWithType: Range
+  fullName: AasCore.Aas3_0_RC02.Range
+- uid: AasCore.Aas3_0_RC02.ReferenceElement
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceElement
+  parent: AasCore.Aas3_0_RC02
+  name: ReferenceElement
+  nameWithType: ReferenceElement
+  fullName: AasCore.Aas3_0_RC02.ReferenceElement
+- uid: AasCore.Aas3_0_RC02.Blob
+  commentId: T:AasCore.Aas3_0_RC02.Blob
+  parent: AasCore.Aas3_0_RC02
+  name: Blob
+  nameWithType: Blob
+  fullName: AasCore.Aas3_0_RC02.Blob
+- uid: AasCore.Aas3_0_RC02.File
+  commentId: T:AasCore.Aas3_0_RC02.File
+  parent: AasCore.Aas3_0_RC02
+  name: File
+  nameWithType: File
+  fullName: AasCore.Aas3_0_RC02.File
+- uid: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: AnnotatedRelationshipElement
+  nameWithType: AnnotatedRelationshipElement
+  fullName: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+- uid: AasCore.Aas3_0_RC02.Entity
+  commentId: T:AasCore.Aas3_0_RC02.Entity
+  parent: AasCore.Aas3_0_RC02
+  name: Entity
+  nameWithType: Entity
+  fullName: AasCore.Aas3_0_RC02.Entity
+- uid: AasCore.Aas3_0_RC02.EventPayload
+  commentId: T:AasCore.Aas3_0_RC02.EventPayload
+  parent: AasCore.Aas3_0_RC02
+  name: EventPayload
+  nameWithType: EventPayload
+  fullName: AasCore.Aas3_0_RC02.EventPayload
+- uid: AasCore.Aas3_0_RC02.BasicEventElement
+  commentId: T:AasCore.Aas3_0_RC02.BasicEventElement
+  parent: AasCore.Aas3_0_RC02
+  name: BasicEventElement
+  nameWithType: BasicEventElement
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement
+- uid: AasCore.Aas3_0_RC02.Operation
+  commentId: T:AasCore.Aas3_0_RC02.Operation
+  parent: AasCore.Aas3_0_RC02
+  name: Operation
+  nameWithType: Operation
+  fullName: AasCore.Aas3_0_RC02.Operation
+- uid: AasCore.Aas3_0_RC02.OperationVariable
+  commentId: T:AasCore.Aas3_0_RC02.OperationVariable
+  parent: AasCore.Aas3_0_RC02
+  name: OperationVariable
+  nameWithType: OperationVariable
+  fullName: AasCore.Aas3_0_RC02.OperationVariable
+- uid: AasCore.Aas3_0_RC02.Capability
+  commentId: T:AasCore.Aas3_0_RC02.Capability
+  parent: AasCore.Aas3_0_RC02
+  name: Capability
+  nameWithType: Capability
+  fullName: AasCore.Aas3_0_RC02.Capability
+- uid: AasCore.Aas3_0_RC02.ConceptDescription
+  commentId: T:AasCore.Aas3_0_RC02.ConceptDescription
+  parent: AasCore.Aas3_0_RC02
+  name: ConceptDescription
+  nameWithType: ConceptDescription
+  fullName: AasCore.Aas3_0_RC02.ConceptDescription
+- uid: AasCore.Aas3_0_RC02.Reference
+  commentId: T:AasCore.Aas3_0_RC02.Reference
+  parent: AasCore.Aas3_0_RC02
+  name: Reference
+  nameWithType: Reference
+  fullName: AasCore.Aas3_0_RC02.Reference
+- uid: AasCore.Aas3_0_RC02.Key
+  commentId: T:AasCore.Aas3_0_RC02.Key
+  parent: AasCore.Aas3_0_RC02
+  name: Key
+  nameWithType: Key
+  fullName: AasCore.Aas3_0_RC02.Key
+- uid: AasCore.Aas3_0_RC02.LangString
+  commentId: T:AasCore.Aas3_0_RC02.LangString
+  parent: AasCore.Aas3_0_RC02
+  name: LangString
+  nameWithType: LangString
+  fullName: AasCore.Aas3_0_RC02.LangString
+- uid: AasCore.Aas3_0_RC02.Environment
+  commentId: T:AasCore.Aas3_0_RC02.Environment
+  parent: AasCore.Aas3_0_RC02
+  name: Environment
+  nameWithType: Environment
+  fullName: AasCore.Aas3_0_RC02.Environment
+- uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: EmbeddedDataSpecification
+  nameWithType: EmbeddedDataSpecification
+  fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+- uid: AasCore.Aas3_0_RC02.ValueReferencePair
+  commentId: T:AasCore.Aas3_0_RC02.ValueReferencePair
+  parent: AasCore.Aas3_0_RC02
+  name: ValueReferencePair
+  nameWithType: ValueReferencePair
+  fullName: AasCore.Aas3_0_RC02.ValueReferencePair
+- uid: AasCore.Aas3_0_RC02.ValueList
+  commentId: T:AasCore.Aas3_0_RC02.ValueList
+  parent: AasCore.Aas3_0_RC02
+  name: ValueList
+  nameWithType: ValueList
+  fullName: AasCore.Aas3_0_RC02.ValueList
+- uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataSpecificationIec61360
+  parent: AasCore.Aas3_0_RC02
+  name: DataSpecificationIec61360
+  nameWithType: DataSpecificationIec61360
+  fullName: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+- uid: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+  commentId: T:AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+  parent: AasCore.Aas3_0_RC02
+  name: DataSpecificationPhysicalUnit
+  nameWithType: DataSpecificationPhysicalUnit
+  fullName: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit

@@ -1,0 +1,4449 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Verification
+  commentId: T:AasCore.Aas3_0_RC02.Verification
+  id: Verification
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  - AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  - AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  - AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  - AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  - AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  - AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Extension})
+  - AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique(IEnumerable{AasCore.Aas3_0_RC02.IReferable})
+  - AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish(System.String)
+  - AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.KeyTypes)
+  - AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable(AasCore.Aas3_0_RC02.Reference)
+  - AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc(System.String)
+  - AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages(IEnumerable{AasCore.Aas3_0_RC02.LangString})
+  - AasCore.Aas3_0_RC02.Verification.MatchesBcp47(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesIdShort(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesMimeType(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsByte(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDate(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDouble(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsDuration(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsFloat(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsGDay(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsGYear(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsInt(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsInteger(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsLong(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsShort(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsString(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsTime(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort(System.String)
+  - AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration(System.String)
+  - AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement},System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd})
+  - AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Qualifier})
+  - AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Reference)
+  - AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType(AasCore.Aas3_0_RC02.ISubmodelElement,AasCore.Aas3_0_RC02.AasSubmodelElements)
+  - AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement})
+  - AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType(System.String,AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  - AasCore.Aas3_0_RC02.Verification.Verify(AasCore.Aas3_0_RC02.IClass)
+  - AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements(AasCore.Aas3_0_RC02.AasSubmodelElements)
+  - AasCore.Aas3_0_RC02.Verification.VerifyAssetKind(AasCore.Aas3_0_RC02.AssetKind)
+  - AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyBlobType(System.Byte[])
+  - AasCore.Aas3_0_RC02.Verification.VerifyContentType(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd(AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  - AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360(AasCore.Aas3_0_RC02.DataTypeIec61360)
+  - AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyDirection(AasCore.Aas3_0_RC02.Direction)
+  - AasCore.Aas3_0_RC02.Verification.VerifyEntityType(AasCore.Aas3_0_RC02.EntityType)
+  - AasCore.Aas3_0_RC02.Verification.VerifyIdentifier(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyIdShort(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes(AasCore.Aas3_0_RC02.KeyTypes)
+  - AasCore.Aas3_0_RC02.Verification.VerifyLevelType(AasCore.Aas3_0_RC02.LevelType)
+  - AasCore.Aas3_0_RC02.Verification.VerifyModelingKind(AasCore.Aas3_0_RC02.ModelingKind)
+  - AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyPathType(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind(AasCore.Aas3_0_RC02.QualifierKind)
+  - AasCore.Aas3_0_RC02.Verification.VerifyQualifierType(System.String)
+  - AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes(AasCore.Aas3_0_RC02.ReferenceTypes)
+  - AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent(AasCore.Aas3_0_RC02.StateOfEvent)
+  - AasCore.Aas3_0_RC02.Verification.VerifyValueDataType(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Verification
+  nameWithType: Verification
+  fullName: AasCore.Aas3_0_RC02.Verification
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Verification
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 31
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that the instances of the meta-model satisfy the invariants.\n"
+  example:
+  - "\nHere is an example how to verify an instance of IHasSemantics:\n<pre><code>var anInstance = new Aas.IHasSemantics(\n    // ... some constructor arguments ...\n);\nforeach (var error in Verification.Verify(anInstance))\n{\n    System.Console.Writeln(\n        $&quot;{error.Cause} at: &quot; +\n        Reporting.GenerateJsonPath(error.PathSegments));\n}</code></pre>\n"
+  syntax:
+    content: 'public static class Verification : object'
+    content.vb: >-
+      Public Module Verification
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesIdShort(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesIdShort(System.String)
+  id: MatchesIdShort(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesIdShort(String)
+  nameWithType: Verification.MatchesIdShort(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesIdShort(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesIdShort
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 48
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> is a valid short ID.\n"
+  example: []
+  syntax:
+    content: public static bool MatchesIdShort(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function MatchesIdShort(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesIdShort*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)
+  id: MatchesXsDateTimeStampUtc(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDateTimeStampUtc(String)
+  nameWithType: Verification.MatchesXsDateTimeStampUtc(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDateTimeStampUtc
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 94
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:dateTimeStamp</code>.\n"
+  remarks: "\n<p>\nThe time zone must be fixed to UTC. We verify only that the <code>text</code> matches\na pre-defined pattern. We <em>do not</em> verify that the day of month is\ncorrect nor do we check for leap seconds.\n</p>\n<p>\nSee: https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp\n</p>\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDateTimeStampUtc(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDateTimeStampUtc(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc(System.String)
+  id: IsXsDateTimeStampUtc(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: IsXsDateTimeStampUtc(String)
+  nameWithType: Verification.IsXsDateTimeStampUtc(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IsXsDateTimeStampUtc
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 149
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">value</code> is a <code>xs:dateTimeStamp</code> with\nthe time zone set to UTC.\n"
+  remarks: "\nThe <code data-dev-comment-type=\"paramref\" class=\"paramref\">value</code> is assumed to be already checked with\n<xref href=\"AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static bool IsXsDateTimeStampUtc(string value)
+    parameters:
+    - id: value
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsXsDateTimeStampUtc(value As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesMimeType(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesMimeType(System.String)
+  id: MatchesMimeType(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesMimeType(String)
+  nameWithType: Verification.MatchesMimeType(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesMimeType(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesMimeType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 211
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of MIME type.\n"
+  remarks: "\nThe definition has been taken from:\nhttps://www.rfc-editor.org/rfc/rfc7231#section-3.1.1.1,\nhttps://www.rfc-editor.org/rfc/rfc7230#section-3.2.3 and\nhttps://www.rfc-editor.org/rfc/rfc7230#section-3.2.6.\n"
+  example: []
+  syntax:
+    content: public static bool MatchesMimeType(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesMimeType(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesMimeType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path(System.String)
+  id: MatchesRfc8089Path(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesRfc8089Path(String)
+  nameWithType: Verification.MatchesRfc8089Path(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesRfc8089Path
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 263
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> is a path conforming to the pattern of RFC 8089.\n"
+  remarks: "\nThe definition has been taken from:\nhttps://datatracker.ietf.org/doc/html/rfc8089\n"
+  example: []
+  syntax:
+    content: public static bool MatchesRfc8089Path(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesRfc8089Path(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesBcp47(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesBcp47(System.String)
+  id: MatchesBcp47(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesBcp47(String)
+  nameWithType: Verification.MatchesBcp47(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesBcp47(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesBcp47
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 300
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> is a valid BCP 47 language tag.\n"
+  remarks: "\nSee: https://en.wikipedia.org/wiki/IETF_language_tag\n"
+  example: []
+  syntax:
+    content: public static bool MatchesBcp47(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function MatchesBcp47(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesBcp47*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages(IEnumerable{AasCore.Aas3_0_RC02.LangString})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages(IEnumerable{AasCore.Aas3_0_RC02.LangString})
+  id: LangStringsHaveUniqueLanguages(IEnumerable{AasCore.Aas3_0_RC02.LangString})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: LangStringsHaveUniqueLanguages(IEnumerable<LangString>)
+  nameWithType: Verification.LangStringsHaveUniqueLanguages(IEnumerable<LangString>)
+  fullName: AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages(IEnumerable<AasCore.Aas3_0_RC02.LangString>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: LangStringsHaveUniqueLanguages
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 309
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">langStrings</code> are specified each for a unique\nlanguage.\n"
+  example: []
+  syntax:
+    content: public static bool LangStringsHaveUniqueLanguages(IEnumerable<LangString> langStrings)
+    parameters:
+    - id: langStrings
+      type: IEnumerable{AasCore.Aas3_0_RC02.LangString}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function LangStringsHaveUniqueLanguages(langStrings As IEnumerable(Of LangString)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages*
+  nameWithType.vb: Verification.LangStringsHaveUniqueLanguages(IEnumerable(Of LangString))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages(IEnumerable(Of AasCore.Aas3_0_RC02.LangString))
+  name.vb: LangStringsHaveUniqueLanguages(IEnumerable(Of LangString))
+- uid: AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Qualifier})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Qualifier})
+  id: QualifierTypesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Qualifier})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: QualifierTypesAreUnique(IEnumerable<Qualifier>)
+  nameWithType: Verification.QualifierTypesAreUnique(IEnumerable<Qualifier>)
+  fullName: AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique(IEnumerable<AasCore.Aas3_0_RC02.Qualifier>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: QualifierTypesAreUnique
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 329
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that there are no duplicate <xref href=\"AasCore.Aas3_0_RC02.Qualifier.Type\" data-throw-if-not-resolved=\"false\"></xref>&apos;s\nin the <code data-dev-comment-type=\"paramref\" class=\"paramref\">qualifiers</code>.\n"
+  example: []
+  syntax:
+    content: public static bool QualifierTypesAreUnique(IEnumerable<Qualifier> qualifiers)
+    parameters:
+    - id: qualifiers
+      type: IEnumerable{AasCore.Aas3_0_RC02.Qualifier}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function QualifierTypesAreUnique(qualifiers As IEnumerable(Of Qualifier)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique*
+  nameWithType.vb: Verification.QualifierTypesAreUnique(IEnumerable(Of Qualifier))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique(IEnumerable(Of AasCore.Aas3_0_RC02.Qualifier))
+  name.vb: QualifierTypesAreUnique(IEnumerable(Of Qualifier))
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri(System.String)
+  id: MatchesXsAnyUri(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsAnyUri(String)
+  nameWithType: Verification.MatchesXsAnyUri(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsAnyUri
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 405
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:anyURI</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#anyURI and\nhttps://datatracker.ietf.org/doc/html/rfc3987\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsAnyUri(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsAnyUri(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary(System.String)
+  id: MatchesXsBase64Binary(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsBase64Binary(String)
+  nameWithType: Verification.MatchesXsBase64Binary(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsBase64Binary
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 446
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:base64Binary</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#base64Binary\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsBase64Binary(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsBase64Binary(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean(System.String)
+  id: MatchesXsBoolean(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsBoolean(String)
+  nameWithType: Verification.MatchesXsBoolean(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsBoolean
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 475
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:boolean</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#boolean\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsBoolean(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsBoolean(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDate(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDate(System.String)
+  id: MatchesXsDate(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDate(String)
+  nameWithType: Verification.MatchesXsDate(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDate(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDate
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 511
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:date</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#date\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDate(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDate(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime(System.String)
+  id: MatchesXsDateTime(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDateTime(String)
+  nameWithType: Verification.MatchesXsDateTime(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDateTime
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 550
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:dateTime</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#dateTime\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDateTime(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDateTime(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp(System.String)
+  id: MatchesXsDateTimeStamp(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDateTimeStamp(String)
+  nameWithType: Verification.MatchesXsDateTimeStamp(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDateTimeStamp
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 589
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:dateTimeStamp</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDateTimeStamp(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDateTimeStamp(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal(System.String)
+  id: MatchesXsDecimal(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDecimal(String)
+  nameWithType: Verification.MatchesXsDecimal(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDecimal
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 625
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:decimal</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#decimal\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDecimal(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDecimal(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDouble(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDouble(System.String)
+  id: MatchesXsDouble(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDouble(String)
+  nameWithType: Verification.MatchesXsDouble(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDouble(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDouble
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 655
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:double</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#double\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDouble(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDouble(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDouble*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDuration(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDuration(System.String)
+  id: MatchesXsDuration(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDuration(String)
+  nameWithType: Verification.MatchesXsDuration(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDuration(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDuration
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 685
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:duration</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#duration\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDuration(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDuration(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDuration*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsFloat(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsFloat(System.String)
+  id: MatchesXsFloat(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsFloat(String)
+  nameWithType: Verification.MatchesXsFloat(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsFloat(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsFloat
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 715
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:float</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#float\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsFloat(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsFloat(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsFloat*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGDay(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsGDay(System.String)
+  id: MatchesXsGDay(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsGDay(String)
+  nameWithType: Verification.MatchesXsGDay(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGDay(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsGDay
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 745
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:gDay</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#gDay\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsGDay(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsGDay(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsGDay*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth(System.String)
+  id: MatchesXsGMonth(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsGMonth(String)
+  nameWithType: Verification.MatchesXsGMonth(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsGMonth
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 775
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:gMonth</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#gMonth\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsGMonth(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsGMonth(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay(System.String)
+  id: MatchesXsGMonthDay(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsGMonthDay(String)
+  nameWithType: Verification.MatchesXsGMonthDay(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsGMonthDay
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 805
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:gMonthDay</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#gMonthDay\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsGMonthDay(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsGMonthDay(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGYear(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsGYear(System.String)
+  id: MatchesXsGYear(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsGYear(String)
+  nameWithType: Verification.MatchesXsGYear(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGYear(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsGYear
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 835
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:gYear</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#gYear\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsGYear(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsGYear(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsGYear*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth(System.String)
+  id: MatchesXsGYearMonth(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsGYearMonth(String)
+  nameWithType: Verification.MatchesXsGYearMonth(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsGYearMonth
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 865
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:gYearMonth</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#gYearMonth\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsGYearMonth(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsGYearMonth(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary(System.String)
+  id: MatchesXsHexBinary(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsHexBinary(String)
+  nameWithType: Verification.MatchesXsHexBinary(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsHexBinary
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 895
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:hexBinary</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#hexBinary\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsHexBinary(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsHexBinary(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsTime(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsTime(System.String)
+  id: MatchesXsTime(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsTime(String)
+  nameWithType: Verification.MatchesXsTime(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsTime(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsTime
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 925
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:time</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#time\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsTime(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsTime(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsTime*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration(System.String)
+  id: MatchesXsDayTimeDuration(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsDayTimeDuration(String)
+  nameWithType: Verification.MatchesXsDayTimeDuration(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsDayTimeDuration
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 955
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:dayTimeDuration</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#dayTimeDuration\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsDayTimeDuration(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsDayTimeDuration(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration(System.String)
+  id: MatchesXsYearMonthDuration(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsYearMonthDuration(String)
+  nameWithType: Verification.MatchesXsYearMonthDuration(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsYearMonthDuration
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 985
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:yearMonthDuration</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#yearMonthDuration\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsYearMonthDuration(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsYearMonthDuration(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsInteger(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsInteger(System.String)
+  id: MatchesXsInteger(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsInteger(String)
+  nameWithType: Verification.MatchesXsInteger(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsInteger(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsInteger
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1015
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:integer</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#integer\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsInteger(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsInteger(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsInteger*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsLong(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsLong(System.String)
+  id: MatchesXsLong(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsLong(String)
+  nameWithType: Verification.MatchesXsLong(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsLong(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsLong
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1045
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:long</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#long\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsLong(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsLong(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsLong*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsInt(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsInt(System.String)
+  id: MatchesXsInt(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsInt(String)
+  nameWithType: Verification.MatchesXsInt(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsInt(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsInt
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1075
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:int</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#int\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsInt(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsInt(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsShort(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsShort(System.String)
+  id: MatchesXsShort(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsShort(String)
+  nameWithType: Verification.MatchesXsShort(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsShort(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsShort
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1105
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:short</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#short\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsShort(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsShort(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsShort*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsByte(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsByte(System.String)
+  id: MatchesXsByte(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsByte(String)
+  nameWithType: Verification.MatchesXsByte(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsByte(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsByte
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1135
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:byte</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#byte\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsByte(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsByte(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsByte*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger(System.String)
+  id: MatchesXsNonNegativeInteger(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsNonNegativeInteger(String)
+  nameWithType: Verification.MatchesXsNonNegativeInteger(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsNonNegativeInteger
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1165
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:nonNegativeInteger</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#nonNegativeInteger\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsNonNegativeInteger(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsNonNegativeInteger(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger(System.String)
+  id: MatchesXsPositiveInteger(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsPositiveInteger(String)
+  nameWithType: Verification.MatchesXsPositiveInteger(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsPositiveInteger
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1195
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:positiveInteger</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#positiveInteger\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsPositiveInteger(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsPositiveInteger(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong(System.String)
+  id: MatchesXsUnsignedLong(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsUnsignedLong(String)
+  nameWithType: Verification.MatchesXsUnsignedLong(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsUnsignedLong
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1225
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:unsignedLong</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#unsignedLong\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsUnsignedLong(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsUnsignedLong(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt(System.String)
+  id: MatchesXsUnsignedInt(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsUnsignedInt(String)
+  nameWithType: Verification.MatchesXsUnsignedInt(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsUnsignedInt
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1255
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:unsignedInt</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#unsignedInt\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsUnsignedInt(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsUnsignedInt(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort(System.String)
+  id: MatchesXsUnsignedShort(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsUnsignedShort(String)
+  nameWithType: Verification.MatchesXsUnsignedShort(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsUnsignedShort
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1285
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:unsignedShort</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#unsignedShort\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsUnsignedShort(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsUnsignedShort(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte(System.String)
+  id: MatchesXsUnsignedByte(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsUnsignedByte(String)
+  nameWithType: Verification.MatchesXsUnsignedByte(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsUnsignedByte
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1315
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:unsignedByte</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#unsignedByte\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsUnsignedByte(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsUnsignedByte(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger(System.String)
+  id: MatchesXsNonPositiveInteger(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsNonPositiveInteger(String)
+  nameWithType: Verification.MatchesXsNonPositiveInteger(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsNonPositiveInteger
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1345
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:nonPositiveInteger</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#nonPositiveInteger\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsNonPositiveInteger(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsNonPositiveInteger(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger(System.String)
+  id: MatchesXsNegativeInteger(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsNegativeInteger(String)
+  nameWithType: Verification.MatchesXsNegativeInteger(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsNegativeInteger
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1375
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:negativeInteger</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#negativeInteger\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsNegativeInteger(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsNegativeInteger(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsString(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsString(System.String)
+  id: MatchesXsString(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesXsString(String)
+  nameWithType: Verification.MatchesXsString(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsString(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesXsString
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1404
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern of an <code>xs:string</code>.\n"
+  remarks: "\nSee: https://www.w3.org/TR/xmlschema11-2/#string\n"
+  example: []
+  syntax:
+    content: public static bool MatchesXsString(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nText to be checked\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> conforms to the pattern\n"
+    content.vb: Public Shared Function MatchesXsString(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesXsString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType(System.String,AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType(System.String,AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  id: ValueConsistentWithXsdType(System.String,AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: ValueConsistentWithXsdType(String, DataTypeDefXsd)
+  nameWithType: Verification.ValueConsistentWithXsdType(String, DataTypeDefXsd)
+  fullName: AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType(System.String, AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ValueConsistentWithXsdType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1413
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <code data-dev-comment-type=\"paramref\" class=\"paramref\">value</code> is consistent with\nthe given <code data-dev-comment-type=\"paramref\" class=\"paramref\">valueType</code>.\n"
+  example: []
+  syntax:
+    content: public static bool ValueConsistentWithXsdType(string value, DataTypeDefXsd valueType)
+    parameters:
+    - id: value
+      type: System.String
+    - id: valueType
+      type: AasCore.Aas3_0_RC02.DataTypeDefXsd
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ValueConsistentWithXsdType(value As String, valueType As DataTypeDefXsd) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally(System.String)
+  id: MatchesGlobalAssetIdLiterally(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: MatchesGlobalAssetIdLiterally(String)
+  nameWithType: Verification.MatchesGlobalAssetIdLiterally(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MatchesGlobalAssetIdLiterally
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1962
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> matches <code>globalAssetId</code> case-insensitive.\n"
+  remarks: "\nThe case-insensitivity depends on the culture. For example in Turkish, uppercase\n&quot;i&quot; is &quot;İ&quot;, not &quot;I&quot;. We assume the culture to be English, and explicitly check\nfor English case-folding.\n"
+  example: []
+  syntax:
+    content: public static bool MatchesGlobalAssetIdLiterally(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: "\nwhich needs to match <code>globalAssetId</code> literally\n"
+    return:
+      type: System.Boolean
+      description: "\nTrue if the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> matches case-insensitive\n"
+    content.vb: Public Shared Function MatchesGlobalAssetIdLiterally(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.KeyTypes)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.KeyTypes)
+  id: IsModelReferenceTo(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.KeyTypes)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: IsModelReferenceTo(Reference, KeyTypes)
+  nameWithType: Verification.IsModelReferenceTo(Reference, KeyTypes)
+  fullName: AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo(AasCore.Aas3_0_RC02.Reference, AasCore.Aas3_0_RC02.KeyTypes)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IsModelReferenceTo
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1970
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the target of the model reference matches the <code data-dev-comment-type=\"paramref\" class=\"paramref\">expectedType</code>.\n"
+  example: []
+  syntax:
+    content: public static bool IsModelReferenceTo(Reference reference, KeyTypes expectedType)
+    parameters:
+    - id: reference
+      type: AasCore.Aas3_0_RC02.Reference
+    - id: expectedType
+      type: AasCore.Aas3_0_RC02.KeyTypes
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsModelReferenceTo(reference As Reference, expectedType As KeyTypes) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable(AasCore.Aas3_0_RC02.Reference)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable(AasCore.Aas3_0_RC02.Reference)
+  id: IsModelReferenceToReferable(AasCore.Aas3_0_RC02.Reference)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: IsModelReferenceToReferable(Reference)
+  nameWithType: Verification.IsModelReferenceToReferable(Reference)
+  fullName: AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable(AasCore.Aas3_0_RC02.Reference)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IsModelReferenceToReferable
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1983
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the target of the reference matches a <xref href=\"AasCore.Aas3_0_RC02.Constants.AasReferables\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static bool IsModelReferenceToReferable(Reference reference)
+    parameters:
+    - id: reference
+      type: AasCore.Aas3_0_RC02.Reference
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsModelReferenceToReferable(reference As Reference) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique(IEnumerable{AasCore.Aas3_0_RC02.IReferable})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique(IEnumerable{AasCore.Aas3_0_RC02.IReferable})
+  id: IdShortsAreUnique(IEnumerable{AasCore.Aas3_0_RC02.IReferable})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: IdShortsAreUnique(IEnumerable<IReferable>)
+  nameWithType: Verification.IdShortsAreUnique(IEnumerable<IReferable>)
+  fullName: AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique(IEnumerable<AasCore.Aas3_0_RC02.IReferable>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IdShortsAreUnique
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 1996
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that all <xref href=\"AasCore.Aas3_0_RC02.IReferable.IdShort\" data-throw-if-not-resolved=\"false\"></xref> are unique among\n<code data-dev-comment-type=\"paramref\" class=\"paramref\">referables</code>.\n"
+  example: []
+  syntax:
+    content: public static bool IdShortsAreUnique(IEnumerable<IReferable> referables)
+    parameters:
+    - id: referables
+      type: IEnumerable{AasCore.Aas3_0_RC02.IReferable}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IdShortsAreUnique(referables As IEnumerable(Of IReferable)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique*
+  nameWithType.vb: Verification.IdShortsAreUnique(IEnumerable(Of IReferable))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique(IEnumerable(Of AasCore.Aas3_0_RC02.IReferable))
+  name.vb: IdShortsAreUnique(IEnumerable(Of IReferable))
+- uid: AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Extension})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Extension})
+  id: ExtensionNamesAreUnique(IEnumerable{AasCore.Aas3_0_RC02.Extension})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: ExtensionNamesAreUnique(IEnumerable<Extension>)
+  nameWithType: Verification.ExtensionNamesAreUnique(IEnumerable<Extension>)
+  fullName: AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique(IEnumerable<AasCore.Aas3_0_RC02.Extension>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ExtensionNamesAreUnique
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2019
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that all <xref href=\"AasCore.Aas3_0_RC02.Extension.Name\" data-throw-if-not-resolved=\"false\"></xref> are unique among\n<code data-dev-comment-type=\"paramref\" class=\"paramref\">extensions</code>.\n"
+  example: []
+  syntax:
+    content: public static bool ExtensionNamesAreUnique(IEnumerable<Extension> extensions)
+    parameters:
+    - id: extensions
+      type: IEnumerable{AasCore.Aas3_0_RC02.Extension}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ExtensionNamesAreUnique(extensions As IEnumerable(Of Extension)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique*
+  nameWithType.vb: Verification.ExtensionNamesAreUnique(IEnumerable(Of Extension))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique(IEnumerable(Of AasCore.Aas3_0_RC02.Extension))
+  name.vb: ExtensionNamesAreUnique(IEnumerable(Of Extension))
+- uid: AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement})
+  id: SubmodelElementsHaveIdenticalSemanticIds(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementsHaveIdenticalSemanticIds(IEnumerable<ISubmodelElement>)
+  nameWithType: Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable<ISubmodelElement>)
+  fullName: AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable<AasCore.Aas3_0_RC02.ISubmodelElement>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementsHaveIdenticalSemanticIds
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2039
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that all <code data-dev-comment-type=\"paramref\" class=\"paramref\">elements</code> have the identical\n<xref href=\"AasCore.Aas3_0_RC02.IHasSemantics.SemanticId\" data-throw-if-not-resolved=\"false\"></xref>&apos;s.\n"
+  example: []
+  syntax:
+    content: public static bool SubmodelElementsHaveIdenticalSemanticIds(IEnumerable<ISubmodelElement> elements)
+    parameters:
+    - id: elements
+      type: IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SubmodelElementsHaveIdenticalSemanticIds(elements As IEnumerable(Of ISubmodelElement)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds*
+  nameWithType.vb: Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable(Of ISubmodelElement))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds(IEnumerable(Of AasCore.Aas3_0_RC02.ISubmodelElement))
+  name.vb: SubmodelElementsHaveIdenticalSemanticIds(IEnumerable(Of ISubmodelElement))
+- uid: AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType(AasCore.Aas3_0_RC02.ISubmodelElement,AasCore.Aas3_0_RC02.AasSubmodelElements)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType(AasCore.Aas3_0_RC02.ISubmodelElement,AasCore.Aas3_0_RC02.AasSubmodelElements)
+  id: SubmodelElementIsOfType(AasCore.Aas3_0_RC02.ISubmodelElement,AasCore.Aas3_0_RC02.AasSubmodelElements)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementIsOfType(ISubmodelElement, AasSubmodelElements)
+  nameWithType: Verification.SubmodelElementIsOfType(ISubmodelElement, AasSubmodelElements)
+  fullName: AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType(AasCore.Aas3_0_RC02.ISubmodelElement, AasCore.Aas3_0_RC02.AasSubmodelElements)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementIsOfType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2077
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public static bool SubmodelElementIsOfType(ISubmodelElement element, AasSubmodelElements elementType)
+    parameters:
+    - id: element
+      type: AasCore.Aas3_0_RC02.ISubmodelElement
+    - id: elementType
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SubmodelElementIsOfType(element As ISubmodelElement, elementType As AasSubmodelElements) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement},System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement},System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd})
+  id: PropertiesOrRangesHaveValueType(IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement},System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: PropertiesOrRangesHaveValueType(IEnumerable<ISubmodelElement>, Nullable<DataTypeDefXsd>)
+  nameWithType: Verification.PropertiesOrRangesHaveValueType(IEnumerable<ISubmodelElement>, Nullable<DataTypeDefXsd>)
+  fullName: AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType(IEnumerable<AasCore.Aas3_0_RC02.ISubmodelElement>, System.Nullable<AasCore.Aas3_0_RC02.DataTypeDefXsd>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: PropertiesOrRangesHaveValueType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2155
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <code data-dev-comment-type=\"paramref\" class=\"paramref\">elements</code> which are\n<xref href=\"AasCore.Aas3_0_RC02.Property\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"AasCore.Aas3_0_RC02.Range\" data-throw-if-not-resolved=\"false\"></xref>\nhave the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">valueType</code>.\n"
+  remarks: "\nWe have to use nullable valueType since the compiler does not really handle\nnullable C# value types.\n\nSee https://endjin.com/blog/2022/02/csharp-10-generics-nullable-references-improvements-allownull\n"
+  example: []
+  syntax:
+    content: public static bool PropertiesOrRangesHaveValueType(IEnumerable<ISubmodelElement> elements, DataTypeDefXsd? valueType)
+    parameters:
+    - id: elements
+      type: IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement}
+    - id: valueType
+      type: System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function PropertiesOrRangesHaveValueType(elements As IEnumerable(Of ISubmodelElement), valueType As DataTypeDefXsd?) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType*
+  nameWithType.vb: Verification.PropertiesOrRangesHaveValueType(IEnumerable(Of ISubmodelElement), Nullable(Of DataTypeDefXsd))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType(IEnumerable(Of AasCore.Aas3_0_RC02.ISubmodelElement), System.Nullable(Of AasCore.Aas3_0_RC02.DataTypeDefXsd))
+  name.vb: PropertiesOrRangesHaveValueType(IEnumerable(Of ISubmodelElement), Nullable(Of DataTypeDefXsd))
+- uid: AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Reference)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Reference)
+  id: ReferenceKeyValuesEqual(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Reference)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: ReferenceKeyValuesEqual(Reference, Reference)
+  nameWithType: Verification.ReferenceKeyValuesEqual(Reference, Reference)
+  fullName: AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual(AasCore.Aas3_0_RC02.Reference, AasCore.Aas3_0_RC02.Reference)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceKeyValuesEqual
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2187
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the two references, <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> and\n<code data-dev-comment-type=\"paramref\" class=\"paramref\">other</code>, are equal by comparing\ntheir <xref href=\"AasCore.Aas3_0_RC02.Reference.Keys\" data-throw-if-not-resolved=\"false\"></xref> by\n<xref href=\"AasCore.Aas3_0_RC02.Key.Value\" data-throw-if-not-resolved=\"false\"></xref>&apos;s.\n"
+  example: []
+  syntax:
+    content: public static bool ReferenceKeyValuesEqual(Reference that, Reference other)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Reference
+    - id: other
+      type: AasCore.Aas3_0_RC02.Reference
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ReferenceKeyValuesEqual(that As Reference, other As Reference) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  id: DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification>)
+  nameWithType: Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification>)
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2212
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <xref href=\"AasCore.Aas3_0_RC02.DataSpecificationIec61360.DataType\" data-throw-if-not-resolved=\"false\"></xref> is defined\nappropriately for all data specifications whose content is given as IEC 61360.\n"
+  example: []
+  syntax:
+    content: public static bool DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification> embeddedDataSpecifications)
+    parameters:
+    - id: embeddedDataSpecifications
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(embeddedDataSpecifications As IEnumerable(Of EmbeddedDataSpecification)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType*
+  nameWithType.vb: Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable(Of EmbeddedDataSpecification))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType(IEnumerable(Of EmbeddedDataSpecification))
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  id: DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification>)
+  nameWithType: Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification>)
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360sForReferenceHaveAppropriateDataType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2243
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <xref href=\"AasCore.Aas3_0_RC02.DataSpecificationIec61360.DataType\" data-throw-if-not-resolved=\"false\"></xref> is defined\nappropriately for all data specifications whose content is given as IEC 61360.\n"
+  example: []
+  syntax:
+    content: public static bool DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification> embeddedDataSpecifications)
+    parameters:
+    - id: embeddedDataSpecifications
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DataSpecificationIec61360sForReferenceHaveAppropriateDataType(embeddedDataSpecifications As IEnumerable(Of EmbeddedDataSpecification)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType*
+  nameWithType.vb: Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable(Of EmbeddedDataSpecification))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: DataSpecificationIec61360sForReferenceHaveAppropriateDataType(IEnumerable(Of EmbeddedDataSpecification))
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  id: DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification>)
+  nameWithType: Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification>)
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360sForDocumentHaveAppropriateDataType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2274
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <xref href=\"AasCore.Aas3_0_RC02.DataSpecificationIec61360.DataType\" data-throw-if-not-resolved=\"false\"></xref> is defined\nappropriately for all data specifications whose content is given as IEC 61360.\n"
+  example: []
+  syntax:
+    content: public static bool DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable<EmbeddedDataSpecification> embeddedDataSpecifications)
+    parameters:
+    - id: embeddedDataSpecifications
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DataSpecificationIec61360sForDocumentHaveAppropriateDataType(embeddedDataSpecifications As IEnumerable(Of EmbeddedDataSpecification)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType*
+  nameWithType.vb: Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable(Of EmbeddedDataSpecification))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: DataSpecificationIec61360sForDocumentHaveAppropriateDataType(IEnumerable(Of EmbeddedDataSpecification))
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  id: DataSpecificationIec61360sHaveDataType(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360sHaveDataType(IEnumerable<EmbeddedDataSpecification>)
+  nameWithType: Verification.DataSpecificationIec61360sHaveDataType(IEnumerable<EmbeddedDataSpecification>)
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType(IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360sHaveDataType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2305
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <xref href=\"AasCore.Aas3_0_RC02.DataSpecificationIec61360.DataType\" data-throw-if-not-resolved=\"false\"></xref> is defined\nfor all data specifications whose content is given as IEC 61360.\n"
+  example: []
+  syntax:
+    content: public static bool DataSpecificationIec61360sHaveDataType(IEnumerable<EmbeddedDataSpecification> embeddedDataSpecifications)
+    parameters:
+    - id: embeddedDataSpecifications
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DataSpecificationIec61360sHaveDataType(embeddedDataSpecifications As IEnumerable(Of EmbeddedDataSpecification)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType*
+  nameWithType.vb: Verification.DataSpecificationIec61360sHaveDataType(IEnumerable(Of EmbeddedDataSpecification))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType(IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: DataSpecificationIec61360sHaveDataType(IEnumerable(Of EmbeddedDataSpecification))
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  id: DataSpecificationIec61360sHaveValue(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360sHaveValue(IEnumerable<EmbeddedDataSpecification>)
+  nameWithType: Verification.DataSpecificationIec61360sHaveValue(IEnumerable<EmbeddedDataSpecification>)
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue(IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360sHaveValue
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2332
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <xref href=\"AasCore.Aas3_0_RC02.DataSpecificationIec61360.Value\" data-throw-if-not-resolved=\"false\"></xref> is defined\nfor all data specifications whose content is given as IEC 61360.\n"
+  example: []
+  syntax:
+    content: public static bool DataSpecificationIec61360sHaveValue(IEnumerable<EmbeddedDataSpecification> embeddedDataSpecifications)
+    parameters:
+    - id: embeddedDataSpecifications
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DataSpecificationIec61360sHaveValue(embeddedDataSpecifications As IEnumerable(Of EmbeddedDataSpecification)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue*
+  nameWithType.vb: Verification.DataSpecificationIec61360sHaveValue(IEnumerable(Of EmbeddedDataSpecification))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue(IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: DataSpecificationIec61360sHaveValue(IEnumerable(Of EmbeddedDataSpecification))
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  commentId: M:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  id: DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification})
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable<EmbeddedDataSpecification>)
+  nameWithType: Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable<EmbeddedDataSpecification>)
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2359
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <xref href=\"AasCore.Aas3_0_RC02.DataSpecificationIec61360.Definition\" data-throw-if-not-resolved=\"false\"></xref> is defined\nfor all data specifications whose content is given as IEC 61360 at least in English.\n"
+  example: []
+  syntax:
+    content: public static bool DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable<EmbeddedDataSpecification> embeddedDataSpecifications)
+    parameters:
+    - id: embeddedDataSpecifications
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(embeddedDataSpecifications As IEnumerable(Of EmbeddedDataSpecification)) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish*
+  nameWithType.vb: Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable(Of EmbeddedDataSpecification))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish(IEnumerable(Of EmbeddedDataSpecification))
+- uid: AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish(System.String)
+  id: IsBcp47ForEnglish(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: IsBcp47ForEnglish(String)
+  nameWithType: Verification.IsBcp47ForEnglish(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IsBcp47ForEnglish
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 2407
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nCheck that the <code data-dev-comment-type=\"paramref\" class=\"paramref\">text</code> corresponds to a BCP47 code for english.\n"
+  example: []
+  syntax:
+    content: public static bool IsBcp47ForEnglish(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsBcp47ForEnglish(text As String) As Boolean
+  overload: AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.Verify(AasCore.Aas3_0_RC02.IClass)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.Verify(AasCore.Aas3_0_RC02.IClass)
+  id: Verify(AasCore.Aas3_0_RC02.IClass)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: Verify(IClass)
+  nameWithType: Verification.Verify(IClass)
+  fullName: AasCore.Aas3_0_RC02.Verification.Verify(AasCore.Aas3_0_RC02.IClass)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Verify
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 9912
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> recursively.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> Verify(IClass that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.IClass
+      description: "\nThe instance of the meta-model to be verified\n"
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function Verify(that As IClass) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.Verify*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString(System.String)
+  id: VerifyNonEmptyString(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyNonEmptyString(String)
+  nameWithType: Verification.VerifyNonEmptyString(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyNonEmptyString
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 9923
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyNonEmptyString(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyNonEmptyString(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc(System.String)
+  id: VerifyDateTimeStampUtc(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyDateTimeStampUtc(String)
+  nameWithType: Verification.VerifyDateTimeStampUtc(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyDateTimeStampUtc
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 9938
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyDateTimeStampUtc(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyDateTimeStampUtc(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyBlobType(System.Byte[])
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyBlobType(System.Byte[])
+  id: VerifyBlobType(System.Byte[])
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyBlobType(Byte[])
+  nameWithType: Verification.VerifyBlobType(Byte[])
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyBlobType(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyBlobType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 9961
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyBlobType(byte[] that)
+    parameters:
+    - id: that
+      type: System.Byte[]
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyBlobType(that As Byte()) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyBlobType*
+  nameWithType.vb: Verification.VerifyBlobType(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AasCore.Aas3_0_RC02.Verification.VerifyBlobType(System.Byte())
+  name.vb: VerifyBlobType(Byte())
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyIdentifier(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyIdentifier(System.String)
+  id: VerifyIdentifier(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyIdentifier(String)
+  nameWithType: Verification.VerifyIdentifier(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyIdentifier(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyIdentifier
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 9971
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyIdentifier(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyIdentifier(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyIdentifier*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag(System.String)
+  id: VerifyBcp47LanguageTag(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyBcp47LanguageTag(String)
+  nameWithType: Verification.VerifyBcp47LanguageTag(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyBcp47LanguageTag
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 9986
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyBcp47LanguageTag(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyBcp47LanguageTag(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyContentType(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyContentType(System.String)
+  id: VerifyContentType(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyContentType(String)
+  nameWithType: Verification.VerifyContentType(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyContentType(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyContentType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10001
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyContentType(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyContentType(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyContentType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyPathType(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyPathType(System.String)
+  id: VerifyPathType(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyPathType(String)
+  nameWithType: Verification.VerifyPathType(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyPathType(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyPathType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10024
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyPathType(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyPathType(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyPathType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyQualifierType(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyQualifierType(System.String)
+  id: VerifyQualifierType(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyQualifierType(String)
+  nameWithType: Verification.VerifyQualifierType(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyQualifierType(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyQualifierType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10047
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyQualifierType(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyQualifierType(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyQualifierType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyValueDataType(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyValueDataType(System.String)
+  id: VerifyValueDataType(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyValueDataType(String)
+  nameWithType: Verification.VerifyValueDataType(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyValueDataType(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyValueDataType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10062
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyValueDataType(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyValueDataType(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyValueDataType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyIdShort(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyIdShort(System.String)
+  id: VerifyIdShort(System.String)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyIdShort(String)
+  nameWithType: Verification.VerifyIdShort(String)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyIdShort(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyIdShort
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10072
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify the constraints of <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyIdShort(string that)
+    parameters:
+    - id: that
+      type: System.String
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyIdShort(that As String) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyIdShort*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyModelingKind(AasCore.Aas3_0_RC02.ModelingKind)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyModelingKind(AasCore.Aas3_0_RC02.ModelingKind)
+  id: VerifyModelingKind(AasCore.Aas3_0_RC02.ModelingKind)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyModelingKind(ModelingKind)
+  nameWithType: Verification.VerifyModelingKind(ModelingKind)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyModelingKind(AasCore.Aas3_0_RC02.ModelingKind)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyModelingKind
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10096
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyModelingKind(ModelingKind that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.ModelingKind
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyModelingKind(that As ModelingKind) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyModelingKind*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind(AasCore.Aas3_0_RC02.QualifierKind)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind(AasCore.Aas3_0_RC02.QualifierKind)
+  id: VerifyQualifierKind(AasCore.Aas3_0_RC02.QualifierKind)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyQualifierKind(QualifierKind)
+  nameWithType: Verification.VerifyQualifierKind(QualifierKind)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind(AasCore.Aas3_0_RC02.QualifierKind)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyQualifierKind
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10110
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyQualifierKind(QualifierKind that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.QualifierKind
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyQualifierKind(that As QualifierKind) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyAssetKind(AasCore.Aas3_0_RC02.AssetKind)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyAssetKind(AasCore.Aas3_0_RC02.AssetKind)
+  id: VerifyAssetKind(AasCore.Aas3_0_RC02.AssetKind)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyAssetKind(AssetKind)
+  nameWithType: Verification.VerifyAssetKind(AssetKind)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyAssetKind(AasCore.Aas3_0_RC02.AssetKind)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyAssetKind
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10124
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyAssetKind(AssetKind that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.AssetKind
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyAssetKind(that As AssetKind) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyAssetKind*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements(AasCore.Aas3_0_RC02.AasSubmodelElements)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements(AasCore.Aas3_0_RC02.AasSubmodelElements)
+  id: VerifyAasSubmodelElements(AasCore.Aas3_0_RC02.AasSubmodelElements)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyAasSubmodelElements(AasSubmodelElements)
+  nameWithType: Verification.VerifyAasSubmodelElements(AasSubmodelElements)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements(AasCore.Aas3_0_RC02.AasSubmodelElements)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyAasSubmodelElements
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10138
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyAasSubmodelElements(AasSubmodelElements that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyAasSubmodelElements(that As AasSubmodelElements) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyEntityType(AasCore.Aas3_0_RC02.EntityType)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyEntityType(AasCore.Aas3_0_RC02.EntityType)
+  id: VerifyEntityType(AasCore.Aas3_0_RC02.EntityType)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyEntityType(EntityType)
+  nameWithType: Verification.VerifyEntityType(EntityType)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyEntityType(AasCore.Aas3_0_RC02.EntityType)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyEntityType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10152
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyEntityType(EntityType that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.EntityType
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyEntityType(that As EntityType) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyEntityType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDirection(AasCore.Aas3_0_RC02.Direction)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyDirection(AasCore.Aas3_0_RC02.Direction)
+  id: VerifyDirection(AasCore.Aas3_0_RC02.Direction)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyDirection(Direction)
+  nameWithType: Verification.VerifyDirection(Direction)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDirection(AasCore.Aas3_0_RC02.Direction)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyDirection
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10166
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyDirection(Direction that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.Direction
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyDirection(that As Direction) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyDirection*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent(AasCore.Aas3_0_RC02.StateOfEvent)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent(AasCore.Aas3_0_RC02.StateOfEvent)
+  id: VerifyStateOfEvent(AasCore.Aas3_0_RC02.StateOfEvent)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyStateOfEvent(StateOfEvent)
+  nameWithType: Verification.VerifyStateOfEvent(StateOfEvent)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent(AasCore.Aas3_0_RC02.StateOfEvent)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyStateOfEvent
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10180
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyStateOfEvent(StateOfEvent that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.StateOfEvent
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyStateOfEvent(that As StateOfEvent) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes(AasCore.Aas3_0_RC02.ReferenceTypes)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes(AasCore.Aas3_0_RC02.ReferenceTypes)
+  id: VerifyReferenceTypes(AasCore.Aas3_0_RC02.ReferenceTypes)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyReferenceTypes(ReferenceTypes)
+  nameWithType: Verification.VerifyReferenceTypes(ReferenceTypes)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes(AasCore.Aas3_0_RC02.ReferenceTypes)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyReferenceTypes
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10194
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyReferenceTypes(ReferenceTypes that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.ReferenceTypes
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyReferenceTypes(that As ReferenceTypes) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes(AasCore.Aas3_0_RC02.KeyTypes)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes(AasCore.Aas3_0_RC02.KeyTypes)
+  id: VerifyKeyTypes(AasCore.Aas3_0_RC02.KeyTypes)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyKeyTypes(KeyTypes)
+  nameWithType: Verification.VerifyKeyTypes(KeyTypes)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes(AasCore.Aas3_0_RC02.KeyTypes)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyKeyTypes
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10208
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyKeyTypes(KeyTypes that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.KeyTypes
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyKeyTypes(that As KeyTypes) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd(AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd(AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  id: VerifyDataTypeDefXsd(AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyDataTypeDefXsd(DataTypeDefXsd)
+  nameWithType: Verification.VerifyDataTypeDefXsd(DataTypeDefXsd)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd(AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyDataTypeDefXsd
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10222
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyDataTypeDefXsd(DataTypeDefXsd that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.DataTypeDefXsd
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyDataTypeDefXsd(that As DataTypeDefXsd) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360(AasCore.Aas3_0_RC02.DataTypeIec61360)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360(AasCore.Aas3_0_RC02.DataTypeIec61360)
+  id: VerifyDataTypeIec61360(AasCore.Aas3_0_RC02.DataTypeIec61360)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyDataTypeIec61360(DataTypeIec61360)
+  nameWithType: Verification.VerifyDataTypeIec61360(DataTypeIec61360)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360(AasCore.Aas3_0_RC02.DataTypeIec61360)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyDataTypeIec61360
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10236
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyDataTypeIec61360(DataTypeIec61360 that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyDataTypeIec61360(that As DataTypeIec61360) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyLevelType(AasCore.Aas3_0_RC02.LevelType)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.VerifyLevelType(AasCore.Aas3_0_RC02.LevelType)
+  id: VerifyLevelType(AasCore.Aas3_0_RC02.LevelType)
+  parent: AasCore.Aas3_0_RC02.Verification
+  langs:
+  - csharp
+  - vb
+  name: VerifyLevelType(LevelType)
+  nameWithType: Verification.VerifyLevelType(LevelType)
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyLevelType(AasCore.Aas3_0_RC02.LevelType)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/verification.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: VerifyLevelType
+    path: ../../src/AasCore.Aas3_0_RC02/verification.cs
+    startLine: 10250
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nVerify that <code data-dev-comment-type=\"paramref\" class=\"paramref\">that</code> is a valid enumeration value.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Reporting.Error> VerifyLevelType(LevelType that)
+    parameters:
+    - id: that
+      type: AasCore.Aas3_0_RC02.LevelType
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+    content.vb: Public Shared Function VerifyLevelType(that As LevelType) As IEnumerable(Of Reporting.Error)
+  overload: AasCore.Aas3_0_RC02.Verification.VerifyLevelType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesIdShort*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesIdShort
+  name: MatchesIdShort
+  nameWithType: Verification.MatchesIdShort
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesIdShort
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc
+  name: MatchesXsDateTimeStampUtc
+  nameWithType: Verification.MatchesXsDateTimeStampUtc
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStampUtc(System.String)
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc
+  name: IsXsDateTimeStampUtc
+  nameWithType: Verification.IsXsDateTimeStampUtc
+  fullName: AasCore.Aas3_0_RC02.Verification.IsXsDateTimeStampUtc
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesMimeType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesMimeType
+  name: MatchesMimeType
+  nameWithType: Verification.MatchesMimeType
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesMimeType
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path
+  name: MatchesRfc8089Path
+  nameWithType: Verification.MatchesRfc8089Path
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesRfc8089Path
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesBcp47*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesBcp47
+  name: MatchesBcp47
+  nameWithType: Verification.MatchesBcp47
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesBcp47
+- uid: AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages
+  name: LangStringsHaveUniqueLanguages
+  nameWithType: Verification.LangStringsHaveUniqueLanguages
+  fullName: AasCore.Aas3_0_RC02.Verification.LangStringsHaveUniqueLanguages
+- uid: IEnumerable{AasCore.Aas3_0_RC02.LangString}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.LangString}'
+  definition: IEnumerable`1
+  name: IEnumerable<LangString>
+  nameWithType: IEnumerable<LangString>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.LangString>
+  nameWithType.vb: IEnumerable(Of LangString)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.LangString)
+  name.vb: IEnumerable(Of LangString)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.LangString
+    name: LangString
+    nameWithType: LangString
+    fullName: AasCore.Aas3_0_RC02.LangString
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.LangString
+    name: LangString
+    nameWithType: LangString
+    fullName: AasCore.Aas3_0_RC02.LangString
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Qualifier.Type
+  commentId: P:AasCore.Aas3_0_RC02.Qualifier.Type
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique
+  name: QualifierTypesAreUnique
+  nameWithType: Verification.QualifierTypesAreUnique
+  fullName: AasCore.Aas3_0_RC02.Verification.QualifierTypesAreUnique
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Qualifier}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Qualifier}'
+  definition: IEnumerable`1
+  name: IEnumerable<Qualifier>
+  nameWithType: IEnumerable<Qualifier>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Qualifier>
+  nameWithType.vb: IEnumerable(Of Qualifier)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Qualifier)
+  name.vb: IEnumerable(Of Qualifier)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Qualifier
+    name: Qualifier
+    nameWithType: Qualifier
+    fullName: AasCore.Aas3_0_RC02.Qualifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Qualifier
+    name: Qualifier
+    nameWithType: Qualifier
+    fullName: AasCore.Aas3_0_RC02.Qualifier
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri
+  name: MatchesXsAnyUri
+  nameWithType: Verification.MatchesXsAnyUri
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsAnyUri
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary
+  name: MatchesXsBase64Binary
+  nameWithType: Verification.MatchesXsBase64Binary
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsBase64Binary
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean
+  name: MatchesXsBoolean
+  nameWithType: Verification.MatchesXsBoolean
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsBoolean
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDate*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDate
+  name: MatchesXsDate
+  nameWithType: Verification.MatchesXsDate
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDate
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime
+  name: MatchesXsDateTime
+  nameWithType: Verification.MatchesXsDateTime
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTime
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp
+  name: MatchesXsDateTimeStamp
+  nameWithType: Verification.MatchesXsDateTimeStamp
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDateTimeStamp
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal
+  name: MatchesXsDecimal
+  nameWithType: Verification.MatchesXsDecimal
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDecimal
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDouble*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDouble
+  name: MatchesXsDouble
+  nameWithType: Verification.MatchesXsDouble
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDouble
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDuration*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDuration
+  name: MatchesXsDuration
+  nameWithType: Verification.MatchesXsDuration
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDuration
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsFloat*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsFloat
+  name: MatchesXsFloat
+  nameWithType: Verification.MatchesXsFloat
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsFloat
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGDay*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsGDay
+  name: MatchesXsGDay
+  nameWithType: Verification.MatchesXsGDay
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGDay
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth
+  name: MatchesXsGMonth
+  nameWithType: Verification.MatchesXsGMonth
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonth
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay
+  name: MatchesXsGMonthDay
+  nameWithType: Verification.MatchesXsGMonthDay
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGMonthDay
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGYear*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsGYear
+  name: MatchesXsGYear
+  nameWithType: Verification.MatchesXsGYear
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGYear
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth
+  name: MatchesXsGYearMonth
+  nameWithType: Verification.MatchesXsGYearMonth
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsGYearMonth
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary
+  name: MatchesXsHexBinary
+  nameWithType: Verification.MatchesXsHexBinary
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsHexBinary
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsTime*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsTime
+  name: MatchesXsTime
+  nameWithType: Verification.MatchesXsTime
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsTime
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration
+  name: MatchesXsDayTimeDuration
+  nameWithType: Verification.MatchesXsDayTimeDuration
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsDayTimeDuration
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration
+  name: MatchesXsYearMonthDuration
+  nameWithType: Verification.MatchesXsYearMonthDuration
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsYearMonthDuration
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsInteger*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsInteger
+  name: MatchesXsInteger
+  nameWithType: Verification.MatchesXsInteger
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsInteger
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsLong*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsLong
+  name: MatchesXsLong
+  nameWithType: Verification.MatchesXsLong
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsLong
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsInt*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsInt
+  name: MatchesXsInt
+  nameWithType: Verification.MatchesXsInt
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsInt
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsShort*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsShort
+  name: MatchesXsShort
+  nameWithType: Verification.MatchesXsShort
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsShort
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsByte*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsByte
+  name: MatchesXsByte
+  nameWithType: Verification.MatchesXsByte
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsByte
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger
+  name: MatchesXsNonNegativeInteger
+  nameWithType: Verification.MatchesXsNonNegativeInteger
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsNonNegativeInteger
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger
+  name: MatchesXsPositiveInteger
+  nameWithType: Verification.MatchesXsPositiveInteger
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsPositiveInteger
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong
+  name: MatchesXsUnsignedLong
+  nameWithType: Verification.MatchesXsUnsignedLong
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedLong
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt
+  name: MatchesXsUnsignedInt
+  nameWithType: Verification.MatchesXsUnsignedInt
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedInt
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort
+  name: MatchesXsUnsignedShort
+  nameWithType: Verification.MatchesXsUnsignedShort
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedShort
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte
+  name: MatchesXsUnsignedByte
+  nameWithType: Verification.MatchesXsUnsignedByte
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsUnsignedByte
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger
+  name: MatchesXsNonPositiveInteger
+  nameWithType: Verification.MatchesXsNonPositiveInteger
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsNonPositiveInteger
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger
+  name: MatchesXsNegativeInteger
+  nameWithType: Verification.MatchesXsNegativeInteger
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsNegativeInteger
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesXsString*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesXsString
+  name: MatchesXsString
+  nameWithType: Verification.MatchesXsString
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesXsString
+- uid: AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType
+  name: ValueConsistentWithXsdType
+  nameWithType: Verification.ValueConsistentWithXsdType
+  fullName: AasCore.Aas3_0_RC02.Verification.ValueConsistentWithXsdType
+- uid: AasCore.Aas3_0_RC02.DataTypeDefXsd
+  commentId: T:AasCore.Aas3_0_RC02.DataTypeDefXsd
+  parent: AasCore.Aas3_0_RC02
+  name: DataTypeDefXsd
+  nameWithType: DataTypeDefXsd
+  fullName: AasCore.Aas3_0_RC02.DataTypeDefXsd
+- uid: AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally
+  name: MatchesGlobalAssetIdLiterally
+  nameWithType: Verification.MatchesGlobalAssetIdLiterally
+  fullName: AasCore.Aas3_0_RC02.Verification.MatchesGlobalAssetIdLiterally
+- uid: AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo
+  name: IsModelReferenceTo
+  nameWithType: Verification.IsModelReferenceTo
+  fullName: AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo
+- uid: AasCore.Aas3_0_RC02.Reference
+  commentId: T:AasCore.Aas3_0_RC02.Reference
+  parent: AasCore.Aas3_0_RC02
+  name: Reference
+  nameWithType: Reference
+  fullName: AasCore.Aas3_0_RC02.Reference
+- uid: AasCore.Aas3_0_RC02.KeyTypes
+  commentId: T:AasCore.Aas3_0_RC02.KeyTypes
+  parent: AasCore.Aas3_0_RC02
+  name: KeyTypes
+  nameWithType: KeyTypes
+  fullName: AasCore.Aas3_0_RC02.KeyTypes
+- uid: AasCore.Aas3_0_RC02.Constants.AasReferables
+  commentId: F:AasCore.Aas3_0_RC02.Constants.AasReferables
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable
+  name: IsModelReferenceToReferable
+  nameWithType: Verification.IsModelReferenceToReferable
+  fullName: AasCore.Aas3_0_RC02.Verification.IsModelReferenceToReferable
+- uid: AasCore.Aas3_0_RC02.IReferable.IdShort
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.IdShort
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: IdShort
+  nameWithType: IReferable.IdShort
+  fullName: AasCore.Aas3_0_RC02.IReferable.IdShort
+- uid: AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique
+  name: IdShortsAreUnique
+  nameWithType: Verification.IdShortsAreUnique
+  fullName: AasCore.Aas3_0_RC02.Verification.IdShortsAreUnique
+- uid: IEnumerable{AasCore.Aas3_0_RC02.IReferable}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.IReferable}'
+  definition: IEnumerable`1
+  name: IEnumerable<IReferable>
+  nameWithType: IEnumerable<IReferable>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.IReferable>
+  nameWithType.vb: IEnumerable(Of IReferable)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.IReferable)
+  name.vb: IEnumerable(Of IReferable)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.IReferable
+    name: IReferable
+    nameWithType: IReferable
+    fullName: AasCore.Aas3_0_RC02.IReferable
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.IReferable
+    name: IReferable
+    nameWithType: IReferable
+    fullName: AasCore.Aas3_0_RC02.IReferable
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IReferable
+  commentId: T:AasCore.Aas3_0_RC02.IReferable
+  parent: AasCore.Aas3_0_RC02
+  name: IReferable
+  nameWithType: IReferable
+  fullName: AasCore.Aas3_0_RC02.IReferable
+- uid: AasCore.Aas3_0_RC02.Extension.Name
+  commentId: P:AasCore.Aas3_0_RC02.Extension.Name
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique
+  name: ExtensionNamesAreUnique
+  nameWithType: Verification.ExtensionNamesAreUnique
+  fullName: AasCore.Aas3_0_RC02.Verification.ExtensionNamesAreUnique
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Extension}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Extension}'
+  definition: IEnumerable`1
+  name: IEnumerable<Extension>
+  nameWithType: IEnumerable<Extension>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Extension>
+  nameWithType.vb: IEnumerable(Of Extension)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Extension)
+  name.vb: IEnumerable(Of Extension)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Extension
+    name: Extension
+    nameWithType: Extension
+    fullName: AasCore.Aas3_0_RC02.Extension
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Extension
+    name: Extension
+    nameWithType: Extension
+    fullName: AasCore.Aas3_0_RC02.Extension
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  commentId: P:AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  parent: AasCore.Aas3_0_RC02.IHasSemantics
+  name: SemanticId
+  nameWithType: IHasSemantics.SemanticId
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+- uid: AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds
+  name: SubmodelElementsHaveIdenticalSemanticIds
+  nameWithType: Verification.SubmodelElementsHaveIdenticalSemanticIds
+  fullName: AasCore.Aas3_0_RC02.Verification.SubmodelElementsHaveIdenticalSemanticIds
+- uid: IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.ISubmodelElement}'
+  definition: IEnumerable`1
+  name: IEnumerable<ISubmodelElement>
+  nameWithType: IEnumerable<ISubmodelElement>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.ISubmodelElement>
+  nameWithType.vb: IEnumerable(Of ISubmodelElement)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.ISubmodelElement)
+  name.vb: IEnumerable(Of ISubmodelElement)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.ISubmodelElement
+    name: ISubmodelElement
+    nameWithType: ISubmodelElement
+    fullName: AasCore.Aas3_0_RC02.ISubmodelElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.ISubmodelElement
+    name: ISubmodelElement
+    nameWithType: ISubmodelElement
+    fullName: AasCore.Aas3_0_RC02.ISubmodelElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IHasSemantics
+  commentId: T:AasCore.Aas3_0_RC02.IHasSemantics
+  parent: AasCore.Aas3_0_RC02
+  name: IHasSemantics
+  nameWithType: IHasSemantics
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics
+- uid: AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType
+  name: SubmodelElementIsOfType
+  nameWithType: Verification.SubmodelElementIsOfType
+  fullName: AasCore.Aas3_0_RC02.Verification.SubmodelElementIsOfType
+- uid: AasCore.Aas3_0_RC02.ISubmodelElement
+  commentId: T:AasCore.Aas3_0_RC02.ISubmodelElement
+  parent: AasCore.Aas3_0_RC02
+  name: ISubmodelElement
+  nameWithType: ISubmodelElement
+  fullName: AasCore.Aas3_0_RC02.ISubmodelElement
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements
+  commentId: T:AasCore.Aas3_0_RC02.AasSubmodelElements
+  parent: AasCore.Aas3_0_RC02
+  name: AasSubmodelElements
+  nameWithType: AasSubmodelElements
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements
+- uid: AasCore.Aas3_0_RC02.Property
+  commentId: T:AasCore.Aas3_0_RC02.Property
+  parent: AasCore.Aas3_0_RC02
+  name: Property
+  nameWithType: Property
+  fullName: AasCore.Aas3_0_RC02.Property
+- uid: AasCore.Aas3_0_RC02.Range
+  commentId: T:AasCore.Aas3_0_RC02.Range
+  parent: AasCore.Aas3_0_RC02
+  name: Range
+  nameWithType: Range
+  fullName: AasCore.Aas3_0_RC02.Range
+- uid: AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType
+  name: PropertiesOrRangesHaveValueType
+  nameWithType: Verification.PropertiesOrRangesHaveValueType
+  fullName: AasCore.Aas3_0_RC02.Verification.PropertiesOrRangesHaveValueType
+- uid: System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd}
+  commentId: '!:System.Nullable{AasCore.Aas3_0_RC02.DataTypeDefXsd}'
+  definition: System.Nullable`1
+  name: Nullable<DataTypeDefXsd>
+  nameWithType: Nullable<DataTypeDefXsd>
+  fullName: System.Nullable<AasCore.Aas3_0_RC02.DataTypeDefXsd>
+  nameWithType.vb: Nullable(Of DataTypeDefXsd)
+  fullName.vb: System.Nullable(Of AasCore.Aas3_0_RC02.DataTypeDefXsd)
+  name.vb: Nullable(Of DataTypeDefXsd)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.DataTypeDefXsd
+    name: DataTypeDefXsd
+    nameWithType: DataTypeDefXsd
+    fullName: AasCore.Aas3_0_RC02.DataTypeDefXsd
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.DataTypeDefXsd
+    name: DataTypeDefXsd
+    nameWithType: DataTypeDefXsd
+    fullName: AasCore.Aas3_0_RC02.DataTypeDefXsd
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Reference.Keys
+  commentId: P:AasCore.Aas3_0_RC02.Reference.Keys
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Key.Value
+  commentId: P:AasCore.Aas3_0_RC02.Key.Value
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual
+  name: ReferenceKeyValuesEqual
+  nameWithType: Verification.ReferenceKeyValuesEqual
+  fullName: AasCore.Aas3_0_RC02.Verification.ReferenceKeyValuesEqual
+- uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360.DataType
+  commentId: P:AasCore.Aas3_0_RC02.DataSpecificationIec61360.DataType
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType
+  name: DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType
+  nameWithType: Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForPropertyOrValueHaveAppropriateDataType
+- uid: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}'
+  definition: IEnumerable`1
+  name: IEnumerable<EmbeddedDataSpecification>
+  nameWithType: IEnumerable<EmbeddedDataSpecification>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>
+  nameWithType.vb: IEnumerable(Of EmbeddedDataSpecification)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification)
+  name.vb: IEnumerable(Of EmbeddedDataSpecification)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    name: EmbeddedDataSpecification
+    nameWithType: EmbeddedDataSpecification
+    fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    name: EmbeddedDataSpecification
+    nameWithType: EmbeddedDataSpecification
+    fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType
+  name: DataSpecificationIec61360sForReferenceHaveAppropriateDataType
+  nameWithType: Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForReferenceHaveAppropriateDataType
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType
+  name: DataSpecificationIec61360sForDocumentHaveAppropriateDataType
+  nameWithType: Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sForDocumentHaveAppropriateDataType
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType
+  name: DataSpecificationIec61360sHaveDataType
+  nameWithType: Verification.DataSpecificationIec61360sHaveDataType
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDataType
+- uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360.Value
+  commentId: P:AasCore.Aas3_0_RC02.DataSpecificationIec61360.Value
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue
+  name: DataSpecificationIec61360sHaveValue
+  nameWithType: Verification.DataSpecificationIec61360sHaveValue
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveValue
+- uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360.Definition
+  commentId: P:AasCore.Aas3_0_RC02.DataSpecificationIec61360.Definition
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish
+  name: DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish
+  nameWithType: Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish
+  fullName: AasCore.Aas3_0_RC02.Verification.DataSpecificationIec61360sHaveDefinitionAtLeastInEnglish
+- uid: AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish
+  name: IsBcp47ForEnglish
+  nameWithType: Verification.IsBcp47ForEnglish
+  fullName: AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish
+- uid: AasCore.Aas3_0_RC02.Verification.Verify*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.Verify
+  name: Verify
+  nameWithType: Verification.Verify
+  fullName: AasCore.Aas3_0_RC02.Verification.Verify
+- uid: AasCore.Aas3_0_RC02.IClass
+  commentId: T:AasCore.Aas3_0_RC02.IClass
+  parent: AasCore.Aas3_0_RC02
+  name: IClass
+  nameWithType: IClass
+  fullName: AasCore.Aas3_0_RC02.IClass
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Reporting.Error}'
+  definition: IEnumerable`1
+  name: IEnumerable<Reporting.Error>
+  nameWithType: IEnumerable<Reporting.Error>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Reporting.Error>
+  nameWithType.vb: IEnumerable(Of Reporting.Error)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Reporting.Error)
+  name.vb: IEnumerable(Of Reporting.Error)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Reporting.Error
+    name: Reporting.Error
+    nameWithType: Reporting.Error
+    fullName: AasCore.Aas3_0_RC02.Reporting.Error
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Reporting.Error
+    name: Reporting.Error
+    nameWithType: Reporting.Error
+    fullName: AasCore.Aas3_0_RC02.Reporting.Error
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString
+  name: VerifyNonEmptyString
+  nameWithType: Verification.VerifyNonEmptyString
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyNonEmptyString
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc
+  name: VerifyDateTimeStampUtc
+  nameWithType: Verification.VerifyDateTimeStampUtc
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDateTimeStampUtc
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyBlobType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyBlobType
+  name: VerifyBlobType
+  nameWithType: Verification.VerifyBlobType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyBlobType
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyIdentifier*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyIdentifier
+  name: VerifyIdentifier
+  nameWithType: Verification.VerifyIdentifier
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyIdentifier
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag
+  name: VerifyBcp47LanguageTag
+  nameWithType: Verification.VerifyBcp47LanguageTag
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyBcp47LanguageTag
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyContentType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyContentType
+  name: VerifyContentType
+  nameWithType: Verification.VerifyContentType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyContentType
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyPathType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyPathType
+  name: VerifyPathType
+  nameWithType: Verification.VerifyPathType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyPathType
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyQualifierType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyQualifierType
+  name: VerifyQualifierType
+  nameWithType: Verification.VerifyQualifierType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyQualifierType
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyValueDataType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyValueDataType
+  name: VerifyValueDataType
+  nameWithType: Verification.VerifyValueDataType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyValueDataType
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyIdShort*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyIdShort
+  name: VerifyIdShort
+  nameWithType: Verification.VerifyIdShort
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyIdShort
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyModelingKind*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyModelingKind
+  name: VerifyModelingKind
+  nameWithType: Verification.VerifyModelingKind
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyModelingKind
+- uid: AasCore.Aas3_0_RC02.ModelingKind
+  commentId: T:AasCore.Aas3_0_RC02.ModelingKind
+  parent: AasCore.Aas3_0_RC02
+  name: ModelingKind
+  nameWithType: ModelingKind
+  fullName: AasCore.Aas3_0_RC02.ModelingKind
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind
+  name: VerifyQualifierKind
+  nameWithType: Verification.VerifyQualifierKind
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyQualifierKind
+- uid: AasCore.Aas3_0_RC02.QualifierKind
+  commentId: T:AasCore.Aas3_0_RC02.QualifierKind
+  parent: AasCore.Aas3_0_RC02
+  name: QualifierKind
+  nameWithType: QualifierKind
+  fullName: AasCore.Aas3_0_RC02.QualifierKind
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyAssetKind*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyAssetKind
+  name: VerifyAssetKind
+  nameWithType: Verification.VerifyAssetKind
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyAssetKind
+- uid: AasCore.Aas3_0_RC02.AssetKind
+  commentId: T:AasCore.Aas3_0_RC02.AssetKind
+  parent: AasCore.Aas3_0_RC02
+  name: AssetKind
+  nameWithType: AssetKind
+  fullName: AasCore.Aas3_0_RC02.AssetKind
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements
+  name: VerifyAasSubmodelElements
+  nameWithType: Verification.VerifyAasSubmodelElements
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyAasSubmodelElements
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyEntityType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyEntityType
+  name: VerifyEntityType
+  nameWithType: Verification.VerifyEntityType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyEntityType
+- uid: AasCore.Aas3_0_RC02.EntityType
+  commentId: T:AasCore.Aas3_0_RC02.EntityType
+  parent: AasCore.Aas3_0_RC02
+  name: EntityType
+  nameWithType: EntityType
+  fullName: AasCore.Aas3_0_RC02.EntityType
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDirection*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyDirection
+  name: VerifyDirection
+  nameWithType: Verification.VerifyDirection
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDirection
+- uid: AasCore.Aas3_0_RC02.Direction
+  commentId: T:AasCore.Aas3_0_RC02.Direction
+  parent: AasCore.Aas3_0_RC02
+  name: Direction
+  nameWithType: Direction
+  fullName: AasCore.Aas3_0_RC02.Direction
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent
+  name: VerifyStateOfEvent
+  nameWithType: Verification.VerifyStateOfEvent
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyStateOfEvent
+- uid: AasCore.Aas3_0_RC02.StateOfEvent
+  commentId: T:AasCore.Aas3_0_RC02.StateOfEvent
+  parent: AasCore.Aas3_0_RC02
+  name: StateOfEvent
+  nameWithType: StateOfEvent
+  fullName: AasCore.Aas3_0_RC02.StateOfEvent
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes
+  name: VerifyReferenceTypes
+  nameWithType: Verification.VerifyReferenceTypes
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyReferenceTypes
+- uid: AasCore.Aas3_0_RC02.ReferenceTypes
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceTypes
+  parent: AasCore.Aas3_0_RC02
+  name: ReferenceTypes
+  nameWithType: ReferenceTypes
+  fullName: AasCore.Aas3_0_RC02.ReferenceTypes
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes
+  name: VerifyKeyTypes
+  nameWithType: Verification.VerifyKeyTypes
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyKeyTypes
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd
+  name: VerifyDataTypeDefXsd
+  nameWithType: Verification.VerifyDataTypeDefXsd
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeDefXsd
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360
+  name: VerifyDataTypeIec61360
+  nameWithType: Verification.VerifyDataTypeIec61360
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyDataTypeIec61360
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataTypeIec61360
+  parent: AasCore.Aas3_0_RC02
+  name: DataTypeIec61360
+  nameWithType: DataTypeIec61360
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360
+- uid: AasCore.Aas3_0_RC02.Verification.VerifyLevelType*
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.VerifyLevelType
+  name: VerifyLevelType
+  nameWithType: Verification.VerifyLevelType
+  fullName: AasCore.Aas3_0_RC02.Verification.VerifyLevelType
+- uid: AasCore.Aas3_0_RC02.LevelType
+  commentId: T:AasCore.Aas3_0_RC02.LevelType
+  parent: AasCore.Aas3_0_RC02
+  name: LevelType
+  nameWithType: LevelType
+  fullName: AasCore.Aas3_0_RC02.LevelType

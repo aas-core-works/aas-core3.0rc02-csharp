@@ -1,0 +1,654 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TestXmlizationOfConcreteClassesOutsideContainer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TestXmlizationOfConcreteClassesOutsideContainer
+   ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer">
+  
+  
+  <h1 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer" class="text-break">Class TestXmlizationOfConcreteClassesOutsideContainer
+  </h1>
+  <div class="markdown level0 summary"><p>Test de/serialization of classes contained in a container <em>outside</em>
+of that container.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TestXmlizationOfConcreteClassesOutsideContainer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AasCore.Aas3_0_RC02.Tests.html">AasCore.Aas3_0_RC02.Tests</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_0_RC02.Tests.dll</h6>
+  <h5 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TestXmlizationOfConcreteClassesOutsideContainer</code></pre>
+  </div>
+  <h5 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This is necessary so that we also test the methods that directly de/serialize
+an instance in rare use cases where it does not reside within a container such
+as <a class="xref" href="AasCore.Aas3_0_RC02.Environment.html">Environment</a>.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AdministrativeInformation.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AdministrativeInformation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L81">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AdministrativeInformation_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AdministrativeInformation*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AdministrativeInformation" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AdministrativeInformation">Test_round_trip_AdministrativeInformation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_AdministrativeInformation()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AnnotatedRelationshipElement.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AnnotatedRelationshipElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1009">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AnnotatedRelationshipElement_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AnnotatedRelationshipElement*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AnnotatedRelationshipElement" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AnnotatedRelationshipElement">Test_round_trip_AnnotatedRelationshipElement()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_AnnotatedRelationshipElement()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AssetAdministrationShell.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AssetAdministrationShell%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L197">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AssetAdministrationShell_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AssetAdministrationShell*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AssetAdministrationShell" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AssetAdministrationShell">Test_round_trip_AssetAdministrationShell()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_AssetAdministrationShell()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AssetInformation.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AssetInformation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L255">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AssetInformation_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AssetInformation*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_AssetInformation" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_AssetInformation">Test_round_trip_AssetInformation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_AssetInformation()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_BasicEventElement.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_BasicEventElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1125">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_BasicEventElement_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_BasicEventElement*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_BasicEventElement" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_BasicEventElement">Test_round_trip_BasicEventElement()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_BasicEventElement()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Blob.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Blob%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L893">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Blob_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Blob*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Blob" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Blob">Test_round_trip_Blob()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Blob()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Capability.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Capability%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1299">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Capability_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Capability*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Capability" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Capability">Test_round_trip_Capability()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Capability()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ConceptDescription.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ConceptDescription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1357">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ConceptDescription_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ConceptDescription*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ConceptDescription" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ConceptDescription">Test_round_trip_ConceptDescription()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_ConceptDescription()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_DataSpecificationIec61360.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_DataSpecificationIec61360%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1763">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_DataSpecificationIec61360_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_DataSpecificationIec61360*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_DataSpecificationIec61360" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_DataSpecificationIec61360">Test_round_trip_DataSpecificationIec61360()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_DataSpecificationIec61360()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_DataSpecificationPhysicalUnit.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_DataSpecificationPhysicalUnit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1821">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_DataSpecificationPhysicalUnit_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_DataSpecificationPhysicalUnit*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_DataSpecificationPhysicalUnit" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_DataSpecificationPhysicalUnit">Test_round_trip_DataSpecificationPhysicalUnit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_DataSpecificationPhysicalUnit()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_EmbeddedDataSpecification.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_EmbeddedDataSpecification%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1589">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_EmbeddedDataSpecification_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_EmbeddedDataSpecification*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_EmbeddedDataSpecification" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_EmbeddedDataSpecification">Test_round_trip_EmbeddedDataSpecification()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_EmbeddedDataSpecification()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Entity.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Entity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1067">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Entity_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Entity*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Entity" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Entity">Test_round_trip_Entity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Entity()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Extension.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Extension%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L23">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Extension_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Extension*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Extension" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Extension">Test_round_trip_Extension()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Extension()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_File.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_File%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L951">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_File_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_File*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_File" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_File">Test_round_trip_File()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_File()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Key.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1473">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Key_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Key*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Key" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Key">Test_round_trip_Key()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Key()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_LangString.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_LangString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1531">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_LangString_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_LangString*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_LangString" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_LangString">Test_round_trip_LangString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_LangString()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_MultiLanguageProperty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_MultiLanguageProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L719">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_MultiLanguageProperty_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_MultiLanguageProperty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_MultiLanguageProperty" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_MultiLanguageProperty">Test_round_trip_MultiLanguageProperty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_MultiLanguageProperty()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Operation.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Operation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1183">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Operation_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Operation*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Operation" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Operation">Test_round_trip_Operation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Operation()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_OperationVariable.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_OperationVariable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1241">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_OperationVariable_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_OperationVariable*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_OperationVariable" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_OperationVariable">Test_round_trip_OperationVariable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_OperationVariable()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Property.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Property%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L661">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Property_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Property*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Property" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Property">Test_round_trip_Property()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Property()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Qualifier.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Qualifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L139">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Qualifier_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Qualifier*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Qualifier" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Qualifier">Test_round_trip_Qualifier()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Qualifier()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Range.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Range%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L777">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Range_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Range*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Range" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Range">Test_round_trip_Range()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Range()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Reference.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Reference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1415">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Reference_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Reference*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Reference" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Reference">Test_round_trip_Reference()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Reference()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ReferenceElement.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ReferenceElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L835">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ReferenceElement_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ReferenceElement*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ReferenceElement" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ReferenceElement">Test_round_trip_ReferenceElement()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_ReferenceElement()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_RelationshipElement.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_RelationshipElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L487">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_RelationshipElement_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_RelationshipElement*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_RelationshipElement" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_RelationshipElement">Test_round_trip_RelationshipElement()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_RelationshipElement()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Resource.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Resource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L313">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Resource_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Resource*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Resource" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Resource">Test_round_trip_Resource()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Resource()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SpecificAssetId.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SpecificAssetId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L371">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SpecificAssetId_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SpecificAssetId*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SpecificAssetId" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SpecificAssetId">Test_round_trip_SpecificAssetId()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_SpecificAssetId()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Submodel.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Submodel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L429">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Submodel_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Submodel*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_Submodel" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_Submodel">Test_round_trip_Submodel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_Submodel()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SubmodelElementCollection.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SubmodelElementCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L603">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SubmodelElementCollection_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SubmodelElementCollection*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SubmodelElementCollection" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SubmodelElementCollection">Test_round_trip_SubmodelElementCollection()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_SubmodelElementCollection()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SubmodelElementList.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SubmodelElementList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L545">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SubmodelElementList_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SubmodelElementList*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_SubmodelElementList" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_SubmodelElementList">Test_round_trip_SubmodelElementList()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_SubmodelElementList()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ValueList.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ValueList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1705">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ValueList_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ValueList*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ValueList" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ValueList">Test_round_trip_ValueList()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_ValueList()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ValueReferencePair.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ValueReferencePair%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L1647">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ValueReferencePair_" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ValueReferencePair*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer_Test_round_trip_ValueReferencePair" data-uid="AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer.Test_round_trip_ValueReferencePair">Test_round_trip_ValueReferencePair()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Test_round_trip_ValueReferencePair()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Tests_TestXmlizationOfConcreteClassesOutsideContainer.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Tests.TestXmlizationOfConcreteClassesOutsideContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02.Tests/TestXmlizationOfConcreteClassesOutsideContainer.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
