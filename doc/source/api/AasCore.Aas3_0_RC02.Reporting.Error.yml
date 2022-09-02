@@ -1,0 +1,290 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Reporting.Error
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.Error
+  id: Reporting.Error
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Reporting.Error.#ctor(System.String)
+  - AasCore.Aas3_0_RC02.Reporting.Error.Cause
+  - AasCore.Aas3_0_RC02.Reporting.Error.PathSegments
+  - AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment(AasCore.Aas3_0_RC02.Reporting.Segment)
+  langs:
+  - csharp
+  - vb
+  name: Reporting.Error
+  nameWithType: Reporting.Error
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Error
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 149
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nRepresent an error during the deserialization or the verification.\n"
+  example: []
+  syntax:
+    content: 'public class Error : object'
+    content.vb: >-
+      Public Class Error
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.Cause
+  commentId: F:AasCore.Aas3_0_RC02.Reporting.Error.Cause
+  id: Cause
+  parent: AasCore.Aas3_0_RC02.Reporting.Error
+  langs:
+  - csharp
+  - vb
+  name: Cause
+  nameWithType: Reporting.Error.Cause
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.Cause
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Cause
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 153
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public readonly string Cause
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Cause As String
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.PathSegments
+  commentId: P:AasCore.Aas3_0_RC02.Reporting.Error.PathSegments
+  id: PathSegments
+  parent: AasCore.Aas3_0_RC02.Reporting.Error
+  langs:
+  - csharp
+  - vb
+  name: PathSegments
+  nameWithType: Reporting.Error.PathSegments
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.PathSegments
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: PathSegments
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 154
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public ICollection<Reporting.Segment> PathSegments { get; }
+    parameters: []
+    return:
+      type: ICollection{AasCore.Aas3_0_RC02.Reporting.Segment}
+    content.vb: Public ReadOnly Property PathSegments As ICollection(Of Reporting.Segment)
+  overload: AasCore.Aas3_0_RC02.Reporting.Error.PathSegments*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.#ctor(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Reporting.Error.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AasCore.Aas3_0_RC02.Reporting.Error
+  langs:
+  - csharp
+  - vb
+  name: Error(String)
+  nameWithType: Reporting.Error.Error(String)
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.Error(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: .ctor
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 155
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public Error(string cause)
+    parameters:
+    - id: cause
+      type: System.String
+    content.vb: Public Sub New(cause As String)
+  overload: AasCore.Aas3_0_RC02.Reporting.Error.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment(AasCore.Aas3_0_RC02.Reporting.Segment)
+  commentId: M:AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment(AasCore.Aas3_0_RC02.Reporting.Segment)
+  id: PrependSegment(AasCore.Aas3_0_RC02.Reporting.Segment)
+  parent: AasCore.Aas3_0_RC02.Reporting.Error
+  langs:
+  - csharp
+  - vb
+  name: PrependSegment(Reporting.Segment)
+  nameWithType: Reporting.Error.PrependSegment(Reporting.Segment)
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment(AasCore.Aas3_0_RC02.Reporting.Segment)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: PrependSegment
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 160
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public void PrependSegment(Reporting.Segment segment)
+    parameters:
+    - id: segment
+      type: AasCore.Aas3_0_RC02.Reporting.Segment
+    content.vb: Public Sub PrependSegment(segment As Reporting.Segment)
+  overload: AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.PathSegments*
+  commentId: Overload:AasCore.Aas3_0_RC02.Reporting.Error.PathSegments
+  name: PathSegments
+  nameWithType: Reporting.Error.PathSegments
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.PathSegments
+- uid: ICollection{AasCore.Aas3_0_RC02.Reporting.Segment}
+  commentId: '!:ICollection{AasCore.Aas3_0_RC02.Reporting.Segment}'
+  definition: ICollection`1
+  name: ICollection<Reporting.Segment>
+  nameWithType: ICollection<Reporting.Segment>
+  fullName: ICollection<AasCore.Aas3_0_RC02.Reporting.Segment>
+  nameWithType.vb: ICollection(Of Reporting.Segment)
+  fullName.vb: ICollection(Of AasCore.Aas3_0_RC02.Reporting.Segment)
+  name.vb: ICollection(Of Reporting.Segment)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Reporting.Segment
+    name: Reporting.Segment
+    nameWithType: Reporting.Segment
+    fullName: AasCore.Aas3_0_RC02.Reporting.Segment
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Reporting.Segment
+    name: Reporting.Segment
+    nameWithType: Reporting.Segment
+    fullName: AasCore.Aas3_0_RC02.Reporting.Segment
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.#ctor*
+  commentId: Overload:AasCore.Aas3_0_RC02.Reporting.Error.#ctor
+  name: Error
+  nameWithType: Reporting.Error.Error
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.Error
+- uid: AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment*
+  commentId: Overload:AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment
+  name: PrependSegment
+  nameWithType: Reporting.Error.PrependSegment
+  fullName: AasCore.Aas3_0_RC02.Reporting.Error.PrependSegment
+- uid: AasCore.Aas3_0_RC02.Reporting.Segment
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.Segment
+  parent: AasCore.Aas3_0_RC02
+  name: Reporting.Segment
+  nameWithType: Reporting.Segment
+  fullName: AasCore.Aas3_0_RC02.Reporting.Segment

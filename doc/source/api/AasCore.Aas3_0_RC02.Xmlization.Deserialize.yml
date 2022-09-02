@@ -1,0 +1,2636 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  commentId: T:AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  id: Xmlization.Deserialize
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom(System.Xml.XmlReader)
+  - AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom(System.Xml.XmlReader)
+  langs:
+  - csharp
+  - vb
+  name: Xmlization.Deserialize
+  nameWithType: Xmlization.Deserialize
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Deserialize
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19560
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize instances of meta-model classes from XML.\n"
+  example:
+  - "\nHere is an example how to parse an instance of class IHasSemantics:\n<pre><code>var reader = new System.Xml.XmlReader(/* some arguments */);\nAas.IHasSemantics anInstance = Deserialize.IHasSemanticsFrom(\n    reader);</code></pre>\n"
+  - "\nIf the elements live in a namespace, you have to supply it. For example:\n<pre><code>var reader = new System.Xml.XmlReader(/* some arguments */);\nAas.IHasSemantics anInstance = Deserialize.IHasSemanticsFrom(\n    reader,\n    &quot;http://www.example.com/5/12&quot;);</code></pre>\n"
+  syntax:
+    content: 'public static class Deserialize : object'
+    content.vb: >-
+      Public Module Deserialize
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom(System.Xml.XmlReader)
+  id: IHasSemanticsFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasSemanticsFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IHasSemanticsFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasSemanticsFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19570
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasSemantics from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasSemantics IHasSemanticsFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IHasSemantics
+    content.vb: Public Shared Function IHasSemanticsFrom(reader As System.Xml.XmlReader) As IHasSemantics
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IHasSemantics.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom(System.Xml.XmlReader)
+  id: ExtensionFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ExtensionFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ExtensionFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ExtensionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19597
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Extension from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Extension ExtensionFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Extension
+    content.vb: Public Shared Function ExtensionFrom(reader As System.Xml.XmlReader) As Extension
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Extension.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom(System.Xml.XmlReader)
+  id: IHasExtensionsFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasExtensionsFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IHasExtensionsFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasExtensionsFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19623
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasExtensions from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasExtensions IHasExtensionsFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IHasExtensions
+    content.vb: Public Shared Function IHasExtensionsFrom(reader As System.Xml.XmlReader) As IHasExtensions
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IHasExtensions.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom(System.Xml.XmlReader)
+  id: IReferableFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IReferableFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IReferableFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IReferableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19650
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IReferable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IReferable IReferableFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IReferable
+    content.vb: Public Shared Function IReferableFrom(reader As System.Xml.XmlReader) As IReferable
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IReferable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom(System.Xml.XmlReader)
+  id: IIdentifiableFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IIdentifiableFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IIdentifiableFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IIdentifiableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19677
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IIdentifiable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IIdentifiable IIdentifiableFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IIdentifiable
+    content.vb: Public Shared Function IIdentifiableFrom(reader As System.Xml.XmlReader) As IIdentifiable
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IIdentifiable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom(System.Xml.XmlReader)
+  id: IHasKindFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasKindFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IHasKindFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasKindFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19704
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasKind from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasKind IHasKindFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IHasKind
+    content.vb: Public Shared Function IHasKindFrom(reader As System.Xml.XmlReader) As IHasKind
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IHasKind.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom(System.Xml.XmlReader)
+  id: IHasDataSpecificationFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IHasDataSpecificationFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IHasDataSpecificationFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IHasDataSpecificationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19731
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IHasDataSpecification from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IHasDataSpecification IHasDataSpecificationFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IHasDataSpecification
+    content.vb: Public Shared Function IHasDataSpecificationFrom(reader As System.Xml.XmlReader) As IHasDataSpecification
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IHasDataSpecification.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom(System.Xml.XmlReader)
+  id: AdministrativeInformationFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AdministrativeInformationFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.AdministrativeInformationFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AdministrativeInformationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19758
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AdministrativeInformation from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static AdministrativeInformation AdministrativeInformationFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.AdministrativeInformation
+    content.vb: Public Shared Function AdministrativeInformationFrom(reader As System.Xml.XmlReader) As AdministrativeInformation
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of AdministrativeInformation.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom(System.Xml.XmlReader)
+  id: IQualifiableFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IQualifiableFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IQualifiableFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IQualifiableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19784
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IQualifiable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IQualifiable IQualifiableFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IQualifiable
+    content.vb: Public Shared Function IQualifiableFrom(reader As System.Xml.XmlReader) As IQualifiable
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IQualifiable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom(System.Xml.XmlReader)
+  id: QualifierFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: QualifierFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.QualifierFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: QualifierFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19811
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Qualifier from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Qualifier QualifierFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Qualifier
+    content.vb: Public Shared Function QualifierFrom(reader As System.Xml.XmlReader) As Qualifier
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Qualifier.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom(System.Xml.XmlReader)
+  id: AssetAdministrationShellFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AssetAdministrationShellFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.AssetAdministrationShellFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AssetAdministrationShellFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19837
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AssetAdministrationShell from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static AssetAdministrationShell AssetAdministrationShellFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    content.vb: Public Shared Function AssetAdministrationShellFrom(reader As System.Xml.XmlReader) As AssetAdministrationShell
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of AssetAdministrationShell.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom(System.Xml.XmlReader)
+  id: AssetInformationFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AssetInformationFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.AssetInformationFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AssetInformationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19863
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AssetInformation from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static AssetInformation AssetInformationFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.AssetInformation
+    content.vb: Public Shared Function AssetInformationFrom(reader As System.Xml.XmlReader) As AssetInformation
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of AssetInformation.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom(System.Xml.XmlReader)
+  id: ResourceFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ResourceFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ResourceFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ResourceFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19889
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Resource from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Resource ResourceFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Resource
+    content.vb: Public Shared Function ResourceFrom(reader As System.Xml.XmlReader) As Resource
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Resource.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom(System.Xml.XmlReader)
+  id: SpecificAssetIdFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SpecificAssetIdFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.SpecificAssetIdFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SpecificAssetIdFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19915
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of SpecificAssetId from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static SpecificAssetId SpecificAssetIdFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.SpecificAssetId
+    content.vb: Public Shared Function SpecificAssetIdFrom(reader As System.Xml.XmlReader) As SpecificAssetId
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of SpecificAssetId.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom(System.Xml.XmlReader)
+  id: SubmodelFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SubmodelFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.SubmodelFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19941
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Submodel from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Submodel SubmodelFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Submodel
+    content.vb: Public Shared Function SubmodelFrom(reader As System.Xml.XmlReader) As Submodel
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Submodel.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom(System.Xml.XmlReader)
+  id: ISubmodelElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ISubmodelElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ISubmodelElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ISubmodelElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19967
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ISubmodelElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static ISubmodelElement ISubmodelElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.ISubmodelElement
+    content.vb: Public Shared Function ISubmodelElementFrom(reader As System.Xml.XmlReader) As ISubmodelElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of ISubmodelElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom(System.Xml.XmlReader)
+  id: IRelationshipElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IRelationshipElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IRelationshipElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IRelationshipElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 19994
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IRelationshipElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IRelationshipElement IRelationshipElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IRelationshipElement
+    content.vb: Public Shared Function IRelationshipElementFrom(reader As System.Xml.XmlReader) As IRelationshipElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IRelationshipElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom(System.Xml.XmlReader)
+  id: RelationshipElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: RelationshipElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.RelationshipElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RelationshipElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20021
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of RelationshipElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static RelationshipElement RelationshipElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.RelationshipElement
+    content.vb: Public Shared Function RelationshipElementFrom(reader As System.Xml.XmlReader) As RelationshipElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of RelationshipElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom(System.Xml.XmlReader)
+  id: SubmodelElementListFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementListFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.SubmodelElementListFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementListFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20047
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of SubmodelElementList from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static SubmodelElementList SubmodelElementListFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.SubmodelElementList
+    content.vb: Public Shared Function SubmodelElementListFrom(reader As System.Xml.XmlReader) As SubmodelElementList
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of SubmodelElementList.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  id: SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementCollectionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20073
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of SubmodelElementCollection from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static SubmodelElementCollection SubmodelElementCollectionFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.SubmodelElementCollection
+    content.vb: Public Shared Function SubmodelElementCollectionFrom(reader As System.Xml.XmlReader) As SubmodelElementCollection
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of SubmodelElementCollection.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom(System.Xml.XmlReader)
+  id: IDataElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IDataElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IDataElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IDataElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20099
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IDataElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IDataElement IDataElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IDataElement
+    content.vb: Public Shared Function IDataElementFrom(reader As System.Xml.XmlReader) As IDataElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IDataElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom(System.Xml.XmlReader)
+  id: PropertyFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: PropertyFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.PropertyFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: PropertyFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20126
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Property from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Property PropertyFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Property
+    content.vb: 'Public Shared Function PropertyFrom(reader As System.Xml.XmlReader) As '
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Property.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  id: MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MultiLanguagePropertyFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20152
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of MultiLanguageProperty from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static MultiLanguageProperty MultiLanguagePropertyFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.MultiLanguageProperty
+    content.vb: Public Shared Function MultiLanguagePropertyFrom(reader As System.Xml.XmlReader) As MultiLanguageProperty
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of MultiLanguageProperty.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom(System.Xml.XmlReader)
+  id: RangeFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: RangeFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.RangeFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RangeFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20178
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Range from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Range RangeFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Range
+    content.vb: Public Shared Function RangeFrom(reader As System.Xml.XmlReader) As Range
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Range.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom(System.Xml.XmlReader)
+  id: ReferenceElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ReferenceElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ReferenceElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20204
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ReferenceElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static ReferenceElement ReferenceElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.ReferenceElement
+    content.vb: Public Shared Function ReferenceElementFrom(reader As System.Xml.XmlReader) As ReferenceElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of ReferenceElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom(System.Xml.XmlReader)
+  id: BlobFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: BlobFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.BlobFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: BlobFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20230
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Blob from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Blob BlobFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Blob
+    content.vb: Public Shared Function BlobFrom(reader As System.Xml.XmlReader) As Blob
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Blob.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom(System.Xml.XmlReader)
+  id: FileFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: FileFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.FileFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: FileFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20256
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of File from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static File FileFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.File
+    content.vb: Public Shared Function FileFrom(reader As System.Xml.XmlReader) As File
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of File.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  id: AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AnnotatedRelationshipElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20282
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of AnnotatedRelationshipElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static AnnotatedRelationshipElement AnnotatedRelationshipElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+    content.vb: Public Shared Function AnnotatedRelationshipElementFrom(reader As System.Xml.XmlReader) As AnnotatedRelationshipElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of AnnotatedRelationshipElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom(System.Xml.XmlReader)
+  id: EntityFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EntityFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.EntityFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EntityFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20308
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Entity from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Entity EntityFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Entity
+    content.vb: Public Shared Function EntityFrom(reader As System.Xml.XmlReader) As Entity
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Entity.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom(System.Xml.XmlReader)
+  id: EventPayloadFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EventPayloadFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.EventPayloadFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EventPayloadFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20334
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of EventPayload from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static EventPayload EventPayloadFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.EventPayload
+    content.vb: Public Shared Function EventPayloadFrom(reader As System.Xml.XmlReader) As EventPayload
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of EventPayload.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom(System.Xml.XmlReader)
+  id: IEventElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IEventElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IEventElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IEventElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20360
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IEventElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IEventElement IEventElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IEventElement
+    content.vb: Public Shared Function IEventElementFrom(reader As System.Xml.XmlReader) As IEventElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IEventElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom(System.Xml.XmlReader)
+  id: BasicEventElementFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: BasicEventElementFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.BasicEventElementFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: BasicEventElementFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20387
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of BasicEventElement from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static BasicEventElement BasicEventElementFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.BasicEventElement
+    content.vb: Public Shared Function BasicEventElementFrom(reader As System.Xml.XmlReader) As BasicEventElement
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of BasicEventElement.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom(System.Xml.XmlReader)
+  id: OperationFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: OperationFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.OperationFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OperationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20413
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Operation from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Operation OperationFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Operation
+    content.vb: Public Shared Function OperationFrom(reader As System.Xml.XmlReader) As Operation
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Operation.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom(System.Xml.XmlReader)
+  id: OperationVariableFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: OperationVariableFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.OperationVariableFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OperationVariableFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20439
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of OperationVariable from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static OperationVariable OperationVariableFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.OperationVariable
+    content.vb: Public Shared Function OperationVariableFrom(reader As System.Xml.XmlReader) As OperationVariable
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of OperationVariable.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom(System.Xml.XmlReader)
+  id: CapabilityFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: CapabilityFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.CapabilityFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: CapabilityFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20465
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Capability from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Capability CapabilityFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Capability
+    content.vb: Public Shared Function CapabilityFrom(reader As System.Xml.XmlReader) As Capability
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Capability.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom(System.Xml.XmlReader)
+  id: ConceptDescriptionFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ConceptDescriptionFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ConceptDescriptionFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ConceptDescriptionFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20491
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ConceptDescription from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static ConceptDescription ConceptDescriptionFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.ConceptDescription
+    content.vb: Public Shared Function ConceptDescriptionFrom(reader As System.Xml.XmlReader) As ConceptDescription
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of ConceptDescription.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom(System.Xml.XmlReader)
+  id: ReferenceFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ReferenceFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ReferenceFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20517
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Reference from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Reference ReferenceFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Reference
+    content.vb: Public Shared Function ReferenceFrom(reader As System.Xml.XmlReader) As Reference
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Reference.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom(System.Xml.XmlReader)
+  id: KeyFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: KeyFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.KeyFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: KeyFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20543
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Key from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Key KeyFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Key
+    content.vb: Public Shared Function KeyFrom(reader As System.Xml.XmlReader) As Key
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Key.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom(System.Xml.XmlReader)
+  id: LangStringFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: LangStringFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.LangStringFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: LangStringFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20569
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of LangString from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static LangString LangStringFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.LangString
+    content.vb: Public Shared Function LangStringFrom(reader As System.Xml.XmlReader) As LangString
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of LangString.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom(System.Xml.XmlReader)
+  id: EnvironmentFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EnvironmentFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.EnvironmentFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EnvironmentFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20595
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of Environment from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static Environment EnvironmentFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.Environment
+    content.vb: Public Shared Function EnvironmentFrom(reader As System.Xml.XmlReader) As Environment
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of Environment.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom(System.Xml.XmlReader)
+  id: IDataSpecificationContentFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: IDataSpecificationContentFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.IDataSpecificationContentFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IDataSpecificationContentFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20621
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of IDataSpecificationContent from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static IDataSpecificationContent IDataSpecificationContentFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.IDataSpecificationContent
+    content.vb: Public Shared Function IDataSpecificationContentFrom(reader As System.Xml.XmlReader) As IDataSpecificationContent
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of IDataSpecificationContent.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  id: EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EmbeddedDataSpecificationFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20648
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of EmbeddedDataSpecification from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static EmbeddedDataSpecification EmbeddedDataSpecificationFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    content.vb: Public Shared Function EmbeddedDataSpecificationFrom(reader As System.Xml.XmlReader) As EmbeddedDataSpecification
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of EmbeddedDataSpecification.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom(System.Xml.XmlReader)
+  id: ValueReferencePairFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ValueReferencePairFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ValueReferencePairFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ValueReferencePairFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20674
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ValueReferencePair from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static ValueReferencePair ValueReferencePairFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.ValueReferencePair
+    content.vb: Public Shared Function ValueReferencePairFrom(reader As System.Xml.XmlReader) As ValueReferencePair
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of ValueReferencePair.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom(System.Xml.XmlReader)
+  id: ValueListFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: ValueListFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.ValueListFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ValueListFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20700
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of ValueList from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static ValueList ValueListFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.ValueList
+    content.vb: Public Shared Function ValueListFrom(reader As System.Xml.XmlReader) As ValueList
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of ValueList.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From(System.Xml.XmlReader)
+  id: DataSpecificationIec61360From(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationIec61360From(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.DataSpecificationIec61360From(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationIec61360From
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20726
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of DataSpecificationIec61360 from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static DataSpecificationIec61360 DataSpecificationIec61360From(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+    content.vb: Public Shared Function DataSpecificationIec61360From(reader As System.Xml.XmlReader) As DataSpecificationIec61360
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of DataSpecificationIec61360.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  commentId: M:AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  id: DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  parent: AasCore.Aas3_0_RC02.Xmlization.Deserialize
+  langs:
+  - csharp
+  - vb
+  name: DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  nameWithType: Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/xmlization.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataSpecificationPhysicalUnitFrom
+    path: ../../src/AasCore.Aas3_0_RC02/xmlization.cs
+    startLine: 20752
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDeserialize an instance of DataSpecificationPhysicalUnit from <code data-dev-comment-type=\"paramref\" class=\"paramref\">reader</code>.\n"
+  example: []
+  syntax:
+    content: public static DataSpecificationPhysicalUnit DataSpecificationPhysicalUnitFrom(System.Xml.XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: Initialized XML reader with cursor set to the element
+    return:
+      type: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+    content.vb: Public Shared Function DataSpecificationPhysicalUnitFrom(reader As System.Xml.XmlReader) As DataSpecificationPhysicalUnit
+  overload: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom*
+  exceptions:
+  - type: AasCore.Aas3_0_RC02.Xmlization.Exception
+    commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+    description: "\nThrown when the element is not a valid XML\nrepresentation of DataSpecificationPhysicalUnit.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.Xmlization.Exception
+  commentId: T:AasCore.Aas3_0_RC02.Xmlization.Exception
+  name: Xmlization.Exception
+  nameWithType: Xmlization.Exception
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Exception
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom
+  name: IHasSemanticsFrom
+  nameWithType: Xmlization.Deserialize.IHasSemanticsFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasSemanticsFrom
+- uid: System.Xml.XmlReader
+  isExternal: true
+  name: System.Xml.XmlReader
+  nameWithType: System.Xml.XmlReader
+  fullName: System.Xml.XmlReader
+- uid: AasCore.Aas3_0_RC02.IHasSemantics
+  commentId: T:AasCore.Aas3_0_RC02.IHasSemantics
+  parent: AasCore.Aas3_0_RC02
+  name: IHasSemantics
+  nameWithType: IHasSemantics
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom
+  name: ExtensionFrom
+  nameWithType: Xmlization.Deserialize.ExtensionFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ExtensionFrom
+- uid: AasCore.Aas3_0_RC02.Extension
+  commentId: T:AasCore.Aas3_0_RC02.Extension
+  parent: AasCore.Aas3_0_RC02
+  name: Extension
+  nameWithType: Extension
+  fullName: AasCore.Aas3_0_RC02.Extension
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom
+  name: IHasExtensionsFrom
+  nameWithType: Xmlization.Deserialize.IHasExtensionsFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasExtensionsFrom
+- uid: AasCore.Aas3_0_RC02.IHasExtensions
+  commentId: T:AasCore.Aas3_0_RC02.IHasExtensions
+  parent: AasCore.Aas3_0_RC02
+  name: IHasExtensions
+  nameWithType: IHasExtensions
+  fullName: AasCore.Aas3_0_RC02.IHasExtensions
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom
+  name: IReferableFrom
+  nameWithType: Xmlization.Deserialize.IReferableFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IReferableFrom
+- uid: AasCore.Aas3_0_RC02.IReferable
+  commentId: T:AasCore.Aas3_0_RC02.IReferable
+  parent: AasCore.Aas3_0_RC02
+  name: IReferable
+  nameWithType: IReferable
+  fullName: AasCore.Aas3_0_RC02.IReferable
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom
+  name: IIdentifiableFrom
+  nameWithType: Xmlization.Deserialize.IIdentifiableFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IIdentifiableFrom
+- uid: AasCore.Aas3_0_RC02.IIdentifiable
+  commentId: T:AasCore.Aas3_0_RC02.IIdentifiable
+  parent: AasCore.Aas3_0_RC02
+  name: IIdentifiable
+  nameWithType: IIdentifiable
+  fullName: AasCore.Aas3_0_RC02.IIdentifiable
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom
+  name: IHasKindFrom
+  nameWithType: Xmlization.Deserialize.IHasKindFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasKindFrom
+- uid: AasCore.Aas3_0_RC02.IHasKind
+  commentId: T:AasCore.Aas3_0_RC02.IHasKind
+  parent: AasCore.Aas3_0_RC02
+  name: IHasKind
+  nameWithType: IHasKind
+  fullName: AasCore.Aas3_0_RC02.IHasKind
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom
+  name: IHasDataSpecificationFrom
+  nameWithType: Xmlization.Deserialize.IHasDataSpecificationFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IHasDataSpecificationFrom
+- uid: AasCore.Aas3_0_RC02.IHasDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.IHasDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: IHasDataSpecification
+  nameWithType: IHasDataSpecification
+  fullName: AasCore.Aas3_0_RC02.IHasDataSpecification
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom
+  name: AdministrativeInformationFrom
+  nameWithType: Xmlization.Deserialize.AdministrativeInformationFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AdministrativeInformationFrom
+- uid: AasCore.Aas3_0_RC02.AdministrativeInformation
+  commentId: T:AasCore.Aas3_0_RC02.AdministrativeInformation
+  parent: AasCore.Aas3_0_RC02
+  name: AdministrativeInformation
+  nameWithType: AdministrativeInformation
+  fullName: AasCore.Aas3_0_RC02.AdministrativeInformation
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom
+  name: IQualifiableFrom
+  nameWithType: Xmlization.Deserialize.IQualifiableFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IQualifiableFrom
+- uid: AasCore.Aas3_0_RC02.IQualifiable
+  commentId: T:AasCore.Aas3_0_RC02.IQualifiable
+  parent: AasCore.Aas3_0_RC02
+  name: IQualifiable
+  nameWithType: IQualifiable
+  fullName: AasCore.Aas3_0_RC02.IQualifiable
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom
+  name: QualifierFrom
+  nameWithType: Xmlization.Deserialize.QualifierFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.QualifierFrom
+- uid: AasCore.Aas3_0_RC02.Qualifier
+  commentId: T:AasCore.Aas3_0_RC02.Qualifier
+  parent: AasCore.Aas3_0_RC02
+  name: Qualifier
+  nameWithType: Qualifier
+  fullName: AasCore.Aas3_0_RC02.Qualifier
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom
+  name: AssetAdministrationShellFrom
+  nameWithType: Xmlization.Deserialize.AssetAdministrationShellFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetAdministrationShellFrom
+- uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  commentId: T:AasCore.Aas3_0_RC02.AssetAdministrationShell
+  parent: AasCore.Aas3_0_RC02
+  name: AssetAdministrationShell
+  nameWithType: AssetAdministrationShell
+  fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom
+  name: AssetInformationFrom
+  nameWithType: Xmlization.Deserialize.AssetInformationFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AssetInformationFrom
+- uid: AasCore.Aas3_0_RC02.AssetInformation
+  commentId: T:AasCore.Aas3_0_RC02.AssetInformation
+  parent: AasCore.Aas3_0_RC02
+  name: AssetInformation
+  nameWithType: AssetInformation
+  fullName: AasCore.Aas3_0_RC02.AssetInformation
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom
+  name: ResourceFrom
+  nameWithType: Xmlization.Deserialize.ResourceFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ResourceFrom
+- uid: AasCore.Aas3_0_RC02.Resource
+  commentId: T:AasCore.Aas3_0_RC02.Resource
+  parent: AasCore.Aas3_0_RC02
+  name: Resource
+  nameWithType: Resource
+  fullName: AasCore.Aas3_0_RC02.Resource
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom
+  name: SpecificAssetIdFrom
+  nameWithType: Xmlization.Deserialize.SpecificAssetIdFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SpecificAssetIdFrom
+- uid: AasCore.Aas3_0_RC02.SpecificAssetId
+  commentId: T:AasCore.Aas3_0_RC02.SpecificAssetId
+  parent: AasCore.Aas3_0_RC02
+  name: SpecificAssetId
+  nameWithType: SpecificAssetId
+  fullName: AasCore.Aas3_0_RC02.SpecificAssetId
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom
+  name: SubmodelFrom
+  nameWithType: Xmlization.Deserialize.SubmodelFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelFrom
+- uid: AasCore.Aas3_0_RC02.Submodel
+  commentId: T:AasCore.Aas3_0_RC02.Submodel
+  parent: AasCore.Aas3_0_RC02
+  name: Submodel
+  nameWithType: Submodel
+  fullName: AasCore.Aas3_0_RC02.Submodel
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom
+  name: ISubmodelElementFrom
+  nameWithType: Xmlization.Deserialize.ISubmodelElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ISubmodelElementFrom
+- uid: AasCore.Aas3_0_RC02.ISubmodelElement
+  commentId: T:AasCore.Aas3_0_RC02.ISubmodelElement
+  parent: AasCore.Aas3_0_RC02
+  name: ISubmodelElement
+  nameWithType: ISubmodelElement
+  fullName: AasCore.Aas3_0_RC02.ISubmodelElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom
+  name: IRelationshipElementFrom
+  nameWithType: Xmlization.Deserialize.IRelationshipElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IRelationshipElementFrom
+- uid: AasCore.Aas3_0_RC02.IRelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.IRelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: IRelationshipElement
+  nameWithType: IRelationshipElement
+  fullName: AasCore.Aas3_0_RC02.IRelationshipElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom
+  name: RelationshipElementFrom
+  nameWithType: Xmlization.Deserialize.RelationshipElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RelationshipElementFrom
+- uid: AasCore.Aas3_0_RC02.RelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.RelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: RelationshipElement
+  nameWithType: RelationshipElement
+  fullName: AasCore.Aas3_0_RC02.RelationshipElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom
+  name: SubmodelElementListFrom
+  nameWithType: Xmlization.Deserialize.SubmodelElementListFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementListFrom
+- uid: AasCore.Aas3_0_RC02.SubmodelElementList
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementList
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementList
+  nameWithType: SubmodelElementList
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementList
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom
+  name: SubmodelElementCollectionFrom
+  nameWithType: Xmlization.Deserialize.SubmodelElementCollectionFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.SubmodelElementCollectionFrom
+- uid: AasCore.Aas3_0_RC02.SubmodelElementCollection
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementCollection
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementCollection
+  nameWithType: SubmodelElementCollection
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementCollection
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom
+  name: IDataElementFrom
+  nameWithType: Xmlization.Deserialize.IDataElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataElementFrom
+- uid: AasCore.Aas3_0_RC02.IDataElement
+  commentId: T:AasCore.Aas3_0_RC02.IDataElement
+  parent: AasCore.Aas3_0_RC02
+  name: IDataElement
+  nameWithType: IDataElement
+  fullName: AasCore.Aas3_0_RC02.IDataElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom
+  name: PropertyFrom
+  nameWithType: Xmlization.Deserialize.PropertyFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.PropertyFrom
+- uid: AasCore.Aas3_0_RC02.Property
+  commentId: T:AasCore.Aas3_0_RC02.Property
+  parent: AasCore.Aas3_0_RC02
+  name: Property
+  nameWithType: Property
+  fullName: AasCore.Aas3_0_RC02.Property
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom
+  name: MultiLanguagePropertyFrom
+  nameWithType: Xmlization.Deserialize.MultiLanguagePropertyFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.MultiLanguagePropertyFrom
+- uid: AasCore.Aas3_0_RC02.MultiLanguageProperty
+  commentId: T:AasCore.Aas3_0_RC02.MultiLanguageProperty
+  parent: AasCore.Aas3_0_RC02
+  name: MultiLanguageProperty
+  nameWithType: MultiLanguageProperty
+  fullName: AasCore.Aas3_0_RC02.MultiLanguageProperty
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom
+  name: RangeFrom
+  nameWithType: Xmlization.Deserialize.RangeFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.RangeFrom
+- uid: AasCore.Aas3_0_RC02.Range
+  commentId: T:AasCore.Aas3_0_RC02.Range
+  parent: AasCore.Aas3_0_RC02
+  name: Range
+  nameWithType: Range
+  fullName: AasCore.Aas3_0_RC02.Range
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom
+  name: ReferenceElementFrom
+  nameWithType: Xmlization.Deserialize.ReferenceElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceElementFrom
+- uid: AasCore.Aas3_0_RC02.ReferenceElement
+  commentId: T:AasCore.Aas3_0_RC02.ReferenceElement
+  parent: AasCore.Aas3_0_RC02
+  name: ReferenceElement
+  nameWithType: ReferenceElement
+  fullName: AasCore.Aas3_0_RC02.ReferenceElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom
+  name: BlobFrom
+  nameWithType: Xmlization.Deserialize.BlobFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BlobFrom
+- uid: AasCore.Aas3_0_RC02.Blob
+  commentId: T:AasCore.Aas3_0_RC02.Blob
+  parent: AasCore.Aas3_0_RC02
+  name: Blob
+  nameWithType: Blob
+  fullName: AasCore.Aas3_0_RC02.Blob
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom
+  name: FileFrom
+  nameWithType: Xmlization.Deserialize.FileFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.FileFrom
+- uid: AasCore.Aas3_0_RC02.File
+  commentId: T:AasCore.Aas3_0_RC02.File
+  parent: AasCore.Aas3_0_RC02
+  name: File
+  nameWithType: File
+  fullName: AasCore.Aas3_0_RC02.File
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom
+  name: AnnotatedRelationshipElementFrom
+  nameWithType: Xmlization.Deserialize.AnnotatedRelationshipElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.AnnotatedRelationshipElementFrom
+- uid: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+  commentId: T:AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+  parent: AasCore.Aas3_0_RC02
+  name: AnnotatedRelationshipElement
+  nameWithType: AnnotatedRelationshipElement
+  fullName: AasCore.Aas3_0_RC02.AnnotatedRelationshipElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom
+  name: EntityFrom
+  nameWithType: Xmlization.Deserialize.EntityFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EntityFrom
+- uid: AasCore.Aas3_0_RC02.Entity
+  commentId: T:AasCore.Aas3_0_RC02.Entity
+  parent: AasCore.Aas3_0_RC02
+  name: Entity
+  nameWithType: Entity
+  fullName: AasCore.Aas3_0_RC02.Entity
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom
+  name: EventPayloadFrom
+  nameWithType: Xmlization.Deserialize.EventPayloadFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EventPayloadFrom
+- uid: AasCore.Aas3_0_RC02.EventPayload
+  commentId: T:AasCore.Aas3_0_RC02.EventPayload
+  parent: AasCore.Aas3_0_RC02
+  name: EventPayload
+  nameWithType: EventPayload
+  fullName: AasCore.Aas3_0_RC02.EventPayload
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom
+  name: IEventElementFrom
+  nameWithType: Xmlization.Deserialize.IEventElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IEventElementFrom
+- uid: AasCore.Aas3_0_RC02.IEventElement
+  commentId: T:AasCore.Aas3_0_RC02.IEventElement
+  parent: AasCore.Aas3_0_RC02
+  name: IEventElement
+  nameWithType: IEventElement
+  fullName: AasCore.Aas3_0_RC02.IEventElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom
+  name: BasicEventElementFrom
+  nameWithType: Xmlization.Deserialize.BasicEventElementFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.BasicEventElementFrom
+- uid: AasCore.Aas3_0_RC02.BasicEventElement
+  commentId: T:AasCore.Aas3_0_RC02.BasicEventElement
+  parent: AasCore.Aas3_0_RC02
+  name: BasicEventElement
+  nameWithType: BasicEventElement
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom
+  name: OperationFrom
+  nameWithType: Xmlization.Deserialize.OperationFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationFrom
+- uid: AasCore.Aas3_0_RC02.Operation
+  commentId: T:AasCore.Aas3_0_RC02.Operation
+  parent: AasCore.Aas3_0_RC02
+  name: Operation
+  nameWithType: Operation
+  fullName: AasCore.Aas3_0_RC02.Operation
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom
+  name: OperationVariableFrom
+  nameWithType: Xmlization.Deserialize.OperationVariableFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.OperationVariableFrom
+- uid: AasCore.Aas3_0_RC02.OperationVariable
+  commentId: T:AasCore.Aas3_0_RC02.OperationVariable
+  parent: AasCore.Aas3_0_RC02
+  name: OperationVariable
+  nameWithType: OperationVariable
+  fullName: AasCore.Aas3_0_RC02.OperationVariable
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom
+  name: CapabilityFrom
+  nameWithType: Xmlization.Deserialize.CapabilityFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.CapabilityFrom
+- uid: AasCore.Aas3_0_RC02.Capability
+  commentId: T:AasCore.Aas3_0_RC02.Capability
+  parent: AasCore.Aas3_0_RC02
+  name: Capability
+  nameWithType: Capability
+  fullName: AasCore.Aas3_0_RC02.Capability
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom
+  name: ConceptDescriptionFrom
+  nameWithType: Xmlization.Deserialize.ConceptDescriptionFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ConceptDescriptionFrom
+- uid: AasCore.Aas3_0_RC02.ConceptDescription
+  commentId: T:AasCore.Aas3_0_RC02.ConceptDescription
+  parent: AasCore.Aas3_0_RC02
+  name: ConceptDescription
+  nameWithType: ConceptDescription
+  fullName: AasCore.Aas3_0_RC02.ConceptDescription
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom
+  name: ReferenceFrom
+  nameWithType: Xmlization.Deserialize.ReferenceFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ReferenceFrom
+- uid: AasCore.Aas3_0_RC02.Reference
+  commentId: T:AasCore.Aas3_0_RC02.Reference
+  parent: AasCore.Aas3_0_RC02
+  name: Reference
+  nameWithType: Reference
+  fullName: AasCore.Aas3_0_RC02.Reference
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom
+  name: KeyFrom
+  nameWithType: Xmlization.Deserialize.KeyFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.KeyFrom
+- uid: AasCore.Aas3_0_RC02.Key
+  commentId: T:AasCore.Aas3_0_RC02.Key
+  parent: AasCore.Aas3_0_RC02
+  name: Key
+  nameWithType: Key
+  fullName: AasCore.Aas3_0_RC02.Key
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom
+  name: LangStringFrom
+  nameWithType: Xmlization.Deserialize.LangStringFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.LangStringFrom
+- uid: AasCore.Aas3_0_RC02.LangString
+  commentId: T:AasCore.Aas3_0_RC02.LangString
+  parent: AasCore.Aas3_0_RC02
+  name: LangString
+  nameWithType: LangString
+  fullName: AasCore.Aas3_0_RC02.LangString
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom
+  name: EnvironmentFrom
+  nameWithType: Xmlization.Deserialize.EnvironmentFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EnvironmentFrom
+- uid: AasCore.Aas3_0_RC02.Environment
+  commentId: T:AasCore.Aas3_0_RC02.Environment
+  parent: AasCore.Aas3_0_RC02
+  name: Environment
+  nameWithType: Environment
+  fullName: AasCore.Aas3_0_RC02.Environment
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom
+  name: IDataSpecificationContentFrom
+  nameWithType: Xmlization.Deserialize.IDataSpecificationContentFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.IDataSpecificationContentFrom
+- uid: AasCore.Aas3_0_RC02.IDataSpecificationContent
+  commentId: T:AasCore.Aas3_0_RC02.IDataSpecificationContent
+  parent: AasCore.Aas3_0_RC02
+  name: IDataSpecificationContent
+  nameWithType: IDataSpecificationContent
+  fullName: AasCore.Aas3_0_RC02.IDataSpecificationContent
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom
+  name: EmbeddedDataSpecificationFrom
+  nameWithType: Xmlization.Deserialize.EmbeddedDataSpecificationFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.EmbeddedDataSpecificationFrom
+- uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: EmbeddedDataSpecification
+  nameWithType: EmbeddedDataSpecification
+  fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom
+  name: ValueReferencePairFrom
+  nameWithType: Xmlization.Deserialize.ValueReferencePairFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueReferencePairFrom
+- uid: AasCore.Aas3_0_RC02.ValueReferencePair
+  commentId: T:AasCore.Aas3_0_RC02.ValueReferencePair
+  parent: AasCore.Aas3_0_RC02
+  name: ValueReferencePair
+  nameWithType: ValueReferencePair
+  fullName: AasCore.Aas3_0_RC02.ValueReferencePair
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom
+  name: ValueListFrom
+  nameWithType: Xmlization.Deserialize.ValueListFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.ValueListFrom
+- uid: AasCore.Aas3_0_RC02.ValueList
+  commentId: T:AasCore.Aas3_0_RC02.ValueList
+  parent: AasCore.Aas3_0_RC02
+  name: ValueList
+  nameWithType: ValueList
+  fullName: AasCore.Aas3_0_RC02.ValueList
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From
+  name: DataSpecificationIec61360From
+  nameWithType: Xmlization.Deserialize.DataSpecificationIec61360From
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationIec61360From
+- uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataSpecificationIec61360
+  parent: AasCore.Aas3_0_RC02
+  name: DataSpecificationIec61360
+  nameWithType: DataSpecificationIec61360
+  fullName: AasCore.Aas3_0_RC02.DataSpecificationIec61360
+- uid: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom*
+  commentId: Overload:AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom
+  name: DataSpecificationPhysicalUnitFrom
+  nameWithType: Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom
+  fullName: AasCore.Aas3_0_RC02.Xmlization.Deserialize.DataSpecificationPhysicalUnitFrom
+- uid: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+  commentId: T:AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit
+  parent: AasCore.Aas3_0_RC02
+  name: DataSpecificationPhysicalUnit
+  nameWithType: DataSpecificationPhysicalUnit
+  fullName: AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit

@@ -1,0 +1,1830 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Environment
+  commentId: T:AasCore.Aas3_0_RC02.Environment
+  id: Environment
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Environment.#ctor(System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}},System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}},System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}})
+  - AasCore.Aas3_0_RC02.Environment.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  - AasCore.Aas3_0_RC02.Environment.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  - AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells
+  - AasCore.Aas3_0_RC02.Environment.ConceptDescriptions
+  - AasCore.Aas3_0_RC02.Environment.Descend
+  - AasCore.Aas3_0_RC02.Environment.DescendOnce
+  - AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty
+  - AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty
+  - AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty
+  - AasCore.Aas3_0_RC02.Environment.Submodels
+  - AasCore.Aas3_0_RC02.Environment.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  - AasCore.Aas3_0_RC02.Environment.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  langs:
+  - csharp
+  - vb
+  name: Environment
+  nameWithType: Environment
+  fullName: AasCore.Aas3_0_RC02.Environment
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Environment
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11130
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nContainer for the sets of different identifiables.\n"
+  remarks: "\nw.r.t. file exchange: There is exactly one environment independent on how many\nfiles the contained elements are split. If the file is split then there\nshall be no element with the same identifier in two different files.\n"
+  example: []
+  syntax:
+    content: 'public class Environment : object, IClass'
+    content.vb: >-
+      Public Class Environment
+
+          Inherits Object
+
+          Implements IClass
+  inheritance:
+  - System.Object
+  implements:
+  - AasCore.Aas3_0_RC02.IClass
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells
+  commentId: P:AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells
+  id: AssetAdministrationShells
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: AssetAdministrationShells
+  nameWithType: Environment.AssetAdministrationShells
+  fullName: AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AssetAdministrationShells
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11135
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAsset administration shell\n"
+  example: []
+  syntax:
+    content: public List<AssetAdministrationShell>? AssetAdministrationShells { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}}
+    content.vb: Public Property AssetAdministrationShells As List(Of AssetAdministrationShell)?
+  overload: AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.Submodels
+  commentId: P:AasCore.Aas3_0_RC02.Environment.Submodels
+  id: Submodels
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Submodels
+  nameWithType: Environment.Submodels
+  fullName: AasCore.Aas3_0_RC02.Environment.Submodels
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Submodels
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11140
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nSubmodel\n"
+  example: []
+  syntax:
+    content: public List<Submodel>? Submodels { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}}
+    content.vb: Public Property Submodels As List(Of Submodel)?
+  overload: AasCore.Aas3_0_RC02.Environment.Submodels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.ConceptDescriptions
+  commentId: P:AasCore.Aas3_0_RC02.Environment.ConceptDescriptions
+  id: ConceptDescriptions
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: ConceptDescriptions
+  nameWithType: Environment.ConceptDescriptions
+  fullName: AasCore.Aas3_0_RC02.Environment.ConceptDescriptions
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ConceptDescriptions
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11145
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nConcept description\n"
+  example: []
+  syntax:
+    content: public List<ConceptDescription>? ConceptDescriptions { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}}
+    content.vb: Public Property ConceptDescriptions As List(Of ConceptDescription)?
+  overload: AasCore.Aas3_0_RC02.Environment.ConceptDescriptions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty
+  id: OverAssetAdministrationShellsOrEmpty
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: OverAssetAdministrationShellsOrEmpty()
+  nameWithType: Environment.OverAssetAdministrationShellsOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverAssetAdministrationShellsOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11150
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over AssetAdministrationShells, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<AssetAdministrationShell> OverAssetAdministrationShellsOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.AssetAdministrationShell}
+    content.vb: Public Function OverAssetAdministrationShellsOrEmpty As IEnumerable(Of AssetAdministrationShell)
+  overload: AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty
+  id: OverSubmodelsOrEmpty
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: OverSubmodelsOrEmpty()
+  nameWithType: Environment.OverSubmodelsOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverSubmodelsOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11159
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over Submodels, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Submodel> OverSubmodelsOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Submodel}
+    content.vb: Public Function OverSubmodelsOrEmpty As IEnumerable(Of Submodel)
+  overload: AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty
+  id: OverConceptDescriptionsOrEmpty
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: OverConceptDescriptionsOrEmpty()
+  nameWithType: Environment.OverConceptDescriptionsOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverConceptDescriptionsOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11168
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over ConceptDescriptions, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ConceptDescription> OverConceptDescriptionsOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.ConceptDescription}
+    content.vb: Public Function OverConceptDescriptionsOrEmpty As IEnumerable(Of ConceptDescription)
+  overload: AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.DescendOnce
+  commentId: M:AasCore.Aas3_0_RC02.Environment.DescendOnce
+  id: DescendOnce
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: DescendOnce()
+  nameWithType: Environment.DescendOnce()
+  fullName: AasCore.Aas3_0_RC02.Environment.DescendOnce()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DescendOnce
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11178
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over all the class instances referenced from this instance\nwithout further recursion.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IClass> DescendOnce()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.IClass}
+    content.vb: Public Function DescendOnce As IEnumerable(Of IClass)
+  overload: AasCore.Aas3_0_RC02.Environment.DescendOnce*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.DescendOnce
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.Descend
+  commentId: M:AasCore.Aas3_0_RC02.Environment.Descend
+  id: Descend
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Descend()
+  nameWithType: Environment.Descend()
+  fullName: AasCore.Aas3_0_RC02.Environment.Descend()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Descend
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11208
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate recursively over all the class instances referenced from this instance.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IClass> Descend()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.IClass}
+    content.vb: Public Function Descend As IEnumerable(Of IClass)
+  overload: AasCore.Aas3_0_RC02.Environment.Descend*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Descend
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  commentId: M:AasCore.Aas3_0_RC02.Environment.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  id: Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitation.IVisitor)
+  nameWithType: Environment.Accept(Visitation.IVisitor)
+  fullName: AasCore.Aas3_0_RC02.Environment.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Accept
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11257
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the <code data-dev-comment-type=\"paramref\" class=\"paramref\">visitor</code> to visit this instance\nfor double dispatch.\n"
+  example: []
+  syntax:
+    content: public void Accept(Visitation.IVisitor visitor)
+    parameters:
+    - id: visitor
+      type: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    content.vb: Public Sub Accept(visitor As Visitation.IVisitor)
+  overload: AasCore.Aas3_0_RC02.Environment.Accept*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.Environment.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  commentId: M:AasCore.Aas3_0_RC02.Environment.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  id: Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: Environment.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.Environment.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Accept
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11266
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the visitor to visit this instance for double dispatch\nwith the <code data-dev-comment-type=\"paramref\" class=\"paramref\">context</code>.\n"
+  example: []
+  syntax:
+    content: public void Accept<TContext>(Visitation.IVisitorWithContext<TContext> visitor, TContext context)
+    parameters:
+    - id: visitor
+      type: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}}
+    - id: context
+      type: '{TContext}'
+    typeParameters:
+    - id: TContext
+    content.vb: Public Sub Accept(Of TContext)(visitor As Visitation.IVisitorWithContext(Of TContext), context As TContext)
+  overload: AasCore.Aas3_0_RC02.Environment.Accept*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}},{TContext})
+  nameWithType.vb: Environment.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.Environment.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+- uid: AasCore.Aas3_0_RC02.Environment.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  commentId: M:AasCore.Aas3_0_RC02.Environment.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  id: Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: Environment.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.Environment.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Transform
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11277
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the <code data-dev-comment-type=\"paramref\" class=\"paramref\">transformer</code> to transform this instance\nfor double dispatch.\n"
+  example: []
+  syntax:
+    content: public T Transform<T>(Visitation.ITransformer<T> transformer)
+    parameters:
+    - id: transformer
+      type: AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Transform(Of T)(transformer As Visitation.ITransformer(Of T)) As T
+  overload: AasCore.Aas3_0_RC02.Environment.Transform*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}})
+  nameWithType.vb: Environment.Transform(Of T)(Visitation.ITransformer(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.Environment.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+- uid: AasCore.Aas3_0_RC02.Environment.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  commentId: M:AasCore.Aas3_0_RC02.Environment.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  id: Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: Environment.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.Environment.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Transform
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11286
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the <code data-dev-comment-type=\"paramref\" class=\"paramref\">transformer</code> to visit this instance\nfor double dispatch with the <code data-dev-comment-type=\"paramref\" class=\"paramref\">context</code>.\n"
+  example: []
+  syntax:
+    content: public T Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T> transformer, TContext context)
+    parameters:
+    - id: transformer
+      type: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}}
+    - id: context
+      type: '{TContext}'
+    typeParameters:
+    - id: TContext
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Transform(Of TContext, T)(transformer As Visitation.ITransformerWithContext(Of TContext, T), context As TContext) As T
+  overload: AasCore.Aas3_0_RC02.Environment.Transform*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}},{TContext})
+  nameWithType.vb: Environment.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.Environment.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+- uid: AasCore.Aas3_0_RC02.Environment.#ctor(System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}},System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}},System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}})
+  commentId: M:AasCore.Aas3_0_RC02.Environment.#ctor(System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}},System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}},System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}})
+  id: '#ctor(System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}},System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}},System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}})'
+  parent: AasCore.Aas3_0_RC02.Environment
+  langs:
+  - csharp
+  - vb
+  name: Environment(Nullable<List<AssetAdministrationShell>>, Nullable<List<Submodel>>, Nullable<List<ConceptDescription>>)
+  nameWithType: Environment.Environment(Nullable<List<AssetAdministrationShell>>, Nullable<List<Submodel>>, Nullable<List<ConceptDescription>>)
+  fullName: AasCore.Aas3_0_RC02.Environment.Environment(System.Nullable<List<AasCore.Aas3_0_RC02.AssetAdministrationShell>>, System.Nullable<List<AasCore.Aas3_0_RC02.Submodel>>, System.Nullable<List<AasCore.Aas3_0_RC02.ConceptDescription>>)
+  type: Constructor
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: .ctor
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11293
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public Environment(List<AssetAdministrationShell>? assetAdministrationShells = null, List<Submodel>? submodels = null, List<ConceptDescription>? conceptDescriptions = null)
+    parameters:
+    - id: assetAdministrationShells
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}}
+    - id: submodels
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}}
+    - id: conceptDescriptions
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}}
+    content.vb: Public Sub New(assetAdministrationShells As List(Of AssetAdministrationShell)? = Nothing, submodels As List(Of Submodel)? = Nothing, conceptDescriptions As List(Of ConceptDescription)? = Nothing)
+  overload: AasCore.Aas3_0_RC02.Environment.#ctor*
+  nameWithType.vb: Environment.Environment(Nullable(Of List(Of AssetAdministrationShell)), Nullable(Of List(Of Submodel)), Nullable(Of List(Of ConceptDescription)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.Environment.Environment(System.Nullable(Of List(Of AasCore.Aas3_0_RC02.AssetAdministrationShell)), System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Submodel)), System.Nullable(Of List(Of AasCore.Aas3_0_RC02.ConceptDescription)))
+  name.vb: Environment(Nullable(Of List(Of AssetAdministrationShell)), Nullable(Of List(Of Submodel)), Nullable(Of List(Of ConceptDescription)))
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.IClass
+  commentId: T:AasCore.Aas3_0_RC02.IClass
+  parent: AasCore.Aas3_0_RC02
+  name: IClass
+  nameWithType: IClass
+  fullName: AasCore.Aas3_0_RC02.IClass
+- uid: AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells
+  name: AssetAdministrationShells
+  nameWithType: Environment.AssetAdministrationShells
+  fullName: AasCore.Aas3_0_RC02.Environment.AssetAdministrationShells
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.AssetAdministrationShell}}'
+  definition: System.Nullable`1
+  name: Nullable<List<AssetAdministrationShell>>
+  nameWithType: Nullable<List<AssetAdministrationShell>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.AssetAdministrationShell>>
+  nameWithType.vb: Nullable(Of List(Of AssetAdministrationShell))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.AssetAdministrationShell))
+  name.vb: Nullable(Of List(Of AssetAdministrationShell))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    name: AssetAdministrationShell
+    nameWithType: AssetAdministrationShell
+    fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    name: AssetAdministrationShell
+    nameWithType: AssetAdministrationShell
+    fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.Submodels*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.Submodels
+  name: Submodels
+  nameWithType: Environment.Submodels
+  fullName: AasCore.Aas3_0_RC02.Environment.Submodels
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.Submodel}}'
+  definition: System.Nullable`1
+  name: Nullable<List<Submodel>>
+  nameWithType: Nullable<List<Submodel>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.Submodel>>
+  nameWithType.vb: Nullable(Of List(Of Submodel))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Submodel))
+  name.vb: Nullable(Of List(Of Submodel))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Submodel
+    name: Submodel
+    nameWithType: Submodel
+    fullName: AasCore.Aas3_0_RC02.Submodel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Submodel
+    name: Submodel
+    nameWithType: Submodel
+    fullName: AasCore.Aas3_0_RC02.Submodel
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.ConceptDescriptions*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.ConceptDescriptions
+  name: ConceptDescriptions
+  nameWithType: Environment.ConceptDescriptions
+  fullName: AasCore.Aas3_0_RC02.Environment.ConceptDescriptions
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.ConceptDescription}}'
+  definition: System.Nullable`1
+  name: Nullable<List<ConceptDescription>>
+  nameWithType: Nullable<List<ConceptDescription>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.ConceptDescription>>
+  nameWithType.vb: Nullable(Of List(Of ConceptDescription))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.ConceptDescription))
+  name.vb: Nullable(Of List(Of ConceptDescription))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.ConceptDescription
+    name: ConceptDescription
+    nameWithType: ConceptDescription
+    fullName: AasCore.Aas3_0_RC02.ConceptDescription
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.ConceptDescription
+    name: ConceptDescription
+    nameWithType: ConceptDescription
+    fullName: AasCore.Aas3_0_RC02.ConceptDescription
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty
+  name: OverAssetAdministrationShellsOrEmpty
+  nameWithType: Environment.OverAssetAdministrationShellsOrEmpty
+  fullName: AasCore.Aas3_0_RC02.Environment.OverAssetAdministrationShellsOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.AssetAdministrationShell}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.AssetAdministrationShell}'
+  definition: IEnumerable`1
+  name: IEnumerable<AssetAdministrationShell>
+  nameWithType: IEnumerable<AssetAdministrationShell>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.AssetAdministrationShell>
+  nameWithType.vb: IEnumerable(Of AssetAdministrationShell)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.AssetAdministrationShell)
+  name.vb: IEnumerable(Of AssetAdministrationShell)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    name: AssetAdministrationShell
+    nameWithType: AssetAdministrationShell
+    fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+    name: AssetAdministrationShell
+    nameWithType: AssetAdministrationShell
+    fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty
+  name: OverSubmodelsOrEmpty
+  nameWithType: Environment.OverSubmodelsOrEmpty
+  fullName: AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Submodel}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Submodel}'
+  definition: IEnumerable`1
+  name: IEnumerable<Submodel>
+  nameWithType: IEnumerable<Submodel>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Submodel>
+  nameWithType.vb: IEnumerable(Of Submodel)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Submodel)
+  name.vb: IEnumerable(Of Submodel)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Submodel
+    name: Submodel
+    nameWithType: Submodel
+    fullName: AasCore.Aas3_0_RC02.Submodel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Submodel
+    name: Submodel
+    nameWithType: Submodel
+    fullName: AasCore.Aas3_0_RC02.Submodel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty
+  name: OverConceptDescriptionsOrEmpty
+  nameWithType: Environment.OverConceptDescriptionsOrEmpty
+  fullName: AasCore.Aas3_0_RC02.Environment.OverConceptDescriptionsOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.ConceptDescription}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.ConceptDescription}'
+  definition: IEnumerable`1
+  name: IEnumerable<ConceptDescription>
+  nameWithType: IEnumerable<ConceptDescription>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.ConceptDescription>
+  nameWithType.vb: IEnumerable(Of ConceptDescription)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.ConceptDescription)
+  name.vb: IEnumerable(Of ConceptDescription)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.ConceptDescription
+    name: ConceptDescription
+    nameWithType: ConceptDescription
+    fullName: AasCore.Aas3_0_RC02.ConceptDescription
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.ConceptDescription
+    name: ConceptDescription
+    nameWithType: ConceptDescription
+    fullName: AasCore.Aas3_0_RC02.ConceptDescription
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.DescendOnce*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.DescendOnce
+  name: DescendOnce
+  nameWithType: Environment.DescendOnce
+  fullName: AasCore.Aas3_0_RC02.Environment.DescendOnce
+- uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  commentId: M:AasCore.Aas3_0_RC02.IClass.DescendOnce
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: DescendOnce()
+  nameWithType: IClass.DescendOnce()
+  fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+    name: DescendOnce
+    nameWithType: IClass.DescendOnce
+    fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+    name: DescendOnce
+    nameWithType: IClass.DescendOnce
+    fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable{AasCore.Aas3_0_RC02.IClass}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.IClass}'
+  definition: IEnumerable`1
+  name: IEnumerable<IClass>
+  nameWithType: IEnumerable<IClass>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.IClass>
+  nameWithType.vb: IEnumerable(Of IClass)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.IClass)
+  name.vb: IEnumerable(Of IClass)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.IClass
+    name: IClass
+    nameWithType: IClass
+    fullName: AasCore.Aas3_0_RC02.IClass
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.IClass
+    name: IClass
+    nameWithType: IClass
+    fullName: AasCore.Aas3_0_RC02.IClass
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.Descend*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.Descend
+  name: Descend
+  nameWithType: Environment.Descend
+  fullName: AasCore.Aas3_0_RC02.Environment.Descend
+- uid: AasCore.Aas3_0_RC02.IClass.Descend
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Descend
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: Descend()
+  nameWithType: IClass.Descend()
+  fullName: AasCore.Aas3_0_RC02.IClass.Descend()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Descend
+    name: Descend
+    nameWithType: IClass.Descend
+    fullName: AasCore.Aas3_0_RC02.IClass.Descend
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Descend
+    name: Descend
+    nameWithType: IClass.Descend
+    fullName: AasCore.Aas3_0_RC02.IClass.Descend
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.Accept*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.Accept
+  name: Accept
+  nameWithType: Environment.Accept
+  fullName: AasCore.Aas3_0_RC02.Environment.Accept
+- uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: Accept(Visitation.IVisitor)
+  nameWithType: IClass.Accept(Visitation.IVisitor)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+    name: Accept
+    nameWithType: IClass.Accept
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    name: Visitation.IVisitor
+    nameWithType: Visitation.IVisitor
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+    name: Accept
+    nameWithType: IClass.Accept
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    name: Visitation.IVisitor
+    nameWithType: Visitation.IVisitor
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitor
+  parent: AasCore.Aas3_0_RC02
+  name: Visitation.IVisitor
+  nameWithType: Visitation.IVisitor
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+- uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}},{TContext})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: IClass.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType.vb: IClass.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept<TContext>
+    nameWithType: IClass.Accept<TContext>
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept(Of TContext)
+    nameWithType: IClass.Accept(Of TContext)
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}}
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0}
+  parent: AasCore.Aas3_0_RC02
+  definition: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  name: Visitation.IVisitorWithContext<TContext>
+  nameWithType: Visitation.IVisitorWithContext<TContext>
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext)
+  name.vb: Visitation.IVisitorWithContext(Of TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TContext}'
+  commentId: '!:TContext'
+  definition: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: IClass.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType.vb: IClass.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept<TContext>
+    nameWithType: IClass.Accept<TContext>
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept(Of TContext)
+    nameWithType: IClass.Accept(Of TContext)
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  name: Visitation.IVisitorWithContext<TContext>
+  nameWithType: Visitation.IVisitorWithContext<TContext>
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext)
+  name.vb: Visitation.IVisitorWithContext(Of TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: AasCore.Aas3_0_RC02.Environment.Transform*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.Transform
+  name: Transform
+  nameWithType: Environment.Transform
+  fullName: AasCore.Aas3_0_RC02.Environment.Transform
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: IClass.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  nameWithType.vb: IClass.Transform(Of T)(Visitation.ITransformer(Of T))
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform<T>
+    nameWithType: IClass.Transform<T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform(Of T)
+    nameWithType: IClass.Transform(Of T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}}
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformer{``0}
+  parent: AasCore.Aas3_0_RC02
+  definition: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+  name: Visitation.ITransformer<T>
+  nameWithType: Visitation.ITransformer<T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer<T>
+  nameWithType.vb: Visitation.ITransformer(Of T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T)
+  name.vb: Visitation.ITransformer(Of T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: IClass.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  nameWithType.vb: IClass.Transform(Of T)(Visitation.ITransformer(Of T))
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform<T>
+    nameWithType: IClass.Transform<T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform(Of T)
+    nameWithType: IClass.Transform(Of T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+  name: Visitation.ITransformer<T>
+  nameWithType: Visitation.ITransformer<T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer<T>
+  nameWithType.vb: Visitation.ITransformer(Of T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T)
+  name.vb: Visitation.ITransformer(Of T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}},{TContext})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: IClass.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType.vb: IClass.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform<TContext, T>
+    nameWithType: IClass.Transform<TContext, T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform(Of TContext, T)
+    nameWithType: IClass.Transform(Of TContext, T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}}
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1}
+  parent: AasCore.Aas3_0_RC02
+  definition: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+  name: Visitation.ITransformerWithContext<TContext, T>
+  nameWithType: Visitation.ITransformerWithContext<TContext, T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>
+  nameWithType.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T)
+  name.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: IClass.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType.vb: IClass.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform<TContext, T>
+    nameWithType: IClass.Transform<TContext, T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform(Of TContext, T)
+    nameWithType: IClass.Transform(Of TContext, T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+  name: Visitation.ITransformerWithContext<TContext, T>
+  nameWithType: Visitation.ITransformerWithContext<TContext, T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>
+  nameWithType.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T)
+  name.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Environment.#ctor*
+  commentId: Overload:AasCore.Aas3_0_RC02.Environment.#ctor
+  name: Environment
+  nameWithType: Environment.Environment
+  fullName: AasCore.Aas3_0_RC02.Environment.Environment

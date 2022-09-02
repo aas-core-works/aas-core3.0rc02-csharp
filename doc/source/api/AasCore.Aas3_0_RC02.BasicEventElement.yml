@@ -1,0 +1,3256 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.BasicEventElement
+  commentId: T:AasCore.Aas3_0_RC02.BasicEventElement
+  id: BasicEventElement
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.BasicEventElement.#ctor(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Direction,AasCore.Aas3_0_RC02.StateOfEvent,System.Nullable{List{AasCore.Aas3_0_RC02.Extension}},System.Nullable{System.String},System.Nullable{System.String},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{System.String},System.Nullable{AasCore.Aas3_0_RC02.ModelingKind},AasCore.Aas3_0_RC02.Reference,System.Nullable{List{AasCore.Aas3_0_RC02.Reference}},System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}},System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}},System.Nullable{System.String},AasCore.Aas3_0_RC02.Reference,System.Nullable{System.String},System.Nullable{System.String},System.Nullable{System.String})
+  - AasCore.Aas3_0_RC02.BasicEventElement.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  - AasCore.Aas3_0_RC02.BasicEventElement.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  - AasCore.Aas3_0_RC02.BasicEventElement.Category
+  - AasCore.Aas3_0_RC02.BasicEventElement.Checksum
+  - AasCore.Aas3_0_RC02.BasicEventElement.Descend
+  - AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce
+  - AasCore.Aas3_0_RC02.BasicEventElement.Description
+  - AasCore.Aas3_0_RC02.BasicEventElement.Direction
+  - AasCore.Aas3_0_RC02.BasicEventElement.DisplayName
+  - AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications
+  - AasCore.Aas3_0_RC02.BasicEventElement.Extensions
+  - AasCore.Aas3_0_RC02.BasicEventElement.IdShort
+  - AasCore.Aas3_0_RC02.BasicEventElement.Kind
+  - AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault
+  - AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate
+  - AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval
+  - AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker
+  - AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic
+  - AasCore.Aas3_0_RC02.BasicEventElement.MinInterval
+  - AasCore.Aas3_0_RC02.BasicEventElement.Observed
+  - AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty
+  - AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty
+  - AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty
+  - AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty
+  - AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty
+  - AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty
+  - AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers
+  - AasCore.Aas3_0_RC02.BasicEventElement.SemanticId
+  - AasCore.Aas3_0_RC02.BasicEventElement.State
+  - AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds
+  - AasCore.Aas3_0_RC02.BasicEventElement.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  - AasCore.Aas3_0_RC02.BasicEventElement.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  langs:
+  - csharp
+  - vb
+  name: BasicEventElement
+  nameWithType: BasicEventElement
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: BasicEventElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8367
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nA basic event element.\n"
+  example: []
+  syntax:
+    content: 'public class BasicEventElement : object, IEventElement, ISubmodelElement, IReferable, IHasExtensions, IHasKind, IHasSemantics, IQualifiable, IHasDataSpecification, IClass'
+    content.vb: >-
+      Public Class BasicEventElement
+
+          Inherits Object
+
+          Implements IEventElement, ISubmodelElement, IReferable, IHasExtensions, IHasKind, IHasSemantics, IQualifiable, IHasDataSpecification, IClass
+  inheritance:
+  - System.Object
+  implements:
+  - AasCore.Aas3_0_RC02.IEventElement
+  - AasCore.Aas3_0_RC02.ISubmodelElement
+  - AasCore.Aas3_0_RC02.IReferable
+  - AasCore.Aas3_0_RC02.IHasExtensions
+  - AasCore.Aas3_0_RC02.IHasKind
+  - AasCore.Aas3_0_RC02.IHasSemantics
+  - AasCore.Aas3_0_RC02.IQualifiable
+  - AasCore.Aas3_0_RC02.IHasDataSpecification
+  - AasCore.Aas3_0_RC02.IClass
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Extensions
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Extensions
+  id: Extensions
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Extensions
+  nameWithType: BasicEventElement.Extensions
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Extensions
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Extensions
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8372
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAn extension of the element.\n"
+  example: []
+  syntax:
+    content: public List<Extension>? Extensions { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Extension}}
+    content.vb: Public Property Extensions As List(Of Extension)?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Extensions*
+  implements:
+  - AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Category
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Category
+  id: Category
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: BasicEventElement.Category
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Category
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Category
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8386
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nThe category is a value that gives further meta information\nw.r.t. to the class of the element.\nIt affects the expected existence of attributes and the applicability of\nconstraints.\n"
+  remarks: "\nThe category is not identical to the semantic definition\n(<xref href=\"AasCore.Aas3_0_RC02.IHasSemantics\" data-throw-if-not-resolved=\"false\"></xref>) of an element. The category e.g. could denote that\nthe element is a measurement value whereas the semantic definition of\nthe element would denote that it is the measured temperature.\n"
+  example: []
+  syntax:
+    content: public string? Category { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property Category As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Category*
+  implements:
+  - AasCore.Aas3_0_RC02.IReferable.Category
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.IdShort
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.IdShort
+  id: IdShort
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: IdShort
+  nameWithType: BasicEventElement.IdShort
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.IdShort
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IdShort
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8398
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIn case of identifiables this attribute is a short name of the element.\nIn case of referable this ID is an identifying string of the element within\nits name space.\n"
+  remarks: "\nIn case the element is a property and the property has a semantic definition\n(<xref href=\"AasCore.Aas3_0_RC02.IHasSemantics.SemanticId\" data-throw-if-not-resolved=\"false\"></xref>) conformant to IEC61360\nthe <xref href=\"AasCore.Aas3_0_RC02.IReferable.IdShort\" data-throw-if-not-resolved=\"false\"></xref> is typically identical to the short name in English.\n"
+  example: []
+  syntax:
+    content: public string? IdShort { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property IdShort As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.IdShort*
+  implements:
+  - AasCore.Aas3_0_RC02.IReferable.IdShort
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.DisplayName
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.DisplayName
+  id: DisplayName
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: BasicEventElement.DisplayName
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.DisplayName
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DisplayName
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8430
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDisplay name. Can be provided in several languages.\n"
+  remarks: "\n<p>\nIf no display name is defined in the language requested by the application,\nthen the display name is selected in the following order if available:\n</p>\n<ul>\n<li>\n  the preferred name in the requested language of the concept description defining\n  the semantics of the element\n</li>\n<li>\n  If there is a default language list defined in the application,\n  then the corresponding preferred name in the language is chosen\n  according to this order.\n</li>\n<li>\n  the English preferred name of the concept description defining\n  the semantics of the element\n</li>\n<li>\n  the short name of the concept description\n</li>\n<li>\n  the <xref href=\"AasCore.Aas3_0_RC02.IReferable.IdShort\" data-throw-if-not-resolved=\"false\"></xref> of the element\n</li>\n</ul>\n"
+  example: []
+  syntax:
+    content: public List<LangString>? DisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.LangString}}
+    content.vb: Public Property DisplayName As List(Of LangString)?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.DisplayName*
+  implements:
+  - AasCore.Aas3_0_RC02.IReferable.DisplayName
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Description
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Description
+  id: Description
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: BasicEventElement.Description
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Description
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Description
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8450
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDescription or comments on the element.\n"
+  remarks: "\n<p>\nThe description can be provided in several languages.\n</p>\n<p>\nIf no description is defined, then the definition of the concept\ndescription that defines the semantics of the element is used.\n</p>\n<p>\nAdditional information can be provided, e.g., if the element is\nqualified and which qualifier types can be expected in which\ncontext or which additional data specification templates are\nprovided.\n</p>\n"
+  example: []
+  syntax:
+    content: public List<LangString>? Description { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.LangString}}
+    content.vb: Public Property Description As List(Of LangString)?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Description*
+  implements:
+  - AasCore.Aas3_0_RC02.IReferable.Description
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Checksum
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Checksum
+  id: Checksum
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Checksum
+  nameWithType: BasicEventElement.Checksum
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Checksum
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Checksum
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8462
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nChecksum to be used to determine if an Referable (including its\naggregated child elements) has changed.\n"
+  remarks: "\nThe checksum is calculated by the user&apos;s tool environment.\nThe checksum has no semantic meaning for an asset administration\nshell model and there is no requirement for asset administration\nshell tools to manage the checksum\n"
+  example: []
+  syntax:
+    content: public string? Checksum { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property Checksum As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Checksum*
+  implements:
+  - AasCore.Aas3_0_RC02.IReferable.Checksum
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Kind
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Kind
+  id: Kind
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: BasicEventElement.Kind
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Kind
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Kind
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8470
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nKind of the element: either type or instance.\n"
+  remarks: "\nDefault: <xref href=\"AasCore.Aas3_0_RC02.ModelingKind.Instance\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ModelingKind? Kind { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{AasCore.Aas3_0_RC02.ModelingKind}
+    content.vb: Public Property Kind As ModelingKind?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Kind*
+  implements:
+  - AasCore.Aas3_0_RC02.IHasKind.Kind
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.SemanticId
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.SemanticId
+  id: SemanticId
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: SemanticId
+  nameWithType: BasicEventElement.SemanticId
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.SemanticId
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SemanticId
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8479
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIdentifier of the semantic definition of the element. It is called semantic ID\nof the element or also main semantic ID of the element.\n"
+  remarks: "\nIt is recommended to use a global reference.\n"
+  example: []
+  syntax:
+    content: public Reference SemanticId { get; set; }
+    parameters: []
+    return:
+      type: AasCore.Aas3_0_RC02.Reference
+    content.vb: Public Property SemanticId As Reference
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.SemanticId*
+  implements:
+  - AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds
+  id: SupplementalSemanticIds
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: SupplementalSemanticIds
+  nameWithType: BasicEventElement.SupplementalSemanticIds
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SupplementalSemanticIds
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8488
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIdentifier of a supplemental semantic definition of the element.\nIt is called supplemental semantic ID of the element.\n"
+  remarks: "\nIt is recommended to use a global reference.\n"
+  example: []
+  syntax:
+    content: public List<Reference>? SupplementalSemanticIds { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Reference}}
+    content.vb: Public Property SupplementalSemanticIds As List(Of Reference)?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds*
+  implements:
+  - AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers
+  id: Qualifiers
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Qualifiers
+  nameWithType: BasicEventElement.Qualifiers
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Qualifiers
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8505
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAdditional qualification of a qualifiable element.\n"
+  remarks: "\n<p>\nConstraints:\n</p>\n<ul>\n<li>\n  Constraint AASd-021:\n  Every qualifiable can only have one qualifier with the same\n<xref href=\"AasCore.Aas3_0_RC02.Qualifier.Type\" data-throw-if-not-resolved=\"false\"></xref>.\n</li>\n</ul>\n"
+  example: []
+  syntax:
+    content: public List<Qualifier>? Qualifiers { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}}
+    content.vb: Public Property Qualifiers As List(Of Qualifier)?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers*
+  implements:
+  - AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications
+  id: EmbeddedDataSpecifications
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: EmbeddedDataSpecifications
+  nameWithType: BasicEventElement.EmbeddedDataSpecifications
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EmbeddedDataSpecifications
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8510
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nEmbedded data specification.\n"
+  example: []
+  syntax:
+    content: public List<EmbeddedDataSpecification>? EmbeddedDataSpecifications { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}}
+    content.vb: Public Property EmbeddedDataSpecifications As List(Of EmbeddedDataSpecification)?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications*
+  implements:
+  - AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Observed
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Observed
+  id: Observed
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Observed
+  nameWithType: BasicEventElement.Observed
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Observed
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Observed
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8521
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nReference to the <xref href=\"AasCore.Aas3_0_RC02.IReferable\" data-throw-if-not-resolved=\"false\"></xref>, which defines the scope of the event.\nCan be <xref href=\"AasCore.Aas3_0_RC02.AssetAdministrationShell\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"AasCore.Aas3_0_RC02.Submodel\" data-throw-if-not-resolved=\"false\"></xref>, or\n<xref href=\"AasCore.Aas3_0_RC02.ISubmodelElement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\nReference to a referable, e.g., a data element or\na submodel, that is being observed.\n"
+  example: []
+  syntax:
+    content: public Reference Observed { get; set; }
+    parameters: []
+    return:
+      type: AasCore.Aas3_0_RC02.Reference
+    content.vb: Public Property Observed As Reference
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Observed*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Direction
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.Direction
+  id: Direction
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: BasicEventElement.Direction
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Direction
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Direction
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8529
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nDirection of event.\n"
+  remarks: "\nCan be <code>{ Input, Output }</code>.\n"
+  example: []
+  syntax:
+    content: public Direction Direction { get; set; }
+    parameters: []
+    return:
+      type: AasCore.Aas3_0_RC02.Direction
+    content.vb: Public Property Direction As Direction
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Direction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.State
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.State
+  id: State
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: BasicEventElement.State
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.State
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: State
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8537
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nState of event.\n"
+  remarks: "\nCan be <code>{ On, Off }</code>.\n"
+  example: []
+  syntax:
+    content: public StateOfEvent State { get; set; }
+    parameters: []
+    return:
+      type: AasCore.Aas3_0_RC02.StateOfEvent
+    content.vb: Public Property State As StateOfEvent
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.State*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic
+  id: MessageTopic
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: MessageTopic
+  nameWithType: BasicEventElement.MessageTopic
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MessageTopic
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8543
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nInformation for the outer message infrastructure for scheduling the event to the\nrespective communication channel.\n"
+  example: []
+  syntax:
+    content: public string? MessageTopic { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property MessageTopic As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker
+  id: MessageBroker
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: MessageBroker
+  nameWithType: BasicEventElement.MessageBroker
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MessageBroker
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8556
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nInformation, which outer message infrastructure shall handle messages for\nthe <xref href=\"AasCore.Aas3_0_RC02.IEventElement\" data-throw-if-not-resolved=\"false\"></xref>. Refers to a <xref href=\"AasCore.Aas3_0_RC02.Submodel\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"AasCore.Aas3_0_RC02.SubmodelElementList\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"AasCore.Aas3_0_RC02.SubmodelElementCollection\" data-throw-if-not-resolved=\"false\"></xref> or\n<xref href=\"AasCore.Aas3_0_RC02.Entity\" data-throw-if-not-resolved=\"false\"></xref>, which contains <xref href=\"AasCore.Aas3_0_RC02.IDataElement\" data-throw-if-not-resolved=\"false\"></xref>&apos;s describing\nthe proprietary specification for the message broker.\n"
+  remarks: "\nFor different message infrastructure, e.g., OPC UA or MQTT or AMQP, this\nproprietary specification could be standardized by having respective Submodels.\n"
+  example: []
+  syntax:
+    content: public Reference MessageBroker { get; set; }
+    parameters: []
+    return:
+      type: AasCore.Aas3_0_RC02.Reference
+    content.vb: Public Property MessageBroker As Reference
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate
+  id: LastUpdate
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: LastUpdate
+  nameWithType: BasicEventElement.LastUpdate
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: LastUpdate
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8562
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nTimestamp in UTC, when the last event was received (input direction) or sent\n(output direction).\n"
+  example: []
+  syntax:
+    content: public string? LastUpdate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property LastUpdate As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MinInterval
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.MinInterval
+  id: MinInterval
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: MinInterval
+  nameWithType: BasicEventElement.MinInterval
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MinInterval
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MinInterval
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8577
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nFor input direction, reports on the maximum frequency, the software entity behind\nthe respective Referable can handle input events.\n"
+  remarks: "\n<p>\nFor output events, specifies the maximum frequency of outputting this event to\nan outer infrastructure.\n</p>\n<p>\nMight be not specified, that is, there is no minimum interval.\n</p>\n"
+  example: []
+  syntax:
+    content: public string? MinInterval { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property MinInterval As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.MinInterval*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval
+  commentId: P:AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval
+  id: MaxInterval
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: MaxInterval
+  nameWithType: BasicEventElement.MaxInterval
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval
+  type: Property
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MaxInterval
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8592
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nFor input direction: not applicable.\n"
+  remarks: "\n<p>\nFor output direction: maximum interval in time, the respective Referable shall send\nan update of the status of the event, even if no other trigger condition for\nthe event was not met.\n</p>\n<p>\nMight be not specified, that is, there is no maximum interval\n</p>\n"
+  example: []
+  syntax:
+    content: public string? MaxInterval { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.String}
+    content.vb: Public Property MaxInterval As String?
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty
+  id: OverExtensionsOrEmpty
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: OverExtensionsOrEmpty()
+  nameWithType: BasicEventElement.OverExtensionsOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverExtensionsOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8597
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over Extensions, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Extension> OverExtensionsOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Extension}
+    content.vb: Public Function OverExtensionsOrEmpty As IEnumerable(Of Extension)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty
+  id: OverDisplayNameOrEmpty
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: OverDisplayNameOrEmpty()
+  nameWithType: BasicEventElement.OverDisplayNameOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverDisplayNameOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8606
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over DisplayName, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<LangString> OverDisplayNameOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.LangString}
+    content.vb: Public Function OverDisplayNameOrEmpty As IEnumerable(Of LangString)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty
+  id: OverDescriptionOrEmpty
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: OverDescriptionOrEmpty()
+  nameWithType: BasicEventElement.OverDescriptionOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverDescriptionOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8615
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over Description, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<LangString> OverDescriptionOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.LangString}
+    content.vb: Public Function OverDescriptionOrEmpty As IEnumerable(Of LangString)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty
+  id: OverSupplementalSemanticIdsOrEmpty
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: OverSupplementalSemanticIdsOrEmpty()
+  nameWithType: BasicEventElement.OverSupplementalSemanticIdsOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverSupplementalSemanticIdsOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8624
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over SupplementalSemanticIds, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Reference> OverSupplementalSemanticIdsOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Reference}
+    content.vb: Public Function OverSupplementalSemanticIdsOrEmpty As IEnumerable(Of Reference)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty
+  id: OverQualifiersOrEmpty
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: OverQualifiersOrEmpty()
+  nameWithType: BasicEventElement.OverQualifiersOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverQualifiersOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8633
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over Qualifiers, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Qualifier> OverQualifiersOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.Qualifier}
+    content.vb: Public Function OverQualifiersOrEmpty As IEnumerable(Of Qualifier)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty
+  id: OverEmbeddedDataSpecificationsOrEmpty
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: OverEmbeddedDataSpecificationsOrEmpty()
+  nameWithType: BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: OverEmbeddedDataSpecificationsOrEmpty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8642
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over EmbeddedDataSpecifications, if set, and otherwise return an empty enumerable.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<EmbeddedDataSpecification> OverEmbeddedDataSpecificationsOrEmpty()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+    content.vb: Public Function OverEmbeddedDataSpecificationsOrEmpty As IEnumerable(Of EmbeddedDataSpecification)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault
+  id: KindOrDefault
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: KindOrDefault()
+  nameWithType: BasicEventElement.KindOrDefault()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: KindOrDefault
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8652
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nReturn the <xref href=\"AasCore.Aas3_0_RC02.IHasKind.Kind\" data-throw-if-not-resolved=\"false\"></xref> or the default value\nif it has not been set.\n"
+  example: []
+  syntax:
+    content: public ModelingKind KindOrDefault()
+    return:
+      type: AasCore.Aas3_0_RC02.ModelingKind
+    content.vb: Public Function KindOrDefault As ModelingKind
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault*
+  implements:
+  - AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce
+  id: DescendOnce
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: DescendOnce()
+  nameWithType: BasicEventElement.DescendOnce()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DescendOnce
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8661
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate over all the class instances referenced from this instance\nwithout further recursion.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IClass> DescendOnce()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.IClass}
+    content.vb: Public Function DescendOnce As IEnumerable(Of IClass)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.DescendOnce
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Descend
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.Descend
+  id: Descend
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Descend()
+  nameWithType: BasicEventElement.Descend()
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Descend()
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Descend
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8727
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nIterate recursively over all the class instances referenced from this instance.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IClass> Descend()
+    return:
+      type: IEnumerable{AasCore.Aas3_0_RC02.IClass}
+    content.vb: Public Function Descend As IEnumerable(Of IClass)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Descend*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Descend
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  id: Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitation.IVisitor)
+  nameWithType: BasicEventElement.Accept(Visitation.IVisitor)
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Accept
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8848
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the <code data-dev-comment-type=\"paramref\" class=\"paramref\">visitor</code> to visit this instance\nfor double dispatch.\n"
+  example: []
+  syntax:
+    content: public void Accept(Visitation.IVisitor visitor)
+    parameters:
+    - id: visitor
+      type: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    content.vb: Public Sub Accept(visitor As Visitation.IVisitor)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Accept*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  id: Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: BasicEventElement.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Accept
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8857
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the visitor to visit this instance for double dispatch\nwith the <code data-dev-comment-type=\"paramref\" class=\"paramref\">context</code>.\n"
+  example: []
+  syntax:
+    content: public void Accept<TContext>(Visitation.IVisitorWithContext<TContext> visitor, TContext context)
+    parameters:
+    - id: visitor
+      type: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}}
+    - id: context
+      type: '{TContext}'
+    typeParameters:
+    - id: TContext
+    content.vb: Public Sub Accept(Of TContext)(visitor As Visitation.IVisitorWithContext(Of TContext), context As TContext)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Accept*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}},{TContext})
+  nameWithType.vb: BasicEventElement.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.BasicEventElement.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  id: Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: BasicEventElement.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Transform
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8868
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the <code data-dev-comment-type=\"paramref\" class=\"paramref\">transformer</code> to transform this instance\nfor double dispatch.\n"
+  example: []
+  syntax:
+    content: public T Transform<T>(Visitation.ITransformer<T> transformer)
+    parameters:
+    - id: transformer
+      type: AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Transform(Of T)(transformer As Visitation.ITransformer(Of T)) As T
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Transform*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}})
+  nameWithType.vb: BasicEventElement.Transform(Of T)(Visitation.ITransformer(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.BasicEventElement.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  id: Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: BasicEventElement.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  type: Method
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Transform
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8877
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nAccept the <code data-dev-comment-type=\"paramref\" class=\"paramref\">transformer</code> to visit this instance\nfor double dispatch with the <code data-dev-comment-type=\"paramref\" class=\"paramref\">context</code>.\n"
+  example: []
+  syntax:
+    content: public T Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T> transformer, TContext context)
+    parameters:
+    - id: transformer
+      type: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}}
+    - id: context
+      type: '{TContext}'
+    typeParameters:
+    - id: TContext
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Transform(Of TContext, T)(transformer As Visitation.ITransformerWithContext(Of TContext, T), context As TContext) As T
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.Transform*
+  implements:
+  - AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}},{TContext})
+  nameWithType.vb: BasicEventElement.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.BasicEventElement.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.#ctor(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Direction,AasCore.Aas3_0_RC02.StateOfEvent,System.Nullable{List{AasCore.Aas3_0_RC02.Extension}},System.Nullable{System.String},System.Nullable{System.String},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{System.String},System.Nullable{AasCore.Aas3_0_RC02.ModelingKind},AasCore.Aas3_0_RC02.Reference,System.Nullable{List{AasCore.Aas3_0_RC02.Reference}},System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}},System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}},System.Nullable{System.String},AasCore.Aas3_0_RC02.Reference,System.Nullable{System.String},System.Nullable{System.String},System.Nullable{System.String})
+  commentId: M:AasCore.Aas3_0_RC02.BasicEventElement.#ctor(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Direction,AasCore.Aas3_0_RC02.StateOfEvent,System.Nullable{List{AasCore.Aas3_0_RC02.Extension}},System.Nullable{System.String},System.Nullable{System.String},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{System.String},System.Nullable{AasCore.Aas3_0_RC02.ModelingKind},AasCore.Aas3_0_RC02.Reference,System.Nullable{List{AasCore.Aas3_0_RC02.Reference}},System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}},System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}},System.Nullable{System.String},AasCore.Aas3_0_RC02.Reference,System.Nullable{System.String},System.Nullable{System.String},System.Nullable{System.String})
+  id: '#ctor(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.Direction,AasCore.Aas3_0_RC02.StateOfEvent,System.Nullable{List{AasCore.Aas3_0_RC02.Extension}},System.Nullable{System.String},System.Nullable{System.String},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{System.String},System.Nullable{AasCore.Aas3_0_RC02.ModelingKind},AasCore.Aas3_0_RC02.Reference,System.Nullable{List{AasCore.Aas3_0_RC02.Reference}},System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}},System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}},System.Nullable{System.String},AasCore.Aas3_0_RC02.Reference,System.Nullable{System.String},System.Nullable{System.String},System.Nullable{System.String})'
+  parent: AasCore.Aas3_0_RC02.BasicEventElement
+  langs:
+  - csharp
+  - vb
+  name: BasicEventElement(Reference, Direction, StateOfEvent, Nullable<List<Extension>>, Nullable<String>, Nullable<String>, Nullable<List<LangString>>, Nullable<List<LangString>>, Nullable<String>, Nullable<ModelingKind>, Reference, Nullable<List<Reference>>, Nullable<List<Qualifier>>, Nullable<List<EmbeddedDataSpecification>>, Nullable<String>, Reference, Nullable<String>, Nullable<String>, Nullable<String>)
+  nameWithType: BasicEventElement.BasicEventElement(Reference, Direction, StateOfEvent, Nullable<List<Extension>>, Nullable<String>, Nullable<String>, Nullable<List<LangString>>, Nullable<List<LangString>>, Nullable<String>, Nullable<ModelingKind>, Reference, Nullable<List<Reference>>, Nullable<List<Qualifier>>, Nullable<List<EmbeddedDataSpecification>>, Nullable<String>, Reference, Nullable<String>, Nullable<String>, Nullable<String>)
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.BasicEventElement(AasCore.Aas3_0_RC02.Reference, AasCore.Aas3_0_RC02.Direction, AasCore.Aas3_0_RC02.StateOfEvent, System.Nullable<List<AasCore.Aas3_0_RC02.Extension>>, System.Nullable<System.String>, System.Nullable<System.String>, System.Nullable<List<AasCore.Aas3_0_RC02.LangString>>, System.Nullable<List<AasCore.Aas3_0_RC02.LangString>>, System.Nullable<System.String>, System.Nullable<AasCore.Aas3_0_RC02.ModelingKind>, AasCore.Aas3_0_RC02.Reference, System.Nullable<List<AasCore.Aas3_0_RC02.Reference>>, System.Nullable<List<AasCore.Aas3_0_RC02.Qualifier>>, System.Nullable<List<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>>, System.Nullable<System.String>, AasCore.Aas3_0_RC02.Reference, System.Nullable<System.String>, System.Nullable<System.String>, System.Nullable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: .ctor
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 8884
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public BasicEventElement(Reference observed, Direction direction, StateOfEvent state, List<Extension>? extensions = null, string? category = null, string? idShort = null, List<LangString>? displayName = null, List<LangString>? description = null, string? checksum = null, ModelingKind? kind = null, Reference semanticId = null, List<Reference>? supplementalSemanticIds = null, List<Qualifier>? qualifiers = null, List<EmbeddedDataSpecification>? embeddedDataSpecifications = null, string? messageTopic = null, Reference messageBroker = null, string? lastUpdate = null, string? minInterval = null, string? maxInterval = null)
+    parameters:
+    - id: observed
+      type: AasCore.Aas3_0_RC02.Reference
+    - id: direction
+      type: AasCore.Aas3_0_RC02.Direction
+    - id: state
+      type: AasCore.Aas3_0_RC02.StateOfEvent
+    - id: extensions
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Extension}}
+    - id: category
+      type: System.Nullable{System.String}
+    - id: idShort
+      type: System.Nullable{System.String}
+    - id: displayName
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.LangString}}
+    - id: description
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.LangString}}
+    - id: checksum
+      type: System.Nullable{System.String}
+    - id: kind
+      type: System.Nullable{AasCore.Aas3_0_RC02.ModelingKind}
+    - id: semanticId
+      type: AasCore.Aas3_0_RC02.Reference
+    - id: supplementalSemanticIds
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Reference}}
+    - id: qualifiers
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}}
+    - id: embeddedDataSpecifications
+      type: System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}}
+    - id: messageTopic
+      type: System.Nullable{System.String}
+    - id: messageBroker
+      type: AasCore.Aas3_0_RC02.Reference
+    - id: lastUpdate
+      type: System.Nullable{System.String}
+    - id: minInterval
+      type: System.Nullable{System.String}
+    - id: maxInterval
+      type: System.Nullable{System.String}
+    content.vb: Public Sub New(observed As Reference, direction As Direction, state As StateOfEvent, extensions As List(Of Extension)? = Nothing, category As String? = Nothing, idShort As String? = Nothing, displayName As List(Of LangString)? = Nothing, description As List(Of LangString)? = Nothing, checksum As String? = Nothing, kind As ModelingKind? = Nothing, semanticId As Reference = Nothing, supplementalSemanticIds As List(Of Reference)? = Nothing, qualifiers As List(Of Qualifier)? = Nothing, embeddedDataSpecifications As List(Of EmbeddedDataSpecification)? = Nothing, messageTopic As String? = Nothing, messageBroker As Reference = Nothing, lastUpdate As String? = Nothing, minInterval As String? = Nothing, maxInterval As String? = Nothing)
+  overload: AasCore.Aas3_0_RC02.BasicEventElement.#ctor*
+  nameWithType.vb: BasicEventElement.BasicEventElement(Reference, Direction, StateOfEvent, Nullable(Of List(Of Extension)), Nullable(Of String), Nullable(Of String), Nullable(Of List(Of LangString)), Nullable(Of List(Of LangString)), Nullable(Of String), Nullable(Of ModelingKind), Reference, Nullable(Of List(Of Reference)), Nullable(Of List(Of Qualifier)), Nullable(Of List(Of EmbeddedDataSpecification)), Nullable(Of String), Reference, Nullable(Of String), Nullable(Of String), Nullable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AasCore.Aas3_0_RC02.BasicEventElement.BasicEventElement(AasCore.Aas3_0_RC02.Reference, AasCore.Aas3_0_RC02.Direction, AasCore.Aas3_0_RC02.StateOfEvent, System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Extension)), System.Nullable(Of System.String), System.Nullable(Of System.String), System.Nullable(Of List(Of AasCore.Aas3_0_RC02.LangString)), System.Nullable(Of List(Of AasCore.Aas3_0_RC02.LangString)), System.Nullable(Of System.String), System.Nullable(Of AasCore.Aas3_0_RC02.ModelingKind), AasCore.Aas3_0_RC02.Reference, System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Reference)), System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Qualifier)), System.Nullable(Of List(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification)), System.Nullable(Of System.String), AasCore.Aas3_0_RC02.Reference, System.Nullable(Of System.String), System.Nullable(Of System.String), System.Nullable(Of System.String))
+  name.vb: BasicEventElement(Reference, Direction, StateOfEvent, Nullable(Of List(Of Extension)), Nullable(Of String), Nullable(Of String), Nullable(Of List(Of LangString)), Nullable(Of List(Of LangString)), Nullable(Of String), Nullable(Of ModelingKind), Reference, Nullable(Of List(Of Reference)), Nullable(Of List(Of Qualifier)), Nullable(Of List(Of EmbeddedDataSpecification)), Nullable(Of String), Reference, Nullable(Of String), Nullable(Of String), Nullable(Of String))
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.IEventElement
+  commentId: T:AasCore.Aas3_0_RC02.IEventElement
+  parent: AasCore.Aas3_0_RC02
+  name: IEventElement
+  nameWithType: IEventElement
+  fullName: AasCore.Aas3_0_RC02.IEventElement
+- uid: AasCore.Aas3_0_RC02.ISubmodelElement
+  commentId: T:AasCore.Aas3_0_RC02.ISubmodelElement
+  parent: AasCore.Aas3_0_RC02
+  name: ISubmodelElement
+  nameWithType: ISubmodelElement
+  fullName: AasCore.Aas3_0_RC02.ISubmodelElement
+- uid: AasCore.Aas3_0_RC02.IReferable
+  commentId: T:AasCore.Aas3_0_RC02.IReferable
+  parent: AasCore.Aas3_0_RC02
+  name: IReferable
+  nameWithType: IReferable
+  fullName: AasCore.Aas3_0_RC02.IReferable
+- uid: AasCore.Aas3_0_RC02.IHasExtensions
+  commentId: T:AasCore.Aas3_0_RC02.IHasExtensions
+  parent: AasCore.Aas3_0_RC02
+  name: IHasExtensions
+  nameWithType: IHasExtensions
+  fullName: AasCore.Aas3_0_RC02.IHasExtensions
+- uid: AasCore.Aas3_0_RC02.IHasKind
+  commentId: T:AasCore.Aas3_0_RC02.IHasKind
+  parent: AasCore.Aas3_0_RC02
+  name: IHasKind
+  nameWithType: IHasKind
+  fullName: AasCore.Aas3_0_RC02.IHasKind
+- uid: AasCore.Aas3_0_RC02.IHasSemantics
+  commentId: T:AasCore.Aas3_0_RC02.IHasSemantics
+  parent: AasCore.Aas3_0_RC02
+  name: IHasSemantics
+  nameWithType: IHasSemantics
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics
+- uid: AasCore.Aas3_0_RC02.IQualifiable
+  commentId: T:AasCore.Aas3_0_RC02.IQualifiable
+  parent: AasCore.Aas3_0_RC02
+  name: IQualifiable
+  nameWithType: IQualifiable
+  fullName: AasCore.Aas3_0_RC02.IQualifiable
+- uid: AasCore.Aas3_0_RC02.IHasDataSpecification
+  commentId: T:AasCore.Aas3_0_RC02.IHasDataSpecification
+  parent: AasCore.Aas3_0_RC02
+  name: IHasDataSpecification
+  nameWithType: IHasDataSpecification
+  fullName: AasCore.Aas3_0_RC02.IHasDataSpecification
+- uid: AasCore.Aas3_0_RC02.IClass
+  commentId: T:AasCore.Aas3_0_RC02.IClass
+  parent: AasCore.Aas3_0_RC02
+  name: IClass
+  nameWithType: IClass
+  fullName: AasCore.Aas3_0_RC02.IClass
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Extensions*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Extensions
+  name: Extensions
+  nameWithType: BasicEventElement.Extensions
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Extensions
+- uid: AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+  commentId: P:AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+  parent: AasCore.Aas3_0_RC02.IHasExtensions
+  name: Extensions
+  nameWithType: IHasExtensions.Extensions
+  fullName: AasCore.Aas3_0_RC02.IHasExtensions.Extensions
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.Extension}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.Extension}}'
+  definition: System.Nullable`1
+  name: Nullable<List<Extension>>
+  nameWithType: Nullable<List<Extension>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.Extension>>
+  nameWithType.vb: Nullable(Of List(Of Extension))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Extension))
+  name.vb: Nullable(Of List(Of Extension))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Extension
+    name: Extension
+    nameWithType: Extension
+    fullName: AasCore.Aas3_0_RC02.Extension
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Extension
+    name: Extension
+    nameWithType: Extension
+    fullName: AasCore.Aas3_0_RC02.Extension
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Category*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Category
+  name: Category
+  nameWithType: BasicEventElement.Category
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Category
+- uid: AasCore.Aas3_0_RC02.IReferable.Category
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.Category
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: Category
+  nameWithType: IReferable.Category
+  fullName: AasCore.Aas3_0_RC02.IReferable.Category
+- uid: System.Nullable{System.String}
+  commentId: '!:System.Nullable{System.String}'
+  definition: System.Nullable`1
+  name: Nullable<String>
+  nameWithType: Nullable<String>
+  fullName: System.Nullable<System.String>
+  nameWithType.vb: Nullable(Of String)
+  fullName.vb: System.Nullable(Of System.String)
+  name.vb: Nullable(Of String)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  commentId: P:AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+  parent: AasCore.Aas3_0_RC02.IHasSemantics
+  name: SemanticId
+  nameWithType: IHasSemantics.SemanticId
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics.SemanticId
+- uid: AasCore.Aas3_0_RC02.IReferable.IdShort
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.IdShort
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: IdShort
+  nameWithType: IReferable.IdShort
+  fullName: AasCore.Aas3_0_RC02.IReferable.IdShort
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.IdShort*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.IdShort
+  name: IdShort
+  nameWithType: BasicEventElement.IdShort
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.IdShort
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.DisplayName*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.DisplayName
+  name: DisplayName
+  nameWithType: BasicEventElement.DisplayName
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.DisplayName
+- uid: AasCore.Aas3_0_RC02.IReferable.DisplayName
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.DisplayName
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: DisplayName
+  nameWithType: IReferable.DisplayName
+  fullName: AasCore.Aas3_0_RC02.IReferable.DisplayName
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.LangString}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.LangString}}'
+  definition: System.Nullable`1
+  name: Nullable<List<LangString>>
+  nameWithType: Nullable<List<LangString>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.LangString>>
+  nameWithType.vb: Nullable(Of List(Of LangString))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.LangString))
+  name.vb: Nullable(Of List(Of LangString))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.LangString
+    name: LangString
+    nameWithType: LangString
+    fullName: AasCore.Aas3_0_RC02.LangString
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.LangString
+    name: LangString
+    nameWithType: LangString
+    fullName: AasCore.Aas3_0_RC02.LangString
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Description*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Description
+  name: Description
+  nameWithType: BasicEventElement.Description
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Description
+- uid: AasCore.Aas3_0_RC02.IReferable.Description
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.Description
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: Description
+  nameWithType: IReferable.Description
+  fullName: AasCore.Aas3_0_RC02.IReferable.Description
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Checksum*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Checksum
+  name: Checksum
+  nameWithType: BasicEventElement.Checksum
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Checksum
+- uid: AasCore.Aas3_0_RC02.IReferable.Checksum
+  commentId: P:AasCore.Aas3_0_RC02.IReferable.Checksum
+  parent: AasCore.Aas3_0_RC02.IReferable
+  name: Checksum
+  nameWithType: IReferable.Checksum
+  fullName: AasCore.Aas3_0_RC02.IReferable.Checksum
+- uid: AasCore.Aas3_0_RC02.ModelingKind.Instance
+  commentId: F:AasCore.Aas3_0_RC02.ModelingKind.Instance
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Kind*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Kind
+  name: Kind
+  nameWithType: BasicEventElement.Kind
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Kind
+- uid: AasCore.Aas3_0_RC02.IHasKind.Kind
+  commentId: P:AasCore.Aas3_0_RC02.IHasKind.Kind
+  parent: AasCore.Aas3_0_RC02.IHasKind
+  name: Kind
+  nameWithType: IHasKind.Kind
+  fullName: AasCore.Aas3_0_RC02.IHasKind.Kind
+- uid: System.Nullable{AasCore.Aas3_0_RC02.ModelingKind}
+  commentId: '!:System.Nullable{AasCore.Aas3_0_RC02.ModelingKind}'
+  definition: System.Nullable`1
+  name: Nullable<ModelingKind>
+  nameWithType: Nullable<ModelingKind>
+  fullName: System.Nullable<AasCore.Aas3_0_RC02.ModelingKind>
+  nameWithType.vb: Nullable(Of ModelingKind)
+  fullName.vb: System.Nullable(Of AasCore.Aas3_0_RC02.ModelingKind)
+  name.vb: Nullable(Of ModelingKind)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.ModelingKind
+    name: ModelingKind
+    nameWithType: ModelingKind
+    fullName: AasCore.Aas3_0_RC02.ModelingKind
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.ModelingKind
+    name: ModelingKind
+    nameWithType: ModelingKind
+    fullName: AasCore.Aas3_0_RC02.ModelingKind
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.SemanticId*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.SemanticId
+  name: SemanticId
+  nameWithType: BasicEventElement.SemanticId
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.SemanticId
+- uid: AasCore.Aas3_0_RC02.Reference
+  commentId: T:AasCore.Aas3_0_RC02.Reference
+  parent: AasCore.Aas3_0_RC02
+  name: Reference
+  nameWithType: Reference
+  fullName: AasCore.Aas3_0_RC02.Reference
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds
+  name: SupplementalSemanticIds
+  nameWithType: BasicEventElement.SupplementalSemanticIds
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.SupplementalSemanticIds
+- uid: AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+  commentId: P:AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+  parent: AasCore.Aas3_0_RC02.IHasSemantics
+  name: SupplementalSemanticIds
+  nameWithType: IHasSemantics.SupplementalSemanticIds
+  fullName: AasCore.Aas3_0_RC02.IHasSemantics.SupplementalSemanticIds
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.Reference}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.Reference}}'
+  definition: System.Nullable`1
+  name: Nullable<List<Reference>>
+  nameWithType: Nullable<List<Reference>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.Reference>>
+  nameWithType.vb: Nullable(Of List(Of Reference))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Reference))
+  name.vb: Nullable(Of List(Of Reference))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Reference
+    name: Reference
+    nameWithType: Reference
+    fullName: AasCore.Aas3_0_RC02.Reference
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Reference
+    name: Reference
+    nameWithType: Reference
+    fullName: AasCore.Aas3_0_RC02.Reference
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Qualifier.Type
+  commentId: P:AasCore.Aas3_0_RC02.Qualifier.Type
+  isExternal: true
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers
+  name: Qualifiers
+  nameWithType: BasicEventElement.Qualifiers
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Qualifiers
+- uid: AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+  commentId: P:AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+  parent: AasCore.Aas3_0_RC02.IQualifiable
+  name: Qualifiers
+  nameWithType: IQualifiable.Qualifiers
+  fullName: AasCore.Aas3_0_RC02.IQualifiable.Qualifiers
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}}'
+  definition: System.Nullable`1
+  name: Nullable<List<Qualifier>>
+  nameWithType: Nullable<List<Qualifier>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.Qualifier>>
+  nameWithType.vb: Nullable(Of List(Of Qualifier))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.Qualifier))
+  name.vb: Nullable(Of List(Of Qualifier))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Qualifier
+    name: Qualifier
+    nameWithType: Qualifier
+    fullName: AasCore.Aas3_0_RC02.Qualifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Qualifier
+    name: Qualifier
+    nameWithType: Qualifier
+    fullName: AasCore.Aas3_0_RC02.Qualifier
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications
+  name: EmbeddedDataSpecifications
+  nameWithType: BasicEventElement.EmbeddedDataSpecifications
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.EmbeddedDataSpecifications
+- uid: AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+  commentId: P:AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+  parent: AasCore.Aas3_0_RC02.IHasDataSpecification
+  name: EmbeddedDataSpecifications
+  nameWithType: IHasDataSpecification.EmbeddedDataSpecifications
+  fullName: AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications
+- uid: System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}}
+  commentId: '!:System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}}'
+  definition: System.Nullable`1
+  name: Nullable<List<EmbeddedDataSpecification>>
+  nameWithType: Nullable<List<EmbeddedDataSpecification>>
+  fullName: System.Nullable<List<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>>
+  nameWithType.vb: Nullable(Of List(Of EmbeddedDataSpecification))
+  fullName.vb: System.Nullable(Of List(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification))
+  name.vb: Nullable(Of List(Of EmbeddedDataSpecification))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    name: EmbeddedDataSpecification
+    nameWithType: EmbeddedDataSpecification
+    fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    name: EmbeddedDataSpecification
+    nameWithType: EmbeddedDataSpecification
+    fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.AssetAdministrationShell
+  commentId: T:AasCore.Aas3_0_RC02.AssetAdministrationShell
+  parent: AasCore.Aas3_0_RC02
+  name: AssetAdministrationShell
+  nameWithType: AssetAdministrationShell
+  fullName: AasCore.Aas3_0_RC02.AssetAdministrationShell
+- uid: AasCore.Aas3_0_RC02.Submodel
+  commentId: T:AasCore.Aas3_0_RC02.Submodel
+  parent: AasCore.Aas3_0_RC02
+  name: Submodel
+  nameWithType: Submodel
+  fullName: AasCore.Aas3_0_RC02.Submodel
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Observed*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Observed
+  name: Observed
+  nameWithType: BasicEventElement.Observed
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Observed
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Direction*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Direction
+  name: Direction
+  nameWithType: BasicEventElement.Direction
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Direction
+- uid: AasCore.Aas3_0_RC02.Direction
+  commentId: T:AasCore.Aas3_0_RC02.Direction
+  parent: AasCore.Aas3_0_RC02
+  name: Direction
+  nameWithType: Direction
+  fullName: AasCore.Aas3_0_RC02.Direction
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.State*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.State
+  name: State
+  nameWithType: BasicEventElement.State
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.State
+- uid: AasCore.Aas3_0_RC02.StateOfEvent
+  commentId: T:AasCore.Aas3_0_RC02.StateOfEvent
+  parent: AasCore.Aas3_0_RC02
+  name: StateOfEvent
+  nameWithType: StateOfEvent
+  fullName: AasCore.Aas3_0_RC02.StateOfEvent
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic
+  name: MessageTopic
+  nameWithType: BasicEventElement.MessageTopic
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MessageTopic
+- uid: AasCore.Aas3_0_RC02.SubmodelElementList
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementList
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementList
+  nameWithType: SubmodelElementList
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementList
+- uid: AasCore.Aas3_0_RC02.SubmodelElementCollection
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementCollection
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementCollection
+  nameWithType: SubmodelElementCollection
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementCollection
+- uid: AasCore.Aas3_0_RC02.Entity
+  commentId: T:AasCore.Aas3_0_RC02.Entity
+  parent: AasCore.Aas3_0_RC02
+  name: Entity
+  nameWithType: Entity
+  fullName: AasCore.Aas3_0_RC02.Entity
+- uid: AasCore.Aas3_0_RC02.IDataElement
+  commentId: T:AasCore.Aas3_0_RC02.IDataElement
+  parent: AasCore.Aas3_0_RC02
+  name: IDataElement
+  nameWithType: IDataElement
+  fullName: AasCore.Aas3_0_RC02.IDataElement
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker
+  name: MessageBroker
+  nameWithType: BasicEventElement.MessageBroker
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MessageBroker
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate
+  name: LastUpdate
+  nameWithType: BasicEventElement.LastUpdate
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.LastUpdate
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MinInterval*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.MinInterval
+  name: MinInterval
+  nameWithType: BasicEventElement.MinInterval
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MinInterval
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval
+  name: MaxInterval
+  nameWithType: BasicEventElement.MaxInterval
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.MaxInterval
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty
+  name: OverExtensionsOrEmpty
+  nameWithType: BasicEventElement.OverExtensionsOrEmpty
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverExtensionsOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Extension}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Extension}'
+  definition: IEnumerable`1
+  name: IEnumerable<Extension>
+  nameWithType: IEnumerable<Extension>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Extension>
+  nameWithType.vb: IEnumerable(Of Extension)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Extension)
+  name.vb: IEnumerable(Of Extension)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Extension
+    name: Extension
+    nameWithType: Extension
+    fullName: AasCore.Aas3_0_RC02.Extension
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Extension
+    name: Extension
+    nameWithType: Extension
+    fullName: AasCore.Aas3_0_RC02.Extension
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty
+  name: OverDisplayNameOrEmpty
+  nameWithType: BasicEventElement.OverDisplayNameOrEmpty
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverDisplayNameOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.LangString}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.LangString}'
+  definition: IEnumerable`1
+  name: IEnumerable<LangString>
+  nameWithType: IEnumerable<LangString>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.LangString>
+  nameWithType.vb: IEnumerable(Of LangString)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.LangString)
+  name.vb: IEnumerable(Of LangString)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.LangString
+    name: LangString
+    nameWithType: LangString
+    fullName: AasCore.Aas3_0_RC02.LangString
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.LangString
+    name: LangString
+    nameWithType: LangString
+    fullName: AasCore.Aas3_0_RC02.LangString
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty
+  name: OverDescriptionOrEmpty
+  nameWithType: BasicEventElement.OverDescriptionOrEmpty
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverDescriptionOrEmpty
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty
+  name: OverSupplementalSemanticIdsOrEmpty
+  nameWithType: BasicEventElement.OverSupplementalSemanticIdsOrEmpty
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverSupplementalSemanticIdsOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Reference}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Reference}'
+  definition: IEnumerable`1
+  name: IEnumerable<Reference>
+  nameWithType: IEnumerable<Reference>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Reference>
+  nameWithType.vb: IEnumerable(Of Reference)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Reference)
+  name.vb: IEnumerable(Of Reference)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Reference
+    name: Reference
+    nameWithType: Reference
+    fullName: AasCore.Aas3_0_RC02.Reference
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Reference
+    name: Reference
+    nameWithType: Reference
+    fullName: AasCore.Aas3_0_RC02.Reference
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty
+  name: OverQualifiersOrEmpty
+  nameWithType: BasicEventElement.OverQualifiersOrEmpty
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverQualifiersOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.Qualifier}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.Qualifier}'
+  definition: IEnumerable`1
+  name: IEnumerable<Qualifier>
+  nameWithType: IEnumerable<Qualifier>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.Qualifier>
+  nameWithType.vb: IEnumerable(Of Qualifier)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.Qualifier)
+  name.vb: IEnumerable(Of Qualifier)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.Qualifier
+    name: Qualifier
+    nameWithType: Qualifier
+    fullName: AasCore.Aas3_0_RC02.Qualifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.Qualifier
+    name: Qualifier
+    nameWithType: Qualifier
+    fullName: AasCore.Aas3_0_RC02.Qualifier
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty
+  name: OverEmbeddedDataSpecificationsOrEmpty
+  nameWithType: BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.OverEmbeddedDataSpecificationsOrEmpty
+- uid: IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}'
+  definition: IEnumerable`1
+  name: IEnumerable<EmbeddedDataSpecification>
+  nameWithType: IEnumerable<EmbeddedDataSpecification>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.EmbeddedDataSpecification>
+  nameWithType.vb: IEnumerable(Of EmbeddedDataSpecification)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.EmbeddedDataSpecification)
+  name.vb: IEnumerable(Of EmbeddedDataSpecification)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    name: EmbeddedDataSpecification
+    nameWithType: EmbeddedDataSpecification
+    fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+    name: EmbeddedDataSpecification
+    nameWithType: EmbeddedDataSpecification
+    fullName: AasCore.Aas3_0_RC02.EmbeddedDataSpecification
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault
+  name: KindOrDefault
+  nameWithType: BasicEventElement.KindOrDefault
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.KindOrDefault
+- uid: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  commentId: M:AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  parent: AasCore.Aas3_0_RC02.IHasKind
+  name: KindOrDefault()
+  nameWithType: IHasKind.KindOrDefault()
+  fullName: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+    name: KindOrDefault
+    nameWithType: IHasKind.KindOrDefault
+    fullName: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+    name: KindOrDefault
+    nameWithType: IHasKind.KindOrDefault
+    fullName: AasCore.Aas3_0_RC02.IHasKind.KindOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.ModelingKind
+  commentId: T:AasCore.Aas3_0_RC02.ModelingKind
+  parent: AasCore.Aas3_0_RC02
+  name: ModelingKind
+  nameWithType: ModelingKind
+  fullName: AasCore.Aas3_0_RC02.ModelingKind
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce
+  name: DescendOnce
+  nameWithType: BasicEventElement.DescendOnce
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.DescendOnce
+- uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  commentId: M:AasCore.Aas3_0_RC02.IClass.DescendOnce
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: DescendOnce()
+  nameWithType: IClass.DescendOnce()
+  fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+    name: DescendOnce
+    nameWithType: IClass.DescendOnce
+    fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.DescendOnce
+    name: DescendOnce
+    nameWithType: IClass.DescendOnce
+    fullName: AasCore.Aas3_0_RC02.IClass.DescendOnce
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable{AasCore.Aas3_0_RC02.IClass}
+  commentId: '!:IEnumerable{AasCore.Aas3_0_RC02.IClass}'
+  definition: IEnumerable`1
+  name: IEnumerable<IClass>
+  nameWithType: IEnumerable<IClass>
+  fullName: IEnumerable<AasCore.Aas3_0_RC02.IClass>
+  nameWithType.vb: IEnumerable(Of IClass)
+  fullName.vb: IEnumerable(Of AasCore.Aas3_0_RC02.IClass)
+  name.vb: IEnumerable(Of IClass)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AasCore.Aas3_0_RC02.IClass
+    name: IClass
+    nameWithType: IClass
+    fullName: AasCore.Aas3_0_RC02.IClass
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AasCore.Aas3_0_RC02.IClass
+    name: IClass
+    nameWithType: IClass
+    fullName: AasCore.Aas3_0_RC02.IClass
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Descend*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Descend
+  name: Descend
+  nameWithType: BasicEventElement.Descend
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Descend
+- uid: AasCore.Aas3_0_RC02.IClass.Descend
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Descend
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: Descend()
+  nameWithType: IClass.Descend()
+  fullName: AasCore.Aas3_0_RC02.IClass.Descend()
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Descend
+    name: Descend
+    nameWithType: IClass.Descend
+    fullName: AasCore.Aas3_0_RC02.IClass.Descend
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Descend
+    name: Descend
+    nameWithType: IClass.Descend
+    fullName: AasCore.Aas3_0_RC02.IClass.Descend
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Accept*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Accept
+  name: Accept
+  nameWithType: BasicEventElement.Accept
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Accept
+- uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  parent: AasCore.Aas3_0_RC02.IClass
+  name: Accept(Visitation.IVisitor)
+  nameWithType: IClass.Accept(Visitation.IVisitor)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+    name: Accept
+    nameWithType: IClass.Accept
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    name: Visitation.IVisitor
+    nameWithType: Visitation.IVisitor
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)
+    name: Accept
+    nameWithType: IClass.Accept
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+    name: Visitation.IVisitor
+    nameWithType: Visitation.IVisitor
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitor
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitor
+  parent: AasCore.Aas3_0_RC02
+  name: Visitation.IVisitor
+  nameWithType: Visitation.IVisitor
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitor
+- uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}},{TContext})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: IClass.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType.vb: IClass.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept<TContext>
+    nameWithType: IClass.Accept<TContext>
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept(Of TContext)
+    nameWithType: IClass.Accept(Of TContext)
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{{TContext}}
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0}
+  parent: AasCore.Aas3_0_RC02
+  definition: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  name: Visitation.IVisitorWithContext<TContext>
+  nameWithType: Visitation.IVisitorWithContext<TContext>
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext)
+  name.vb: Visitation.IVisitorWithContext(Of TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TContext}'
+  commentId: '!:TContext'
+  definition: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+  name: Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType: IClass.Accept<TContext>(Visitation.IVisitorWithContext<TContext>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>, TContext)
+  nameWithType.vb: IClass.Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext), TContext)
+  name.vb: Accept(Of TContext)(Visitation.IVisitorWithContext(Of TContext), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept<TContext>
+    nameWithType: IClass.Accept<TContext>
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept<TContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)
+    name: Accept(Of TContext)
+    nameWithType: IClass.Accept(Of TContext)
+    fullName: AasCore.Aas3_0_RC02.IClass.Accept(Of TContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+  name: Visitation.IVisitorWithContext<TContext>
+  nameWithType: Visitation.IVisitorWithContext<TContext>
+  fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext<TContext>
+  nameWithType.vb: Visitation.IVisitorWithContext(Of TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext(Of TContext)
+  name.vb: Visitation.IVisitorWithContext(Of TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext`1
+    name: Visitation.IVisitorWithContext
+    nameWithType: Visitation.IVisitorWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.Transform*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.Transform
+  name: Transform
+  nameWithType: BasicEventElement.Transform
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.Transform
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: IClass.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  nameWithType.vb: IClass.Transform(Of T)(Visitation.ITransformer(Of T))
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform<T>
+    nameWithType: IClass.Transform<T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform(Of T)
+    nameWithType: IClass.Transform(Of T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformer{{T}}
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformer{``0}
+  parent: AasCore.Aas3_0_RC02
+  definition: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+  name: Visitation.ITransformer<T>
+  nameWithType: Visitation.ITransformer<T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer<T>
+  nameWithType.vb: Visitation.ITransformer(Of T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T)
+  name.vb: Visitation.ITransformer(Of T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+  name: Transform<T>(Visitation.ITransformer<T>)
+  nameWithType: IClass.Transform<T>(Visitation.ITransformer<T>)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>(AasCore.Aas3_0_RC02.Visitation.ITransformer<T>)
+  nameWithType.vb: IClass.Transform(Of T)(Visitation.ITransformer(Of T))
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of T)(AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T))
+  name.vb: Transform(Of T)(Visitation.ITransformer(Of T))
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform<T>
+    nameWithType: IClass.Transform<T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})
+    name: Transform(Of T)
+    nameWithType: IClass.Transform(Of T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+  name: Visitation.ITransformer<T>
+  nameWithType: Visitation.ITransformer<T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer<T>
+  nameWithType.vb: Visitation.ITransformer(Of T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformer(Of T)
+  name.vb: Visitation.ITransformer(Of T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformer`1
+    name: Visitation.ITransformer
+    nameWithType: Visitation.ITransformer
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}},{TContext})
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  parent: AasCore.Aas3_0_RC02.IClass
+  definition: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: IClass.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType.vb: IClass.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform<TContext, T>
+    nameWithType: IClass.Transform<TContext, T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform(Of TContext, T)
+    nameWithType: IClass.Transform(Of TContext, T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{{TContext},{T}}
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1}
+  parent: AasCore.Aas3_0_RC02
+  definition: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+  name: Visitation.ITransformerWithContext<TContext, T>
+  nameWithType: Visitation.ITransformerWithContext<TContext, T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>
+  nameWithType.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T)
+  name.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  commentId: M:AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+  name: Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType: IClass.Transform<TContext, T>(Visitation.ITransformerWithContext<TContext, T>, TContext)
+  fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>, TContext)
+  nameWithType.vb: IClass.Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  fullName.vb: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  name.vb: Transform(Of TContext, T)(Visitation.ITransformerWithContext(Of TContext, T), TContext)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform<TContext, T>
+    nameWithType: IClass.Transform<TContext, T>
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform<TContext, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.IClass.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)
+    name: Transform(Of TContext, T)
+    nameWithType: IClass.Transform(Of TContext, T)
+    fullName: AasCore.Aas3_0_RC02.IClass.Transform(Of TContext, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+  commentId: T:AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+  name: Visitation.ITransformerWithContext<TContext, T>
+  nameWithType: Visitation.ITransformerWithContext<TContext, T>
+  fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext<TContext, T>
+  nameWithType.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  fullName.vb: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext(Of TContext, T)
+  name.vb: Visitation.ITransformerWithContext(Of TContext, T)
+  spec.csharp:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext`2
+    name: Visitation.ITransformerWithContext
+    nameWithType: Visitation.ITransformerWithContext
+    fullName: AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AasCore.Aas3_0_RC02.BasicEventElement.#ctor*
+  commentId: Overload:AasCore.Aas3_0_RC02.BasicEventElement.#ctor
+  name: BasicEventElement
+  nameWithType: BasicEventElement.BasicEventElement
+  fullName: AasCore.Aas3_0_RC02.BasicEventElement.BasicEventElement

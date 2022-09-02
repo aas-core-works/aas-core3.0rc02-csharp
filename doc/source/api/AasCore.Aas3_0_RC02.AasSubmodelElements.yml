@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements
+  commentId: T:AasCore.Aas3_0_RC02.AasSubmodelElements
+  id: AasSubmodelElements
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.AnnotatedRelationshipElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.BasicEventElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.Blob
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.Capability
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.DataElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.Entity
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.EventElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.File
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.MultiLanguageProperty
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.Operation
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.Property
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.Range
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.ReferenceElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.RelationshipElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElement
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementCollection
+  - AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementList
+  langs:
+  - csharp
+  - vb
+  name: AasSubmodelElements
+  nameWithType: AasSubmodelElements
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements
+  type: Enum
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AasSubmodelElements
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2866
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nEnumeration of all possible elements of a <xref href=\"AasCore.Aas3_0_RC02.SubmodelElementList\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public enum AasSubmodelElements : int'
+    content.vb: Public Enum AasSubmodelElements As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.AnnotatedRelationshipElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.AnnotatedRelationshipElement
+  id: AnnotatedRelationshipElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: AnnotatedRelationshipElement
+  nameWithType: AasSubmodelElements.AnnotatedRelationshipElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.AnnotatedRelationshipElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: AnnotatedRelationshipElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2868
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: AnnotatedRelationshipElement = 0
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.BasicEventElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.BasicEventElement
+  id: BasicEventElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: BasicEventElement
+  nameWithType: AasSubmodelElements.BasicEventElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.BasicEventElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: BasicEventElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2871
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: BasicEventElement = 1
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.Blob
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.Blob
+  id: Blob
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: Blob
+  nameWithType: AasSubmodelElements.Blob
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.Blob
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Blob
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2874
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Blob = 2
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.Capability
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.Capability
+  id: Capability
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: Capability
+  nameWithType: AasSubmodelElements.Capability
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.Capability
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Capability
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2877
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Capability = 3
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.DataElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.DataElement
+  id: DataElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: DataElement
+  nameWithType: AasSubmodelElements.DataElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.DataElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2880
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: DataElement = 4
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.Entity
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.Entity
+  id: Entity
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: AasSubmodelElements.Entity
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.Entity
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Entity
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2883
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Entity = 5
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.EventElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.EventElement
+  id: EventElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: EventElement
+  nameWithType: AasSubmodelElements.EventElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.EventElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EventElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2886
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: EventElement = 6
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.File
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.File
+  id: File
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: AasSubmodelElements.File
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.File
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: File
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2889
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: File = 7
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.MultiLanguageProperty
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.MultiLanguageProperty
+  id: MultiLanguageProperty
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: MultiLanguageProperty
+  nameWithType: AasSubmodelElements.MultiLanguageProperty
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.MultiLanguageProperty
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: MultiLanguageProperty
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2892
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: MultiLanguageProperty = 8
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.Operation
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.Operation
+  id: Operation
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: AasSubmodelElements.Operation
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.Operation
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Operation
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2895
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Operation = 9
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.Property
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.Property
+  id: Property
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: Property
+  nameWithType: AasSubmodelElements.Property
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.Property
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Property
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2898
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Property = 10
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.Range
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.Range
+  id: Range
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: AasSubmodelElements.Range
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.Range
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Range
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2901
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: Range = 11
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.ReferenceElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.ReferenceElement
+  id: ReferenceElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: ReferenceElement
+  nameWithType: AasSubmodelElements.ReferenceElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.ReferenceElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: ReferenceElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2904
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: ReferenceElement = 12
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.RelationshipElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.RelationshipElement
+  id: RelationshipElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: RelationshipElement
+  nameWithType: AasSubmodelElements.RelationshipElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.RelationshipElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RelationshipElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2907
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: RelationshipElement = 13
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElement
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElement
+  id: SubmodelElement
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElement
+  nameWithType: AasSubmodelElements.SubmodelElement
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElement
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElement
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2910
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: SubmodelElement = 14
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementList
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementList
+  id: SubmodelElementList
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementList
+  nameWithType: AasSubmodelElements.SubmodelElementList
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementList
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementList
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2913
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: SubmodelElementList = 15
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementCollection
+  commentId: F:AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementCollection
+  id: SubmodelElementCollection
+  parent: AasCore.Aas3_0_RC02.AasSubmodelElements
+  langs:
+  - csharp
+  - vb
+  name: SubmodelElementCollection
+  nameWithType: AasSubmodelElements.SubmodelElementCollection
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements.SubmodelElementCollection
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SubmodelElementCollection
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 2916
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: SubmodelElementCollection = 16
+    return:
+      type: AasCore.Aas3_0_RC02.AasSubmodelElements
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AasCore.Aas3_0_RC02.SubmodelElementList
+  commentId: T:AasCore.Aas3_0_RC02.SubmodelElementList
+  parent: AasCore.Aas3_0_RC02
+  name: SubmodelElementList
+  nameWithType: SubmodelElementList
+  fullName: AasCore.Aas3_0_RC02.SubmodelElementList
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.AasSubmodelElements
+  commentId: T:AasCore.Aas3_0_RC02.AasSubmodelElements
+  parent: AasCore.Aas3_0_RC02
+  name: AasSubmodelElements
+  nameWithType: AasSubmodelElements
+  fullName: AasCore.Aas3_0_RC02.AasSubmodelElements

@@ -1,0 +1,119 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.EntityType
+  commentId: T:AasCore.Aas3_0_RC02.EntityType
+  id: EntityType
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.EntityType.CoManagedEntity
+  - AasCore.Aas3_0_RC02.EntityType.SelfManagedEntity
+  langs:
+  - csharp
+  - vb
+  name: EntityType
+  nameWithType: EntityType
+  fullName: AasCore.Aas3_0_RC02.EntityType
+  type: Enum
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: EntityType
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 7548
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nEnumeration for denoting whether an entity is a self-managed entity or a co-managed\nentity.\n"
+  example: []
+  syntax:
+    content: 'public enum EntityType : int'
+    content.vb: Public Enum EntityType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AasCore.Aas3_0_RC02.EntityType.CoManagedEntity
+  commentId: F:AasCore.Aas3_0_RC02.EntityType.CoManagedEntity
+  id: CoManagedEntity
+  parent: AasCore.Aas3_0_RC02.EntityType
+  langs:
+  - csharp
+  - vb
+  name: CoManagedEntity
+  nameWithType: EntityType.CoManagedEntity
+  fullName: AasCore.Aas3_0_RC02.EntityType.CoManagedEntity
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: CoManagedEntity
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 7554
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nFor co-managed entities there is no separate AAS. Co-managed entities need to be\npart of a self-managed entity.\n"
+  example: []
+  syntax:
+    content: CoManagedEntity = 0
+    return:
+      type: AasCore.Aas3_0_RC02.EntityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.EntityType.SelfManagedEntity
+  commentId: F:AasCore.Aas3_0_RC02.EntityType.SelfManagedEntity
+  id: SelfManagedEntity
+  parent: AasCore.Aas3_0_RC02.EntityType
+  langs:
+  - csharp
+  - vb
+  name: SelfManagedEntity
+  nameWithType: EntityType.SelfManagedEntity
+  fullName: AasCore.Aas3_0_RC02.EntityType.SelfManagedEntity
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: SelfManagedEntity
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 7564
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nSelf-Managed Entities have their own AAS but can be part of the bill of material of\na composite self-managed entity.\n"
+  remarks: "\nThe asset of an I4.0 Component is a self-managed entity per definition.&quot;\n"
+  example: []
+  syntax:
+    content: SelfManagedEntity = 1
+    return:
+      type: AasCore.Aas3_0_RC02.EntityType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.EntityType
+  commentId: T:AasCore.Aas3_0_RC02.EntityType
+  parent: AasCore.Aas3_0_RC02
+  name: EntityType
+  nameWithType: EntityType
+  fullName: AasCore.Aas3_0_RC02.EntityType

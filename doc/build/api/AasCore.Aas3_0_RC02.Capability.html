@@ -1,0 +1,1206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Capability
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Capability
+   ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_0_RC02.Capability">
+  
+  
+  <h1 id="AasCore_Aas3_0_RC02_Capability" data-uid="AasCore.Aas3_0_RC02.Capability" class="text-break">Class Capability
+  </h1>
+  <div class="markdown level0 summary"><p>A capability is the implementation-independent description of the potential of an
+asset to achieve a certain effect in the physical or virtual world.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Capability</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.ISubmodelElement.html">ISubmodelElement</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IReferable.html">IReferable</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IHasExtensions.html">IHasExtensions</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IHasKind.html">IHasKind</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IHasSemantics.html">IHasSemantics</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IQualifiable.html">IQualifiable</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IHasDataSpecification.html">IHasDataSpecification</a></div>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.IClass.html">IClass</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AasCore.Aas3_0_RC02.html">AasCore.Aas3_0_RC02</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_0_RC02.dll</h6>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Capability : object, ISubmodelElement, IReferable, IHasExtensions, IHasKind, IHasSemantics, IQualifiable, IHasDataSpecification, IClass</code></pre>
+  </div>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <a class="xref" href="AasCore.Aas3_0_RC02.Capability.html#AasCore_Aas3_0_RC02_Capability_SemanticId">SemanticId</a> of a capability is typically an ontology.
+Thus, reasoning on capabilities is enabled.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability__ctor_System_Nullable_List_AasCore_Aas3_0_RC02_Extension___System_Nullable_System_String__System_Nullable_System_String__System_Nullable_List_AasCore_Aas3_0_RC02_LangString___System_Nullable_List_AasCore_Aas3_0_RC02_LangString___System_Nullable_System_String__System_Nullable_AasCore_Aas3_0_RC02_ModelingKind__AasCore_Aas3_0_RC02_Reference_System_Nullable_List_AasCore_Aas3_0_RC02_Reference___System_Nullable_List_AasCore_Aas3_0_RC02_Qualifier___System_Nullable_List_AasCore_Aas3_0_RC02_EmbeddedDataSpecification___.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.%23ctor(System.Nullable%7BList%7BAasCore.Aas3_0_RC02.Extension%7D%7D%2CSystem.Nullable%7BSystem.String%7D%2CSystem.Nullable%7BSystem.String%7D%2CSystem.Nullable%7BList%7BAasCore.Aas3_0_RC02.LangString%7D%7D%2CSystem.Nullable%7BList%7BAasCore.Aas3_0_RC02.LangString%7D%7D%2CSystem.Nullable%7BSystem.String%7D%2CSystem.Nullable%7BAasCore.Aas3_0_RC02.ModelingKind%7D%2CAasCore.Aas3_0_RC02.Reference%2CSystem.Nullable%7BList%7BAasCore.Aas3_0_RC02.Reference%7D%7D%2CSystem.Nullable%7BList%7BAasCore.Aas3_0_RC02.Qualifier%7D%7D%2CSystem.Nullable%7BList%7BAasCore.Aas3_0_RC02.EmbeddedDataSpecification%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9978">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability__ctor_" data-uid="AasCore.Aas3_0_RC02.Capability.#ctor*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability__ctor_System_Nullable_List_AasCore_Aas3_0_RC02_Extension___System_Nullable_System_String__System_Nullable_System_String__System_Nullable_List_AasCore_Aas3_0_RC02_LangString___System_Nullable_List_AasCore_Aas3_0_RC02_LangString___System_Nullable_System_String__System_Nullable_AasCore_Aas3_0_RC02_ModelingKind__AasCore_Aas3_0_RC02_Reference_System_Nullable_List_AasCore_Aas3_0_RC02_Reference___System_Nullable_List_AasCore_Aas3_0_RC02_Qualifier___System_Nullable_List_AasCore_Aas3_0_RC02_EmbeddedDataSpecification___" data-uid="AasCore.Aas3_0_RC02.Capability.#ctor(System.Nullable{List{AasCore.Aas3_0_RC02.Extension}},System.Nullable{System.String},System.Nullable{System.String},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{List{AasCore.Aas3_0_RC02.LangString}},System.Nullable{System.String},System.Nullable{AasCore.Aas3_0_RC02.ModelingKind},AasCore.Aas3_0_RC02.Reference,System.Nullable{List{AasCore.Aas3_0_RC02.Reference}},System.Nullable{List{AasCore.Aas3_0_RC02.Qualifier}},System.Nullable{List{AasCore.Aas3_0_RC02.EmbeddedDataSpecification}})">Capability(Nullable&lt;List&lt;Extension&gt;&gt;, Nullable&lt;String&gt;, Nullable&lt;String&gt;, Nullable&lt;List&lt;LangString&gt;&gt;, Nullable&lt;List&lt;LangString&gt;&gt;, Nullable&lt;String&gt;, Nullable&lt;ModelingKind&gt;, Reference, Nullable&lt;List&lt;Reference&gt;&gt;, Nullable&lt;List&lt;Qualifier&gt;&gt;, Nullable&lt;List&lt;EmbeddedDataSpecification&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Capability(List&lt;Extension&gt;? extensions = null, string? category = null, string? idShort = null, List&lt;LangString&gt;? displayName = null, List&lt;LangString&gt;? description = null, string? checksum = null, ModelingKind? kind = null, Reference semanticId = null, List&lt;Reference&gt;? supplementalSemanticIds = null, List&lt;Qualifier&gt;? qualifiers = null, List&lt;EmbeddedDataSpecification&gt;? embeddedDataSpecifications = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Extension.html">Extension</a>&gt;&gt;</td>
+        <td><span class="parametername">extensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">category</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">idShort</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;&gt;</td>
+        <td><span class="parametername">displayName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;&gt;</td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">checksum</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.ModelingKind.html">ModelingKind</a>&gt;</td>
+        <td><span class="parametername">kind</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Reference.html">Reference</a></td>
+        <td><span class="parametername">semanticId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Reference.html">Reference</a>&gt;&gt;</td>
+        <td><span class="parametername">supplementalSemanticIds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Qualifier.html">Qualifier</a>&gt;&gt;</td>
+        <td><span class="parametername">qualifiers</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html">EmbeddedDataSpecification</a>&gt;&gt;</td>
+        <td><span class="parametername">embeddedDataSpecifications</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Category.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9588">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Category_" data-uid="AasCore.Aas3_0_RC02.Capability.Category*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Category" data-uid="AasCore.Aas3_0_RC02.Capability.Category">Category</h4>
+  <div class="markdown level1 summary"><p>The category is a value that gives further meta information
+w.r.t. to the class of the element.
+It affects the expected existence of attributes and the applicability of
+constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Category { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_Category_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The category is not identical to the semantic definition
+(<a class="xref" href="AasCore.Aas3_0_RC02.IHasSemantics.html">IHasSemantics</a>) of an element. The category e.g. could denote that
+the element is a measurement value whereas the semantic definition of
+the element would denote that it is the measured temperature.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Checksum.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Checksum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9664">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Checksum_" data-uid="AasCore.Aas3_0_RC02.Capability.Checksum*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Checksum" data-uid="AasCore.Aas3_0_RC02.Capability.Checksum">Checksum</h4>
+  <div class="markdown level1 summary"><p>Checksum to be used to determine if an Referable (including its
+aggregated child elements) has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Checksum { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_Checksum_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The checksum is calculated by the user's tool environment.
+The checksum has no semantic meaning for an asset administration
+shell model and there is no requirement for asset administration
+shell tools to manage the checksum</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Description.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9652">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Description_" data-uid="AasCore.Aas3_0_RC02.Capability.Description*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Description" data-uid="AasCore.Aas3_0_RC02.Capability.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Description or comments on the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;LangString&gt;? Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_Description_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The description can be provided in several languages.
+</p>
+<p>
+If no description is defined, then the definition of the concept
+description that defines the semantics of the element is used.
+</p>
+<p>
+Additional information can be provided, e.g., if the element is
+qualified and which qualifier types can be expected in which
+context or which additional data specification templates are
+provided.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_DisplayName.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.DisplayName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9632">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_DisplayName_" data-uid="AasCore.Aas3_0_RC02.Capability.DisplayName*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_DisplayName" data-uid="AasCore.Aas3_0_RC02.Capability.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>Display name. Can be provided in several languages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;LangString&gt;? DisplayName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_DisplayName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If no display name is defined in the language requested by the application,
+then the display name is selected in the following order if available:
+</p>
+<ul>
+<li>
+  the preferred name in the requested language of the concept description defining
+  the semantics of the element
+</li>
+<li>
+  If there is a default language list defined in the application,
+  then the corresponding preferred name in the language is chosen
+  according to this order.
+</li>
+<li>
+  the English preferred name of the concept description defining
+  the semantics of the element
+</li>
+<li>
+  the short name of the concept description
+</li>
+<li>
+  the <a class="xref" href="AasCore.Aas3_0_RC02.IReferable.html#AasCore_Aas3_0_RC02_IReferable_IdShort">IdShort</a> of the element
+</li>
+</ul>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_EmbeddedDataSpecifications.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.EmbeddedDataSpecifications%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9712">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_EmbeddedDataSpecifications_" data-uid="AasCore.Aas3_0_RC02.Capability.EmbeddedDataSpecifications*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_EmbeddedDataSpecifications" data-uid="AasCore.Aas3_0_RC02.Capability.EmbeddedDataSpecifications">EmbeddedDataSpecifications</h4>
+  <div class="markdown level1 summary"><p>Embedded data specification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;EmbeddedDataSpecification&gt;? EmbeddedDataSpecifications { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html">EmbeddedDataSpecification</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Extensions.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Extensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9574">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Extensions_" data-uid="AasCore.Aas3_0_RC02.Capability.Extensions*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Extensions" data-uid="AasCore.Aas3_0_RC02.Capability.Extensions">Extensions</h4>
+  <div class="markdown level1 summary"><p>An extension of the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Extension&gt;? Extensions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Extension.html">Extension</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_IdShort.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.IdShort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9600">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_IdShort_" data-uid="AasCore.Aas3_0_RC02.Capability.IdShort*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_IdShort" data-uid="AasCore.Aas3_0_RC02.Capability.IdShort">IdShort</h4>
+  <div class="markdown level1 summary"><p>In case of identifiables this attribute is a short name of the element.
+In case of referable this ID is an identifying string of the element within
+its name space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? IdShort { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_IdShort_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In case the element is a property and the property has a semantic definition
+(<a class="xref" href="AasCore.Aas3_0_RC02.IHasSemantics.html#AasCore_Aas3_0_RC02_IHasSemantics_SemanticId">SemanticId</a>) conformant to IEC61360
+the <a class="xref" href="AasCore.Aas3_0_RC02.IReferable.html#AasCore_Aas3_0_RC02_IReferable_IdShort">IdShort</a> is typically identical to the short name in English.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Kind.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Kind%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9672">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Kind_" data-uid="AasCore.Aas3_0_RC02.Capability.Kind*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Kind" data-uid="AasCore.Aas3_0_RC02.Capability.Kind">Kind</h4>
+  <div class="markdown level1 summary"><p>Kind of the element: either type or instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelingKind? Kind { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.ModelingKind.html">ModelingKind</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_Kind_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Default: <a class="xref" href="AasCore.Aas3_0_RC02.ModelingKind.html#AasCore_Aas3_0_RC02_ModelingKind_Instance">Instance</a></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Qualifiers.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Qualifiers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9707">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Qualifiers_" data-uid="AasCore.Aas3_0_RC02.Capability.Qualifiers*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Qualifiers" data-uid="AasCore.Aas3_0_RC02.Capability.Qualifiers">Qualifiers</h4>
+  <div class="markdown level1 summary"><p>Additional qualification of a qualifiable element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Qualifier&gt;? Qualifiers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Qualifier.html">Qualifier</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_Qualifiers_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Constraints:
+</p>
+<ul>
+<li>
+  Constraint AASd-021:
+  Every qualifiable can only have one qualifier with the same
+<a class="xref" href="AasCore.Aas3_0_RC02.Qualifier.html#AasCore_Aas3_0_RC02_Qualifier_Type">Type</a>.
+</li>
+</ul>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_SemanticId.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.SemanticId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9681">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_SemanticId_" data-uid="AasCore.Aas3_0_RC02.Capability.SemanticId*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_SemanticId" data-uid="AasCore.Aas3_0_RC02.Capability.SemanticId">SemanticId</h4>
+  <div class="markdown level1 summary"><p>Identifier of the semantic definition of the element. It is called semantic ID
+of the element or also main semantic ID of the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Reference SemanticId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Reference.html">Reference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_SemanticId_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is recommended to use a global reference.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_SupplementalSemanticIds.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.SupplementalSemanticIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9690">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_SupplementalSemanticIds_" data-uid="AasCore.Aas3_0_RC02.Capability.SupplementalSemanticIds*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_SupplementalSemanticIds" data-uid="AasCore.Aas3_0_RC02.Capability.SupplementalSemanticIds">SupplementalSemanticIds</h4>
+  <div class="markdown level1 summary"><p>Identifier of a supplemental semantic definition of the element.
+It is called supplemental semantic ID of the element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Reference&gt;? SupplementalSemanticIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Reference.html">Reference</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AasCore_Aas3_0_RC02_Capability_SupplementalSemanticIds_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is recommended to use a global reference.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Accept_AasCore_Aas3_0_RC02_Visitation_IVisitor_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9942">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Accept_" data-uid="AasCore.Aas3_0_RC02.Capability.Accept*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Accept_AasCore_Aas3_0_RC02_Visitation_IVisitor_" data-uid="AasCore.Aas3_0_RC02.Capability.Accept(AasCore.Aas3_0_RC02.Visitation.IVisitor)">Accept(Visitation.IVisitor)</h4>
+  <div class="markdown level1 summary"><p>Accept the <code data-dev-comment-type="paramref" class="paramref">visitor</code> to visit this instance
+for double dispatch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Accept(Visitation.IVisitor visitor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Visitation.IVisitor.html">Visitation.IVisitor</a></td>
+        <td><span class="parametername">visitor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Accept__1_AasCore_Aas3_0_RC02_Visitation_IVisitorWithContext___0____0_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Accept%60%601(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext%7B%60%600%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9951">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Accept_" data-uid="AasCore.Aas3_0_RC02.Capability.Accept*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Accept__1_AasCore_Aas3_0_RC02_Visitation_IVisitorWithContext___0____0_" data-uid="AasCore.Aas3_0_RC02.Capability.Accept``1(AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext{``0},``0)">Accept&lt;TContext&gt;(Visitation.IVisitorWithContext&lt;TContext&gt;, TContext)</h4>
+  <div class="markdown level1 summary"><p>Accept the visitor to visit this instance for double dispatch
+with the <code data-dev-comment-type="paramref" class="paramref">context</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Accept&lt;TContext&gt;(Visitation.IVisitorWithContext&lt;TContext&gt; visitor, TContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext-1.html">Visitation.IVisitorWithContext</a>&lt;TContext&gt;</td>
+        <td><span class="parametername">visitor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Descend.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Descend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9840">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Descend_" data-uid="AasCore.Aas3_0_RC02.Capability.Descend*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Descend" data-uid="AasCore.Aas3_0_RC02.Capability.Descend">Descend()</h4>
+  <div class="markdown level1 summary"><p>Iterate recursively over all the class instances referenced from this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IClass&gt; Descend()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.IClass.html">IClass</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_DescendOnce.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.DescendOnce%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9781">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_DescendOnce_" data-uid="AasCore.Aas3_0_RC02.Capability.DescendOnce*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_DescendOnce" data-uid="AasCore.Aas3_0_RC02.Capability.DescendOnce">DescendOnce()</h4>
+  <div class="markdown level1 summary"><p>Iterate over all the class instances referenced from this instance
+without further recursion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IClass&gt; DescendOnce()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.IClass.html">IClass</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_KindOrDefault.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.KindOrDefault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9772">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_KindOrDefault_" data-uid="AasCore.Aas3_0_RC02.Capability.KindOrDefault*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_KindOrDefault" data-uid="AasCore.Aas3_0_RC02.Capability.KindOrDefault">KindOrDefault()</h4>
+  <div class="markdown level1 summary"><p>Return the <a class="xref" href="AasCore.Aas3_0_RC02.IHasKind.html#AasCore_Aas3_0_RC02_IHasKind_Kind">Kind</a> or the default value
+if it has not been set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelingKind KindOrDefault()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.ModelingKind.html">ModelingKind</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_OverDescriptionOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.OverDescriptionOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9735">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_OverDescriptionOrEmpty_" data-uid="AasCore.Aas3_0_RC02.Capability.OverDescriptionOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_OverDescriptionOrEmpty" data-uid="AasCore.Aas3_0_RC02.Capability.OverDescriptionOrEmpty">OverDescriptionOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over Description, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;LangString&gt; OverDescriptionOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_OverDisplayNameOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.OverDisplayNameOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9726">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_OverDisplayNameOrEmpty_" data-uid="AasCore.Aas3_0_RC02.Capability.OverDisplayNameOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_OverDisplayNameOrEmpty" data-uid="AasCore.Aas3_0_RC02.Capability.OverDisplayNameOrEmpty">OverDisplayNameOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over DisplayName, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;LangString&gt; OverDisplayNameOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_OverEmbeddedDataSpecificationsOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.OverEmbeddedDataSpecificationsOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9762">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_OverEmbeddedDataSpecificationsOrEmpty_" data-uid="AasCore.Aas3_0_RC02.Capability.OverEmbeddedDataSpecificationsOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_OverEmbeddedDataSpecificationsOrEmpty" data-uid="AasCore.Aas3_0_RC02.Capability.OverEmbeddedDataSpecificationsOrEmpty">OverEmbeddedDataSpecificationsOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over EmbeddedDataSpecifications, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;EmbeddedDataSpecification&gt; OverEmbeddedDataSpecificationsOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html">EmbeddedDataSpecification</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_OverExtensionsOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.OverExtensionsOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9717">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_OverExtensionsOrEmpty_" data-uid="AasCore.Aas3_0_RC02.Capability.OverExtensionsOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_OverExtensionsOrEmpty" data-uid="AasCore.Aas3_0_RC02.Capability.OverExtensionsOrEmpty">OverExtensionsOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over Extensions, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Extension&gt; OverExtensionsOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Extension.html">Extension</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_OverQualifiersOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.OverQualifiersOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9753">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_OverQualifiersOrEmpty_" data-uid="AasCore.Aas3_0_RC02.Capability.OverQualifiersOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_OverQualifiersOrEmpty" data-uid="AasCore.Aas3_0_RC02.Capability.OverQualifiersOrEmpty">OverQualifiersOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over Qualifiers, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Qualifier&gt; OverQualifiersOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Qualifier.html">Qualifier</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_OverSupplementalSemanticIdsOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.OverSupplementalSemanticIdsOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9744">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_OverSupplementalSemanticIdsOrEmpty_" data-uid="AasCore.Aas3_0_RC02.Capability.OverSupplementalSemanticIdsOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_OverSupplementalSemanticIdsOrEmpty" data-uid="AasCore.Aas3_0_RC02.Capability.OverSupplementalSemanticIdsOrEmpty">OverSupplementalSemanticIdsOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over SupplementalSemanticIds, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Reference&gt; OverSupplementalSemanticIdsOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.Reference.html">Reference</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Transform__1_AasCore_Aas3_0_RC02_Visitation_ITransformer___0__.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Transform%60%601(AasCore.Aas3_0_RC02.Visitation.ITransformer%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9962">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Transform_" data-uid="AasCore.Aas3_0_RC02.Capability.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Transform__1_AasCore_Aas3_0_RC02_Visitation_ITransformer___0__" data-uid="AasCore.Aas3_0_RC02.Capability.Transform``1(AasCore.Aas3_0_RC02.Visitation.ITransformer{``0})">Transform&lt;T&gt;(Visitation.ITransformer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Accept the <code data-dev-comment-type="paramref" class="paramref">transformer</code> to transform this instance
+for double dispatch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Transform&lt;T&gt;(Visitation.ITransformer&lt;T&gt; transformer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Visitation.ITransformer-1.html">Visitation.ITransformer</a>&lt;T&gt;</td>
+        <td><span class="parametername">transformer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability_Transform__2_AasCore_Aas3_0_RC02_Visitation_ITransformerWithContext___0___1____0_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability.Transform%60%602(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9971">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Capability_Transform_" data-uid="AasCore.Aas3_0_RC02.Capability.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Capability_Transform__2_AasCore_Aas3_0_RC02_Visitation_ITransformerWithContext___0___1____0_" data-uid="AasCore.Aas3_0_RC02.Capability.Transform``2(AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext{``0,``1},``0)">Transform&lt;TContext, T&gt;(Visitation.ITransformerWithContext&lt;TContext, T&gt;, TContext)</h4>
+  <div class="markdown level1 summary"><p>Accept the <code data-dev-comment-type="paramref" class="paramref">transformer</code> to visit this instance
+for double dispatch with the <code data-dev-comment-type="paramref" class="paramref">context</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Transform&lt;TContext, T&gt;(Visitation.ITransformerWithContext&lt;TContext, T&gt; transformer, TContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext-2.html">Visitation.ITransformerWithContext</a>&lt;TContext, T&gt;</td>
+        <td><span class="parametername">transformer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.ISubmodelElement.html">ISubmodelElement</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IReferable.html">IReferable</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IHasExtensions.html">IHasExtensions</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IHasKind.html">IHasKind</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IHasSemantics.html">IHasSemantics</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IQualifiable.html">IQualifiable</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IHasDataSpecification.html">IHasDataSpecification</a>
+  </div>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IClass.html">IClass</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Add-documentation/apiSpec/new?filename=AasCore_Aas3_0_RC02_Capability.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Capability%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Add-documentation/src/AasCore.Aas3_0_RC02/types.cs/#L9569" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

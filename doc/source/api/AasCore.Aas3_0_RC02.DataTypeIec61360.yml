@@ -1,0 +1,717 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataTypeIec61360
+  id: DataTypeIec61360
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Blob
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Boolean
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Date
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.File
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Html
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCount
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCurrency
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerMeasure
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Irdi
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Iri
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Rational
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.RationalMeasure
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.RealCount
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.RealCurrency
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.RealMeasure
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.String
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.StringTranslatable
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Time
+  - AasCore.Aas3_0_RC02.DataTypeIec61360.Timestamp
+  langs:
+  - csharp
+  - vb
+  name: DataTypeIec61360
+  nameWithType: DataTypeIec61360
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360
+  type: Enum
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: DataTypeIec61360
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11411
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: 'public enum DataTypeIec61360 : int'
+    content.vb: Public Enum DataTypeIec61360 As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Date
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Date
+  id: Date
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: DataTypeIec61360.Date
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Date
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Date
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11418
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing a calendar date, conformant to ISO 8601:2004 Format yyyy-mm-dd\nExample from IEC 61360-1:2017: &quot;1999-05-31&quot; is the [DATE] representation of:\n&quot;31 May 1999&quot;.\n"
+  example: []
+  syntax:
+    content: Date = 0
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.String
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.String
+  id: String
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: DataTypeIec61360.String
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.String
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: String
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11425
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues consisting of sequence of characters but cannot be translated into other\nlanguages\n"
+  example: []
+  syntax:
+    content: String = 1
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.StringTranslatable
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.StringTranslatable
+  id: StringTranslatable
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: StringTranslatable
+  nameWithType: DataTypeIec61360.StringTranslatable
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.StringTranslatable
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: StringTranslatable
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11432
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing string but shall be represented as different string in different\nlanguages\n"
+  example: []
+  syntax:
+    content: StringTranslatable = 2
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerMeasure
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerMeasure
+  id: IntegerMeasure
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: IntegerMeasure
+  nameWithType: DataTypeIec61360.IntegerMeasure
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerMeasure
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IntegerMeasure
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11439
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values that are measure of type INTEGER. In addition such a value\ncomes with a physical unit.\n"
+  example: []
+  syntax:
+    content: IntegerMeasure = 3
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCount
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCount
+  id: IntegerCount
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: IntegerCount
+  nameWithType: DataTypeIec61360.IntegerCount
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCount
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IntegerCount
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11445
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values of type INTEGER but are no currencies or measures\n"
+  example: []
+  syntax:
+    content: IntegerCount = 4
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCurrency
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCurrency
+  id: IntegerCurrency
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: IntegerCurrency
+  nameWithType: DataTypeIec61360.IntegerCurrency
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.IntegerCurrency
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IntegerCurrency
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11451
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values of type INTEGER that are currencies\n"
+  example: []
+  syntax:
+    content: IntegerCurrency = 5
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.RealMeasure
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.RealMeasure
+  id: RealMeasure
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: RealMeasure
+  nameWithType: DataTypeIec61360.RealMeasure
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.RealMeasure
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RealMeasure
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11458
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values that are measures of type REAL. In addition such a value\ncomes with a physical unit.\n"
+  example: []
+  syntax:
+    content: RealMeasure = 6
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.RealCount
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.RealCount
+  id: RealCount
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: RealCount
+  nameWithType: DataTypeIec61360.RealCount
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.RealCount
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RealCount
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11465
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing numbers that can be written as a terminating or non-terminating\ndecimal; a rational or irrational number but are no currencies or measures\n"
+  example: []
+  syntax:
+    content: RealCount = 7
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.RealCurrency
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.RealCurrency
+  id: RealCurrency
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: RealCurrency
+  nameWithType: DataTypeIec61360.RealCurrency
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.RealCurrency
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RealCurrency
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11471
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values of type REAL that are currencies\n"
+  example: []
+  syntax:
+    content: RealCurrency = 8
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Boolean
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Boolean
+  id: Boolean
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Boolean
+  nameWithType: DataTypeIec61360.Boolean
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Boolean
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Boolean
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11477
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues representing truth of logic or Boolean algebra (TRUE, FALSE)\n"
+  example: []
+  syntax:
+    content: Boolean = 9
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Iri
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Iri
+  id: Iri
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Iri
+  nameWithType: DataTypeIec61360.Iri
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Iri
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Iri
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11487
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values of type STRING conformant to Rfc 3987\n"
+  remarks: "\nIn IEC61360-1 (2017) only URI is supported.\nAn IRI type allows in particular to express an URL or an URI.\n"
+  example: []
+  syntax:
+    content: Iri = 10
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Irdi
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Irdi
+  id: Irdi
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Irdi
+  nameWithType: DataTypeIec61360.Irdi
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Irdi
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Irdi
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11509
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues conforming to ISO/IEC 11179 series global identifier sequences\n"
+  remarks: "\n<p>\nIRDI can be used instead of the more specific data types ICID or ISO29002_IRDI.\n</p>\n<p>\nICID values are value conformant to an IRDI, where the delimiter between RAI and ID\nis “#” while the delimiter between DI and VI is confined to “##”\n</p>\n<p>\nISO29002_IRDI values are values containing a global identifier that identifies an\nadministrated item in a registry. The structure of this identifier complies with\nidentifier syntax defined in ISO/TS 29002-5. The identifier shall fulfil the\nrequirements specified in ISO/TS 29002-5 for an &quot;international registration data\nidentifier&quot; (IRDI).\n</p>\n"
+  example: []
+  syntax:
+    content: Irdi = 11
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Rational
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Rational
+  id: Rational
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Rational
+  nameWithType: DataTypeIec61360.Rational
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Rational
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Rational
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11515
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values of type rational\n"
+  example: []
+  syntax:
+    content: Rational = 12
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.RationalMeasure
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.RationalMeasure
+  id: RationalMeasure
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: RationalMeasure
+  nameWithType: DataTypeIec61360.RationalMeasure
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.RationalMeasure
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: RationalMeasure
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11522
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing values of type rational. In addition such a value comes with a\nphysical unit.\n"
+  example: []
+  syntax:
+    content: RationalMeasure = 13
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Time
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Time
+  id: Time
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: DataTypeIec61360.Time
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Time
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Time
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11539
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing a time, conformant to ISO 8601:2004 but restricted to what is\nallowed in the corresponding type in xml.\n"
+  remarks: "\n<p>\nFormat hh:mm (ECLASS)\n</p>\n<p>\nExample from IEC 61360-1:2017: &quot;13:20:00-05:00&quot; is the [TIME] representation of:\n1.20 p.m. for Eastern Standard Time, which is 5 hours behind Coordinated\nUniversal Time (UTC).\n</p>\n"
+  example: []
+  syntax:
+    content: Time = 14
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Timestamp
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Timestamp
+  id: Timestamp
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: DataTypeIec61360.Timestamp
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Timestamp
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Timestamp
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11549
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing a time, conformant to ISO 8601:2004 but restricted to what is\nallowed in the corresponding type in xml.\n"
+  remarks: "\nFormat yyyy-mm-dd hh:mm (ECLASS)\n"
+  example: []
+  syntax:
+    content: Timestamp = 15
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.File
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.File
+  id: File
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: DataTypeIec61360.File
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.File
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: File
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11559
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing an address to a file. The values are of type URI and can represent\nan absolute or relative path.\n"
+  remarks: "\nIEC61360 does not support the file type.\n"
+  example: []
+  syntax:
+    content: File = 16
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Html
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Html
+  id: Html
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Html
+  nameWithType: DataTypeIec61360.Html
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Html
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Html
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11566
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nValues containing string with any sequence of characters, using the syntax of HTML5\n(see W3C Recommendation 28:2014)\n"
+  example: []
+  syntax:
+    content: Html = 17
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360.Blob
+  commentId: F:AasCore.Aas3_0_RC02.DataTypeIec61360.Blob
+  id: Blob
+  parent: AasCore.Aas3_0_RC02.DataTypeIec61360
+  langs:
+  - csharp
+  - vb
+  name: Blob
+  nameWithType: DataTypeIec61360.Blob
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360.Blob
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/types.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Blob
+    path: ../../src/AasCore.Aas3_0_RC02/types.cs
+    startLine: 11581
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  summary: "\nvalues containing the content of a file. Values may be binaries.\n"
+  remarks: "\n<p>\nHTML conformant to HTML5 is a special blob.\n</p>\n<p>\nIn IEC61360 binary is for a sequence of bits, each bit being represented by “0” and\n“1” only. A binary is a blob but a blob may also contain other source code.\n</p>\n"
+  example: []
+  syntax:
+    content: Blob = 18
+    return:
+      type: AasCore.Aas3_0_RC02.DataTypeIec61360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.DataTypeIec61360
+  commentId: T:AasCore.Aas3_0_RC02.DataTypeIec61360
+  parent: AasCore.Aas3_0_RC02
+  name: DataTypeIec61360
+  nameWithType: DataTypeIec61360
+  fullName: AasCore.Aas3_0_RC02.DataTypeIec61360

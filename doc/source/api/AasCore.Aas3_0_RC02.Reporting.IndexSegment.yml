@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Reporting.IndexSegment
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.IndexSegment
+  id: Reporting.IndexSegment
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Reporting.IndexSegment.#ctor(System.Int32)
+  - AasCore.Aas3_0_RC02.Reporting.IndexSegment.Index
+  langs:
+  - csharp
+  - vb
+  name: Reporting.IndexSegment
+  nameWithType: Reporting.IndexSegment
+  fullName: AasCore.Aas3_0_RC02.Reporting.IndexSegment
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: IndexSegment
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 34
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: 'public class IndexSegment : Reporting.Segment'
+    content.vb: >-
+      Public Class IndexSegment
+
+          Inherits Reporting.Segment
+  inheritance:
+  - System.Object
+  - AasCore.Aas3_0_RC02.Reporting.Segment
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AasCore.Aas3_0_RC02.Reporting.IndexSegment.Index
+  commentId: F:AasCore.Aas3_0_RC02.Reporting.IndexSegment.Index
+  id: Index
+  parent: AasCore.Aas3_0_RC02.Reporting.IndexSegment
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: Reporting.IndexSegment.Index
+  fullName: AasCore.Aas3_0_RC02.Reporting.IndexSegment.Index
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Index
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 36
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public readonly int Index
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Index As Integer
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AasCore.Aas3_0_RC02.Reporting.IndexSegment.#ctor(System.Int32)
+  commentId: M:AasCore.Aas3_0_RC02.Reporting.IndexSegment.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: AasCore.Aas3_0_RC02.Reporting.IndexSegment
+  langs:
+  - csharp
+  - vb
+  name: IndexSegment(Int32)
+  nameWithType: Reporting.IndexSegment.IndexSegment(Int32)
+  fullName: AasCore.Aas3_0_RC02.Reporting.IndexSegment.IndexSegment(System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: .ctor
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 37
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public IndexSegment(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Public Sub New(index As Integer)
+  overload: AasCore.Aas3_0_RC02.Reporting.IndexSegment.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.Reporting.Segment
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.Segment
+  parent: AasCore.Aas3_0_RC02
+  name: Reporting.Segment
+  nameWithType: Reporting.Segment
+  fullName: AasCore.Aas3_0_RC02.Reporting.Segment
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AasCore.Aas3_0_RC02.Reporting.IndexSegment.#ctor*
+  commentId: Overload:AasCore.Aas3_0_RC02.Reporting.IndexSegment.#ctor
+  name: IndexSegment
+  nameWithType: Reporting.IndexSegment.IndexSegment
+  fullName: AasCore.Aas3_0_RC02.Reporting.IndexSegment.IndexSegment

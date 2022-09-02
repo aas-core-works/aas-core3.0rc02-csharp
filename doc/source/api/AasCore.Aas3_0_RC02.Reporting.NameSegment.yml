@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: AasCore.Aas3_0_RC02.Reporting.NameSegment
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.NameSegment
+  id: Reporting.NameSegment
+  parent: AasCore.Aas3_0_RC02
+  children:
+  - AasCore.Aas3_0_RC02.Reporting.NameSegment.#ctor(System.String)
+  - AasCore.Aas3_0_RC02.Reporting.NameSegment.Name
+  langs:
+  - csharp
+  - vb
+  name: Reporting.NameSegment
+  nameWithType: Reporting.NameSegment
+  fullName: AasCore.Aas3_0_RC02.Reporting.NameSegment
+  type: Class
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: NameSegment
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 25
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: 'public class NameSegment : Reporting.Segment'
+    content.vb: >-
+      Public Class NameSegment
+
+          Inherits Reporting.Segment
+  inheritance:
+  - System.Object
+  - AasCore.Aas3_0_RC02.Reporting.Segment
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AasCore.Aas3_0_RC02.Reporting.NameSegment.Name
+  commentId: F:AasCore.Aas3_0_RC02.Reporting.NameSegment.Name
+  id: Name
+  parent: AasCore.Aas3_0_RC02.Reporting.NameSegment
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Reporting.NameSegment.Name
+  fullName: AasCore.Aas3_0_RC02.Reporting.NameSegment.Name
+  type: Field
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: Name
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 27
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public readonly string Name
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Name As String
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AasCore.Aas3_0_RC02.Reporting.NameSegment.#ctor(System.String)
+  commentId: M:AasCore.Aas3_0_RC02.Reporting.NameSegment.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AasCore.Aas3_0_RC02.Reporting.NameSegment
+  langs:
+  - csharp
+  - vb
+  name: NameSegment(String)
+  nameWithType: Reporting.NameSegment.NameSegment(String)
+  fullName: AasCore.Aas3_0_RC02.Reporting.NameSegment.NameSegment(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/AasCore.Aas3_0_RC02/reporting.cs
+      branch: mristin/Add-documentation
+      repo: https://github.com/aas-core-works/aas-core3.0rc02-csharp.git
+    id: .ctor
+    path: ../../src/AasCore.Aas3_0_RC02/reporting.cs
+    startLine: 28
+  assemblies:
+  - AasCore.Aas3_0_RC02
+  namespace: AasCore.Aas3_0_RC02
+  syntax:
+    content: public NameSegment(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub New(name As String)
+  overload: AasCore.Aas3_0_RC02.Reporting.NameSegment.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AasCore.Aas3_0_RC02
+  commentId: N:AasCore.Aas3_0_RC02
+  name: AasCore.Aas3_0_RC02
+  nameWithType: AasCore.Aas3_0_RC02
+  fullName: AasCore.Aas3_0_RC02
+- uid: AasCore.Aas3_0_RC02.Reporting.Segment
+  commentId: T:AasCore.Aas3_0_RC02.Reporting.Segment
+  parent: AasCore.Aas3_0_RC02
+  name: Reporting.Segment
+  nameWithType: Reporting.Segment
+  fullName: AasCore.Aas3_0_RC02.Reporting.Segment
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AasCore.Aas3_0_RC02.Reporting.NameSegment.#ctor*
+  commentId: Overload:AasCore.Aas3_0_RC02.Reporting.NameSegment.#ctor
+  name: NameSegment
+  nameWithType: Reporting.NameSegment.NameSegment
+  fullName: AasCore.Aas3_0_RC02.Reporting.NameSegment.NameSegment
