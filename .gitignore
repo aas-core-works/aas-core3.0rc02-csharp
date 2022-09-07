@@ -23,3 +23,5 @@ venv/
 
 # Docfx tool
 /docfx.console.*/
+
+.idea/csv-plugin.xml
