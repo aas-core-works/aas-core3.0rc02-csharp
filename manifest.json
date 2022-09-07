@@ -44,6 +44,21 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
+      "source_relative_path": "design-decisions.md",
+      "output": {
+        ".html": {
+          "relative_path": "design-decisions.html",
+          "hash": "PAcTqHmPfEVxV19l6zfkE3XJTsQiF0Aft8d0rW+pNyw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "getting_started/create.md",
       "output": {
         ".html": {
@@ -212,7 +227,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "9Zp7/2XvLqJLB5O/BvI/K1ePJlrevVqGMCNAVYU690s="
+          "hash": "BwR6qtGPk9o+/WMRLXXoYOCzFiZolp7YfohmZUoE8ZA="
         }
       },
       "is_incremental": false,
@@ -233,7 +248,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 10,
+          "total_file_count": 11,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
