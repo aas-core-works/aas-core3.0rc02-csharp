@@ -1,4 +1,0 @@
-submodels[0].semanticId: Invariant violated:
-Constraint AASd-121: For References the type of the first key shall be one of Globally identifiables.;
-submodels[0].semanticId: Invariant violated:
-Constraint AASd-123: For model references the type of the first key shall be one of AAS identifiables

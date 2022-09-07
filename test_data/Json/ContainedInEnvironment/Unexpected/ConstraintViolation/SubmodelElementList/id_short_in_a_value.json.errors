@@ -1,2 +1,0 @@
-submodels[0].submodelElements[0]: Invariant violated:
-Constraint AASd-120: ID-shorts of submodel elements within a SubmodelElementList shall not be specified.

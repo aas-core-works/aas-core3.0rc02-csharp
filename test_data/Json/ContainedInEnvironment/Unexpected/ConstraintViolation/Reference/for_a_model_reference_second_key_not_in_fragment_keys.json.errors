@@ -1,2 +1,0 @@
-submodels[0].semanticId: Invariant violated:
-Constraint AASd-125: For model references with more than one key, the type of the keys following the first key shall be one of Fragment keys.

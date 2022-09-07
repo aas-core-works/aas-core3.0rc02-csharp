@@ -1,2 +1,0 @@
-submodels[0].qualifiers[0].type: Invariant violated:
-Constraint AASd-100: An attribute with data type ``string`` is not allowed to be empty.

@@ -1,2 +1,0 @@
-submodels[0].submodelElements[0].minInterval: Invariant violated:
-The value must represent a valid xs:dateTimeStamp with the time zone fixed to UTC.
