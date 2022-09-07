@@ -1,4 +1,4 @@
-name: Generate-doc-workflow
+name: Doc
 
 on:
   push:
