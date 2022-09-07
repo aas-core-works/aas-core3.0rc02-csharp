@@ -4,6 +4,8 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/aas-core-works/aas-core3.0rc02-csharp/badge.svg?branch=main)](https://coveralls.io/github/aas-core-works/aas-core3.0rc02-csharp?branch=main)
 
+[![Doc](https://github.com/aas-core-works/aas-core3.0rc02-csharp/actions/workflows/doc.yml/badge.svg)](https://aas-core-works.github.io/aas-core3.0rc02-csharp/)
+
 This is a software development kit (SDK) to manipulate, verify and de/serialize Asset Administration Shells based on the version 3.0VRC02 of the meta-model.
 
 The documentation is available on https://aas-core-works.github.io/aas-core3.0rc02-csharp/.
