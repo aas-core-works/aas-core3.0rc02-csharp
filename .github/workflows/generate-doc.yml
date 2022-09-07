@@ -1,0 +1,33 @@
+name: Generate-doc-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Generate-doc:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.201'
+
+      - name: Install Docfx
+        run: nuget install docfx.console -Version 2.59.3
+        working-directory: doc
+
+      - name: Build the solution
+        run: dotnet build src/
+
+      - name: Generate the documentation
+        run: doc/docfx.console.2.59.3/tools/docfx.exe doc/source/docfx.json
+
+      - name: Deploy to gh-pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc/build
