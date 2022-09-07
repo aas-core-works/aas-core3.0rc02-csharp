@@ -5,3 +5,5 @@
   homepage: api/index.md
 - name: Contributing
   href: contributing.md
+- name: Design Decisions
+  href: design-decisions.md
