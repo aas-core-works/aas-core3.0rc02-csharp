@@ -20,3 +20,6 @@ bin/
 
 # Python environment
 venv/
+
+# Docfx tool
+/docfx.console.*/

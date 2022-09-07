@@ -1,49 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:mristin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:mristin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="">
+    <list default="true" id="83706ea3-1c99-49d2-8237-0e5982ac8a2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/doc/source/contributing.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/build/api/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/build/api/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/build/getting_started/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/build/getting_started/intro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/build/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/doc/build/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/doc/build/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/build/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/build/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AdministrativeInformation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AdministrativeInformation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AnnotatedRelationshipElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AnnotatedRelationshipElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AssetAdministrationShell.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AssetAdministrationShell.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AssetInformation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.AssetInformation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.BasicEventElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.BasicEventElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Blob.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Blob.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Capability.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Capability.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ConceptDescription.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ConceptDescription.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Constants.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Constants.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.DataSpecificationIec61360.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.DataSpecificationIec61360.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.EmbeddedDataSpecification.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.EmbeddedDataSpecification.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Entity.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Entity.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Environment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.EventPayload.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.EventPayload.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Extension.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Extension.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.File.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.File.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IDataElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IDataElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IDataSpecificationContent.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IDataSpecificationContent.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IEventElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IEventElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasDataSpecification.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasDataSpecification.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasExtensions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasExtensions.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasKind.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasKind.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasSemantics.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IHasSemantics.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IIdentifiable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IIdentifiable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IQualifiable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IQualifiable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IReferable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IReferable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IRelationshipElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.IRelationshipElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ISubmodelElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ISubmodelElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.Deserialize.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.Deserialize.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.Exception.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.Exception.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.Serialize.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.Serialize.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Jsonization.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Key.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Key.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.LangString.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.LangString.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.MultiLanguageProperty.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.MultiLanguageProperty.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Operation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Operation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.OperationVariable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.OperationVariable.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Property.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Property.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Qualifier.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Qualifier.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Range.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Range.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reference.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reference.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ReferenceElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ReferenceElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.RelationshipElement.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.RelationshipElement.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.Error.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.Error.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.IndexSegment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.IndexSegment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.NameSegment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.NameSegment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.Segment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.Segment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Reporting.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Resource.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Resource.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.SpecificAssetId.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.SpecificAssetId.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Stringification.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Stringification.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Submodel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Submodel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.SubmodelElementCollection.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.SubmodelElementCollection.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.SubmodelElementList.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.SubmodelElementList.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ValueList.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ValueList.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ValueReferencePair.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.ValueReferencePair.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Verification.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Verification.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Visitation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.Exception.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.Exception.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.Serialize.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.Serialize.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/AasCore.Aas3_0_RC02.Xmlization.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/getting_started/create.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/getting_started/create.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/getting_started/iterate_and_transform.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/getting_started/iterate_and_transform.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/toc.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +94,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="283PLkvQjQs9ONBdbcOPYp85BeD" />
+  <component name="ProjectId" id="2ER3RpFdjhiQqYTnIbsNV7wtmJT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,147 +102,17 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rist/workspace/aas-core-works/aas-core3.0rc02-csharp/testgen&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen\aas_core_3_0_rc2_csharp_testgen" />
-      <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\src" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.generate_all">
-    <configuration name="generate_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aas-core3.0rc02-csharp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testgen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen\aas_core_3_0_rc2_csharp_testgen\generate_all.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generate_common_jsonization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aas-core3.0rc02-csharp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testgen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen\aas_core_3_0_rc2_csharp_testgen\generate_common_jsonization.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generate_test_for_descend_and_visitor_through" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aas-core3.0rc02-csharp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testgen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen\aas_core_3_0_rc2_csharp_testgen\generate_test_for_descend_and_visitor_through.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generate_test_for_descend_once" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aas-core3.0rc02-csharp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testgen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen\aas_core_3_0_rc2_csharp_testgen\generate_test_for_descend_once.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generate_test_for_jsonization_of_concrete_classes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aas-core3.0rc02-csharp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testgen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\testgen\aas_core_3_0_rc2_csharp_testgen\generate_test_for_jsonization_of_concrete_classes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.generate_all" />
-        <item itemvalue="Python.generate_test_for_descend_once" />
-        <item itemvalue="Python.generate_test_for_descend_and_visitor_through" />
-        <item itemvalue="Python.generate_common_jsonization" />
-        <item itemvalue="Python.generate_test_for_jsonization_of_concrete_classes" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9320e216-0e07-4101-8ce3-cd62bc1769d1" name="Default Changelist" comment="" />
-      <created>1650442241862</created>
+      <changelist id="83706ea3-1c99-49d2-8237-0e5982ac8a2f" name="Changes" comment="" />
+      <created>1662544563765</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1650442241862</updated>
+      <updated>1662544563765</updated>
     </task>
     <servers />
   </component>

@@ -1050,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "7w2SXVN0wADh9CK2923t24cvh2Ea1yYYA5jwDhh4csI="
+          "hash": "vxanfEn4UMivAL0k+i/L9BQpV671QJ9Lrk60o1RXr78="
         }
       },
       "is_incremental": false,
@@ -1070,11 +1070,71 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "contributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "contributing.html",
+          "hash": "modJ7trEsCZlFqKnONGxB+IY55ae2L1nTMDKBGnlw1I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started/create.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started/create.html",
+          "hash": "+yqOQHhXEf7iygxlWyOofyXsAlZGSfiat/wEVhAeHTs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started/install.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started/install.html",
+          "hash": "SUvK5dkWgPliVO/PDg/wHU57cmmFEKj6hb9zOOF0f5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "getting_started/intro.md",
       "output": {
         ".html": {
           "relative_path": "getting_started/intro.html",
-          "hash": "ytDQFDAbKV3eCxX7WWXOqd+QAaF8W/c1ZN2sHEIb5QM="
+          "hash": "0//rC5mphy6YvfmKlhgK42vPnbys4GFqJWFXJ9t4vLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started/iterate_and_transform.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started/iterate_and_transform.html",
+          "hash": "YHR9HRnX8GoAIfyneiSIKiW62XDm24ojfcVAd3OCbt4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started/jsonize.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started/jsonize.html",
+          "hash": "+srorlSBJEogcG+L67h3sV1Ylo+5g1MBc1ussszoqW8="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1146,31 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+          "hash": "2lSBmo0sYV/bEHEZtaokaqELYkWFzbyLpi4DdiUmUWg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started/verify.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started/verify.html",
+          "hash": "jnMBQIkDoHdtUuc4pG3iBEAnAgcLz00OgpPqTKj9x18="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started/xmlize.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started/xmlize.html",
+          "hash": "kFJEiRqJO3k4bZO0chbX51n1c7dcWmx2XY4qi7S17oQ="
         }
       },
       "is_incremental": false,
@@ -1142,7 +1226,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ci7RGW8vrOmu1e9y2T1MnXgrbtKEFtpHiNYtFNxkzio="
+          "hash": "eHoH8YZDbyJJD8R7N/jmTpmuFEH9aLVUoDQGuVib7eo="
         }
       },
       "is_incremental": false,
@@ -1154,7 +1238,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "QG8+qZGKfp2zVSfI4Mhe8l423G7hx+6zFngJF4rKMWY="
+          "hash": "CFImUTD/d1IKhXmOtoRbpKmY1gyfymJ9v0eY1fcEdRI="
         }
       },
       "is_incremental": false,
@@ -1173,8 +1257,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 2
+          "total_file_count": 10,
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
