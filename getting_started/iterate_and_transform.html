@@ -82,8 +82,8 @@
 <p>The SDK provides various ways how you can loop through the elements of the model, and how these elements can be transformed.
 Each following section will look into one of the approaches.</p>
 <h2 id="descendonce-and-descend"><code>DescendOnce</code> and <code>Descend</code></h2>
-<p>If you are writing a simple script, want to use <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/">LINQ</a> and do not care about the performance, the SDK provides two methods in the most general interface <a href="../api/AasCore.Aas3_0_RC02.IClass.yml">IClass</a>, <code>DescendOnce</code> and <code>Descend</code>, which you can use to loop through the instances.</p>
-<p>Both <code>DescendOnce</code> and <code>Descend</code> iterate over model children of an <a href="../api/AasCore.Aas3_0_RC02.IClass.yml">IClass</a>.
+<p>If you are writing a simple script, want to use <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/">LINQ</a> and do not care about the performance, the SDK provides two methods in the most general interface <a href="../api/AasCore.Aas3_0_RC02.IClass.html">IClass</a>, <code>DescendOnce</code> and <code>Descend</code>, which you can use to loop through the instances.</p>
+<p>Both <code>DescendOnce</code> and <code>Descend</code> iterate over model children of an <a href="../api/AasCore.Aas3_0_RC02.IClass.html">IClass</a>.
 <code>DescendOnce</code>, as it names suggests, stops after all the children has been iterated over.
 <code>Descend</code> continues recursively to grand-children <em>etc.</em></p>
 <p>Here is a short example how you can get all the properties from an environment whose ID-short starts with <code>another</code>:</p>
@@ -163,15 +163,15 @@ Second, the call to LINQ's <code>OfType&lt;Aas.Submodel&gt;</code> needs to perf
 <h2 id="visitor">Visitor</h2>
 <p><a href="https://en.wikipedia.org/wiki/Visitor_pattern">Visitor pattern</a> is a common design pattern in software engineering.
 We will not explain the details of the pattern here as you can read about in the ample literature in books or in Internet.</p>
-<p>The cornerstone of the visitor pattern in <a href="https://en.wikipedia.org/wiki/Double_dispatch">double dispatch</a>: instead of casting to the desired type during the iteration, we add a method <code>Accept</code> to <a href="../api/AasCore.Aas3_0_RC02.IClass.yml">IClass</a>, whose implementations then directly dispatch to the appropriate method.</p>
+<p>The cornerstone of the visitor pattern in <a href="https://en.wikipedia.org/wiki/Double_dispatch">double dispatch</a>: instead of casting to the desired type during the iteration, we add a method <code>Accept</code> to <a href="../api/AasCore.Aas3_0_RC02.IClass.html">IClass</a>, whose implementations then directly dispatch to the appropriate method.</p>
 <p>This allows us to spare casts and directly dispatch the execution.
 The SDK already implements <code>Accept</code> methods, so you only have to implement the visitor.</p>
 <p>The visitor class has a visiting method for each class of the meta-model.
 In the SDK, we provide different flavors of the visitor abstract classes which you can readily implement:</p>
 <ul>
-<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.yml">AbstractVisitor</a> which needs all the visit methods to be implemented,</li>
-<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.yml">VisitorThrough</a> which visits all the elements and does nothing, and</li>
-<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.yml">AbstractVisitorWithContext</a> which propagates a context object along the iteration.</li>
+<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.html">AbstractVisitor</a> which needs all the visit methods to be implemented,</li>
+<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.html">VisitorThrough</a> which visits all the elements and does nothing, and</li>
+<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.html">AbstractVisitorWithContext</a> which propagates a context object along the iteration.</li>
 </ul>
 <p>Let us re-write the above example related to <code>Descend</code> method with a visitor pattern:</p>
 <pre><code class="lang-cs">using System.Collections.Generic;
@@ -264,11 +264,11 @@ People who like LINQ will prefer <code>Descend</code>.</p>
 It is very common in compiler design, where the abstract syntax tree is transformed into a different representation.</p>
 <p>The SDK provides two different flavors of a transformer:</p>
 <ul>
-<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.yml">AbstractTransformer</a>, where the model element is directly transformed into something, and</li>
-<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.yml">AbstractTransformerWithContext</a>, which propagates the context object along the transformations.</li>
+<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.html">AbstractTransformer</a>, where the model element is directly transformed into something, and</li>
+<li><a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.html">AbstractTransformerWithContext</a>, which propagates the context object along the transformations.</li>
 </ul>
 <p>Since we need to provide a transformation method for each class of the meta-model, we deliberately omit an example due to the length of the code.
-If you need a practical example, see the source code of the <a href="../api/AasCore.Aas3_0_RC02.Verification.yml">Verification</a> static class, where we implemented the verification logic using an <a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.yml">AbstractTransformer</a>.</p>
+If you need a practical example, see the source code of the <a href="../api/AasCore.Aas3_0_RC02.Verification.html">Verification</a> static class, where we implemented the verification logic using an <a href="../api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.html">AbstractTransformer</a>.</p>
 </article>
           </div>
           
@@ -277,7 +277,7 @@ If you need a practical example, see the source code of the <a href="../api/AasC
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/doc/source/getting_started/iterate_and_transform.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/doc/source/getting_started/iterate_and_transform.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

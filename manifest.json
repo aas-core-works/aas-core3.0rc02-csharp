@@ -13,15 +13,1056 @@
       "is_incremental": false
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.AasSubmodelElements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.AasSubmodelElements.html",
+          "hash": "UzQUQb2rYrSgHp0ZNx3159USMWuUCkijDMqAG/jmuRE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.AdministrativeInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.AdministrativeInformation.html",
+          "hash": "z9KdbbAcjKivRhpBl7Ibga9PsFfzjhSKcE0xZU7QnTM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.AnnotatedRelationshipElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.AnnotatedRelationshipElement.html",
+          "hash": "74aTFljqitZczWog1YOkzMeNlpZqaDa4Y1fKOZbHpCM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.AssetAdministrationShell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.AssetAdministrationShell.html",
+          "hash": "D37Q+fppRdS3VNYbgMCFk5pwO2riEAz4hYiLdm6WGds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.AssetInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.AssetInformation.html",
+          "hash": "HLEf/aJZobUFFVYyg3+h9J2s6C9h6x8QWv4A3uoXdGs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.AssetKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.AssetKind.html",
+          "hash": "MZrqRY3iIXOxb+8ocLEGU62Zbuapr+0dn12f5jA0mv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.BasicEventElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.BasicEventElement.html",
+          "hash": "d6FI2i9UszLN+Mc7egSJbGeLwCa5exoK6Agf3Q14Quc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Blob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Blob.html",
+          "hash": "K8DQ7yCk4NCuObBFYzggZ1kRXWp1xwGzJ1axjMJpZHM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Capability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Capability.html",
+          "hash": "Er4BVYqCXcerxg3x2wXcvYDM2+G/7tBxuB6rJRBqWX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ConceptDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ConceptDescription.html",
+          "hash": "2QsUOSXjcHYJLK4Lk19Sf2n8M+dTy7xUCYehnG+ygIc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Constants.html",
+          "hash": "rd7KEMWF7RxqbuwrpyDyLC/eXr5vnnLBONhdLUekN5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.DataSpecificationIec61360.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.DataSpecificationIec61360.html",
+          "hash": "nNazGEvA2Dwl9AM8QJji7rfgVW43CgrdPo2yXJIHN1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit.html",
+          "hash": "aFrOsNrslkGJSunCZApAumUqFeksanHwk87w353hYz8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.DataTypeDefXsd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.DataTypeDefXsd.html",
+          "hash": "9uUTR1euAy9lbhPjPJcHKuJUjFMaY79aUXzmD1MU3MA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.DataTypeIec61360.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.DataTypeIec61360.html",
+          "hash": "v1+QyOQwUXMU1k1MYag73lB5XK1EHJLcN9ftddr0BJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Direction.html",
+          "hash": "qfWTjVUdPm09TRiyyZD4Rm2qQ13SiJONs4Ft3mvmGuU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.EmbeddedDataSpecification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html",
+          "hash": "miIWQLMGqlMparkB9BgrS7hggEFFZnt0bk0BvdDa0y4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Entity.html",
+          "hash": "rR4k6155zzsalz2L3GtJ0qPTH2/6JC+MlNS+be9/+EY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.EntityType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.EntityType.html",
+          "hash": "QR5HyblU4varPHucMn3C32F6zVXh8a+sUBlFN+XOfOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Environment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Environment.html",
+          "hash": "rvoEzpPoWGBdUfg4Pn0kSx2uaAM+eqarvxwW4bn0NK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.EventPayload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.EventPayload.html",
+          "hash": "nZRMNIyjAoczCmxkHu91zJN5r4N/YPCNnDdgbuDCR78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Extension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Extension.html",
+          "hash": "zJ5d5bHVBzam+Q//08baUkzJOxMABvdK/ILDl97BYFc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.File.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.File.html",
+          "hash": "SaaDQIM6aLN9MVEaScfy3tvG4t9tobnQo9mMbBP4LBc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IClass.html",
+          "hash": "ue3a2cpm7ZFvHsL557ES+6q51/lZFxQEVSG/OT9RMUU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IDataElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IDataElement.html",
+          "hash": "gKupN+DEkG0d99l8XXi/FyC88EmPwJQJU8vj4oNVJWY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationContent.html",
+          "hash": "b4zs02caNK1iZ1HOW35VeZmoVUSrB7wgHK+HQpGQHgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IEventElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IEventElement.html",
+          "hash": "EMaC2McUFigy+NdBdT+ClRsGCVLqooYuYM/H5Hj3PvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IHasDataSpecification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IHasDataSpecification.html",
+          "hash": "uqil6CiwHpQXGbwrsOQ9G0qXkHY7Nm8q8/lzqSxjIf0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IHasExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IHasExtensions.html",
+          "hash": "P4yWYJfZ4kWE5cHz572HfKd2aoiedDI9sad/ata7J2U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IHasKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IHasKind.html",
+          "hash": "cOs3gFihjiWNHXiCBv9adxjt+4P94YdKf1KCqcyCOoc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IHasSemantics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IHasSemantics.html",
+          "hash": "+VdyIj2xA8WIDb94I0UtRucWFk5aQ2eZ34BiYNnl7cU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IIdentifiable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IIdentifiable.html",
+          "hash": "3Y3PF4D5cOnc0q5yG3ODZ1GKoi+v7fBN+UDqTKT0+wo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IQualifiable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IQualifiable.html",
+          "hash": "KT1/0HBZCH+pFuueFkTQDQJupmvud4iNq3YX9dghJKI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IReferable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IReferable.html",
+          "hash": "HB7L3u2ZmwimOtb0Gk/o6m9LzFS+7ze6Ci1sSkgH3Aw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IRelationshipElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IRelationshipElement.html",
+          "hash": "7/2eBR/yXBS0k9QN96Y9Ucod8TRDv9PktUuDXaXzYMo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElement.html",
+          "hash": "9jDaPdjYjwqkdR7zSyX1QyUembl3yClAgztENo+S0Sc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Deserialize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Deserialize.html",
+          "hash": "jVUkMAZbd0tQLGsQMB7TU06TEDkZ6k1os9z277eUQlE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Exception.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Exception.html",
+          "hash": "lEVK3lD4StqgOZVVGEmiP38yAty+GiP9jZB/ZggTgN0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Serialize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Serialize.html",
+          "hash": "ZCMZ62b3tB2N1rY6QUCbU5f4igsrKfWq2QLuKv6JGV8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.html",
+          "hash": "nY9vcPhOmfZXUSxjqtWwWTBFaxt3vb9ewg8eVJym2Fk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Key.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Key.html",
+          "hash": "v2SCR6aWEbPODpHKnUQullE6GjUxR3m9K5puX1AmA1I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.KeyTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.KeyTypes.html",
+          "hash": "1QY9YvTGi6ieibcg5Irv5xvGVhqLcHfEUOQGx3EFpz0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.LangString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.LangString.html",
+          "hash": "NUb/lbgtFEJ+VibgoFOeVDYDtB38sxSfCdgreRKcUg4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.LevelType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.LevelType.html",
+          "hash": "V9TnrHqQHI8zD8FUF8pnPXhX6v7UUwuEFm67jHYDvQs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ModelingKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ModelingKind.html",
+          "hash": "nkKce1HNTNZgq2jq4F7BJh4s2Jxe7BU+DHmzWNLpV2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.MultiLanguageProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.MultiLanguageProperty.html",
+          "hash": "xjnUCEYhUQwrpq1gVBxG0sZ9f4Wf3IINMGM70xTomLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Operation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Operation.html",
+          "hash": "ukQ9rkdjAcxW0s/4XRDuJtG7fKoZ8oOlYe0mKNeUyvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.OperationVariable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.OperationVariable.html",
+          "hash": "XAcVrvEBiKk+UUTrwkpao0Dz0+uDQQCQtgFx7wLxO28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Property.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Property.html",
+          "hash": "8YG+didsw1LI4X+U6xLdrtxS1YVCxA6XGH8btxmTyoc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Qualifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Qualifier.html",
+          "hash": "8TNNroT8fbPhzdtcb4tOsRT7W2VAsi1Uim5HugdS9VU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.QualifierKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.QualifierKind.html",
+          "hash": "iRA83u1eGwZonqs/peJeEZx09jpalbhW5vHoBxyx4/o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Range.html",
+          "hash": "EOd0S9aYCcwrMOGOnRnGroqCfbZs3JLjOex+1x7qW9o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Reference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Reference.html",
+          "hash": "wd+VwFDSGLWTADVFDnEC6Os0G3wDUpp+gcwW0MQJFw8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ReferenceElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ReferenceElement.html",
+          "hash": "cIBvuu0CNjDUvWMpla1n7mV1YLHozte0Fl/+sqeKzx8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ReferenceTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ReferenceTypes.html",
+          "hash": "xRhZ3NkcEJ/Dt4fOuLTe1Uh9m3h0BP+4DihvdVr1dEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.RelationshipElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.RelationshipElement.html",
+          "hash": "6Yp1kRG0Ke6xQAcehzq+vBqEKH+kKDBo/RzIrfBNr2I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Reporting.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Reporting.Error.html",
+          "hash": "FlIgZo8YMF5knIws0tdK9fW9/P3aCt3ido2JzUG+Gi0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Reporting.IndexSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Reporting.IndexSegment.html",
+          "hash": "+pJ/OnJ/Wob6/EdCO/t2kxSX4jDcF2VQ8mzr5JgJkNw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Reporting.NameSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Reporting.NameSegment.html",
+          "hash": "rlAGDJ/R3JVF/ndRSj2sSB2BITGA61XuPJd1WDgW5l4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Reporting.Segment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Reporting.Segment.html",
+          "hash": "CvcOeXxC40jBR9bkUet5tOSsNT0DvZFBfeUQH8CnOEo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Reporting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Reporting.html",
+          "hash": "+dh8Nl4tJGj/rdfeZo5cJKQwiD5FvlWgN/1o9bTl3cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Resource.html",
+          "hash": "/BAwW5t/2RKQwJVwhq0axyO70u1P9Wv9ulrGPeTxCzg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.SpecificAssetId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.SpecificAssetId.html",
+          "hash": "rmSdBtE9TLrEohyGp+H5MAMx4I7MLbWwnJt75HrHS3Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.StateOfEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.StateOfEvent.html",
+          "hash": "iq7/z+6jE0XcYmVF7x+ik7gdLJSrfbZfJ8j8Cr/3eVY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Stringification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Stringification.html",
+          "hash": "q5tARgvIP1i574dvTeiD8yUmM5YkDArQ+5PlrUTvSpo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Submodel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Submodel.html",
+          "hash": "xAHPGNWPT9CU1nAzkM341sdQXkxTkTtiGWigNJ9JSuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.SubmodelElementCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.SubmodelElementCollection.html",
+          "hash": "Az4cUJ7JG9aYPp05nhaWvNiVIlneDQHswhAqxWxOVsg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.SubmodelElementList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.SubmodelElementList.html",
+          "hash": "lGA486dFfEmTmA3KxbZBcU9KBg9r0ygraG0oyENFAOM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ValueList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ValueList.html",
+          "hash": "+hZZYd83DtBvE5EW1bbYdvvI1co6EBfA/5tuCJ5+3ng="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ValueReferencePair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ValueReferencePair.html",
+          "hash": "564nMzK1zZ9i1zSmOKcWMXxyGw5fektsffvTYPYbly4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Verification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Verification.html",
+          "hash": "oFdSvSTNgqQDT3j3s9pXVrBClHD8FM57spo24xIJVoE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.html",
+          "hash": "KqvR/48SbcHtGSOfetPRq/eZhY6GFebcHHOWT8+o0RU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.html",
+          "hash": "uMNaZjtQpurxjDt4hcnlG8UAv2P6A3XlhhtP6oKA7LQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.html",
+          "hash": "vAdMTj77P/eLuD1fkDZ5QdZx7mRhdEIyT5KbEUa617U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.html",
+          "hash": "Q+c3Js4a9r4nOXmg7klwnXayQeZYq5auCr1ib9/aR14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.ITransformer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.ITransformer-1.html",
+          "hash": "VMTmKOlupS+QfL559njT/M9DDktafpjJO9AAvvuduXY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext-2.html",
+          "hash": "UwSfMer8Ry/B9C5Wx6Jve5zDiU9vzxgACGPBvJ4btZs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.IVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.IVisitor.html",
+          "hash": "NjEQG1BzgT4gaGfQ3FAm/XMbohlpBM5Nm0jsUzvzKZ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext-1.html",
+          "hash": "oXH+oout/fyWef2uQ4kOvqKgGzpCVmWW2/rXcRZA/Zw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.html",
+          "hash": "IIYP1kYNg/Hsro+AtcBl444cVKvQjCl7uLYohhAzLbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Visitation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.html",
+          "hash": "zpQSxxarJvhVef5+U5GRGnFi8cxnmPsbqiPIpmb1R7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html",
+          "hash": "bwFcDxX/iGH0wltOFwvX1nUCmBVe/G371HYr6pMxyoA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.Exception.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.Exception.html",
+          "hash": "35+gV+VlOmAKyQApeOGlGkscEPnDS6sFILWEaD6q3fQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.Serialize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.Serialize.html",
+          "hash": "TP3OlhAmt2UlMUDEodn5Hgvg/eBnGPTh3YQ20VRJjhM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.Xmlization.html",
+          "hash": "fnXiZxE07UPzmSPpf+P9FYMZH0HT33WqnlZ/4M56zEI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.html",
+          "hash": "xUdKaKTj/QVaJND9ap0E64DaSy0WBYc4qrs6G4u4Blw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "1cxB/GJ44zUvz6pyvo5R/5ep3nvvflCv/NMCL0Kf2rk="
+          "hash": "fVmxSfR7w6cKRuii7Bd8345557+Vbh+Bw79LI7ZHbug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Ym60rGycnzZo4dem5B+KFReNaE8SofHBcyq1d4KA0mM="
         }
       },
       "is_incremental": false,
@@ -33,37 +1074,31 @@
       "output": {
         ".html": {
           "relative_path": "contributing.html",
-          "hash": "D29GZmqF/jsVKcoA/NFQ1Ou3HRDXTFcOB6dfttUj7pk="
+          "hash": "DP5G2oE3MI0HmhGSvlNFVmD+G7q7XyS4dPbWhErrYtU="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "design-decisions.md",
       "output": {
         ".html": {
           "relative_path": "design-decisions.html",
-          "hash": "PAcTqHmPfEVxV19l6zfkE3XJTsQiF0Aft8d0rW+pNyw="
+          "hash": "GAc2p0cp2PXHuNEK2nqc/GWRqlHJA3Cq1z/hyzxneHQ="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "getting_started/create.md",
       "output": {
         ".html": {
           "relative_path": "getting_started/create.html",
-          "hash": "6zbYG+WUOu1iVmbVZcGquDpSrwCTvDQbNmoogdRz+lQ="
+          "hash": "HmHEZ0GbE6rLFNUQ9Nn/ANw+dp/MBYcxmA2Btb6GAXQ="
         }
       },
       "is_incremental": false,
@@ -75,7 +1110,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/install.html",
-          "hash": "GGwIxMJHja368WmPV/4iccnRi1Cadm6feSIXaMLhiWA="
+          "hash": "u2gzRwAg41f/N+HBP7UedhxQagPU3vay93DM7dOudHQ="
         }
       },
       "is_incremental": false,
@@ -87,37 +1122,31 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/intro.html",
-          "hash": "tJW/bv4E3SVbrBU770t29UdgwjGDqihRVb6HY5/aR9o="
+          "hash": "NI2iKB/KeZxBBNEcqff5mU0oGtRcXGad/VMBzLTvPMs="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "getting_started/iterate_and_transform.md",
       "output": {
         ".html": {
           "relative_path": "getting_started/iterate_and_transform.html",
-          "hash": "ATLHUvOl1k4WMy9P1l6UsOqXH6/RwFWe8AIBNIxMMFY="
+          "hash": "BHE0xR0v/qXQukltgYXG5TNPcow8pTZexv8tjbC4wzM="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "getting_started/jsonize.md",
       "output": {
         ".html": {
           "relative_path": "getting_started/jsonize.html",
-          "hash": "4A2R2B8+B/FCQ2dKpS+BHUJI9sQRwtbcy2bHp2pVQNQ="
+          "hash": "T34uE3cVdGNthv5Hz7FUKLntOr/phUndOTlYnnQWWgs="
         }
       },
       "is_incremental": false,
@@ -136,30 +1165,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "getting_started/verify.md",
       "output": {
         ".html": {
           "relative_path": "getting_started/verify.html",
-          "hash": "QG5aaLqbzGxYDfeZRkrVTy9x4H5NMKYz/+aJKeTIIJw="
+          "hash": "0Bx8AjpFeJNgNoc3wsapxO4Cd/dS/47N65i6Zky91nM="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "getting_started/xmlize.md",
       "output": {
         ".html": {
           "relative_path": "getting_started/xmlize.html",
-          "hash": "HrIzK+BXWJfUVfEYgP9NnrpCsy+ryRV8Kmwur7wGoLk="
+          "hash": "HYNIwKygOfjQ5IQCIDgcE7dKI1cri8trCWnhe6NLvB0="
         }
       },
       "is_incremental": false,
@@ -215,7 +1238,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "UT+5GVS5i/OTyrDB5P1/sbio5PZmZBGFBQUe0YvnEkc="
+          "hash": "k5HrHcddFBIcxZl5ICA0YnI4i8E3Sk/z/jPV4IbCnvA="
         }
       },
       "is_incremental": false,
@@ -227,7 +1250,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "BwR6qtGPk9o+/WMRLXXoYOCzFiZolp7YfohmZUoE8ZA="
+          "hash": "kO/5YoV9toDvreWkxAatxpxVSRo0rLxUbrmNaXSuIBI="
         }
       },
       "is_incremental": false,
@@ -249,6 +1272,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 11,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 86,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

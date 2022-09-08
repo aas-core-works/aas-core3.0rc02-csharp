@@ -78,7 +78,7 @@ These are our opinions — you may or may not agree, which is totally OK as ther
 We want to give you insight about why we did certain things, and why we didn't implement them in some other way.</p>
 <h2 id="aggregations-as-lists-instead-of-dictionaries">Aggregations as Lists instead of Dictionaries</h2>
 <p>We decided to implement all the aggregations in the meta-model as <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">System.Collections.Generic.List</a> instead of <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-6.0">System.Collections.Generic.Dictionary</a>.</p>
-<p>Some structures just &quot;scream&quot; for a dictionary, such as <code>SubmodelElements</code> property in a <a href="api/AasCore.Aas3_0_RC02.Submodel.yml">Submodel</a>.
+<p>Some structures just &quot;scream&quot; for a dictionary, such as <code>SubmodelElements</code> property in a <a href="api/AasCore.Aas3_0_RC02.Submodel.html">Submodel</a>.
 The submodel elements need to be unique w.r.t. their ID-shorts.
 So why didn't we model them as dictionaries, where keys are ID-shorts?</p>
 <p>There are multiple reasons:</p>
@@ -104,7 +104,7 @@ While you might have clear parent ⟷ child relationship when you deserialize an
 <p>Moreover, you need to sync the parent when an instance associated as its child is deleted.
 The complexity of this sync becomes hard (and computationally costly) as your object tree grows.
 And what if you re-assign the instance to multiple parents?</p>
-<p>For example, an instance of <a href="api/AasCore.Aas3_0_RC02.Submodel.yml">Submodel</a> may appear in multiple instances of <a href="api/AasCore.Aas3_0_RC02.Environment.yml">Environment</a>.
+<p>For example, an instance of <a href="api/AasCore.Aas3_0_RC02.Submodel.html">Submodel</a> may appear in multiple instances of <a href="api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.
 Which environment is the parent?</p>
 <p>Multiple solutions are possible, and they depend on the application domain.
 In some cases, where you deal with static data, a simple dictionary parent 🠒 child is sufficient.
@@ -133,8 +133,8 @@ Further aas-core projects will work on an AAS registry.</p>
 <h2 id="build-your-own-abstraction-on-top">Build Your Own Abstraction on Top</h2>
 <p>We intentionally kept the API surface of the SDK minimal.
 The idea was to give you basic building blocks which you can use to construct more complex structures.</p>
-<p>For example, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/">LINQ</a> in conjunction with <code>Descend</code> method of <a href="api/AasCore.Aas3_0_RC02.IClass.yml">IClass</a> allows for powerful queries.</p>
-<p>An implementation of <a href="api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.yml">AbstractVisitor</a> or <a href="api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.yml">AbstractTransformer</a> allows you to write converters to other formats.
+<p>For example, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/">LINQ</a> in conjunction with <code>Descend</code> method of <a href="api/AasCore.Aas3_0_RC02.IClass.html">IClass</a> allows for powerful queries.</p>
+<p>An implementation of <a href="api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.html">AbstractVisitor</a> or <a href="api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.html">AbstractTransformer</a> allows you to write converters to other formats.
 They give you a pre-structured code which you merely need to fill in, thus reducing your mental overhead.</p>
 <h2 id="maintainability-versus-performance">Maintainability <em>versus</em> Performance</h2>
 <p>We chose to sacrifice the performance for maintainability of the code.
@@ -153,7 +153,7 @@ At the moment, the meta-model changes too frequently to manually come up with th
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/doc/source/design-decisions.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/doc/source/design-decisions.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

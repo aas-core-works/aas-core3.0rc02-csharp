@@ -1,0 +1,1838 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Visitation.AbstractTransformer&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Visitation.AbstractTransformer&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/aas-core-csharp-logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1">
+  
+  
+  <h1 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1" class="text-break">Class Visitation.AbstractTransformer&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Perform double-dispatch to transform recursively
+the instances into something else.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Visitation.AbstractTransformer&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AasCore.Aas3_0_RC02.Visitation.ITransformer-1.html">Visitation.ITransformer</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AasCore.Aas3_0_RC02.html">AasCore.Aas3_0_RC02</a></h6>
+  <h6><strong>Assembly</strong>: AasCore.Aas3_0_RC02.dll</h6>
+  <h5 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class AbstractTransformer&lt;T&gt; : Visitation.ITransformer&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the transformation result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AdministrativeInformation_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.AdministrativeInformation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L568">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AdministrativeInformation_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.AdministrativeInformation)">Transform(AdministrativeInformation)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(AdministrativeInformation that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.AdministrativeInformation.html">AdministrativeInformation</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AnnotatedRelationshipElement_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L600">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AnnotatedRelationshipElement_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.AnnotatedRelationshipElement)">Transform(AnnotatedRelationshipElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(AnnotatedRelationshipElement that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.AnnotatedRelationshipElement.html">AnnotatedRelationshipElement</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AssetAdministrationShell_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.AssetAdministrationShell)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L572">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AssetAdministrationShell_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.AssetAdministrationShell)">Transform(AssetAdministrationShell)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(AssetAdministrationShell that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.AssetAdministrationShell.html">AssetAdministrationShell</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AssetInformation_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.AssetInformation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L574">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_AssetInformation_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.AssetInformation)">Transform(AssetInformation)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(AssetInformation that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.AssetInformation.html">AssetInformation</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_BasicEventElement_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.BasicEventElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L606">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_BasicEventElement_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.BasicEventElement)">Transform(BasicEventElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(BasicEventElement that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.BasicEventElement.html">BasicEventElement</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Blob_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Blob)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L596">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Blob_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Blob)">Transform(Blob)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Blob that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Blob.html">Blob</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Capability_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Capability)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L612">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Capability_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Capability)">Transform(Capability)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Capability that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Capability.html">Capability</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ConceptDescription_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.ConceptDescription)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L614">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ConceptDescription_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.ConceptDescription)">Transform(ConceptDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(ConceptDescription that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.ConceptDescription.html">ConceptDescription</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_DataSpecificationIec61360_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.DataSpecificationIec61360)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L630">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_DataSpecificationIec61360_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.DataSpecificationIec61360)">Transform(DataSpecificationIec61360)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(DataSpecificationIec61360 that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.DataSpecificationIec61360.html">DataSpecificationIec61360</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_DataSpecificationPhysicalUnit_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L632">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_DataSpecificationPhysicalUnit_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit)">Transform(DataSpecificationPhysicalUnit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(DataSpecificationPhysicalUnit that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit.html">DataSpecificationPhysicalUnit</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_EmbeddedDataSpecification_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.EmbeddedDataSpecification)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L624">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_EmbeddedDataSpecification_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.EmbeddedDataSpecification)">Transform(EmbeddedDataSpecification)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(EmbeddedDataSpecification that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html">EmbeddedDataSpecification</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Entity_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Entity)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L602">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Entity_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Entity)">Transform(Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Entity that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Entity.html">Entity</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Environment_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Environment)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L622">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Environment_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Environment)">Transform(Environment)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Environment that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Environment.html">Environment</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_EventPayload_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.EventPayload)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L604">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_EventPayload_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.EventPayload)">Transform(EventPayload)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(EventPayload that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.EventPayload.html">EventPayload</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Extension_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Extension)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L566">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Extension_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Extension)">Transform(Extension)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Extension that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Extension.html">Extension</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_File_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.File)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L598">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_File_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.File)">Transform(File)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(File that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.File.html">File</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_IClass_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.IClass)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L561">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_IClass_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.IClass)">Transform(IClass)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Transform(IClass that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.IClass.html">IClass</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Key_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Key)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L618">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Key_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Key)">Transform(Key)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Key that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Key.html">Key</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_LangString_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.LangString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L620">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_LangString_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.LangString)">Transform(LangString)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(LangString that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_MultiLanguageProperty_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.MultiLanguageProperty)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L590">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_MultiLanguageProperty_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.MultiLanguageProperty)">Transform(MultiLanguageProperty)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(MultiLanguageProperty that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.MultiLanguageProperty.html">MultiLanguageProperty</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Operation_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Operation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L608">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Operation_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Operation)">Transform(Operation)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Operation that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Operation.html">Operation</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_OperationVariable_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.OperationVariable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L610">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_OperationVariable_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.OperationVariable)">Transform(OperationVariable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(OperationVariable that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.OperationVariable.html">OperationVariable</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Property_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Property)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L588">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Property_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Property)">Transform(Property)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Property that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Property.html">Property</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Qualifier_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Qualifier)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L570">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Qualifier_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Qualifier)">Transform(Qualifier)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Qualifier that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Qualifier.html">Qualifier</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Range_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Range)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L592">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Range_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Range)">Transform(Range)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Range that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Range.html">Range</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Reference_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Reference)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L616">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Reference_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Reference)">Transform(Reference)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Reference that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Reference.html">Reference</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ReferenceElement_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.ReferenceElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L594">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ReferenceElement_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.ReferenceElement)">Transform(ReferenceElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(ReferenceElement that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.ReferenceElement.html">ReferenceElement</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_RelationshipElement_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.RelationshipElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L582">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_RelationshipElement_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.RelationshipElement)">Transform(RelationshipElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(RelationshipElement that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.RelationshipElement.html">RelationshipElement</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Resource_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Resource)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L576">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Resource_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Resource)">Transform(Resource)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Resource that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Resource.html">Resource</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_SpecificAssetId_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.SpecificAssetId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L578">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_SpecificAssetId_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.SpecificAssetId)">Transform(SpecificAssetId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(SpecificAssetId that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.SpecificAssetId.html">SpecificAssetId</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Submodel_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.Submodel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L580">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_Submodel_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.Submodel)">Transform(Submodel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(Submodel that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.Submodel.html">Submodel</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_SubmodelElementCollection_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.SubmodelElementCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L586">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_SubmodelElementCollection_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.SubmodelElementCollection)">Transform(SubmodelElementCollection)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(SubmodelElementCollection that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.SubmodelElementCollection.html">SubmodelElementCollection</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_SubmodelElementList_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.SubmodelElementList)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L584">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_SubmodelElementList_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.SubmodelElementList)">Transform(SubmodelElementList)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(SubmodelElementList that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.SubmodelElementList.html">SubmodelElementList</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ValueList_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.ValueList)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L628">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ValueList_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.ValueList)">Transform(ValueList)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(ValueList that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.ValueList.html">ValueList</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ValueReferencePair_.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601.Transform(AasCore.Aas3_0_RC02.ValueReferencePair)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L626">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1_Transform_AasCore_Aas3_0_RC02_ValueReferencePair_" data-uid="AasCore.Aas3_0_RC02.Visitation.AbstractTransformer`1.Transform(AasCore.Aas3_0_RC02.ValueReferencePair)">Transform(ValueReferencePair)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract T Transform(ValueReferencePair that)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AasCore.Aas3_0_RC02.ValueReferencePair.html">ValueReferencePair</a></td>
+        <td><span class="parametername">that</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.Visitation.ITransformer-1.html">Visitation.ITransformer&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/mristin/Fix-docfx-not-rendering-API/apiSpec/new?filename=AasCore_Aas3_0_RC02_Visitation_AbstractTransformer_1.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.Visitation.AbstractTransformer%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/src/AasCore.Aas3_0_RC02/visitation.cs/#L559" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

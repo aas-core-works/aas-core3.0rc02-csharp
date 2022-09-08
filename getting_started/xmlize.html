@@ -79,9 +79,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="xml-deserialization">XML De/serialization</h1>
 
-<p>The code that de/serializes AAS models from and to XML documents lives in the static class <a href="../api/AasCore.Aas3_0_RC02.Xmlization.yml">Xmlization</a>.</p>
+<p>The code that de/serializes AAS models from and to XML documents lives in the static class <a href="../api/AasCore.Aas3_0_RC02.Xmlization.html">Xmlization</a>.</p>
 <h2 id="serialize">Serialize</h2>
-<p>You serialize a model using the static class <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Serialize.yml">Xmlization.Serialize</a> by calling its <code>To</code> method on an <a href="../api/AasCore.Aas3_0_RC02.Environment.yml">Environment</a>.
+<p>You serialize a model using the static class <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Serialize.html">Xmlization.Serialize</a> by calling its <code>To</code> method on an <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.
 The <code>To</code> method writes to a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwriter">System.Xml.XmlWriter</a>.</p>
 <p>Here is an example snippet:</p>
 <pre><code class="lang-cs">using System.Collections.Generic;
@@ -150,9 +150,9 @@ public class Program
 </code></pre>
 <p>(You can run the snippet at: <a href="https://dotnetfiddle.net/VEL2jU">https://dotnetfiddle.net/VEL2jU</a>)</p>
 <h2 id="de-serialize">De-serialize</h2>
-<p>The de-serialization is encapsulated in <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.yml">Xmlization.Deserialize</a> static class.
-The crucial method is <code>EnvironmentFrom</code> which reads from an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> and re-creates back an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.yml">Environment</a>.</p>
-<p>Here is a snippet which parses XML as text and then de-serializes it into an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.yml">Environment</a>:</p>
+<p>The de-serialization is encapsulated in <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html">Xmlization.Deserialize</a> static class.
+The crucial method is <code>EnvironmentFrom</code> which reads from an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> and re-creates back an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.</p>
+<p>Here is a snippet which parses XML as text and then de-serializes it into an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>:</p>
 <pre><code class="lang-cs">using System.Collections.Generic;
 
 using Aas = AasCore.Aas3_0_RC02;
@@ -194,7 +194,7 @@ public class Program
 </code></pre>
 <p>(You can run the snippet at: <a href="https://dotnetfiddle.net/TD0Ro8">https://dotnetfiddle.net/TD0Ro8</a>)</p>
 <h3 id="errors">Errors</h3>
-<p>If the XML document from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> comes in an unexpected form, our SDK throws a <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Exception.yml">Xmlization.Exception</a>.
+<p>If the XML document from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> comes in an unexpected form, our SDK throws a <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Exception.html">Xmlization.Exception</a>.
 This can happen, for example, if unexpected XML elements or XML attributes are encountered, or an expected XML element is missing.</p>
 </article>
           </div>
@@ -204,7 +204,7 @@ This can happen, for example, if unexpected XML elements or XML attributes are e
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/doc/source/getting_started/xmlize.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/mristin/Fix-docfx-not-rendering-API/doc/source/getting_started/xmlize.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
