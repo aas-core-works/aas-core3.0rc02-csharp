@@ -3,6 +3,19 @@
 The SDK provides various ways how you can loop through the elements of the model, and how these elements can be transformed.
 Each following section will look into one of the approaches.
 
+## `OverXOrEmpty`
+
+For all the optional lists, there is a corresponding `Over{property name}OrEmpty` getter.
+It gives you an [System.Collection.IEnumerable].
+If the property is not set, this getter will give you an empty enumerable.
+Otherwise, it will return the enumerable over the list.
+
+[System.Collection.IEnumerable]: https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0
+
+For example, see `OverSubmodelsOrEmpty` in [AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty].
+
+[AasCore.Aas3_0_RC02.Environment.OverSubmodelsOrEmpty]: ../api/AasCore.Aas3_0_RC02.Environment.yml#AasCore_Aas3_0_RC02_Environment_OverSubmodelsOrEmpty
+
 ## `DescendOnce` and `Descend`
 
 If you are writing a simple script, want to use [LINQ] and do not care about the performance, the SDK provides two methods in the most general interface [IClass], `DescendOnce` and `Descend`, which you can use to loop through the instances.

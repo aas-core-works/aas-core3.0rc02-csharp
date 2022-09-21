@@ -1,10 +1,28 @@
-# Create and Modify an AAS Model
+# Create, Get and Set Properties of an AAS Model
 
 The namespace [AasCore.Aas3_0_RC02](../api/AasCore.Aas3_0_RC02.yml) contains all the classes of the meta-model.
 
 You can simply use their constructors to create an AAS model.
 
 Usually you start bottom-up, all the way up to the [AasCore.Aas3_0_RC02.Environment](../api/AasCore.Aas3_0_RC02.Environment.yml).
+
+## Getters and Setters
+
+For each property in the meta-model, there is a corresponding getter and setter.
+
+For example, see the getter and setter for [AasCore.Aas3_0_RC02.Submodel.Category].
+
+[AasCore.Aas3_0_RC02.Submodel.Category]: ../api/AasCore.Aas3_0_RC02.Submodel.yml#AasCore_Aas3_0_RC02_Submodel_Category
+
+## Getters with a Default Value
+
+For optional properties which come with a default value, we provide special getters, `{property name}OrDefault`.
+If the property has not been set, this getter will give you the default value.
+Otherwise, if the model sets the property, the value of the property will be returned.
+
+For example, see [AasCore.Aas3_0_RC02.Submodel.KindOrDefault].
+
+[AasCore.Aas3_0_RC02.Submodel.KindOrDefault]: ../api/AasCore.Aas3_0_RC02.Submodel.yml#AasCore_Aas3_0_RC02_Submodel_KindOrDefault
 
 ## Example: Create an environment with a submodel
 
