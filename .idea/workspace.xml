@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83706ea3-1c99-49d2-8237-0e5982ac8a2f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/AasCore.Aas3_0_RC02.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/AasCore.Aas3_0_RC02.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestExamples.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/getting_started/xmlize.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/getting_started/xmlize.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
