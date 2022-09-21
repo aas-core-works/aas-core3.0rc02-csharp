@@ -1094,11 +1094,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "getting_started/create.md",
+      "source_relative_path": "getting_started/create_get_set.md",
       "output": {
         ".html": {
-          "relative_path": "getting_started/create.html",
-          "hash": "24QOG4eaL5b9C5yDOdW51N3mRbKamJGPDWBM98Zc4hQ="
+          "relative_path": "getting_started/create_get_set.html",
+          "hash": "62Df460CU1WzX0xHjcMfSll6LajtgU1GDL0jmWc8lkk="
         }
       },
       "is_incremental": false,
@@ -1122,7 +1122,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/intro.html",
-          "hash": "tJW/bv4E3SVbrBU770t29UdgwjGDqihRVb6HY5/aR9o="
+          "hash": "GbIL4jxSNK5AMasjyUgy16joY00P/aNtfBCtHARMDik="
         }
       },
       "is_incremental": false,
@@ -1134,7 +1134,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/iterate_and_transform.html",
-          "hash": "j4vs+uo6tq5LIY/1sryIWFLufF/OFIWfOOqsprjbiPQ="
+          "hash": "JgUv/qeQKKb6215vjILzamEsAxsbK0WNs2AJ4hUT3hE="
         }
       },
       "is_incremental": false,
@@ -1158,7 +1158,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/toc.html",
-          "hash": "2lSBmo0sYV/bEHEZtaokaqELYkWFzbyLpi4DdiUmUWg="
+          "hash": "kjstD8CyA5Ewg82+rAwyjbSDvUkM9ELB+3tnleczDa0="
         }
       },
       "is_incremental": false,

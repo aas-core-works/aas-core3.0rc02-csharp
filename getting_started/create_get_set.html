@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Create and Modify an AAS Model </title>
+    <title>Create, Get and Set Properties of an AAS Model </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Create and Modify an AAS Model ">
+    <meta name="title" content="Create, Get and Set Properties of an AAS Model ">
     <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
@@ -77,11 +77,19 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="create-and-modify-an-aas-model">Create and Modify an AAS Model</h1>
+<h1 id="create-get-and-set-properties-of-an-aas-model">Create, Get and Set Properties of an AAS Model</h1>
 
 <p>The namespace <a href="../api/AasCore.Aas3_0_RC02.html">AasCore.Aas3_0_RC02</a> contains all the classes of the meta-model.</p>
 <p>You can simply use their constructors to create an AAS model.</p>
 <p>Usually you start bottom-up, all the way up to the <a href="../api/AasCore.Aas3_0_RC02.Environment.html">AasCore.Aas3_0_RC02.Environment</a>.</p>
+<h2 id="getters-and-setters">Getters and Setters</h2>
+<p>For each property in the meta-model, there is a corresponding getter and setter.</p>
+<p>For example, see the getter and setter for <a href="../api/AasCore.Aas3_0_RC02.Submodel.html#AasCore_Aas3_0_RC02_Submodel_Category">AasCore.Aas3_0_RC02.Submodel.Category</a>.</p>
+<h2 id="getters-with-a-default-value">Getters with a Default Value</h2>
+<p>For optional properties which come with a default value, we provide special getters, <code>{property name}OrDefault</code>.
+If the property has not been set, this getter will give you the default value.
+Otherwise, if the model sets the property, the value of the property will be returned.</p>
+<p>For example, see <a href="../api/AasCore.Aas3_0_RC02.Submodel.html#AasCore_Aas3_0_RC02_Submodel_KindOrDefault">AasCore.Aas3_0_RC02.Submodel.KindOrDefault</a>.</p>
 <h2 id="example-create-an-environment-with-a-submodel">Example: Create an environment with a submodel</h2>
 <p>Here is a very rudimentary example where we show how to create an environment which contains a submodel.</p>
 <p>The submodel will contain two elements, a property and a blob.</p>
@@ -162,7 +170,7 @@ public class Program
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/doc/source/getting_started/create.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/doc/source/getting_started/create_get_set.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
