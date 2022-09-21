@@ -65,6 +65,8 @@ public class Program
             environment,
             writer
         );
+        
+        writer.Flush();
 
         // Print the output
         System.Console.WriteLine(
