@@ -1070,6 +1070,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "change_log.md",
+      "output": {
+        ".html": {
+          "relative_path": "change_log.html",
+          "hash": "25GZ1eWBsRANt1PcVytKQ2Gia8m5uvFwiZ+W3ey5c8c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "contributing.md",
       "output": {
         ".html": {
@@ -1082,11 +1094,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "design-decisions.md",
+      "source_relative_path": "design_decisions.md",
       "output": {
         ".html": {
-          "relative_path": "design-decisions.html",
-          "hash": "wUc2AOZQE5A1/arrlvpPDQFYmVWuJf3M0MRjZgBjB+4="
+          "relative_path": "design_decisions.html",
+          "hash": "VhKjA5G2JGczyrSmGCfdtIeZF6ieRqy0+Jszq+SPANo="
         }
       },
       "is_incremental": false,
@@ -1245,12 +1257,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "kO/5YoV9toDvreWkxAatxpxVSRo0rLxUbrmNaXSuIBI="
+          "hash": "joFvkOoRlhayrGvLQ6hwFPfkxn+7JYl8iA/GtOGK7GM="
         }
       },
       "is_incremental": false,
@@ -1271,7 +1286,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 11,
+          "total_file_count": 12,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
