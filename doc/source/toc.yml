@@ -6,4 +6,6 @@
 - name: Contributing
   href: contributing.md
 - name: Design Decisions
-  href: design-decisions.md
+  href: design_decisions.md
+- Name: Change log
+  href: change_log.md
