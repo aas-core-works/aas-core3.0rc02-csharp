@@ -74,7 +74,7 @@ public class Program
         );
 
         // Outputs (all on a single line):
-        // <environment xmlns="http://www.admin-shell.io/aas/3/0/RC02">
+        // <environment xmlns="https://admin-shell.io/aas/3/0/RC02">
         // <submodels><submodel><id>some-unique-global-identifier</id>
         // <submodelElements><property><idShort>someProperty</idShort>
         // <valueType>xs:boolean</valueType></property></submodelElements>
@@ -106,7 +106,7 @@ public class Program
     public static void Main()
     {
         var text = (
-            "<environment xmlns=\"http://www.admin-shell.io/aas/3/0/RC02\">" +
+            "<environment xmlns=\"https://admin-shell.io/aas/3/0/RC02\">" +
             "<submodels><submodel><id>some-unique-global-identifier</id>" +
             "<submodelElements><property><idShort>someProperty</idShort>" +
             "<valueType>xs:boolean</valueType></property></submodelElements>" +
