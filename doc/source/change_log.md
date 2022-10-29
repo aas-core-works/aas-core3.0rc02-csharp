@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.1
+
+* Fix paths in xmlization exceptions (#73)
+
 ## 1.0.0
 
 This is the first public version. It has been:
