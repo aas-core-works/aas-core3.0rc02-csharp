@@ -1,1 +1,1 @@
-The property AssetKind of an instance of class AssetInformation could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: *[0]/assetInformation/assetKind
+The property AssetKind of an instance of class AssetInformation could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: assetAdministrationShells/*[0]/assetInformation/assetKind

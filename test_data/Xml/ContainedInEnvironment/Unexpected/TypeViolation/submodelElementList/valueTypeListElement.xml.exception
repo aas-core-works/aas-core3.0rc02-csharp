@@ -1,1 +1,1 @@
-The property ValueTypeListElement of an instance of class SubmodelElementList could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: *[0]/*[0]/valueTypeListElement
+The property ValueTypeListElement of an instance of class SubmodelElementList could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: submodels/*[0]/submodelElements/*[0]/valueTypeListElement

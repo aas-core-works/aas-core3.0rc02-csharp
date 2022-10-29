@@ -1,1 +1,1 @@
-The property Kind of an instance of class MultiLanguageProperty could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: *[0]/*[0]/kind
+The property Kind of an instance of class MultiLanguageProperty could not be de-serialized from an unexpected enumeration literal: Unexpected string value at: submodels/*[0]/submodelElements/*[0]/kind

@@ -1,1 +1,1 @@
-Expected an XML end element to conclude a property of class AssetInformation with the element name specificAssetIds, but got the node of type Text with the value Unexpected string value at: *[0]/assetInformation
+Expected an XML end element to conclude a property of class AssetInformation with the element name specificAssetIds, but got the node of type Text with the value Unexpected string value at: assetAdministrationShells/*[0]/assetInformation
