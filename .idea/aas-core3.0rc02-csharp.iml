@@ -4,6 +4,17 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/testgen" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/out" />
+      <excludeFolder url="file://$MODULE_DIR$/artefacts" />
+      <excludeFolder url="file://$MODULE_DIR$/doc/source/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/doc/docfx.console.2.59.3" />
+      <excludeFolder url="file://$MODULE_DIR$/doc/build" />
+      <excludeFolder url="file://$MODULE_DIR$/doc/source/_site" />
+      <excludeFolder url="file://$MODULE_DIR$/src/AasCore.Aas3_0_RC02.Tests/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/src/AasCore.Aas3_0_RC02.Tests/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/src/AasCore.Aas3_0_RC02/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/src/AasCore.Aas3_0_RC02/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/src/coverage-report" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
