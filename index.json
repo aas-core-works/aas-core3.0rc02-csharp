@@ -437,7 +437,7 @@
   "change_log.html": {
     "href": "change_log.html",
     "title": "Change Log",
-    "keywords": "Change Log 1.0.0 This is the first public version. It has been: battle-tested with aasx-server , stood the test of time for a couple of months, and corresponds to the AAS schemas V3.0.5RC02 ."
+    "keywords": "Change Log 1.0.1 Fix paths in xmlization exceptions (#73) 1.0.0 This is the first public version. It has been: battle-tested with aasx-server , stood the test of time for a couple of months, and corresponds to the AAS schemas V3.0.5RC02 ."
   },
   "contributing.html": {
     "href": "contributing.html",
