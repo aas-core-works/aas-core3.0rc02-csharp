@@ -11878,6 +11878,19 @@ references:
   isSpec: "True"
   fullName: AasCore.Aas3_0_RC02.Verification.IsBcp47ForEnglish
   nameWithType: Verification.IsBcp47ForEnglish
+- uid: AasCore.Aas3_0_RC02.Verification.IsLeapYear(System.Numerics.BigInteger)
+  name: IsLeapYear(BigInteger)
+  href: api/AasCore.Aas3_0_RC02.Verification.html#AasCore_Aas3_0_RC02_Verification_IsLeapYear_System_Numerics_BigInteger_
+  commentId: M:AasCore.Aas3_0_RC02.Verification.IsLeapYear(System.Numerics.BigInteger)
+  fullName: AasCore.Aas3_0_RC02.Verification.IsLeapYear(System.Numerics.BigInteger)
+  nameWithType: Verification.IsLeapYear(BigInteger)
+- uid: AasCore.Aas3_0_RC02.Verification.IsLeapYear*
+  name: IsLeapYear
+  href: api/AasCore.Aas3_0_RC02.Verification.html#AasCore_Aas3_0_RC02_Verification_IsLeapYear_
+  commentId: Overload:AasCore.Aas3_0_RC02.Verification.IsLeapYear
+  isSpec: "True"
+  fullName: AasCore.Aas3_0_RC02.Verification.IsLeapYear
+  nameWithType: Verification.IsLeapYear
 - uid: AasCore.Aas3_0_RC02.Verification.IsModelReferenceTo(AasCore.Aas3_0_RC02.Reference,AasCore.Aas3_0_RC02.KeyTypes)
   name: IsModelReferenceTo(Reference, KeyTypes)
   href: api/AasCore.Aas3_0_RC02.Verification.html#AasCore_Aas3_0_RC02_Verification_IsModelReferenceTo_AasCore_Aas3_0_RC02_Reference_AasCore_Aas3_0_RC02_KeyTypes_
