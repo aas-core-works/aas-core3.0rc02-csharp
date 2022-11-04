@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.1.0
+
+New features:
+* Allow for shallow and deep copies (#79)
+
+Bug fixes:
+* Fix docs for XML serialization (#78)
+* Fix date verification of BCE and zero years (#77)
+
 ## 1.0.1
 
 * Fix paths in xmlization exceptions (#73)
