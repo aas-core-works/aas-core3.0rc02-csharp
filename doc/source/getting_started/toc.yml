@@ -5,7 +5,7 @@
 - name: Create, Get and Set
   href: create_get_set.md
 - name: Iterate & Transform
-  href: iterate_and_transform.md
+  href: iterate_copy_and_transform.md
 - name: Verify
   href: verify.md
 - name: JSON

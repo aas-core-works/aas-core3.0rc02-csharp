@@ -1,4 +1,4 @@
-# Iterate and Transform
+# Iterate, Copy and Transform
 
 The SDK provides various ways how you can loop through the elements of the model, and how these elements can be transformed.
 Each following section will look into one of the approaches.
@@ -224,6 +224,78 @@ People who like LINQ will prefer `Descend`.
 It is difficult to discuss different tastes, so you should probably come up with explicit code guidelines in your code and stick to them.
 
 Make sure you always profile before you sacrifice readability and blindly apply one or the other approach for performance reasons.
+
+## Shallow and Deep Copies
+
+In the static class [Copying], we provide methods for making shallow and deep copies of an instance of AAS model.
+
+In both manners of copying, primitive values (such as `bool`, `string` *etc.*) are copied by value.
+
+Shallow copying copies all the non-primitive values by reference.
+The lists are also copied by reference, and no new lists are created in the copy.
+
+Deep copying makes a deep copy recursively, where we make a deep copy of all the underlying non-primitive values.
+
+Here is an example of how you can make a shallow and a deep copy of an [Environment]:
+
+```cs
+using System.Collections.Generic;
+using System.Linq;
+
+using Aas = AasCore.Aas3_0_RC02;
+
+public class Program
+{
+    public static void Main()
+    {
+          // Prepare the environment
+          var someProperty = new Aas.Property(
+              Aas.DataTypeDefXsd.Boolean)
+          {
+              IdShort = "someProperty",
+          };
+
+          var submodel = new Aas.Submodel(
+              "some-unique-global-identifier")
+          {
+              SubmodelElements = new List<Aas.ISubmodelElement>()
+              {
+                  someProperty
+              }
+          };
+
+          var environment = new Aas.Environment()
+          {
+              Submodels = new List<Aas.Submodel>()
+              {
+                  submodel
+              }
+          };
+
+          // Make a deep copy
+          var deepCopy = Aas.Copying.Deep(environment);
+  
+          // Make a shallow copy
+          var shallowCopy = Aas.Copying.Shallow(environment);
+  
+          // Changes to the property affect only the shallow copy,
+          // but not the deep one
+          environment.Submodels[0].SubmodelElements![0].IdShort = "changed";
+
+          System.Console.WriteLine(
+              shallowCopy.Submodels![0].SubmodelElements![0].IdShort);
+  
+          System.Console.WriteLine(
+              deepCopy.Submodels![0].SubmodelElements![0].IdShort);
+              
+          // Output:
+          // changed
+          // someProperty
+    }
+}
+```
+
+(You can also run the snippet at: https://dotnetfiddle.net/XFSbFx)
 
 ## Transformer
 
