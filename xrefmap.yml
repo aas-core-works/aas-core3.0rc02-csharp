@@ -2660,6 +2660,44 @@ references:
   commentId: F:AasCore.Aas3_0_RC02.Constants.ValidCategoriesForDataElement
   fullName: AasCore.Aas3_0_RC02.Constants.ValidCategoriesForDataElement
   nameWithType: Constants.ValidCategoriesForDataElement
+- uid: AasCore.Aas3_0_RC02.Copying
+  name: Copying
+  href: api/AasCore.Aas3_0_RC02.Copying.html
+  commentId: T:AasCore.Aas3_0_RC02.Copying
+  fullName: AasCore.Aas3_0_RC02.Copying
+  nameWithType: Copying
+- uid: AasCore.Aas3_0_RC02.Copying.Deep*
+  name: Deep
+  href: api/AasCore.Aas3_0_RC02.Copying.html#AasCore_Aas3_0_RC02_Copying_Deep_
+  commentId: Overload:AasCore.Aas3_0_RC02.Copying.Deep
+  isSpec: "True"
+  fullName: AasCore.Aas3_0_RC02.Copying.Deep
+  nameWithType: Copying.Deep
+- uid: AasCore.Aas3_0_RC02.Copying.Deep``1(``0)
+  name: Deep<T>(T)
+  href: api/AasCore.Aas3_0_RC02.Copying.html#AasCore_Aas3_0_RC02_Copying_Deep__1___0_
+  commentId: M:AasCore.Aas3_0_RC02.Copying.Deep``1(``0)
+  name.vb: Deep(Of T)(T)
+  fullName: AasCore.Aas3_0_RC02.Copying.Deep<T>(T)
+  fullName.vb: AasCore.Aas3_0_RC02.Copying.Deep(Of T)(T)
+  nameWithType: Copying.Deep<T>(T)
+  nameWithType.vb: Copying.Deep(Of T)(T)
+- uid: AasCore.Aas3_0_RC02.Copying.Shallow*
+  name: Shallow
+  href: api/AasCore.Aas3_0_RC02.Copying.html#AasCore_Aas3_0_RC02_Copying_Shallow_
+  commentId: Overload:AasCore.Aas3_0_RC02.Copying.Shallow
+  isSpec: "True"
+  fullName: AasCore.Aas3_0_RC02.Copying.Shallow
+  nameWithType: Copying.Shallow
+- uid: AasCore.Aas3_0_RC02.Copying.Shallow``1(``0)
+  name: Shallow<T>(T)
+  href: api/AasCore.Aas3_0_RC02.Copying.html#AasCore_Aas3_0_RC02_Copying_Shallow__1___0_
+  commentId: M:AasCore.Aas3_0_RC02.Copying.Shallow``1(``0)
+  name.vb: Shallow(Of T)(T)
+  fullName: AasCore.Aas3_0_RC02.Copying.Shallow<T>(T)
+  fullName.vb: AasCore.Aas3_0_RC02.Copying.Shallow(Of T)(T)
+  nameWithType: Copying.Shallow<T>(T)
+  nameWithType.vb: Copying.Shallow(Of T)(T)
 - uid: AasCore.Aas3_0_RC02.DataSpecificationIec61360
   name: DataSpecificationIec61360
   href: api/AasCore.Aas3_0_RC02.DataSpecificationIec61360.html
