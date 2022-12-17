@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.1
+
+Bug fixes:
+* Exclude inherited properties in interfaces (#82)
+* Fix minor typos in docs (#81)
+
 ## 1.1.0
 
 New features:
