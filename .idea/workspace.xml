@@ -39,7 +39,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.generate_test_for_copying">
+  <component name="RunManager" selected="Python.generate_all">
     <configuration name="generate_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aas-core3.0rc02-csharp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,8 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.generate_test_for_copying" />
         <item itemvalue="Python.generate_all" />
+        <item itemvalue="Python.generate_test_for_copying" />
       </list>
     </recent_temporary>
   </component>
