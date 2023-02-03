@@ -56,8 +56,7 @@ public class Program
             outputBuilder,
             new System.Xml.XmlWriterSettings()
             {
-                Encoding = System.Text.Encoding.UTF8,
-                OmitXmlDeclaration = true
+                Encoding = System.Text.Encoding.UTF8
             }
         );
 
@@ -74,6 +73,7 @@ public class Program
         );
 
         // Outputs (all on a single line):
+        // <?xml version="1.0" encoding="utf-16"?>
         // <environment xmlns="https://admin-shell.io/aas/3/0/RC02">
         // <submodels><submodel><id>some-unique-global-identifier</id>
         // <submodelElements><property><idShort>someProperty</idShort>
@@ -93,6 +93,11 @@ The crucial method is `EnvironmentFrom` which reads from an [System.Xml.XmlReade
 [Xmlization.Deserialize]: ../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.yml
 [System.Xml.XmlReader]: https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader
 
+The methods `*From` from [Xmlization.Deserialize] expect the reader to already point to the XML element of the instance.
+If you have non-content fields, such as an XML declaration, you have to invoke [System.Xml.Xml.XmlReader.MoveToContent] first.
+
+[System.Xml.XmlReader.MoveToContent]: https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader.movetocontent
+
 Here is a snippet which parses XML as text and then de-serializes it into an instance of [Environment]:
 
 ```cs
@@ -106,6 +111,7 @@ public class Program
     public static void Main()
     {
         var text = (
+            "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
             "<environment xmlns=\"https://admin-shell.io/aas/3/0/RC02\">" +
             "<submodels><submodel><id>some-unique-global-identifier</id>" +
             "<submodelElements><property><idShort>someProperty</idShort>" +
@@ -118,6 +124,10 @@ public class Program
 
         using var xmlReader = System.Xml.XmlReader.Create(
             stringReader);
+
+        // This step is necessary to skip the non-content. Otherwise,
+        // the deserialization would have thrown an exception.
+        xmlReader.MoveToContent();
 
         var environment = AasXmlization.Deserialize.EnvironmentFrom(
             xmlReader);
