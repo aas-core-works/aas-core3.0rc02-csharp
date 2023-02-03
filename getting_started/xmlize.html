@@ -124,8 +124,7 @@ public class Program
             outputBuilder,
             new System.Xml.XmlWriterSettings()
             {
-                Encoding = System.Text.Encoding.UTF8,
-                OmitXmlDeclaration = true
+                Encoding = System.Text.Encoding.UTF8
             }
         );
 
@@ -142,6 +141,7 @@ public class Program
         );
 
         // Outputs (all on a single line):
+        // &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;
         // &lt;environment xmlns=&quot;https://admin-shell.io/aas/3/0/RC02&quot;&gt;
         // &lt;submodels&gt;&lt;submodel&gt;&lt;id&gt;some-unique-global-identifier&lt;/id&gt;
         // &lt;submodelElements&gt;&lt;property&gt;&lt;idShort&gt;someProperty&lt;/idShort&gt;
@@ -154,6 +154,8 @@ public class Program
 <h2 id="de-serialize">De-serialize</h2>
 <p>The de-serialization is encapsulated in <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html">Xmlization.Deserialize</a> static class.
 The crucial method is <code>EnvironmentFrom</code> which reads from an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> and re-creates back an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.</p>
+<p>The methods <code>*From</code> from <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html">Xmlization.Deserialize</a> expect the reader to already point to the XML element of the instance.
+If you have non-content fields, such as an XML declaration, you have to invoke [System.Xml.Xml.XmlReader.MoveToContent] first.</p>
 <p>Here is a snippet which parses XML as text and then de-serializes it into an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>:</p>
 <pre><code class="lang-cs">using System.Collections.Generic;
 
@@ -165,6 +167,7 @@ public class Program
     public static void Main()
     {
         var text = (
+            &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&quot; +
             &quot;&lt;environment xmlns=\&quot;https://admin-shell.io/aas/3/0/RC02\&quot;&gt;&quot; +
             &quot;&lt;submodels&gt;&lt;submodel&gt;&lt;id&gt;some-unique-global-identifier&lt;/id&gt;&quot; +
             &quot;&lt;submodelElements&gt;&lt;property&gt;&lt;idShort&gt;someProperty&lt;/idShort&gt;&quot; +
@@ -177,6 +180,10 @@ public class Program
 
         using var xmlReader = System.Xml.XmlReader.Create(
             stringReader);
+
+        // This step is necessary to skip the non-content. Otherwise,
+        // the deserialization would have thrown an exception.
+        xmlReader.MoveToContent();
 
         var environment = AasXmlization.Deserialize.EnvironmentFrom(
             xmlReader);
