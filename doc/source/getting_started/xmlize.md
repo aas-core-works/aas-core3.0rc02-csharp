@@ -94,7 +94,7 @@ The crucial method is `EnvironmentFrom` which reads from an [System.Xml.XmlReade
 [System.Xml.XmlReader]: https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader
 
 The methods `*From` from [Xmlization.Deserialize] expect the reader to already point to the XML element of the instance.
-If you have non-content fields, such as an XML declaration, you have to invoke [System.Xml.Xml.XmlReader.MoveToContent] first.
+If you have non-content fields, such as an XML declaration, you have to invoke [System.Xml.XmlReader.MoveToContent] first.
 
 [System.Xml.XmlReader.MoveToContent]: https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader.movetocontent
 
