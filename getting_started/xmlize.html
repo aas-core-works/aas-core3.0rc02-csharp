@@ -155,7 +155,7 @@ public class Program
 <p>The de-serialization is encapsulated in <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html">Xmlization.Deserialize</a> static class.
 The crucial method is <code>EnvironmentFrom</code> which reads from an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> and re-creates back an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.</p>
 <p>The methods <code>*From</code> from <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html">Xmlization.Deserialize</a> expect the reader to already point to the XML element of the instance.
-If you have non-content fields, such as an XML declaration, you have to invoke [System.Xml.Xml.XmlReader.MoveToContent] first.</p>
+If you have non-content fields, such as an XML declaration, you have to invoke <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader.movetocontent">System.Xml.XmlReader.MoveToContent</a> first.</p>
 <p>Here is a snippet which parses XML as text and then de-serializes it into an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>:</p>
 <pre><code class="lang-cs">using System.Collections.Generic;
 
