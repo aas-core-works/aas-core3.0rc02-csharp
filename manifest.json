@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.AasSubmodelElements.html",
-          "hash": "RnP/REZoXOWMOy6p9ID3jCWYu7x7wxt74nV3YBzbl/4="
+          "hash": "sY1LY9qXhUdcM/bTXyQMAOsW4uwmulS8zVKUWXtrc6E="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.AdministrativeInformation.html",
-          "hash": "N0ELg2cHA9epXQwMqozwFzXPxUlJjR9VSDHHFhOZQhM="
+          "hash": "spZcg+HgDTU3Yb/GFZfhcb11HasUavJVFHeGSbqrhxE="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.AnnotatedRelationshipElement.html",
-          "hash": "5nZOcuj201d0dYRZG0fdim1ZPgEIKzOzbViIroXHspg="
+          "hash": "HQW/qOa3+blJbasRLVF8LXN0t+GGwaT634ScI3OV5ZY="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.AssetAdministrationShell.html",
-          "hash": "teq/3UZww3x467hdDbxQI9jX5D1E7sils7uue519/q4="
+          "hash": "vKQi4he8xSg1SALd7DoznYAr0gXaaQijvtUIrs7NWYw="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.AssetInformation.html",
-          "hash": "sqKk9wpcA9IXZ5Ha3a/b9ZRm5cgQLP2Bsratv+Kku8o="
+          "hash": "zFd4am+Ih8Hf7QzSAWDUmdkQ5f7GCr418ec4CGzmnzg="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.AssetKind.html",
-          "hash": "sOOCdy3qVyETqzJ/XdKY7j9Qyc6V+iBJieet+CTeDK4="
+          "hash": "S7xpp42GG8cGCCxJzr6xH8fxLYyfnJBe5PSvwuHSlt8="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.BasicEventElement.html",
-          "hash": "t9tLmGM/CGnYm5CGRq3txJuNh71cs4vMnsnU50AaLMI="
+          "hash": "kbFaZp8Tx8McS+6opCXjfYhmhg2XqGGcd0T5tozTMOw="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Blob.html",
-          "hash": "p9h2FwSPpZTYD+5OHsyZK6VaXfE3C4a+ZxyBAaIO99w="
+          "hash": "bnVEiKjeMOj9qybMnSj8sQ+uQ3ynao+RIXvLht4Bl9I="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Capability.html",
-          "hash": "m3f/4bUerCNJaAlxwcVic9ycplAMoiHr4jkP1Z4Jl3o="
+          "hash": "/CRTcVPQu5dOkD/wAhSRQ2wSYUE5oXCAZ/EKGOXAiYU="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ConceptDescription.html",
-          "hash": "4obpCSyNKX+K3NO0Uk/LFex38HhmCY/2TYlMVZnD86w="
+          "hash": "rR8jMViwAj9XNFLUxUWqbRjaARySTClzT2SNse+Re0Q="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.DataSpecificationIec61360.html",
-          "hash": "HpVHpwRCLOi16uquwyklUbFhF3YZFMGuKhfP5U78JAk="
+          "hash": "Ec7jZGgQ3nWWf4NG5dIFE9qAl8FgNg38e6rg9hiTJcw="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.DataSpecificationPhysicalUnit.html",
-          "hash": "HehiLC7cH++7Cn420IcQrzd6Md25WZ0cpGd/j/3QGaw="
+          "hash": "4msWU/K6fqD4o2hUHuPy5xiNsRz5JAcn/FOCsga+pEU="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.DataTypeDefXsd.html",
-          "hash": "C1TBpPwqsBBZ7N1esnCzPE4js4qwgouRzrP0hW5i9bU="
+          "hash": "PNs01uYrC9aVIuZevpQSR67dPPQ+ZL4XeHdslP/nCq0="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.DataTypeIec61360.html",
-          "hash": "FiYXoxRTx8uU8rZQyWvEGMGtTI+0sjMrgbOUWUQRtBM="
+          "hash": "/6r5sIN8JkX1fhfgOtt/QTP4Vc2+/u7OhuN54AQUmec="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Direction.html",
-          "hash": "4y0rEolEcpOhRsxlfH91OAsNWNP6h0H9cAvADOy+mYI="
+          "hash": "vX7wNktEtWUWxGfP8Nnz0aPyDQGxBoIsqPnrtpDSXwM="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html",
-          "hash": "rTn0Y1CSzXOM+Xp44d1g/9ehAzt6h4gGITJKyweiGBA="
+          "hash": "rArUy8SuAz9NhX9McNQw2jh8p2PtToDsSA8B+zO9Sp8="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Entity.html",
-          "hash": "GllvCTvCw2VCqKwe2HtCP3b7uTUe2N+TN5zPC965+U8="
+          "hash": "4e+NvnS55NMiQkinAB7Z+3PvuB7mDKte59tjkbasDIM="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.EntityType.html",
-          "hash": "vipJOLPFPuHDSqOTWVEYGdwtmT4jNdTAPlO+koDyCO8="
+          "hash": "sdxky1xN1nl6cc50fbDEk8+7+iip2eSLTuGurdCCqNw="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Environment.html",
-          "hash": "qD4gZ83maccl6bgsAZgHbYtUd++yJ7NwvgNwFoMhvMs="
+          "hash": "8RsprO/R9Gfzgm3xRz0BMQzjUcqFy2bAJk3WVOydDjY="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.EventPayload.html",
-          "hash": "2J/7N09lpjxW4t8KOXryBPnwqYhxwDXOe62hbveHlTY="
+          "hash": "Oe7g1B/Oa0S9mOL7IkiCC69gTCvzDT19occkMDlIduI="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Extension.html",
-          "hash": "uO8Vb1b/iliSJGc1GzWi24y3hwu6qYS+sanOyZTVHms="
+          "hash": "WaDGsAQkcrBpaoBTIeKPQ/9PdgYaEJPUBcxJH2psduE="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,91 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.File.html",
-          "hash": "76N7fg/hy1Lncyqoy/CU6jZ2R411NoYXqPjgJ8auRP8="
+          "hash": "+93aYw6jFkTUkMFd+j5j2u6OkvfxFaDNCCynTyQ5Y4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IAdministrativeInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IAdministrativeInformation.html",
+          "hash": "Cv5BNy1aFZv9aOpu+BtESwI8jL8I3Zret0WWjAQ3bGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IAnnotatedRelationshipElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IAnnotatedRelationshipElement.html",
+          "hash": "NhjOj5Be30IWu9UO6iqQkgebnqfEg1ah3wJ3oE0LeQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IAssetAdministrationShell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IAssetAdministrationShell.html",
+          "hash": "eKGGug12VF+aZakAaV/e40tQ9bkRbFtCYnVpzS2mnc4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IAssetInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IAssetInformation.html",
+          "hash": "q/uffpWBfAs6hZb1lxY128spSf3xn1qIpmmJCQhGBd0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IBasicEventElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IBasicEventElement.html",
+          "hash": "X7xC/EeENYg43E3i/rz5qlhas/ss5q5p1tLXeW4/xGc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IBlob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IBlob.html",
+          "hash": "pBRjDjKzsVdUtQ+wbMeo/lI34lOkACie5eWnnrfTkrc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ICapability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ICapability.html",
+          "hash": "Vp0nJ0eVj/YeKYIVcG1s0ROdpxLp96zjnOsl2Dzs+Do="
         }
       },
       "is_incremental": false,
@@ -306,7 +390,19 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IClass.html",
-          "hash": "LcaUfWuHJDTS9PHe1Ro26wEb566tDjLbUPeOB2VuurU="
+          "hash": "qB0J85f+MXk7PictJ8Ut23WPV2xCXLPsRtQ7MZ4zHbk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IConceptDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IConceptDescription.html",
+          "hash": "MRsOllW49NzDpQpvgFiXewTeJcFoNJSQQncz1aHnWus="
         }
       },
       "is_incremental": false,
@@ -318,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IDataElement.html",
-          "hash": "TE3pkV8GgkHQT6sqSkeihUtfvta/RvDZCzq3k2xB7t8="
+          "hash": "XKdIi6+xkMEvoKFkpub54veWI+A2crK/HVL8DVXWqe4="
         }
       },
       "is_incremental": false,
@@ -330,7 +426,67 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationContent.html",
-          "hash": "+Mlrpz63gJ1o25TR3XoaOJleARtnqcux+9f7TFk2Cto="
+          "hash": "ZUW1kLsQynHyjVZYPsoDSnrTTxNwftjYKMqEZWjTWA0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationIec61360.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationIec61360.html",
+          "hash": "aBK+Wyb/yxN69v6zpcsUghjGyLstpx2sHWO+fD44/2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationPhysicalUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IDataSpecificationPhysicalUnit.html",
+          "hash": "1SfmqHxYjn1ZUKzwZ9YOJzTAOZ4nL6ZUn+6PiYAc/Hg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IEmbeddedDataSpecification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IEmbeddedDataSpecification.html",
+          "hash": "qbTTDjhxF4on6culr+5WpC2duuC9os4WqZA28a+LFd0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IEntity.html",
+          "hash": "cpwAWElxK+yApysNdHRD32wNlLgN/RCKxW5lPly4UJ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IEnvironment.html",
+          "hash": "lVDo1zCP8HxRhHMuVXxs231xcQsHeTLWZkIh/qNPLoI="
         }
       },
       "is_incremental": false,
@@ -342,7 +498,43 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IEventElement.html",
-          "hash": "PdKdsDSRzH0siXDlpn9OY7BzfDaQNpQ/XUsccs2ZuLI="
+          "hash": "C6KrF3oL+gQPK0Ehjk6D0Zv7u851NlcExrrSGZfSft4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IEventPayload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IEventPayload.html",
+          "hash": "mkaxffUM/d4a2ZjIIzqV9PWyjhbSNzKgJYIDp0msRAQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IExtension.html",
+          "hash": "r9snaZxsSjzkWQyhZd/dmaEIHVLJAg5mKG27UHHwPug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IFile.html",
+          "hash": "/xDxadk4E06AlkF1Zn7CDs/bNJEPOmrVn9LY9VLrR4c="
         }
       },
       "is_incremental": false,
@@ -354,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IHasDataSpecification.html",
-          "hash": "HWbipefg6RmkTqiNcGxOp2XPeIY333zciKq07PP+zrk="
+          "hash": "tc7DNASa+vpcb8wVKpjqotWj/69b/FHa6yNCJ5wRV9k="
         }
       },
       "is_incremental": false,
@@ -366,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IHasExtensions.html",
-          "hash": "qBBi0PBr0XPBN94M5H02X40s7/EfeuQVcXStDBGz93g="
+          "hash": "67lVdeZuNujVLa96lKi5v+2FZQZt2C9UsDdDTFIXidE="
         }
       },
       "is_incremental": false,
@@ -378,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IHasKind.html",
-          "hash": "Od1/Y9MMEN0bQeQxYq+Qp7EcIU08jXOOa2IBa4aKpP0="
+          "hash": "Ne/It6jQwZ22X4TP9UUWFuS9+cuJLT4CLxv3FhVjGQI="
         }
       },
       "is_incremental": false,
@@ -390,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IHasSemantics.html",
-          "hash": "LsL8/xUXvuIZokEuC1jrepDURHIlE3U+t/03/nysgck="
+          "hash": "qjjqbYh20jkLa5eGzTb8IuMjvphV4eqHxFpGUstIeLI="
         }
       },
       "is_incremental": false,
@@ -402,7 +594,79 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IIdentifiable.html",
-          "hash": "eRMVunokk2hCZjIOJs6s4Y3cl9NB10/E4XyPhNq6J/g="
+          "hash": "TDFoIh2T919P6z2dmaeVw7DRAPYlKcIPfGTHQ5LCXDg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IKey.html",
+          "hash": "Ar8AVn/0lI9oRs697M7xe+wnorbQrQgpuOxeBBHdyGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ILangString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ILangString.html",
+          "hash": "hkUcJAjK2r2xfzJKXCRJfEBWBeA2hVqTvoqU/lOqxyo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IMultiLanguageProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IMultiLanguageProperty.html",
+          "hash": "kYSiSH4AW/8wzPtkv9iET5zCV2d0ODMVeuVlxXQtBJI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IOperation.html",
+          "hash": "8vip5z/xjggu2iYgtOj/26cGeoXkpOr3vCQ6eaN8dbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IOperationVariable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IOperationVariable.html",
+          "hash": "4YWhHr7DNp2zJN2ax8MR2Aj+CPA0scKNDV+ko4OyVUw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IProperty.html",
+          "hash": "WymQ9dEDuWw5+zE0s26LkJm0sXZv4QOMwiqKuMNyACI="
         }
       },
       "is_incremental": false,
@@ -414,7 +678,31 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IQualifiable.html",
-          "hash": "a95CR5CkqDOb0scPx2gZSlFFkVRKTywlLEonukBfBzw="
+          "hash": "kGyptwFGqEqSx8YgHx4JAJQotDHRO4c1FJ6AhyZY6Vg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IQualifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IQualifier.html",
+          "hash": "q5L7BIzwOYReIoWypKRnFFDsHeEkUAGAwIaxWt2GUqg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IRange.html",
+          "hash": "3vuLWPJq9yMTe/EG/f22RunrFRpZwB4vn5a3H0N07+Q="
         }
       },
       "is_incremental": false,
@@ -426,7 +714,31 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IReferable.html",
-          "hash": "Ckp/sn5XLbvLW07iNjuYCiB0tYJtdNqNTnstp5hQKWU="
+          "hash": "6I73Kqm+GlXgCP4EelNhQuiccQP68gr/uIqycSaLtiI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IReference.html",
+          "hash": "NLJb+/uTzC0zJRNcqknFeVcvVNCJ4uqZGDqItt8mbHw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IReferenceElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IReferenceElement.html",
+          "hash": "6ZX8O5YKPTsIV879Z3p9fsic/F/nJkHTZEZ1s8zkstE="
         }
       },
       "is_incremental": false,
@@ -438,7 +750,43 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.IRelationshipElement.html",
-          "hash": "4IgyKxpiPMaz+qrFE5howQCeAWNxLPm5wabZ3E0+g3E="
+          "hash": "KbZ1b4EaLg5eV2SWyWVObdoUS3Fi061WWQ43avhGs6k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IResource.html",
+          "hash": "45TsaQiDy6R31u8Td8AjK9I8YvR5HV5ZkENPTgSni3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ISpecificAssetId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ISpecificAssetId.html",
+          "hash": "R8983FqFNtyOQWDugSqpc8AxkZ8pIgNuDI8aCMb/0ys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ISubmodel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ISubmodel.html",
+          "hash": "MSen/fFCbZRtUrDU3iVN6vjhIQIt3NIqDI/xMc61FyY="
         }
       },
       "is_incremental": false,
@@ -450,7 +798,55 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElement.html",
-          "hash": "hR25T/DuGKOLw2IQuqalAPTy5KgS7RU/zijLRsWWKSQ="
+          "hash": "MzwJfg9f1N78CS7e3tihMwE1YOpR6rHawjPVy3pkCM4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElementCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElementCollection.html",
+          "hash": "VXS3QdHAb3NNA42Elpe9PsFBolITfgUJQ98kILFBVGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElementList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.ISubmodelElementList.html",
+          "hash": "WO+iW/7Wq1uJbdJaO3QsYrBkc2VHW2Xk/KGCOhGELaM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IValueList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IValueList.html",
+          "hash": "78JNVm/4hJhpjdpSqP4iRR9PNDmTImZB07/vsH3xKog="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AasCore.Aas3_0_RC02.IValueReferencePair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AasCore.Aas3_0_RC02.IValueReferencePair.html",
+          "hash": "nweb9y898ao9KaC3v0dIkWP35dMbZ6YHhnpAhMm1cRs="
         }
       },
       "is_incremental": false,
@@ -486,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Jsonization.Serialize.html",
-          "hash": "+C5jKPI81Y/8tvVYmdD24EiuRyPH7WtiCrjd7d6nSIE="
+          "hash": "uhcTvBsVbFucC2EPQWbCyy23d7On5HPFcyV8PuIT3lM="
         }
       },
       "is_incremental": false,
@@ -510,7 +906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Key.html",
-          "hash": "Jyc9nsf1SOSinvra6HhI4G4HwE4RiTcEnqe/COYQSz0="
+          "hash": "iV3W82OdRYOt3/iTzZP8FZNPFpyoR7SM7+H4jtNm410="
         }
       },
       "is_incremental": false,
@@ -522,7 +918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.KeyTypes.html",
-          "hash": "oi8jLG58/B8M/Z/sDd7g7QfIxVuT/DvWnEJHXM/eY0c="
+          "hash": "kAfmaXq03rBGdrzdjSjj0xU9VGyLi+OS+Lin2zYJIAk="
         }
       },
       "is_incremental": false,
@@ -534,7 +930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.LangString.html",
-          "hash": "JkjSkWytqvCnY4WsMVisDG/aNxruDq7PEF3PHFZzDwg="
+          "hash": "KjZRdXJwLf1AiAbe4sBLKJITzZwMN2J2zo16itFhvTs="
         }
       },
       "is_incremental": false,
@@ -546,7 +942,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.LevelType.html",
-          "hash": "91stUU0OA8kuL+n0/AW58PqyKVN+5Ukg3YO2dUn9jW4="
+          "hash": "O4E76h1nJesR5NnW3TMzSPT1JRcqhDYuXI5QUxzkZYQ="
         }
       },
       "is_incremental": false,
@@ -558,7 +954,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ModelingKind.html",
-          "hash": "WyKh9ROcPvr/FZe3/r6YDj0u7nuNd2ljhxA5u3Xb3ts="
+          "hash": "F4wDZl2NtwX6QVvXnMdSGchlsfM+d+RrgPLGu8T+5qY="
         }
       },
       "is_incremental": false,
@@ -570,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.MultiLanguageProperty.html",
-          "hash": "nSUTuwTd8xkGr6k999H6OPb9XtwlPAFVAPavICbCPzI="
+          "hash": "XVqjVKsQGUAgcnwz9d4WI4bldbKa4qRvWy3DK1Qk+Kc="
         }
       },
       "is_incremental": false,
@@ -582,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Operation.html",
-          "hash": "AShMXafxLaq0kJT35pkZ3y3V5sCbZOAWbOCyl+nl89A="
+          "hash": "3J03usrUtG4zI6R0xpvCHhunmYEJy8GofWidiyZli8Q="
         }
       },
       "is_incremental": false,
@@ -594,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.OperationVariable.html",
-          "hash": "E7ULcPKFhTBsIf8t6U7GgN7vlI/jeX2MyxqE0RCW8Ts="
+          "hash": "YdB/vdHv23EwQb9NaP/begr8gfJ/3cBzgxb2yFH+GFY="
         }
       },
       "is_incremental": false,
@@ -606,7 +1002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Property.html",
-          "hash": "wmRsk6Y6fkZq7ONrWG5duhpfe/fK+LnpRfDB/wRrmvM="
+          "hash": "8wgUiYodv9+k+duLweTX5LlozOODMMqPMF1vx/gwzFA="
         }
       },
       "is_incremental": false,
@@ -618,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Qualifier.html",
-          "hash": "edpw4Oyyai0L789tZYRe9MAsQSV1JQj1NkTsKKZF5hI="
+          "hash": "6kjXQ+XuPscUxnCfqjC5FBE0jBcw85XIQm8OSIG51PM="
         }
       },
       "is_incremental": false,
@@ -630,7 +1026,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.QualifierKind.html",
-          "hash": "tTit6sOtwvemXjjKd0uM1wxNilmTvY/FZ+Wqx+g/U8w="
+          "hash": "XZI6bBQ1z5pMY4t18gAGG9S7ywDOH7ZFmVJiuLXvIRA="
         }
       },
       "is_incremental": false,
@@ -642,7 +1038,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Range.html",
-          "hash": "77B7k1lnl+sXvD0t78nDtoEDs0v/9IEoD2CJ/trTI2E="
+          "hash": "UbKLIA3TQ6Pvio6HC5Z4JCmn9S2+loSHO4pQKCk1kzI="
         }
       },
       "is_incremental": false,
@@ -654,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Reference.html",
-          "hash": "VRAM2qMrc9Hm+TMDUUmZk3H0+tpnrq1XoOMoeFjbLAo="
+          "hash": "AwlpQn2g1ojkZ7b4fkTSY6C5A9GC4l5e0tqZ3ZfWYZU="
         }
       },
       "is_incremental": false,
@@ -666,7 +1062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ReferenceElement.html",
-          "hash": "eWikUuyP8rtXTYLKiABassZXo3szh8z3JwJ+0XZ0QMY="
+          "hash": "7pLA+61kFIa7ZDXBUJ+bBDh1W3jvswkSSkzXM45xR8k="
         }
       },
       "is_incremental": false,
@@ -678,7 +1074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ReferenceTypes.html",
-          "hash": "p7EJMHGm+hMbW7/oIhQeooRcFTXWIirtASjQy2hYD4M="
+          "hash": "22VBt3VxQjE1NHZo3T3VicXHm7IoU8BbhfgYaSpBP4M="
         }
       },
       "is_incremental": false,
@@ -690,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.RelationshipElement.html",
-          "hash": "+/7W4h8wK8E+nIDdjiTBrw5ZFsG+5a+WTaHbSVmOASo="
+          "hash": "E6QExzFTh+8IsUPACcgpWlwVx5quB5/FWQhkT9XYq2w="
         }
       },
       "is_incremental": false,
@@ -762,7 +1158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Resource.html",
-          "hash": "xK7Z3HaQK4c/RoJqBHKlTiPoK2ZabMxofnZaHLI/mC8="
+          "hash": "8YdCti0CFre8DENhqaUp656PzyVqjixS9rwq5p3bQJU="
         }
       },
       "is_incremental": false,
@@ -774,7 +1170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.SpecificAssetId.html",
-          "hash": "bWjTUIUwqKaPuX8/eQN4N4oCvS4JqOUPa7YXjQkRzf0="
+          "hash": "oU5Mq8dacq/1M4zNTdT4IlWcfy2PqmFPZgkS6vqKiE0="
         }
       },
       "is_incremental": false,
@@ -786,7 +1182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.StateOfEvent.html",
-          "hash": "Y7BDeypF1On50oBAKzpDaZ4puzecbXySEoP46LxdjH8="
+          "hash": "FaJpZzhL57CFa2qK106jCo3dx5m/b4n5D1pJVGKm1w4="
         }
       },
       "is_incremental": false,
@@ -810,7 +1206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Submodel.html",
-          "hash": "xfXaMjQ1eklomCi4FvhdIv+040Hf8XbWiUc5ViurUU0="
+          "hash": "dFZNvCas9NemdtZkVIz6rKU/s7zJPIenzxMg/i1+Kyg="
         }
       },
       "is_incremental": false,
@@ -822,7 +1218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.SubmodelElementCollection.html",
-          "hash": "fX54PJWkOCLQfrcYcA5uxLz2czKD6qB7cjpvDyl28BI="
+          "hash": "BmV9Elfti7G/Vr28eFWa3fDFqxvwx/qwoEeFhvm2nhE="
         }
       },
       "is_incremental": false,
@@ -834,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.SubmodelElementList.html",
-          "hash": "S+VT84rSqnJanBAT7n1J2hnXnBKxSuCOENlVASFFpzQ="
+          "hash": "7sEVcyXGk+2ZY0xNASoQ6RKbiBit4c85XJe4JCpKkDs="
         }
       },
       "is_incremental": false,
@@ -846,7 +1242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ValueList.html",
-          "hash": "qIjiHuvLdLaCY3cS4u0yKNa/rMvZsBVyHyE2Q1wZVTI="
+          "hash": "9pl+9JXBnbclXR3PdA/v507H4cTPrfZfhBT6wnYpxNY="
         }
       },
       "is_incremental": false,
@@ -858,7 +1254,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.ValueReferencePair.html",
-          "hash": "wTGW+4IyuffKr9WV14wsiWS12WW5+qNaCW3+2rnsJIE="
+          "hash": "CauFly0L/LKiXAOnYuSFwuNm81yHPvybaNItlwXrvsY="
         }
       },
       "is_incremental": false,
@@ -870,7 +1266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Verification.html",
-          "hash": "yQotOXvI8+L3Gq15nxJwGX6tjb6zal/j2gjW33IZD0w="
+          "hash": "cEv42m+aIvkjejjbGkyRNyAdGSZxn7EReCAboxXzOTg="
         }
       },
       "is_incremental": false,
@@ -882,7 +1278,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformer-1.html",
-          "hash": "4kD7HXOnHtFoMYI3j0JMvg42lsNoM5i2eUBrr6b0N5s="
+          "hash": "gtKQkYTJH9PgxLW2It9GwCDhLBy5ciHT3yrM4GWE4Uw="
         }
       },
       "is_incremental": false,
@@ -894,7 +1290,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractTransformerWithContext-2.html",
-          "hash": "oHaub8/vXZhDGoJGZYKq1gEUqXCJgLmB8bPZ+fLCwJw="
+          "hash": "wI8Vptg6SWcfldE0yoZItv3uux8sr3jiPJxbd4jEQhk="
         }
       },
       "is_incremental": false,
@@ -906,7 +1302,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitor.html",
-          "hash": "NSRZ7eI9C/e9KMKf2xW4DF23lW5pCz1ukAoE32DGVww="
+          "hash": "OXT/E4aVJIC8z0/0XgwrddnGPKUIwtIYbg/ERXNViZg="
         }
       },
       "is_incremental": false,
@@ -918,7 +1314,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.AbstractVisitorWithContext-1.html",
-          "hash": "afdLTq5dqcsDNDHf/YV6KYOsXko7ATDf4jr6sw/sJcg="
+          "hash": "lsfYDRTf/On4MQe8aDLDop/rNsNP+vcJ2nETYXxjoOQ="
         }
       },
       "is_incremental": false,
@@ -930,7 +1326,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.ITransformer-1.html",
-          "hash": "y2zhFcLX/NPdQn5Bm7QlIqGJVnMyoZI422qrjvRbf/o="
+          "hash": "ab9irQmxbmc/WRtAB0r8taDb0PNxY17teMjZOmbR39g="
         }
       },
       "is_incremental": false,
@@ -942,7 +1338,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.ITransformerWithContext-2.html",
-          "hash": "CS+Keqhi/nG5DK3WUhHxsj59NArYF9MjbHLVRQFRudA="
+          "hash": "IF5kRAT2xK8ZwmNKX3f96HDp/I1C9e7t5k/XrCWr59k="
         }
       },
       "is_incremental": false,
@@ -954,7 +1350,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.IVisitor.html",
-          "hash": "92OtyMznkUppOFJX7+FbxBFy8l8FmFtZfdkNxOagWAA="
+          "hash": "ayfeW35seGKrsJqd3tEV26+qbxcrBhwZ9o/t9KEWr6k="
         }
       },
       "is_incremental": false,
@@ -966,7 +1362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.IVisitorWithContext-1.html",
-          "hash": "LBTbedSlfCRVNyC/wXRpEVXcKqcjxq5fCs2CyGjIT1U="
+          "hash": "8MSiuX0Uc26ULDhhMKA0LZrmbqTrfm382QFYSBCYuEE="
         }
       },
       "is_incremental": false,
@@ -978,7 +1374,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Visitation.VisitorThrough.html",
-          "hash": "XhwfboXnaeLDjZPQpafCUYvrECD20Q1SP9pZSuHZWh0="
+          "hash": "7CEErAUZUIL4R/tlxgJog0etYkOZRYTjK3wvLjgGpIg="
         }
       },
       "is_incremental": false,
@@ -1050,7 +1446,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.html",
-          "hash": "DMzEsNnBJfBzKSiV3wGB4LkxH5eV9GnpEDJLmdVRFr0="
+          "hash": "Akhm6aLuS8Qjj0MuOpDo7jXsp52T13XSywsmBVUTgN0="
         }
       },
       "is_incremental": false,
@@ -1074,7 +1470,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "n2GryMTtP9v3EFwE5250snDpRsAj2Hib+hmF/vyrn1Y="
+          "hash": "wUyvWu0Uf0647fzKIVcguIuwxPs+eOzLRe8lV0bEQkU="
         }
       },
       "is_incremental": false,
@@ -1304,7 +1700,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 87,
+          "total_file_count": 120,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
