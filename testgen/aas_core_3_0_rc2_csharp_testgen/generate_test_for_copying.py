@@ -401,7 +401,7 @@ public void Test_snippet_in_docs()
 
     var environment = new Aas.Environment()
     {
-        Submodels = new List<Aas.Submodel>()
+        Submodels = new List<Aas.ISubmodel>()
         {
             submodel
         }

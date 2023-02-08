@@ -42,7 +42,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List<Aas.Submodel>()
+            Submodels = new List<Aas.ISubmodel>()
             {
                 submodel
             }
@@ -75,8 +75,6 @@ public class Program
     }
 }
 ```
-
-(You can run the snippet at: https://dotnetfiddle.net/dkBbFS)
 
 ## De-serialize
 
@@ -136,8 +134,6 @@ public class Program
     }
 }
 ```
-
-(You can run the snippet at: https://dotnetfiddle.net/uCv2f3)
 
 ### Errors
 

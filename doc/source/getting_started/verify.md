@@ -43,7 +43,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List<Aas.Submodel>()
+            Submodels = new List<Aas.ISubmodel>()
             {
                 submodel
             }
@@ -64,8 +64,6 @@ public class Program
     }
 }
 ```
-
-(You can run the snippet at: https://dotnetfiddle.net/aI03At)
 
 ## Reporting
 
@@ -106,8 +104,6 @@ public class Program
     }
 }
 ```
-
-(You can run the snippet at: https://dotnetfiddle.net/aI03At)
 
 ## Limit the Number of Reported Errors
 
