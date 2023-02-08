@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-rc1
+
+Breaking changes:
+* Operate on interfaces instead of concrete classes (#86)
+* Introduce enhancing (#87)
+
 ## 1.1.1
 
 Bug fixes:
