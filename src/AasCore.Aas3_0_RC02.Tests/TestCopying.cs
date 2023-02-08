@@ -3691,7 +3691,7 @@ namespace AasCore.Aas3_0_RC02.Tests
 
             var environment = new Aas.Environment()
             {
-                Submodels = new List<Aas.Submodel>()
+                Submodels = new List<Aas.ISubmodel>()
                 {
                     submodel
                 }

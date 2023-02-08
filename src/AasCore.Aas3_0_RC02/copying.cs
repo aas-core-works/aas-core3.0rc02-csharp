@@ -588,10 +588,10 @@ namespace AasCore.Aas3_0_RC02
                Aas.IExtension that
            )
             {
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -617,10 +617,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IAdministrativeInformation that
             )
             {
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -639,10 +639,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IQualifier that
             )
             {
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -669,10 +669,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IAssetAdministrationShell that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -680,10 +680,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -691,10 +691,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -702,10 +702,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -713,10 +713,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSubmodels = null;
+                List<IReference>? theSubmodels = null;
                 if (that.Submodels != null)
                 {
-                    theSubmodels = new List<Reference>(
+                    theSubmodels = new List<IReference>(
                         that.Submodels.Count);
                     foreach (var item in that.Submodels)
                     {
@@ -748,10 +748,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IAssetInformation that
             )
             {
-                List<SpecificAssetId>? theSpecificAssetIds = null;
+                List<ISpecificAssetId>? theSpecificAssetIds = null;
                 if (that.SpecificAssetIds != null)
                 {
-                    theSpecificAssetIds = new List<SpecificAssetId>(
+                    theSpecificAssetIds = new List<ISpecificAssetId>(
                         that.SpecificAssetIds.Count);
                     foreach (var item in that.SpecificAssetIds)
                     {
@@ -785,10 +785,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.ISpecificAssetId that
             )
             {
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -811,10 +811,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.ISubmodel that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -822,10 +822,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -833,10 +833,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -844,10 +844,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -855,10 +855,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -866,10 +866,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -914,10 +914,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IRelationshipElement that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -925,10 +925,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -936,10 +936,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -947,10 +947,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -958,10 +958,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -969,10 +969,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1003,10 +1003,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.ISubmodelElementList that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1014,10 +1014,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1025,10 +1025,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1036,10 +1036,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1047,10 +1047,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1058,10 +1058,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1108,10 +1108,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.ISubmodelElementCollection that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1119,10 +1119,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1130,10 +1130,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1141,10 +1141,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1152,10 +1152,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1163,10 +1163,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1207,10 +1207,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IProperty that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1218,10 +1218,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1229,10 +1229,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1240,10 +1240,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1251,10 +1251,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1262,10 +1262,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1299,10 +1299,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IMultiLanguageProperty that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1310,10 +1310,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1321,10 +1321,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1332,10 +1332,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1343,10 +1343,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1354,10 +1354,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1365,10 +1365,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theValue = null;
+                List<ILangString>? theValue = null;
                 if (that.Value != null)
                 {
-                    theValue = new List<LangString>(
+                    theValue = new List<ILangString>(
                         that.Value.Count);
                     foreach (var item in that.Value)
                     {
@@ -1401,10 +1401,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IRange that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1412,10 +1412,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1423,10 +1423,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1434,10 +1434,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1445,10 +1445,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1456,10 +1456,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1491,10 +1491,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IReferenceElement that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1502,10 +1502,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1513,10 +1513,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1524,10 +1524,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1535,10 +1535,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1546,10 +1546,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1581,10 +1581,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IBlob that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1592,10 +1592,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1603,10 +1603,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1614,10 +1614,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1625,10 +1625,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1636,10 +1636,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1670,10 +1670,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IFile that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1681,10 +1681,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1692,10 +1692,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1703,10 +1703,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1714,10 +1714,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1725,10 +1725,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1759,10 +1759,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IAnnotatedRelationshipElement that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1770,10 +1770,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1781,10 +1781,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1792,10 +1792,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1803,10 +1803,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1814,10 +1814,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1860,10 +1860,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IEntity that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1871,10 +1871,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -1882,10 +1882,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -1893,10 +1893,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -1904,10 +1904,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -1915,10 +1915,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -1988,10 +1988,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IBasicEventElement that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -1999,10 +1999,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -2010,10 +2010,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -2021,10 +2021,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -2032,10 +2032,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -2043,10 +2043,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -2085,10 +2085,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IOperation that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -2096,10 +2096,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -2107,10 +2107,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -2118,10 +2118,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -2129,10 +2129,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -2140,10 +2140,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -2151,10 +2151,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<OperationVariable>? theInputVariables = null;
+                List<IOperationVariable>? theInputVariables = null;
                 if (that.InputVariables != null)
                 {
-                    theInputVariables = new List<OperationVariable>(
+                    theInputVariables = new List<IOperationVariable>(
                         that.InputVariables.Count);
                     foreach (var item in that.InputVariables)
                     {
@@ -2162,10 +2162,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<OperationVariable>? theOutputVariables = null;
+                List<IOperationVariable>? theOutputVariables = null;
                 if (that.OutputVariables != null)
                 {
-                    theOutputVariables = new List<OperationVariable>(
+                    theOutputVariables = new List<IOperationVariable>(
                         that.OutputVariables.Count);
                     foreach (var item in that.OutputVariables)
                     {
@@ -2173,10 +2173,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<OperationVariable>? theInoutputVariables = null;
+                List<IOperationVariable>? theInoutputVariables = null;
                 if (that.InoutputVariables != null)
                 {
-                    theInoutputVariables = new List<OperationVariable>(
+                    theInoutputVariables = new List<IOperationVariable>(
                         that.InoutputVariables.Count);
                     foreach (var item in that.InoutputVariables)
                     {
@@ -2217,10 +2217,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.ICapability that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -2228,10 +2228,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -2239,10 +2239,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -2250,10 +2250,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theSupplementalSemanticIds = null;
+                List<IReference>? theSupplementalSemanticIds = null;
                 if (that.SupplementalSemanticIds != null)
                 {
-                    theSupplementalSemanticIds = new List<Reference>(
+                    theSupplementalSemanticIds = new List<IReference>(
                         that.SupplementalSemanticIds.Count);
                     foreach (var item in that.SupplementalSemanticIds)
                     {
@@ -2261,10 +2261,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Qualifier>? theQualifiers = null;
+                List<IQualifier>? theQualifiers = null;
                 if (that.Qualifiers != null)
                 {
-                    theQualifiers = new List<Qualifier>(
+                    theQualifiers = new List<IQualifier>(
                         that.Qualifiers.Count);
                     foreach (var item in that.Qualifiers)
                     {
@@ -2272,10 +2272,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -2304,10 +2304,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IConceptDescription that
             )
             {
-                List<Extension>? theExtensions = null;
+                List<IExtension>? theExtensions = null;
                 if (that.Extensions != null)
                 {
-                    theExtensions = new List<Extension>(
+                    theExtensions = new List<IExtension>(
                         that.Extensions.Count);
                     foreach (var item in that.Extensions)
                     {
@@ -2315,10 +2315,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDisplayName = null;
+                List<ILangString>? theDisplayName = null;
                 if (that.DisplayName != null)
                 {
-                    theDisplayName = new List<LangString>(
+                    theDisplayName = new List<ILangString>(
                         that.DisplayName.Count);
                     foreach (var item in that.DisplayName)
                     {
@@ -2326,10 +2326,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDescription = null;
+                List<ILangString>? theDescription = null;
                 if (that.Description != null)
                 {
-                    theDescription = new List<LangString>(
+                    theDescription = new List<ILangString>(
                         that.Description.Count);
                     foreach (var item in that.Description)
                     {
@@ -2337,10 +2337,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<EmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
+                List<IEmbeddedDataSpecification>? theEmbeddedDataSpecifications = null;
                 if (that.EmbeddedDataSpecifications != null)
                 {
-                    theEmbeddedDataSpecifications = new List<EmbeddedDataSpecification>(
+                    theEmbeddedDataSpecifications = new List<IEmbeddedDataSpecification>(
                         that.EmbeddedDataSpecifications.Count);
                     foreach (var item in that.EmbeddedDataSpecifications)
                     {
@@ -2348,10 +2348,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Reference>? theIsCaseOf = null;
+                List<IReference>? theIsCaseOf = null;
                 if (that.IsCaseOf != null)
                 {
-                    theIsCaseOf = new List<Reference>(
+                    theIsCaseOf = new List<IReference>(
                         that.IsCaseOf.Count);
                     foreach (var item in that.IsCaseOf)
                     {
@@ -2379,7 +2379,7 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IReference that
             )
             {
-                var theKeys = new List<Key>(
+                var theKeys = new List<IKey>(
                     that.Keys.Count);
                 foreach (var item in that.Keys)
                 {
@@ -2419,10 +2419,10 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IEnvironment that
             )
             {
-                List<AssetAdministrationShell>? theAssetAdministrationShells = null;
+                List<IAssetAdministrationShell>? theAssetAdministrationShells = null;
                 if (that.AssetAdministrationShells != null)
                 {
-                    theAssetAdministrationShells = new List<AssetAdministrationShell>(
+                    theAssetAdministrationShells = new List<IAssetAdministrationShell>(
                         that.AssetAdministrationShells.Count);
                     foreach (var item in that.AssetAdministrationShells)
                     {
@@ -2430,10 +2430,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<Submodel>? theSubmodels = null;
+                List<ISubmodel>? theSubmodels = null;
                 if (that.Submodels != null)
                 {
-                    theSubmodels = new List<Submodel>(
+                    theSubmodels = new List<ISubmodel>(
                         that.Submodels.Count);
                     foreach (var item in that.Submodels)
                     {
@@ -2441,10 +2441,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<ConceptDescription>? theConceptDescriptions = null;
+                List<IConceptDescription>? theConceptDescriptions = null;
                 if (that.ConceptDescriptions != null)
                 {
-                    theConceptDescriptions = new List<ConceptDescription>(
+                    theConceptDescriptions = new List<IConceptDescription>(
                         that.ConceptDescriptions.Count);
                     foreach (var item in that.ConceptDescriptions)
                     {
@@ -2483,7 +2483,7 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IValueList that
             )
             {
-                var theValueReferencePairs = new List<ValueReferencePair>(
+                var theValueReferencePairs = new List<IValueReferencePair>(
                     that.ValueReferencePairs.Count);
                 foreach (var item in that.ValueReferencePairs)
                 {
@@ -2499,17 +2499,17 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IDataSpecificationIec61360 that
             )
             {
-                var thePreferredName = new List<LangString>(
+                var thePreferredName = new List<ILangString>(
                     that.PreferredName.Count);
                 foreach (var item in that.PreferredName)
                 {
                     thePreferredName.Add(Deep(item));
                 }
 
-                List<LangString>? theShortName = null;
+                List<ILangString>? theShortName = null;
                 if (that.ShortName != null)
                 {
-                    theShortName = new List<LangString>(
+                    theShortName = new List<ILangString>(
                         that.ShortName.Count);
                     foreach (var item in that.ShortName)
                     {
@@ -2517,10 +2517,10 @@ namespace AasCore.Aas3_0_RC02
                     }
                 }
 
-                List<LangString>? theDefinition = null;
+                List<ILangString>? theDefinition = null;
                 if (that.Definition != null)
                 {
-                    theDefinition = new List<LangString>(
+                    theDefinition = new List<ILangString>(
                         that.Definition.Count);
                     foreach (var item in that.Definition)
                     {
@@ -2552,7 +2552,7 @@ namespace AasCore.Aas3_0_RC02
                 Aas.IDataSpecificationPhysicalUnit that
             )
             {
-                var theDefinition = new List<LangString>(
+                var theDefinition = new List<ILangString>(
                     that.Definition.Count);
                 foreach (var item in that.Definition)
                 {

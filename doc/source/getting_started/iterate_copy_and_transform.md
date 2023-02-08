@@ -71,7 +71,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List<Aas.Submodel>()
+            Submodels = new List<Aas.ISubmodel>()
             {
                 submodel
             }
@@ -82,9 +82,12 @@ public class Program
         foreach (
             var prop in environment
                  .Descend()
-                 .OfType<Aas.Property>()
+                 .OfType<Aas.IProperty>()
                  .Where(
-                     prop => prop.IdShort.ToLower().Contains("another")
+                     prop => (
+                       prop.IdShort != null
+                       && prop.IdShort.ToLower().Contains("another")
+                     )
                  )
         )
         {
@@ -98,12 +101,10 @@ public class Program
 }
 ```
 
-(You can also run the snippet at: https://dotnetfiddle.net/4Y8yAM)
-
 Iteration with `Descend` and `DescendOnce` works well if the performance is irrelevant.
 However, if the performance matters, this is not a good approach.
 First, all the children model elements will be visited (even though you need only a small subset).
-Second, the call to LINQ's `OfType<Aas.Submodel>` needs to perform a type cast for every child.
+Second, the call to LINQ's `OfType<Aas.IProperty>` needs to perform a type cast for every child.
 
 Let's see in the next section how we could use a more efficient, but also a more complex approach.
 
@@ -186,7 +187,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List<Aas.Submodel>()
+            Submodels = new List<Aas.ISubmodel>()
             {
                 submodel
             }
@@ -203,8 +204,6 @@ public class Program
     }
 }
 ```
-
-(You can run the snippet at: https://dotnetfiddle.net/mbswWD)
 
 There are important differences to iteration with `Descend`:
 
@@ -266,7 +265,7 @@ public class Program
 
           var environment = new Aas.Environment()
           {
-              Submodels = new List<Aas.Submodel>()
+              Submodels = new List<Aas.ISubmodel>()
               {
                   submodel
               }
@@ -294,8 +293,6 @@ public class Program
     }
 }
 ```
-
-(You can also run the snippet at: https://dotnetfiddle.net/XFSbFx)
 
 ## Transformer
 

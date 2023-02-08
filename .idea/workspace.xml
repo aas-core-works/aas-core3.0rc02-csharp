@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83706ea3-1c99-49d2-8237-0e5982ac8a2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestCopying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestCopying.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/copying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/copying.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/jsonization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/jsonization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/types.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/types.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/verification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/verification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/visitation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/visitation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/xmlization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/xmlization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testgen/aas_core_3_0_rc2_csharp_testgen/generate_test_for_copying.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/aas_core_3_0_rc2_csharp_testgen/generate_test_for_copying.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/api/.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/api/.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/source/getting_started/enhancing.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/source/getting_started/enhancing.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +33,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rist/workspace/aas-core-works/aas-core3.0rc02-csharp/doc/source/getting_started&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -47,7 +42,12 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.generate_test_for_copying">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rist\workspace\aas-core-works\aas-core3.0rc02-csharp\doc\source\getting_started" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.generate_test_for_enhancing">
     <configuration name="generate_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aas-core3.0rc02-csharp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,8 +90,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="generate_test_for_enhancing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="aas-core3.0rc02-csharp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testgen/aas_core_3_0_rc2_csharp_testgen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testgen/aas_core_3_0_rc2_csharp_testgen/generate_test_for_enhancing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.generate_test_for_enhancing" />
         <item itemvalue="Python.generate_test_for_copying" />
         <item itemvalue="Python.generate_all" />
       </list>
