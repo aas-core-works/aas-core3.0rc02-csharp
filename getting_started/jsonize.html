@@ -110,7 +110,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List&lt;Aas.Submodel&gt;()
+            Submodels = new List&lt;Aas.ISubmodel&gt;()
             {
                 submodel
             }
@@ -143,7 +143,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/dkBbFS">https://dotnetfiddle.net/dkBbFS</a>)</p>
 <h2 id="de-serialize">De-serialize</h2>
 <p>Our SDK can convert a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.json.nodes.jsonnode">System.Text.Json.Nodes.JsonNode</a> back to an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.
 All you have to do is call the method <code>EnvironmentFrom</code> from the static class <a href="../api/AasCore.Aas3_0_RC02.Jsonization.Deserialize.html">Jsonization.Deserialize</a>.</p>
@@ -194,7 +193,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/uCv2f3">https://dotnetfiddle.net/uCv2f3</a>)</p>
 <h3 id="errors">Errors</h3>
 <p>If there are any errors during the de-serialization, a <a href="../api/AasCore.Aas3_0_RC02.Jsonization.Exception.html">Jsonization.Exception</a> will be thrown.
 Errors occur whenever we encounter invalid JSON values.

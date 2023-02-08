@@ -125,7 +125,7 @@ with their global ID.</p>
     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IHasDataSpecification_EmbeddedDataSpecifications.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L538">View Source</a>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L558">View Source</a>
   </span>
   <a id="AasCore_Aas3_0_RC02_IHasDataSpecification_EmbeddedDataSpecifications_" data-uid="AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications*"></a>
   <h4 id="AasCore_Aas3_0_RC02_IHasDataSpecification_EmbeddedDataSpecifications" data-uid="AasCore.Aas3_0_RC02.IHasDataSpecification.EmbeddedDataSpecifications">EmbeddedDataSpecifications</h4>
@@ -134,7 +134,7 @@ with their global ID.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;EmbeddedDataSpecification&gt; EmbeddedDataSpecifications { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;IEmbeddedDataSpecification&gt; EmbeddedDataSpecifications { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,7 +146,40 @@ with their global ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.EmbeddedDataSpecification.html">EmbeddedDataSpecification</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.IEmbeddedDataSpecification.html">IEmbeddedDataSpecification</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IHasDataSpecification_OverEmbeddedDataSpecificationsOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IHasDataSpecification.OverEmbeddedDataSpecificationsOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L563">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_IHasDataSpecification_OverEmbeddedDataSpecificationsOrEmpty_" data-uid="AasCore.Aas3_0_RC02.IHasDataSpecification.OverEmbeddedDataSpecificationsOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_IHasDataSpecification_OverEmbeddedDataSpecificationsOrEmpty" data-uid="AasCore.Aas3_0_RC02.IHasDataSpecification.OverEmbeddedDataSpecificationsOrEmpty">OverEmbeddedDataSpecificationsOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over EmbeddedDataSpecifications, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IEmbeddedDataSpecification&gt; OverEmbeddedDataSpecificationsOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.IEmbeddedDataSpecification.html">IEmbeddedDataSpecification</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -162,7 +195,7 @@ with their global ID.</p>
                     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IHasDataSpecification.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IHasDataSpecification%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L533" class="contribution-link">View Source</a>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L553" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

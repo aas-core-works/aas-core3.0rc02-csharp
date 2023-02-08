@@ -116,7 +116,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List&lt;Aas.Submodel&gt;()
+            Submodels = new List&lt;Aas.ISubmodel&gt;()
             {
                 submodel
             }
@@ -137,7 +137,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/aI03At">https://dotnetfiddle.net/aI03At</a>)</p>
 <h2 id="reporting">Reporting</h2>
 <p>The error is an instance of <a href="../api/AasCore.Aas3_0_RC02.Reporting.Error.html">Error</a>, living in the scope of the static class <a href="../api/AasCore.Aas3_0_RC02.Reporting.html">Reporting</a>.
 You can use the methods <code>GenerateJsonPath</code> and <code>GenerateRelativeXPath</code> to convert the error's path to a readable path.</p>
@@ -170,7 +169,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/aI03At">https://dotnetfiddle.net/aI03At</a>)</p>
 <h2 id="limit-the-number-of-reported-errors">Limit the Number of Reported Errors</h2>
 <p>Since the <code>Verify</code> method of the static class <a href="../api/AasCore.Aas3_0_RC02.Verification.html">Verification</a> gives you an iterator (an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable">IEnumerable</a>), you can simply stop the verification after observing a certain number of errors.</p>
 <p>Here is a snippet which reports only the first 10 errors:</p>

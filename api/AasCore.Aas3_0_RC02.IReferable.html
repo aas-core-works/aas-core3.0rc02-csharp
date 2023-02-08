@@ -92,6 +92,9 @@
       <a class="xref" href="AasCore.Aas3_0_RC02.IHasExtensions.html#AasCore_Aas3_0_RC02_IHasExtensions_Extensions">IHasExtensions.Extensions</a>
     </div>
     <div>
+      <a class="xref" href="AasCore.Aas3_0_RC02.IHasExtensions.html#AasCore_Aas3_0_RC02_IHasExtensions_OverExtensionsOrEmpty">IHasExtensions.OverExtensionsOrEmpty()</a>
+    </div>
+    <div>
       <a class="xref" href="AasCore.Aas3_0_RC02.IClass.html#AasCore_Aas3_0_RC02_IClass_DescendOnce">IClass.DescendOnce()</a>
     </div>
     <div>
@@ -127,7 +130,7 @@ This ID is unique within the name space of the element.</p>
     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_Category.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L371">View Source</a>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L381">View Source</a>
   </span>
   <a id="AasCore_Aas3_0_RC02_IReferable_Category_" data-uid="AasCore.Aas3_0_RC02.IReferable.Category*"></a>
   <h4 id="AasCore_Aas3_0_RC02_IReferable_Category" data-uid="AasCore.Aas3_0_RC02.IReferable.Category">Category</h4>
@@ -167,7 +170,7 @@ the element would denote that it is the measured temperature.</p>
     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_Checksum.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.Checksum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L447">View Source</a>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L457">View Source</a>
   </span>
   <a id="AasCore_Aas3_0_RC02_IReferable_Checksum_" data-uid="AasCore.Aas3_0_RC02.IReferable.Checksum*"></a>
   <h4 id="AasCore_Aas3_0_RC02_IReferable_Checksum" data-uid="AasCore.Aas3_0_RC02.IReferable.Checksum">Checksum</h4>
@@ -205,7 +208,7 @@ shell tools to manage the checksum</p>
     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_Description.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L435">View Source</a>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L445">View Source</a>
   </span>
   <a id="AasCore_Aas3_0_RC02_IReferable_Description_" data-uid="AasCore.Aas3_0_RC02.IReferable.Description*"></a>
   <h4 id="AasCore_Aas3_0_RC02_IReferable_Description" data-uid="AasCore.Aas3_0_RC02.IReferable.Description">Description</h4>
@@ -214,7 +217,7 @@ shell tools to manage the checksum</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;LangString&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;ILangString&gt; Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,7 +229,7 @@ shell tools to manage the checksum</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.ILangString.html">ILangString</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -251,7 +254,7 @@ provided.
     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_DisplayName.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.DisplayName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L415">View Source</a>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L425">View Source</a>
   </span>
   <a id="AasCore_Aas3_0_RC02_IReferable_DisplayName_" data-uid="AasCore.Aas3_0_RC02.IReferable.DisplayName*"></a>
   <h4 id="AasCore_Aas3_0_RC02_IReferable_DisplayName" data-uid="AasCore.Aas3_0_RC02.IReferable.DisplayName">DisplayName</h4>
@@ -260,7 +263,7 @@ provided.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;LangString&gt; DisplayName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;ILangString&gt; DisplayName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,7 +275,7 @@ provided.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.LangString.html">LangString</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.ILangString.html">ILangString</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -309,7 +312,7 @@ then the display name is selected in the following order if available:
     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_IdShort.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.IdShort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L383">View Source</a>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L393">View Source</a>
   </span>
   <a id="AasCore_Aas3_0_RC02_IReferable_IdShort_" data-uid="AasCore.Aas3_0_RC02.IReferable.IdShort*"></a>
   <h4 id="AasCore_Aas3_0_RC02_IReferable_IdShort" data-uid="AasCore.Aas3_0_RC02.IReferable.IdShort">IdShort</h4>
@@ -342,6 +345,70 @@ its name space.</p>
 (<a class="xref" href="AasCore.Aas3_0_RC02.IHasSemantics.html#AasCore_Aas3_0_RC02_IHasSemantics_SemanticId">SemanticId</a>) conformant to IEC61360
 the <a class="xref" href="AasCore.Aas3_0_RC02.IReferable.html#AasCore_Aas3_0_RC02_IReferable_IdShort">IdShort</a> is typically identical to the short name in English.</p>
 </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_OverDescriptionOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.OverDescriptionOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L467">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_IReferable_OverDescriptionOrEmpty_" data-uid="AasCore.Aas3_0_RC02.IReferable.OverDescriptionOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_IReferable_OverDescriptionOrEmpty" data-uid="AasCore.Aas3_0_RC02.IReferable.OverDescriptionOrEmpty">OverDescriptionOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over Description, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ILangString&gt; OverDescriptionOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.ILangString.html">ILangString</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable_OverDisplayNameOrEmpty.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable.OverDisplayNameOrEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L462">View Source</a>
+  </span>
+  <a id="AasCore_Aas3_0_RC02_IReferable_OverDisplayNameOrEmpty_" data-uid="AasCore.Aas3_0_RC02.IReferable.OverDisplayNameOrEmpty*"></a>
+  <h4 id="AasCore_Aas3_0_RC02_IReferable_OverDisplayNameOrEmpty" data-uid="AasCore.Aas3_0_RC02.IReferable.OverDisplayNameOrEmpty">OverDisplayNameOrEmpty()</h4>
+  <div class="markdown level1 summary"><p>Iterate over DisplayName, if set, and otherwise return an empty enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ILangString&gt; OverDisplayNameOrEmpty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AasCore.Aas3_0_RC02.ILangString.html">ILangString</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -353,7 +420,7 @@ the <a class="xref" href="AasCore.Aas3_0_RC02.IReferable.html#AasCore_Aas3_0_RC0
                     <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/new/main/apiSpec/new?filename=AasCore_Aas3_0_RC02_IReferable.md&amp;value=---%0Auid%3A%20AasCore.Aas3_0_RC02.IReferable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L357" class="contribution-link">View Source</a>
+                    <a href="https://github.com/aas-core-works/aas-core3.0rc02-csharp/blob/main/src/AasCore.Aas3_0_RC02/types.cs/#L367" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

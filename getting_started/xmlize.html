@@ -111,7 +111,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List&lt;Aas.Submodel&gt;()
+            Submodels = new List&lt;Aas.ISubmodel&gt;()
             {
                 submodel
             }
@@ -150,7 +150,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/VEL2jU">https://dotnetfiddle.net/VEL2jU</a>)</p>
 <h2 id="de-serialize">De-serialize</h2>
 <p>The de-serialization is encapsulated in <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Deserialize.html">Xmlization.Deserialize</a> static class.
 The crucial method is <code>EnvironmentFrom</code> which reads from an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> and re-creates back an instance of <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.</p>
@@ -201,7 +200,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/TD0Ro8">https://dotnetfiddle.net/TD0Ro8</a>)</p>
 <h3 id="errors">Errors</h3>
 <p>If the XML document from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlreader">System.Xml.XmlReader</a> comes in an unexpected form, our SDK throws a <a href="../api/AasCore.Aas3_0_RC02.Xmlization.Exception.html">Xmlization.Exception</a>.
 This can happen, for example, if unexpected XML elements or XML attributes are encountered, or an expected XML element is missing.</p>

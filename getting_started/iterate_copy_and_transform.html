@@ -134,7 +134,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List&lt;Aas.Submodel&gt;()
+            Submodels = new List&lt;Aas.ISubmodel&gt;()
             {
                 submodel
             }
@@ -145,9 +145,12 @@ public class Program
         foreach (
             var prop in environment
                  .Descend()
-                 .OfType&lt;Aas.Property&gt;()
+                 .OfType&lt;Aas.IProperty&gt;()
                  .Where(
-                     prop =&gt; prop.IdShort.ToLower().Contains(&quot;another&quot;)
+                     prop =&gt; (
+                       prop.IdShort != null
+                       &amp;&amp; prop.IdShort.ToLower().Contains(&quot;another&quot;)
+                     )
                  )
         )
         {
@@ -160,11 +163,10 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can also run the snippet at: <a href="https://dotnetfiddle.net/4Y8yAM">https://dotnetfiddle.net/4Y8yAM</a>)</p>
 <p>Iteration with <code>Descend</code> and <code>DescendOnce</code> works well if the performance is irrelevant.
 However, if the performance matters, this is not a good approach.
 First, all the children model elements will be visited (even though you need only a small subset).
-Second, the call to LINQ's <code>OfType&lt;Aas.Submodel&gt;</code> needs to perform a type cast for every child.</p>
+Second, the call to LINQ's <code>OfType&lt;Aas.IProperty&gt;</code> needs to perform a type cast for every child.</p>
 <p>Let's see in the next section how we could use a more efficient, but also a more complex approach.</p>
 <h2 id="visitor">Visitor</h2>
 <p><a href="https://en.wikipedia.org/wiki/Visitor_pattern">Visitor pattern</a> is a common design pattern in software engineering.
@@ -232,7 +234,7 @@ public class Program
 
         var environment = new Aas.Environment()
         {
-            Submodels = new List&lt;Aas.Submodel&gt;()
+            Submodels = new List&lt;Aas.ISubmodel&gt;()
             {
                 submodel
             }
@@ -249,7 +251,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/mbswWD">https://dotnetfiddle.net/mbswWD</a>)</p>
 <p>There are important differences to iteration with <code>Descend</code>:</p>
 <ul>
 <li>Due to <a href="https://en.wikipedia.org/wiki/Double_dispatch">double dispatch</a>, we spare a cast.
@@ -299,7 +300,7 @@ public class Program
 
           var environment = new Aas.Environment()
           {
-              Submodels = new List&lt;Aas.Submodel&gt;()
+              Submodels = new List&lt;Aas.ISubmodel&gt;()
               {
                   submodel
               }
@@ -327,7 +328,6 @@ public class Program
     }
 }
 </code></pre>
-<p>(You can also run the snippet at: <a href="https://dotnetfiddle.net/XFSbFx">https://dotnetfiddle.net/XFSbFx</a>)</p>
 <h2 id="transformer">Transformer</h2>
 <p>A transformer pattern is an analogous to <a href="https://en.wikipedia.org/wiki/Visitor_pattern">visitor pattern</a>, where we &quot;transform&quot; the visited element into some other form (be it a string or a different object).
 It is very common in compiler design, where the abstract syntax tree is transformed into a different representation.</p>

@@ -111,7 +111,7 @@ public class Program
 		};
 		
 		// Create the second element
-		var content = new byte[4]
+		var content = new byte[]
 		{
 			0xDE, 0xAD, 0xBE, 0xEF
 		};
@@ -139,7 +139,7 @@ public class Program
 		};
 		
 		// Now create the environment to wrap it all
-		var submodels = new List&lt;Aas.Submodel&gt;()
+		var submodels = new List&lt;Aas.ISubmodel&gt;()
 		{
 			submodel
 		};
@@ -161,7 +161,6 @@ public class Program
 	}
 }
 </code></pre>
-<p>(You can run the snippet at: <a href="https://dotnetfiddle.net/jaLVpH">https://dotnetfiddle.net/jaLVpH</a>)</p>
 </article>
           </div>
           
