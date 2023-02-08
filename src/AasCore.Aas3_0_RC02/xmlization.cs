@@ -21187,7 +21187,7 @@ namespace AasCore.Aas3_0_RC02
             : Visitation.AbstractVisitorWithContext<Xml.XmlWriter>
         {
             private void ExtensionToSequence(
-                Extension that,
+                Aas.IExtension that,
                 Xml.XmlWriter writer)
             {
                 if (that.SemanticId != null)
@@ -21271,8 +21271,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void ExtensionToSequence
 
-            public override void Visit(
-                Aas.Extension that,
+            public override void VisitExtension(
+                Aas.IExtension that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21285,7 +21285,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void AdministrativeInformationToSequence(
-                AdministrativeInformation that,
+                Aas.IAdministrativeInformation that,
                 Xml.XmlWriter writer)
             {
                 if (that.EmbeddedDataSpecifications != null)
@@ -21329,8 +21329,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void AdministrativeInformationToSequence
 
-            public override void Visit(
-                Aas.AdministrativeInformation that,
+            public override void VisitAdministrativeInformation(
+                Aas.IAdministrativeInformation that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21343,7 +21343,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void QualifierToSequence(
-                Qualifier that,
+                Aas.IQualifier that,
                 Xml.XmlWriter writer)
             {
                 if (that.SemanticId != null)
@@ -21441,8 +21441,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void QualifierToSequence
 
-            public override void Visit(
-                Aas.Qualifier that,
+            public override void VisitQualifier(
+                Aas.IQualifier that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21455,7 +21455,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void AssetAdministrationShellToSequence(
-                AssetAdministrationShell that,
+                Aas.IAssetAdministrationShell that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -21620,8 +21620,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void AssetAdministrationShellToSequence
 
-            public override void Visit(
-                Aas.AssetAdministrationShell that,
+            public override void VisitAssetAdministrationShell(
+                Aas.IAssetAdministrationShell that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21634,7 +21634,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void AssetInformationToSequence(
-                AssetInformation that,
+                Aas.IAssetInformation that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21694,8 +21694,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void AssetInformationToSequence
 
-            public override void Visit(
-                Aas.AssetInformation that,
+            public override void VisitAssetInformation(
+                Aas.IAssetInformation that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21708,7 +21708,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void ResourceToSequence(
-                Resource that,
+                Aas.IResource that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21733,8 +21733,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void ResourceToSequence
 
-            public override void Visit(
-                Aas.Resource that,
+            public override void VisitResource(
+                Aas.IResource that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21747,7 +21747,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void SpecificAssetIdToSequence(
-                SpecificAssetId that,
+                Aas.ISpecificAssetId that,
                 Xml.XmlWriter writer)
             {
                 if (that.SemanticId != null)
@@ -21808,8 +21808,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void SpecificAssetIdToSequence
 
-            public override void Visit(
-                Aas.SpecificAssetId that,
+            public override void VisitSpecificAssetId(
+                Aas.ISpecificAssetId that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -21822,7 +21822,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void SubmodelToSequence(
-                Submodel that,
+                Aas.ISubmodel that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -22026,8 +22026,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void SubmodelToSequence
 
-            public override void Visit(
-                Aas.Submodel that,
+            public override void VisitSubmodel(
+                Aas.ISubmodel that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -22040,7 +22040,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void RelationshipElementToSequence(
-                RelationshipElement that,
+                Aas.IRelationshipElement that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -22226,8 +22226,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void RelationshipElementToSequence
 
-            public override void Visit(
-                Aas.RelationshipElement that,
+            public override void VisitRelationshipElement(
+                Aas.IRelationshipElement that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -22240,7 +22240,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void SubmodelElementListToSequence(
-                SubmodelElementList that,
+                Aas.ISubmodelElementList that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -22478,8 +22478,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void SubmodelElementListToSequence
 
-            public override void Visit(
-                Aas.SubmodelElementList that,
+            public override void VisitSubmodelElementList(
+                Aas.ISubmodelElementList that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -22492,7 +22492,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void SubmodelElementCollectionToSequence(
-                SubmodelElementCollection that,
+                Aas.ISubmodelElementCollection that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -22674,8 +22674,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void SubmodelElementCollectionToSequence
 
-            public override void Visit(
-                Aas.SubmodelElementCollection that,
+            public override void VisitSubmodelElementCollection(
+                Aas.ISubmodelElementCollection that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -22688,7 +22688,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void PropertyToSequence(
-                Property that,
+                Aas.IProperty that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -22893,8 +22893,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void PropertyToSequence
 
-            public override void Visit(
-                Aas.Property that,
+            public override void VisitProperty(
+                Aas.IProperty that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -22907,7 +22907,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void MultiLanguagePropertyToSequence(
-                MultiLanguageProperty that,
+                Aas.IMultiLanguageProperty that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -23102,8 +23102,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void MultiLanguagePropertyToSequence
 
-            public override void Visit(
-                Aas.MultiLanguageProperty that,
+            public override void VisitMultiLanguageProperty(
+                Aas.IMultiLanguageProperty that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -23116,7 +23116,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void RangeToSequence(
-                Range that,
+                Aas.IRange that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -23320,8 +23320,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void RangeToSequence
 
-            public override void Visit(
-                Aas.Range that,
+            public override void VisitRange(
+                Aas.IRange that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -23334,7 +23334,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void ReferenceElementToSequence(
-                ReferenceElement that,
+                Aas.IReferenceElement that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -23513,8 +23513,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void ReferenceElementToSequence
 
-            public override void Visit(
-                Aas.ReferenceElement that,
+            public override void VisitReferenceElement(
+                Aas.IReferenceElement that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -23527,7 +23527,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void BlobToSequence(
-                Blob that,
+                Aas.IBlob that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -23716,8 +23716,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void BlobToSequence
 
-            public override void Visit(
-                Aas.Blob that,
+            public override void VisitBlob(
+                Aas.IBlob that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -23730,7 +23730,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void FileToSequence(
-                File that,
+                Aas.IFile that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -23917,8 +23917,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void FileToSequence
 
-            public override void Visit(
-                Aas.File that,
+            public override void VisitFile(
+                Aas.IFile that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -23931,7 +23931,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void AnnotatedRelationshipElementToSequence(
-                AnnotatedRelationshipElement that,
+                Aas.IAnnotatedRelationshipElement that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -24133,8 +24133,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void AnnotatedRelationshipElementToSequence
 
-            public override void Visit(
-                Aas.AnnotatedRelationshipElement that,
+            public override void VisitAnnotatedRelationshipElement(
+                Aas.IAnnotatedRelationshipElement that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -24147,7 +24147,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void EntityToSequence(
-                Entity that,
+                Aas.IEntity that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -24369,8 +24369,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void EntityToSequence
 
-            public override void Visit(
-                Aas.Entity that,
+            public override void VisitEntity(
+                Aas.IEntity that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -24383,7 +24383,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void EventPayloadToSequence(
-                EventPayload that,
+                Aas.IEventPayload that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -24479,8 +24479,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void EventPayloadToSequence
 
-            public override void Visit(
-                Aas.EventPayload that,
+            public override void VisitEventPayload(
+                Aas.IEventPayload that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -24493,7 +24493,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void BasicEventElementToSequence(
-                BasicEventElement that,
+                Aas.IBasicEventElement that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -24758,8 +24758,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void BasicEventElementToSequence
 
-            public override void Visit(
-                Aas.BasicEventElement that,
+            public override void VisitBasicEventElement(
+                Aas.IBasicEventElement that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -24772,7 +24772,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void OperationToSequence(
-                Operation that,
+                Aas.IOperation that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -24986,8 +24986,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void OperationToSequence
 
-            public override void Visit(
-                Aas.Operation that,
+            public override void VisitOperation(
+                Aas.IOperation that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25000,7 +25000,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void OperationVariableToSequence(
-                OperationVariable that,
+                Aas.IOperationVariable that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25014,8 +25014,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void OperationVariableToSequence
 
-            public override void Visit(
-                Aas.OperationVariable that,
+            public override void VisitOperationVariable(
+                Aas.IOperationVariable that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25028,7 +25028,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void CapabilityToSequence(
-                Capability that,
+                Aas.ICapability that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -25194,8 +25194,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void CapabilityToSequence
 
-            public override void Visit(
-                Aas.Capability that,
+            public override void VisitCapability(
+                Aas.ICapability that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25208,7 +25208,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void ConceptDescriptionToSequence(
-                ConceptDescription that,
+                Aas.IConceptDescription that,
                 Xml.XmlWriter writer)
             {
                 if (that.Extensions != null)
@@ -25350,8 +25350,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void ConceptDescriptionToSequence
 
-            public override void Visit(
-                Aas.ConceptDescription that,
+            public override void VisitConceptDescription(
+                Aas.IConceptDescription that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25364,7 +25364,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void ReferenceToSequence(
-                Reference that,
+                Aas.IReference that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25408,8 +25408,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void ReferenceToSequence
 
-            public override void Visit(
-                Aas.Reference that,
+            public override void VisitReference(
+                Aas.IReference that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25422,7 +25422,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void KeyToSequence(
-                Key that,
+                Aas.IKey that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25449,8 +25449,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void KeyToSequence
 
-            public override void Visit(
-                Aas.Key that,
+            public override void VisitKey(
+                Aas.IKey that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25463,7 +25463,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void LangStringToSequence(
-                LangString that,
+                Aas.ILangString that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25485,8 +25485,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void LangStringToSequence
 
-            public override void Visit(
-                Aas.LangString that,
+            public override void VisitLangString(
+                Aas.ILangString that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25499,7 +25499,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void EnvironmentToSequence(
-                Environment that,
+                Aas.IEnvironment that,
                 Xml.XmlWriter writer)
             {
                 if (that.AssetAdministrationShells != null)
@@ -25551,8 +25551,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void EnvironmentToSequence
 
-            public override void Visit(
-                Aas.Environment that,
+            public override void VisitEnvironment(
+                Aas.IEnvironment that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25565,7 +25565,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void EmbeddedDataSpecificationToSequence(
-                EmbeddedDataSpecification that,
+                Aas.IEmbeddedDataSpecification that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25589,8 +25589,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void EmbeddedDataSpecificationToSequence
 
-            public override void Visit(
-                Aas.EmbeddedDataSpecification that,
+            public override void VisitEmbeddedDataSpecification(
+                Aas.IEmbeddedDataSpecification that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25603,7 +25603,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void ValueReferencePairToSequence(
-                ValueReferencePair that,
+                Aas.IValueReferencePair that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25626,8 +25626,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void ValueReferencePairToSequence
 
-            public override void Visit(
-                Aas.ValueReferencePair that,
+            public override void VisitValueReferencePair(
+                Aas.IValueReferencePair that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25640,7 +25640,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void ValueListToSequence(
-                ValueList that,
+                Aas.IValueList that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25657,8 +25657,8 @@ namespace AasCore.Aas3_0_RC02
                 writer.WriteEndElement();
             }  // private void ValueListToSequence
 
-            public override void Visit(
-                Aas.ValueList that,
+            public override void VisitValueList(
+                Aas.IValueList that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25671,7 +25671,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void DataSpecificationIec61360ToSequence(
-                DataSpecificationIec61360 that,
+                Aas.IDataSpecificationIec61360 that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25840,8 +25840,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void DataSpecificationIec61360ToSequence
 
-            public override void Visit(
-                Aas.DataSpecificationIec61360 that,
+            public override void VisitDataSpecificationIec61360(
+                Aas.IDataSpecificationIec61360 that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -25854,7 +25854,7 @@ namespace AasCore.Aas3_0_RC02
             }
 
             private void DataSpecificationPhysicalUnitToSequence(
-                DataSpecificationPhysicalUnit that,
+                Aas.IDataSpecificationPhysicalUnit that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(
@@ -26009,8 +26009,8 @@ namespace AasCore.Aas3_0_RC02
                 }
             }  // private void DataSpecificationPhysicalUnitToSequence
 
-            public override void Visit(
-                Aas.DataSpecificationPhysicalUnit that,
+            public override void VisitDataSpecificationPhysicalUnit(
+                Aas.IDataSpecificationPhysicalUnit that,
                 Xml.XmlWriter writer)
             {
                 writer.WriteStartElement(

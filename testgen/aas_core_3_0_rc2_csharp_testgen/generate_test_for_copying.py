@@ -14,7 +14,7 @@ import aas_core_codegen.naming
 import aas_core_codegen.parse
 import aas_core_codegen.run
 from aas_core_codegen import intermediate
-from aas_core_codegen.common import Stripped
+from aas_core_codegen.common import Stripped, Identifier
 from aas_core_codegen.csharp import (
     common as csharp_common,
     naming as csharp_naming,
@@ -199,10 +199,15 @@ that.{prop_name}.Count == casted.{prop_name}.Count
 
     body_writer.write(");")
 
+    interface_name = csharp_naming.interface_name(cls.name)
+    transform_name = csharp_naming.method_name(
+        Identifier(f"transform_{cls.name}")
+    )
+
     return Stripped(
         f"""\
-public override bool Transform(
-{I}Aas.{cls_name} that,
+public override bool {transform_name}(
+{I}Aas.{interface_name} that,
 {I}Aas.IClass other)
 {{
 {I}if (!(other is Aas.{cls_name} casted))
