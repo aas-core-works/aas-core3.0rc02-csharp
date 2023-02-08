@@ -2656,8 +2656,9 @@ namespace AasCore.Aas3_0_RC02
             : Visitation.AbstractTransformer<IEnumerable<Reporting.Error>>
         {
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Extension that)
+            public override IEnumerable<Reporting.Error> TransformExtension(
+                Aas.IExtension that
+            )
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
@@ -2764,8 +2765,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.AdministrativeInformation that)
+            public override IEnumerable<Reporting.Error> TransformAdministrativeInformation(
+                Aas.IAdministrativeInformation that
+            )
             {
                 if (!(
                     !(that.EmbeddedDataSpecifications != null)
@@ -2832,8 +2834,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Qualifier that)
+            public override IEnumerable<Reporting.Error> TransformQualifier(
+                Aas.IQualifier that
+            )
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
@@ -2949,8 +2952,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.AssetAdministrationShell that)
+            public override IEnumerable<Reporting.Error> TransformAssetAdministrationShell(
+                Aas.IAssetAdministrationShell that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -3219,8 +3223,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.AssetInformation that)
+            public override IEnumerable<Reporting.Error> TransformAssetInformation(
+                Aas.IAssetInformation that
+            )
             {
                 if (!(
                     !(that.SpecificAssetIds != null)
@@ -3283,8 +3288,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Resource that)
+            public override IEnumerable<Reporting.Error> TransformResource(
+                Aas.IResource that
+            )
             {
                 foreach (var error in Verification.VerifyPathType(that.Path))
                 {
@@ -3307,8 +3313,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.SpecificAssetId that)
+            public override IEnumerable<Reporting.Error> TransformSpecificAssetId(
+                Aas.ISpecificAssetId that
+            )
             {
                 if (!(
                     !(that.SupplementalSemanticIds != null)
@@ -3386,8 +3393,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Submodel that)
+            public override IEnumerable<Reporting.Error> TransformSubmodel(
+                Aas.ISubmodel that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -3756,8 +3764,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.RelationshipElement that)
+            public override IEnumerable<Reporting.Error> TransformRelationshipElement(
+                Aas.IRelationshipElement that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -4072,8 +4081,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.SubmodelElementList that)
+            public override IEnumerable<Reporting.Error> TransformSubmodelElementList(
+                Aas.ISubmodelElementList that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -4511,8 +4521,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.SubmodelElementCollection that)
+            public override IEnumerable<Reporting.Error> TransformSubmodelElementCollection(
+                Aas.ISubmodelElementCollection that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -4860,8 +4871,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Property that)
+            public override IEnumerable<Reporting.Error> TransformProperty(
+                Aas.IProperty that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -5209,8 +5221,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.MultiLanguageProperty that)
+            public override IEnumerable<Reporting.Error> TransformMultiLanguageProperty(
+                Aas.IMultiLanguageProperty that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -5567,8 +5580,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Range that)
+            public override IEnumerable<Reporting.Error> TransformRange(
+                Aas.IRange that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -5925,8 +5939,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.ReferenceElement that)
+            public override IEnumerable<Reporting.Error> TransformReferenceElement(
+                Aas.IReferenceElement that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -6246,8 +6261,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Blob that)
+            public override IEnumerable<Reporting.Error> TransformBlob(
+                Aas.IBlob that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -6575,8 +6591,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.File that)
+            public override IEnumerable<Reporting.Error> TransformFile(
+                Aas.IFile that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -6904,8 +6921,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.AnnotatedRelationshipElement that)
+            public override IEnumerable<Reporting.Error> TransformAnnotatedRelationshipElement(
+                Aas.IAnnotatedRelationshipElement that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -7248,8 +7266,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Entity that)
+            public override IEnumerable<Reporting.Error> TransformEntity(
+                Aas.IEntity that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -7632,8 +7651,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.EventPayload that)
+            public override IEnumerable<Reporting.Error> TransformEventPayload(
+                Aas.IEventPayload that
+            )
             {
                 if (!(
                     Verification.IsModelReferenceToReferable(that.Source)))
@@ -7733,8 +7753,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.BasicEventElement that)
+            public override IEnumerable<Reporting.Error> TransformBasicEventElement(
+                Aas.IBasicEventElement that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -8138,8 +8159,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Operation that)
+            public override IEnumerable<Reporting.Error> TransformOperation(
+                Aas.IOperation that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -8525,8 +8547,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.OperationVariable that)
+            public override IEnumerable<Reporting.Error> TransformOperationVariable(
+                Aas.IOperationVariable that
+            )
             {
                 foreach (var error in Verification.Verify(that.Value))
                 {
@@ -8538,8 +8561,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Capability that)
+            public override IEnumerable<Reporting.Error> TransformCapability(
+                Aas.ICapability that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -8838,8 +8862,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.ConceptDescription that)
+            public override IEnumerable<Reporting.Error> TransformConceptDescription(
+                Aas.IConceptDescription that
+            )
             {
                 if (!(
                     !(that.Extensions != null)
@@ -9179,8 +9204,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Reference that)
+            public override IEnumerable<Reporting.Error> TransformReference(
+                Aas.IReference that
+            )
             {
                 if (!(that.Keys.Count >= 1))
                 {
@@ -9361,8 +9387,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Key that)
+            public override IEnumerable<Reporting.Error> TransformKey(
+                Aas.IKey that
+            )
             {
                 foreach (var error in Verification.VerifyKeyTypes(that.Type))
                 {
@@ -9382,8 +9409,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.LangString that)
+            public override IEnumerable<Reporting.Error> TransformLangString(
+                Aas.ILangString that
+            )
             {
                 foreach (var error in Verification.VerifyBcp47LanguageTag(that.Language))
                 {
@@ -9395,8 +9423,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.Environment that)
+            public override IEnumerable<Reporting.Error> TransformEnvironment(
+                Aas.IEnvironment that
+            )
             {
                 if (!(
                     !(that.ConceptDescriptions != null)
@@ -9486,8 +9515,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.EmbeddedDataSpecification that)
+            public override IEnumerable<Reporting.Error> TransformEmbeddedDataSpecification(
+                Aas.IEmbeddedDataSpecification that
+            )
             {
                 foreach (var error in Verification.Verify(that.DataSpecification))
                 {
@@ -9507,8 +9537,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.ValueReferencePair that)
+            public override IEnumerable<Reporting.Error> TransformValueReferencePair(
+                Aas.IValueReferencePair that
+            )
             {
                 foreach (var error in Verification.Verify(that.ValueId))
                 {
@@ -9520,8 +9551,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.ValueList that)
+            public override IEnumerable<Reporting.Error> TransformValueList(
+                Aas.IValueList that
+            )
             {
                 if (!(that.ValueReferencePairs.Count >= 1))
                 {
@@ -9548,8 +9580,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.DataSpecificationIec61360 that)
+            public override IEnumerable<Reporting.Error> TransformDataSpecificationIec61360(
+                Aas.IDataSpecificationIec61360 that
+            )
             {
                 if (!(
                     (
@@ -9798,8 +9831,9 @@ namespace AasCore.Aas3_0_RC02
             }
 
             [CodeAnalysis.SuppressMessage("ReSharper", "NegativeEqualityExpression")]
-            public override IEnumerable<Reporting.Error> Transform(
-                Aas.DataSpecificationPhysicalUnit that)
+            public override IEnumerable<Reporting.Error> TransformDataSpecificationPhysicalUnit(
+                Aas.IDataSpecificationPhysicalUnit that
+            )
             {
                 if (!(that.Definition.Count >= 1))
                 {

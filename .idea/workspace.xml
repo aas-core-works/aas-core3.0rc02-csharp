@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="83706ea3-1c99-49d2-8237-0e5982ac8a2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestCopying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02.Tests/TestCopying.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/copying.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/copying.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/jsonization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/jsonization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/types.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/types.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/verification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/verification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/visitation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/visitation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/xmlization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/AasCore.Aas3_0_RC02/xmlization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testgen/aas_core_3_0_rc2_csharp_testgen/generate_test_for_copying.py" beforeDir="false" afterPath="$PROJECT_DIR$/testgen/aas_core_3_0_rc2_csharp_testgen/generate_test_for_copying.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +47,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.generate_all">
+  <component name="RunManager" selected="Python.generate_test_for_copying">
     <configuration name="generate_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aas-core3.0rc02-csharp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,8 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.generate_all" />
         <item itemvalue="Python.generate_test_for_copying" />
+        <item itemvalue="Python.generate_all" />
       </list>
     </recent_temporary>
   </component>

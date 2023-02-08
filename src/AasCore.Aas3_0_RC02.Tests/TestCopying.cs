@@ -31,8 +31,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                 return that.SequenceEqual(other);
             }
 
-            public override bool Transform(
-                Aas.Extension that,
+            public override bool TransformExtension(
+                Aas.IExtension that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Extension casted))
@@ -67,8 +67,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.RefersTo == null && casted.RefersTo == null);
             }
 
-            public override bool Transform(
-                Aas.AdministrativeInformation that,
+            public override bool TransformAdministrativeInformation(
+                Aas.IAdministrativeInformation that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.AdministrativeInformation casted))
@@ -90,8 +90,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.Revision == casted.Revision);
             }
 
-            public override bool Transform(
-                Aas.Qualifier that,
+            public override bool TransformQualifier(
+                Aas.IQualifier that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Qualifier casted))
@@ -127,8 +127,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.ValueId == null && casted.ValueId == null);
             }
 
-            public override bool Transform(
-                Aas.AssetAdministrationShell that,
+            public override bool TransformAssetAdministrationShell(
+                Aas.IAssetAdministrationShell that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.AssetAdministrationShell casted))
@@ -201,8 +201,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.Submodels == null && casted.Submodels == null);
             }
 
-            public override bool Transform(
-                Aas.AssetInformation that,
+            public override bool TransformAssetInformation(
+                Aas.IAssetInformation that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.AssetInformation casted))
@@ -233,8 +233,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.DefaultThumbnail == null && casted.DefaultThumbnail == null);
             }
 
-            public override bool Transform(
-                Aas.Resource that,
+            public override bool TransformResource(
+                Aas.IResource that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Resource casted))
@@ -247,8 +247,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.ContentType == casted.ContentType);
             }
 
-            public override bool Transform(
-                Aas.SpecificAssetId that,
+            public override bool TransformSpecificAssetId(
+                Aas.ISpecificAssetId that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.SpecificAssetId casted))
@@ -278,8 +278,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         casted.ExternalSubjectId));
             }
 
-            public override bool Transform(
-                Aas.Submodel that,
+            public override bool TransformSubmodel(
+                Aas.ISubmodel that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Submodel casted))
@@ -370,8 +370,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.SubmodelElements == null && casted.SubmodelElements == null);
             }
 
-            public override bool Transform(
-                Aas.RelationshipElement that,
+            public override bool TransformRelationshipElement(
+                Aas.IRelationshipElement that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.RelationshipElement casted))
@@ -453,8 +453,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         casted.Second));
             }
 
-            public override bool Transform(
-                Aas.SubmodelElementList that,
+            public override bool TransformSubmodelElementList(
+                Aas.ISubmodelElementList that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.SubmodelElementList casted))
@@ -549,8 +549,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.ValueTypeListElement == null && casted.ValueTypeListElement == null);
             }
 
-            public override bool Transform(
-                Aas.SubmodelElementCollection that,
+            public override bool TransformSubmodelElementCollection(
+                Aas.ISubmodelElementCollection that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.SubmodelElementCollection casted))
@@ -635,8 +635,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.Value == null && casted.Value == null);
             }
 
-            public override bool Transform(
-                Aas.Property that,
+            public override bool TransformProperty(
+                Aas.IProperty that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Property casted))
@@ -719,8 +719,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.ValueId == null && casted.ValueId == null);
             }
 
-            public override bool Transform(
-                Aas.MultiLanguageProperty that,
+            public override bool TransformMultiLanguageProperty(
+                Aas.IMultiLanguageProperty that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.MultiLanguageProperty casted))
@@ -810,8 +810,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.ValueId == null && casted.ValueId == null);
             }
 
-            public override bool Transform(
-                Aas.Range that,
+            public override bool TransformRange(
+                Aas.IRange that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Range casted))
@@ -890,8 +890,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.Max == casted.Max);
             }
 
-            public override bool Transform(
-                Aas.ReferenceElement that,
+            public override bool TransformReferenceElement(
+                Aas.IReferenceElement that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.ReferenceElement casted))
@@ -972,8 +972,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.Value == null && casted.Value == null);
             }
 
-            public override bool Transform(
-                Aas.Blob that,
+            public override bool TransformBlob(
+                Aas.IBlob that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Blob casted))
@@ -1053,8 +1053,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.ContentType == casted.ContentType);
             }
 
-            public override bool Transform(
-                Aas.File that,
+            public override bool TransformFile(
+                Aas.IFile that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.File casted))
@@ -1132,8 +1132,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.ContentType == casted.ContentType);
             }
 
-            public override bool Transform(
-                Aas.AnnotatedRelationshipElement that,
+            public override bool TransformAnnotatedRelationshipElement(
+                Aas.IAnnotatedRelationshipElement that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.AnnotatedRelationshipElement casted))
@@ -1224,8 +1224,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.Annotations == null && casted.Annotations == null);
             }
 
-            public override bool Transform(
-                Aas.Entity that,
+            public override bool TransformEntity(
+                Aas.IEntity that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Entity casted))
@@ -1321,8 +1321,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.SpecificAssetId == null && casted.SpecificAssetId == null);
             }
 
-            public override bool Transform(
-                Aas.EventPayload that,
+            public override bool TransformEventPayload(
+                Aas.IEventPayload that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.EventPayload casted))
@@ -1357,8 +1357,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.Payload == casted.Payload);
             }
 
-            public override bool Transform(
-                Aas.BasicEventElement that,
+            public override bool TransformBasicEventElement(
+                Aas.IBasicEventElement that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.BasicEventElement casted))
@@ -1448,8 +1448,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.MaxInterval == casted.MaxInterval);
             }
 
-            public override bool Transform(
-                Aas.Operation that,
+            public override bool TransformOperation(
+                Aas.IOperation that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Operation casted))
@@ -1552,8 +1552,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.InoutputVariables == null && casted.InoutputVariables == null);
             }
 
-            public override bool Transform(
-                Aas.OperationVariable that,
+            public override bool TransformOperationVariable(
+                Aas.IOperationVariable that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.OperationVariable casted))
@@ -1567,8 +1567,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         casted.Value));
             }
 
-            public override bool Transform(
-                Aas.Capability that,
+            public override bool TransformCapability(
+                Aas.ICapability that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Capability casted))
@@ -1644,8 +1644,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.EmbeddedDataSpecifications == null && casted.EmbeddedDataSpecifications == null);
             }
 
-            public override bool Transform(
-                Aas.ConceptDescription that,
+            public override bool TransformConceptDescription(
+                Aas.IConceptDescription that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.ConceptDescription casted))
@@ -1710,8 +1710,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.IsCaseOf == null && casted.IsCaseOf == null);
             }
 
-            public override bool Transform(
-                Aas.Reference that,
+            public override bool TransformReference(
+                Aas.IReference that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Reference casted))
@@ -1735,8 +1735,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                             .All(item => item)));
             }
 
-            public override bool Transform(
-                Aas.Key that,
+            public override bool TransformKey(
+                Aas.IKey that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Key casted))
@@ -1749,8 +1749,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.Value == casted.Value);
             }
 
-            public override bool Transform(
-                Aas.LangString that,
+            public override bool TransformLangString(
+                Aas.ILangString that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.LangString casted))
@@ -1763,8 +1763,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                     && that.Text == casted.Text);
             }
 
-            public override bool Transform(
-                Aas.Environment that,
+            public override bool TransformEnvironment(
+                Aas.IEnvironment that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.Environment casted))
@@ -1802,8 +1802,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.ConceptDescriptions == null && casted.ConceptDescriptions == null);
             }
 
-            public override bool Transform(
-                Aas.EmbeddedDataSpecification that,
+            public override bool TransformEmbeddedDataSpecification(
+                Aas.IEmbeddedDataSpecification that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.EmbeddedDataSpecification casted))
@@ -1820,8 +1820,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         casted.DataSpecificationContent));
             }
 
-            public override bool Transform(
-                Aas.ValueReferencePair that,
+            public override bool TransformValueReferencePair(
+                Aas.IValueReferencePair that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.ValueReferencePair casted))
@@ -1836,8 +1836,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         casted.ValueId));
             }
 
-            public override bool Transform(
-                Aas.ValueList that,
+            public override bool TransformValueList(
+                Aas.IValueList that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.ValueList casted))
@@ -1855,8 +1855,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                             .All(item => item)));
             }
 
-            public override bool Transform(
-                Aas.DataSpecificationIec61360 that,
+            public override bool TransformDataSpecificationIec61360(
+                Aas.IDataSpecificationIec61360 that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.DataSpecificationIec61360 casted))
@@ -1913,8 +1913,8 @@ namespace AasCore.Aas3_0_RC02.Tests
                         : that.LevelType == null && casted.LevelType == null);
             }
 
-            public override bool Transform(
-                Aas.DataSpecificationPhysicalUnit that,
+            public override bool TransformDataSpecificationPhysicalUnit(
+                Aas.IDataSpecificationPhysicalUnit that,
                 Aas.IClass other)
             {
                 if (!(other is Aas.DataSpecificationPhysicalUnit casted))
