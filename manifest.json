@@ -654,7 +654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AasCore.Aas3_0_RC02.Enhancing.Enhancer-1.html",
-          "hash": "CUso1GTGFgUsE+dDiVcJpEOYX8uqfWGEFwc5H1MxQOU="
+          "hash": "+hd0nK7buOyMlFqtEtDD7EM/NO6odMP9ril/J8s/Do0="
         }
       },
       "is_incremental": false,
@@ -1974,7 +1974,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started/enhancing.html",
-          "hash": "50g3eWsJEt9LvMXRaJ4jdDtiA+NxYdBKSGx4pdQlupo="
+          "hash": "fbc+1xZnwow1Gm4sZOrdonVko4/OzKIpFT53E07upH8="
         }
       },
       "is_incremental": false,
@@ -2121,9 +2121,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {

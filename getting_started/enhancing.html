@@ -82,7 +82,7 @@
 <p>In any complex application, creating, modifying and de/serializing AAS instances is not enough.
 You have to insert your custom application-specific data to the model in order for the model to be useful.</p>
 <p>Take, for example, parent-child relationship.
-The current library ignores it, and there is no easy way for you to find out to which [Submodel] a particular [SubmodelElement] belongs to.</p>
+The current library ignores it, and there is no easy way for you to find out to which <a href="../api/AasCore.Aas3_0_RC02.Submodel.html">Submodel</a> a particular <a href="../api/AasCore.Aas3_0_RC02.ISubmodelElement.html">ISubmodelElement</a> belongs to.</p>
 <p>We did want to keep the types as simple as possible — the parent-child relationships can get tricky very soon if you have multiple environments with shared submodels <em>etc.</em>
 Instead of overcomplicating the code and making it barely traceable, we decided to keep it simple and frugal in features.</p>
 <p>However, that is little solace if you are developing an GUI editor where you know for sure that there will be only one environment, and where parent-child relationships are crucial for so many tasks.
@@ -106,7 +106,7 @@ First, you need to specify how individual instances are enhanced, <em>i.e.</em> 
 We call this an <em>enhancement factory</em>.
 Second, you need to recursively wrap your instances with the given enhancement factory.</p>
 <p>The <a href="../api/AasCore.Aas3_0_RC02.Enhancing.html">Enhancing</a> is generic and can work with any form of enhancement classes.
-You need to specify your enhancement factory as a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.func-2">function delegate</a> which takes <a href="../api/AasCore.Aas3_0_RC02.IClass.html">IClass</a> as input and returns an enhancement.</p>
+You need to specify your enhancement factory as a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.func-2">function delegate</a> which takes an instance of <a href="../api/AasCore.Aas3_0_RC02.IClass.html">IClass</a> as input and returns an enhancement, or <code>null</code>, if you do not want to enhance the particular instance.</p>
 <p>The wrapping and unwrapping is specified in the generic class <a href="../api/AasCore.Aas3_0_RC02.Enhancing.Enhancer-1.html">Enhancer</a>, which takes the enhancement factory as the only argument.</p>
 <p>The methods <code>Enhancer.Wrap</code> and <code>Enhancer.Unwrap</code> perform the wrapping and unwrapping, respectively.
 The method <code>Enhancer.MustWrap</code> is a shortcut method that spares you a non-null check of <code>Enhancer.Unwrap</code>.</p>
@@ -189,6 +189,101 @@ public class Program
 <p>Note that this approach is indeed more maintainable than the one with <a href="https://learn.microsoft.com/en-US/dotnet/api/system.collections.hashtable">Hashtable</a>, but you still need to take extra care.
 If you create new submodels and insert them into the environment, you have to make sure that you wrap them appropriately.
 If you move a submodel from one environment to another, you have to update the parent link manually <em>etc.</em></p>
+<h2 id="example-selective-enhancement">Example: Selective Enhancement</h2>
+<p>We demonstrate now how you can selectively enhance only some instances in the <a href="../api/AasCore.Aas3_0_RC02.Environment.html">Environment</a>.</p>
+<p>For example, let us assign a unique identifier to all instances which are referable, <em>i.e.</em>, implement <a href="../api/AasCore.Aas3_0_RC02.IReferable.html">IReferable</a>.
+All the other instances are not enhanced.</p>
+<pre><code class="lang-cs">using Aas = AasCore.Aas3_0_RC02;
+using AasEnhancing = AasCore.Aas3_0_RC02.Enhancing;
+
+using System.Linq;
+using System.Collections.Generic;
+
+public class Program
+{
+    class IdEnhancement
+    {
+        public long Id;
+
+        public IdEnhancement(long id)
+        {
+            Id = id;
+        }
+    }
+
+    public static void Main()
+    {
+        // Prepare the environment
+        Aas.IEnvironment environment = new Aas.Environment()
+        {
+            Submodels = new List&lt;Aas.ISubmodel&gt;()
+            {
+                new Aas.Submodel(
+                    &quot;some-unique-global-identifier&quot;)
+                {
+                    SubmodelElements = new List&lt;Aas.ISubmodelElement&gt;()
+                    {
+                        new Aas.Property(
+                            Aas.DataTypeDefXsd.Boolean)
+                        {
+                            IdShort = &quot;someProperty&quot;,
+                        }
+                    },
+                    Administration = new Aas.AdministrativeInformation()
+                    {
+                        Version=&quot;1.0&quot;
+                    }
+                }
+            }
+        };
+
+        // Prepare the enhancer
+        long lastId = 0;
+        var enhancementFactory = new System.Func&lt;IClass, IdEnhancement?&gt;(
+            instance =&gt;
+            {
+                if (instance is Aas.IReferable)
+                {
+                    lastId++;
+                    return new IdEnhancement(lastId);
+                }
+
+                return null;
+            }
+        );
+
+        var enhancer = new Aas.Enhancing.Enhancer&lt;IdEnhancement&gt;(
+            enhancementFactory
+        );
+
+        // Enhance
+        environment = (Aas.IEnvironment)enhancer.Wrap(environment);
+
+        // The submodel and property are enhanced.
+        IdEnhancement enhancement = enhancer.MustUnwrap(environment.Submodels![0]);
+        System.Console.WriteLine(enhancement.Id);
+
+        // Prints:
+        // 2
+
+        enhancement = enhancer.MustUnwrap(environment.Submodels![0].SubmodelElements![0]);
+        System.Console.WriteLine(enhancement.Id);
+
+        // Prints:
+        // 1
+
+        // The administrative information is not referable, and thus not enhanced.
+        IdEnhancement? maybeEnhancement = enhancer.Unwrap(
+            environment.Submodels![0].Administration!
+        );
+
+        System.Console.WriteLine(maybeEnhancement == null);
+
+        // Prints:
+        // True
+    }
+}
+</code></pre>
 <h2 id="no-re-wraps-allowed">No Re-wraps Allowed</h2>
 <p>We disallow re-wraps of already wrapped instances to avoid costly iterations over the object trees, and throw an exception.
 Additionally, we want to prevent bugs in many settings where the enhancement factory assigns unique identifiers to instances or performs non-idempotent operations.</p>
