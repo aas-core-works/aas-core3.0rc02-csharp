@@ -1,5 +1,10 @@
 # Change Log
 
+## 2.0.0-rc2
+
+New features:
+* Allow for selective enhancement (#89)
+
 ## 2.0.0-rc1
 
 Breaking changes:
