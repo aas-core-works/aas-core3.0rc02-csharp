@@ -2,7 +2,7 @@
 
 using Nodes = System.Text.Json.Nodes;
 
-using System.Collections.Generic; // can't alias
+using System.Collections.Generic;  // can't alias
 using System.Linq;  // can't alias
 using NUnit.Framework; // can't alias
 
@@ -491,6 +491,94 @@ namespace AasCore.Aas3_0_RC02.Tests
             // System.Console.WriteLine(
             //     enhancer.MustUnwrap(environment.Submodels![0]).Parent == environment
             // );
+
+            // Prints:
+            // True
+        }
+
+        class IdEnhancement
+        {
+            // ReSharper disable once MemberCanBePrivate.Local
+            // ReSharper disable once NotAccessedField.Local
+            public long Id;
+
+            public IdEnhancement(long id)
+            {
+                Id = id;
+            }
+        }
+
+        [Test]
+        public void Test_selective_enhancing()
+        {
+            // Prepare the environment
+            Aas.IEnvironment environment = new Aas.Environment()
+            {
+                Submodels = new List<Aas.ISubmodel>()
+                {
+                    new Aas.Submodel(
+                        "some-unique-global-identifier")
+                    {
+                        SubmodelElements = new List<Aas.ISubmodelElement>()
+                        {
+                            new Aas.Property(
+                                Aas.DataTypeDefXsd.Boolean)
+                            {
+                                IdShort = "someProperty",
+                            }
+                        },
+                        Administration = new Aas.AdministrativeInformation()
+                        {
+                            Version="1.0"
+                        }
+                    }
+                }
+            };
+
+            // Prepare the enhancer
+            long lastId = 0;
+            var enhancementFactory = new System.Func<IClass, IdEnhancement?>(
+                instance =>
+                {
+                    if (instance is Aas.IReferable)
+                    {
+                        lastId++;
+                        return new IdEnhancement(lastId);
+                    }
+
+                    return null;
+                }
+            );
+
+            var enhancer = new Aas.Enhancing.Enhancer<IdEnhancement>(
+                enhancementFactory
+            );
+
+            // Enhance
+            environment = (Aas.IEnvironment)enhancer.Wrap(environment);
+
+            // The submodel and property are enhanced.
+            // ReSharper disable once NotAccessedVariable
+            IdEnhancement enhancement = enhancer.MustUnwrap(environment.Submodels![0]);
+            // System.Console.WriteLine(enhancement.Id);
+
+            // Prints:
+            // 2
+
+            // ReSharper disable once RedundantAssignment
+            enhancement = enhancer.MustUnwrap(environment.Submodels![0].SubmodelElements![0]);
+            // System.Console.WriteLine(enhancement.Id);
+
+            // Prints:
+            // 1
+
+            // The administrative information is not referable, and thus not enhanced.
+            // ReSharper disable once UnusedVariable
+            IdEnhancement? maybeEnhancement = enhancer.Unwrap(
+                environment.Submodels![0].Administration!
+            );
+
+            // System.Console.WriteLine(maybeEnhancement == null);
 
             // Prints:
             // True
